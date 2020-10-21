@@ -23,8 +23,8 @@
     width: 1352px;}
 
 main, #MinP, #airfull, #Mlist a {
-	letter-spacing:3px;
-	line-height:1.5;}
+	letter-spacing:2px;
+	line-height:2rem;}
 	
 main {padding-top: 34px;}
 
@@ -38,8 +38,12 @@ main {padding-top: 34px;}
 	padding:16px;
 }
 
+#i12PBOX {margin-top:5rem;}
+
 
 #contentbox {
+	padding-bottom:3rem;
+	justify-content:center;
 	background: linear-gradient(to bottom, #000 0%, #161617 30%);
 }
 #controller {
@@ -60,6 +64,7 @@ main {padding-top: 34px;}
 #controller[aria-expanded="true"] .goask:after {
 	content:" ∧";
 }
+.goask {color: #2997ff;}
 
 p {
 	font-size: 21px;
@@ -75,16 +80,19 @@ p {
 
 /*약관 전문 a*/
 .fullgo {
-	color:#6D7A71;
-	vertical-align:middle;
+	/*vertical-align:middle;*/
+	color:white;
 	line-height:33px; 
 	text-align:center; 
 	font-weight:600;
 	letter-spacing:3px;
+	margin-top:-5px;
+
 }
 
 /*Heading*/
 h1 {display:flex;
+	color:white;
 	font-size:100%; 
 	text-align:left;
 	opacity:0.92;
@@ -92,18 +100,33 @@ h1 {display:flex;
     -webkit-box-direction: reverse;
 }
 
+#i12PAUCT {
+	padding:15px;
+	font-size:21px;
+	display:block;}
 
-h2,h3 {
+h2 {	
 	font-size:48px;
+	color:white;
+}
+h3 {font-size:32px;
+}
+.greenH span{	
+	color: transparent;
+    background-image: linear-gradient(to right, #005e7f, #61b6cd);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+h2,h3 {
 	text-align:center;  
 	line-height:1.1; 
 	font-weight: 600;
-	letter-spacing:-5px;
+	letter-spacing:-2px;
     text-align:center;
+
 }
 
-
-h2,h3 {font-size:64px;}
+h3 {color:white;}
 
 h4,h4>span {
 	text-align:center; 
@@ -117,23 +140,24 @@ h4,h4>span {
 
 
 
-li {margin-top:1rem; 
-	margin-bottom:1rem;
+li {
+	margin:1rem auto;
 	text-align:left;
 	font-weight: 600;
 	font-size:24px;
 	letter-spacing:3px;
 	list-style:none;}
 li ul {
-	margin:0.1rem auto; 
-	padding:0px;
+	margin:0px auto;
 }
-li li,li dl,.kr{
-	margin:0.3rem auto; 
+
+li li, li dl, li ul, .kr{
+	margin:0.3rem auto;
+	margin-left:1rem; 
 	padding:0px; 
 	list-style-position:outside; 
 	word-break: keep-all; 
-	font-size:24px;
+	font-size:21px;
 	text-align:left;
 }
 
@@ -144,7 +168,6 @@ dl svg {margin:-1rem auto;}
 
 #hello,#hello div {
 	margin-top:16px;
-	color:#6D7A71; 
 	text-align:center; 
 	font-weight:600; 
 	font-size:24px;
@@ -209,10 +232,6 @@ dl svg {margin:-1rem auto;}
 }
 
 .master {
-	border-color:#17171d;
-	border-style:solid;
-	border-width:0px 10px;
-	background-color:#17171d; 
 	color:white; 
 	font-weight:900; 
 	display:inline-flex;
@@ -229,7 +248,7 @@ dl svg {margin:-1rem auto;}
     display:block;
 }
 
-.kr {color:#d40;}
+.kr {color:#fbc;}
 
 #notch {
 	width:100%;
@@ -245,7 +264,8 @@ dl svg {margin:-1rem auto;}
 	z-index:30;
 	background-image:url(https://www.apple.com/v/iphone-11/c/images/overview/hero/hero_pf_phone__cvre2iya2qeu_medium.png); 
 }
-.walert {
+#full, .walert {
+	display:flex;
 	padding:0.7rem;
 	border-radius:1rem;
 	color:black; 
@@ -298,11 +318,6 @@ dl svg {margin:-1rem auto;}
 	width:100%; 
 	margin:3em 0em;}
 
-ul,.lalist {
-	margin-bottom:0px; 
-	padding-bottom:1em;}
-
-
 
 
 /*약관 전문-닉네임 dd Apple Logo*/
@@ -321,13 +336,13 @@ ul,.lalist {
 
 #Mlist {
 	padding: 17px 0 11px;}
+#Mlist h3 {padding:3rem;}
 #Mlist ul {
 	place-content:center;
 	display:flex;
 	margin:0px auto;
 	flex-wrap:wrap;
 	}
-#Mlist h4 {background-image:none;}
 #Mlist li {width:100%;
 	margin:10px;}
 #Mlist a {
@@ -527,18 +542,18 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 /*DeskTop View*/
 @media screen and (min-width:1200px) {
 	.w980 {width:980px;}
-	main {padding-top:72px;}
-	li,li li,li dl,#hello div {font-size: 40px;}
+	h2 {font-size:80px;}
+	h3 {font-size:56px;}
 	#Mlist li {
 		display:inline-flex; 
 		width:40%;}
-<<<<<<< HEAD
-	
-=======
-	#Mlist a {width:50%; margin:0px;}
-	#Mlist li:nth-child(odd) a {transform:translateX(100%);}
-	#Mlist li:nth-child(even) a {transform:translateX(0%);}
->>>>>>> 1738105eb7a24bc6702a02c56407952f3a828585
+	#Mlist a {
+		width:100%; 
+		margin:0px;}
+	#Mlist li:nth-child(odd) a {
+		transform:translateX(0%);}
+	#Mlist li:nth-child(even) a {
+		transform:translateX(0%);}
 	#OMU {background-size:12%;}
 	#CSJ {background-size:7%;}
 	#AUC {font-size: 28px;
@@ -560,12 +575,6 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 		display:flex;
 		border-top: 1px solid #424245;
 		}
-	#MacS {
-		width: 1422px;
-    position: relative;
-    left:0px;
-    display: flex;
-    margin-top: 104px;}
 }
 
 
@@ -613,19 +622,9 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 
 /*SmartPhone*/
 @media screen and (max-width:760px) {
-	#MacProarea {
-		width: calc(100% - 60px);
-		width:284px;}
 	main {padding-top: 34px;}
 	li,li li,li dl {font-size: 24px;}
 	#AUC {font-size:21px;}
-	h2,h3 {
-		font-size:40px;
-		line-height:1;}
-	h4,h4>span {
-		font-size:40px; 
-		font-weight:700;
-		line-height:1.1;}
 
 	#full {font-size:19px;}
 	.walert {
@@ -653,5 +652,5 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 }
 /* iPhone X,S10 */
 @media screen and (min-width:360px) and (max-width:380px) {
-	#inP {top:32%;}
+	
 }
