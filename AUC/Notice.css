@@ -346,6 +346,7 @@ dl svg {margin:-1rem auto;}
 	}
 #Mlist li {width:100%;
 	margin:10px;}
+
 #Mlist a {
 	z-index:100;
 	position:relative;
@@ -491,8 +492,16 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 		position:relative;
 		z-index:-1;
 		border-radius:10px;
-		box-shadow: 0px -15px 5px 1vmax #FF9900aa;
-		background-color:#F90;}
+		box-shadow: 0px -15px 5px 1vmax #5a0a;
+		background-color:#5a0;}
+
+#ARO {
+	background-color:#FFDCE4;
+	color:#000;
+	border:#F77 solid;}
+#ARO:before {
+	background-image:url(img/GGlassApple.png);
+	filter: hue-rotate(-100deg);}
 
 #CSA {
 	/*background-image:url(https://i.pinimg.com/originals/0d/ee/48/0dee4818267c2183793f7505d06a3b47.jpg);
@@ -505,7 +514,18 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	border:pink 3px solid;
 }
 
-#CSA:before {background-image:url(img/pinkapple.png);}
+#CSA:before {
+	background-image:url(img/pinkapple.png);
+	filter:hue-rotate(-20deg);}
+
+#BS20 {
+	background: linear-gradient(135deg, #FCF, #FCE, #FCD, #FCC, #BFA, #CFA, #DFA, #AEF, #ADF, #DDF, #CCF, #BBF, #AAF, #99F);
+	color:#000;
+	border:white solid;
+}
+#BS20:before {
+	background-image:url(img/ManyColorApple.png);
+	filter:saturate(2); }
 
 #HHC {
 	color:white;
