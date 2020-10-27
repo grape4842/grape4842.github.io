@@ -383,7 +383,7 @@ dl svg {margin:-1rem auto;}
 	background-size:100%;
 	background-repeat:no-repeat;
 	background-position: bottom center;
-	border:solid #acf 3px;
+	border:solid #4B5B69 3px;
 }
 #RM4:before{background-image:url(img/appleX.png);}
 
@@ -438,7 +438,7 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	url(http://www.pptback.com/uploads/borders-frames-blue-gold-frame-backgrounds-powerpoint.jpg);
 	*/
 	background-image:url(https://www.apple.com/v/imac-pro/e/images/overview/screen_endframe_large.jpg),radial-gradient(ellipse at center, rgba(0,143,238,1) 12%,rgba(0,70,136,1) 52%,rgba(0,24,68,1) 77%);;
-	border:solid #001 3px;
+	border:solid #003;
 	filter: saturate(120%) hue-rotate(37deg);
 	/*background:rgba(100, 0, 255, 0.1), 
 	url(http://www.pptback.com/uploads/borders-frames-blue-gold-frame-backgrounds-powerpoint.jpg);
