@@ -586,6 +586,8 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	width:100%; 
 	height:100%;}
 #controllerL:after {
+	display:flex;
+	justify-content:center;
 	transition:0.5s;
 }
 #controllerL[aria-expanded="false"]:after {
@@ -596,13 +598,11 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	content:'접기';
 }
 
-
-
-
 #controllerL {
+	box-sizing:border-box;
 	margin-bottom:2rem;
 	color:white;
-	border:solid 5px #AAF;
+	box-shadow:inset 0px 0px 0px 5px #AAF;
 	background-color:transparent;
 	transition:0.5s;
 	z-index:100;
@@ -615,9 +615,11 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	padding:2rem 0.5rem;
 	text-align:center;
 	align-items:center;
-	box-sizing:border-box;
 }
+#controllerL[aria-expanded="true"] {
+	box-shadow:inset 0px 0px 0px 10px #77F;
 
+}
 #contentboxL {
 }
 
