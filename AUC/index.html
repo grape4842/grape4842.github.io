@@ -2,15 +2,19 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8"/>
+	<meta property="og:site_name" content="Apple User Community">
+	<meta name="author" content="@purplemiyazawa">
+	<meta property="og:type" content="website">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.5,user-scalable=yes"/>
-	<meta property="og:image" content="https://www.apple.com/v/macos/catalina/c/images/overview/hero/desktop_load__c7z7yfiz6i4i_medium.jpg">
+	<meta property="og:image" content="https://www.apple.com/v/iphone-12-pro/a/images/meta/iphone-12-pro_overview__d5t6ow03nkmu_og.png?202010220218">
 	<meta property="og:title" content="Apple User Community(ko)">
 	<meta property="og:description" content="공지사항을 숙지하지 않은 책임은 회원 본인에게 있습니다.">
 	<title>
-	애플 유저 커뮤니티 공지사항
+	공지사항
 	</title>
-	<link rel="stylesheet" type="text/css" href="CloneRegionAUCN.css"/>
-	<link rel="stylesheet" type="text/css" href="Notice.css"/>
+	<link rel="shortcut icon"  type="img/purple.png" href="img/Purple.png">
+	<link rel="stylesheet" type="text/css" href="CloneRegionAUCN.css">
+	<link rel="stylesheet" type="text/css" href="Notice.css">
 </head>
 
 
@@ -560,27 +564,12 @@
 										<span aria-label="새벽">04:00</span>
 								</a>
 							</li>
-<!-- 							<li>
-								<a id="SMM" href="https://open.kakao.com/o/sdEnM5ec" target="_blank" title="새 창">[총관리자]<i></i>
-									<span aria-label="만쉐린">MANCHELIN</span>
-								</a>
-							</li> -->
-<!-- 							<li>
-								<a id="OMU" href="https://open.kakao.com/o/sUh98Ksb" target="_blank" title="새 창">≪관리자≫<i></i>
-									<span>우아한 감별사</span>
-								</a>
-							</li> -->
 							<li>					
 								<a id="Myuna" href="https://open.kakao.com/me/AppleVoiceOver" target="_blank" title="새 창">@관리자<i></i>
 									<span aria-label="보이스오버 유나">VoiceOver Yuna</span>
 								</a>
 							</li>
-<!-- 							<li>
-								<a id="Mcchi" href="https://open.kakao.com/o/sbxqhMJb" target="_blank" title="새 창">@관리자
-									<i></i>
-									<span>찌연쓰</span>
-								</a>
-							</li> -->
+
 							<li>
 								<a id="ARO" target="_blank" href="https://open.kakao.com/me/ip129" title="새 창">관리자
 									<i></i>
@@ -607,22 +596,11 @@
 									<span aria-label="잭">JACK</span>
 								</a>
 							</li>
-<!-- 						<li>
-								<a id="HHC" href="https://open.kakao.com/o/sogJgNcb" target="_blank" title="새 창">헤드헌터
-									<i></i>
-									<span aria-label="컨티넨탈리스트">CONTINENTALIST</span>
+							<li>
+								<a role="button" href="" id="controllerL">
+									<span>이전 관리자 명단</span>
 								</a>
-							</li>-->
-<!-- 							<li>
-								<a id="IWJ" target="_blank" href="https://open.kakao.com/o/sYOsEtuc">[관리자]
-									<i></i>
-									<span>원준</span></a>
-							</li> -->
-<!-- 							<li>
-								<a target="_blank" title="새 창" href="https://open.kakao.com/o/snq0CdYb" id="Neko">[인턴관리자]
-									<i></i>
-									<span>네코의 집사</span></a>
-							</li> -->
+							</li>
 						</ul>
 	</section>
 	</div>
@@ -650,6 +628,18 @@
 		 		controller.setAttribute('aria-expanded', true)}
 		 	else {contentbox.classList.add('expanded')
 				controller.setAttribute('aria-expanded', false)}});
+
+
+		var controller=document.querySelector('#controllerL');
+		var contentbox=document.querySelector('#contentboxL');
+
+		 controller.addEventListener('click',function(){
+		 	if (contentbox.classList.contains('expanded')){
+		 		contentbox.classList.remove('expanded')
+		 		controller.setAttribute('aria-expanded', true)}
+		 	else {contentbox.classList.add('expanded')
+				controller.setAttribute('aria-expanded', false)}});
+
 	</script>
 </body>
 </html>
