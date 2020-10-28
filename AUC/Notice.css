@@ -361,6 +361,10 @@ dl svg {margin:-1rem auto;}
 	box-sizing:border-box;
 }
 
+#Mlist a:after {
+	content:'';
+	display:flex;
+}
 #Mlist a:before{
 	content: ''; 
 	position:absolute;
@@ -439,7 +443,7 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	*/
 	background-image:url(https://www.apple.com/v/imac-pro/e/images/overview/screen_endframe_large.jpg),radial-gradient(ellipse at center, rgba(0,143,238,1) 12%,rgba(0,70,136,1) 52%,rgba(0,24,68,1) 77%);;
 	border:solid #003;
-	filter: saturate(120%) hue-rotate(37deg);
+	filter: saturate(120%) hue-rotate(40deg);
 	/*background:rgba(100, 0, 255, 0.1), 
 	url(http://www.pptback.com/uploads/borders-frames-blue-gold-frame-backgrounds-powerpoint.jpg);
 	*/background-size:95% 95%;
@@ -447,9 +451,9 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 }
 
 	#Myuna:before{
-	background-image:url(img/Purple.png);
+	background-image:url(img/pinkapple.png);
 	background-size:140%;
-	filter:saturate(1) hue-rotate(-30deg);
+	filter:saturate(1) hue-rotate(-135deg);
 }
 
 #Mcchi {
@@ -503,19 +507,35 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	filter: hue-rotate(-100deg);}
 
 #CSA {
-	/*background-image:url(https://i.pinimg.com/originals/0d/ee/48/0dee4818267c2183793f7505d06a3b47.jpg);
+	/*background-image:url(https://i.pinimg.com/originals/0d/ee/48/0dee4818267c2183793f7505d06a3b47.jpg);*/
 	/*background-image: url(https://data.ac-illust.com/data/thumbnails/ab/ab9a45d052331b7c813cedc7f3245bf5_t.jpeg);*/
-	background-image:url(img/sakura1.png),radial-gradient(ellipse at center, rgba(255,255,255,1) 43%,rgba(255,233,251,1) 60%,rgba(255,233,251,1) 60%,rgba(255,127,195,1) 100%);
-	background-size:100% 100%;
-	/*filter:hue-rotate(180deg) invert(100%);*/
-	background-position:top;
+	/*background-image:url(img/sakura1.png),radial-gradient(ellipse at center, rgba(255,255,255,1) 43%,rgba(255,233,251,1) 60%,rgba(255,233,251,1) 60%,rgba(255,127,195,1) 100%);*/
+	background-color:#FFF;
+	background-image:url(img/Msky.png);
+	filter:hue-rotate(100deg);
+	background-repeat:no-repeat;
+	background-position:left;
 	color:#512;
-	border:pink 3px solid;
+	border:#79F 3px solid;
 }
-
+#CSA:after {
+	border-radius:1.5rem;
+	position:absolute;
+	top:0px; right:0px;
+	filter: hue-rotate(-110deg);
+	transform:rotateY(180deg);
+	width:100%; height:100%;
+	background-position:right;
+	background-size:cover;
+	background-image:url(img/sakuragi.png);
+}
+/*#CSA span {transform: scaleX(-1) !important;}*/
 #CSA:before {
 	background-image:url(img/pinkapple.png);
-	filter:hue-rotate(-20deg);}
+	filter:hue-rotate(-120deg);}
+#CSA span {
+	z-index:3;
+	position:relative;}
 
 #BS20 {
 	background: linear-gradient(135deg, #FCF, #FCE, #FCD, #FCC, #BFA, #CFA, #DFA, #AEF, #ADF, #DDF, #CCF, #BBF, #AAF, #99F);
