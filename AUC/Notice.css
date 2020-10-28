@@ -338,17 +338,16 @@ dl svg {margin:-1rem auto;}
 #Mlist {
 	padding: 17px 0 11px;}
 #Mlist h3 {padding:3rem;}
-#Mlist ul {
+#Mlist ul, #contentboxL ul {
 	place-content:center;
 	display:flex;
 	margin:0px auto;
 	flex-wrap:wrap;
 	}
-#Mlist li {width:100%;
+#Mlist li, #contentboxL li {width:100%;
 	margin:10px;}
-
-#Mlist a {
-	z-index:100;
+#contentboxL p {display:inline-block;}
+#Mlist a, #contentboxL p {
 	position:relative;
 	border-radius:1.5rem;
 	width:100%;
@@ -361,11 +360,11 @@ dl svg {margin:-1rem auto;}
 	box-sizing:border-box;
 }
 
-#Mlist a:after {
+#Mlist a:after, #contentboxL p:after {
 	content:'';
 	display:flex;
 }
-#Mlist a:before{
+#Mlist a:before, #contentboxL p:before{
 	content: ''; 
 	position:absolute;
 	top:3px; left:2px;
@@ -377,7 +376,6 @@ dl svg {margin:-1rem auto;}
 }
 
 #Mlist span {vertical-align:top;}
-#Mlist p {display:none;}
 
 #RM4{
 	color:white;
@@ -472,6 +470,7 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	background-position:center bottom;
 	background-repeat:no-repeat;
 	content:'';
+	border-radius:1.4rem;
 	position:absolute;
 	bottom:0px; left:0px;
 	background-image:url(img/Mgrass.png);
@@ -480,6 +479,7 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 
 #CSJ{
 	filter: saturate(120%);
+	background-size:70%;
 	background-image:url(img/Lime.jpg);
 	color:#130;
 	background-attachment:fixed;
@@ -551,9 +551,9 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	filter:hue-rotate(0deg);
 	text-shadow: #000 0 0 0.5rem, #000 2px 2px 2px;
 	background-image:url(https://images.assetsdelivery.com/compings_v2/intara1/intara11904/intara1190400012.jpg),linear-gradient(to bottom, rgba(255,0,0,1) 0%,rgba(255,119,0,1) 20%,rgba(255,255,0,1) 40%,rgba(0,255,170,1) 60%,rgba(0,153,255,1) 80%,rgba(119,0,255,1) 100%);
-	background-size:10%;
+	background-size:40%;
 	background-attachment:fixed;
-	border:solid 3px black;
+	border:solid white;
 }
 
 #HHC:before {background-image:url(img/ManyColorApple.png); }
@@ -579,28 +579,82 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	background:url(img/Msky.png);}
 #Neko:before {background-image:url(img/GGlassApple.png);}
 
+
+
+#OMlist {
+	margin:3rem auto;
+	width:100%; 
+	height:100%;}
+#controllerL:after {
+	transition:0.5s;
+}
+#controllerL[aria-expanded="false"]:after {
+	content:'펼쳐 보기';
+}
+
+#controllerL[aria-expanded="true"]:after {
+	content:'접기';
+}
+
+
+
+
+#controllerL {
+	margin-bottom:2rem;
+	color:white;
+	border:solid 5px #AAF;
+	background-color:transparent;
+	transition:0.5s;
+	z-index:100;
+	position:relative;
+	border-radius:1.5rem;
+	width:92%;
+	height:100%;
+	font-weight:900;
+	font-size:1.4rem;
+	padding:2rem 0.5rem;
+	text-align:center;
+	align-items:center;
+	box-sizing:border-box;
+}
+
+#contentboxL {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*DeskTop View*/
 @media screen and (min-width:1200px) {
 	.w980 {width:980px;}
 	h2 {font-size:80px;}
 	h3 {font-size:56px;}
-	#Mlist li {
+	#Mlist li, #contentboxL li {
 		display:inline-flex; 
 		width:40%;}
 	#Mlist a {
 		width:100%; 
 		margin:0px;}
-	#Mlist li:nth-child(odd) a {
-		transform:translateX(0%);}
-	#Mlist li:nth-child(even) a {
-		transform:translateX(0%);}
-	#OMU {background-size:12%;}
-	#CSJ {background-size:7%;}
+	#OMU, #CSJ {background-size:12%;}
 	#AUC {font-size: 28px;
     	line-height: 1.14286;
    	 	font-weight: 600;
-    	letter-spacing: .007em;
-    }
+    	letter-spacing: .007em;}
+    #HHC {background-size:10%;}
+    #controllerL {width:80%;}
 
 
 

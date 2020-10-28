@@ -554,7 +554,7 @@
 		
 
 			<!-- 매니저 명단 -->
-		<section id="Mlist" class="w980">
+					<section id="Mlist" class="w980">
 						<h3>매니저 명단</h3>
 							<p>규정 회피를 목적으로 매니저 밎 타 회원에 대한 개인적인 접촉&#40;주로 질문&#41;은 금지됩니다.</p>
 						<ul>
@@ -596,13 +596,58 @@
 									<span aria-label="잭">JACK</span>
 								</a>
 							</li>
-							<li>
-								<a role="button" href="" id="controllerL">
-									<span>이전 관리자 명단</span>
-								</a>
-							</li>
 						</ul>
-	</section>
+					</section>
+
+
+					<section id="OMlist">
+						<h3 class="w980">
+							<button aria-expanded="false" id="controllerL">
+							이전 매니저 명단
+							</button>
+						</h3>
+						<article id="contentboxL" class="w980 expanded">
+							<ul>
+								<li>
+									<p id="SMM" >[총관리자]<i></i>
+										<span aria-label="만쉐린">MANCHELIN</span>
+									</p>
+								</li>
+
+	 							<li>
+									<p id="OMU">≪관리자≫<i></i>
+										<span>우아한 감별사</span>
+									</p>
+								</li>
+
+	 							<li>
+									<p id="Mcchi">@관리자
+										<i></i>
+										<span>찌연쓰</span>
+									</p>
+								</li>
+
+	 							<li>
+									<p id="HHC">헤드헌터
+										<i></i>
+										<span aria-label="컨티넨탈리스트">CONTINENTALIST</span>
+									</p>
+								</li>
+	 							<li>
+									<p id="IWJ">[관리자]
+										<i></i>
+										<span>원준</span>
+									</p>
+								</li>
+	 							<li>
+									<p id="Neko">[인턴관리자]
+										<i></i>
+										<span>네코의 집사</span>
+									</p>
+								</li>
+							</ul>
+						</article>
+					</section>
 	</div>
 </div>
 	<footer class="w100">
@@ -630,15 +675,15 @@
 				controller.setAttribute('aria-expanded', false)}});
 
 
-		var controller=document.querySelector('#controllerL');
-		var contentbox=document.querySelector('#contentboxL');
+		var controllerL=document.querySelector('#controllerL');
+		var contentboxL=document.querySelector('#contentboxL');
 
-		 controller.addEventListener('click',function(){
-		 	if (contentbox.classList.contains('expanded')){
-		 		contentbox.classList.remove('expanded')
-		 		controller.setAttribute('aria-expanded', true)}
-		 	else {contentbox.classList.add('expanded')
-				controller.setAttribute('aria-expanded', false)}});
+		 controllerL.addEventListener('click',function(){
+		 	if (contentboxL.classList.contains('expanded')){
+		 		contentboxL.classList.remove('expanded')
+		 		controllerL.setAttribute('aria-expanded', true)}
+		 	else {contentboxL.classList.add('expanded')
+				controllerL.setAttribute('aria-expanded', false)}});
 
 	</script>
 </body>
