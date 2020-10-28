@@ -184,6 +184,7 @@ a:hover path,a:focus path {opacity:1;}
 	margin:0px auto;
 	display:flex;}
 #apple {
+	position:relative;
 	height:44px;
 	display:flex;}
 
@@ -321,6 +322,7 @@ footer {
 		margin:0px auto;
 		width:980px;}
 	#LOGO {position:absolute;}
+	#GOSHOP {right:0px;}
 	#AppleA11Y {width:20%;}
 	main {
 		position:relative;
