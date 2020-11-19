@@ -7,7 +7,7 @@ body {
 	linear-gradient(to left,rgba(0, 0, 255, 0.1), rgba(30, 30, 255, 0.1), rgba(0, 0, 255, 0.1)),
 	url(purplestar.jpg); 
 	background-attachment:fixed;
-	background-size:30%;
+	background-size:80%;
 	padding-top:3%;}
 
 section {
@@ -61,7 +61,7 @@ td,th {
 	vertical-align:middle; 
 	border:1px solid #235; 
 	width:30%; 
-	line-height:1.5;
+	line-height:2rem;
 	padding:2%; 
 	font-size:1.2rem;}
 th{background-color:#baf; 
@@ -90,6 +90,7 @@ h2 {color:#ffffff;}
 br {display:none;}
 
 @media screen and (min-width:1200px) {
+ body {background-size:60%;}
  section {width:60%;}
  td,th {font-size:1.5rem;}
  h1 {margin-left:10rem;}
@@ -98,7 +99,11 @@ br {display:none;}
  	text-align:center;}
 }
 @media screen and (max-width:320px) {
+	#MACAG {font-size:20px;}
 	section {width:100%;}
+	h1 {display:flex;
+		margin:2rem 0px;
+		justify-content:center;}
 }
 
 @media (prefers-contrast:high) {
