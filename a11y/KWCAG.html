@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>	
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.5,maximum-scale=5.0,user-scalable=yes"/>
-	<meta property="og:image" content=""/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta property="og:image" content="purplestar2.jpg"/>
 	<meta property="og:title" content="KWCAG 2.1 24개의 검사항목"/>
 	<meta property="og:description" content="진단시 사용하는 검사항목 목록입니다."/>
 	<title>
 	KWCAG2.1 지침오류 24개의 검사항목과 상세 목록
 	</title>
+	<link rel="shortcut icon"  type="nCOIbLogo.png" href="nCOIbLogo.png">
 	<link rel="stylesheet" type="text/css" href="KWCAG.CSS">
 </head>
+
 <body>
-
-
 
 <header>
 <nav>
-<a class="ctnt" href="#CT1">인식의 용이성</a>
-<a class="ctnt" href="#CT2">운용의 용이성</a>
-<a class="ctnt" href="#CT3">이해의 용이성</a>
-<a class="ctnt" href="#CT4">견고성</a>
-<!-- <a class="ctnt" href="#CT5">번외편</a> -->
+<a class="jump_category" href="#CT1">인식의 용이성</a>
+<a class="jump_category" href="#CT2">운용의 용이성</a>
+<a class="jump_category" href="#CT3">이해의 용이성</a>
+<a class="jump_category" href="#CT4">견고성</a>
+<!-- <a class="jump_category" href="#CT5">번외편</a> -->
+<a href="MACAG.html" id="MACAG">모바일 애플리케이션 콘텐츠 접근성지침 2.0</a>
 </nav>
 </header>
 
@@ -618,148 +620,146 @@
 </table>
 </section>
 </main>
-<!-- 
-<section>
-<div id="NKWCAG">
-<h2 id="CT5">번외편</h2>
-<table class="unsub">
-	<caption>KWCAG의 현재 항목 중 부족하다고 생각되는 내용 중, 
-		<br>커스텀UI 및 컴포넌트 계열의 내용을 
-		<br>자체적으로 오류로 지정하여 작성한 표</caption>
-	<thead>
-		<tr><th>40. (임의로 구현된 컴포넌트)
-			<br>웹 상에서 기본적으로 제공되는 컴포넌트외 
-			<br>임의로 구현된 컴포넌트의 경우, 
-			<br>원본과 동일한 조작이 가능하여야 한다.</th>
-	</tr></thead>
-	<tbody>
-		<tr>
-			<td>40-1. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를 
-				<br>임의의 요소로 구현하였으나 해당 컴포넌트가 
-				<br>원본의 기능을 재현하지 못한 경우</td>
-		</tr>
-		<tr>
-			<td>40-2. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를
-				<br>임의의 요소로 구현하였으나 해당 컴포넌트가 
-				<br>원본과 같이 상태변화(선택됨/해제됨)
-				<br>(열림/닫힘,접힘/펼쳐짐)과 같은 
-				<br>상태변화를 안내하지 못하는 경우</td>
-		</tr><tr>
-			<td>40-3. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를
-			<br>임의로 구현된 컴포넌트와 배경색의 명도대비가 
-			<br>4.5:1을 만족하지 못하는 경우</td>
-		</tr>
-		<tr>
-			<td>40-4. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를
-			<br>임의로 구현된 컴포넌트와 배경간의 명도대비가 
-			<br>비활성화 된 상태에서3:1을 만족하지 못하는 경우</td>
-		</tr>
-		<tr>
-			<td>40-5. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를
-				<br>임의로 구현된 컴포넌트의 
-				<br>역할을 확인할 수 없거나, 잘못 제공된 경우</td>
-		</tr>
-		<tr>
-			<td>40-6. 임의의 요소로 구현된 컴포넌트의 상태가 변할 경우,
-				<br>해당 컴포넌트의 선택여부,활성화여부와 같은 
-				<br>상태변화를 시각적으로 구별하기 어려운경우</td>
-		</tr>
-		<tr>
-			<td>40-7. 맥락상 목적에 맞지 않는 컴포넌트를 사용하여 구현한 경우</td>
-		</tr>
-		<tr>
-			<td>40-8. 임의요소로 제공된 컴포넌트의 유사한 기능을 가졌으나,
-				<br>동일한 동작으로 제어할 수 없는 경우</td>
-		</tr>
-	</tbody>
-</table>
-
-
-<table class="unsub">
-	<caption>KWCAG의 현재 항목 중 부족하다고 생각되는 내용 중, 
-		<br>기존 항목에 추가할 내용과
-		<br>별도의 내용으로 작성하기에 부족한 양을 모아
-		<br>자체적으로 오류로 지정하여 작성한 표</caption>
+<!-- <section>
+	<div id="NKWCAG">
+	<h2 id="CT5">번외편</h2>
+	<table class="unsub">
+		<caption>KWCAG의 현재 항목 중 부족하다고 생각되는 내용 중, 
+			<br>커스텀UI 및 컴포넌트 계열의 내용을 
+			<br>자체적으로 오류로 지정하여 작성한 표</caption>
 		<thead>
-			<tr><th><span>
-				??. 기존 지침항목에 추가하는 것을 희망하는 사항
-			</span></th>
+			<tr><th>40. (임의로 구현된 컴포넌트)
+				<br>웹 상에서 기본적으로 제공되는 컴포넌트외 
+				<br>임의로 구현된 컴포넌트의 경우, 
+				<br>원본과 동일한 조작이 가능하여야 한다.</th>
 		</tr></thead>
 		<tbody>
 			<tr>
-				<td>??-?. 확대된 폰트설정을 사용할 경우 
-					<br>웹 페이지를 정상적으로 이용할 수 없다 판단되는 경우.</td>
+				<td>40-1. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를 
+					<br>임의의 요소로 구현하였으나 해당 컴포넌트가 
+					<br>원본의 기능을 재현하지 못한 경우</td>
 			</tr>
 			<tr>
-				<td>18-?. 마우스 포인터 혹은 키보드 초점의 접근만으로 
-					<br>요소의 변화가 생겨 사용상 불편을 주는 경우</td>
+				<td>40-2. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를
+					<br>임의의 요소로 구현하였으나 해당 컴포넌트가 
+					<br>원본과 같이 상태변화(선택됨/해제됨)
+					<br>(열림/닫힘,접힘/펼쳐짐)과 같은 
+					<br>상태변화를 안내하지 못하는 경우</td>
+			</tr><tr>
+				<td>40-3. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를
+				<br>임의로 구현된 컴포넌트와 배경색의 명도대비가 
+				<br>4.5:1을 만족하지 못하는 경우</td>
 			</tr>
 			<tr>
-				<td>
-					9-?. 초점이 특정 조건하에서 더 이상 이동할 수 없는 경우
-				</td>
+				<td>40-4. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를
+				<br>임의로 구현된 컴포넌트와 배경간의 명도대비가 
+				<br>비활성화 된 상태에서3:1을 만족하지 못하는 경우</td>
 			</tr>
 			<tr>
-				<td>
-					1-?. 숨김텍스트의 내용이 잘못 되어 정보전달에 오류가 발생할 경우
-				</td>
+				<td>40-5. &lt;select&gt;,&lt;input&gt;과 같은 기본 컴포넌트를
+					<br>임의로 구현된 컴포넌트의 
+					<br>역할을 확인할 수 없거나, 잘못 제공된 경우</td>
 			</tr>
 			<tr>
-				<td>??-? 정보를 담고있는 텍스트이나 시각적으로
-					<br>텍스트로 인식할 수 없다 판단되는 경우
-				</td>
+				<td>40-6. 임의의 요소로 구현된 컴포넌트의 상태가 변할 경우,
+					<br>해당 컴포넌트의 선택여부,활성화여부와 같은 
+					<br>상태변화를 시각적으로 구별하기 어려운경우</td>
 			</tr>
 			<tr>
-				<td>
-					24-?. 보조기기로 시간제한 콘텐츠의 남은시간을 확인할 수 없는 경우
-				</td>
+				<td>40-7. 맥락상 목적에 맞지 않는 컴포넌트를 사용하여 구현한 경우</td>
 			</tr>
 			<tr>
-				<td>1-?. 복수의 이미지에 동일한 대체텍스트를 삽입하는 경우</td>
+				<td>40-8. 임의요소로 제공된 컴포넌트의 유사한 기능을 가졌으나,
+					<br>동일한 동작으로 제어할 수 없는 경우</td>
 			</tr>
-			<tr>
-				<td>16-?. 보조기기로 링크텍스트를 확인할 수 없는 경우</td>
-			</tr>
-			<tr>
-				<td>9-?. 레이어 팝업과 같은 화면을 덮는 항목에 
-					<br>초점이 자동적으로 진입하지 않는 경우</td>
-			</tr>
-			<tr>
-				<td>21-?. 지정된 입력방법이 있을 경우 
-					<br>해당 입력방법을 안내하지 않은 경우</td>
-			</tr>
-			<tr>
-				<td>19-?. 화면에 배치되는 공통 영역의 콘텐츠가 
-					<br>일관성이 없다 판단되는 경우</td>
-			</tr>
-			<tr>
-				<td>??-?. 본문의 비율을 확대하여 볼 경우(400%), 확대한 비율에 따라 
-					<br>본문 텍스트의 배치가 최적화(리플로우) 되지 않는 경우</td>
-			</tr>
-			<tr>
-				<td>3-?. 컴포넌트,아이콘과 같이 의미가 담긴 오브젝트와 배경간의
-					<br>명도대비가 4.5:1을 만족하지 못한 경우</td>
-			</tr>
-			<tr>
-				<td>10-?. 컨트롤러의 크기가 50*50 CSS Pixel에 미치지 못하는 경우</td>
-			</tr>
-			<tr>
-				<td>8-?. 특정 동작을 조건으로 작동되는 기능에 대하여
-					<br>대체수단이 제공되지 않은 경우</td>
-			</tr>
-			<tr>
-				<td>
-					8-?. 특정 방향으로만 웹 페이지가 제공되어 
-					<br>화면을 회전하여 사용할 수 없는 경우
-				</td>
-			</tr>
-
 		</tbody>
-</table>
-</div>
-</section>
+	</table>
 
- -->
+
+	<table class="unsub">
+		<caption>KWCAG의 현재 항목 중 부족하다고 생각되는 내용 중, 
+			<br>기존 항목에 추가할 내용과
+			<br>별도의 내용으로 작성하기에 부족한 양을 모아
+			<br>자체적으로 오류로 지정하여 작성한 표</caption>
+			<thead>
+				<tr><th><span>
+					??. 기존 지침항목에 추가하는 것을 희망하는 사항
+				</span></th>
+			</tr></thead>
+			<tbody>
+				<tr>
+					<td>??-?. 확대된 폰트설정을 사용할 경우 
+						<br>웹 페이지를 정상적으로 이용할 수 없다 판단되는 경우.</td>
+				</tr>
+				<tr>
+					<td>18-?. 마우스 포인터 혹은 키보드 초점의 접근만으로 
+						<br>요소의 변화가 생겨 사용상 불편을 주는 경우</td>
+				</tr>
+				<tr>
+					<td>
+						9-?. 초점이 특정 조건하에서 더 이상 이동할 수 없는 경우
+					</td>
+				</tr>
+				<tr>
+					<td>
+						1-?. 숨김텍스트의 내용이 잘못 되어 정보전달에 오류가 발생할 경우
+					</td>
+				</tr>
+				<tr>
+					<td>??-? 정보를 담고있는 텍스트이나 시각적으로
+						<br>텍스트로 인식할 수 없다 판단되는 경우
+					</td>
+				</tr>
+				<tr>
+					<td>
+						24-?. 보조기기로 시간제한 콘텐츠의 남은시간을 확인할 수 없는 경우
+					</td>
+				</tr>
+				<tr>
+					<td>1-?. 복수의 이미지에 동일한 대체텍스트를 삽입하는 경우</td>
+				</tr>
+				<tr>
+					<td>16-?. 보조기기로 링크텍스트를 확인할 수 없는 경우</td>
+				</tr>
+				<tr>
+					<td>9-?. 레이어 팝업과 같은 화면을 덮는 항목에 
+						<br>초점이 자동적으로 진입하지 않는 경우</td>
+				</tr>
+				<tr>
+					<td>21-?. 지정된 입력방법이 있을 경우 
+						<br>해당 입력방법을 안내하지 않은 경우</td>
+				</tr>
+				<tr>
+					<td>19-?. 화면에 배치되는 공통 영역의 콘텐츠가 
+						<br>일관성이 없다 판단되는 경우</td>
+				</tr>
+				<tr>
+					<td>??-?. 본문의 비율을 확대하여 볼 경우(400%), 확대한 비율에 따라 
+						<br>본문 텍스트의 배치가 최적화(리플로우) 되지 않는 경우</td>
+				</tr>
+				<tr>
+					<td>3-?. 컴포넌트,아이콘과 같이 의미가 담긴 오브젝트와 배경간의
+						<br>명도대비가 4.5:1을 만족하지 못한 경우</td>
+				</tr>
+				<tr>
+					<td>10-?. 컨트롤러의 크기가 50*50 CSS Pixel에 미치지 못하는 경우</td>
+				</tr>
+				<tr>
+					<td>8-?. 특정 동작을 조건으로 작동되는 기능에 대하여
+						<br>대체수단이 제공되지 않은 경우</td>
+				</tr>
+				<tr>
+					<td>
+						8-?. 특정 방향으로만 웹 페이지가 제공되어 
+						<br>화면을 회전하여 사용할 수 없는 경우
+					</td>
+				</tr>
+
+			</tbody>
+	</table>
+	</div>
+</section>-->
 
 </body>
+
 </html>
