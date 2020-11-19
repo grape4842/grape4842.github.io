@@ -40,16 +40,17 @@ a:focus {
 	top:-100rem; 
 	z-index:-1;
 	font-size:150%; 
-	width:100%; 
+	width:99%;
+	justify-content:center; 
+	padding:1rem 0px;
 	font-weight:bolder;  
-	line-height:3rem; 
 	background-color:#0a0; 
 	border:solid 1px #bfa;
 	color:#000; 
 	margin:0; 
 	text-align:center; 
 	vertical-align:middle; 
-	display:block; }
+	display:flex;}
 
 table {
 	border-collapse:collapse; 
