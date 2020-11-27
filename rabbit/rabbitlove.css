@@ -119,6 +119,7 @@ footer img {
 	justify-content:center;}
 #rabbitbook {width:80%;}
 #controller {
+	transition:0.2s;
 	padding:10px;
 	border:none;
 	font-weight:900;
@@ -134,8 +135,16 @@ footer img {
 #controller[aria-expanded="true"]:after {
 	content:" 닫기"
 }
+#controller[aria-expanded="true"] {background-color:#215;}
 
-.expanded {display:none;}
+.expanded {
+	visibility:hidden;
+	filter: blur(10px);
+	height:0px;
+	transform:scaleY(0.1);
+	opacity:0;
+	transition:0.5s;
+}
 
 .magic {
 	display:inline-flex;

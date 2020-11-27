@@ -23,7 +23,6 @@ table {border-collapse:collapse;}
 img,video
 {width:100%;}
 .expanded {
-	/*display:none;*/
 	visibility:hidden;
 	filter: blur(10px);
 	height:0px;
