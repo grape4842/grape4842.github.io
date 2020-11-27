@@ -28,9 +28,12 @@ a {text-decoration:none;}
 a:hover {
 	text-decoration:underline;
 }
-a:focus {
+a:focus,a:hover {
 	outline:5px solid #baf;
-	transition:0.1s;}
+	transition:0.2s;}
+a:active {
+	outline:10px solid #ccf;
+}
 .jump_category:focus {
 	position:fixed; 
 	z-index:1;
