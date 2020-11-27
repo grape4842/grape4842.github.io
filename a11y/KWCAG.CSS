@@ -32,7 +32,7 @@ a:focus,a:hover {
 	outline:5px solid #baf;
 	transition:0.2s;}
 a:active {
-	outline:10px solid #ccf;
+	outline:10px solid #dcf;
 }
 .jump_category:focus {
 	position:fixed; 
@@ -83,21 +83,22 @@ li {list-style:none;}
 h1 {color:#ffa; 
 	font-weight:900;
 	margin-left:1rem;}
+h2 {font-weight:900;
+	color:#fcf;
+	margin-left:1rem;}
 
 
 .unsub th {background-clip: border-box;
 /*-webkit-background-clip: text;*/
 /*color: transparent;*/
 background-image:url(https://www.apple.com/v/iphone-xs/d/images/overview/copy_texture_4_large.jpg);}
-h2 {color:#ffffff;}
-
 br {display:none;}
 
 @media screen and (min-width:1200px) {
  body {background-size:60%;}
  section {width:60%;}
  td,th {font-size:1.5rem;}
- h1 {margin-left:10rem;}
+ h1,h2 {margin-left:10rem;}
  #MACAG {
  	width:30%;
  	text-align:center;}
@@ -105,7 +106,7 @@ br {display:none;}
 @media screen and (max-width:320px) {
 	#MACAG {font-size:20px;}
 	section {width:100%;}
-	h1 {display:flex;
+	h1,h2 {display:flex;
 		margin:2rem 0px;
 		justify-content:center;}
 }
