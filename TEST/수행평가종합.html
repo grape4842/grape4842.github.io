@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>	
+<meta charset="utf-8">
+<meta name="author" content="@purplemiyazawa">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta property="og:image" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="일학습병행제에서 만든 예시 파일입니다.">
+<title>
+수행평가종합
+</title>
+<link rel="shortcut icon" type="" href="">
+<link rel="stylesheet" type="text/css" href="수행평가종합.css">
+<style type="text/css">
+	h1 {color:#fde;}
+</style>
+</head>
+
+<body>
+	<header>
+		<div class="wrap">
+			<h1>수행평가 종합 HTML파일</h1>
+			<p><b>수행평가</b>에 필요한 태그를
+			<br>한 파일에 구현해 둔 <i>html</i> 파일입니다.</p>
+		</div>
+	</header>
+<main>
+	<div class="wrap">
+		<section>
+			<h2 style="color:#ffa;">접근성에 유용한 URL입니다.</h2>
+			<ul>
+				<li><a title="새 창" target="_blank" href="https://grape4842.github.io/a11y/KWCAG.html">
+					<img src="img/purplestar.jpg" alt="">
+					<b>KWCAG 2.1 진단용 검사항목</b></a></li>
+				<li><a target="_blank" href="https://www.youtube.com/channel/UCTI6h7Vb05Td63qHQ3wjySQ">AOA11Y&nbsp;-&nbsp;YouTube 채널</a></li>
+				<li><a target="_blank" href="https://github.com/ThePacielloGroup/CCAe/releases/tag/v3.1.2">Color Contrast Analyser <i>Download</i></a></li>
+				<li><a target="_blank" href="https://www.nvaccess.org/download/">NVDA 
+					<i>Download</i></a></li>
+				<li><a target="_blank" href="https://nuli.navercorp.com/">NAVER <b>NULI</b></a></li>
+				<li><a target="_blank" href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 - W3C</a></li>
+			</ul>
+		</section>
+		<section>
+			<h2>멀티미디어 콘텐츠를 마크업 해보는 영역입니다.</h2>
+			<video preload="auto" controls="">
+				<source src="media/flower.mp4" type="video/mp4">영상
+				</video>
+			<audio src="media/kikiBGM.mp3" preload="auto" controls="">음악</audio>
+		</section>
+		<section>
+			<h2>표를 만들어보는 영역입니다.</h2>
+			<table>
+				<caption>표에 관한 접근성에 대해</caption>
+				<thead>
+					<tr>
+						<th scope="col">제목</th>
+						<th scope="col">설명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">표 제목</th>
+						<td>데이터가 포함된 표는 반드시 표 제목으로 table태그 하위로 caption태그를 제공하여야 한다.</td>
+					</tr>
+					<tr>
+						<th scope="row">제목 셀과 데이터 셀</th>
+						<td>데이터가 포함된 표는 반드시 표의 제목셀과 데이터 셀을 태그 단위&#40;th, td&#41;로 나누어야 한다.</td>
+					</tr>
+					<tr>
+						<th scope="row">제목셀의 방향</th>
+						<td>제목셀에서 스크린리더가 정보를 주워오는 방향을 가이드해쥐 위해 scope속성을 제공하여야 한다.</td>
+					</tr>
+					<tr>
+						<th scope="row">중복된 표</th>
+						<td>테이블 셀 내에 테이블을 마크업 할 경우 스크린리더가 올바르게 인식하기 어려우며 사용자 또한 이해하기 어려우므로 사용해서는 안된다.</td>
+					</tr>
+					<tr>
+						<th scope="row">복잡한 표에서 제목 셀의 데이터를 가져올 때</th>
+						<td>복잡한 구조의 표는 제목 셀의 데이터가 다수 필요할 수 있다. 이 떄 제목셀에 id속성을 통해 고유값을 부여하고, 데이터를 가져올 셀에 headers속성을 통해 선언한 id고유값을 불러오는 것으로 스크린리더로 데이터 셀에 접근했을 때 연결된 제목 셀의 내용을 읽어준다.</td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<caption>스마트폰 시리즈</caption>
+				<thead>
+					<tr>
+						<th scope="col">시리즈명</th>
+						<th scope="col">상세 제품명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row" rowspan="4">iPhone</th>
+						<td>SE : iPhone SE</td>
+					</tr>
+					<tr>
+						<td>Nomal : iPhone 12, iPhone 6...</td>
+					</tr>
+					<tr>
+						<td>PRO : iPhone 12 PRO</td>
+					</tr>
+					<tr>
+						<td>MAX, PRO MAX : iPhone XS MAX, iPhone 12 PRO MAX</td>
+					</tr>
+
+					<tr>
+						<th scope="row" rowspan="7">Galaxy</th>
+						<td>S : Galaxy S10</td>
+					</tr>
+					<tr>
+						<td>+ : Galaxy S8+, Galaxy Note 10+</td>
+					</tr>
+					<tr>
+						<td>Ultra : Galaxy S20 Ultra, Galaxy NOTE 20 Ultra</td>
+					</tr>
+					<tr>
+						<td>NOTE : Galaxy NOTE 8</td>
+					</tr>
+					<tr>
+						<td>FE : Galaxy S20 FE, Galaxy NOTE FE</td>
+					</tr>
+					<tr>
+						<td>Z FOLD : Galaxy Z FOLD 2</td>
+					</tr>
+					<tr>
+						<td>Z FLIP : Galaxy Z FLIP</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<form>
+				<table>
+					<caption>회원가입 양식</caption>
+					<thead>
+						<tr>
+							<th scope="col" colspan="2">반드시 입력해야 하는 서식입니다.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">
+								<label for="uid">아이디
+									<span class="hidden">필수입력항목</span></label>
+							</th>
+							<td><input required="" maxlength="15" minlength="6" id="uid" type="text" name="">
+								<label for="uid">영문, 숫자를 사용하여 6에서 15자</label></td>
+						</tr>
+						<tr>
+							<th><label for="upw">비밀번호
+							<span class="hidden">필수입력항목</span></label></th>
+							<td><input required="" maxlength="15" minlength="8" id="upw" type="password" name="">
+								<label for="upw">영어, 숫자, 특수기호를 조합하여 8에서 15자</label></td>
+						</tr>
+						<tr>
+							<th><label for="upwchk">비밀번호 확인
+							<span class="hidden">필수입력항목</span></label></th>
+							<td><input required="" maxlength="15" minlength="8" id="upwchk" type="password" name="">
+								<label for="upwchk">영어, 숫자, 특수기호를 조합하여 8에서 15자</label></td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="uemail">연락 이메일
+								<span class="hidden">필수입력항목</span></label></th>
+							<td><input required="" id="uemail" type="email" name="">
+								<label for="uemail">example@google.com</label></td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<caption>회원가입 양식&#40;선태작성란&#41;</caption>
+					<tbody>
+						<tr>
+							<th scope="row">
+								<label for="uname">이름&#40;닉네임&#41;</label>
+							</th>
+							<td><input maxlength="20" minlength="2" id="uname" type="text" name="">
+								<label for="uname">2글자에서 20글자</label></td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="">성별</label>
+							</th>
+							<td>
+								<input type="radio" name="usex" id="man">
+								<label for="man">남성</label>
+								<input type="radio" name="usex" id="woman">
+								<label for="woman">여성</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="">생년월일</label></th>
+							<td><input maxlength="4" type="tel" name="" id="ubyear">
+								<label for="ubyear">
+									<span class="hidden">생년월일 </span>년</label>
+								<select id="ubmonth">
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+								</select>
+								<label for="ubmonth">
+								<span class="hidden">생년월일 </span>월</label>
+								<input maxlength="2" type="tel" id="ubday">
+								<label for="ubday">
+								<span class="hidden">생년월일 </span>일</label></td>
+						</tr>
+						<tr>
+							<th scope="row">생년월일 공개여부</th>
+							<td>
+								<input id="birthopen" type="checkbox" name="">
+								<label for="birthopen">생년월일을 다른 사람에게 공개합니다.</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="uimg">프로필 사진</label></th>
+							<td><input id="uimg" type="file" name=""></td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="ucolor">대표 색상</label>
+							</th>
+							<td><input value="#7777ff" type="color" id="ucolor" name=""></td>
+						</tr>			
+						<tr>
+							<th><label for="ufontsize">사용자 글자 크기</label></th>
+							<td><input list="ufsize" step="1" value="4" max="6" min="1" type="range" id="ufontsize" name="">
+								<datalist id="ufsize">
+									<option label="1">1</option>
+									<option>2</option>
+									<option>3</option>
+									<option label="4">4</option>
+									<option>5</option>
+									<option>6</option>
+									<option label="7">7</option>
+								</datalist></td>
+						</tr>		
+						<tr>
+							<th>
+								<label for="umemo">프로필 메모</label></th>
+							<td><textarea id="umemo">안녕하세요.</textarea></td>
+						</tr>
+					</tbody>
+				</table>
+				<button type="button">취소</button>
+				<button type="submit">확인</button>
+			</form>
+		</section>
+	</div>
+</main>
+<footer>
+	<div class="wrap">
+		<p>&copy; @purplemiyazawa</p>
+	</div>
+</footer>
+</body>
+
+</html>

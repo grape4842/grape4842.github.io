@@ -1,0 +1,189 @@
+@charset "utf-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+::selection {background:#51a; color:white;}
+/*PC기준*/
+.hidden {
+	z-index:-1; 
+	position:absolute; 
+	top:50%; 
+	overflow:hidden; 
+	width:1px; 
+	height:1px; 
+	border:0; 
+	box-sizing:content-box;
+	clip: rect(1px, 1px, 1px, 1px); 
+	clip-path: inset(0px 0px 99.9% 99.9%);}
+
+body {
+	background-color:#325; color:#fff;
+	margin:0px; padding:0px;}
+header {
+	padding:20px 0px;
+	background-color:#213;}
+.wrap {width:60%; margin:0px auto;}
+main {margin:40px auto;}
+img,video {
+	height:100%;
+	width:100%;
+	transition:0.3s;}
+h1 {text-align:center;}
+ul {padding:0px; margin:0px;}
+li {margin:5px 0px;
+	box-sizing:border-box;
+	list-style:none;}
+ol li {list-style:inside;}
+li a {width:50%;}
+a {display:inline-block;
+	border:solid 1px #98f;
+	text-decoration:none; 
+	color:#fff;
+	background-color:#659;
+	padding:10px;}
+a:focus, a:hover {
+	font-weight:900;
+	transition:0.3s;
+	border:#dcf solid 1px;
+	background-color:#98f;
+	color:#000;
+	text-decoration:underline;}
+a:focus img, a:hover img{
+	transition:0.2s;
+	display:flex;
+	justify-content:center;
+	opacity:0.9;
+	width:90%;
+}
+footer {
+	padding:20px 0px;
+	background-color:#213;}
+table {
+	margin:10vmin 0px;
+	border-collapse:collapse;}
+td,th {
+	font-family:"HY견고딕";
+	background-color: white; 
+	border:1px solid #235; 
+	line-height:2rem;
+	padding:2%; 
+	font-size:1.2rem;}
+
+th {
+	background-color:#baf;}
+
+td {font-weight:500;}
+caption {
+	width:1px; height:1px;
+	overflow:hidden;
+	position:relative;
+	z-index:-3;}
+input[type="text"] + label, 
+input[type="password"] + label,
+input[type="email"] + label {
+	display:block;}
+input, select, textarea {
+	-webkit-appearance:none;
+	font-weight:bold;
+	border-radius:5px;
+	padding:5px;
+	font-size:1.5rem;
+	border:1px #57f solid;
+}
+input[type="file"] {
+	border:none;
+	outline:none;}
+input[type="file"]:focus, input[type="file"]:hover {
+	color:#000;}
+select {padding-right:20px;}
+/*select:after {
+	content:'↓';
+	position:absolute;
+	color:#000;
+	display:block;
+	background-color:#77f;
+	width:10px; height:10px; 
+}*/
+input:focus,input:hover, 
+select:focus, select:hover, 
+textarea:focus, textarea:hover {
+	background-color:#DDF;
+		transition:0.2s;
+}
+input[type="radio"] {
+	border:#0c0 solid 1px;
+	padding:10px;
+	box-sizing:border-box;
+	margin:0px;
+	background-color:#0a0;
+	border-radius:100%;}
+input[type="radio"]:checked:after {
+	content:"";
+	display:block;
+	box-sizing:border-box;
+	position:absolute;
+	transform: translateY(-50%) translateX(-50%) rotate(45deg);
+	width:10px; height:10px;
+	background-color:#fff;
+	border-radius:10%;
+}
+input[type="checkbox"] {
+	border:#0c0 solid 1px;
+	padding:10px;
+	box-sizing:border-box;
+	margin:0px;
+	background-color:#070;
+}
+input[type="checkbox"]:checked:after {
+	content:"";
+	display:block;
+	position:absolute;
+	transform: translateY(-50%) translateX(-50%);
+	width:12px; height:12px;
+	border:solid #fff 3px;
+	border-radius:10%;
+	border-radius:100%; 
+}
+#ubyear {width:4rem;}
+#ubday {width:2rem;}
+input[type="range"] {
+	border:none;
+	background:transparent;
+	transition:opacity 0.2s;
+}
+input[type="range"]:focus, input[type="range"]:hover {
+	opacity:0.9;}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+	border:#77f 2px solid;
+	background-color:#baf;
+	border-radius:5px; 
+	width:20px; height:30px;
+	transform:translateY(-40%);
+}
+input[type=range]::-webkit-slider-runnable-track {
+	background-color:#fff;
+	width:300px; height:7px;
+	border-radius:3px;
+}
+button {
+	transition:all 0.2s; 
+	border:solid 2px #65a;
+	padding:1% 3%;
+	box-sizing:border-box;
+	font-size:2rem;}
+button[type="submit"] {
+	background-color:#fa0;
+	font-weight:900;
+	border:solid 2px #f70;}
+button:focus, button:hover {
+	border-width:3px;
+	font-size:2.2rem;
+}
+@media screen and (max-width:1200px) {
+	main {width:90%;}
+}
+@media (prefers-color-scheme:dark) {
+	table {color:white;}
+	th,td {border:1px solid #baf;}
+	th {background-color:#103;}
+	td {background-color:#326;}
+}
