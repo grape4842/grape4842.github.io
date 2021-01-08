@@ -4,23 +4,19 @@
 	line-break:normal; 
 	font-size:1.1rem;
 	font-family:HY견고딕;}
-
 ::selection {background:#51b; color:white;}
 
 body {margin:0px; padding:0px;}
 main {
+	display:block;
 	box-sizing:border-box;
 	width:60%; 
 	margin:0px auto;}
-
 br {display:none;}
 ul {padding:0px;
 	list-style:none;
-	margin:0px;
-}
-
+	margin:0px;}
 div>table {margin:0px;}
-
 #unamer {border:red solid 2px;
 		background-color:#fee;}
 #unameg {background-color:#fee;}
@@ -159,22 +155,14 @@ button:focus {outline-offset:2px;
 table,caption {
 	background-color:#eef;
 	padding:1vmax;}
-table,div {
-	margin:1vmax 0px;}
+table,div {margin:1vmax 0px;}
 .red {color:red;}
-th,td {
-	text-align:left;
-	}
 
 #star {text-align:right;}
 
 #lili {margin:1vmax 0px;}
-#lili li,#mlili li {
-	margin:0px; 
-	font-size:2vmin;}
-
+#lili li,#mlili li {margin:0px; font-size:2vmin;}
 #mlili li {margin-top:-0.5vmax;}
-
 .maru {border-radius: 100%; 
 	min-width:3vmax;
 	min-height:3vmax;}
@@ -211,9 +199,68 @@ th,td {
 .icon {
 	display:block;
 	text-align:center;
-	font-weight:900;
-}
+	font-weight:900;}
 i {display:block;}
+
+
+table {border-collapse:collapse;}
+#a11ydate {width:80%; margin:1% auto;}
+.blankcell {font-size:120%; width:10%;}
+.imgcell {padding:0px; margin:0px;}
+.imgcell img {height:100%; align-items:center; display:flex;}
+tr {padding:0px;}
+thead,th {background-color:#a9f;}
+td,th {
+	font-size:120%;
+	font-weight:800;
+	border:solid 2px #112;
+	color:black;}
+#RV td {width:calc(90%/2);}
+#displayoption td {width: calc(90%/4);}
+
+.white td,th {
+	font-size:200%;
+	padding:0.3em;
+	margin:0px auto;}
+.JAN20 caption {
+	font-size:220%; 
+	font-weight:900; 
+	color:#e00;}
+.white td:last-child,.white th:last-child {
+	background-color:#def; 
+	color:#03d;}
+.white td:first-child,.wthie th:first-child,.offd {color:#b30;}
+.white td:first-child,.white th:first-child {background-color:#fed;}
+.event,.TT {
+	background-color:#dfe !important; 
+	color:#073 !important;
+	font-weight:900;}
+.TT {font-size:150%;}
+
+td {background-color:white;}
+
+.event {border-width:4px 1px;}
+.entx {font-size:70%;}
+table a,.note a {color:black;}
+
+@media (prefers-color-scheme:dark) {
+td.dark,th.dark,.dark th,.dark td {border:1px solid #aaf;}
+.dark th{background-color:#103; color:white;}
+.dark td{background-color:#439; color:white;}
+th.dark{background-color:#103; color:white;}
+td.dark{background-color:#439; color:white;}
+.note dl {
+	border:solid 1px #030;
+	color:white;
+	border-left:10px solid #103;
+background:
+linear-gradient(90deg, rgba(10,20,0,1) 0%,rgba(20,50,0,1) 2%,rgba(30,70,0,1) 70%,rgba(70,120,0,1));}}
+
+.code {color:#04f;}
+.code span {color:#d20;}
+
+
+
 
 @media screen and (max-width:760px) {
 	main {width:95%; overflow-x:hidden; position:relative;}

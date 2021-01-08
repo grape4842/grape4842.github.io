@@ -1,73 +1,51 @@
 @charset "UTF-8";
 :lang(ko) {word-break: keep-all; line-break:normal;}
-:lang(ja) {word-wrap:break-word; word-break:break-all;}
 ::selection {background:#76f; color:white;}
-
-main {
-	position:relative; 
-	z-index:10;}
+main {position:relative; z-index:10;}
 i {display:block;}
-ul,ol,dl {padding-left:0px;
-}
-
+ul,ol,dl {padding-left:0px;}
 .znone {position:absolute; z-index:-100; left:0px; top:0px;}
 #wrap {position:relative;}
 #langzone {background-color:white;}
 .cicon {width:1rem; height:1rem;}
 div.lanregion {padding:1rem;}
-/*.langregion {clear:both;}
-.langregion li {float:left;}
-*/.langregion a{font-size:12px; color:#515154;}
+.langregion a{font-size:12px; color:#515154;}
 button {border:none;}
 table {border-collapse:collapse;}
-img,video
-{width:100%;}
+img,video {width:100%;}
 .expanded {
 	visibility:hidden;
 	filter: blur(10px);
-	height:0px;
+	height:0px;	opacity:0;
 	transform:scaleY(0.1);
-	opacity:0;
-	transition:0.7s;
-}
-
+	transition:0.7s;}
 .wpc {width:980px;
 	vertical-align:middle; 
 	position:relative;
 	padding:0px 16px;}
-.w980 {
-	width:90%;
+.w980 {	width:90%;
 	vertical-align:middle; 
 	position:relative;
 	box-sizing:border-box;}
-
 .hidden {
 	z-index:-1; 
 	position:absolute; 
 	top:50%; 
 	overflow:hidden; 
-	width:1px; 
-	height:1px; 
+	width:1px; height:1px; 
 	border:0; 
 	box-sizing:content-box;
 	clip: rect(1px, 1px, 1px, 1px); 
 	clip-path: inset(0px 0px 99.9% 99.9%);}
-	
 body {
 	background-color:#000;
 	color:#a1a1a6;
 	margin:0px; 
 	height:100%;}
-
 * {margin:auto auto; 
 	text-align:center;
 	-webkit-font-smoothing:antialiased;
-	font-family:"SF Pro KR","SF Pro Display","SF Pro Icons","Apple Gothic","HY Gulim","MalgunGothic","HY Dotum","Lexi Gulim","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-
-
-/* background-color: #121217; */
-
+	font-family:"SF Pro KR","SF Pro Display","SF Pro Icons","Apple Gothic","HY Gulim","MalgunGothic","HY Dotum","Lexi Gulim","Helvetica Neue","Helvetica","Arial",sans-serif;}
 header {
 	background:#111; 
 	z-index:9999; 
@@ -77,28 +55,18 @@ header {
 	left:0em;
 	position:relative; 
 	padding:0em; 
-	height:48px;
-}
-
-	nav *{
-		letter-spacing:-1.5px !important;
-		}
-
+	height:48px;}
+nav *{letter-spacing:-1.5px !important;}
 a {vertical-align:middle; 
+	transition:text-decoration 0.2s;
 	background-position:center; 
-	text-decoration:none; 	
+	text-decoration:transparent; 	
 	display:inline-block;
-	/*color:#06c;*/
-	color: #2997ff;
-	}
-
-button:hover, a:hover {
-	text-decoration:underline;}
-
+	color: #2997ff;}
+button:hover, a:hover {text-decoration:underline;}
 button:focus, a:focus {
 	outline: 4px solid rgba(0,125,250,0.6);
     outline-offset: 1px;}
-
 #LOGO {
 	line-height: 3.14286;
 	height:44px; width:16px;
@@ -108,43 +76,29 @@ button:focus, a:focus {
 	background-size:16px 44px; 
 	position:relative;
 	-webkit-tap-highlight-color:transparent;}
-
-#GOSHOP {
-	right:17px; 
-	position:absolute;}
-
-a path{
-	opacity:0.8; 
+#GOSHOP {right:17px; position:absolute;}
+a path{opacity:0.8; 
 	transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
--webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);}
+	-webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);}
 a:hover path,a:focus path {opacity:1;}
-
-
-
 #jump {
 	align-items:center;
 	justify-content:center;
-	height:48px; 
+	height:48px; width:100%;
 	position:absolute; 
-	left:0px;
-	top:0px; 
+	left:0px; top:0px; 
 	z-index:-1; 
 	background-color:transparent;
 	font-weight:900; 
 	color:transparent; 
-	width:100%;
 	display:flex;
-	padding:0px; 
-	margin:0px;}
-
+	padding:0px; margin:0px;}
 #jump:focus {
 	z-index:99999; 
 	outline:#03B 3px dashed; 
 	color:black;
 	background:rgba(200,200,200,0.5);
 	backdrop-filter:blur(10px);}
-
-
 #notice {
 		background-color: rgba(29,29,31,0.72);
 		height:48px;
@@ -158,23 +112,7 @@ a:hover path,a:focus path {opacity:1;}
 		font-size:21px; 
 		font-weight:600; 
 		letter-spacing: 0.012em; 
-		backdrop-filter: saturate(180%) blur(20px);
-	}
-
-/*#notice:after {
-		content:"";
-		box-sizing:content-box;
-		display:block;
-		background-color: #00000029;
-		position:absolute;
-		z-index:10;
-		top:100%; 
-		left:0px;
-		margin:0px; 
-		padding:0px;
-		height:1px; 
-		width:100%;
-	}*/
+		backdrop-filter: saturate(180%) blur(20px);}
 #notice,#apple{
 	right:0px;
 	box-sizing:border-box;
@@ -182,16 +120,8 @@ a:hover path,a:focus path {opacity:1;}
 	vertical-align:middle; 
 	margin:0px auto;
 	display:flex;}
-#apple {
-	position:relative;
-	height:44px;
-	display:flex;}
-
-#start {
-	text-align:center; 
-	position:relative; 
-	z-index:3;}
-
+#apple {position:relative; height:44px; display:flex;}
+#start {text-align:center; position:relative; z-index:3;}
 #Atitle {
     font-size: 21px;
     line-height: 1.14286;
@@ -201,12 +131,9 @@ a:hover path,a:focus path {opacity:1;}
     cursor: default;
     display: block;
     float: left;
-    margin: 14px 0 -14px;
-    padding: 0;
+    margin: 14px 0 -14px; padding: 0;
     height: 52px;
-    white-space: nowrap;
-}
-
+    white-space: nowrap;}
 #Stitle {
 	align-items: flex-start;
 	margin:0px; padding:0px;
@@ -214,22 +141,14 @@ a:hover path,a:focus path {opacity:1;}
 	flex-direction: column-reverse;
 	display:flex;
 	opacity:0.92;}
-
-
-
 #gochatbox {position:absolute;
 	justify-content:center;
-	top:0px;
-	right:0;
+	top:0px; right:0;
 	margin:0px;
 	padding-left: 16px;
     padding-right: 16px;
     padding-top: 16px;}
-
-#gochatborder {
-	margin-left: 17px;
-    margin-top: -3px;}
-
+#gochatborder {margin-left: 17px; margin-top: -3px;}
 #gochat {		
 		margin-top: -1px;
 		min-width:23px; 
@@ -248,40 +167,29 @@ a:hover path,a:focus path {opacity:1;}
 		right:0px; 
 		float:right;
 		background-origin:padding-box;
-		box-sizing:content-box;
-		}
-
+		box-sizing:content-box;}
 #gochat:hover{background-color:#147ce5;}
 #gochat:active {background-color:#0068d1;;}
-#gochat:focus {box-shadow: 0 0 0 4px rgba(0,125,250,0.6);
-    outline: none;}
-
-
-.wrap {
-	box-sizing:border-box;}
+#gochat:focus {box-shadow: 0 0 0 4px rgba(0,125,250,0.6); outline: none;}
+.wrap {box-sizing:border-box;}
 footer {
 	border-top:solid 1px #424245;
 	padding-top: 34px;
 	padding-bottom: calc(max(21px, env(safe-area-inset-bottom)));
 	width:100%;
 	position:relative;
-	bottom:0px;
-	left:0px;
+	bottom:0px; left:0px;
 	z-index:0;}
-
 #AppleA11Y {
 	position:relative;
 	font-weight:600;
 	margin:2rem auto;
-	color:white;
-}
+	color:white;}
 #AppleA11Y>div {
 	transform:translate(5%);
 	width:90%;
 	position:absolute;
-	bottom:2rem;
-}
-
+	bottom:2rem;}
 #AppleA11Y h2 {
 	line-height:1.34211;
 	font-size:21px; 
@@ -296,30 +204,21 @@ footer {
 	text-align:left;}
 #a11ymark {
 	display:flex;
-	margin:0px;
-	padding:0px;
+	margin:0px; padding:0px;
 	color:white; 
 	font-size:17px;
 	text-align:left;}
-
 .made {font-size:12px; color:#6e6e73;}
-
 /*큰 기기PC등에서만 보이는 부분*/
 .wbig {display:block;}
-
 /*스마트폰 등에서만 보이는 부분*/
 .wsmall {display:none;}
-
     /*iPhone SE용 레이아웃*/
 .m320 {display:none;}
 .no320 {display:block;}
-
-
+/*PC*/
 @media screen and (min-width:1200px) {
-	/*#LOGO {left:0px; position:absolute;}	*/
-	#apple {
-		margin:0px auto;
-		width:980px;}
+	#apple {margin:0px auto; width:980px;}
 	#LOGO {position:absolute;}
 	#GOSHOP {right:0px;}
 	#AppleA11Y {width:20%;}
@@ -330,12 +229,10 @@ footer {
 		width:calc(100% - 160px);
 		max-width:1600px;}
 	main section {margin:0px;}
-	.w980 {
-		max-width:1600px;}
+	.w980 {max-width:1600px;}
 	.wpc {padding:0px 23px;}
 	footer {padding-top: 34px;}
 	header {height:44px;}
-
 }
 /*iPadPro*/
 @media screen and (max-width:1100px) {
@@ -365,16 +262,8 @@ footer {
 	    margin-left: 0px;}
 	footer {
 		padding-bottom: calc(max(19px, env(safe-area-inset-bottom)));
-		padding-top: 17px;
-		}
+		padding-top: 17px;}
 }
-
-
-
-
-
-
-
 /*폴드,애플워치*/
 @media screen and (max-width:300px) {
 	#Stitle,h2 span,h2,h3 span,h3,h4 span,h4,h5{font-size:21px;}

@@ -1,204 +1,100 @@
 <!DOCTYPE html>
+
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>
 접근성 잡동사니 메모
 </title>
 <link rel="stylesheet" type="text/css" href="TEST.css"/>
 </head>
+
 <body>
 <header>
 	<h1>스크린리더 테스트나 메모를 위한 잡다한 것을 일시적으로 기록 한 페이지입니다.</h1>
 </header>
-<section class="white">
-	<table class="JAN20">
-		<caption>2020년 1월 설 명절 맞이 대 세일 일정표</caption>
-		<thead>
-			<th colspan="7" class="TT">해당 기간 내에 행사가 진행됩니다 자세한 사항은 홈페이지를 확인하세요.
-			</th>
-		</thead>
-		<tbody>
-		<tr>
-			<th class="sund">일</th>
-			<th>월</th>
-			<th>화</th>
-			<th>수</th>
-			<th>목</th>
-			<th>금</th>
-			<th class="satd">토</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>6</td>
-			<td>7</td>
-			<td>8</td>
-			<td>9</td>
-			<td>10</td>
-			<td>11</td>
-		</tr>
-		<tr>
-			<td>12</td>
-			<td>13</td>
-			<td>14</td>
-			<td>15</td>
-			<td>16</td>
-			<td>17</td>
-			<td>18</td>
-		</tr>
-		<tr>
-			<td>19</td>
-			<td>20</td>
-			<td>21</td>
-			<td class="event">22
-				<span class="event better entx">행사기간</span>
-			</td>
-			<td class="event">23
-				<span class="event better entx">행사기간</span>
-			</td>
-			<td class="offd event">24
-				<span class="event better entx">행사기간</span>
-			</td>
-			<td class="offd event">25
-				<span class="event better entx">행사기간</span>
-			</td>
-		</tr>
-		<tr>
-			<td class="offd event">26
-	<span class="event better entx">행사기간</span>
-	</td>
-			<td class="offd event">27
-	<span class="event better entx">행사기간</span>
-	</td>
-			<td class="event">28
-	<span class="event better entx">행사기간</span>
-	</td>
-			<td class="event">29
-	<span class="event better entx">행사기간</span>
-	</td>
-			<td>30</td>
-			<td>31</td>
-			<td></td>
-		</tr>
-		</tbody>
-		<tfoot>
-			<td class="TT" colspan="7">
-			행사기간:2020년 1월 22일부터 29일까지
-			</td>
-		</tfoot>
-	</table>
-<setcion>
-	<div class="colortestarea">
-		<ul>
-			<li style="color:#f00000;"></li>
-			<li style="color:#"></li>
-			<li style="color:#"></li>
-			<li style="color:#"></li>
-			<li style="color:#"></li>
-			<li style="color:#"></li>
-			<li style="color:#"></li>
-			<li style="color:#"></li>
-			<li style="color:#"></li>
-		</ul>
+<main>
+	<section role="region" aria-label="label과 입력서식을 스크린리더로 테스트해봅시다">
+		<h2>label과 입력서식</h2>
+		<form>
+			<h3><label for="labels">복수의 label에 동일한 for값을 부여한 경우를 테스트합니다.</label></h3>
+			<input id="labels" type="text">
+			<label for="labels" class="blind">5분이내에 인증번호 6자리를 입력하세요</label>
+			<label for="labels">3:30</label>
+			<span class="success">성공</span>
+		</form>
+		<form>
+			<div>
+				<h3>하나의 for에 class처럼 복수의 속성값을 적용해 보는 실험</h3>
+				<label for="tester1 tester2 tester3">SAMSUNG</label>
+				<input type="radio" id="tester1" name="tester">
+				<label for="tester1">S21</label>
+				<input type="radio" id="tester2" name="tester">
+				<label for="tester2">S21+</label>
+				<input type="radio" id="tester3" name="tester">
+				<label for="tester3">S21 Ultra</label>
+				<span class="fail">실패</span>
+			</div>
+		</form>
+
+		<h3 id="ad">aria-describedby test</h3>
+		<span class="blind" id="none1">아무거나 입력해보세요.</span>
+		<form><div>
+			<label for="adlabel">아리아 디스크립션의 라벨입니다</label>
+			<input type="text" id="adlabel" aria-describedby="ad none1" title="디스크립션의 타이틀입니다."/>
+		</div></form>
+
+		<h3 id="alb">aria-labeledby test</h3>
+		<span class="blind" id="none2">이 편집창은 의미가 없습니다.</span>
+		<form><div>
+			<label for="alblabel">labeledby의 라벨입니다.</label>
+			<input id="alblabel" type="text" aria-labeledby="alb none2" title="labeleby의 title입니다."/>
+		</div></form>
+
+		<div class="input-timer-wrap">
+			<span class="blind" aria-hidden="true" id="limit5m">
+			5분이내에 인증번호를 확인하여 수정창에 입력해 주세요.</span>
+			<span>aria-labeledby 2개 중 1개는 aria-hidden으로 숨겨져 있어 iOS는 읽지 못할 것입니다.</span>
+			<span id="timer" class="timer" role="timer"> 4:43 </span>
+			<form><div>
+				<label for="cer_num" aria-hidden="true" class="hidden">aria-hiddem으로 숨겨져 있어 iOS는 읽을 수 없을 것입니다.</label>
+				<input aria-labeledby="limit5m timer" required="required" id="cer_num" type="tel" placeholder="인증번호를 입력해주세요" maxlength="5" title="인증번호 입력">
+			</div></form>
+		</div>
+	</section>
+		<label for="testinput1">모델명 
+			<span aria-label="필수">*</span>
+		</label>
+		<input id="testinput1" type="text" name=""/>
+
+		<a href="https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.pro" title="플레이 스토어로 연결됨" aria-label="플레이 스토어에서 MX 플레이어 프로 다운로드">MX Player Pro</a>
 	</div>
-</section>
-
-<section>
-	<form>
-		<label for="labels">복수의 label에 동일한 for값을 부여한 경우를 테스트합니다.</label>
-		<input id="labels" type="text">
-		<label for="labels" class="blind">5분이내에 인증번호 6자리를 입력하세요</label>
-		<label for="labels">3:30</label>
-	</form>
-
-	<span class="blind" id="ad">aria-describedby test</span>
-	<span class="blind" id="none1">아무거나 입력해보세요.</span>
-	<label for="adlabel">아리아 디스크립션의 라벨입니다</label>
-	<input type="text" id="adlabel" aria-describedby="ad none1" title="디스크립션의 타이틀입니다."/>
-
-	<span class="blind" id="alb">aria-labeledby test</span>
-	<span class="blind" id="none2">이 편집창은 의미가 없습니다.</span>
-	<label for="alblabel">labeledby의 라벨입니다.</label>
-	<input id="alblabel" type="text" aria-labeledby="alb none2" title="labeledby의 title입니다."/>
-
-	<div class="input-timer-wrap">
-		<span class="blind" aria-hidden="true" id="limit5m">
-		5분이내에 인증번호를 확인하여 수정창에 입력해 주세요.</span>
-		<span>aria-labeledby 2개 중 1개는 aria-hidden으로 숨겨져 있어 iOS는 읽지 못할 것입니다.</span>
-		<br/>
-		<span id="timer" class="timer" role="timer"> 4:43 </span>
-		<label for="cer_num" aria-hidden="true" class="hidden">aria-hiddem으로 숨겨져 있어 iOS는 읽을 수 없을 것입니다.</label>
-		<input aria-labeledby="limit5m timer" required="required" id="cer_num" type="tel" placeholder="인증번호를 입력해주세요" maxlength="5" title="인증번호 입력"/>
-
-		<a href="https:www.apple.co.kr" aria-label="애플코리아">APPLE</a>
-	</div>
-	<div aria-label="각종 바로가기 링크 목록" role="region">
-		<h3>평소 이용할 것 같은 사이트 목록</h3>
-		다양한 링크를 목록으로 제공합니다 자주 방문하시는 사이트의 링크를 임의로 선정하여 채워넣으십시오.
-		<ul>
-			<li>	
-				<a href="https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Roles" target="_blank">aria-role MDN</a>	
-			</li>
-			<li>
-				<a href="" target="_blank">SAMSUNG</a>	
-			</li>
-			<li>
-				<a href="https://www.apple.co.kr" target="_blank">Apple</a>	
-			</li>
-			<li>
-				<a href="" target="_blank">DELL</a>	
-			</li>
-			<li>
-				<a href="https://www.youtube.com" target="_blank">YouTube</a>	
-			</li>
-			<li>
-				<a href="https://www.naver.com" target="_blank">Naver</a>	
-			</li>
-			<li>
-				<a href="https://twitter.com/home" target="_blank">Twitter</a>	
-			</li>
-		</ul>
-
-	<label for="testinput1">모델명 
-		<span aria-label="필수">*</span>
-	</label>
-	<input id="testinput1" type="text" name=""/>
-
-	<a href="https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.pro" title="플레이 스토어로 연결됨" aria-label="플레이 스토어에서 MX 플레이어 프로 다운로드">MX Player Pro</a>
-</section>
-
-<section>
-	<ol>
-		<li>ALT</li>
-		<li>Caption</li>
-		<li>COlor</li>
-		<li>Instruction</li>
-		<li>COntrast</li>
-		<li>Auto Start</li>
-	</ol>
-</section>
-<section aria-hidden="true">
-	<input type="text" name="" title="그냥 편집창">
-	<h6>헤딩 6</h6>
-	<span>Nintendo</span>
-	<div>
-		<div style="font-size:14pt;">5-1. 일반 텍스트의 경우 보통 크기 (18pt 미만, 또는 굵은 14pt 미만)의 텍스트가 4.5:1을 만족하지 않은 경우</div>
-		<div style="font-size:18pt;">5-2. 일반 텍스트의 경우 텍스트의 크기가 18pt 이상, 또는 굵은 14pt 이상의 텍스트가 3:1을 만족하지 않은 경우</div>
-		<div style="font-size:14pt; font-weight:900;">5-2. 일반 텍스트의 경우 텍스트의 크기가 18pt 이상, 또는 굵은 14pt 이상의 텍스트가 3:1을 만족하지 않은 경우</div>
-	</div>
-</section>
+	<section>
+		<ol>
+			<li>ALT</li>
+			<li>Caption</li>
+			<li>COlor</li>
+			<li>Instruction</li>
+			<li>COntrast</li>
+			<li>Auto Start</li>
+		</ol>
+	</section>
+	<section aria-hidden="true">
+		<input type="text" name="" title="그냥 편집창">
+		<h6>헤딩 6</h6>
+		<span>Nintendo</span>
+		<div>
+			<div style="font-size:14pt;">5-1. 일반 텍스트의 경우 보통 크기 (18pt 미만, 또는 굵은 14pt 미만)의 텍스트가 4.5:1을 만족하지 않은 경우</div>
+			<div style="font-size:18pt;">5-2. 일반 텍스트의 경우 텍스트의 크기가 18pt 이상, 또는 굵은 14pt 이상의 텍스트가 3:1을 만족하지 않은 경우</div>
+			<div style="font-size:14pt; font-weight:900;">5-2. 일반 텍스트의 경우 텍스트의 크기가 18pt 이상, 또는 굵은 14pt 이상의 텍스트가 3:1을 만족하지 않은 경우</div>
+		</div>
+	</section>
+</main>
 <footer>
-	2020 03 20
+	2021 01 20
+	<address>@purplemiyazawa</address>
 </footer>
 </body>
 </html>

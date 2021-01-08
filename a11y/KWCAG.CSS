@@ -10,9 +10,7 @@ body {
 	background-size:80%;
 	padding-top:3%;}
 
-section {
-	margin:0px auto;
-	width:90%;}
+section {margin:0px auto; width:90%;}
 #MACAG {display:block;
 	width:80%;
 	background-color:#fbc;
@@ -22,18 +20,13 @@ section {
 	font-size:1.5rem;
 	font-weight:700;
 	box-sizing:border-box;
-	padding:1rem;
-}
-a {text-decoration:none;}
-a:hover {
-	text-decoration:underline;
-}
+	padding:1rem;}
+a {text-decoration:transparent; transition:text-decoration 0.2s, outline 0.2s;}
 a:focus,a:hover {
 	outline:5px solid #baf;
-	transition:0.2s;}
-a:active {
-	outline:10px solid #dcf;
-}
+	text-decoration:underline wavy #eef;
+	text-underline-offset:4px;}
+a:active {outline:10px solid #dcf;}
 .jump_category:focus {
 	position:fixed; 
 	z-index:1;
