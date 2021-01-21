@@ -1,38 +1,92 @@
 @charset "UTF-8";
 :lang(ko) {word-break: keep-all; line-break:normal;}
 ::selection {background:#51a; color:white;}
+.pc {display:unset;}
+.mobile {display:none;}
 body {padding:0px; margin:0px;
+	background: linear-gradient(90deg, rgba(102,51,0,1) 0%, rgba(170,102,51,1) 10%, rgba(204,136,85,1) 30%, rgba(204,136,85,1) 70%, rgba(170,102,51,1) 90%, rgba(102,51,0,1) 100%);
 	font-weight:bold;
 	box-sizing:border-box;}
-main {display:block; width:60%; margin:40px auto;}
+main {display:block; 
+	width:60%;
+	margin:40px auto;
+	font-size:30px;
+	line-height:3.5rem;
+	overflow-x:hidden;}
+.headerbox {width:60%; margin:0px auto;}
 ul,ol,li {margin:0px; padding:0px;}
-li {list-style:none; padding:10px;}
-a {text-decoration:none; color:#210; font-size:20px;}
-a:hover,a:focus {text-decoration:underline;}
+ol {display:grid;}
+li {list-style:none;}
+a {text-decoration:transparent;
+	display:block;
+	background-color:#015; color:#fed;
+	border:solid 2px #abf;
+	transition-property:text-decoration,text-underline-offset,padding;
+	transition-duration:0.3s;
+	padding:30px 10px; margin:7px 0px;
+	font-size:20px;}
+.now {font-size:22px; font-weight:900;
+	background-color:#206;
+	border:solid 4px #ccf;
+	color:white;}
+a:focus,a:hover {
+	text-decoration:underline wavy #fe5;
+	text-underline-offset:7px;}
+
 header,footer {
-	padding:50px;
-	background-color:#6AF;}
-h1,h2 {margin:0px;
-	text-align:center;}
-div {box-shadow: 0px 0px 30px 20px inset #975;
+	padding:50px 0px;
+	background-color:#fe5;}
+h1 {font-size:40px; 
+	padding:20px; margin:10px auto;
+	background-color:white;}
+h1,h2 {text-align:center;}
+main div {box-shadow: 0px 0px 30px 20px inset #975;
 	background-color:#f0ece3;
 	padding:150px 120px;
+	word-break: keep-all;
 	margin:10vmax auto;}
-p {	font-size:30px;
-	line-height:3rem; 
-	margin:2vmax auto;
-	word-break: keep-all;}
+.firstdiv {margin-top:20px;}
+p {margin:2vmax auto;}
+.hidden {
+	z-index:-1; 
+	position:absolute; 
+	top:50%; 
+	overflow:hidden; 
+	width:1px; height:1px; 
+	border:0; 
+	box-sizing:content-box;
+	clip: rect(1px, 1px, 1px, 1px); 
+	clip-path: inset(0px 0px 99.9% 99.9%);}
+
+
 
 @media screen and (max-width:1000px) {
-	main {width:90%;}
-	div {padding:33px;}
-	p {font-size:22px; 
-		line-height:2rem;
-		margin:5vmax auto;}
+	.pc {display:none;}
+	.mobile {display:unset;}
+	main {width:90%;
+		font-size:22px; 
+		line-height:2rem;}
+	.headerbox {width:90%;}
+	ol {position:fixed;}
+	a {width:30px; height:30px;
+		text-align:center;
+		padding:0px;
+		border-radius:100%;}
+	main div {padding:33px;}
+	h1 {font-size:20px;}
+	p {margin:5vmax auto;}
+	i {display:block;}
 }
 
 @media (prefers-color-scheme:dark) {
-	body { background-color:black;}
+	body {background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(17,17,17,1) 90%, rgba(34,34,34,1) 100%);}
+	main {color:white;}
 	header {background-color:#015; color:white;}
+	h1 {color:white; background-color:black;}
 	h2 {color:white;}
-}
+	main div {box-shadow: 0px 0px 30px 20px inset #655;
+		background-color:#030201;}
+	a {color:#015; background-color:#fe5; border:#da0 2px solid;}
+	.now {background-color:#c95; color:#320; border:#c80 4px solid;}
+	a:focus,a:hover {
+	text-decoration:underline wavy #630;}
