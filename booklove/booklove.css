@@ -5,7 +5,9 @@ body {padding:0px; margin:0px;
 	font-weight:bold;
 	box-sizing:border-box;}
 main {display:block; width:60%; margin:40px auto;}
-a {text-decoration:none;}
+ul,ol,li {margin:0px; padding:0px;}
+li {list-style:none; padding:10px;}
+a {text-decoration:none; color:#210; font-size:20px;}
 a:hover,a:focus {text-decoration:underline;}
 header,footer {
 	padding:50px;
