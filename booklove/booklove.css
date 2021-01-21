@@ -1,0 +1,36 @@
+@charset "UTF-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+::selection {background:#51a; color:white;}
+body {padding:0px; margin:0px;
+	font-weight:bold;
+	box-sizing:border-box;}
+main {display:block; width:60%; margin:40px auto;}
+a {text-decoration:none;}
+a:hover,a:focus {text-decoration:underline;}
+header,footer {
+	padding:50px;
+	background-color:#6AF;}
+h1,h2 {margin:0px;
+	text-align:center;}
+div {box-shadow: 0px 0px 30px 20px inset #975;
+	background-color:#f0ece3;
+	padding:150px 120px;
+	margin:10vmax auto;}
+p {	font-size:30px;
+	line-height:3rem; 
+	margin:2vmax auto;
+	word-break: keep-all;}
+
+@media screen and (max-width:1000px) {
+	main {width:90%;}
+	div {padding:33px;}
+	p {font-size:22px; 
+		line-height:2rem;
+		margin:5vmax auto;}
+}
+
+@media (prefers-color-scheme:dark) {
+	body { background-color:black;}
+	header {background-color:#015; color:white;}
+	h2 {color:white;}
+}
