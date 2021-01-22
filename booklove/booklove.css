@@ -138,8 +138,8 @@ br {display:inline;}
 }
 
 @media (prefers-color-scheme:dark) {
-	body {background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(17,17,17,1) 90%, rgba(34,34,34,1) 100%);}
-	main {color:white;}
+	body {background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(17,17,17,1) 90%, rgba(34,34,34,1) 100%);
+		color:white;}
 	header,footer {background-color:#015; color:white;}
 	h1 {color:white; background-color:black;}
 	h2 {color:white;}
