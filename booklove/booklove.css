@@ -47,6 +47,7 @@ main div {box-shadow: 0px 0px 30px 20px inset #975;
 	margin:10vmax auto;}
 .firstdiv {margin-top:20px;}
 p {margin:2vmax auto;}
+br {display:inline;}
 .hidden {
 	z-index:-1; 
 	position:absolute; 
