@@ -63,8 +63,9 @@ a:focus:after, a:hover:after {opacity:1;}
 .nextfile,.prefile {
 	color:white; font-size:30px;
 	width:120px; 
-	height:40px;
+	line-height:40px;
 	padding:10px 20px;
+	display:inline-table;
 	top:0px;}
 #controller {
 	z-index:9999;
@@ -86,7 +87,7 @@ header,footer {
 h1 {font-size:40px; 
 	padding:20px; margin:10px auto;
 	background-color:white;}
-h1,h2 {text-align:center;}
+h1 {text-align:center;}
 main div {box-shadow: 0px 0px 30px 20px inset #975;
 	background-color:#f0ece3;
 	padding:150px 120px;
@@ -121,10 +122,9 @@ br {display:inline;}
 	z-index: 999;
 	position:absolute;
 	top:0px;
-	padding:40px; 
+	padding:40px;
 	background-color:darkgreen;
 	transition:0.4s;}
-#contentbox>ol>li {width:40%;}
 #contentbox h2+ol {
 	flex-direction:row; display:flex;}
 .expanded {
@@ -196,7 +196,6 @@ br {display:inline;}
 	nav {background-image:url(bookbgd.jpg);}
 	header,footer {background-color:#015; color:white;}
 	h1 {color:white; background-color:black;}
-	h2 {color:white;}
 	main div {box-shadow: 0px 0px 30px 20px inset #655;
 		background-color:#030201;}
 	a {color:white;}
