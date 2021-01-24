@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<a href="#firstdiv" id="jumpbook">본문 바로가기</a>
 <h1>책벌레의 하극상 
 	<i></i>~사서가 되기 위해서라면 뭐든지 할 수 있어~
 	<span class="web">(Web)</span>
@@ -22,13 +23,17 @@
 <header>
 	<div class="headerbox">
 		<div class="buttonlist">
-			<a class="prefile" href="booklove2-3.html">이전</a>
-			<a class="nextfile" href="booklove2-5.html">다음</a>
-			<button class="mobile" type="button" aria-expanded="false" id="controller">메뉴
-				<span class="open hidden">열기</span>
-				<span class="close hidden">닫기</span>
+			<a class="prefile" href="booklove2-4.html">이전</a>
+			<a class="nextfile" href="booklove2-6.html">다음</a>
+			<a href="#footer" id="gobottom"><span class="hidden">페이지 하단으로 이동</span>↓</a>
+		</div>	
+	</div>
+</header>
+<button class="mobile" type="button" aria-expanded="false" id="controller">
+				<span class="hidden">메뉴</span>
+				<span class="open">열기</span>
+				<span class="close">닫기</span>
 			</button>
-		</div>
 			<nav id="contentbox" class="expanded mobile">
 				<ol>
 					<li><h2>제 1부 병사의 딸</h2>
@@ -47,7 +52,7 @@
 							<li><a href="booklove2-2.html">2-2</a></li>
 							<li><a href="booklove2-3.html">2-3</a></li>
 							<li><a href="booklove2-4.html">2-4</a></li>
-							<li><a href="booklove2-5.html" class="now">2-5</a></li>
+							<li><a href="booklove2-5.html" class="now" title="현재 페이지">2-5</a></li>
 							<li><a href="booklove2-6.html">2-6</a></li>
 						</ol>
 					</li>
@@ -78,9 +83,6 @@
 					</li>
 				</ol>
 			</nav>
-	</div>
-</header>
-
 			<nav id="gnb" class="pc">
 				<a class="original" href="https://ncode.syosetu.com/n4830bu/" target="_blank">
 					<span class="hidden">원작 읽으러 가기 : 本好きの下剋上 ~司書になるためには手段を選んでいられません~"></span>
@@ -102,7 +104,7 @@
 							<li><a href="booklove2-2.html">2-2</a></li>
 							<li><a href="booklove2-3.html">2-3</a></li>
 							<li><a href="booklove2-4.html">2-4</a></li>
-							<li><a href="booklove2-5.html" class="now">2-5</a></li>
+							<li><a href="booklove2-5.html" class="now" title="현재 페이지">2-5</a></li>
 							<li><a href="booklove2-6.html">2-6</a></li>
 						</ol>
 					</li>
@@ -146,8 +148,9 @@
 
 <main>
 	<section>
-		<h2 id="bookmark2">- 제 2부 신전의 견습 무녀 -</h2>
-			<div id="firstdiv">
+		<h2 id="bookmark2"> - 제 2부 신전의 견습 무녀 - </h2>
+		<div id="firstdiv">
+
 			<h3>148.격퇴</h3>
 			"페르디난드! 당장 마인을 멈추게 해라!"
 
@@ -4495,10 +4498,16 @@
 			</div>
 	</section>
 </main>
-<footer>
+<footer id="footer">
 	<div class="headerbox">
-			<a class="prefile" href="booklove2-4.html">이전</a>
+			<a class="prefile" href="booklove2-4">이전</a>
 			<a class="nextfile" href="booklove2-6.html">다음</a>
+			<a class="original mobile" href="https://ncode.syosetu.com/n4830bu/" target="_blank">
+				<span class="hidden">원작 읽으러 가기 : 本好きの下剋上 ~司書になるためには手段を選んでいられません~"></span>
+			</a>
+			<a href="#jumpbook" id="gotop">↑
+				<span class="hidden">페이지 최상단으로 이동</span>
+			</a>
 	</div>
 </footer>
 <script type="text/javascript">
