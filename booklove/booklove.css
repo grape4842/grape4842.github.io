@@ -25,11 +25,14 @@ h1 {font-size:40px;
 	padding:20px; margin:10px auto;
 	text-align:center;}
 main h2 {text-align:center;}
-main div {box-shadow: 0px 0px 30px 20px inset #975;
+main section>div {box-shadow: 0px 0px 30px 20px inset #975;
 	background-color:#f0ece3;
-	padding:150px 120px;
+	padding:80px 120px;
 	word-break: keep-all;
 	margin:10vmax auto;}
+main section>div div {margin:2vmax auto;}
+main section>div div+p {margin:10px auto;}
+main section>div div p {display:inline;}
 nav {background-image:url(bookbg.jpg);
 	padding:60px 20px;}
 nav:before,nav:after {
@@ -52,7 +55,7 @@ main {display:block;
 	width:60%;
 	margin:40px auto;
 	font-size:30px;
-	line-height:3.5rem;
+	line-height:4rem;
 	overflow-x:hidden;}
 .headerbox {
 	display:flex;
@@ -67,6 +70,7 @@ main {display:block;
 .pagetitle {display:block;}
 ul,ol,li {margin:0px; padding:0px;}
 li {list-style:none;}
+button {cursor:pointer;}
 a {text-decoration:transparent;
 	background-color:transparent;
 	display:inline-block;
@@ -109,21 +113,33 @@ a:focus:after, a:hover:after {opacity:1;}
 	display:inline-table;
 	top:0px;}
 #controller {
+	display:flex;
+	justify-content:center;
+	align-items:center;
 	z-index:9999;
 	width:70px; height:70px; 
 	color:white; font-size:20px;
 	position:absolute; 
 	top:0px; right:0px;}
-#controller[aria-expanded="true"] .open{display:none;}
-#controller[aria-expanded="false"] .close{display:none;}
+.open,.close {
+	position:absolute;
+	opacity:1;
+	transition:0.8s, opacity 0.5s;
+	visibility:visible;}
+#controller:active .close,#controller:active .open {
+	transform:rotateX(360deg);
+}
+#controller[aria-expanded="true"] .open{
+	opacity:0; visibility:hidden;}
+#controller[aria-expanded="false"] .close{
+	opacity:0; visibility:hidden;}
 #controller[aria-expanded="true"] + #contentbox {top:0px;}
 #controller[aria-expanded="false"] + #contentbox {top:-300%;}
 
 .prefile {left:30%;}
 .nextfile {right:30%;}
 .nextfile:visited,.prefile:visited {color:#ddf;}
-#firstdiv {margin-top:20px;}
-p {margin:2vmax auto;}
+#firstdiv {margin-top:0px;}
 br {display:inline;}
 .hidden {
 	z-index:-1; 
@@ -146,9 +162,7 @@ br {display:inline;}
 	flex-wrap:wrap;
 	display:flex;
  	justify-content: space-around;}
-#contentbox h2+ol li {
-	width:calc(30%);
-	display:table-cell;}
+#contentbox h2+ol li {width:calc(100%/3);}
 .expanded {
 	position:absolute;
 	top:100%;
@@ -192,16 +206,22 @@ br {display:inline;}
 	background-position:center center;
 	background-image:url(jplogo.png);}
 #gnb .original:after {background:none;}
+
+
+
 /*tablet*/
 @media screen and (max-width:1500px) {
 		.pc {display:none;}
 	.mobile {display:unset;}
 	main,.headerbox {width:80%;}
-	main div {padding:30px 80px;}
+	main section>div {padding:30px 80px;}
 	#controller {width:100px; height:100px;}
 	.prefile {left:17%;}
 	.nextfile {right:17%;}
 }
+
+
+
 /*mobile*/
 @media screen and (max-width:760px) {
 	.pc {display:none;}
@@ -210,19 +230,28 @@ br {display:inline;}
 		font-size:22px; 
 		line-height:2.2rem;}
 	.headerbox {width:100%;}
+	#contentbox h2+ol li {width:calc(100%/2);}
 	.nextfile,.prefile {
 		font-size:20px;
 		padding-right:10px;
 		padding-left:10px;}
 	.prefile {left:5%;}
 	.nextfile {right:5%;}
-	a {width:30px; height:30px;
+	a {min-width:30px;
+		line-height:30px;
 		text-align:center;
 		padding:0px;}
-	main div {padding:33px;}
+	main section>div {padding:33px;}
 	h1 {font-size:20px;}
-	p {margin:5vmax auto;}
 }
+
+@media screen and (max-width:320px) {
+	main {width:100%;}
+	.prefile,.nextfile,#controller {width:80px;}
+	#controller {height:80px;}
+	nav h2 {font-size:20px;}
+}
+
 
 @media (prefers-color-scheme:dark) {
 	body {background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(17,17,17,1) 90%, rgba(34,34,34,1) 100%);
@@ -230,7 +259,7 @@ br {display:inline;}
 	nav {background-image:url(bookbgd.jpg);}
 	header,footer {background-color:#015; color:white;}
 	h1 {color:white; background-color:black;}
-	main div {box-shadow: 0px 0px 30px 20px inset #655;
+	main section>div {box-shadow: 0px 0px 30px 20px inset #655;
 		background-color:#030201;}
 	a {color:white;}
 	a:focus,a:hover {
