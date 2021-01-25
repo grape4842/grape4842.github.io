@@ -32,7 +32,7 @@ main section>div {box-shadow: 0px 0px 30px 20px inset #975;
 	margin:10vmax auto;}
 main section>div div {margin:2vmax auto;}
 main section>div div+p {margin:10px auto;}
-main section>div div p {display:inline;}
+main section>div div p {display:inline; margin:0px;}
 nav {background-image:url(bookbg.jpg);
 	padding:60px 20px;}
 nav:before,nav:after {
@@ -79,7 +79,7 @@ a {text-decoration:transparent;
 	padding:10px 10px;
 	opacity:0.8;
 	position:relative;
-	font-size:20px;
+	font-size:30px;
 	color:black;}
 a:after {content:'';
 	transition: opacity 0.2s; 
@@ -194,7 +194,7 @@ br {display:inline;}
 		from {left:-100%;}
 		to {left:0px;}
 	}
-#gnb h2 {text-align:left;
+#gnb h2 {font-size:22px;
 		padding:10px;}
 #gnb a {display:flex;}
 #gnb .original {
@@ -247,6 +247,7 @@ br {display:inline;}
 
 @media screen and (max-width:320px) {
 	main {width:100%;}
+	a {font-size:22px;}
 	.prefile,.nextfile,#controller {width:80px;}
 	#controller {height:80px;}
 	nav h2 {font-size:20px;}
