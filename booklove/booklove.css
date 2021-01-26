@@ -1,8 +1,8 @@
 @charset "UTF-8";
 :lang(ko) {word-break: keep-all; line-break:normal;}
 ::selection {background:#51a; color:white;}
-.pc {display:unset;}
-.mobile {display:none;}
+.pc {display:flex!important;}
+.mobile {display:none!important;}
 body {padding:0px; margin:0px;
 	background: linear-gradient(90deg, rgba(102,51,0,1) 0%, rgba(170,102,51,1) 10%, rgba(204,136,85,1) 30%, rgba(204,136,85,1) 70%, rgba(170,102,51,1) 90%, rgba(102,51,0,1) 100%);
 	font-weight:bold;}
@@ -211,8 +211,8 @@ br {display:inline;}
 
 /*tablet*/
 @media screen and (max-width:1500px) {
-		.pc {display:none;}
-	.mobile {display:unset;}
+		.pc {display:none!important;}
+	.mobile {display:flex!important;}
 	main,.headerbox {width:80%;}
 	main section>div {padding:30px 80px;}
 	#controller {width:100px; height:100px;}
@@ -224,8 +224,8 @@ br {display:inline;}
 
 /*mobile*/
 @media screen and (max-width:760px) {
-	.pc {display:none;}
-	.mobile {display:unset;}
+	.pc {display:none!important;}
+	.mobile {display:flex!important;}
 	main {width:90%;
 		font-size:22px; 
 		line-height:2.2rem;}
@@ -251,6 +251,8 @@ br {display:inline;}
 	.prefile,.nextfile,#controller {width:80px;}
 	#controller {height:80px;}
 	nav h2 {font-size:20px;}
+	#controller[aria-expanded="false"] + #contentbox {top:-1000%;}
+	#contentbox {transition:1s;}
 }
 
 
