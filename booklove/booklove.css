@@ -228,7 +228,7 @@ br {display:inline;}
 	.mobile {display:flex!important;}
 	main {width:90%;
 		font-size:22px; 
-		line-height:2.2rem;}
+		line-height:2.5rem;}
 	.headerbox {width:100%;}
 	#contentbox h2+ol li {width:calc(100%/2);}
 	.nextfile,.prefile {
