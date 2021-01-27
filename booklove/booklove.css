@@ -30,8 +30,7 @@ main section>div {box-shadow: 0px 0px 30px 20px inset #975;
 	padding:80px 120px;
 	word-break: keep-all;
 	margin:10vmax auto;}
-main section>div div {margin:2vmax auto;}
-main section>div div+p {margin:10px auto;}
+main section>div div+p, main section>div div {margin:4vmax auto;}
 main section>div div p {display:inline; margin:0px;}
 nav {background-image:url(bookbg.jpg);
 	padding:60px 20px;}
@@ -183,11 +182,9 @@ br {display:inline;}
 
 /* PC 메뉴*/
 #gnb {position:absolute;
-	background-color:darkslateblue;
-	overflow:auto;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	top:0px; left:-100%;
-	animation-duration:.4s;
+	animation-duration:0.4s;
 	animation-name:load;
 	animation-fill-mode:forwards;}
 	@keyframes load {
