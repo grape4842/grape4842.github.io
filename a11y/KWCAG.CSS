@@ -1,6 +1,6 @@
 @charset "utf-8";
 :lang(ko) {word-break: keep-all; line-break:normal;}
-::selection {background:#51a; color:white;}
+::selection {background:#31a; color:white;}
 /*모바일 기준*/
 body {
 	background-image:
