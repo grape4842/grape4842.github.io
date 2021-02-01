@@ -176,6 +176,7 @@ br {display:inline;}
 	visibility:hidden;}
 
 #gobottom, #gotop {
+	position:fixed;
 	border:white solid 1px;
 	font-size:40px;
 	text-align:center;
@@ -183,10 +184,10 @@ br {display:inline;}
 	background:#333;
 	left:5px;
 	display:table;
-	width:40px; line-height:50px;
+	width:20px; line-height:50px;
 }
-#gobottom{position:fixed; top:10px;}
-#gotop{position:absolute; bottom:10px;}
+#gobottom{top:10px;}
+#gotop{bottom:10px;}
 
 /* PC 메뉴*/
 #gnb {position:absolute;
