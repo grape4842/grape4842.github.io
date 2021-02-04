@@ -1,0 +1,130 @@
+@charset "utf-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+::selection {background:#31a; color:white;}
+/*모바일 기준*/
+body {
+	background-image:
+	linear-gradient(to left,rgba(0, 0, 255, 0.1), rgba(30, 30, 255, 0.1), rgba(0, 0, 255, 0.1)),
+	url(purplestar.jpg); 
+	background-attachment:fixed;
+	background-size:80%;
+	padding-top:3%;}
+
+section {margin:0px auto; width:90%;}
+#MACAG {display:block;
+	width:80%;
+	background-color:#fbc;
+	color:#000;
+	margin:0 auto;
+	border:#fde 1px solid;
+	font-size:1.5rem;
+	font-weight:700;
+	box-sizing:border-box;
+	padding:1rem;}
+a {text-decoration:transparent; transition:text-decoration 0.2s, outline 0.2s;}
+a:focus,a:hover {
+	outline:5px solid #baf;
+	text-decoration:underline wavy #eef;
+	text-underline-offset:4px;}
+a:active {outline:10px solid #dcf;}
+.jump_category:focus {
+	position:fixed; 
+	z-index:1;
+	top:0px;}
+.jump_category {
+	position:fixed; 
+	top:-100rem; 
+	z-index:-1;
+	font-size:150%; 
+	width:99%;
+	justify-content:center; 
+	padding:1rem 0px;
+	font-weight:bolder;  
+	background-color:#0a0; 
+	border:solid 1px #bfa;
+	color:#000; 
+	margin:0; 
+	text-align:center; 
+	vertical-align:middle; 
+	display:flex;}
+
+table {
+	border-collapse:collapse; 
+	margin:3rem auto;
+	margin-top:0px;}
+td,th {
+	font-family:"HY견고딕";
+	background-color: white; 
+	vertical-align:middle; 
+	border:1px solid #235; 
+	width:30%; 
+	line-height:2rem;
+	padding:2%; 
+	font-size:1.2rem;}
+th{background-color:#baf; 
+	font-weight:normal;
+	text-align:left;}
+td {font-weight:lighter;}
+caption {
+	width:1px; height:1px;
+	overflow:hidden;
+	position:relative;
+	z-index:-3;}
+ul {margin:0px; 
+	padding:0px;}
+li {list-style:none;}
+h1 {color:#ffa; 
+	font-weight:900;
+	margin-left:1rem;}
+h2 {font-weight:900;
+	color:#fcf;
+	margin-left:1rem;}
+
+
+.unsub th {background-clip: border-box;
+/*-webkit-background-clip: text;*/
+/*color: transparent;*/
+background-image:url(https://www.apple.com/v/iphone-xs/d/images/overview/copy_texture_4_large.jpg);}
+br {display:none;}
+
+@media screen and (min-width:1200px) {
+ body {background-size:60%;}
+ section {width:60%;}
+ td,th {font-size:1.5rem;}
+ h1,h2 {margin-left:10rem;}
+ #MACAG {
+ 	width:30%;
+ 	text-align:center;}
+}
+@media screen and (max-width:320px) {
+	#MACAG {font-size:20px;}
+	section {width:100%;}
+	h1,h2 {display:flex;
+		margin:2rem 0px;
+		justify-content:center;}
+}
+
+@media (prefers-contrast:high) {
+	body {background-color:black !important;}
+	table {color:white;}
+	th,td {border:3px solid #76f;}
+	th {background-color:#eef; color:black;}
+	td {background-color:#103;}
+	.jump_category {background-color:#130;
+		border:solid 1px #0c0;}
+	::selection {background:#fff; color:black;}
+}
+@media (prefers-color-scheme:dark) {
+	table {color:white;}
+	th,td {border:1px solid #baf;}
+	th {background-color:#103;}
+	td {background-color:#326;}
+	.jump_category {
+		background-color:#130;
+		border:solid 1px #0c0;
+		color:#fff;}
+	#MACAG {
+		background-color:#300;
+		color:#fff;
+		border:#f7a 1px solid;}
+}
