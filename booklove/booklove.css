@@ -258,6 +258,7 @@ br {display:inline;}
 	h1 {font-size:20px;}
 }
 
+/*smalldisplay*/
 @media screen and (max-width:320px) {
 	main {width:100%;}
 	a {font-size:22px;}
@@ -268,7 +269,7 @@ br {display:inline;}
 	#contentbox {transition:1s;}
 }
 
-
+/*darkmode*/
 @media (prefers-color-scheme:dark) {
 	body {background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(17,17,17,1) 90%, rgba(34,34,34,1) 100%);
 		color:white;}
