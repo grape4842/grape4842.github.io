@@ -18,7 +18,6 @@ section {margin:0px auto; width:90%;}
 	margin:0 auto;
 	border:#fde 1px solid;
 	font-size:1.5rem;
-	font-weight:700;
 	box-sizing:border-box;
 	padding:1rem;}
 a {text-decoration:transparent; transition:text-decoration 0.2s, outline 0.2s;}
@@ -53,7 +52,6 @@ table {
 	margin:3rem auto;
 	margin-top:0px;}
 td,th {
-	font-family:"HY견고딕";
 	background-color: white; 
 	vertical-align:middle; 
 	border:1px solid #235; 
