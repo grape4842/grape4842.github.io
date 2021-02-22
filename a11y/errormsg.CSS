@@ -110,7 +110,7 @@ h2 {font-weight:900;
 	::selection {background:#fff; color:black;}
 }
 
-@media (prefers-color-scheme:dark) {
+/*@media (prefers-color-scheme:dark) {
 	table {color:white;}
 	th,td {border:1px solid #baf;}
 	th {background-color:#103;}
@@ -124,3 +124,4 @@ h2 {font-weight:900;
 		color:#fff;
 		border:#f7a 1px solid;}
 }
+*/

@@ -114,7 +114,8 @@ br {display:none;}
 		border:solid 1px #0c0;}
 	::selection {background:#fff; color:black;}
 }
-@media (prefers-color-scheme:dark) {
+
+/*@media (prefers-color-scheme:dark) {
 	table {color:white;}
 	th,td {border:1px solid #baf;}
 	th {background-color:#103;}
@@ -128,3 +129,4 @@ br {display:none;}
 		color:#fff;
 		border:#f7a 1px solid;}
 }
+*/
