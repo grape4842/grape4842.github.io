@@ -1,33 +1,47 @@
 @charset "UTF-8";
-:lang(ko) {word-break: keep-all; line-break:normal;}
+:lang(ko) {word-break: keep-all; line-break:normal; font-size:1.2rem;}
 ::selection {background:#51a; color:white;}
-body {display:block; padding:0px; margin:0px;}
-ol ul {margin:0px;}
-li {list-style:none;}
+body {display:block; padding:0px; margin:0px; box-sizing:border-box;}
+ol, ul {margin:0px; padding:0px;}
+li {list-style:none; margin:5px 0px;}
 a {text-decoration:transparent;}
 
-/*모바일 기준*/
 main {display:block;
-	width:90%; margin:auto 0px;}
-section {}
+	width:90%; margin:0px auto;}
+section {margin:5% 0px;}
+#header, #footer {
+	background-color:#eef;
+	padding:3%;
+	width:90%;
+	margin:0px auto;
+	text-align:center;}
 table {
 	border-collapse:collapse;}
 td,th {
+	border:1px solid #000;
 	font-family:"HY견고딕";
-	vertical-align:middle; 
-	width:30%; 
-	padding:2%; 
-	font-size:1.2rem;}
-th{background-color:#baf; 
-	font-weight:normal;
-	text-align:left;}
-td {font-weight:lighter;}
+	vertical-align:middle;
+	padding:10px;}
+th {
+	background-color:#aaf; 
+	font-weight:normal;}
+tbody th {
+	text-align:left;
+	background-color:#bbf;}
+td {
+	background-color:#fff;
+	padding:0px;}
 caption {
 	width:1px; height:1px;
 	overflow:hidden;
 	position:relative;
 	z-index:-3;}
-
+input {
+	box-sizing:border-box;
+	border:none;
+	background-color:#eef;
+	width:100%; height:100%;
+	margin:0px auto; padding:10px;}
 @media (prefers-color-scheme:dark) {
 body {
 	background-image:
@@ -35,7 +49,13 @@ body {
 	url(purplestar.jpg); 
 	background-attachment:fixed;
 	background-size:80%;
-	padding-top:3%;}
-}
-th,td {border:1px solid #235; 
+	color:#fff;}
+th {background-color:#215;}
+tbody th {background-color:#55a;}
+td {background-color:#669;}
+input {
+	color:#fff;
+	background-color:#669;}
+input::placeholder {color:#fff;}
+#header, #footer {background-color:#100022;}
 }
