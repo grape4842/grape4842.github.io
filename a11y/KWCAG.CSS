@@ -3,6 +3,8 @@
 ::selection {background:#31a; color:white;}
 /*모바일 기준*/
 body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	background-image:
 	linear-gradient(to left,rgba(0, 0, 255, 0.1), rgba(30, 30, 255, 0.1), rgba(0, 0, 255, 0.1)),
 	url(purplestar.jpg); 
