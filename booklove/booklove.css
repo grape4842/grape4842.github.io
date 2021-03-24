@@ -194,14 +194,14 @@ br {display:inline;}
 #gnb {position:absolute;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	top:0px; left:-100%;
-	box-sizing:border-box;
-	animation-duration:0.4s;
+	box-sizing:border-box;}
+/*#gnb {animation-duration:0.4s;
 	animation-name:load;
 	animation-fill-mode:forwards;}
 	@keyframes load {
 		from {left:-100%;}
 		to {left:0px;}
-	}
+	}*/
 #gnb h2 {font-size:22px;
 		padding:10px;}
 #gnb a {display:flex;}
