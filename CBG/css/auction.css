@@ -1,14 +1,15 @@
 @charset "UTF-8";
-:lang(ko) {word-break: keep-all; line-break:normal; font-size:1.2rem;}
+:lang(ko) {word-break: keep-all; line-break:normal; font-size:1.1rem;}
 ::selection {background:#51a; color:white;}
 body {display:block; padding:0px; margin:0px; box-sizing:border-box;}
 ol, ul {margin:0px; padding:0px;}
-li {list-style:none; margin:5px 0px;}
+li {margin:10px 0px; list-style-position:inside; list-style-color:white;}
 a {text-decoration:transparent;}
 
 main {display:block;
 	width:90%; margin:0px auto;}
 section {margin:5% 0px;}
+ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding:20px;}
 #header, #footer {
 	background-color:#eef;
 	padding:3%;
@@ -16,32 +17,37 @@ section {margin:5% 0px;}
 	margin:0px auto;
 	text-align:center;}
 table {
+	margin:10px 0px;
 	border-collapse:collapse;}
-td,th {
-	border:1px solid #000;
-	font-family:"HY견고딕";
-	vertical-align:middle;
-	padding:10px;}
-th {
-	background-color:#aaf; 
-	font-weight:normal;}
-tbody th {
-	text-align:left;
-	background-color:#bbf;}
-td {
-	background-color:#fff;
-	padding:0px;}
 caption {
 	width:1px; height:1px;
 	overflow:hidden;
 	position:relative;
 	z-index:-3;}
-input {
+td,th {
+	border:1px solid #000;
+	vertical-align:middle;}
+th {
+	padding:10px;
+	background-color:#aaf; 
+	font-weight:bold;}
+tbody th {
+	text-align:left;
+	background-color:#ddf;}
+td {background-color:#fff; padding:0px; width:90%;}
+tr:nth-child(1) td {padding:10px;}
+input,textarea {
 	box-sizing:border-box;
+	transition-property:background;
+	transition-duration:0.2s;
 	border:none;
 	background-color:#eef;
 	width:100%; height:100%;
 	margin:0px auto; padding:10px;}
+input:focus, textarea:focus {background-color:#ddf;}
+::placeholder {color:#332277;}
+.money {color:#fa0; background-color:black; padding:2px 5px; font-weight:900;}
+
 @media (prefers-color-scheme:dark) {
 body {
 	background-image:
@@ -53,9 +59,17 @@ body {
 th {background-color:#215;}
 tbody th {background-color:#55a;}
 td {background-color:#669;}
-input {
+input,textarea {
 	color:#fff;
 	background-color:#669;}
-input::placeholder {color:#fff;}
+input:focus, textarea:focus {background-color:#443399;}
+::placeholder {color:#fff;}
 #header, #footer {background-color:#100022;}
+}
+
+@media screen and (min-width:1200px) {
+	main {width:60%;}
+}
+@media screen and (min-width:750px) {
+	main {width:75%;}
 }
