@@ -68,6 +68,40 @@ button:hover, a:hover {text-decoration:underline;}
 button:focus, a:focus {
 	outline: 4px solid rgba(0,125,250,0.6);
     outline-offset: 1px;}
+#studientshop {
+	display: block;
+    position: absolute;
+    opacity: .8;
+    z-index: 3;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -webkit-tap-highlight-color: transparent;}
+
+#studient1, #studient2 {
+	position: absolute;
+	background-color:transparent;
+    z-index: 3;
+    top:9px ;
+    left: 9px;
+    width: 30px;
+    height: 30px;
+    -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.bar {display: block;
+    width: 17px;
+    height: 1px;
+    background: #fff;
+    border-radius: 0.5px;
+    position: absolute;
+    left: 7px;
+    z-index: 1;}
+#studient1 .bar {top:14px;}
+#studient2 .bar {bottom:14px;}
+
 #LOGO {
 	line-height: 3.14286;
 	height:44px; width:16px;
