@@ -64,10 +64,10 @@ tbody th {background-color:#316;}
 td, input, textarea {
 	color:#fff;
 	background-color:#437;}
-tr:nth-child(1) td {background-color:#fff; }
+tr:nth-child(1) td {background-color:#548; }
 input:focus, textarea:focus {background-color:#53a;}
 ::placeholder {color:#fff;}
-#header, #footer {background-color:#100022;}
+#header, #footer {background-color:#200040;}
 }
 
 @media screen and (min-width:1200px) {
