@@ -12,12 +12,12 @@ div.lanregion {padding:1rem;}
 .langregion a{font-size:12px; color:#515154;}
 button {border:none;}
 table {border-collapse:collapse;}
-img,video {width:100%;}
+img,video {width:100%; overflow-x:hidden;}
 .expanded {
 	visibility:hidden;
 	filter: blur(10px);
-	height:0px;	opacity:0;
-	transform:scaleY(0.1);
+	height:0px; opacity:0;
+	transform:scaleY(0);
 	transition:0.7s;}
 .wpc {width:980px;
 	vertical-align:middle; 
@@ -38,6 +38,7 @@ img,video {width:100%;}
 	clip: rect(1px, 1px, 1px, 1px); 
 	clip-path: inset(0px 0px 99.9% 99.9%);}
 body {
+	overflow-x:hidden;
 	background-color:#000;
 	color:#a1a1a6;
 	margin:0px; 
