@@ -1,7 +1,8 @@
 @charset "UTF-8";
 :lang(ko) {word-break: keep-all; line-break:normal; font-size:1.1rem;}
 ::selection {background:#51a; color:white;}
-body {display:block; padding:0px; margin:0px; box-sizing:border-box;}
+body {display:block; padding:0px; margin:0px; box-sizing:border-box;
+	background:linear-gradient(to left,rgba(200, 190, 255,1) , rgba(230, 225, 255, 1) 5%, rgba(230, 220, 255, 1) 95%, rgba(200, 190, 255, 1));}
 ol, ul {margin:0px; padding:0px;}
 li {margin:10px 0px; list-style-position:inside; list-style-color:white;}
 a {text-decoration:transparent;}
@@ -11,7 +12,7 @@ main {display:block;
 section {margin:5% 0px;}
 ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding:20px;}
 #header, #footer {
-	background-color:#eef;
+	background-color:#a9f;
 	padding:3%;
 	width:90%;
 	margin:0px auto;
@@ -29,19 +30,19 @@ td,th {
 	vertical-align:middle;}
 th {
 	padding:10px;
-	background-color:#aaf; 
+	background-color:#bbb0ff; 
 	font-weight:bold;}
 tbody th {
 	text-align:left;
-	background-color:#ddf;}
-td {background-color:#fff; padding:0px; width:90%;}
-tr:nth-child(1) td {padding:10px;}
+	background-color:#ddd7ff;}
+td {background-color:#eeeaff; padding:0px; width:90%;}
+tr:nth-child(1) td {padding:10px; background-color:#fff; }
 input,textarea {
 	box-sizing:border-box;
 	transition-property:background;
 	transition-duration:0.2s;
 	border:none;
-	background-color:#eef;
+	background-color:#eeeaff;
 	width:100%; height:100%;
 	margin:0px auto; padding:10px;}
 input:focus, textarea:focus {background-color:#ddf;}
@@ -63,7 +64,8 @@ tbody th {background-color:#316;}
 td, input, textarea {
 	color:#fff;
 	background-color:#437;}
-input:focus, textarea:focus {background-color:#443399;}
+tr:nth-child(1) td {background-color:#fff; }
+input:focus, textarea:focus {background-color:#53a;}
 ::placeholder {color:#fff;}
 #header, #footer {background-color:#100022;}
 }
