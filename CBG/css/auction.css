@@ -46,7 +46,9 @@ input,textarea {
 	margin:0px auto; padding:10px;}
 input:focus, textarea:focus {background-color:#ddf;}
 ::placeholder {color:#332277;}
-.money {color:#fa0; background-color:black; padding:2px 5px; font-weight:900;}
+.money, .happy {padding:2px 5px; font-weight:900;}
+.money {color:#fa0; background-color:black;}
+.happy {color:#307; background-color:#fde;}
 
 @media (prefers-color-scheme:dark) {
 body {
@@ -56,12 +58,11 @@ body {
 	background-attachment:fixed;
 	background-size:80%;
 	color:#fff;}
-th {background-color:#215;}
-tbody th {background-color:#55a;}
-td {background-color:#669;}
-input,textarea {
+th {background-color:#205;}
+tbody th {background-color:#316;}
+td, input, textarea {
 	color:#fff;
-	background-color:#669;}
+	background-color:#437;}
 input:focus, textarea:focus {background-color:#443399;}
 ::placeholder {color:#fff;}
 #header, #footer {background-color:#100022;}
