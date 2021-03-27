@@ -1,4 +1,4 @@
-@charset "UTF-16";
+@charset "utf-8";
 :lang(ko) {word-break: keep-all; line-break:normal; text-rendering: optimizeLegibility;}
 ::selection {background:#bfd; color:#420;}
 
@@ -257,9 +257,8 @@ footer {
 	color:#bdf;
 }
 #robin dt, #robin a {
-	background: linear-gradient(135deg, #663300 30%,#cca99a 50%,#663300 70%);
-	color:#ced;
-	text-shadow:0px 0px 5px #320, 0px 0px 3px #320, 0px 0px 1px #320;}
+	background: linear-gradient(135deg, #663300 30%, #cca99a 50%, #663300 70%);
+	color:#ced;}
 #robin dd{
 	text-align:center;
 	border:solid #630 2px;}
@@ -329,9 +328,11 @@ footer {
 }
 @media screen and (max-width:760px) {
 	body {background-size:80%;}
+	.w90 {width:90%;}
 }
 @media screen and (max-width:320px){
 	body {background-size:100%;}
+	.w90 {width:95%;}
 	.navi a{font-size:60%;}
 	#HELLO {height:100%;}
 }
@@ -370,16 +371,9 @@ footer {
 
 
 
-	#master a,#master dd{color:#224;}
-	#master dt {
-	background:linear-gradient(to right, #acf, #bdf, #acf);}
-	#master dd{
-	text-align:center;
-	border:2px solid #acf;}
-	#master dd,.STF dd {
+	#robin dd,.STF dd {
 	background-color:white;
 	color:black;}
-
 
 	#purple dt,#purple a {background-color:#baf; color:#307;}
 	#purple dd {border:#baf solid 2px;}
@@ -389,8 +383,4 @@ footer {
 
 	#psps dt,#psps a {background-color:#fce; color:#540;}
 	#psps dd {border:#fce solid 2px;}
-
-	#robin dt,#robin a {background-color:#ced; color:#630;}
-	#robin dd {border:solid #bec 3px;}
-
 }
