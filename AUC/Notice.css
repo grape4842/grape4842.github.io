@@ -61,8 +61,7 @@ main {padding-top: 34px;}
 	transition:0.7s;
 	opacity:1;
 	padding-bottom:3rem;
-	justify-content:center;
-	background: linear-gradient(to bottom, #000 0%, #161617 30%);}
+	justify-content:center;}
 #controller {
 	color:white;
 	background-color:transparent;
@@ -542,30 +541,29 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 	li,li li,li dl {font-size: 24px;}
 	#AUC {font-size:21px;}
 	#i12PAUCT {font-size:14px; padding-top:40px;}
-#M1MBP13 {
-	transform: scale(0.9);
-    transform-origin: 50% -20%;
-    width: 87.5%;
-    height: 356px;}
-#M1MBP13 video {
-    width: 420px;
-    height: 208px;
-	left: 50%;
-    margin-left: -210px;}
-#M1MBPT {
-	position:relative; top:270px;}
-#M1title {line-height: 1.29167;
-	font-size: 48px;	
-    font-weight: 700;
-    margin-top: 6px;
-    padding-bottom: 12px;
-	color: #a1a1a6;}
-#M1MacBook {line-height: 1.29167;
-	color:#f5f5f7;
-	font-size: 24px;
-    font-weight: 600;
-    letter-spacing: .009em;}
-
+	#M1MBP13 {
+		transform: scale(0.9);
+	    transform-origin: 50% -20%;
+	    width: 87.5%;
+	    height: 356px;}
+	#M1MBP13 video {
+	    width: 420px;
+	    height: 208px;
+		left: 50%;
+	    margin-left: -210px;}
+	#M1MBPT {
+		position:relative; top:270px;}
+	#M1title {line-height: 1.29167;
+		font-size: 48px;	
+	    font-weight: 700;
+	    margin-top: 6px;
+	    padding-bottom: 12px;
+		color: #a1a1a6;}
+	#M1MacBook {line-height: 1.29167;
+		color:#f5f5f7;
+		font-size: 24px;
+	    font-weight: 600;
+	    letter-spacing: .009em;}
 	#full {font-size:19px;}
 	.walert {
 		margin:0.5rem auto;
@@ -580,8 +578,9 @@ url(https://www.nicepng.com/png/full/15-155485_apple-logo-icon-apple-logo-gold-p
 		background-position:center center;
 		line-height:2.82353em; 
 		height:48px;}
-.wsmall {display:block;}
+	.wsmall {display:block;}
 	.wbig {display:none;}
+	#Mlist li, #OMlist li {width:100%;}
 	#Mlist a {padding:2rem 0.5rem;}
 	#hello {text-align:left;}
 	.helpboxM {width:216px;}
