@@ -18,7 +18,8 @@ ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding
 	margin:0px auto;
 	text-align:center;}
 table {
-	margin:10px 0px;
+	width:100%;
+	margin:10px auto;
 	border-collapse:collapse;}
 caption {
 	width:1px; height:1px;
@@ -73,6 +74,6 @@ input:focus, textarea:focus {background-color:#53a;}
 @media screen and (min-width:1200px) {
 	main {width:60%;}
 }
-@media screen and (min-width:750px) {
+@media screen and (max-width:1100px) {
 	main {width:75%;}
 }
