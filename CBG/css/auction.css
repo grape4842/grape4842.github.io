@@ -4,7 +4,7 @@
 body {display:block; padding:0px; margin:0px; box-sizing:border-box;
 	background:linear-gradient(to left,rgba(200, 190, 255,1) , rgba(230, 225, 255, 1) 5%, rgba(230, 220, 255, 1) 95%, rgba(200, 190, 255, 1));}
 ol, ul {margin:0px; padding:0px;}
-li {margin:10px 0px; list-style-position:inside; list-style-color:white;}
+li {padding:10px 0px; list-style-position:inside; list-style-color:white;}
 a {text-decoration:transparent;}
 
 main {display:block;
@@ -12,7 +12,7 @@ main {display:block;
 section {margin:5% 0px;}
 ol {backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	padding:10px;
+	padding:20px;
 	background-color:#fff7;
 	border:2px solid #fffc;
 	border-radius:20px;}
