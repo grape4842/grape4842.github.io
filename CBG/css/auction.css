@@ -10,11 +10,11 @@ a {text-decoration:transparent;}
 main {display:block;
 	width:90%; margin:0px auto;}
 section {margin:5% 0px;}
-ol {background-color:#1037;
-	backdrop-filter: blur(10px);
+ol {backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	padding:10px;
-	border:2px solid #103;
+	background-color:#fff7;
+	border:2px solid #fffc;
 	border-radius:20px;}
 ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding:20px;}
 #header, #footer {
@@ -66,6 +66,8 @@ body {
 	background-attachment:fixed;
 	background-size:80%;
 	color:#fff;}
+ol {background-color:#1037;
+	border:2px solid #103;}
 th {background-color:#205;}
 tbody th {background-color:#316;}
 td, input, textarea {
