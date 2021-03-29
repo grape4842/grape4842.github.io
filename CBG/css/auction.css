@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :lang(ko) {word-break: keep-all; line-break:normal; font-size:1.1rem;}
-::selection {background:#51b; color:white;}
+::selection {background:#40b; color:white;}
 body {display:block; padding:0px; margin:0px; box-sizing:border-box;
 	background:linear-gradient(to left,rgba(200, 190, 255,1) , rgba(230, 225, 255, 1) 5%, rgba(230, 220, 255, 1) 95%, rgba(200, 190, 255, 1));}
 ol, ul {margin:0px; padding:0px;}
