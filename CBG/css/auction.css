@@ -51,17 +51,15 @@ input [type="checkbox"]:checked {
 	animation:checked 0.2s forwards;
 	box-shadow:0px 0px 0px 7px #76fc;
 }
-@keyframes checked{
-	from {box-shadow:0px 0px 0px 7px #76fc;}
-	to {box-shadow:0px 0px 0px 2px #76f;}
-}
+
 input[type="checkbox"]:after {
 	content:'';
 	transition:opacity ease-out 0.2s;
 	opacity:0;
 	margin:5px auto;
 	display:block;
-	width:10px; height:7px;
+	position:relative; top:-3px;
+	width:10px; height:6px;
 	transform:rotate(-45deg);
 	border-left:#fff 3px solid;
 	border-bottom:#fff 3px solid;
