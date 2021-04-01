@@ -47,7 +47,7 @@ ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding
 	background-color:#a9f;
 	padding:3%;
 	width:90%;
-	margin:0px auto;
+	margin:30px auto;
 	text-align:center;}
 aside {position:fixed; bottom:0px; z-index:40; left:0px;}
 aside input {border:solid #102 2px;}
@@ -168,7 +168,7 @@ td, input[type="tel"], textarea {
 tr:nth-child(1) td {background-color:#548; }
 input[type="tel"]:focus, textarea:focus {background-color:#53a;}
 ::placeholder {color:#fff;}
-#header, #footer {background-color:#200040;}
+#header, #footer {background-color:#205;}
 }
 
 @media screen and (min-width:760px) {
