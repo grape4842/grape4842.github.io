@@ -36,14 +36,13 @@
 			</ol>
 		</section>
 		<aside>
-			<h3>남은 금액 / 전체 금액</h3>
-			<form>
-				<label for="ones_money">남은 금액</label>
-				<input id="ones_money" type="tel" inputmode="decimal">
-				<label for="total_money">남은 금액</label>
-				<input id="total_money" type="tel" inputmode="decimal">
-
-			</form>
+			<div>
+				<h3 class="hidden">남은 금액 / 전체 금액</h3>
+				<label class="hidden" for="ones_money">남은 금액</label>
+				<input readonly="" id="ones_money" type="tel" inputmode="decimal">
+				<label class="hidden" for="total_money">전체 금액</label>
+				<input readonly="" id="total_money" type="tel" inputmode="decimal">
+			</div>
 		</aside>
 		<section>
 			<h2>경매 품목명</h2>

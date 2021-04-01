@@ -49,6 +49,8 @@ ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding
 	width:90%;
 	margin:0px auto;
 	text-align:center;}
+aside {position:fixed; bottom:0px; z-index:40; left:0px;}
+aside input {border:solid #102 2px;}
 table {
 	width:100%;
 	margin:50px auto;
@@ -176,4 +178,7 @@ input[type="tel"]:focus, textarea:focus {background-color:#53a;}
 @media screen and (min-width:1200px) {
 	main {width:60%;}
 	body {background-size:80%;}
+	aside {position:sticky; top:0px; z-index:40;}
+	aside div {position:sticky; top:0px; z-index:40;}
+
 }
