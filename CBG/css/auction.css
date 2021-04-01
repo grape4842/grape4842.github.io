@@ -1,6 +1,28 @@
 @charset "UTF-8";
 :lang(ko) {word-break: keep-all; line-break:normal; font-size:1.1rem;}
 ::selection {background:#40b; color:white;}
+.hidden {
+	z-index:-1; 
+	position:absolute; 
+	top:50%; 
+	overflow:hidden; 
+	width:1px; height:1px; 
+	border:0; 
+	box-sizing:content-box;
+	clip: rect(1px, 1px, 1px, 1px); 
+	clip-path: inset(0px 0px 99.9% 99.9%);}
+
+@keyframes checked {
+0% {transform:scale(0);
+	box-shadow:0px 0px 0px 1px #76fa;}
+70% {transform:scale(1.5);
+	box-shadow:0px 0px 0px 15px #76ff;}
+70% {transform:scale(1.2);
+	box-shadow:0px 0px 0px 10px #76fa;}
+100% {transform:scale(1);
+	box-shadow:0px 0px 0px 7px #76f7;}
+}
+
 body {display:block; padding:0px; margin:0px; box-sizing:border-box;
 	background:linear-gradient(to left,rgba(200, 190, 255,0.1) , rgba(230, 225, 255, 1) 5%, rgba(230, 220, 255, 0.1) 95%, rgba(200, 190, 255, 0.1)),
 	url(../img/purple_flower.png);
@@ -31,11 +53,6 @@ table {
 	width:100%;
 	margin:50px auto;
 	border-collapse:collapse;}
-caption {
-	width:1px; height:1px;
-	overflow:hidden;
-	position:relative;
-	z-index:-3;}
 input[type="checkbox"] {
 	box-sizing:content-box;
 	-webkit-appearance:none;
@@ -62,19 +79,9 @@ input[type="checkbox"]:checked {
 	box-shadow:0px 0px 0px 1px #76fa;
 	width:22px; height:22px;
 	border-radius:100%;}
-input[type="checkbox"]:checked + .check_effect{
+input[type="checkbox"]:checked + label + .check_effect{
 	animation:checked 0.4s forwards;
 	background-color:#76fa;}
-@keyframes checked {
-0% {transform:scale(0);
-	box-shadow:0px 0px 0px 1px #76fa;}
-70% {transform:scale(1.5);
-	box-shadow:0px 0px 0px 15px #76ff;}
-70% {transform:scale(1.2);
-	box-shadow:0px 0px 0px 10px #76fa;}
-100% {transform:scale(1);
-	box-shadow:0px 0px 0px 7px #76f7;}
-}
 
 input[type="checkbox"]:after {
 	content:'';
@@ -90,22 +97,26 @@ input[type="checkbox"]:after {
 }
 input[type="checkbox"]:checked:after {
 	opacity:1;}
-input[type="checkbox"] + label {
+label {
 	transition:0.2s;
 	padding:5px;
+	z-index:5;
 	color:#000; background-color:#fa0;
-	position:absolute; top:-50%; left:10px;
+	position:absolute; top:-100%; left:0px;
 	transform:scale(0);
 }
 input[type="checkbox"]:checked + label {
 	transform:scale(1);}
-input[type="checkbox"] + label:after {
+label:before {
 	content:'';
 	display:block;
-	width:10px; left:10px;
-	background-color:#fa0;
-	transform:rotate(45deg);
-	width:20px; height:20px;
+	top:100%;
+	z-index:3;
+	position:absolute;
+	transform:rotate(180deg);
+ 	border-left: 5px solid transparent;
+ 	border-right: 5px solid transparent;
+ 	border-bottom: 10px solid #fa0;
 }
 
 td,th {
@@ -143,7 +154,7 @@ body {
 	linear-gradient(to left,rgba(0, 0, 255, 0.1), rgba(30, 30, 255, 0.1), rgba(0, 0, 255, 0.1)),
 	url(../img/purplestar.jpg); 
 	background-attachment:fixed;
-	background-size:100%;
+	background-size:150%;
 	color:#fff;}
 ol {background-color:#1037;
 	border:2px solid #103;}
@@ -160,6 +171,7 @@ input[type="tel"]:focus, textarea:focus {background-color:#53a;}
 
 @media screen and (min-width:760px) {
 	main {width:75%;}
+	body {background-size:120%;}
 }
 @media screen and (min-width:1200px) {
 	main {width:60%;}
