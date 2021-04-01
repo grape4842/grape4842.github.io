@@ -2,7 +2,11 @@
 :lang(ko) {word-break: keep-all; line-break:normal; font-size:1.1rem;}
 ::selection {background:#40b; color:white;}
 body {display:block; padding:0px; margin:0px; box-sizing:border-box;
-	background:linear-gradient(to left,rgba(200, 190, 255,1) , rgba(230, 225, 255, 1) 5%, rgba(230, 220, 255, 1) 95%, rgba(200, 190, 255, 1));}
+	background:linear-gradient(to left,rgba(200, 190, 255,0.1) , rgba(230, 225, 255, 1) 5%, rgba(230, 220, 255, 0.1) 95%, rgba(200, 190, 255, 0.1)),
+	url(../img/purple_flower.png);
+	background-attachment:fixed;
+	background-position:center center;
+	background-size:cover;}
 ol, ul {margin:0px; padding:0px;}
 li {padding:10px 0px; list-style-position:inside; list-style-color:white;}
 a {text-decoration:transparent;}
@@ -13,7 +17,7 @@ section {margin:5% 0px;}
 ol {backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	padding:20px;
-	background-color:#fff7;
+	background-color:#fffa;
 	border:2px solid #fffc;
 	border-radius:20px;}
 ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding:20px;}
@@ -25,7 +29,7 @@ ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding
 	text-align:center;}
 table {
 	width:100%;
-	margin:30px auto;
+	margin:50px auto;
 	border-collapse:collapse;}
 caption {
 	width:1px; height:1px;
@@ -41,15 +45,35 @@ input[type="checkbox"] {
 	background-color:#0a0;
 	transition:0.2s;
 	display:block;
-	width:20px; height:20px;
+	z-index:1;
+	width:18px; height:18px;
 	margin:0px; padding:2px;
 	box-shadow:0px 0px 0px 2px #76f;
-	position:absolute; left:-10px; top:-10px;
-	}
-input [type="checkbox"]:checked {
-	background-color:#070;
-	animation:checked 0.2s forwards;
-	box-shadow:0px 0px 0px 7px #76fc;
+	position:absolute; left:0px; top:0px;}
+input[type="checkbox"]:checked {
+	background-color:#070;}
+.check_effect {
+	content:'';
+	transition:0.1s;
+	z-index:0;
+	position:absolute;
+	top:0px; left:0px;
+	display:block;
+	box-shadow:0px 0px 0px 1px #76fa;
+	width:22px; height:22px;
+	border-radius:100%;}
+input[type="checkbox"]:checked + .check_effect{
+	animation:checked 0.4s forwards;
+	background-color:#76fa;}
+@keyframes checked {
+0% {transform:scale(0);
+	box-shadow:0px 0px 0px 1px #76fa;}
+70% {transform:scale(1.5);
+	box-shadow:0px 0px 0px 15px #76ff;}
+70% {transform:scale(1.2);
+	box-shadow:0px 0px 0px 10px #76fa;}
+100% {transform:scale(1);
+	box-shadow:0px 0px 0px 7px #76f7;}
 }
 
 input[type="checkbox"]:after {
@@ -66,6 +90,23 @@ input[type="checkbox"]:after {
 }
 input[type="checkbox"]:checked:after {
 	opacity:1;}
+input[type="checkbox"] + label {
+	transition:0.2s;
+	padding:5px;
+	color:#000; background-color:#fa0;
+	position:absolute; top:-50%; left:10px;
+	transform:scale(0);
+}
+input[type="checkbox"]:checked + label {
+	transform:scale(1);}
+input[type="checkbox"] + label:after {
+	content:'';
+	display:block;
+	width:10px; left:10px;
+	background-color:#fa0;
+	transform:rotate(45deg);
+	width:20px; height:20px;
+}
 
 td,th {
 	position:relative;
@@ -93,14 +134,16 @@ input[type="tel"]:focus, textarea:focus {background-color:#ddf;}
 .money, .happy {padding:2px 5px; font-weight:900;}
 .money {color:#fa0; background-color:black;}
 .happy {color:#307; background-color:#fde;}
-
+@media (prefers-color-scheme:light) {
+	body {background-size:cover !important;}
+}
 @media (prefers-color-scheme:dark) {
 body {
-	background-image:
+	background:
 	linear-gradient(to left,rgba(0, 0, 255, 0.1), rgba(30, 30, 255, 0.1), rgba(0, 0, 255, 0.1)),
-	url(purplestar.jpg); 
+	url(../img/purplestar.jpg); 
 	background-attachment:fixed;
-	background-size:80%;
+	background-size:100%;
 	color:#fff;}
 ol {background-color:#1037;
 	border:2px solid #103;}
@@ -120,4 +163,5 @@ input[type="tel"]:focus, textarea:focus {background-color:#53a;}
 }
 @media screen and (min-width:1200px) {
 	main {width:60%;}
+	body {background-size:80%;}
 }
