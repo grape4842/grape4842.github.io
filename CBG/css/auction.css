@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :lang(ko) {word-break: keep-all; line-break:normal; font-size:1.1rem;}
 ::selection {background:#40b; color:white;}
-.hidden {
+.hidden, caption {
 	z-index:-1; 
 	position:absolute; 
 	top:50%; 
@@ -97,7 +97,7 @@ input[type="checkbox"]:after {
 }
 input[type="checkbox"]:checked:after {
 	opacity:1;}
-label {
+input[type="checkbox"] + label {
 	transition:0.2s;
 	padding:5px;
 	z-index:5;
@@ -107,7 +107,7 @@ label {
 }
 input[type="checkbox"]:checked + label {
 	transform:scale(1);}
-label:before {
+input[type="checkbox"] + label:before {
 	content:'';
 	display:block;
 	top:100%;
