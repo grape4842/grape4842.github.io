@@ -190,7 +190,7 @@ input[type="tel"]:focus, textarea:focus {background-color:#ddf;}
 ::placeholder {color:#332277;}
 .money, .happy {padding:2px 5px; font-weight:900;}
 .money {color:#fa0; background-color:black;}
-.happy {color:#307; background-color:#fde;}
+.happy {color:#703; background-color:#fde;}
 @media (prefers-color-scheme:light) {
 	body {background-size:cover !important;}
 }
