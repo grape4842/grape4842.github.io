@@ -36,6 +36,7 @@ a {text-decoration:transparent;}
 main {display:block;
 	width:90%; margin:0px auto;}
 section {margin:5% 0px;}
+#game_rule {position:relative;}
 ol {backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	padding:20px;
@@ -49,8 +50,16 @@ ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding
 	width:90%;
 	margin:30px auto;
 	text-align:center;}
-aside {position:fixed; bottom:0px; z-index:40; left:0px;}
-aside input {border:solid #102 2px;}
+aside {
+	position:fixed; 
+	width:100%;
+	bottom:0px; 
+	z-index:40; 
+	left:50%;
+	transform:translateX(-50%);}
+aside input {
+	border:solid #102 1px !important;}
+#product_list {margin-top:70px;}
 table {
 	width:100%;
 	margin:50px auto;
@@ -178,10 +187,19 @@ input[type="tel"]:focus, textarea:focus {background-color:#53a;}
 	main {width:75%;}
 	body {background-size:120%;}
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1000px) {
 	main {width:60%;}
 	body {background-size:80%;}
-	aside {position:relative; top:0px; z-index:40;}
-	aside div {position:sticky; top:0px; z-index:40;}
+	#game_rule {z-index:100;}
+	aside {
+		position:sticky; 
+		top:0px;
+		z-index:40;
+		transform:translateX(0px);}
+	aside div {
+		position:fixed;
+		top:0px; left:0px; 
+		z-index:40;
+		width:100%;}
 
 }
