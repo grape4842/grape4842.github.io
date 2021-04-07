@@ -38,7 +38,7 @@ header {
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	padding-bottom:0px;
-	background-color:#333a;
+	background-color:rgba(50,50,50,0.7);
 	border-bottom:#cccc solid 1px;}
 
 nav {margin:0px;
@@ -198,7 +198,7 @@ dd,dt {margin:0px; font-weight:400;}
 
 
 h4, section > ul > li {
-	background-color:#103a;
+	background-color:rgba(20,0,50,0.7);
 	border:2px solid #103;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
