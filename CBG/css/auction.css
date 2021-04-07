@@ -95,6 +95,7 @@ aside {
 	bottom:0px; 
 	z-index:40; 
 	left:50%;
+	margin:0px auto;
 	transform:translateX(-50%);}
 aside p {
 	position:relative;
