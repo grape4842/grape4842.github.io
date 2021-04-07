@@ -210,7 +210,7 @@ input[type="tel"],textarea {
 textarea {resize:none; min-height:100%;}
 input[type="tel"]:focus, textarea:focus {background-color:#ddf;}
 ::placeholder {color:#332277;}
-.money, .happy {padding:2px 5px; font-weight:900;}
+.money, .happy {padding:2px 5px; font-weight:900; display:inline-flex;}
 .money {color:#fa0; background-color:black;}
 .happy {color:#703; background-color:#fde;}
 .point {color:#900;}
