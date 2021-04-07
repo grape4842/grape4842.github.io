@@ -50,7 +50,7 @@ ol {backdrop-filter: blur(10px);
 	border:2px solid #fffc;
 	border-radius:20px;}
 ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding:20px;}
-#header, #footer {
+header, footer {
 	background-color:#a9f;
 	padding:3%;
 	width:90%;
@@ -65,7 +65,7 @@ aside {
 	transform:translateX(-50%);}
 aside input {
 	border:solid #102 1px !important;}
-#product_list {margin-top:70px;}
+#product_list {margin-top:100px;}
 table {
 	width:100%;
 	margin:50px auto;
@@ -161,6 +161,7 @@ input[type="tel"],textarea {
 	transition-property:background;
 	transition-duration:0.2s;
 	border:none;
+	border-radius:5px;
 	background-color:#eeeaff;
 	width:100%; height:100%;
 	margin:0px auto; padding:10px;}
