@@ -34,7 +34,8 @@ body {display:block; padding:0px; margin:0px; box-sizing:border-box;
 	background-position:center center;
 	background-size:cover;}
 ol, ul {margin:0px; padding:0px;}
-li {padding:10px 0px; list-style-position:inside; list-style-color:white;}
+ol > li {padding:10px 0px; list-style-position:inside; list-style-color:white;}
+li li {list-style:none; padding:10px 0px;}
 a {text-decoration:transparent;}
 h1,h2,h3,h4,h5,h6 {
 	font-weight:900; 
@@ -71,7 +72,7 @@ section {margin:5% 0px;}
 	background-color:#fffa;
 	border:2px solid #fffc;
 	border-radius:20px;}
-ol li:first-child {text-align:center; font-weight:bold; list-style:none; padding:20px;}
+ol > li:first-child {text-align:center; font-weight:bold; list-style:none; padding:20px;}
 header, footer {
 	background-color:#a9f;
 	padding:3%;
@@ -139,6 +140,8 @@ input[type="checkbox"] + label {
 	transition:0.2s;
 	padding:5px;
 	z-index:5;
+	border:#fff 1px solid;
+	border-bottom:none;
 	color:#000; background-color:#fa0;
 	position:absolute; top:-100%; left:0px;
 	transform:scale(0);
