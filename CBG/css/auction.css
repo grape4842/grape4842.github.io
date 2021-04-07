@@ -69,7 +69,9 @@ h2:after {
 	width:0px;
 }
 main {display:block;
-	width:90%; margin:0px auto;}
+	position:relative;
+	width:90%; 
+	margin:0px auto;}
 section {margin:5% 0px;}
 #game_rule {
 	position:relative; 
@@ -77,8 +79,8 @@ section {margin:5% 0px;}
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	padding:20px;
-	background-color:#fffa;
-	border:2px solid #fffc;
+	background-color:rgba(255,255,255,0.7);
+	border:2px solid rgba(255,255,255,0.9);
 	border-radius:20px;}
 ol > li:first-child {text-align:center; font-weight:bold; list-style:none; padding:20px;}
 header, footer {
@@ -223,8 +225,8 @@ body {
 	background-size:150%;
 	color:#fff;}
 .point {color:#fab;}
-#game_rule {background-color:#1037;
-	border:2px solid #103;}
+#game_rule {background-color:rgba(20,0,50,0.7);
+	border:2px solid rgba(20,0,50,0.9);}
 h2 {background-color:#05a;}
 h2:after {
 	border-top:25px solid #05a;
@@ -244,8 +246,8 @@ header, footer {background-color:#205;}
 	main {width:75%;}
 	body {background-size:120%;}
 	#product_list {margin:150px auto;}
-	h1 {font-size:2.5rem;}
-	h2 {font-size:2.2rem;}
+	h1 {font-size:2.2rem;}
+	h2 {font-size:2rem;}
 
 }
 @media screen and (min-width:1000px) {
@@ -253,6 +255,7 @@ header, footer {background-color:#205;}
 	body {background-size:80%;}
 	#game_rule {z-index:100;}
 	aside {
+		width:100%;
 		position:sticky; 
 		top:0px;
 		z-index:40;
