@@ -192,7 +192,7 @@ td, input[type="tel"], textarea {
 tr:nth-child(1) td {background-color:#548; }
 input[type="tel"]:focus, textarea:focus {background-color:#53a;}
 ::placeholder {color:#fff;}
-#header, #footer {background-color:#205;}
+header, footer {background-color:#205;}
 }
 
 @media screen and (min-width:760px) {
