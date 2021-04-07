@@ -43,10 +43,17 @@
 		<aside>
 			<div>
 				<h3 class="hidden">남은 금액 / 전체 금액</h3>
-				<label class="hidden" for="ones_money">남은 금액</label>
-				<input placeholder="남은 금액" readonly="" id="ones_money" type="tel" inputmode="decimal">
-				<label class="hidden" for="total_money">전체 금액</label>
-				<input placeholder="전체 금액" readonly="" id="total_money" type="tel" inputmode="decimal">
+				<p>
+					<label class="hidden" for="ones_money">남은 금액</label>
+					<input placeholder="남은 금액" readonly="" id="ones_money" type="tel" inputmode="decimal">
+					<label for="ones_money">만원</label>
+					<label class="hidden" for="total_money">전체 금액</label>
+				</p>
+
+				<p>
+					<input placeholder="전체 금액" readonly="" id="total_money" type="tel" inputmode="decimal">
+					<label for="total_money">만원</label>
+				</p>
 			</div>
 		</aside>
 		<div id="product_list">

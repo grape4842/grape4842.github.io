@@ -34,8 +34,16 @@ body {display:block; padding:0px; margin:0px; box-sizing:border-box;
 	background-position:center center;
 	background-size:cover;}
 ol, ul {margin:0px; padding:0px;}
-ol > li {padding:10px 0px; list-style-position:inside; list-style-color:white;}
-li li {list-style:none; padding:10px 0px;}
+ol > li {
+	padding:10px 0px; 
+	font-size:1.2rem;
+	list-style-position:inside; 
+	list-style-color:white;}
+li li {
+	list-style:none;
+	font-size:1.1rem;
+	margin-left:10px;
+	padding:10px 0px;}
 a {text-decoration:transparent;}
 h1,h2,h3,h4,h5,h6 {
 	font-weight:900; 
@@ -86,8 +94,15 @@ aside {
 	z-index:40; 
 	left:50%;
 	transform:translateX(-50%);}
-aside input {
-	border:solid #102 1px !important;}
+aside p {
+	position:relative;
+	margin:0px;
+	border:solid #102 1px;}
+aside label {
+	position:absolute; 
+	top:50%; 
+	right:10px;
+	transform:translateY(-50%);}
 table {
 	width:100%;
 	margin:50px auto;
