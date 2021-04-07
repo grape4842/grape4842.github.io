@@ -52,10 +52,10 @@ h2:after {
 	content:'';
 	position:absolute;
 	top:0px; right:-70px;
-	border-top:35px solid #08f;
+	border-top:35px solid #07f;
 	border-left:35px solid #07f;
-	border-bottom:35px solid #06f;
-	border-right:35px solid transparent;
+	border-bottom:35px solid #07f;
+	border-right:70px solid transparent;
 	display:inline-block;
 	height:0px;
 	width:0px;
@@ -207,9 +207,9 @@ ol {background-color:#1037;
 	border:2px solid #103;}
 h2 {background-color:#05a;}
 h2:after {
-	border-top:35px solid #04a;
+	border-top:35px solid #05a;
 	border-left:35px solid #05a;
-	border-bottom:35px solid #06a;}
+	border-bottom:35px solid #05a;}
 th {background-color:#205;}
 tbody th {background-color:#316;}
 td, input[type="tel"], textarea {
