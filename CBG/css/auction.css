@@ -43,7 +43,7 @@ h1 {font-size:2rem;}
 h2	{font-size:1.7rem;
 	display:inline-block;
 	width:70%;
-	line-height:70px;
+	line-height:50px;
 	padding:0px 10px;
 	margin:10px auto;
 	position:relative;
@@ -52,9 +52,8 @@ h2:after {
 	content:'';
 	position:absolute;
 	top:0px; right:-70px;
-	border-top:35px solid #07f;
-	border-left:35px solid #07f;
-	border-bottom:35px solid #07f;
+	border-top:25px solid #07f;
+	border-bottom:25px solid #07f;
 	border-right:70px solid transparent;
 	display:inline-block;
 	height:0px;
@@ -63,8 +62,10 @@ h2:after {
 main {display:block;
 	width:90%; margin:0px auto;}
 section {margin:5% 0px;}
-#game_rule {position:relative; font-size:1.2rem;}
-ol {backdrop-filter: blur(10px);
+#game_rule {
+	position:relative; 
+	font-size:1.2rem;
+	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	padding:20px;
 	background-color:#fffa;
@@ -191,6 +192,7 @@ input[type="tel"]:focus, textarea:focus {background-color:#ddf;}
 .money, .happy {padding:2px 5px; font-weight:900;}
 .money {color:#fa0; background-color:black;}
 .happy {color:#703; background-color:#fde;}
+.point {color:#900;}
 @media (prefers-color-scheme:light) {
 	body {background-size:cover !important;}
 }
@@ -202,13 +204,13 @@ body {
 	background-attachment:fixed;
 	background-size:150%;
 	color:#fff;}
-ol {background-color:#1037;
+.point {color:#fab;}
+#game_rule {background-color:#1037;
 	border:2px solid #103;}
 h2 {background-color:#05a;}
 h2:after {
-	border-top:35px solid #05a;
-	border-left:35px solid #05a;
-	border-bottom:35px solid #05a;}
+	border-top:25px solid #05a;
+	border-bottom:25px solid #05a;}
 th {background-color:#205;}
 tbody th {background-color:#316;}
 td, input[type="tel"], textarea {
