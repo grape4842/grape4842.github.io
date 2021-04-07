@@ -36,9 +36,30 @@ body {display:block; padding:0px; margin:0px; box-sizing:border-box;
 ol, ul {margin:0px; padding:0px;}
 li {padding:10px 0px; list-style-position:inside; list-style-color:white;}
 a {text-decoration:transparent;}
-h1,h2,h3,h4,h5,h6 {font-weight:900; margin:0px;}
+h1,h2,h3,h4,h5,h6 {
+	font-weight:900; 
+	margin:0px;}
 h1 {font-size:2.5rem;}
-h2 {font-size:2.2rem;}
+h2 {font-size:2.2rem;
+	display:inline-block;
+	width:70%;
+	line-height:70px;
+	padding:0px 10px;
+	margin:10px auto;
+	position:relative;
+	background-color:#07f;}
+h2:after {
+	content:'';
+	position:absolute;
+	top:0px; right:-70px;
+	border-top:35px solid #08f;
+	border-left:35px solid #07f;
+	border-bottom:35px solid #06f;
+	border-right:35px solid transparent;
+	display:inline-block;
+	height:0px;
+	width:0px;
+}
 main {display:block;
 	width:90%; margin:0px auto;}
 section {margin:5% 0px;}
@@ -203,6 +224,11 @@ header, footer {background-color:#205;}
 	main {width:60%;}
 	body {background-size:80%;}
 	#game_rule {z-index:100;}
+	h2 {background-color:#05d;}
+	h2:after {
+		border-top:35px solid #04d;
+		border-left:35px solid #05d;
+		border-bottom:35px solid #06d;}
 	aside {
 		position:sticky; 
 		top:0px;
