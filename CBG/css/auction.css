@@ -39,8 +39,8 @@ a {text-decoration:transparent;}
 h1,h2,h3,h4,h5,h6 {
 	font-weight:900; 
 	margin:0px;}
-h1 {font-size:2.5rem;}
-h2 {font-size:2.2rem;
+h1 {font-size:2rem;}
+h2	{font-size:1.7rem;
 	display:inline-block;
 	width:70%;
 	line-height:70px;
@@ -224,6 +224,9 @@ header, footer {background-color:#205;}
 	main {width:75%;}
 	body {background-size:120%;}
 	#product_list {margin:150px auto;}
+	h1 {font-size:2.5rem;}
+	h2 {font-size:2.2rem;}
+
 }
 @media screen and (min-width:1000px) {
 	main {width:60%;}
