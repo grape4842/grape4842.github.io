@@ -2,7 +2,7 @@
 :lang(ko) {
 	word-break: keep-all; 
 	line-break:normal; 
-	font-size:1.1rem;
+	font-weight:550;
 	font-family:"맑은 고딕","MS Gothic";}
 ::selection {background:#40b; color:white;}
 .hidden, caption {
@@ -36,11 +36,13 @@ body {display:block; padding:0px; margin:0px; box-sizing:border-box;
 ol, ul {margin:0px; padding:0px;}
 li {padding:10px 0px; list-style-position:inside; list-style-color:white;}
 a {text-decoration:transparent;}
-
+h1,h2,h3,h4,h5,h6 {font-weight:900;}
+h1 {font-size:2.5rem;}
+h2 {font-size:2.2rem;}
 main {display:block;
 	width:90%; margin:0px auto;}
 section {margin:5% 0px;}
-#game_rule {position:relative;}
+#game_rule {position:relative; font-size:1.2rem;}
 ol {backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	padding:20px;
@@ -145,7 +147,10 @@ th {
 tbody th {
 	text-align:left;
 	background-color:#ddd7ff;}
-td {background-color:#eeeaff; padding:0px; width:90%;}
+td {background-color:#eeeaff; 
+	padding:0px; 
+	width:90%;
+	font-size:1.1rem;}
 tr:nth-child(1) td {
 	font-weight:bold;
 	padding:10px; 
