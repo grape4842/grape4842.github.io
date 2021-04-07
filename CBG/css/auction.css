@@ -36,7 +36,7 @@ body {display:block; padding:0px; margin:0px; box-sizing:border-box;
 ol, ul {margin:0px; padding:0px;}
 li {padding:10px 0px; list-style-position:inside; list-style-color:white;}
 a {text-decoration:transparent;}
-h1,h2,h3,h4,h5,h6 {font-weight:900;}
+h1,h2,h3,h4,h5,h6 {font-weight:900; margin:0px;}
 h1 {font-size:2.5rem;}
 h2 {font-size:2.2rem;}
 main {display:block;
