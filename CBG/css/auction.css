@@ -86,7 +86,6 @@ aside {
 	transform:translateX(-50%);}
 aside input {
 	border:solid #102 1px !important;}
-#product_list {margin-top:100px;}
 table {
 	width:100%;
 	margin:50px auto;
@@ -224,6 +223,7 @@ header, footer {background-color:#205;}
 @media screen and (min-width:760px) {
 	main {width:75%;}
 	body {background-size:120%;}
+	#product_list {margin:150px auto;}
 }
 @media screen and (min-width:1000px) {
 	main {width:60%;}
