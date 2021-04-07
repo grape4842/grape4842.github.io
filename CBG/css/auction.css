@@ -205,11 +205,11 @@ body {
 	color:#fff;}
 ol {background-color:#1037;
 	border:2px solid #103;}
-h2 {background-color:#05d;}
+h2 {background-color:#05a;}
 h2:after {
-	border-top:35px solid #04d;
-	border-left:35px solid #05d;
-	border-bottom:35px solid #06d;}
+	border-top:35px solid #04a;
+	border-left:35px solid #05a;
+	border-bottom:35px solid #06a;}
 th {background-color:#205;}
 tbody th {background-color:#316;}
 td, input[type="tel"], textarea {
