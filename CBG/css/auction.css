@@ -23,6 +23,7 @@
 }
 
 body {
+	overflow-x:hidden;
 	word-break: keep-all; 
 	line-break:normal; 
 	font-size:18px;
@@ -105,6 +106,11 @@ aside label {
 	top:50%; 
 	right:10px;
 	transform:translateY(-50%);}
+.page_announce {
+	background-color:#fa0;
+	color:#000;
+	font-weight:900;
+	padding:5px;}
 table {
 	width:100%;
 	margin:50px auto;
@@ -263,18 +269,17 @@ header, footer {background-color:#205;}
 	#product_list {margin:150px auto;}
 	h1 {font-size:1.3rem;}
 	h2 {font-size:1.2rem;}
-		aside {
-		width:100%;
-		position:sticky; 
-		top:0px;
-		z-index:40;
-		transform:translateX(0px);}
-	aside div {
-		position:fixed;
-		top:0px; left:0px; 
-		z-index:40;
-		width:100%;}
-
+	aside {
+	width:100%;
+	position:sticky; 
+	top:0px;
+	z-index:40;
+	transform:translateX(0px);}
+aside div {
+	position:fixed;
+	top:0px; left:0px; 
+	z-index:40;
+	width:100%;}
 }
 @media screen and (min-width:1000px) {
 	main {width:60%;}
