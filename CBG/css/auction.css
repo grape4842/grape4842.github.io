@@ -1,9 +1,4 @@
 @charset "UTF-8";
-:lang(ko) {
-	word-break: keep-all; 
-	line-break:normal; 
-	font-weight:550;
-	font-family:"맑은 고딕","MS Gothic";}
 ::selection {background:#40b; color:white;}
 .hidden, caption {
 	z-index:-1; 
@@ -27,12 +22,18 @@
 	box-shadow:0px 0px 0px 7px #76f7;}
 }
 
-body {display:block; padding:0px; margin:0px; box-sizing:border-box;
+body {
+	word-break: keep-all; 
+	line-break:normal; 
+	font-weight:550;
+	font-family:"맑은 고딕","MS Gothic";
+	display:block; 
+	padding:0px; margin:0px; 
+	box-sizing:border-box;
 	background:linear-gradient(to left,rgba(200, 190, 255,0.1) , rgba(230, 225, 255, 1) 5%, rgba(230, 220, 255, 0.1) 95%, rgba(200, 190, 255, 0.1)),
 	url(../img/purple_flower.png);
-	background-attachment:fixed;
-	background-position:center center;
-	background-size:cover;}
+	background-attachment:fixed center center cover;
+}
 ol, ul {margin:0px; padding:0px;}
 ol > li {
 	padding:10px 0px; 
