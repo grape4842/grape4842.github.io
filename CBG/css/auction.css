@@ -25,7 +25,7 @@
 body {
 	word-break: keep-all; 
 	line-break:normal; 
-	font-weight:550;
+	font-size:18px;
 	font-family:"맑은 고딕","MS Gothic";
 	display:block; 
 	padding:0px; margin:0px; 
@@ -35,22 +35,18 @@ body {
 	background-attachment:fixed center center cover;
 }
 ol, ul {margin:0px; padding:0px;}
-ol > li {
-	padding:10px 0px; 
-	font-size:1.2rem;
-	list-style-position:inside; 
-	list-style-color:white;}
-li li {
-	list-style:none;
-	font-size:1.1rem;
+li {list-style:none;}
+#game_rule ul > li {
+	padding:10px 0px;}
+#game_rule li li {
 	margin-left:10px;
 	padding:10px 0px;}
 a {text-decoration:transparent;}
 h1,h2,h3,h4,h5,h6 {
 	font-weight:900; 
 	margin:0px;}
-h1 {font-size:2rem;}
-h2	{font-size:1.7rem;
+h1 {font-size:1.5rem;}
+h2	{font-size:1.2rem;
 	display:inline-block;
 	width:70%;
 	line-height:50px;
@@ -76,17 +72,19 @@ main {display:block;
 section {margin:5% 0px;}
 #game_rule {
 	position:relative; 
-	font-size:1.2rem;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	padding:20px;
 	background-color:rgba(255,255,255,0.7);
 	border:2px solid rgba(255,255,255,0.9);
 	border-radius:20px;}
-ol > li:first-child {text-align:center; font-weight:bold; list-style:none; padding:20px;}
+ol > li:first-child {
+	text-align:center; 
+	font-weight:bold; 
+	padding:20px;}
 header, footer {
 	background-color:#a9f;
-	padding:3%;
+	padding:3vmax;
 	width:90%;
 	margin:30px auto;
 	text-align:center;}
@@ -187,22 +185,19 @@ th {
 	padding:10px;
 	background-color:#bbb0ff; 
 	font-weight:bold;}
-tbody th {
-	text-align:left;
-	background-color:#ddd7ff;}
+tbody th {background-color:#ddd7ff;}
 td {background-color:#eeeaff; 
 	padding:0px; 
-	width:90%;
-	font-size:1.1rem;}
+	width:90%;}
 tr:nth-child(1) td {
 	font-weight:bold;
 	padding:10px; 
 	background-color:#fff; }
 input[type="tel"],textarea {
-	font-size:1.1rem;
 	box-sizing:border-box;
 	transition-property:background;
 	transition-duration:0.2s;
+	font-size:20px;
 	border:none;
 	border-radius:5px;
 	background-color:#eeeaff;
@@ -245,18 +240,12 @@ header, footer {background-color:#205;}
 }
 
 @media screen and (min-width:760px) {
-	main {width:75%;}
+	main {width:80%;}
 	body {background-size:120%;}
 	#product_list {margin:150px auto;}
-	h1 {font-size:2.2rem;}
-	h2 {font-size:2rem;}
-
-}
-@media screen and (min-width:1000px) {
-	main {width:60%;}
-	body {background-size:80%;}
-	#game_rule {z-index:100;}
-	aside {
+	h1 {font-size:1.3rem;}
+	h2 {font-size:1.2rem;}
+		aside {
 		width:100%;
 		position:sticky; 
 		top:0px;
@@ -268,4 +257,13 @@ header, footer {background-color:#205;}
 		z-index:40;
 		width:100%;}
 
+}
+@media screen and (min-width:1000px) {
+	main {width:60%;}
+	body {
+		background-size:80%;
+		font-size:20px;}
+	#game_rule {z-index:100;}
+	h1 {font-size:2rem;}
+	h2 {font-size:1.5rem;}
 }
