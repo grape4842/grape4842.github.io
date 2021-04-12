@@ -210,6 +210,24 @@ input[type="tel"]:focus, textarea:focus {background-color:#ddf;}
 .money {color:#fa0; background-color:black;}
 .happy {color:#703; background-color:#fde;}
 .point {color:#900;}
+.game_btn {
+	margin:0px auto;
+	display:inline-block;
+	position:relative;
+	left:50%;
+	transform:translateX(-50%);
+	background-color:#e00;
+	padding:10px;
+	color:#fff;
+	font-weight:900;
+	border-width:5px;
+	border-style:solid;
+	border-top-color:#f33;
+	border-left-color:#700;
+	border-right-color:#500;
+	border-bottom-color:#300;
+	}
+
 @media (prefers-color-scheme:light) {
 	body {background-size:cover !important;}
 }
