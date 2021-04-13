@@ -267,7 +267,7 @@ header, footer {background-color:#205;}
 @media screen and (min-width:760px) {
 	main {width:80%;}
 	body {background-size:120%;}
-	#product_list {margin:150px auto;}
+	#product_list {margin-top:200px;}
 	h1 {font-size:1.3rem;}
 	h2 {font-size:1.2rem;}
 	aside {
