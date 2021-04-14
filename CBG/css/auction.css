@@ -219,21 +219,30 @@ input[type="tel"]:focus, textarea:focus {background-color:#ddf;}
 .point {color:#900;}
 .game_btn {
 	margin:0px auto;
-	display:inline-block;
-	position:relative;
-	left:50%;
-	transform:translateX(-50%);
+	display:block;
+	width:20%;
+	text-align:center;
+	transform:translateY(0px);
 	background-color:#e00;
 	padding:10px;
+	margin:5px auto;
 	color:#fff;
 	font-weight:900;
 	border-width:5px;
 	border-style:solid;
 	border-top-color:#f33;
-	border-left-color:#700;
-	border-right-color:#500;
-	border-bottom-color:#300;
+	border-left-color:#a00;
+	border-right-color:#800;
+	border-bottom-color:#500;
 	}
+.game_btn:active {
+	transform:translateY(3px);
+	background-color:#d11;
+	border-bottom-color:#e55;
+	border-right-color:#911;
+	border-left-color:#711;
+	border-top-color:#511;
+}
 
 @media (prefers-color-scheme:light) {
 	body {background-size:cover !important;}
