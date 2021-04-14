@@ -217,6 +217,7 @@ input[type="tel"]:focus, textarea:focus {background-color:#ddf;}
 .money {color:#fa0; background-color:black;}
 .happy {color:#703; background-color:#fde;}
 .point {color:#900;}
+.game_btn.start {filter:hue-rotate(90deg);}
 .game_btn {
 	margin:0px auto;
 	display:block;
