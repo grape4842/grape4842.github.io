@@ -15,18 +15,16 @@
 <body>
 <header>
 		<h1>가치관 경매 게임</h1>
+		<p class="game_description">당신은 <span class="money">1천만원</span>으로 <span class="happy">행복하기 위해 필요한 것</span>을 얻기위해 진행되는 경매에 참여하게 됩니다.</p>
 </header>
 <main>
 	<a href="auction2.html" class="game_btn">이전</a>
 	<h2>게임 설명</h2>
-	<section id="game_rule">
+	<section class="game_rule">
 		<h3>게임을 진행하면서</h3>
-		<ul start="0">
-			<li>당신은 <span class="money">1천만원</span>으로 <span class="happy">행복하기 위해 필요한 것</span>을 얻기위해 진행되는 경매에 참여하게 됩니다.</li>
+		<ul>
 			<li>경매를 진행하면서 실제로 사용한 금액을 [실제 금액]란에 적습니다.</li>
 			<li>비고란은 세부 내용을 보며 본인이 경매를 위해 금액을 내건 이유, 원하는 조건 등을 적어보는 란입니다.</li>
-			<li>경매를 마친 후 예상했던 금액과 실제로 사용한 금액을 비교하고 생각해 봅시다.</li>
-			<li>참여한 다른 사람들과 함께 각자 어떤 결과였는지 이야기를 나눠봅시다.</li>
 		</ul>
 		<p class="point">항목 중 스펙과 같이 포괄적인 의미를 가진 경우 이미 별도 품목으로 제공된 내용은 중복으로 포함할 수 없습니다. (예 : 언어능력)</p>
 	</section>
@@ -34,14 +32,14 @@
 		<div>
 			<h3 class="hidden">남은 금액 / 전체 금액</h3>
 			<p>
-				<label class="hidden" for="ones_money">남은 금액</label>
-				<input placeholder="남은 금액" readonly="" id="ones_money" type="tel" inputmode="decimal">
-				<label for="ones_money">만원</label>
+				<label class="hidden" for="have_money">남은 금액</label>
+				<input value="1,000" placeholder="남은 금액" readonly="" id="have_money" type="tel" inputmode="decimal">
+				<label class="won" for="have_money">만원</label>
 			</p>
 			<p>
-				<label value="" class="hidden" for="total_money">전체 금액</label>
+				<label class="hidden" for="total_money">전체 금액</label>
 				<input value="1,000" placeholder="전체 금액" readonly="" id="total_money" type="tel" inputmode="decimal">
-				<label for="total_money">만원</label>
+				<label class="won" for="total_money">만원</label>
 			</p>
 			<p class="page_announce">실제 경매 진행 페이지</p>
 		</div>
@@ -72,17 +70,27 @@
 						</label>
 					</th>
 					<td>
-						<input id="product01" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal">
+						<input id="product01" readonly="" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal">
+						<label class="won" for="product01">만원</label>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row">실제금액</th>
-					<td><input title="실제 금액 (건강)" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+					<th scope="row">
+						<label for="real_price01">실제금액</label>
+					</th>
+					<td>
+						<input id="real_price01" readonly="" title="실제 금액 (건강)" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal">
+						<label for="real_price01" class="won">만원</label>
+					</td>
 				</tr>
 				<tr>
-					<th scope="row">비고</th>
+					<th scope="row">
+						<label for="memo01">비고
+							<span class="hidden">건강</span>
+						</label>
+					</th>
 					<td>
-						<textarea title="비고(건강)" placeholder="비고"></textarea>
+						<textarea id="memo01" placeholder="비고"></textarea>
 					</td>
 				</tr>
 			</tbody>
@@ -706,6 +714,11 @@
 				</tr>
 			</tbody>
 		</table>
+	</section>
+	<section class="game_rule">
+		<h3>게임을 마치고...</h3>
+			<p>경매를 마친 후 게임을 시작하기 전에 내가 정한 우선순위와 예상했던 금액과 실제 경매를 진행하면서 사용한 금액을 비교해보고, 또한 참여한 다른 사람들은 어떤 결과 였는지 함께 이야기를 나눠봅시다.</p>
+		</ul>
 	</section>
 </main>
 <footer>

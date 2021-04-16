@@ -36,8 +36,7 @@ body {
 	background-attachment:fixed center center cover;
 }
 ol, ul {margin:0px; padding:0px;}
-li {list-style:none;}
-#game_rule ul > li {
+li {list-style:none;
 	padding:10px 0px;}
 #game_rule li li {
 	margin-left:10px;
@@ -71,7 +70,7 @@ main {display:block;
 	width:90%; 
 	margin:0px auto;}
 section {margin:5% 0px;}
-#game_rule {
+.game_rule {
 	position:relative; 
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
@@ -101,7 +100,7 @@ aside p {
 	position:relative;
 	margin:0px;
 	border:solid #102 1px;}
-aside label {
+.won {
 	position:absolute; 
 	top:50%; 
 	right:10px;
@@ -201,6 +200,7 @@ tr:nth-child(1) td {
 	padding:10px; 
 	background-color:#fff; }
 input[type="tel"],textarea {
+	font-family:"맑은 고딕";
 	box-sizing:border-box;
 	transition-property:background;
 	transition-duration:0.2s;
@@ -257,7 +257,7 @@ body {
 	background-size:150%;
 	color:#fff;}
 .point {color:#fab;}
-#game_rule {background-color:rgba(20,0,50,0.7);
+.game_rule {background-color:rgba(20,0,50,0.7);
 	border:2px solid rgba(20,0,50,0.9);}
 h2 {background-color:#05a;}
 h2:after {
@@ -297,7 +297,7 @@ aside div {
 	body {
 		background-size:80%;
 		font-size:20px;}
-	#game_rule {z-index:100;}
+	.game_rule {z-index:100;}
 	h1 {font-size:2rem;}
 	h2 {font-size:1.5rem;}
 }
