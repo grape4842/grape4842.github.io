@@ -34,7 +34,7 @@
 			<h3 class="hidden">남은 금액 / 전체 금액</h3>
 			<p>
 				<label class="hidden" for="have_money">남은 금액</label>
-				<input placeholder="남은 금액" readonly="" id="have_money" type="tel" inputmode="decimal">
+				<input value="1,000" placeholder="남은 금액" readonly="" id="have_money" type="tel" inputmode="decimal">
 				<label class="won" for="have_money">만원</label>
 			</p>
 			<p>
@@ -90,8 +90,14 @@
 					<td>가정과 직장에 다니면서도 보장되는 자유시간</td>
 				</tr>
 				<tr>
-					<th scope="row">예상금액</th>
-					<td><input title="예상 금액(자유)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+					<th scope="row">
+						<label for="product02">예상금액
+							<span class="hidden">자유</span>
+						</label>
+						</th>
+					<td>
+						<input id="product02" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal">
+					</td>
 				</tr>
 			</tbody>
 		</table>
@@ -113,8 +119,12 @@
 					<td>언제나 따뜻하고 행복하고 함께 건강히 오래 계시는</td>
 				</tr>
 				<tr>
-					<th scope="row">예상금액</th>
-					<td><input title="예상 금액(부모님)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+					<th scope="row">
+						<label for="product03">예상금액
+							<span class="hidden">부모님</span>
+						</label>
+						</th>
+					<td><input id="product03" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
 				</tr>
 			</tbody>
 		</table>
@@ -135,7 +145,11 @@
 					<td>대통령, CEO, 명예교수 등</td>
 				</tr>
 				<tr>
-					<th scope="row">예상금액</th>
+					<th scope="row">
+						<label for="product04">예상금액
+							<span class="hidden">권력 / 명예</span>
+						</label>
+					</th>
 					<td><input title="예상 금액(권력 / 명예)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
 				</tr>
 			</tbody>
