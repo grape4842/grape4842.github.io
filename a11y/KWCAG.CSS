@@ -13,11 +13,11 @@ body {
 	padding-top:3%;}
 
 section {margin:0px auto; width:90%;}
-#MACAG {display:block;
+.link {display:block;
 	width:80%;
 	background-color:#fbc;
 	color:#000;
-	margin:0 auto;
+	margin:10px auto;
 	border:#fde 1px solid;
 	font-size:1.5rem;
 	font-weight:700;
@@ -93,13 +93,15 @@ br {display:none;}
  section {width:60%;}
  td,th {font-size:1.5rem;}
  h1,h2 {margin-left:10rem;}
- #MACAG {
- 	width:30%;
+ .link {
+ 	width:50%;
  	text-align:center;}
 }
 @media screen and (max-width:320px) {
-	#MACAG {font-size:20px;}
-	section {width:100%;}
+	body {font-size:14px;}
+	.link {font-size:1rem;}
+	section {width:95%;}
+	h1 {font-size:1.5rem;}
 	h1,h2 {display:flex;
 		margin:2rem 0px;
 		justify-content:center;}
@@ -125,7 +127,7 @@ br {display:none;}
 		background-color:#130;
 		border:solid 1px #0c0;
 		color:#fff;}
-	#MACAG {
+	#link {
 		background-color:#300;
 		color:#fff;
 		border:#f7a 1px solid;}
