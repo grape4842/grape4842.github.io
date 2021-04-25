@@ -4,7 +4,7 @@
 ::selection {background:#76f; color:white;}
 img,video {width:100%;}
 body {
-	background:#560 url(img/grassB.png);
+	background:#560 url(../img/grassB.png);
 	background-repeat:repeat;
 	background-size:20%;
 	background-position: center center;
