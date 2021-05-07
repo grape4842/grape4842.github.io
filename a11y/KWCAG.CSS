@@ -1,8 +1,11 @@
 @charset "utf-8";
 :lang(ko) {word-break: keep-all; line-break:normal;}
 ::selection {background:#31a; color:white;}
+@font-face { 
+	font-family: 'SpoqaHanSansNeo'; src: url(font/SpoqaHanSansNeo_TTF_original/SpoqaHanSansNeo-Regular.ttf) format('truetype'); 
+} 
 /*모바일 기준*/
-body {
+body {font-family: "SpoqaHanSansNeo";
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-image:
