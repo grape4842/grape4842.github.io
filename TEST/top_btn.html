@@ -1,40 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="top_btn.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<title>위로 올리기</title>
-	<style>
-		html, body, p{margin:0; padding:0;}
-		.skip_nav a{position:absolute; top:-30px; left:0; width:100%; height:30px; line-height:30px; transition:top 0.3s; color:#fff;}
-		.skip_nav a:focus{top:0;}
-		#container{height:500vh; background-color:purple; }
-		#container p{height:100vh; font-size:100px; text-align:center; color:#fff;}
-		#go_top{position:fixed; bottom:0; right:0; width:100px; height:60px; line-height:60px; font-size:20px; color:#000;}
-		#footer{width:100%; height:40px; line-height: background:#bebebe; color:#000;}
-
-	</style>
+	<title>TEST File Home</title>
 </head>
 <body>
-	<div class="skip_nav">
-		<a href="#container">본문 바로가기</a>
-	</div>
-	<div id="container">
-		<p>1</p>
-		<p>2</p>
-		<p>3</p>
-		<p>4</p>
-		<p>5</p>
-	</div>
-	<button type="button" aria-label="맨 위로" id="go_top">TOP</button>
-	<button type="button" id="footer">푸터</button>
+	<a href="#contents" id="skip_header">본문 바로가기</a>
+	<header>
+		<nav>
+			<h1>
+				<a href="top_btn.html">jQuery Practice Home</a>
+			</h1>
+		Navigation
+		</nav>
+	</header>
+	<main id="contents">
+		<div class="flexible_width">
+			<section>
+				<h2>제목 2</h2>
+				<dl>
+					<dt>
+						<a href=""></a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>접근성 테스트를 위한 메모장</h2>
+				<dl>
+					<dt>
+						<a href="Labo.html">접근성 잡동사니 메모</a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>서로에 대해 알아보는 소규모 파티 게임</h2>
+				<dl>
+					<dt>
+						<a href="auction.html">가치관 경매 게임</a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>제목 2</h2>
+				<dl>
+					<dt>
+						<a href=""></a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>제목 2</h2>
+				<dl>
+					<dt>
+						<a href=""></a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+		</div>
+	</main>
+	<footer>
+		<div id="footer" class="flexible_width">
+			footer
+			<button type="button" aria-label="페이지 최상단으로" id="go_top"></button>
+		<div>
+	</footer>
+	
 
 	<script>
 		$(document).ready(function () {
 			$('#go_top').on('click', function () {
 				$('html, body').animate({scrollTop: '0'}, 1000);
+				$('#skip_header').focus()
 			});
+			
 			// jQuery 선택자 사용법 숙지(CSS 선택방법과 동일함);
 			// https://gangzzang.tistory.com/entry/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%ACjQuery-%EC%84%A0%ED%83%9D%EC%9E%90
 			// focus()이벤트 확인;
