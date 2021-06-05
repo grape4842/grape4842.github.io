@@ -2,7 +2,7 @@
 :lang(ko) {word-break: keep-all; line-break:normal;}
 ::selection {background:#31a; color:white;}
 @font-face { 
-	font-family: 'SpoqaHanSansNeo'; src: url(font/SpoqaHanSansNeo_TTF_original/SpoqaHanSansNeo-Regular.ttf) format('truetype'); 
+	font-family: 'SpoqaHanSansNeo'; src: url(../font/SpoqaHanSansNeo_TTF_original/SpoqaHanSansNeo-Bold.ttf) format('truetype'); 
 } 
 /*모바일 기준*/
 body {font-family: "SpoqaHanSansNeo";
@@ -10,7 +10,7 @@ body {font-family: "SpoqaHanSansNeo";
 	-moz-osx-font-smoothing: grayscale;
 	background-image:
 	linear-gradient(to left,rgba(0, 0, 255, 0.1), rgba(30, 30, 255, 0.1), rgba(0, 0, 255, 0.1)),
-	url(purplestar.jpg); 
+	url(../img/purplestar.jpg); 
 	background-attachment:fixed;
 	background-size:80%;
 	padding-top:3%;}
@@ -121,7 +121,7 @@ br {display:none;}
 	::selection {background:#fff; color:black;}
 }
 
-/*@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme:dark) {
 	table {color:white;}
 	th,td {border:1px solid #baf;}
 	th {background-color:#103;}
@@ -135,4 +135,3 @@ br {display:none;}
 		color:#fff;
 		border:#f7a 1px solid;}
 }
-*/

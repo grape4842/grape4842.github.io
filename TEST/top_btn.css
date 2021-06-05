@@ -3,7 +3,7 @@ body {margin:0px; background-color:#429;}
 #skip_header{position:absolute; top:-100px; left:0; width:100%; padding:10px; box-sizing:border-box; transition:top 0.3s; background-color:#54b; color:#fff; text-align:center;
 }
 #skip_header:focus{top:0;}
-a {text-decoration:transparent; transition:text-decoration 0.2s;}
+a {text-decoration:transparent; text-underline-offset:3px; transition:text-decoration 0.2s;}
 .flexible_width {width:60%; margin:0px auto;}
 header {padding:10px 0px; background-color:#215; color:#fff;}
 header a {color:#fff;}
