@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "utf-8";
 :lang(ko) {word-break: keep-all; line-break:normal; font-size:20px;}
 ::selection {background:#370; color:white;}
 
