@@ -18,7 +18,8 @@ input {
 	color:white; 
 	background-color:black;
 	padding:10px;}
-
+.hide {text-indent:-99999px;
+	font-size:0px;}
 .blind {overflow:hidden;
 	display:inline-block;
     position:relative;
