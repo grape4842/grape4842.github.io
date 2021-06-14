@@ -51,7 +51,7 @@ li {list-style-type:none; margin:0.5rem auto;}
 .note dd {margin-bottom:0.3%;}
 
 @media (prefers-color-scheme:dark) {
-body {background-color:#215;}
+body {background-color:#205;}
 .note dl {
 	border:solid 1px #030;
 	color:white;
