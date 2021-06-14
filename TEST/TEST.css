@@ -20,13 +20,13 @@ input {
 	padding:10px;}
 .hide {text-indent:-99999px;
 	position:absolute;
-	top:-99999px;
-	font-size:0px;}
+	top:-99999px;}
 .blind {overflow:hidden;
 	display:inline-block;
     position:relative;
     font-size:1px;
     z-index:-1;
+    top:-1px; left:-1px;
     width:1px; height:1px;}
 a {text-decoration:none; 
 	color:white; 
