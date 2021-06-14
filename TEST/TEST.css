@@ -18,9 +18,6 @@ input {
 	color:white; 
 	background-color:black;
 	padding:10px;}
-.hide {text-indent:-99999px;
-	position:absolute;
-	top:-99999px;}
 .blind {overflow:hidden;
 	display:inline-block;
     position:relative;
