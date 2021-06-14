@@ -47,6 +47,54 @@ li {list-style-type:none; margin:0.5rem auto;}
 	border-left:10px solid #5b0;}
 .note dd {margin-bottom:0.3%;}
 
+.expanded {
+	visibility:hidden;
+	filter: blur(10px);
+	height:0px; opacity:0;
+	transform:scaleY(0);
+	transition:0.7s;}
+#contentbox,#contentboxL {
+	transition:0.7s;
+	opacity:1;
+	padding-bottom:3rem;
+	justify-content:center;}
+#controller {
+	color:white;
+	background-color:transparent;
+	text-align:center;}
+#controller[aria-expanded="false"] .goask:after {content:">";}
+
+#controller[aria-expanded="true"] .goask:after {content:">"; transform: rotate(90deg);}
+#controllerL:after {
+	display:flex;
+	justify-content:center;
+	transition:0.5s;}
+#controllerL:after {transition:0.2s;}
+#controllerL[aria-expanded="false"]:after {
+	content:'펼쳐 보기';}
+#controllerL[aria-expanded="true"]:after {
+	content:'접기';}
+#controllerL {
+	box-sizing:border-box;
+	margin-bottom:2rem;
+	color:white;
+	box-shadow:inset 0px 0px 0px 5px #AAF;
+	background-color:transparent;
+	transition:0.5s;
+	z-index:100;
+	position:relative;
+	border-radius:1.5rem;
+	width:92%;
+	height:100%;
+	font-weight:900;
+	font-size:1.4rem;
+	padding:2rem 0.5rem;
+	text-align:center;
+	align-items:center;}
+#controllerL[aria-expanded="true"] {box-shadow:inset 0px 0px 0px 10px #77F;}
+
+
+
 @media (prefers-color-scheme:dark) {
 body {background-color:#205; color:#eef;}
 .note dl {

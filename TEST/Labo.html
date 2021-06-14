@@ -116,10 +116,37 @@
 			<div style="font-size:14pt; font-weight:900;">5-2. 일반 텍스트의 경우 텍스트의 크기가 18pt 이상, 또는 굵은 14pt 이상의 텍스트가 3:1을 만족하지 않은 경우</div>
 		</div>
 	</section>
+	<section>
+		<h2>커스텀?</h2>
+
+	</section>
 </main>
 <footer>
 	2021 01 20
 	<address id="purple">@purplemiyazawa</address>
 </footer>
+	<script type="text/javascript">
+		var controller=document.querySelector('#controller');
+		var contentbox=document.querySelector('#contentbox');
+
+		 controller.addEventListener('click',function(){
+		 	if (contentbox.classList.contains('expanded')){
+		 		contentbox.classList.remove('expanded')
+		 		controller.setAttribute('aria-expanded', true)}
+		 	else {contentbox.classList.add('expanded')
+				controller.setAttribute('aria-expanded', false)}});
+
+
+		var controllerL=document.querySelector('#controllerL');
+		var contentboxL=document.querySelector('#contentboxL');
+
+		 controllerL.addEventListener('click',function(){
+		 	if (contentboxL.classList.contains('expanded')){
+		 		contentboxL.classList.remove('expanded')
+		 		controllerL.setAttribute('aria-expanded', true)}
+		 	else {contentboxL.classList.add('expanded')
+				controllerL.setAttribute('aria-expanded', false)}});
+
+	</script>
 </body>
 </html>
