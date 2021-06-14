@@ -3,7 +3,7 @@
 ::selection {background:#370; color:white;}
 
 body * {-webkit-font-smoothing:antialiased !important;}
-body {background-color:#a9e; color:white; margin:0px;}
+body {background-color:#a9e; color:#103; margin:0px;}
 main {margin:2rem auto; width:60%; display:block;}
 footer,header {
 	margin:0px; 
@@ -48,7 +48,7 @@ li {list-style-type:none; margin:0.5rem auto;}
 .note dd {margin-bottom:0.3%;}
 
 @media (prefers-color-scheme:dark) {
-body {background-color:#205;}
+body {background-color:#205; color:#eef;}
 .note dl {
 	border:solid 1px #030;
 	color:white;
