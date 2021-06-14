@@ -118,7 +118,7 @@
 	</section>
 	<section>
 		<h2>커스텀?</h2>
-		<a role="select" id="controller" href="" aria-expanded="false">옵션?</a>
+		<a role="select" id="controller" href="contentbox" aria-expanded="false">옵션?</a>
 		<ul id="contentbox" class="expanded">
 			<li role="option">목록1</li>
 			<li role="option">목록2</li>
@@ -139,18 +139,6 @@
 		 		controller.setAttribute('aria-expanded', true)}
 		 	else {contentbox.classList.add('expanded')
 				controller.setAttribute('aria-expanded', false)}});
-
-
-		var controllerL=document.querySelector('#controllerL');
-		var contentboxL=document.querySelector('#contentboxL');
-
-		 controllerL.addEventListener('click',function(){
-		 	if (contentboxL.classList.contains('expanded')){
-		 		contentboxL.classList.remove('expanded')
-		 		controllerL.setAttribute('aria-expanded', true)}
-		 	else {contentboxL.classList.add('expanded')
-				controllerL.setAttribute('aria-expanded', false)}});
-
 	</script>
 </body>
 </html>
