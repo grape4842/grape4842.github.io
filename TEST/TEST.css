@@ -34,6 +34,7 @@ dd {margin-bottom:3%;}
 dd {font-size:90%; font-weight:900;}
 li {list-style-type:none; margin:0.5rem auto;}
 
+button {border:none; background-color:#0c0; border-radius:5px;}
 .success, .fail {display:block; font-size:2rem; font-weight:900;}
 
 
@@ -75,6 +76,6 @@ body {background-color:#205; color:#eef;}
 	border-left:10px solid #103;
 	background:linear-gradient(90deg, rgba(10,20,0,1) 0%,rgba(20,50,0,1) 2%,rgba(30,70,0,1) 70%,rgba(70,120,0,1));}
 }
-
+button {border:none; background-color:#080;}
 .code {color:#04f;}
 .code span {color:#d20;}
