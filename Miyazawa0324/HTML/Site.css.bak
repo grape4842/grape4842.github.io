@@ -1,0 +1,13 @@
+body {background-color:black;}
+a[href*="yahoo"] {color:red;}
+li {list-style-type:none; float:left; text-align:center; height:100px; width:300px; line-height:100px;}
+a {text-decoration:none;}
+a[href*="naver"] {color:#0c0; background-color:white; font-weight:bolder;}
+#NM{background-color:white; color:black;} #NAVER{background-color:white;}
+a[href*="youtube"] {color:black; background-color:white;} #YouTube{background-color:white;}
+a[href*="nintendo"] {color:white; background-color:red;border:white 5px solid; border-radius:30px; padding:5px 30px;} 
+#Nintendo{background-color:red;}
+li:first-child{background-color:white;}
+li:nth-of-type(3) {font-weight:bolder; font-family:HY견고딕; font-size:22pt;}
+li:nth-of-type(3):hover{font-weight:bolder; font-family:휴먼둥근헤드라인;font-size:23pt; 
+background-color:#00cc00; color:white; border:10px solid #0b0; width:280px; height:80px;}

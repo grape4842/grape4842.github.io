@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>	
+<meta charset="utf-8">
+<meta name="author" content="@purplemiyazawa">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta property="og:image" content="">
+<meta property="og:title" content="가치관 경매 게임">
+<link rel="shortcut icon" href="/images/common/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/auction.css">
+<title>가치관 경매 게임</title>
+</head>
+
+<body>
+	<header>
+		<div id="header">
+			<h1>가치관 경매 게임</h1>
+		</div>
+	</header>
+	<main>
+		<section>
+			<h2>게임 설명</h2>
+			<ol start="0">
+				<li>당신은 <span class="money">1천만원</span>으로 <span class="happy">행복하기 위해 필요한 것</span>을 얻기위해 진행되는 경매에 참여하게 됩니다.</li>
+				<li>항목명과 세부 사항을 확인하고 우선도를 정해봅시다.</li>
+				<li>각 항목의 우선도를 생각하여 사용할 금액을 [예상 금액]란에 적어봅시다.</li>
+				<li>경매를 진행하면서 실제로 사용한 금액을 [실제 금액]란에 적습니다.</li>
+				<li>비고란에는 세부 내용을 보며 본인이 경매를 위해 금액을 내건 이유, 원하는 조건 등을 적는 란입니다.</li>
+				<li>경매를 마친 후 예상했던 금액과 실제로 사용한 금액을 비교하고 생각해 봅시다.</li>
+				<li>참여한 다른 사람들과 함께 각자 어떤 결과였는지 이야기를 나눠봅시다.</li>
+				<li></li>
+				<li></li>
+			</ol>
+		</section>
+		<section>
+			<h2>게임 데이터</h2>
+			<table>
+				<caption>가치관 경매 게임</caption>
+				<thead>
+					<tr>
+						<th scope="col">품명</th>
+						<th scope="col">세부 내용</th>
+						<th scope="col">예상 금액</th>
+						<th scope="col">실제 금액</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1. 건강</th>
+						<td>질병이나 부상 없이 건강한 신체</td>
+						<td><input title="예상 금액(건강)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액 (건강)" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">2. 자유</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">3. 부모님</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">젊음</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">스펙</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">재능</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">지식 / 지혜</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">친구 / 우정</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">직장</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">휴식</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">현금자산</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">신체</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">성격</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">꿈 / 비전</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">언어능력</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">커뮤니케이션 능력</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">사랑</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">결혼</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">자녀</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+					<tr>
+						<th scope="row">외모</th>
+						<td></td>
+						<td><input title="예상 금액()" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+						<td><input title="실제 금액" placeholder="실제 낙찰을 위해 사용한 금액" type="tel" inputmode="decimal"></td>
+						<td><input type="text" title="비고" placeholder="비고"></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+	<footer>
+		<div id="footer">
+			<address>@purplemiyazawa</address></div>
+	</footer>
+</body>
+</html>
+
+

@@ -1,0 +1,16 @@
+-웹에서 사용되는 단축키
+
+-웹에서의 두가지 탐색모드
+
+-네이버 페이지에서 센스리더에서 주목해야 할 접근성 요소
+https://nuli.navercorp.com/community/article/1132645?email=true
+
+-가상커서의 개념과 유무의 차이
+http://www.haeppa.kr/category/2?page=3
+
+
+-스크린리더 사용자에게 가상커서의 필요성
+
+
+
+가상커서는 포커스가 웹페이지 본문안에 있을 때만 동작. 

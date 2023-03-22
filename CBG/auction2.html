@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>	
+<meta charset="utf-8">
+<meta name="author" content="@purplemiyazawa">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta property="og:image" content="img/AuctionProfile.png">
+<meta property="og:title" content="가치관 경매 게임">
+<meta property="og:description" content="당신은 1천만원으로 행복하기 위해 필요한 것을 얻기 위해 경매에 참여하게 됩니다.">
+<link rel="shortcut icon" href="img/ffwpuLogo.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/auction.css">
+<title>가치관 경매 게임 - 시작하기 전에</title>
+</head>
+
+<body>
+<header>
+		<h1>가치관 경매 게임</h1>
+		<p class="game_description">당신은 <span class="money">1천만원</span>으로 <span class="happy">행복하기 위해 필요한 것</span>을 얻기위해 진행되는 경매에 참여하게 됩니다.</p>
+</header>
+<main>
+	<h2>게임 설명</h2>
+	<section class="game_rule">		
+		<h3>게임을 시작하기 전에</h3>
+		<ul>
+			<li>경매 품목은 총 20개로, 경매 시작 전에 항목을 확인하고 어떻게 분배할지 먼저 생각해두시는 것이 좋습니다.</li>
+			<li>1천만원을 한 항목에 베팅하는 것도 여러 항목에 나눠서 베팅하는 것도 당신의 자유입니다.</li>
+			<li>경매 금액은 만원 단위로 올릴 수 있습니다.</li>
+			<li>각 항목의 우선도를 생각하여 사용할 금액을 [예상 금액]란에 적어봅시다.</li>
+		</ul>
+		<p class="point">항목 중 스펙과 같이 포괄적인 의미를 가진 경우 이미 별도 품목으로 제공된 내용은 중복으로 포함할 수 없습니다. (예 : 언어능력)</p>
+	</section>
+	<aside>
+		<div>
+			<h3 class="hidden">남은 금액 / 전체 금액</h3>
+			<p>
+				<label class="hidden" for="have_money">남은 금액</label>
+				<input value="1,000" placeholder="남은 금액" readonly="" id="have_money" type="tel" inputmode="decimal">
+				<label class="won" for="have_money">만원</label>
+			</p>
+			<p>
+				<label value="" class="hidden" for="total_money">전체 금액</label>
+				<input value="1,000" placeholder="전체 금액" readonly="" id="total_money" type="tel" inputmode="decimal">
+				<label class="won" for="total_money">만원</label>
+			</p>
+			<p class="page_announce">예상 금액 입력 페이지</p>
+		</div>
+	</aside>
+	<section id="product_list">
+		<h2>경매 품목명</h2>
+		<table>
+			<caption>건강</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk01" type="checkbox" name="">
+						<label for="chk01">내가 낙찰한 항목(건강)</label>
+						<span class="check_effect"></span>
+						1. 건강
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>질병이나 부상 없이 건강하고 튼튼한 신체</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						<label for="product01">예상금액</label>
+					</th>
+					<td><input id="product01" title="예상 금액(건강)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>자유</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk02" type="checkbox" name="">
+						<label for="chk02">내가 낙찰한 항목(자유)</label>
+						<span class="check_effect"></span>
+						2. 자유
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>가정과 직장에 다니면서도 보장되는 자유시간</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						<label for="product02">예상금액
+							<span class="hidden">자유</span>
+						</label>
+						</th>
+					<td>
+						<input id="product02" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>부모님</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="ch03" type="checkbox" name="">
+						<label for="chk03">내가 낙찰한 항목(부모님)</label>
+						<span class="check_effect"></span>
+						3. 부모님
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>언제나 따뜻하고 행복하고 함께 건강히 오래 계시는</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						<label for="product03">예상금액
+							<span class="hidden">부모님</span>
+						</label>
+						</th>
+					<td><input id="product03" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>권력 / 명예</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk04" type="checkbox" name="">
+						<label for="chk04">내가 낙찰한 항목(권력 / 명예)</label>
+						<span class="check_effect"></span>
+						4. 권력 / 명예</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>대통령, CEO, 명예교수 등</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						<label for="product04">예상금액
+							<span class="hidden">권력 / 명예</span>
+						</label>
+					</th>
+					<td><input title="예상 금액(권력 / 명예)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>젊음</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk05" title="내가 낙찰한 항목(돈)" type="checkbox" name="">
+						<label for="chk05">내가 낙찰한 항목(돈)</label>
+						<span class="check_effect"></span>
+						5. 돈</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>평생 자유롭게 살 수 있을 정도</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(돈)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>스펙</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk06" title="내가 낙찰한 항목(스펙)" type="checkbox" name="">
+						<label for="chk06">내가 낙찰한 항목(스펙)</label>
+						<span class="check_effect"></span>
+						6. 스펙</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>대학, 석사, 박사, 자격증</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(스펙)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>재능</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk07" title="내가 낙찰한 항목(재능)" type="checkbox" name="">
+						<label for="chk07">내가 낙찰한 항목(재능)</label>
+						<span class="check_effect"></span>
+						7. 재능</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>남들이 부러워할 만큼 탁월한 원하는 재능</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(재능)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>지식 / 지혜</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk08" title="내가 낙찰한 항목(지식 / 지혜)" type="checkbox" name="">
+						<label for="chk08">내가 낙찰한 항목(지식 / 지혜)</label>
+						<span class="check_effect"></span>
+						8. 지식 / 지혜</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>명석한 두뇌, 예리함, 상식</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(지식 / 지혜)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>친구 / 우정</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk09" title="내가 낙찰한 항목(친구 / 우정)" type="checkbox" name="">
+						<label for="chk09">내가 낙찰한 항목(친구 / 우정)</label>
+						<span class="check_effect"></span>
+						9. 친구 / 우정
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>평생 즐겁게 사귀고 함께 어떤 마음 속 이야기도 서로 나누며 도우는</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(친구 / 우정)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>직업 / 직장</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk10" title="내가 낙찰한 항목(직업 / 직장)" type="checkbox" name="">
+						<label for="chk10">내가 낙찰한 항목(직업 / 직장)</label>
+						<span class="check_effect"></span>
+						10. 직업 / 직장
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>내가 원하는 직업의 좋은 환경과 원활한 인간관계와 부족함 없는 장비가 갖춰진 근무 환경</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(직업 / 직장)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>성격</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk11" title="내가 낙찰한 항목(성격)" type="checkbox" name="">
+						<label for="chk11">내가 낙찰한 항목(성격)</label>
+						<span class="check_effect"></span>
+						11. 성격
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>성실함, 정직함, 하고 싶은 것을 실천할 기력, 몸가짐, 태도</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(성격)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>휴식</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk12" title="내가 낙찰한 항목(휴식)" type="checkbox" name="">
+						<label for="chk12">내가 낙찰한 항목(휴식)</label>
+						<span class="check_effect"></span>
+						12. 휴식</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>1개월, 1년 등 원하는 만큼</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(휴식)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>꿈 / 비전</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk13" title="내가 낙찰한 항목(꿈 / 비전)" type="checkbox" name="">
+						<label for="chk13">내가 낙찰한 항목(꿈 / 비전)</label>
+						<span class="check_effect"></span>
+						13. 꿈 / 비전
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>내가 정말 마음속에서 하고 싶은 인생의 목표의 발견</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(꿈 / 비전)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>언어능력</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk14" title="내가 낙찰한 항목(언어능력)" type="checkbox" name="">
+						<label for="chk14">내가 낙찰한 항목(언어능력)</label>
+						<span class="check_effect"></span>
+						14. 언어능력
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>일본어, 영어, 중국어, 한국어 등 모든 나라의 언어를 자유자재로</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(언어)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>외모</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk15" title="내가 낙찰한 항목(외모)" type="checkbox" name="">
+						<label for="chk15">내가 낙찰한 항목(외모)</label>
+						<span class="check_effect"></span>
+						15. 외모</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>잘생기거나 예쁘거나 재밌거나 내가 원하는 얼굴</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(외모)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>신체</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk16" title="내가 낙찰한 항목(신체)" type="checkbox" name="">
+						<label for="chk16">내가 낙찰한 항목(신체)</label>
+						<span class="check_effect"></span>
+						16. 신체
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>키나 몸무게, 비율 등 신체의 디자인</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(신체)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>신념 / 신앙</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk17" title="내가 낙찰한 항목(신념 / 산앙)" type="checkbox" name="">
+						<label for="chk17">내가 낙찰한 항목(신념 / 신앙)</label>
+						<span class="check_effect"></span>
+						17. 신념 / 신앙
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>어떤 일에도 흔들리지 않는</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(신앙)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>사랑</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk18" title="내가 낙찰한 항목(사랑)" type="checkbox" name="">
+						<label for="chk18">내가 낙찰한 항목(사랑)</label>
+						<span class="check_effect"></span>
+						18. 사랑
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>무한히 베풀고도 잊어버리고 베풀수록 힘이 나는</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(사랑)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>결혼</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk19" title="내가 낙찰한 항목(결혼)" type="checkbox" name="">
+						<label for="chk19">내가 낙찰한 항목(결혼)</label>
+						<span class="check_effect"></span>
+						19. 결혼
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>인격적이고 경제적으로 독립한 서로에게 훌룡한 배우자</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(결혼)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<caption>자녀</caption>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">
+						<input id="chk20" title="내가 낙찰한 항목(자녀)" type="checkbox" name="">
+						<label for="chk20">내가 낙찰한 항목(자녀)</label>
+						<span class="check_effect"></span>
+						20. 자녀</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">상세내용</th>
+					<td>세상에서 제일 소중한</td>
+				</tr>
+				<tr>
+					<th scope="row">예상금액</th>
+					<td><input title="예상 금액(자녀)" placeholder="낙찰을 위해 사용할 예상 금액" type="tel" inputmode="decimal"></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<a href="auction2-1.html" class="game_btn start">게임 시작</a>
+</main>
+<footer>
+		<address>@purplemiyazawa</address>
+</footer>
+</body>
+
+</html>

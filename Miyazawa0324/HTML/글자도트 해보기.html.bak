@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+ <head>
+ <meta charset="UTF-8">
+  <title> New Document </title>
+  <meta name="Author" content="Miiyazawa0324">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  </script>
+  
+  <style type="text/css">
+	* {font-family:Arial Unicode MS;}
+	div {position:absolute; width:44px; height:44px;}
+	body {background-color:#332255;}
+	.com {background-color:pink; border:red solid 3px;}
+	.pu {background-color:#ffffcc; border:#ffdd00 solid 3px;}
+	.ter {background-color:#aaddff; border:#1199ff solid 3px;}
+	#c1 {top:50px; left:50px; }
+	#c2 {top:50px; left:100px; }
+	#c3 {top:50px; left:150px; }
+	#c4 {top:50px; left:200px; }
+	#c5 {top:50px; left:250px; }
+	#c6 {top:50px; left:300px; }
+
+	#c7 {top:100px; left:300px; }
+	#c8 {top:150px; left:50px; }
+	#c9 {top:150px; left:100px; }
+	#c10 {top:150px; left:150px; }
+	#c11 {top:150px; left:200px; }
+	#c12 {top:150px; left:250px; }
+	#c13 {top:150px; left:300px; }
+
+	#c14 {top:200px; left:250px; }
+	#c15 {top:250px; left:200px; }
+	#c16 {top:300px; left:150px; }
+	#c17 {top:300px; left:100px; }
+	#c18 {top:300px; left:50px; }
+	#c19 {top:150px; left:350px; }
+
+	#c20 {top:50px; left:400px; }
+	#c21 {top:100px; left:400px;}
+	#c22 {top:150px; left:400px;}
+	#c23 {top:200px; left:400px;}
+	#c24 {top:250px; left:400px;}
+	#c25 {top:300px; left:400px;}
+	#c26 {top:400px; left:100px;}
+	#c27 {top:400px; left:150px;}
+	#c28 {top:400px; left:200px;}
+	#c29 {top:400px; left:250px;}
+	#c30 {top:400px; left:300px;}
+	#c31 {top:400px; left:350px;}
+	#c32 {top:400px; left:400px;}
+	#c33 {top:450px; left:100px;}
+	#c34 {top:500px; left:100px;}
+	#c35 {top:450px; left:400px;}
+	#c36 {top:500px; left:400px;}
+	#c37 {top:550px; left:100px;}
+	#c38 {top:550px; left:150px;}
+	#c39 {top:550px; left:200px;}
+	#c40 {top:550px; left:250px;}
+	#c41 {top:550px; left:300px;}
+	#c42 {top:550px; left:350px;}
+	#c43 {top:550px; left:400px;}
+
+
+
+	#p1 {top:50px; left:550px;}
+	#p2 {top:50px; left:600px;}
+	#p3 {top:50px; left:650px;}
+	#p4 {top:50px; left:700px;}
+	#p5 {top:50px; left:750px;}
+	#p6 {top:50px; left:800px;}
+	#p7 {top:50px; left:850px;}
+	#p8 {top:50px; left:900px;}
+
+	#p9 {top:100px; left:650px;}
+	#p10 {top:100px; left:800px;}
+	#p11 {top:150px; left:650px;}
+	#p12 {top:150px; left:800px;}
+	#p13 {top:200px; left:650px;}
+	#p14 {top:200px; left:800px;}
+
+	#p15 {top:250px; left:550px;}
+	#p16 {top:250px; left:600px;}
+	#p17 {top:250px; left:650px;}
+	#p18 {top:250px; left:700px;}
+	#p19 {top:250px; left:750px;}
+	#p20 {top:250px; left:800px;}
+	#p21 {top:250px; left:850px;}
+	#p22 {top:250px; left:900px;}
+
+	#p23 {top:400px; left:500px;}
+	#p24 {top:400px; left:550px;}
+	#p25 {top:400px; left:600px;}
+	#p26 {top:400px; left:650px;}
+	#p27 {top:400px; left:700px;}
+	#p28 {top:400px; left:750px;}
+	#p29 {top:400px; left:800px; }
+	#p30 {top:400px; left:850px;}
+	#p31 {top:400px; left:900px;}
+	#p32 {top:400px; left:950px;}
+	
+	#p33 {top:450px; left:600px;}
+	#p34 {top:450px; left:850px;}
+	#p35 {top:500px; left:600px;}
+	#p36 {top:500px; left:850px;}
+	#p37 {top:550px; left:600px;}
+	#p38 {top:550px; left:850px;}
+
+	#t1 {top:50px; left:1050px;}
+	#t2 {top:50px; left:1100px;}
+	#t3 {top:50px; left:1150px;}
+	#t4 {top:50px; left:1200px;}
+	#t5 {top:50px; left:1250px;}
+	#t6 {top:50px; left:1300px;}
+	#t7 {top:50px; left:1350px;}
+	#t8 {top:50px; left:1400px;}
+	
+	#t9 {top:100px; left:1050px;}
+	#t10 {top:150px; left:1050px;}
+	#t11 {top:200px; left:1050px;}
+	#t12 {top:250px; left:1050px;}
+	#t13 {top:250px; left:1100px;}
+	#t14 {top:250px; left:1150px;}
+	#t15 {top:250px; left:1200px;}
+	#t16 {top:250px; left:1250px;}
+	#t17 {top:250px; left:1300px;}
+	#t18 {top:250px; left:1350px;}
+	#t19 {top:300px; left:1050px;}
+	#t20 {top:350px; left:1050px;}
+	#t21 {top:400px; left:1050px;}
+	#t22 {top:450px; left:1050px;}
+
+	#t23 {top:500px; left:1050px;}
+	#t24 {top:500px; left:1100px;}
+	#t25 {top:500px; left:1150px;}
+	#t26 {top:500px; left:1200px;}
+	#t27 {top:500px; left:1250px;}
+	#t28 {top:500px; left:1300px;}
+	#t29 {top:500px; left:1350px;}
+	#t30 {top:500px; left:1400px;}
+	
+	#t31 {top:550px; left:1550px;}
+	#t32 {top:500px; left:1550px;}
+	#t33 {top:450px; left:1550px;}
+	#t34 {top:400px; left:1550px;}
+	#t35 {top:350px; left:1550px;}
+	#t36 {top:300px; left:1550px;}
+	#t37 {top:250px; left:1550px;}
+	#t38 {top:200px; left:1550px;}
+	#t39 {top:150px; left:1550px;}
+	#t40 {top:100px; left:1550px;}
+	#t41 {top:50px; left:1550px;}
+	#t42 {top:250px; left:1500px;}
+	#t43 {top:250px; left:1450px;}
+ </style>
+ </head>
+
+ <body>
+	<div id="c1" class="com"></div>
+	<div id="c2" class="com"></div>
+	<div id="c3" class="com"></div>
+	<div id="c4" class="com"></div>
+	<div id="c5" class="com"></div>
+	<div id="c6" class="com"></div>
+	<div id="c7" class="com"></div>
+	<div id="c8" class="com"></div>
+	<div id="c9" class="com"></div>
+	<div id="c10" class="com"></div>
+	<div id="c11" class="com"></div>
+	<div id="c12" class="com"></div>
+	<div id="c13" class="com"></div>
+	<div id="c14" class="com"></div>
+	<div id="c15" class="com"></div>
+	<div id="c16" class="com"></div>
+	<div id="c17" class="com"></div>
+	<div id="c18" class="com"></div>
+	<div id="c19" class="com"></div>
+	<div id="c20" class="com"></div>
+	<div id="c21" class="com"></div>
+	<div id="c22" class="com"></div>
+	<div id="c23" class="com"></div>
+	<div id="c24" class="com"></div>
+	<div id="c25" class="com"></div>
+	<div id="c26" class="com"></div>
+	<div id="c27" class="com"></div>
+	<div id="c28" class="com"></div>
+	<div id="c29" class="com"></div>
+	<div id="c30" class="com"></div>
+	<div id="c31" class="com"></div>
+	<div id="c32" class="com"></div>
+	<div id="c33" class="com"></div>
+	<div id="c34" class="com"></div>
+	<div id="c35" class="com"></div>
+	<div id="c36" class="com"></div>
+	<div id="c37" class="com"></div>
+	<div id="c38" class="com"></div>
+	<div id="c39" class="com"></div>
+	<div id="c40" class="com"></div>
+	<div id="c41" class="com"></div>
+	<div id="c42" class="com"></div>
+	<div id="c43" class="com"></div>
+
+
+
+	<div id="p1" class="pu"></div>
+	<div id="p2" class="pu"></div>
+	<div id="p3" class="pu"></div>
+	<div id="p4" class="pu"></div>
+	<div id="p5" class="pu"></div>
+	<div id="p6" class="pu"></div>
+	<div id="p7" class="pu"></div>
+	<div id="p8" class="pu"></div>
+	<div id="p9" class="pu"></div>
+	<div id="p10" class="pu"></div>
+	<div id="p11" class="pu"></div>
+	<div id="p12" class="pu"></div>
+	<div id="p13" class="pu"></div>
+	<div id="p14" class="pu"></div>
+	<div id="p15" class="pu"></div>
+	<div id="p16" class="pu"></div>
+	<div id="p17" class="pu"></div>
+	<div id="p18" class="pu"></div>
+	<div id="p19" class="pu"></div>
+	<div id="p20" class="pu"></div>
+	<div id="p21" class="pu"></div>
+	<div id="p22" class="pu"></div>
+	<div id="p23" class="pu"></div>
+	<div id="p24" class="pu"></div>
+	<div id="p25" class="pu"></div>
+	<div id="p26" class="pu"></div>
+	<div id="p27" class="pu"></div>
+	<div id="p28" class="pu"></div>
+	<div id="p29" class="pu"></div>
+	<div id="p30" class="pu"></div>
+	<div id="p31" class="pu"></div>
+	<div id="p32" class="pu"></div>
+	<div id="p33" class="pu"></div>
+	<div id="p34" class="pu"></div>
+	<div id="p35" class="pu"></div>
+	<div id="p36" class="pu"></div>
+	<div id="p37" class="pu"></div>
+	<div id="p38" class="pu"></div>
+
+
+	<div id="t1" class="ter"></div>
+	<div id="t2" class="ter"></div>
+	<div id="t3" class="ter"></div>
+	<div id="t4" class="ter"></div>
+	<div id="t5" class="ter"></div>
+	<div id="t6" class="ter"></div>
+	<div id="t7" class="ter"></div>
+	<div id="t8" class="ter"></div>
+	<div id="t9" class="ter"></div>
+	<div id="t10" class="ter"></div>
+	<div id="t11" class="ter"></div>
+	<div id="t12" class="ter"></div>
+	<div id="t13" class="ter"></div>
+	<div id="t14" class="ter"></div>
+	<div id="t15" class="ter"></div>
+	<div id="t16" class="ter"></div>
+	<div id="t17" class="ter"></div>
+	<div id="t18" class="ter"></div>
+	<div id="t19" class="ter"></div>
+	<div id="t20" class="ter"></div>
+	<div id="t21" class="ter"></div>
+	<div id="t22" class="ter"></div>
+	<div id="t23" class="ter"></div>
+	<div id="t24" class="ter"></div>
+	<div id="t25" class="ter"></div>
+	<div id="t26" class="ter"></div>
+	<div id="t27" class="ter"></div>
+	<div id="t28" class="ter"></div>
+	<div id="t29" class="ter"></div>
+	<div id="t30" class="ter"></div>
+	<div id="t31" class="ter"></div>
+	<div id="t32" class="ter"></div>
+	<div id="t33" class="ter"></div>
+	<div id="t34" class="ter"></div>
+	<div id="t35" class="ter"></div>
+	<div id="t36" class="ter"></div>
+	<div id="t37" class="ter"></div>
+	<div id="t38" class="ter"></div>
+	<div id="t39" class="ter"></div>
+	<div id="t40" class="ter"></div>
+	<div id="t41" class="ter"></div>
+	<div id="t42" class="ter"></div>
+	<div id="t43" class="ter"></div>
+	<div id="t44" class="ter"></div>
+	<div id="t45" class="ter"></div>
+	<div id="t46" class="ter"></div>
+	<div id="t47" class="ter"></div>
+	<div id="t48" class="ter"></div>
+	<div id="t49" class="ter"></div>
+	<div id="t50" class="ter"></div>
+	<div id=""></div>
+	<div id=""></div>
+	<div id=""></div>
+	<div id=""></div>
+	<div id=""></div>
+
+
+  </body>
+</html>

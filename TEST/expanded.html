@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.5,user-scalable=yes"/>
+<title>
+Miyazawa0324 JavaScript Event Practice Page 
+</title>
+<style type="text/css">
+li {
+	list-style:none;
+	font-weight:900;}
+div {background-color:white;}
+body {background-color:#aaf;}
+button {
+	background-color:#215; 
+	color:white;
+	border:none; 
+	padding:1%;}
+.hidden {
+    display:none;   
+}
+</style>
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<button id="controller" aria-expanded="false">Expanded Button</button>	
+	<div id="contentbox" class="hidden">
+		<ul class="sellist">
+			<li>
+				<a href="">축복이란</a>
+			</li>
+			<li>
+				<a href="">성향검사</a>
+			</li>
+			<li>
+				<a href="">축복준비</a>
+			</li>
+			<li>
+				<a href="">축복Q&A</a>
+			</li>
+			<li>
+				<a href="">신앙과 축복</a>
+			</li>
+			<li>
+				<a href="">고민상담</a>
+			</li>
+			<li>
+				<a href="">About US</a>
+			</li>
+		</ul>
+
+	</div>
+
+<script type="text/javascript">
+var controller=document.querySelector('#controller');
+var contentbox=document.querySelector('#contentbox');
+
+ controller.addEventListener('click',function(){
+ 	if (contentbox.classList.contains('hidden')){
+ 		contentbox.classList.remove('hidden')
+ 		controller.setAttribute('aria-expanded', true)}
+ 	else {contentbox.classList.add('hidden')
+		controller.setAttribute('aria-expanded', false)}});
+</script>
+</body>
+</html>

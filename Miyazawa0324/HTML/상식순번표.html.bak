@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+ <head>
+ <meta charset="UTF-8">
+  <title> New Document </title>
+  <meta name="Author" content="Miiyazawa0324">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  </script>
+  
+  <style type="text/css">
+	* {font-family:Arial Unicode MS;}
+	body {background-color:#a0afff; margin:auto;}
+	table {border-collapse:collapse; margin:auto;}
+	caption {font-size:100pt; width:700px; text-align:center;}
+	th,td {border:solid 3px darkblue; font-family:HY견고딕; font-size:22pt;}
+	th {background-color:#aaccff; width:100px; height:100px; }
+	td {background-color:white; text-align:center; width:200px; height:100px;}
+  </style>
+ </head>
+
+ <body>
+  <table>
+  <caption>상식순번표</caption>
+  	<tr>
+  		<th>1번</th><td>김경림</td>
+	</tr>
+	<tr>
+  		<th>2번</th><td>안상진</td>
+	</tr>
+	<tr>
+  		<th>3번</th><td>조재헌</td>
+	</tr>
+	<tr>
+  		<th>4번</th><td>현정우</td>
+	</tr>
+	<tr>
+  		<th>5번</th><td>곽남희</td>
+	</tr>
+	<tr>
+  		<th>6번</th><td>김상현</td>
+	</tr>
+	<tr>
+  		<th>7번</th><td>박준영</td>
+	</tr>
+	<tr>
+  		<th>8번</th><td>임동준</td>
+	</tr>
+	<tr>
+  		<th>9번</th><td>배찬우</td>
+	</tr>
+	<tr>
+  		<th>10번</th><td>정선엽</td>
+	</tr>
+	<tr>
+  		<th>11번</th><td>이경욱</td>
+	</tr>
+	<tr>
+  		<th>12번</th><td>박 혁</td>
+	</tr>
+	<tr>
+  		<th>13번</th><td>이지성</td>
+	</tr>
+	<tr>
+  		<th>14번</th><td>윤선영</td>
+	</tr>
+	<tr>
+  		<th>15번</th><td>이승준</td>
+	</tr>
+	<tr>
+  		<th>16번</th><td>김남수</td>
+  	</tr>
+  </table>
+ </body>
+</html>

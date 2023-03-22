@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+ <head>
+ <meta charset="UTF-8">
+  <title> New Document </title>
+  <meta name="Author" content="Miiyazawa0324">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  </script>
+  
+  <style type="text/css">
+	* {font-family:Arial Unicode MS; text-align:center;}
+	body {background-color:#a0afff;}
+	a {text-decoration:none;}
+	#samsung {color:darkblue;}
+
+  </style>
+ </head>
+
+ <body>
+<a href="americano.html" target="_blank"> coffee</a>
+ <h1><a href="http://www.samsung.com/sec" id="samsung">SAMSUNG</a> Galaxy Note8 Review byUNDER kg&#40Korean&#41
+ <br>サムスンギャラクシーノート8レビュー byUNDER kg&#40韓国語&#41</h1>
+  <iframe title="SAMSUNG Galaxy Note8 Review byUNDER kg Korean" width="1120" height="630" src="https://www.youtube.com/embed/E2cMFq_6uW8" frameborder="0" allowfullscreen></iframe>
+  <br><br>
+
+  <h1>Animal Crossing New Leaf amiibo+ Nintendo official introduction video
+  <br>とびだせどうぶつの森amiibo+　任天堂公式紹介動画</h1>
+  <iframe title="とびだせどうぶつの森amiibo+任天堂公式紹介動画" width="1120" height="630" src="https://www.youtube.com/embed/57p1M7L3Ou8" frameborder="0" allowfullscreen></iframe>
+  <br><br>
+
+  <h1>Animal Crossing New Leaf amiibo+ Nintendo Korea official introduction video</h1>
+  <iframe title="Animal Crossing New Leaf amiibo+ Nintendo Korea official introduction video" width="1120" height="630" src="https://www.youtube.com/embed/sfIMyzgWEXE" frameborder="0" allowfullscreen></iframe>
+<br><br>
+
+<h1>任天堂公式ホームページ</h1>
+<iframe title="Nintendo Official Home Paga" width="1800" height="800" src="http://www.nintendo.co.jp" frameborder="1" style="background-color:white;"></iframe>
+<br>
+ </body>
+</html>

@@ -1,0 +1,93 @@
+@charset "utf-8";
+@media (prefers-color-scheme: dark) {
+	:root, html {color:#eee;}
+	body {background-color:#444;}
+	h1, h2, h3, h4, h5, h6 {color:#eef;}
+	::placeholder {color:#6af;}
+	input:focus ::placeholder, 
+	input:hover ::placeholder,
+	textarea:focus ::placeholder,
+	textarea:hover ::placeholder {color:#def;}
+	header, #searchBox {background-color:rgba(0,0,0,0.7);}
+	a {color:#e0e0e0;}
+	a:hover, a:focus {color:#fff;}
+	label {color:#def;}
+	input {border:1px solid #69f;}
+	input[type="search"], 
+	input[type="text"],
+	input[type="password"],
+	textarea {background-color:#334;}
+	input[type="search"]:focus, 
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	textarea:focus,
+	input[type="search"]:hover, 
+	input[type="text"]:hover,
+	input[type="password"]:hover,
+	textarea:hover {background-color:#556;}
+	#searchBtn {filter:brightness(4);}
+	.left a:hover, 
+	.left a:focus {background-color:rgba(255,255,255,0.2);}
+	.D2Box, .D2:before {background-color:#333;}
+	.layerBox {
+		background-color:#333;
+		border:1px solid #111;}
+	#showText:after {filter:invert(100%);}
+	#showText:before {background-color:white;}
+	.loginGoogle {
+		-webkit-text-fill-color: white;
+		-webkit-text-stroke:0px;
+		background-color:transparent;
+		border:2px solid #4285F4;}
+	.loginNaver {
+		-webkit-text-stroke:0px;
+		-webkit-text-fill-color: #19ce60;
+		font-weight:900;
+		color:#19ce60;
+		border:#19ce60 2px solid;
+		background-color:transparent;}
+	.loginPhone {border-color:white; color:#eee;}
+	.loginPhone span {border:white solid 2px;}
+	.loginPhone span:after {border-color:#eee;}
+	.layerClose {background-color:#333;}
+	.layerClose:focus, .layerClose:hover {
+		background-color:#555;}
+	.layerClose::after {
+		filter:grayscale(100%) brightness(4);}
+
+	.tableD1 th {background-color:#556;}
+	.tableD1 tr {border-bottom:solid 1px #778;}
+	.event, .notice {filter:brightness(100);}
+
+	footer {background-color:#112;}
+	#topLink {
+		box-shadow: 0px 0px 1rem 5px black inset;
+		border:1px solid #039;}
+
+	.more {box-shadow:0px 0px 1rem 0px inset;}
+	table a:focus, table a:hover {color: #def;}
+	::marker {color:#69f;}
+	.paging a {
+	background-color:#555;
+	color:#fff;
+	border-color:#333;
+}
+
+
+
+
+		@media screen and (max-width: 770px) {
+			.searchArea, .left > ul {background-color:rgba(0,0,0,0.7);}
+			.left > ul > li {border:#444 1px solid;}
+			#headerM:before, #headerM:after {background-color:#69f;}
+			label[for="headerM"] {background-color:#69f;}
+			.right {
+				-webkit-backdrop-filter: blur(20px);
+				backdrop-filter: blur(20px);
+				background-color:rgba(0,0,0,0.5);
+				box-shadow: 0px 5px 5px rgba(0,0,3,0.1);}
+				.searchBtn, #searchBtn {filter:brightness(4);}
+		}
+
+}
+

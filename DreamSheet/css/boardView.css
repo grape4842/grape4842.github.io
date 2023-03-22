@@ -1,0 +1,40 @@
+@charset "EUC-KR";
+.view-container {
+    justify-content: center;
+    padding: 5em;
+}
+.content-row{
+	display : flex;
+	justify-content:center;
+}
+.view-main>hr{
+	width:80%
+}
+.view-gallary {
+    max-width: 40%;
+    flex-basis: 50%;
+}
+.view-info{
+	padding-left:1em;
+    max-width: 40%;
+    min-width: 40%;
+}
+.view-content{
+	width:80%;
+	padding-left : 6em;
+}
+
+.list-container{
+    margin: auto;
+    max-width: 1080px;
+    padding: 6em;
+}
+.list-wrapper{
+	display:flex;
+	flex-flow: row wrap;
+}
+.list-component{
+	padding: 0 9.8px 19.6px;
+	max-width: 25%;
+    flex-basis: 25%;
+}

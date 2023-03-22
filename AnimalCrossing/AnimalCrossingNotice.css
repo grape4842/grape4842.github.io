@@ -1,0 +1,86 @@
+@charset "UTF-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+:lang(ja) {word-wrap:break-word; word-break:break-all;}
+::selection {background:#3b0; color:white;}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	box-sizing:border-box;}
+body {background-image:url(https://www.tanuki-kaihatsu.com/assets/images/tanuki_bg.png);
+margin:auto auto;
+width:100%;
+background-size:contain;}
+ul {padding:0px; margin:0px;}
+nav {position:absolute; 
+	top:0px; 
+	left:30%;
+	height:100%;
+	display:inline-block;}
+nav>ul:after {clear:both;}
+nav li {width: calc(100% / 5);}
+li {list-style:none; 
+	float:left;
+	height:100%;}
+nav>ul>li+li{border-left: 1px solid #d9d9d9;}
+a {text-decoration:none; 
+	display:inline-block;
+	background-position:center center;
+	background-repeat:no-repeat;}
+#skipbar {
+	text-align:center;
+	padding:0px;
+	width:100%;
+	position:absolute;}
+#skipnav {
+	z-index:10;
+	position:relative;
+	top:-10em;
+	margin:auto;
+	width:90%; 
+	line-height:1em; 
+	padding:1em; 
+	text-align:center;
+	background-color:black;
+	color:white;}
+
+#skipnav:focus {top:0em;}
+header {
+	position:sticky;
+	width:100%; 
+	background-color:white; 
+	height:74px;}
+	li .menu {width:100%;}
+.menu {
+	height:100%; 
+	margin:0px;
+	vertical-align:top;}
+#HLOGO {
+	margin:0px;
+	top:0px;
+	height:100%;
+	display:inline-block;
+	width:15%;
+	background-color:#e60012;
+	text-align:center;
+}
+#LOGO {
+	width:100%;
+	background-image:url(https://www.nintendo.co.kr/images/renew/common/logo_nintendo_red.gif);
+	}
+#ACNL {
+	background-image:url(https://www.nintendo.co.kr/3DS/software/animal_forest/common/gnavi01.png);
+}
+
+main {
+	background-color:white; 
+	border:0.5em solid #dd9900; 
+	width:70%;
+	margin:auto auto;
+	padding:2em;}
+#fence {
+	background-image:url(https://www.nintendo.co.kr/3DS/software/animal_forest/images/bg_fence.png);
+	position:fixed; bottom:0px;
+	width:100%;
+	height:10%;
+	z-index:0;
+	background-size:cover;}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>WAI-ARIA 테스트를 위한 컴포넌트 목록</title>
+	<meta charset="utf-8">
+	<meta name="author" content="@purplemiyazawa">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta property="og:image" content="">
+	<meta property="og:title" content="WAI-ARIA를 사용한 각종 예시를 모아둔 목록 메인">
+	<meta property="og:description" content="스크린 리더가 어떠한 ARIA를 지원하는지 컴포넌트별로 테스트하기 위한 페이지">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta name="theme-color=" content="#7766dd">
+	<link rel="shortcut icon"  type="" href="../nCOIbLogo.png">
+	<link rel="stylesheet" type="text/css" href="css/reset_copy.css">
+	<link rel="stylesheet" type="text/css" href="css/aria.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+</head>
+<body>
+	<a href="#content" id="skip_nav">본문 바로가기</a>
+	<header>
+		<div>
+			<h1>WAI-ARIA 지원 확인</h1>
+		</div>
+	</header>
+	<!-- 헤더 영역 끝 -->
+
+	<!-- 네비게이션 / 브레드크럼 -->
+	<nav></nav>
+
+	<!-- 네비게이션 / 브레드크럼 끝 -->
+	<!-- 본문 -->
+	<main>
+		<h2 id="content">WAI-ARIA 지원 확인을 위한 컴포넌트 목록</h2>
+		<div>
+			<h2>이 페이지를 탐색하기 전에</h2>
+			<p>잘못 구현된 aria는 aria를 제공하지 못한 것보다 사용자의 사이트 탐색을 어렵게 합니다. WAI_ARIA를 사용하기 전에 먼저 <a title="새 창" target="_blank" href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/">이 내용을 읽고</a> aria를 사용하는 이유를 이해하세요.</p>
+		</div>
+		<ul class="tiles">
+			<li class="tile">
+				<a href="" target="새 창" target="_blank">
+					<h2 class="tile_name">
+						<img src="" alt="">
+						<span></span>
+					</h2>
+				</a>
+				<p class="tile_desc"></p>
+			</li>
+			<li class="tile">
+				<a href="" target="새 창" target="_blank">
+					<h2 class="tile_name">
+						<img src="" alt="">
+						<span>경고 팝업</span>
+					</h2>
+				</a>
+				<p class="tile_desc">경고 팝업은 중요한 메시지를 전달하고 사용자의 확인을 받기 위해 사용자가 진행하던 작업을 중단하고 나타나는 레이어 팝업입니다.</p>
+			</li>
+			<li class="tile">
+				<a href="" target="새 창" target="_blank">
+					<h2 class="tile_name">
+						<img src="" alt="">
+						<span>레이어 팝업(모달)</span>
+					</h2>
+				</a>
+				<p class="tile_desc">별도의 창이 아닌 같은 페이지 내에 창을 띄운 것과 같은 형태의 UI로 팝업 제목과 콘텐츠, 닫는 컨트롤로 구성됩니다.</p>
+			</li>
+			<li class="tile">
+				<a href="" target="새 창" target="_blank">
+					<h2 class="tile_name">
+						<img src="" alt="">
+						<span>아코디언</span>
+					</h2>
+				</a>
+				<p class="tile_desc">일반적으로 세로로 쌓이는 형태이며 접고 펼치는 것이 특징인 인터렉티브 UI로 컨트롤과 콘텐츠로 구성됩니다.</p>
+			</li>
+
+		</ul>
+	</main>
+
+	<!-- 본문 끝 -->
+
+	<!-- 푸터 -->
+	<footer>
+		<h2 class="a11y_txt">Footer</h2>
+		<div class="footer_in">
+			<img src="img/logo_footer.png" alt="">
+			<div class="copyright">Copyright © 2023</div>
+		</div>
+		<a href="" id="page_top" aria-label="페이지 최상단으로 이동">
+			<svg class="lightV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(85,68,170,1)"/></svg>
+			<svg class="darkV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(50,0,200,0.7)"/></svg>
+		</a>
+	</footer>
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>
+prompt
+</title>
+<style type="text/css">
+body {background-color:#aaf;}
+</style>
+<script type="text/javascript">
+var a1,b1;
+a1=prompt("구입상품금액을 입력하십시오.","");
+b1=confirm("멤버십 계정이 있으십니까?");
+if (b1===true) {
+var bb1=confirm("추가할인대상 고객이십니까?");}
+else if (b1===false) {
+var b1n=confirm(a1*1+"원 입니다. 결제하시겠습니까?");}
+if (b1n===true) {
+alert("결제완료되었습니다.");}
+
+if (bb1===true) {
+var bb2=confirm(a1*0.95*0.65+"원 입니다. 결제를 진행하시겠습니까?");}
+if (bb2===true) {
+alert("정상적으로 결제가 완료되었습니다.");}
+else if (bb1===false) {
+var ab1=confirm(a1*0.95+"원 입니다. 결제를 진행하시겠습니까?");}
+if (ab1===true) {
+alert("정상적으로 결제가 완료되었습니다.");}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+answer=confirm("교사이십니까?");
+if (answer===true) {
+alert("선생님 안녕하세요.");}
+document.write(answer);
+pre=confirm("학생이십니까?.");
+if (pre===true) {
+name=prompt("이름을 입력하십시오.");}
+
+document.write('<h1 style="font-size:100pt;">학생명:'+name+'</h1>');
+</script>
+</body>
+</html>

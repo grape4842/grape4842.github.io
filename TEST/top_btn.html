@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="top_btn.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<title>TEST File Home</title>
+</head>
+<body>
+	<a href="#contents" id="skip_header">본문 바로가기</a>
+	<header>
+		<nav>
+			<h1>
+				<a href="top_btn.html">jQuery Practice Home</a>
+			</h1>
+		Navigation
+		</nav>
+	</header>
+	<main id="contents">
+		<div class="flexible_width">
+			<section>
+				<h2>KWCAG의 24가지 검사 항목 목록</h2>
+				<dl>
+					<dt>
+						<a target="_blank" href="../a11y/KWCAG.html">KWCAG2.1 지침오류 24개의 검사항목과 상세 목록</a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>접근성 테스트를 위한 메모장</h2>
+				<dl>
+					<dt>
+						<a target="_blank" href="Labo.html">접근성 잡동사니 메모</a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>서로에 대해 알아보는 소규모 파티 게임</h2>
+				<dl>
+					<dt>
+						<a target="_blank" href="auction.html">가치관 경매 게임</a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>떄떄로 만지는 HTML CSS 주 적용 파일</h2>
+				<dl>
+					<dt>
+						<a target="_blank" href="../AUC/index.html">공지사항 - 애플유저 커뮤니티</a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>책벌레의 하극상 휍 소설 번역판</h2>
+				<dl>
+					<dt>
+						<a target="_blank" href="../booklove/booklove1-1.html">책벌레의 하극상
+						~사서가 되기 위해서라면 뭐든지 할 수 있어~ (Web)
+						제 1부 병사의 딸-1</a>
+					</dt>
+					<dd>
+						<p></p>
+					</dd>
+				</dl>
+			</section>
+		</div>
+	</main>
+	<footer>
+		<div id="footer" class="flexible_width">
+			footer
+			<button type="button" aria-label="페이지 최상단으로" id="go_top"></button>
+		<div>
+	</footer>
+	
+
+	<script>
+		$(document).ready(function () {
+			$('#go_top').on('click', function () {
+				$('html, body').animate({scrollTop: '0'}, 1000);
+				$('#skip_header').focus()
+			});
+			
+			// jQuery 선택자 사용법 숙지(CSS 선택방법과 동일함);
+			// https://gangzzang.tistory.com/entry/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%ACjQuery-%EC%84%A0%ED%83%9D%EC%9E%90
+			// focus()이벤트 확인;
+		});
+	</script>
+</body>
+</html>

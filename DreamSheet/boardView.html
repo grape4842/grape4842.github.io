@@ -1,0 +1,88 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.io.PrintWriter" %> -->
+<!-- <%@ page import="board.Board" %>  -->
+<!-- board의 클래스 가져옴 -->
+<!-- <%@ page import="board.BoardDAO" %>  -->
+<!-- board의 클래스 가져옴 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta charset="utf-8">
+	<meta property="og:site_name" content="Dream Sheet">
+	<meta name="author" content="2022">
+	<meta name="keywords" content="김범철,피아노,악보,Piano,Sheet,Music">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="img/DreamSheet.png">
+	<meta property="og:title" content="Dream Sheet 악보 사이트">
+	<meta property="og:description" content="안녕하세요 다양한 피아노 악보를 만나보세요">
+	<meta name="theme-color" content="#33333f">
+	<meta name="msapplication-TileImage" content="img/DreamSheet.png">
+	<title>
+	메인 - Dream Sheet
+	</title>
+	<link rel="shortcut icon" href="img/PianoF.png">
+	<link rel="icon" href="img/PianoF.png">
+	<link rel="stylesheet" type="text/css" href="css/DreamSheet.css">
+	<link rel="stylesheet" type="text/css" href="css/DreamSheetMainContents.css">
+	<link rel="stylesheet" type="text/css" href="css/boardView.css">
+	<link rel="apple-touch-icon" href="img/DreamSheet.png">
+</head>
+<body>
+	<jsp:include page="header.jsp" />
+	
+<!-- 		<%
+		String userID = null;
+		if(session.getAttribute("userID") != null){
+			userID = (String)session.getAttribute("userID");
+		}
+		
+		int boardID = 0;
+		if(request.getParameter("boardID") != null){
+			boardID = Integer.parseInt(request.getParameter("boardID"));
+		}
+		
+		// 만약 넘어온 데이터가 없다면
+		if(boardID == 0){
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('유효하지 않은 글입니다')");
+			script.println("location.href='board.jsp'");
+			script.println("</script");
+		}
+		
+		Board board = new BoardDAO().getBoard(boardID);
+	%>
+ -->
+	<div class="view-container">
+		<div class="view-main">
+			<div class="content-row">
+				<div class="view-gallary">
+					<img src="img/<%= board.getFilename() %>" width="500" height="500">
+				</div>
+				<div class="view-info">
+				 <h2><%= board.getBoardTitle() %></h2>
+				 <p><%=  board.getBoardContent() %></p>
+				 <div>
+				 Package includes:<br>
+				– Hard Version Sheet Music (PDF)<br>
+				– High Quality Audio File (MP3) <br>
+				– Hard Version Performance MIDI File <br>
+				– Bonus: Easy / Draft Version Sheet Music (PDF)<br>
+				 </div>
+				 <button>구매하기</button>
+				</div>
+			</div>
+			<hr>
+			<div class="view-content">
+			  <p>유튜브 URL 첨부</p>
+			</div>
+		</div>
+	
+	</div>
+	
+	<jsp:include page="footer.jsp" />
+
+</body>
+</html>

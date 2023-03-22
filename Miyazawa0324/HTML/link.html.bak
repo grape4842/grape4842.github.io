@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+ <head>
+ <meta charset="UTF-8">
+  <title> style practice</title>
+  <meta name="Author" content="Miiyazawa0324">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  </script>
+  <link rel="stylesheet" type="text/css href="linkstyle.css"">
+  </head>
+
+ <body>
+  <h1><a href="" target="_blank" id="acss">링크 요소로 CSS3연결하기.</a></h1>
+ </body>
+</html>

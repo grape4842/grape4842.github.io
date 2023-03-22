@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+ <head>
+ <meta charset="UTF-8">
+  <title> 속성선택자 사용하기 </title>
+  <meta name="Author" content="Miiyazawa0324">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  </script>
+	
+  <style type="text/css">
+	@import url("Cook2.css")
+ </style>
+ </head>
+
+ <body>
+	<h1>속성 선택자 사용하기</h1>
+	<br>
+	<h2>조리학부 자격증</h2>
+	<ul>
+		
+		<li class="kns"><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=7910&examInstiCd=1" target="_blank">한식조리기능사</a></li>
+		<li class="kns"><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=7912&examInstiCd=1" target="_blank">일식조리기능사</a></li>
+		<li class="kns"><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=7911&examInstiCd=1" target="_blank">양식조리기능사</a></li>
+		<li class="kns"><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=7913&examInstiCd=1" target="_blank">중식조리기능사</a></li>
+		<li class="kns"><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=7914&examInstiCd=1" target="_blank">복어조리기능사</a></li>
+		</ul>
+		<br>
+		<ul>
+		<li><a title="조리산업기사&#40한식&#41" href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=2971&examInstiCd=1" target="_blank">조리산업기사&#40한식&#41</a></li>
+		<li><a title="조리산업기사&#40일식&#41" href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=2973&examInstiCd=1" target="_blank">조리산업기사&#40일식&#41</a></li>
+		<li><a title="조리산업기사&#40양식&#41" href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=2972&examInstiCd=1" target="_blank">조리산업기사&#40양식&#41</a></li>
+		<li><a title="조리산업기사&#40중식&#41" href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=2974&examInstiCd=1" target="_blank">조리산업기사&#40중식&#41</a></li>
+		<li><a title="조리산업기사&#40복어&#41" href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=2975&examInstiCd=1" target="_blank">조리산업기사&#40복어&#41</a></li>
+		<br>
+		<li><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=7892&examInstiCd=1">제과기능사</a></li>
+		<li><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=7893&examInstiCd=1">제빵기능사</a></li>
+		<li><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=3923&examInstiCd=1">제과기능장</a></li>
+		<li><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=3922&examInstiCd=1">조리기능장</a></li>
+		<li><a href="http://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=&jmCd=7916&examInstiCd=1">조주기능사</a></li>
+	</ul> 
+
+	<a href="http://www.q-net.or.kr/man001.do?gSite=Q" target="_blank">Q-Net 홈페이지 </a>
+ </body>
+</html>

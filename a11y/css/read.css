@@ -1,0 +1,6 @@
+@charset "UTF-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+:lang(ja) {word-wrap:break-word; word-break:break-all;}
+::selection {background:#76f; color:white;}
+th,td {border:1px solid black;}
+table {border-collapse:collapse; margin:5vw auto;}

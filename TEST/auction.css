@@ -1,0 +1,41 @@
+@charset "UTF-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+::selection {background:#51a; color:white;}
+body {display:block; padding:0px; margin:0px;}
+ol ul {margin:0px;}
+li {list-style:none;}
+a {text-decoration:transparent;}
+
+/*모바일 기준*/
+main {display:block;
+	width:90%; margin:auto 0px;}
+section {}
+table {
+	border-collapse:collapse;}
+td,th {
+	font-family:"HY견고딕";
+	vertical-align:middle; 
+	width:30%; 
+	padding:2%; 
+	font-size:1.2rem;}
+th{background-color:#baf; 
+	font-weight:normal;
+	text-align:left;}
+td {font-weight:lighter;}
+caption {
+	width:1px; height:1px;
+	overflow:hidden;
+	position:relative;
+	z-index:-3;}
+
+@media (prefers-color-scheme:dark) {
+body {
+	background-image:
+	linear-gradient(to left,rgba(0, 0, 255, 0.1), rgba(30, 30, 255, 0.1), rgba(0, 0, 255, 0.1)),
+	url(purplestar.jpg); 
+	background-attachment:fixed;
+	background-size:80%;
+	padding-top:3%;}
+}
+th,td {border:1px solid #235; 
+}

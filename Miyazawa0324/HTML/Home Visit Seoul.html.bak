@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+ <head>
+ <meta charset="UTF-8">
+  <title>	VISIT SEOUL.NET</title>
+  <meta name="Author" content="Miiyazawa0324">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  </script>
+  
+  <style type="text/css">
+	@import url("HVS.css");
+  </style>
+ </head>
+
+ <body>
+ <nav>
+	<ul id="HVS">
+		<li class="biglist"><a href="" target="_blank">ハイライト<span class="ss">▼</span></a>
+			<ul>
+				<li><a href="" target="_blank">ソウルTop 10</a></li>
+				<li><a href="" target="_blank">イベント</a></li>
+				<li><a href="" target="_blank">ソウルスペシャル観光</a></li>
+				<li><a href="" target="_blank">韓流観光</a></li>
+				<li><a href="" target="_blank">グローバルソウルメイトとは</a></li>
+				<li><a href="" target="_blank">ピョンチャン&#40;平昌&#41;オリンピック</a></li>
+			</ul>
+		</li>
+		<li class="biglist"><a href="" target="_blank" href="">ソウルを楽しむ<span class="ss">▼</span></a>
+			<ul>
+				<li><a href="" target="_blank">おすすめ旅行コース</a></li>
+				<li><a href="" target="_blank">観光スポット</a></li>
+				<li><a href="" target="_blank">ショッピング</a></li>
+				<li><a href="" target="_blank">レストラン</a></li>
+				<li><a href="" target="_blank">宿泊</a></li>
+				<li><a href="" target="_blank">イベントカレンダー</a></li>
+			</ul>
+		</li>
+		<li class="biglist"><a href="" target="_blank">予約&#38;割引<span class="ss">▼</span></a>
+			<ul>
+				<li><a href="" target="_blank">公演</a></li>
+				<li><a href="" target="_blank">ホテル</a></li>
+				<li><a href="" target="_blank">ソウルウォーキングツアー</a></li>
+			</ul>
+		</li>
+		<li class="biglist"><a href="" target="_blank">旅の準備<span class="ss">▼</span></a>
+			<ul>
+				<li><a href="" target="_blank" href="">地図&#149;ガイドブック</a></li>
+				<li><a href="" target="_blank" href="">基本情報</a></li>
+				<li><a href="" target="_blank" href="">サービス案内</a></li>
+				<li><a href="" target="_blank" href="">ビジネス&amp;パートナーズ</a></li>
+				<li><a href="" target="_blank" href="">よくある質問&#40;FAQ&#41;</a></li>
+				<li><a href="" target="_blank" href="">お知らせ</a></li>
+			</ul>
+		</li>
+	</ul>
+	</nav>
+ </body>
+</html>

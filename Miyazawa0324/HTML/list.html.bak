@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+ <head>
+ <meta charset="UTF-8">
+  <title> New Document </title>
+  <meta name="Author" content="Miiyazawa0324">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  </script>
+  
+  <style type="text/css">
+	* {font-family:Arial Unicode MS;}
+	body {background-color:#a0afff;}
+	ul {list-style-type:none;}
+	mark {background-color:#0c0; color:white; font-weight:bolder; padding:5px;}
+  </style>
+ </head>
+
+ <body>
+	<ul>
+		<li>안상진</li>
+		<li>임동준</li>
+		<li>김경림</li>
+	</ul>
+
+	<ol>
+		<li>박준영</li>
+		<li>배찬우</li>
+		<li>이경욱</li>
+	</ol>
+
+	<ul>
+		<li>조재헌</li>
+		<li><mark>박 핵</mark></li>
+		<li>james</li>
+	</ul>
+	<hr>
+	<dl>
+		<dt>作品名：</dt>
+		<dd>ドラゴンボール</dd>
+		<dt>作者：</dt>
+		<dd>鳥山明</dd>
+		<dt>出版社：</dt>
+		<dd>集英社</dd>
+		<dt>発売日：</dt>
+		<dd>2017年09月17日</dd>
+	</dl>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/E2cMFq_6uW8" frameborder="0" allowfullscreen></iframe>
+
+ </body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.5,maximum-scale=5.0,user-scalable=yes"/>
+<meta property="og:image" content=""/>
+<meta property="og:title" content="비주얼 디자인 8-1 자료를 위한 HTML"/>
+<meta property="og:description" content=""/>
+<link rel="stylesheet" type="text/css" href="VisualDesignTest.CSS"/>
+<title>Visual Design Test</title>
+</head>
+
+
+
+<body>
+	<main>
+		<div class="redt">
+		<table>
+			<caption>
+				<strong>
+					<span class="red">빨간색</span>으로 표시된 항목은 필수 항목입니다.
+				</strong>
+			</caption>
+			<tr>
+				<th>
+					<label for="unamer">성 명:</label>
+				</th>
+				<td>
+					<input type="text" title="필수" id="unamer">
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="ubirthr">생년월일:</label>
+				</th>
+				<td>
+					<input type="text" title="숫자만 입력하세요" id="ubirthr" placehorder="19900101">
+				</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="redt">
+		<table>
+			<caption>
+				<strong>
+					<span class="red">빨간색</span>으로 표시된 항목은 필수 항목입니다.
+				</strong>
+			</caption>
+			<tr>
+				<th>
+					<label for="unamer2" class="red">성 명:</label>
+				</th>
+				<td>
+					<input type="text" title="필수" id="unamer2">
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="ubirthr2">생년월일:</label>
+				</th>
+				<td>
+					<input type="text" title="숫자만 입력하세요" id="ubirthr2" placehorder="19900101">
+				</td>
+				</tr>
+		</table>
+		</div>
+
+		<div class="redt">
+		<table>
+			<caption>
+				필수 항목 미기재시 다음단계로 진행하실 수 없습니다.
+			</caption>
+			<tr>
+				<th>
+					<label for="unameg">성 명:<span class="red">[필수]</span></label>
+				</th>
+				<td>
+					<input placeholder="홍길동" type="text" title="필수" id="unameg">
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="ubirthg">생년월일:</label>
+				</th>
+				<td>
+					<input type="text" title="숫자만 입력하세요" id="ubirthg" placeholder="19900101">
+				</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="redt">
+			<table class="redt">
+			<caption id="star">
+			<strong>
+				<span class="red">*</span>은 필수 항목입니다.
+			</strong>
+			</caption>
+			<tr>
+			<th>
+			<label for="unames">성 명<span class="red">*</span>:</label>
+			</th>
+			<td>
+			<input type="text" title="필수" id="unames">
+			</td>
+			</tr>
+			<tr>
+			<th>
+			<label for="ubirths">생년월일<span class="red">*</span>`:</label>
+			</th>
+			<td>
+			<input type="text" title="숫자만 입력하세요" id="ubirths" placehorder="19900101">
+			</td>
+			</tr>
+			</table>
+		</div>
+		<div>
+						<table class="iconT">
+				<caption>검사 강화 기간</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="sunD">일</th>
+						<th scope="col">월</th>
+						<th scope="col">화</th>
+						<th scope="col">수</th>
+						<th scope="col">목</th>
+						<th scope="col">금</th>
+						<th scope="col" class="satD">토</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="covid19 sunD">1
+							</td>
+						<td>2
+							</td>
+						<td>3
+							</td>
+						<td>4
+							</td>
+						<td>5</td>
+						<td>6</td>
+						<td class="covid19 satD">7
+						</td>
+					</tr>
+					<tr>
+						<td class="covid19 sunD">8</td>
+						<td class="covid19">9</td>
+						<td class="covid19">10</td>
+						<td class="covid19">11</td>
+						<td class="covid19">12</td>
+						<td class="covid19">13</td>
+						<td class="covid19 satD">14
+						</td>
+					</tr>
+					<tr>
+						<td class="covid19 sunD">15</td>
+						<td>16</td>
+						<td>17</td>
+						<td>18</td>
+						<td>19</td>
+						<td>20</td>
+						<td class="covid19 satD">21
+						</td>
+					</tr>
+					<tr>
+						<td class="covid19 sunD">22</td>
+						<td class="covid19">23</td>
+						<td>24</td>
+						<td>25</td>
+						<td>26</td>
+						<td class="covid19">27
+						</td>
+						<td class="covid19 satD">28
+						</td>
+					</tr>
+					<tr>
+						<td class="covid19 sunD">29
+						</td>
+						<td class="covid19">30</td>
+						<td>31</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="satD"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="rightupbox">
+			<div class="ICBOX"></div>
+			<p>aaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaa aaaaa aaaaaaaaaaaa aaaaaaa aaaaa aaaaaaa aaa aaaaa aaaaa aaaaaa aaaaa</p>
+			<span>자세한 사항은 우측 상단 이미지를 확인해주세요.</span>
+			<div class="ICBOX"></div>
+			<p>fffffffff fffffffff fffff ffffffff  fffffffffffff fffffffff ffff ffffffffff ffffffffff fffffff ffffff ffffffffffff f ffffff fff </p>
+			<div id="sumi">이미지</div>
+			<p id="sumit">fffffffff fffffffff fffff ffffffff  fffffffffffff fffffffff ffff ffffffffff ffffff </p>
+		</div>
+		<div class="KWCAG5">
+			<p>다음단계로 진행하시려면 왼쪽 버튼을 누르세요.</p>
+			<button class="okrb okbb">
+			다음
+			</button>
+			<button class="okrb nobb">
+			취소
+			</button>
+		</div>
+
+		<div class="KWCAG5">
+			<p>다음단계로 진행하시려면 왼쪽 [다음] 버튼을 누르세요.</p>
+			<button  class="okrb okbb">
+			다음
+			</button>
+			<button  class="okrb nobb">
+			이전
+			</button>
+		</div>
+
+		<div class="KWCAG5">
+			<p>모든 이미지에는 반드시 alt텍스트를 제공하여야 한다.</p>
+			<p>맞다면 둥근 버튼을, 틀리다면 사각 버튼을 누르세요.</p>
+			<button class="yesbd2 maru" aria-label="맞다">
+				
+			</button>
+			<button class="nobd2 shikaku" aria-label="아니다">
+				
+			</button>
+		</div>
+
+		<div class="KWCAG5">
+			<p>모든 이미지에는 반드시 alt텍스트를 제공하여야 한다.</p>
+			<p>맞다면 O를, 틀리다면 X를 누르세요.</p>
+			<button class="yesbd2 maru" aria-label="맞다">
+				O
+			</button>
+			<button class="nobd2 shikaku" aria-label="아니다">
+				X
+			</button>
+		</div>
+
+		<div class="KWCAG5 SALE">
+			<p class="SALET">SALE!</p>
+			<p class="DEAL">69,800원</p>		
+			<p class="nprice" id="normalprice">99,900원</p>
+		</div>
+		<div class="KWCAG5 SALE">
+			<p class="SALET">SALE!</p>
+			<p class="DEAL">판매가:69,800원</p>
+			<p class="nprice">기존 정가:99,900원</p>
+		</div>
+		<div class="iconBOX">
+			<table class="iconT">
+				<caption>기호로 표현한 예시</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="sunD">일</th>
+						<th scope="col">월</th>
+						<th scope="col">화</th>
+						<th scope="col">수</th>
+						<th scope="col">목</th>
+						<th scope="col">금</th>
+						<th scope="col" class="satD">토</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="sunD">1
+							<span class="icon"></span></td>
+						<td>2
+							<span class="icon"></span></td>
+						<td>3
+							<span class="icon"> </span></td>
+						<td>4
+							<span class="icon"> </span></td>
+						<td>5</td>
+						<td>6</td>
+						<td class="satD">7
+						<span class="icon">◎</span></td>
+					</tr>
+					<tr>
+						<td class="sunD">8</td>
+						<td>9</td>
+						<td>10</td>
+						<td>11</td>
+						<td>12</td>
+						<td>13</td>
+						<td class="satD">14
+						<span class="icon">★</span></td>
+					</tr>
+					<tr>
+						<td class="sunD">15</td>
+						<td>16</td>
+						<td>17</td>
+						<td>18</td>
+						<td>19</td>
+						<td>20</td>
+						<td class="satD">21
+						<span class="icon">★</span></td>
+					</tr>
+					<tr>
+						<td class="sunD">22</td>
+						<td>23</td>
+						<td>24</td>
+						<td>25</td>
+						<td>26</td>
+						<td>27
+						<span class="icon">△</span></td>
+						<td class="satD">28
+						<span class="icon">×</span></td>
+					</tr>
+					<tr>
+						<td class="sunD">29
+						<span class="icon">×</span></td>
+						<td>30</td>
+						<td>31</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="satD"></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="iconlistBOX">
+				<dl>
+					<dt>★</dt>
+					<dd>좌석 충분</dd>
+				</dl>
+				<dl>
+					<dt>△</dt>
+					<dd>만석 임박</dd>
+				</dl>
+				<dl>
+					<dt>×</dt>
+					<dd>만석</dd>
+				</dl>
+				<dl>
+					<dt>◎</dt>
+					<dd>일부 이용 불가</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="iconBOX">
+			<table class="iconT2">
+				<caption>기호로 표현한 예시</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="sunD">일</th>
+						<th scope="col">월</th>
+						<th scope="col">화</th>
+						<th scope="col">수</th>
+						<th scope="col">목</th>
+						<th scope="col">금</th>
+						<th scope="col" class="satD">토</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="sunD">1
+							<span class="icon"></span></td>
+						<td>2
+							<span class="icon"></span></td>
+						<td>3
+							<span class="icon"> </span></td>
+						<td>4
+							<span class="icon"> </span></td>
+						<td>5</td>
+						<td>6</td>
+						<td class="satD">7
+						<span class="icon">일부<i></i>이용<i></i>불가</span></td>
+					</tr>
+					<tr>
+						<td class="sunD">8</td>
+						<td>9</td>
+						<td>10</td>
+						<td>11</td>
+						<td>12</td>
+						<td>13</td>
+						<td class="satD">14
+						<span class="icon">좌석<i></i>충분</span></td>
+					</tr>
+					<tr>
+						<td class="sunD">15</td>
+						<td>16</td>
+						<td>17</td>
+						<td>18</td>
+						<td>19</td>
+						<td>20</td>
+						<td class="satD">21
+						<span class="icon">좌석<i></i>충분</span></td>
+					</tr>
+					<tr>
+						<td class="sunD">22</td>
+						<td>23</td>
+						<td>24</td>
+						<td>25</td>
+						<td>26</td>
+						<td>27
+						<span class="icon">만석<i></i>임박</span></td>
+						<td class="satD">28						
+						<span class="icon">만석</span></td>
+					</tr>
+					<tr>
+						<td class="sunD">29
+						<span class="icon">만석</span></td>
+						<td>30</td>
+						<td>31</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="satD"></td>
+					</tr>
+				</tbody>
+			</table>
+<!-- 			<div class="iconlistBOX">
+				<dl>
+					<dt>★</dt>
+					<dd>좌석 충분</dd>
+				</dl>
+				<dl>
+					<dt>△</dt>
+					<dd>만석 임박</dd>
+				</dl>
+				<dl>
+					<dt>×</dt>
+					<dd>만석</dd>
+				</dl>
+				<dl>
+					<dt>◎</dt>
+					<dd>일부 이용 불가</dd>
+				</dl>
+			</div> -->
+		</div>
+
+			<a href="#" style="color:black;">이타주의자들</a>
+			<span>이타주의자들</span>
+		
+		<div>
+			<button class="minib">
+				취소
+			</button>
+			<button class="minib">
+				예약
+			</button>
+		</div>
+
+		<div>
+			<button class="okb">
+				취소
+			</button>
+			<button class="okb">
+				예약
+			</button>
+		</div>
+
+		<div id="lili">
+			<ul>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| Apple</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| Facebook</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| Twitter</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| Google</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| YouTube</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| NAVER</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="mlili">
+			<ul>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| Apple</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| Facebook</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| Twitter</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| Google</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| YouTube</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" title="새 창열림">
+				| NAVER</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="KWCAG5">
+			<p>결제를 진행하시겠습니까?</p>
+
+			<button class="yesbd">
+			결제
+			</button>
+			<button class="nobd">
+			취소
+			</button>
+		</div>
+
+		<div class="KWCAG5">
+			<p>정말로 탈퇴하시겠습니까?</p>
+			<button class="nobd">
+			탈퇴취소
+			</button>
+			<button class="yesbd">
+			탈퇴하기
+			</button>
+		</div>
+
+		<div class="KWCAG5">
+			<p>신청하시겠습니까?</p>
+			<button class="yesbd2">
+			예
+			</button>
+			<button class="nobd2">
+			아니오
+			</button>
+		</div>
+		<div class="KWCAG5">
+			<p>정말로 해지 하시겠습니까?</p>
+
+			<button class="nobd2">
+			아니오
+			</button>
+			<button class="yesbd2">
+			예
+			</button>
+		</div>
+
+		<input title="검색하세요." placeholder="  검색어를 입력하세요" style="font-size:20px; padding:5px;">
+		<a href="#" style="color:black; font-size:20px; padding:5px;">자세히보기</a>
+
+		<input title="개인정보 수집 밎 이용동의" type="checkbox" id="Priok">
+		<label for="Priok">동의합니다.</label>
+	<table class="JAN20">
+		<caption>2020년 1월 설 명절 맞이 대 세일 일정표</caption>
+		<thead>
+			<th colspan="7" class="TT">해당 기간 내에 행사가 진행됩니다 자세한 사항은 홈페이지를 확인하세요.
+			</th>
+		</thead>
+		<tbody>
+		<tr>
+			<th class="sund">일</th>
+			<th>월</th>
+			<th>화</th>
+			<th>수</th>
+			<th>목</th>
+			<th>금</th>
+			<th class="satd">토</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>13</td>
+			<td>14</td>
+			<td>15</td>
+			<td>16</td>
+			<td>17</td>
+			<td>18</td>
+		</tr>
+		<tr>
+			<td>19</td>
+			<td>20</td>
+			<td>21</td>
+			<td class="event">22
+				<span class="event better entx">행사기간</span>
+			</td>
+			<td class="event">23
+				<span class="event better entx">행사기간</span>
+			</td>
+			<td class="offd event">24
+				<span class="event better entx">행사기간</span>
+			</td>
+			<td class="offd event">25
+				<span class="event better entx">행사기간</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="offd event">26
+	<span class="event better entx">행사기간</span>
+	</td>
+			<td class="offd event">27
+	<span class="event better entx">행사기간</span>
+	</td>
+			<td class="event">28
+	<span class="event better entx">행사기간</span>
+	</td>
+			<td class="event">29
+	<span class="event better entx">행사기간</span>
+	</td>
+			<td>30</td>
+			<td>31</td>
+			<td></td>
+		</tr>
+		</tbody>
+		<tfoot>
+			<td class="TT" colspan="7">
+			행사기간:2020년 1월 22일부터 29일까지
+			</td>
+		</tfoot>
+	</table>
+<setcion>
+	<div class="colortestarea">
+		<ul>
+			<li style="color:#f00000;"></li>
+			<li style="color:#"></li>
+			<li style="color:#"></li>
+			<li style="color:#"></li>
+			<li style="color:#"></li>
+			<li style="color:#"></li>
+			<li style="color:#"></li>
+			<li style="color:#"></li>
+			<li style="color:#"></li>
+		</ul>
+	</div>
+</section>
+
+	</main>
+</body>
+</html>

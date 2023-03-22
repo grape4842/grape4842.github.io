@@ -1,0 +1,49 @@
+@charset "utf-8";
+.tiles {
+	display:grid;
+	justify-items:center;
+	justify-self:center;
+	justify-content: space-between;
+	row-gap:2rem;
+}
+.tile {
+	padding:2rem;
+	background:#fff;
+	border-radius: 1rem;
+}
+.tile_name {display:flex;}
+
+/*다크 모드일 경우의 스타일*/
+@media (prefers-color-scheme:dark) {
+	.tile {background: #333;}
+}
+
+/*Desktop*/
+@media screen and (width > 1200px) {
+	.tiles {
+		grid-template-columns: 32% 32% 32%;
+	}
+}
+/*Tablet*/
+@media screen and (760px < width < 1200px) {
+	.tiles {
+		grid-template-columns: 49% 49%;
+	}
+	.tile {
+	padding:1.5rem;
+	}
+}
+/*Mobile*/
+@media screen and (480px < width < 760px) {
+	.tile {
+	padding:1rem;
+	}
+	
+}
+/*iPhoneSE / Watch?*/
+@media screen and (width < 320px) {
+	.tile {
+	padding:0.5rem;
+	}
+
+}

@@ -1,0 +1,127 @@
+.yet>li{display:none;}
+
+html {font-size:10px;}
+body *:focus{outline-color:invert; outline-style:outset;}
+#top {color:black;}
+.no{font-size:0px;}
+
+#MCGO,#SMGO{position:absolute; top:-100px;}
+#MCGO:focus,#SMGO:focus{position:absolute; height:1rem;  padding:1rem; display:block; width:100%;
+color:white; top:0%; text-align:center; z-index:9999;}
+#MCGO {background-color:#3377ff;}
+#SMGO {background-color:#ff0055;}
+
+a{text-decoration:none;}
+li {list-style-type:none; list-style-position:outside;}
+
+#bgp {position:absolute; top:0px; left:0px; height:23%;
+background-color:#7555dd; width:100%; padding:1% 0%;
+border-bottom:10px #b0aaff solid; color:white;}
+
+#bgp a{color:white;}
+
+#menubar {position:fixed; 
+z-index:100; top:0px; left:0px; 
+background-color:#330099; text-align:left;
+width:100%; height:3%; padding:1%;}
+
+.right {float:right;}
+
+#nCOIbLogo {height:4rem; width:4rem;
+margin:0px; position:relative;
+vertical-align:middle; border-radius:100%;}
+
+#menubar *{color:white;}
+body{background-color:#dfddff; font-size:1.5rem;}
+
+#nCOIbM {height:10rem; width:10rem;
+border-radius:50%; position:absolute; top:12rem; left:8rem;}
+
+#nCOIbMark {border-radius:100%;}
+
+#MH1{text-align:center; margin:0%;
+color:#332244; font-family:HY견고딕; font-size:4rem;
+width:52%; height:26%; padding:2% 0%; border:solid 1rem #fffaaa;
+background-color:white; margin:auto; margin-top:4%;}
+
+#side{position:fixed; top:30rem; 
+text-align:center; float:left; margin:auto; font-family:Arial;}
+
+#side *{text-align:center;}
+
+#infos {border-radius:10%; 
+background-color:#aa99ee;
+text-align:center; width:17rem;
+padding:1rem; margin:auto;
+border:1px solid #bbbbff;}
+
+#info2 {margin:auto;}
+.info2{text-align:center; 
+width:8rem; height:4rem;
+background-color:white; border:none;
+margin:auto 1%; float:left;
+border-radius:20% 20% 0% 0%;
+border-bottom:1px solid lightgray;}
+.info2 a{color:black; width:100%;
+display:block; height:70%;
+position:relative; padding-top:15%;}
+
+#SMinfo {clear:both;}
+
+#siteprofile {background-color:white;
+margin:auto; padding:3% 0%;}
+
+#joinbtn {background:linear-gradient(to bottom, #0c0, #0b0, #0a0, #090);
+height:4rem; width:8rem; 
+border:1px solid #005500;}
+
+#nCOIbjoin:active {background:linear-gradient(to top, #0d0, #0c0, #0b0, #0a0, #090, #080);}
+
+#nCOIbjoin{color:white; display:block; text-align:center;
+background:linear-gradient(to bottom, #0c0, #0b0, #0a0, #090);
+line-height:4rem; width:8rem;
+border:1px solid #005500; margin:auto;}
+
+#writeidea {display:block; color:white;
+background:linear-gradient(to bottom, #62a,  #519, #407); margin:5% auto;
+width:16rem; line-height:5rem; font-weight:bold;}
+
+#writeidea:active
+{background:linear-gradient(to top, #62a,  #519, #407);}
+
+.search {position:fixed;}
+
+#menu {position:fixed; z-index:60;
+width:13%; height:40%; overflow-y:scroll;
+background-color:#410077;
+border:1rem #9977ff solid;
+text-align:left; padding:1%;}
+
+#menu * {color:white; text-align:left;}
+#menu hr {border:dotted lavender 1px;
+}
+
+#menu li {margin:2%; 0px;}
+
+.inner{margin-left:-3rem;}
+
+
+#main {background-color:white;  margin:auto; left:33rem;
+border-radius:3rem; position:absolute; top:30rem;
+border:solid 1rem #00cc00; width:66%; padding:2%;}
+
+#footer {width:100%; height:3%; background-color:lavender; position:absolute;
+top:95%; margin:auto; text-align:center; padding:1% 0px;}
+
+
+
+
+
+#mainP {background-color:white;  margin:auto; left:33rem;
+border-radius:3rem; position:absolute; top:30rem;
+border:solid 1rem #00cc00; width:66%; padding:2%;
+text-align:center; font-weight:bolder; font-size:2rem;}
+
+#error{font-size:20rem; color:#ffaa00;}
+#preparingH{font-family:HY견고딕; color:#0077ee; font-size:5rem;}
+

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="@purplemiyazawa">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta property="og:image" content="https://www.apple.com/v/macos/catalina/c/images/overview/hero/desktop_load__c7z7yfiz6i4i_medium.jpg"/>
+	<meta property="og:title" content="button태그에 aria를 일단 붙여본 페이지"/>
+	<meta property="og:description" content="센스리더가 얼마나 ARIA를 못하는지 알아보는 페이지"/>
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta name="theme-color=" content="#7766dd">
+	<title>
+	WAI-ARIA 속성
+	</title>
+	<link rel="shortcut icon"  type="../nCOIbLogo.png" href="nCOIbLogo.png">
+	<link rel="stylesheet" type="text/css" href="css/reset-Coliss.css">
+	<link rel="stylesheet" type="text/css" href="css/ErrorAria.css">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+</head>
+<body>
+	<a href="#content" id="skip-nav">헤더 건너뛰고 본문 바로가기</a>
+	<header>
+		<div>
+			<h1>WAI-ARIA TEST</h1>
+			<p>해당 문서는 aria의 올바른 기능을 이해하기 이전에 센스리더에서 aria를 얼마나 감지할 수 있는지 테스트하기 위한 목록입니다.</p>
+		</div>
+	</header>
+	<main id="content">
+		<h2 class="a11ytxt">본문</h2>
+		<article>
+			<h2>WAI-ARIA 참고 링크 </h2>
+			<ul>
+				<li>
+					<a href="https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA" title="새 창" target="_blank">ARIA - Mozillra</a>
+				</li>
+				<li>
+					<a href="https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques" title="새 창" target="_blank">ARIA 사용하기: 규칙, 상태, 속성 - Mozilla</a>
+				</li>
+				<li>
+					<a href="https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Roles"  title="새 창" target="_blank">WAI-ARIA role - Mozila</a>
+				</li>
+				<li>
+					<a href="https://nuli.navercorp.com/tool/waiAria" title="새 창" target="_blank">WAI-ARIA UI - 널리</a>
+				</li>
+
+				<li>
+					<a href="https://www.w3.org/WAI/standards-guidelines/aria/" title="새 창" target="_blank">WAI-ARIA Overview | Web Accessibility Initiative (WAI) - W3C</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/WAI/ARIA/apg/patterns/" title="새 창" target="_blank"> Patterns | APG | WAI | W3C</a>
+				</li>
+<!-- 				<li>
+					<a href="" title="새 창" target="_blank"></a>
+				</li>
+				<li>
+					<a href="" title="새 창" target="_blank"></a>
+				</li>
+				<li>
+					<a href="" title="새 창" target="_blank"></a>
+				</li>
+				<li>
+					<a href="" title="새 창" target="_blank"></a>
+				</li>
+				<li>
+					<a href="" title="새 창" target="_blank"></a>
+				</li>
+				<li>
+					<a href="" title="새 창" target="_blank"></a>
+				</li>
+				<li>
+					<a href="" title="새 창" target="_blank"></a>
+				</li> -->
+				<li>
+					<a href="https://story.pxd.co.kr/1588" title="새 창" target="_blank">WAI-ARIA란? - pxd story</a>
+				</li>
+				<li>
+					<a href="https://aria.markuplint.dev/" title="새 창" target="_blank">WAI-ARIA Cheat Sheet (Beta)</a>
+				</li>
+			</ul>
+		</article>
+		<article>
+			<ul class="aria-list">
+			<li>
+				<div role="status">스테이터스</div>
+			</li>
+
+			<li>
+				<button aria-selected="true">선택 참</button>
+			</li>
+			<li>
+				<button aria-checked="true">체크 참</button>
+			</li>
+			<li>
+				<button aria-expanded="true">펼침 참</button>
+			</li>
+			<li>
+				<button aria-atomic="true">aria-atomic</button>
+			</li>
+			<li>
+				<button aria-busy="busy">aria-busy</button>
+			</li>
+			<li>
+				<button aria-disabled="true">aria-disabled</button>
+			</li>
+			<li>
+				<button aria-grabbed="true">aria-grabbed</button>
+			</li>
+			<li>
+				<button aria-haspopup="menu">aria-haspopup</button>
+			</li>
+			<li>
+				<input aria-errormessage="EM" type="text" title="aria-invalid test" aria-invalid="true"/>
+				<p id="EM">아리아로 오류를 알리는 속성 테스트</p>
+			</li>
+			<li>
+				<button aria-label="aria로 제공된 label">aria-label</button>
+			</li>
+			<li>
+				<button aria-multiline="true">aria-multiline</button>
+			</li>
+			<li>
+				<button aria-pressed="true">aria-pressed</button>
+			</li>
+			<li>
+				<button aria-readonly="true" role="textbox">aria-readonly textbox</button>
+			</li>
+			<li>
+				<button role="combobox" aria-required="true">aria-required combobox</button>
+			</li>
+			<li>
+				<div aria-modal="true" role="dialog">aria-modal</div>
+			</li>
+			<li>
+				<a href="123" aria-current="true">aria-current</a>
+			</li>
+			</ul>
+		</article>
+
+		<article>
+		<h2>사용할 것이라 예상되는 role속성 선언</h2>
+		<ul class="aria-role">
+			<li>
+				<div role="alert">alert</div>
+			</li>
+			<li>
+				<div role="application">application</div>
+			</li>
+			<li>
+				<div role="alertdialog">alertdialog</div>
+			</li>
+			<li>
+				<button role="article">article</button>
+			</li>
+			<li>
+				<aside role="banner">banner</aside>
+			</li>
+			<li>
+				<button role="button">button</button>
+			</li>
+			<li>
+				<button role="checkbox" aria-checked="false">checkbox</button>
+			</li>
+			<li>
+				<button role="columheader">columheader</button>
+			</li>
+			<li>
+				<button role="combobox">combobox</button>
+			</li>
+			<li>
+				<button role="complementary">complementary Sidebar</button>
+			</li>
+			<li>
+				<button role="contentinfo">contentinfo</button>
+			</li>
+			<li>
+				<button role="definition">definition</button>
+			</li>
+			<li>
+				<div role="dialog">dialog</div>
+			</li>
+			<li>
+				<button role="directory">directory</button>
+			</li>
+			<li>
+				<button role="document">document</button>
+			</li>
+			<li>
+				<div role="feed">feed scroll article list area?</div>
+			</li>
+			<li>
+				<div role="form">form</div>
+			</li>
+			<li>
+				<ul role="grid">grid
+					<li role="gridcell">gridcell</li>
+				</ul>
+			</li>
+			<li>
+				<button role="group">group</button>
+			</li>
+			<li>
+				<button role="heading" aria-level="2">heading level 2</button>
+			</li>
+			<li>
+				<button role="img">img</button>
+			</li>
+			<li>
+				<button role="link">link</button>
+			</li>
+			<li>
+				<button role="list">list</button>
+			</li>
+			<li>
+				<div role="listbox">listbox
+					<button role="listitem">listitem</button>
+				</div>
+			</li>
+			<li>
+				<button role="log">log</button>
+			</li>
+			<li>
+				<button role="main">main</button>
+			</li>
+			<li role="menubar">
+				menubar
+			</li>
+			<li role="menu">
+				<ul role="group">
+					<li>
+						<a href="" role="menuitem">role="menuitem1"</a>
+					</li>
+					<li>
+						<a href="" role="menuitem">role="menuitem2"</a>
+					</li>
+				</ul>
+				<ul role="group">
+					<li>
+						<a href="" role="menuitem">role="menuitem3"</a>
+					</li>
+					<li>
+						<a href="" role="menuitem">role="menuitem4"</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<button role="menuitemcheckbox">menuitemcheckbox</button>
+			</li>
+			<li>
+				<button role="menuitemradio">menuitemradio</button>
+			</li>
+			<li>
+				<button role="navigation">navigation</button>
+			</li>
+			<li>
+				<button role="note">note</button>
+			</li>
+			<li>
+				<button role="presentation">presentation</button>
+			</li>
+			<li>
+				<button role="progressbar">progressbar</button>
+			</li>
+			<li>
+				<div role="region" aria-label="리전 테스트">region</div>
+			</li>
+			<li>
+				<button role="scrollbar">scrollbar</button>
+			</li>
+			<li>
+				<button role="search">search</button>
+			</li>
+			<li>
+				<button role="separator">separator</button>
+			</li>
+			<li>
+				<button role="slider">slider</button>
+			</li>
+			<li>
+				<button role="spinbutton">spinbutton</button>
+			</li>
+			<li>
+				<button role="status">status</button>
+			</li>
+			<li role="tablist">
+				<button role="tab" id="tab1" aria-controls="tp1">tab1 aria-controls</button>
+				<button role="tab" id="tab2" aria-controls="tp2">tab2 aria-controls</button>
+				<button role="tab" id="tab3" aria-controls="tp3">tab3 aria-controls</button>
+				<div aria-labeledby="tab1" tabindex="0" role="tabpanel" id="tp1">tabpanel1 aria-labeledby</div>
+				<div aria-labeledby="tab2" tabindex="0" role="tabpanel" id="tp2">tabpanel2 aria-labeledby</div>
+				<div aria-labeledby="tab3" tabindex="0" role="tabpanel" id="tp3">tabpanel3 aria-labeledby</div>
+			</li>
+			<li>
+				<button role="textbox">textbox</button>
+			</li>
+			<li>
+				<button role="timer">timer</button>
+			</li>
+			<li>
+				<button role="toolbar">toolbar</button>
+			</li>
+			<li>
+				<button aria-describedby="ttt merong">툴팁 테스트 aria-describedby</button>
+				<p role="tooltip" id="ttt">툴팁을 시험해봅니다.</p>
+			</li>
+			<li>
+				<button role="tree">tree</button>
+			</li>
+			<li>
+				<button role="treegrid">treegrid</button>
+			</li>
+			<li>
+				<button role="treeitem">treeitem</button>
+			</li>
+		</ul>
+		<p role="tooltip" id="merong">메롱</p>
+		</article>
+	</main>
+	<footer>
+		<h2 class="a11ytxt">Footer</h2>
+		<div>
+			<a href="" id="page-top" aria-label="페이지 최상단으로 이동">
+				<svg class="lightV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(85,68,170,1)"/></svg>
+				<svg class="darkV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(50,0,200,0.7)"/></svg>
+			</a>
+			<address>@purplemiyazawa</address>
+		</div>
+	</footer>
+</body>
+</html>

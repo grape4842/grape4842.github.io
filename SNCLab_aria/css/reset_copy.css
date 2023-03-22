@@ -1,0 +1,137 @@
+@charset "utf-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+::selection {background:#31a; color:white;}
+@font-face { 
+	font-family:"BIZ-UDGothic";
+	src: url("../../font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
+} 
+
+@font-face { 
+	font-family:"BIZ-UDGothic";
+	src: url("../../font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
+	font-weight:700;
+	font-display : swap;
+} 
+
+@font-face { 
+	font-family:"KoddiUDOnGothic";
+	src: url("../../font/Koddi/KoddiUDOnGothic-Regular.woff2") format("woff2");
+	src: url("../../font/Koddi/KoddiUDOnGothic-Regular.woff") format("woff");
+	src: url("../../font/Koddi/KoddiUDOnGothic-Regular.otf") format("opentype");
+	font-weight:400;
+	font-display : swap;
+} 
+@font-face { 
+	font-family:"KoddiUDOnGothic";
+	src: url("../../font/Koddi/KoddiUDOnGothic-Bold.woff2") format("woff2");
+	src: url("../../font/Koddi/KoddiUDOnGothic-Bold.woff") format("woff");
+	src: url("../../font/Koddi/KoddiUDOnGothic-Bold.otf") format("opentype");
+	font-weight:700;
+	font-display : swap;
+} 
+@font-face { 
+	font-family:"KoddiUDOnGothic";
+	src: url("../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+	src: url("../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+	src: url("../../font/Koddi/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+	font-weight:900;
+	font-display : swap;
+}
+
+
+*,
+*::before,
+*::after {
+	margin: 0; /* マージンは0に */
+	padding: 0; /* パディングも常に0に */
+	box-sizing: border-box; /* もちろん、より直感的なbox-sizingに設定 */
+}
+ 
+:where(html) {
+	-webkit-text-size-adjust: none; /* iOSのランドスケープでテキストが調整されないようにする */
+	color-scheme: dark light; /* ユーザーがダークテーマを好む場合、自動的にダークテーマになる */
+	font-family:"KoddiUDOnGothic", "BIZ-UDGothic", sans-serif, serif;
+}
+ 
+@supports not (min-block-size: 100dvb) {
+	:where(html) {
+		block-size: 100%;
+	}
+}
+ 
+@media (prefers-reduced-motion: no-preference) {
+	:where(html:focus-within) {
+		scroll-behavior: smooth; /* 何かにフォーカスがある場合のみスムーズスクロール */
+	}
+}
+ 
+:where(body) {
+	block-size: 100%; /* サファリ以外のブラウザのフォールバック */
+	block-size: 100dvb; /* 1dvbは動的ビューポートの長さの1%、100dvbで高さいっぱいに */
+	line-height: 1.5; /* アクセシブルな行の高さ */
+	-webkit-font-smoothing: antialiased; /* テキストのレンダリングを改善 */
+}
+ 
+:where(input, button, textarea, select, a) {
+	font: inherit; /* フォーム コントロールは親フォントを継承 */
+}
+:where(a) {
+	color: inherit;
+}
+ 
+:where(textarea) {
+	resize: vertical; /* テキストエリアの水平リサイズを無効に */
+	resize: block;
+}
+ 
+:where(button, label, select, summary, [role='button'], [role='option']) {
+	cursor: pointer; /* インタラクティブなものにカーソルを合わせる */
+}
+ 
+:where(:disabled) {
+	cursor: not-allowed; /* フォームコントロール無効時のカーソルを許可しない */
+}
+ 
+:where(label:has(> input:disabled), label:has(+ input:disabled)) {
+	cursor: not-allowed; /* ラベルにもカーソルを許可しない */
+}
+ 
+:where(button) {
+	border-style: none; /* ボタンのボーダーのスタイルを設定しやすくする */
+}
+ 
+:where(a) {
+	display: inline-flex;
+	text-underline-offset: 4px; /* 下線の上にスペースを追加する */
+}
+ 
+:where(ul, ol, li) {
+	list-style: none; /* ビュレットを削除、必要に応じて手動で追加する */
+}
+ 
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+	display: block; /* 置換された要素をより予測可能にする */
+}
+ 
+:where(img, picture, svg) {
+	max-inline-size: 100%; /* images should never overflow past the available space */
+	block-size: auto; /* アスペクト比を保持 */
+}
+ 
+:where(p, h1, h2, h3, h4, h5, h6) {
+	overflow-wrap: break-word; /* 長い単語は改行 */
+}
+ 
+:where(h1, h2, h3) {
+	line-height: calc(1em + 0.5rem); /* 見出しの行の高さを減らす */
+}
+ 
+:where(hr) { /* より一貫性のある、スタイリッシュなhr */
+	border: none;
+	border-block-start: 1px solid;
+	color: inherit;
+	block-size: 0;
+	overflow: visible;
+}

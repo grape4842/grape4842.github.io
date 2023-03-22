@@ -1,0 +1,27 @@
+div {width:100%; height:42px; border-top:#ccc 1px solid; padding-bottom:20px; 
+border-bottom:#007dc3 3px solid; margin:0px auto;}
+
+nav {width:75%; background-color:white; margin:0px auto;}
+nav>#HVS{line-height:20.8px; width:750px; margin-left:auto;margin-right:auto;}
+  a {text-decoration:none; display:inline-block;}
+  li[class*=biglist]>a {color:black; text-align:right; font-weight:600; font-size:18px;  color:#333; position:relative;}
+
+li[class*=biglist]:nth-child(2) {text-align:center;}
+li[class*=biglist]:nth-child(3),li[class*=biglist]:last-child{text-align:right;}
+ss{color:#555; line-height:0px; margin-left:12px; width:13px; height:21px; font-size:21px;}
+  li[class*=biglist]>ul>li:first-child{padding-top:16px;}
+  li[class*=biglist]:nth-child(2n-1)>ul>li{background-color:#007dc3; padding:2px 0px; width:187.5px;}
+  li[class*=biglist]:nth-child(2n)>ul>li{background-color:#006eac; padding:2px 0px; width:187.5px;}
+  a:hover{text-decoration:underline;}
+	li {list-style-position:outside; list-style-type:none; }
+	body {font-family:Meiryo UI,MS PGothic,ヒラギノ角ゴシック W3,Nanum Gothic; font-weight:400;}
+
+	.biglist {vertical-align:middle; float:left; width:187.5px; margin:0px;
+		height:35px; position:relative; padding-top:7px; font-size:21px;}
+
+li[class*=biglist]>ul>li>a{color:white; text-align:left; font-size:18px; line-height:19.5px; padding:5px 24px 7px 24px; }
+li[class*=biglist]>ul{display:block; position:absolute; top:42px; right:0; left:0; height:0; text-align:left; background-color:#007dc3;}
+		
+
+
+		

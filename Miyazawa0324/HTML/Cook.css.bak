@@ -1,0 +1,6 @@
+body {background-color:#b0bbff;}
+li {list-style-type:none;}
+a {text-decoration:none; font-family:맑은 고딕; font-weight:bolder;}
+a[target] {color:#c0ccff;}
+a[title^="조리"]{background-color:#324;}
+a[title*="일식"]{color:red; background-color:white; font-size:20pt; font-family:HY견고딕;}

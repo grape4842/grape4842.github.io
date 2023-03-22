@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>메인 - Dream Sheet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta charset="utf-8">
+	<meta property="og:site_name" content="Dream Sheet">
+	<meta name="author" content="2022">
+	<meta name="keywords" content="김범철,피아노,악보,Piano,Sheet,Music">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="img/DreamSheet.png">
+	<meta property="og:title" content="Dream Sheet 악보 사이트">
+	<meta property="og:description" content="안녕하세요 다양한 피아노 악보를 만나보세요">
+	<meta name="theme-color" content="#33333f">
+	<meta name="msapplication-TileImage" content="img/DreamSheet.png">
+	<link rel="shortcut icon" href="img/PianoF.png">
+	<link rel="icon" href="img/PianoF.png">
+	<link rel="stylesheet" type="text/css" href="css/DreamSheet.css">
+	<link rel="stylesheet" type="text/css" href="css/DreamSheetDark.css">
+	<link rel="stylesheet" type="text/css" href="css/DreamSheetMainContents.css">
+	<link rel="apple-touch-icon" href="img/DreamSheet.png">
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- 본문 바로가기 -->
+		<a href="#start" id="jump">본문바로가기</a>
+		 <!-- 상단바 -->
+
+		<header>
+			<h2 class="a11yT">헤더</h2>
+			<div class="w980">
+				<h1 class="Logo">
+					<a href="DreamSheet-Home.html" class="Logo">
+						<img src="img/DreamSheetLogo.png" alt="Dream Sheet">
+						<span class="mUI">Dream Sheet</span>
+					</a>
+				</h1>
+				<input class="mUI" aria-controls="GNB" aria-expanded="false" type="checkbox" id="headerM" name="" role="button">
+				<label class="mUI" for="headerM">
+					<span class="a11yT">메뉴</span>
+				</label>
+				<menu class="GNB left" id="GNB" aria-labeledby="headerM" role="region">
+					<ul>
+						<li class="searchArea">
+							<label for="searchBtn">
+								<h2 class="a11yT">검색 영역</h2>
+							</label>
+							<input type="checkbox" id="searchBtn" role="button" aria-expanded="false" aria-controls="searchBox">
+							<menu id="searchBox" aria-labeledby="searchBtn" role="region">
+								<form>
+									<label class="MainSearchText" for="MainSearch">검색 : </label>
+									<input id="MainSearch" type="search" name="" placeholder="악보를 검색하세요" title="악보검색">
+									<button type="submit" class="searchBtn">
+										<label for="MainSearch">
+											<span class="a11yT">악보 검색</span>
+										</label>
+									</button>
+								</form>
+							</menu>
+						</li>
+						<li>
+							<a href="">사이트 소개</a>
+						</li>
+						<li>
+							<a href="">인기악보</a>
+						</li>
+						<li>
+							<a href="">최신악보</a>
+						</li>
+						<li>
+							<a href="" class="D1">전체 악보</a>
+							<nav class="D2Box">
+								<ul class="D2">
+								<li>
+									<a href="">CCM</a>
+								</li>
+								<li>
+									<a href="">지브리</a>
+								</li>
+								<li>
+									<a href="">게임 음악</a>
+								</li>
+								<li> 
+									<a href="">일본 음악</a>
+								</li>
+								<li>
+									<a href="">한국 음악</a>
+								</li>
+								<li>
+									<a href="">영화 음악</a>
+								</li>
+								<li>
+									<a href="">클래식</a>
+								</li>
+								<li>
+									<a href="">계절악보</a>
+								</li>
+								</ul>
+							</nav>
+						</li>
+						<li>
+							<a href="" class="D1">피아노 소개</a>
+							<nav class="D2Box">
+								<ul class="D2">
+								<li>
+									<a href="">피아노의 역사</a>
+								</li>
+								<li>
+									<a href="">피아노의 종류</a>
+								</li>
+								<li>
+									<a href="">다양한 피아노</a>
+								</li>
+								<li>
+									<a href="">다양한 건반악기</a>
+								</li>
+								</ul>
+							</nav>
+						</li>
+						<li>
+							<a href="" class="D1">고객센터</a>
+							<nav class="D2Box">
+								<ul class="D2">
+								<li>
+									<a href="">공지사항</a>
+								</li>
+								<li>
+									<a href="">악보신청</a>
+								</li>
+								<li>
+									<a href="">이벤트</a>
+								</li>
+								<li>
+									<a href="">자주 묻는 질문</a>
+								</li>
+								<li>
+									<a href="">문의하기</a>
+								</li>
+								<li>
+									<a href="">악보 / 가사 오류 신고</a>
+								</li>
+								</ul>
+							</nav>
+						</li>
+					</ul>
+				</menu>
+				<div class="right">
+					<ul>
+						<li class="myMenu">
+							<a href="" id="noti">알림</a>
+						</li>
+						<li class="myMenu">
+							<a href="" id="shoppingBag">장바구니</a>
+						</li>
+						<li class="myMenu">
+							<a href="" id="myPage">마이페이지</a>
+						</li>
+						<li class="myMenu">
+							<a href="">로그아웃</a>
+						</li>
+						<li class="loginMenu">
+							<input role="button" type="checkbox" name="" id="login">
+							<label for="login">로그인</label>
+							<div class="layer loginLayer">
+								<dialog class="loginBox layerBox">
+									<h1>로그인</h1>
+									<div class="loginForm">
+										<form>
+											<div>
+												<label for="uid">
+													<span>아이디</span>
+													<input id="uid" type="text" name="" placeholder="ID">
+												</label>
+												<label for="upw">
+													<span>비밀번호</span>
+													<input id="upw" type="password" placeholder="password" name="">
+													<input type="checkbox" name="" id="showText">
+												</label>
+												<label for="showText" class="a11yT">비밀번호 보이기</label>
+												<label for="loginSave">
+													<input name="checkD" type="checkbox" id="loginSave">
+												로그인 유지</label>
+												<input type="submit" class="loginGo" name="" value="로그인">
+											</div>
+										</form>
+										<a href="" class="searchIDPW">아이디 / 비밀번호 찾기</a>
+									</div>
+									<div class="accountLogin">
+										<ul>
+											<li>
+												<a aria-label="구글 계정으로 로그인" href="" class="loginGoogle">
+													<span class="accounticon"></span>Google</a>
+											</li>
+											<li>
+												<a aria-label="카카오 계정으로 로그인" href="" class="loginKakao">
+												<span class="accounticon"></span>Kakao</a>
+											</li>
+											<li>
+												<a aria-label="네이버 계정으로 로그인" href="" class="loginNaver">
+												<span class="accounticon"></span>NAVER</a>
+											</li>
+											<li>
+												<a aria-label="애플 아이디로 로그인" href="" class="loginApple">
+												<span class="accounticon"></span>Apple</a>
+											</li>
+											<li>
+												<a href="" class="loginPhone">
+												<span class="accounticon"></span>휴대폰번호로 로그인</a>
+											</li>
+											<li>
+												<a href="" class="join">회원가입</a>
+											</li>
+										</ul>
+									</div>
+									<label aria-label="레이어 닫기" for="login" class="layerClose" tabindex="0" role="button"></label>
+								</dialog>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+
+		<main class="">
+			<h2 class="a11yT" id="start">본문</h2>
+			<section class="mainV">
+				<div class="w980">
+					<h1>
+						<p>Dream Sheet</p>
+						<div>[CCM, K-Pop, Animation, Classic, GHIBLI Music]</div>
+					</h1>
+				</div>
+			</section>
+			<div class="container">
+				<div class="w980">
+					<section class="noticeEvent tableD1">
+						<h2>공지사항</h2>
+						<table>
+							<caption class="a11yT">공지사항 · 이벤트</caption>
+							<thead class="a11yT">
+								<tr>
+									<th scope="col">글 제목</th>
+									<th scope="col">업로드 날짜</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<a href="">
+											<span class="event"></span>
+											가정의 달 세일 이벤트
+											<span class="new" aria-label="새로운 글">N</span>
+										</a>
+									</td>
+									<td>2022.05.02</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="">
+											<span class="notice"></span>
+											드림시트 정기점검 안내
+											<span class="new" aria-label="새로운 글">N</span>
+										</a>
+									</td>
+									<td>2022.05.01</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="">
+											<span class="notice"></span>
+											악보 업데이트 공지
+											<span class="new" aria-label="새로운 글">N</span>
+										</a>
+									</td>
+									<td>2022.04.29</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="">
+											<span class="event"></span>
+											봄맞이 악보 세일 이벤트
+										</a>
+									</td>
+									<td>2022.04.01</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="">
+											<span class="notice"></span>
+											악보 저작자를 위한 금액 인상 안내
+										</a>
+									</td>
+									<td>2022.03.24</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="">
+											<span class="notice"></span>
+											드림 시트 정기점검 안내
+										</a>
+									</td>
+									<td>2022.03.03</td>
+								</tr>
+							</tbody>
+						</table>
+						<a href="" class="more" aria-label="공지사항 더보기"></a>
+					</section>
+					<section class="FAQ">
+						<h2>자주 묻는 질문</h2>
+						<ol>
+							<li>
+								<a href="">악보 교환 및 환불 규정은 어떻게 되어 있나요?</a>
+							</li>
+							<li>
+								<a href="">악보는 구매 후 언제까지 인쇄할 수 있나요?</a>
+							</li>
+							<li>
+								<a href="">악보가 제대로 인쇄되지 않습니다</a>
+							</li>
+							<li>
+								<a href="">악보 구입 후 영수증은 어디서 받나요?</a>
+							</li>
+							<li>
+								<a href="">악보의 라이선스는 어떻게 되나요?</a>
+							</li>
+						</ol>
+						<a href="" class="more" aria-label="자주 묻는 질문 더보기"></a>
+					</section>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<h2 class="a11yT">푸터</h2>
+			<div class="w980">
+				<ul>
+					<li>
+						<a href="DreamSheet-Home.html" aria-current="true">Home</a>
+					</li>
+					<li>
+						<a href="">개인정보처리방침</a>
+					</li>
+					<li>
+						<a href="">전자금융거래약관</a>
+					</li>
+					<li>
+						<a href="">이용안내</a>
+					</li>
+					<li>
+						<a href="">이용약관</a>
+					</li>
+					<li>
+						<a href="">고객센터</a>
+					</li>
+				</ul>
+				<p>Copyright 2022 © 김범철</p>
+			</div>
+		</footer>
+		<a href="#jump" id="topLink">
+			<span class="a11yT">페이지 가장 처음으로</span>
+		</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+@charset "UTF-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+:lang(ja) {word-wrap:break-word; word-break:break-all;}
+::selection {background:#50f; color:white;}
+body {width:40%;
+	height:100%; 
+	margin:0px auto;
+	position:relative;
+	background: linear-gradient(-70deg, #8dc900 1%,#e3f5ab 32%,#d0f4ab 42%,#5f8c00 79%,#7abc00 100%);}
+img {width:100%;}
+body * {justify-content:center; margin:0px auto;}
+main,header {
+	background: linear-gradient(70deg, #8dc90033 1%,#e3f5ab33 32%,#d0f4ab33 42%,#5f8c0033 79%,#7abc0033 100%);}
+
+header,footer {
+	z-index:100;
+	position:sticky;
+	margin:0px auto;}
+header {top:0px;}
+footer {bottom:0px;
+		position:relative;
+		background-color:white;
+		padding:0.3em;}
+#msg {
+	text-align:left;
+	font-size:1.5em;
+	font-weight:900;}
+#send {
+	position:absolute;
+	right:0px;
+	top:0px;
+	height:100%;
+	display:block;
+	width:3em;
+	background-color:#FD0;}
+
+h2,h1 {padding:0.5em;
+	box-sizing:border-box;}
+
+h1 {z-index:2; 
+	position:relative;
+	width:100%; 
+	font-weight:900;
+	font-size:2em;
+	box-shadow: 0px 0.5em 0.5em -0.3em rgba(0, 0, 0, 5);
+	background: linear-gradient(130deg, #8dc900f0 1%,#5f8c00f0 79%,#7abc00f0 100%);
+	backdrop-filter: blur(1em);}
+
+
+h2 {
+	position:relative;
+	margin:0px auto;
+	width:98%; 
+	font-weight:800;
+	font-size:1.7em;
+	z-index:3;
+	background-color:white;}
+main {position:relative;
+	justify-content:center;
+	height:100%;
+	display:flex;
+	box-sizing:border-box;
+	padding:2%;
+	margin:0px auto;}
+ul,ol,dl {
+	margin:auto auto;
+	list-style:none;
+	margin:0px auto;
+	justify-content:center;
+	padding:0px;
+	width:100%;
+	display:block;}
+.QNAL {clear:both;}
+.Q dd,.QNAL>dd{
+	border-radius:7px;
+	padding:0.2em 0.4em;
+	margin:auto 0px;}
+.Q {
+	float:left; 
+	margin-top:0.5em;
+	width:70%;}
+.Q dd {	
+	position:relative;
+	top:-0.7em;
+	left:2em;
+	min-width:40%;
+	max-width:70%;
+	font-size:1.5em;
+	font-weight:700;
+	background-color:white;
+	border-bottom-left-radius:0px;
+	box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, .3);}
+.Q span {
+	font-weight:900;
+	font-size:1.1em;}
+.ring {
+	background-position:center center;
+	background-size:100%;
+	background-image:url("ffwpulogo.jpg");
+	margin:0px;
+	display:inline-block;
+	box-sizing:border-box;
+	position:relative;
+	left:0px;
+	bottom:0px;
+	background-color:white;
+	width:2.5em; 
+	height:2.5em;
+	border-radius:40%;
+	vertical-align:top;
+	text-align:center;}
+
+.QNAL>dd {
+	width:60%;
+	font-size:1.5em;
+	float:right;
+	font-weight:600;
+	background-color:#FD0;
+	border-bottom-right-radius:0px;
+	box-shadow: -3px 3px 5px 1px rgba(0, 0, 0, .3);}
+a {text-decoration:none;}
+
+footer {
+	position:sticky;
+	bottom:0px;}
+
+@media screen and (max-width:1000px) {
+	body {width:100%;}
+}
+@media screen and (min-width:1000px) {
+	.Q dd {width:30%; padding:0.7em;}
+	.QNAL>dd {width:50%; padding:0.7em;}
+}
+@media (prefers-color-scheme: dark) {
+	.Q dd {
+		color:#FD0;
+		background-color:#320;}
+	.QNAL>dd {
+		color:white;
+		background-color:black;}
+	.Q span {color:white;}
+	h1{background: linear-gradient(135deg, rgba(150,120,255,0.1) 0%,rgba(30,0,100,0.9) 69%,rgba(30,0,100,0.9) 69%,rgba(50,0,150,0.9) 100%); 
+		color:white;}
+	body {background: linear-gradient(135deg, rgba(150,120,255,1) 0%,rgba(30,0,100,1) 69%,rgba(30,0,100,1) 69%,rgba(50,0,150,1) 100%); }
+	main,header {background: linear-gradient(-70deg, rgba(150,120,255,0.3) 0%,rgba(30,0,100,0.3) 69%,rgba(30,0,100,0.3) 69%,rgba(50,0,150,0.3) 100%);}
+}

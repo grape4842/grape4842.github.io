@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+ <head>
+ <meta charset="UTF-8">
+  <title> Pre Strikers회원가입페이지 </title>
+  <meta name="Author" content="Miiyazawa0324">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+	  var today=new Date();
+	var year=today.getYear();
+	var month=today.getMonth();
+	var date=today.getDate();
+	var day=today.getDay();
+
+	switch(day) {
+	case 0:day="일"
+	
+
+	case 1:day="월"
+	
+	
+	case 2:day="화"
+	
+	
+	case 3:day="수"
+	
+	
+	case 4:day="목"
+	
+	
+	case 5:day="금"
+	
+	
+	case 6:day="토"
+	}
+	alert("오늘은"+(year+1900)+"년 "+(1+month+"월 ")+date+"일 "+day+"요일"+"입니다.");
+	
+	var timeh= new Date();
+	var hours=timeh.getHours();
+	switch (hours)
+	{
+		case 7:alert ("아침시간입니다."); break;
+		case 8:alert ("아침시간입니다."); break;
+		case 9:alert ("오전수업시간입니다."); break;
+		case 10:alert ("오전수업시간입니다."); break;
+		case 11:alert ("오전수업시간입니다."); break;
+		case 12:alert ("점심시간입니다."); break;
+		case 13:alert ("오후수업시간입니다."); break;
+		case 14:alert ("오후수업시간입니다."); break;
+		case 15:alert ("오후수업시간입니다."); break;
+		case 16:alert ("오후수업시간입니다."); break;
+		default: alert ("자유시간입니다."); break;
+	}
+  </script>
+  
+  <style type="text/css">
+	* {font-family:Arial Unicode MS;}
+	body {background-color:#b0bfff;}
+	legend,h1 {font-size:50pt; font-familiy:헤드라인; margin:auto;}
+	span {font-size:0px;}
+	th,td {border:2px solid darkblue;  padding:5px;}
+	table {border-collapse:collapse; border:solid darkblue 3px; margin:auto;}
+	td {background-color:white;padding:0px 10px;}
+	th {background-color:#bbddff; font-size:22pt; text-align:left; padding-left:20px;}
+	#IDcheck,#homelist {background-color:#1177cc; width:150px; height:30px; border:0px; color:white; font-weight:bold; font-size:15pt; margin-left:5px;}
+	#ID {width:250px; border:solid black 1px; height:30px; font-size:13pt; text-align:center;}
+	#PW {width:300px; border:solid black 1px; height:30px; font-size:13pt; text-align:center;}
+	#PWcheck {width:300px; border:solid black 1px; height:30px; font-size:13pt; text-align:center;}
+	#MAN,#WOMAN,#foreigner,#korean,.authe {width:18px; height:18px;  margin-right:3px;}
+	#realnameF,#realnameS {width:100px; height:30px; border:solid black 1px; font-size:20pt;}
+	#year,#month,#day,#SPC {width:100px; height:30px; border:solid black 1px;}
+	#ID,#PW,#PWcheck,.birth,.yname,.num,#SPC,.email,.home {background-color:#ffffdd;}
+	input {margin:auto 2px;}
+	.star {color:red; font-weight:bolder; font-size:30pt; position:relative; top:10px;}
+	.num{width:70px; border:black solid 1px; height:30px; font-size:20pt; text-align:center;}
+	.m {font-size:22pt; text-align:center;}
+	.email {width:150px; height:30px; border:1px solid black; font-size:18pt;}
+	.home {width:200px; height:30px; border:1px solid black; font-size:15pt; margin:10px 0px;}
+	#detailhome {margin-left:-4px; width:400px;}
+	#career,#img {height:30px; font-size:12pt; margin:2px; background-color:blue;}
+  </style>
+ </head>
+
+ <body>
+	<form>
+	<fieldset>
+		<legend><h1>회원가입 밎 이력서 양식</h1></legend>
+		<table>
+		<caption><h2>필수 입력사항</h2></caption>
+			<tr>
+				<th><span class="star">&#42</span><label for="ID">아이디&#58<span>&#40영문,숫자조합 6자이상16자이하&#41</span></label></th>
+				<td><input type="text" id="ID" maxlength="16" placeholder="&#40영문,숫자조합 6~16자&#41"  required="required"><input type="submit" value="ID 중복확인 > " id="IDcheck" ></td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span><label for="PW">비밀번호&#58<span>&#40영문대소문자,숫자,특수문자조합 12~20자&#41</span></label></th>
+				<td><input type="password" id="PW" maxlength="20" placeholder="&#40영문대소문자,숫자,특수문자조합 12~20자&#41"  required="required"></td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span><label for="PWcheck">비밀번호 확인&#58</label></th>
+				<td><input type="password" id="PWcheck" maxlength="20" placeholder="&#40영문대소문자,숫자조합 8~20자&#41"  required="required"></td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span>성별&#58</th>
+				<td><input type="radio" name="gender" id="MAN">
+				<label for="MAN"><span>성별</span>남성</label>
+				<input type="radio" name="gender" id="WOMAN">
+				<label for="WOMAN"><span>성별</span>여성</label></td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span>국 적&#58</th>
+				<td>
+					<input type="radio" id="korean" name="nationality">
+					<label for="korean"><span>국적</span>내국인<span>&#40한국인&#41</span></label>
+					<input type="radio" id="foreigner" name="nationality">
+					<label for="foreigner"><span>국적</span>외국인</label>
+					
+				</td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span>성 명&#58</th>
+				<td>
+					<label for="realnameF">성 &#58</label>
+					<input type="text" id="realnameF"  required="required" class="yname">
+					<label for="realnameS">명 &#58</label>
+					<input type="text" id="realnameS"  required="required" class="yname">
+
+				</td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span>생년월일&#58</th>
+				<td>
+					<select name="year" id="year"  required="required" class="birth">
+						<option value="yearselect">년도선택</option>
+						<option value="2020">2020년</option>
+						<option value="2019">2019년</option>
+						<option value="2018">2018년</option>
+						<option value="2017">2017년</option>
+						<option value="2016">2016년</option>
+						<option value="2015">2015년</option>
+						<option value="2014">2014년</option>
+						<option value="2013">2013년</option>
+						<option value="2012">2012년</option>
+						<option value="2011">2011년</option>
+						<option value="2010">2010년</option>
+						<option value="2009">2009년</option>
+						<option value="2008">2008년</option>
+						<option value="2007">2007년</option>
+						<option value="2006">2006년</option>
+						<option value="2005">2005년</option>
+						<option value="2004">2004년</option>
+						<option value="2003">2003년</option>
+						<option value="2002">2002년</option>
+						<option value="2001">2001년</option>
+						<option value="2000">2000년</option>
+						<option value="1999">1999년</option>
+						<option value="1998">1998년</option>
+						<option value="1997">1997년</option>
+						<option value="1996">1996년</option>
+						<option value="1995">1995년</option>
+						<option value="1994">1994년</option>
+						<option value="1993">1993년</option>
+						<option value="1992">1992년</option>
+						<option value="1991">1991년</option>
+						<option value="1990">1990년</option>
+						<option value="1989">1989년</option>
+						<option value="1988">1988년</option>
+						<option value="1987">1987년</option>
+						<option value="1986">1986년</option>
+						<option value="1985">1985년</option>
+						<option value="1984">1984년</option>
+						<option value="1983">1983년</option>
+						<option value="1982">1982년</option>
+						<option value="1981">1981년</option>
+						<option value="1980">1980년</option>
+						<option value="1979">1979년</option>
+						<option value="1978">1978년</option>
+						<option value="1977">1977년</option>
+						<option value="1976">1976년</option>
+						<option value="1975">1975년</option>
+						<option value="1974">1974년</option>
+						<option value="1973">1973년</option>
+						<option value="1972">1972년</option>
+						<option value="1971">1971년</option>
+						<option value="1970">1970년</option>
+						<option value="1969">1969년</option>
+						<option value="1968">1968년</option>
+						<option value="1967">1967년</option>
+						<option value="1966">1966년</option>
+						<option value="1965">1965년</option>
+						<option value="1964">1964년</option>
+						<option value="1963">1963년</option>
+						<option value="1962">1962년</option>
+						<option value="1961">1961년</option>
+						<option value="1960">1960년</option>
+						<option value="1959">1959년</option>
+						<option value="1958">1958년</option>
+						<option value="1957">1957년</option>
+						<option value="1956">1956년</option>
+						<option value="1955">1955년</option>
+						<option value="1954">1954년</option>
+						<option value="1953">1953년</option>
+						<option value="1952">1952년</option>
+						<option value="1951">1951년</option>
+						<option value="1950">1950년</option>
+					</select>
+					<label for="year"><span>생년월일</span></label>
+
+					<select name="month" id="month"  required="required" class="birth">
+						<option value="monthselect">월 선택</option>
+						<option value="january">01월</option>
+						<option value="fabruary">02월</option>
+						<option value="march">03월</option>
+						<option value="april">04월</option>
+						<option value="may">05월</option>
+						<option value="june">06월</option>
+						<option value="july">07월</option>
+						<option value="august">08월</option>
+						<option value="september">09월</option>
+						<option value="october">10월</option>
+						<option value="november">11월</option>
+						<option value="december">12월</option>
+					</select>
+					<label for="month"><span>생년월일</span></label>
+					
+					<select name="day" id="day"  required="required" class="birth">
+						<option value="dayselect">일 선택</option>
+						<option value="01">01일</option>
+						<option value="02">02일</option>
+						<option value="03">03일</option>
+						<option value="04">04일</option>
+						<option value="05">05일</option>
+						<option value="06">06일</option>
+						<option value="07">07일</option>
+						<option value="08">08일</option>
+						<option value="09">09일</option>
+						<option value="10">10일</option>
+						<option value="11">11일</option>
+						<option value="12">12일</option>
+						<option value="13">13일</option>
+						<option value="14">14일</option>
+						<option value="15">15일</option>
+						<option value="16">16일</option>
+						<option value="17">17일</option>
+						<option value="18">18일</option>
+						<option value="19">19일</option>
+						<option value="20">20일</option>
+						<option value="21">21일</option>
+						<option value="22">22일</option>
+						<option value="23">23일</option>
+						<option value="24">24일</option>
+						<option value="25">25일</option>
+						<option value="26">26일</option>
+						<option value="27">27일</option>
+						<option value="28">28일</option>
+						<option value="29">29일</option>
+						<option value="30">30일</option>
+						<option value="31">31일</option>
+					</select>
+					<label for="month"><span>생년월일</span></label>
+				</td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span><label for="SPC">통신사 선택:</label></th>
+				<td>
+						<select id="SPC">
+							<option value="kt">KT</option>
+							<option value="uplus">LG U+</option>
+							<option value="skt">SKT</option>
+							<option value="hellomobile">Hello Mobile</option>
+							<option value="7mobile">7Mobile</option>
+							<option value="ktmmobile">KT M mobile</option>
+							<option value="softbank">SoftBank</option>
+							<option value="au">AU</option>
+							<option value="nttdocomo">NTTdocomo</option>
+							<option value="atandt">AT&amp;T</option>
+							<option value="tmobile">T-Mobile</option>
+							<option value="sprint">Sprint</option>
+							<option value="cricket">Cricket</option>
+							<option value="verizon">verizon</option>
+							<option value="chinamobile">China Mobile</option>
+							<option value="chinatelecom">China telecom</option>
+							<option value="chinaunicom">China unicom</option>
+						</select>
+				</td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span>휴대폰 번호&#58</th>
+				<td>
+					<select name="numF" id="numF" class="num">
+						<option value="numFselect">선택하세요</option>
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+					</select>
+					<label for="numF"><span>휴대폰번호앞자리</span></label><span class="m">&#150</span>
+					<input id="numS" type="tell" class="num"><label for="numS"><span>휴대폰번호중간자리</span></label><span class="m">&#150</span>
+					
+					<input type="tell" id="numT" class="num"><label for="numT"><span>휴대폰번호뒷자리</span></label>
+				</td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span><label for="emailid">이메일 주소입력&#58</label></th>
+				<td>
+					<input type="text" id="emailid" class="email">&#64
+					
+					<select name="emaildomain" id="emaildomain" class="email">
+						<option value="domainselect">선택하세요</option>
+						<option value="naver">naver.com</option>
+						<option value="daumhanmail">hanmail.net</option>
+						<option value="hotmail">hotmail.net</option>
+						<option value="yahoo">yahoo.com</option>
+						<option value="google">gmail.com</option>
+						<option value="yahoojp">yahoo.co.jp</option>
+						<option value="icloud">icloud.com</option>
+						<option value="nate">nate.com</option>
+						<option value="daum">daum.net</option>
+						<option value="kead">kead.or.kr</option>
+						<option value="writedomain">직접입력</option>
+						<label for="emailid"><span>도메인 입력&#58</span></label>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th><span class="star">&#42</span><label for="home">주 소&#58</label></th>
+				<td><input type="text"  required="required"  id="home" class="home"><input type="submit" value="우편번호찾기" id="homelist">
+					<br><label for="detailhome"><span>기타 상세주소를 입력하세요.</span></label>
+					<input type="text" id="detailhome" placeholder="기타 상세주소를 입력하세요." class="home">
+				</td>
+			</tr>
+			<tr>
+			<th><span class="star">&#42</span><label for="">인증방법선택&#58</label></th>
+			<td>
+			<input type="radio" name="authe" value="휴대폰번호 인증" id="Pauthe" class="authe">
+			<label for="Pauthe">휴대폰번호로 인증</label>
+			<input type="radio" name="authe" value="이메일 인증" id="Eauthe" class="authe">
+			<label for="Eauthe">이메일로 인증</label></td>
+			</tr>
+		</table>
+		</fieldset>
+		<br>
+		<fieldset>
+		<legend>선택입력사항</legend>
+		<table>
+			<caption><h2>추가 입력사항</h2></caption>
+			<tr>
+				<th><label for="img">사진:</label></th>
+				<td><input type="file" id="img"></td>
+			</tr>
+			<tr>
+				<th>경력:</th>
+				<td>
+				<input type="file" id="career"><label for="career"><span>경력사항을 기입하신파일을 첨부하여 주십시오.</span>hwp docx xlsx형식으로 첨부</label>
+				</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td></td>
+			</tr>
+		</table>
+		<input type="submit" value="확인" id="OK" class="lastcheck">
+
+	</form>
+ </body>
+</html>

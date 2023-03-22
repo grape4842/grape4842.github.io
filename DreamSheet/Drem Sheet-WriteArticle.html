@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>글쓰기 - Dream Sheet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta charset="utf-8">
+	<meta property="og:site_name" content="Dream Sheet">
+	<meta name="author" content="2022">
+	<meta name="keywords" content="김범철,피아노,악보,Piano,Sheet,Music">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="img/DreamSheet.png">
+	<meta name="theme-color" content="#33333f">
+	<meta name="msapplication-TileImage" content="img/DreamSheet.png">
+	<link rel="shortcut icon" href="img/PianoF.png">
+	<link rel="icon" href="img/PianoF.png">
+	<link rel="stylesheet" type="text/css" href="css/DreamSheet.css">
+	<link rel="stylesheet" type="text/css" href="css/DreamSheetDark.css">
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="apple-touch-icon" href="img/DreamSheet.png">
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- 본문 바로가기 -->
+		<a href="#start" id="jump">본문바로가기</a>
+		 <!-- 상단바 -->
+		 <header>
+		 	<div class="w980">
+		 		<!-- 인클루드로 헤더 붙여넣기 -->
+		 	</div>
+		 </header>
+		<main>
+			<h2 class="a11yT" id="start">본문</h2>
+			<div class="container">
+				<div class="w980">
+					<section class="">
+						<form method="post" action="writeAction.jsp" enctype="multipart/form-data">
+						<table class="writeTable">
+							<caption class="a11yT">글 쓰기 영역</caption>
+							<tbody>
+								<tr>
+									<th scope="row">
+										<label for="articleT">제목</label>
+										</th>						
+									<td>
+										<input id="articleT" type="text" class="form-control" placeholder="제목을 입력하세요" name="boardTitle" maxlength="50">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="articleC">내용</label>
+									</th>
+									<td>
+										<textarea id="articleC" class="form-control" placeholder="최대 3000자" name="boardContent" maxlength="3000"></textarea>
+									</td>						
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="articleF">첨부파일</label>
+									</th>
+									<td>
+										<input id="articleF" type="file" name="filename">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+							<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
+						</form>						
+					</section>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="w980">
+				<!-- 인클루드로 푸터 붙여넣기 -->
+			</div>
+		</footer>
+	</div>
+<!-- 	<%
+		}
+		else{
+	%>
+		<script>
+			alert("잘못된 접근경로입니다.");
+			history.back();
+		</script>
+	
+	<%
+		}
+	%>
+ -->
+</body>
+</html>

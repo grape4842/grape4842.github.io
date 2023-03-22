@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>접근성 잡동사니 메모</title>
+	<link rel="stylesheet" type="text/css" href="TEST.css">
+</head>
+
+<body>
+<header>
+	<h1>스크린리더 테스트나 메모를 위한 잡다한 것을 일시적으로 기록 한 페이지입니다.
+		<div class="h1">
+			<span class="earth"></span>
+		</div>
+	</h1>
+	<nav>
+		<input type="search" title="검색어 입력" aria-label="검색어 입력" name="">
+	</nav>
+</header>
+<main>
+	<dialog open>
+		<h1>레이어 테스트</h1>
+		<p>스크립트는 구현하지 못했습니다.</p>
+		<button type="button">닫기</button>
+		<div>
+			
+		</div>
+	</dialog>
+	<div aria-hidden="true">
+		<input type="checkbox" name="" id="aria-hiddentest">
+		<label for="aria-hiddentest">aria-hidden="true"를 준 박스 내의 체크박스</label>
+		<button type="button">Test</button>
+	</div>
+	<div>
+		<input aria-controls="alert-text" type="checkbox" id="alert-checkbox-test" name="">
+		<label for="alert-checkbox-test">체크하면 aria-alert가 나타나는지 테스트합니다</label>
+		<div id="alert-text" aria-live="polite" role="region">
+			<span role="alert" class="aria-alert">체크되었습니다</span>
+		</div>
+	</div>
+	<a href="" tabindex="-1" aria-hidden="true">aria-hidden="true"를 적용한 링크가 스크린리더로 접근 가능한지 테스트합니다</a>
+	<button type="button" title="title로 버튼 보조정보 제공하기">테스트</button>
+	<button type="button" disabled="">비활성화된 버튼 테스트</button>
+	<details>
+		<summary>메뉴를 펼칠 수 있는 details요소를 테스트 해 봅니다.</summary>
+		<div class="dt-content">
+			<div class="dt-in">
+				<p>details를 펼쳤을 경우 보이는 문장입니다.</p>
+				<ul>
+					<li>details를 펼쳤을 때 보이는지 시험하는 목록항목입니다</li>
+				</ul>
+			</div>
+		</div>
+	</details>
+	<h2 style="box-sizing:border-box; display:flex; flex-direction:column; justify-content:center;">
+		<a href="">제목 내에 링크를 넣어본 예시
+			<p>문장입니다</p>
+		</a>
+		
+	</h2>
+	<a href="" style="display:flex; box-sizing:border-box; flex-direction:column; justify-content:center;">
+		<h2>링크 내에 제목을 넣어본 예시</h2>
+		<p>문장입니다</p>
+	</a>
+	<figure>
+		<img src="https://kmug.co.kr/data/file/demand/data_demand_1017766_10152330284200750_5483578990376025968_n.jpg" alt="">
+		<figcaption title="이미지 설명" contenteditable="true">천일국 마크</figcaption>
+		<img src="https://kmug.co.kr/data/file/demand/data_demand_1017766_10152330284200750_5483578990376025968_n.jpg" alt="">
+		<figcaption title="이미지 설명" contenteditable="false">천일국 마크</figcaption>
+		<img src="https://kmug.co.kr/data/file/demand/data_demand_1017766_10152330284200750_5483578990376025968_n.jpg" alt="">
+		<figcaption>천일국 마크</figcaption>
+	</figure>
+	<ul style="display:inline-flex;">
+		<li>
+			<a href="" aria-current="page">1</a>
+		</li>
+		<li>
+			<a href="">2</a>
+		</li>
+		<li>
+			<a title="비활성화됨">3</a>
+		</li>
+	</ul>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="18" height="48" viewBox="0 0 16 44" tabindex="-1" aria-hidden="true">
+					<path d="M8.02 16.23c-.73 0-1.86-.83-3.05-.8-1.57.02-3.01.91-3.82 2.32-1.63 2.83-.42 7.01 1.17 9.31.78 1.12 1.7 2.38 2.92 2.34 1.17-.05 1.61-.76 3.03-.76 1.41 0 1.81.76 3.05.73 1.26-.02 2.06-1.14 2.83-2.27.89-1.3 1.26-2.56 1.28-2.63-.03-.01-2.45-.94-2.48-3.74-.02-2.34 1.91-3.46 2-3.51-1.1-1.61-2.79-1.79-3.38-1.83-1.54-.12-2.83.84-3.55.84zm2.6-2.36c.65-.78 1.08-1.87.96-2.95-.93.04-2.05.62-2.72 1.4-.6.69-1.12 1.8-.98 2.86 1.03.08 2.09-.53 2.74-1.31" fill="#fff"/>
+				</svg>
+	<button type="button" aria-pressed="true">aria-pressed test</button>
+	<a href="" aria-expanded="false">aria-expanded="false"</a>
+	<seciton>
+			<h2>숨김텍스트 실험</h2>
+			<p class="a11y-txt">다양한 방법으로 CSS를 활용하여 숨김텍스트를 제공해보고 스크린리더에서 인지가 가능한지, 초점이 튀지는 않는지 테스트합니다. 이 문장은 올바른 숨김텍스트 제공 예시의 CSS로 숨겨져 있습니다. 올바르게 접근되는지 확인해보세요.</p>
+			<p>뇌는 괜히 농땡이 피우지 말고 거 제대로 좀 일합시다</p>
+			<ul>
+				<li class="CJ_dou">CJ 도너스캠프 모바일 웹 숨기는 방법 검증</li>
+				<li style="position:absolute; text-indent:-99999px;">1번 예시 : position absolute와 text-indent로 날리는 방법</li>
+				<li class="blind">2번 예시 : overflow:hidden; display:inline-block; position:relative; font-size:1px; z-index:-1; top:-1px; left:-1px; width:1px; height:1px; blind class 적용</li>
+				<li style="font-size:0;">3번 예시 : 글자 크기를 0으로 설정할 경우 iOS에서는 탐지할 수 없습니다.</li>
+				<li style="opacity:0;">4번 예시 : opacity로 완전히 투명하게 만든 텍스트입니다</li>
+				<li style="width:0px; height:0px; overflow:hidden;">5번 예시 : 크기값을 0으로 주면 읽을 수 있을까요</li>
+				<li style="width:1px; height:1px; overflow:hidden;">6번 예시 : 크기값을 1만 주면 점은 보일 것입니다</li>
+				<li style="position:absolute; top:-9999px; left:-9999px;">7번 예시 : position으로 날려버린 예시</li>
+				<li style="z-index:-1;">8번 예시 : z-index 음수를 선언하였지만 덮을 항목이 없어 뒤로 가 있지만 가려지지는 않았습니다. 이 위에 박스를 놓으면 가려지겠죠?</li>
+				<li style="color:transparent;">9번 예시 : 글자색을 투명하게 만들어보았습니다.</li>
+			</ul>
+	</section>
+	<section role="region" aria-label="label과 입력서식을 스크린리더로 테스트해봅시다">
+		<h2>label과 입력서식</h2>
+		<form>
+			<div>
+				<h3>label을 복수 주지 못하는 선다형일때 aria-describedby를 사용해봅시다.</h3>
+				<p id="galaxy">SAMSUNG</p>
+				<ul>
+					<li><input aria-describedby="galaxy" type="radio" id="tester1" name="tester">
+						<label for="tester1">S21</label></li>
+					<li><input aria-describedby="galaxy" type="radio" id="tester2" name="tester">
+						<label for="tester2">S21+</label></li>
+					<li><input aria-describedby="galaxy" type="radio" id="tester3" name="tester">
+						<label for="tester3">S21 Ultra</label></li>
+				</ul>
+			</div>
+		</form>
+
+
+		<form>
+			<h3><label for="labels">복수의 label에 동일한 for값을 부여한 경우를 테스트합니다.</label></h3>
+			<input id="labels" type="text">
+			<label for="labels" class="blind">5분이내에 인증번호 6자리를 입력하세요</label>
+			<label for="labels">3:30</label>
+			<span class="success">성공</span>
+		</form>
+
+		<h3 id="ad">aria-describedby test</h3>
+		<span class="blind" id="none1">아무거나 입력해보세요.</span>
+		<form><div>
+			<label for="adlabel">아리아 디스크립션의 라벨입니다</label>
+			<input type="text" id="adlabel" aria-describedby="ad none1" title="디스크립션의 타이틀입니다."/>
+		</div></form>
+
+		<h3 id="alb">aria-labeledby test</h3>
+		<span class="blind" id="none2">이 편집창은 의미가 없습니다.</span>
+		<form><div>
+			<label for="alblabel">labeledby의 라벨입니다.</label>
+			<input id="alblabel" type="text" aria-labeledby="alb none2" title="labeleby의 title입니다."/>
+		</div></form>
+		<div>
+			<p aria-describedby="purple ad">나의 색은 보라색입니다.</p>
+		</div>
+		<div class="input-timer-wrap">
+			<span class="blind" aria-hidden="true" id="limit5m">
+			5분이내에 인증번호를 확인하여 수정창에 입력해 주세요.</span>
+			<span>aria-labeledby 2개 중 1개는 aria-hidden으로 숨겨져 있어 iOS는 읽지 못할 것입니다.</span>
+			<span id="timer" class="timer" role="timer"> 4:43 </span>
+			<form><div>
+				<label for="cer_num" aria-hidden="true" class="hidden">aria-hiddem으로 숨겨져 있어 iOS는 읽을 수 없을 것입니다.</label>
+				<input aria-labeledby="limit5m timer" required="required" id="cer_num" type="tel" placeholder="인증번호를 입력해주세요" maxlength="5" title="인증번호 입력">
+			</div></form>
+		</div>
+	</section>
+
+	<section>
+		<h2>
+			<a href="">헤딩에 감싸진 링크</a>
+		</h2>
+		<a href="">
+			<h2>링크에 감싸진 헤딩</h2>
+		</a>
+		<div class="l">
+			<label for="btn_toggle1">앱 PUSH
+				<span class="sr_only">수신 허용</span>
+			</label>
+		</div>
+		<div class="r">
+			<div class="btn_switch switc_style1">
+				<div class="switch" style="width: 76px;">
+					<input type="checkbox" id="btn_toggle1" checked="">
+					<label for="btn_toggle1">
+						<span class="check_y" aria-hidden="true">수신</span>
+						<span class="check_n" aria-hidden="true">미수신</span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="l">앱 PUSH</div>
+		<div class="r">
+			<div class="btn_switch switc_style1">
+				<div class="switch" style="width: 76px;">
+					<input type="checkbox" id="btn_toggle2" checked="">
+					<label for="btn_toggle2">
+						<span class="check_y">수신</span>
+						<span class="check_n">미수신</span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</section>
+		<label for="testinput1">모델명 
+			<span aria-label="필수">*</span>
+		</label>
+		<input id="testinput1" type="text" name=""/>
+
+		<a href="https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.pro" title="플레이 스토어로 연결됨" aria-label="플레이 스토어에서 MX 플레이어 프로 다운로드">MX Player Pro</a>
+	</div>
+	<section>
+		<ol>
+			<li>ALT</li>
+			<li>Caption</li>
+			<li>COlor</li>
+			<li>Instruction</li>
+			<li>COntrast</li>
+			<li>Auto Start</li>
+		</ol>
+	</section>
+	<section aria-hidden="true">
+		<input type="text" name="" title="그냥 편집창">
+		<h6>헤딩 6</h6>
+		<span>Nintendo</span>
+		<div>
+			<div style="font-size:14pt;">5-1. 일반 텍스트의 경우 보통 크기 (18pt 미만, 또는 굵은 14pt 미만)의 텍스트가 4.5:1을 만족하지 않은 경우</div>
+			<div style="font-size:18pt;">5-2. 일반 텍스트의 경우 텍스트의 크기가 18pt 이상, 또는 굵은 14pt 이상의 텍스트가 3:1을 만족하지 않은 경우</div>
+			<div style="font-size:14pt; font-weight:900;">5-2. 일반 텍스트의 경우 텍스트의 크기가 18pt 이상, 또는 굵은 14pt 이상의 텍스트가 3:1을 만족하지 않은 경우</div>
+		</div>
+	</section>
+	<section>
+		<h2>커스텀?</h2>
+		<a role="combobox" id="controller" href="#contentbox" >옵션?</a>
+		<ul id="contentbox" role="listbox" class="expanded" aria-expanded="false">
+			<li role="option">목록1</li>
+			<li role="option">목록2</li>
+			<li role="option">목록3</li>
+			<li role="option">목록4</li>
+		</ul>
+		<button type="button" aria-pressed="mixed">aria로 눌렸는지를 전달해봅시다.</button>
+		<button type="button" aria-pressed="true">aria-pressed로 눌렸다는 정보를 더해봅시다.</button>
+	</section>
+	<section class="aria-hidden-box" aria-hidden="true">
+		<h3>aria-hidden을 적용한 영역입니다.</h3>
+		<button type="button">테스트</button>
+		<p>aria-hidden은 키보드나 마우스로는 정상적으로 탐지, 동작하나 스크린리더만이 탐색할 수 없도록 막는 속성입니다.</p>
+		<a href="">링크도 접근되지 않는지 테스트</a>
+	</section>
+</main>
+<footer>
+	2021 08 02
+	<address id="purple">@purplemiyazawa</address>
+</footer>
+	<script type="text/javascript">
+		var controller=document.querySelector('#controller');
+		var contentbox=document.querySelector('#contentbox');
+
+		 controller.addEventListener('click',function(){
+		 	if (contentbox.classList.contains('expanded')){
+		 		contentbox.classList.remove('expanded')
+		 		controller.setAttribute('aria-expanded', true)}
+		 	else {contentbox.classList.add('expanded')
+				controller.setAttribute('aria-expanded', false)}});
+	</script>
+</body>
+</html>

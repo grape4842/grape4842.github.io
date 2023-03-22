@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+ <head>
+ <meta charset="UTF-8">
+  <title> New Document </title>
+  <meta name="Author" content="Miiyazawa0324">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  </script>
+  
+  <style type="text/css">
+	* {font-family:Arial Unicode MS; text-align:center;}
+	body {background-color:#a0afff;}
+	a {text-decoration:none;}
+	#samsung {color:darkblue;}
+
+  </style>
+ </head>
+
+ <body>
+<a href="americano.html" target="_blank"> coffee</a>
+ <h1><a href="http://www.samsung.com/sec" id="samsung">SAMSUNG</a> Galaxy Note8 Review byUNDER kg&#40Korean&#41
+ <br>삼성 갤럭시 노트8리뷰&#58고성능&#130고품격&#130고가격</h1>
+  <iframe title="삼성 갤럭시 노트8리뷰&#58고성능&#130고품격&#130고가격" width="560" height="315" src="https://www.youtube.com/embed/E2cMFq_6uW8" frameborder="0" allowfullscreen></iframe>
+  <br><br>
+
+  <h1>Animal Crossing New Leaf amiibo+ Nintendo official introduction video
+  <br>とびだせどうぶつの森amiibo+　任天堂公式紹介動画</h1>
+  <iframe title="とびだせどうぶつの森amiibo+任天堂公式紹介動画" width="560" height="315" src="https://www.youtube.com/embed/57p1M7L3Ou8" frameborder="0" allowfullscreen></iframe>
+  <br><br>
+
+<iframe title="애플 아이폰 X 리뷰: 얼리 액세스 (₩1,420,000) [4K] " width="560" height="315" src="https://www.youtube.com/embed/W9XkJagPeYA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<br><br>
+
+<h1>任天堂公式ホームページ</h1>
+<iframe title="Nintendo Official Home Paga" width="1800" height="800" src="http://www.nintendo.co.jp" frameborder="1" style="background-color:white;"></iframe>
+<br>
+<iframe src="#" frameborder="0" title="Empty Frame"></iframe>
+ </body>
+</html>

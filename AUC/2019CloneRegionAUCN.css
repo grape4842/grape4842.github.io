@@ -1,0 +1,418 @@
+@charset "UTF-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+:lang(ja) {word-wrap:break-word; word-break:break-all;}
+::selection {background:#76f; color:white;}
+
+i {display:block;}
+
+.znone {position:absolute; z-index:-100; left:0px; top:0px;}
+#wrap {z-index:1; position:relative;}
+#langzone {background-color:white;}
+.cicon {width:1rem; height:1rem;}
+div.lanregion {padding:1rem;}
+/*.langregion {clear:both;}
+.langregion li {float:left;}
+*/.langregion a{color:white;}
+button {border:none;}
+table {border-collapse:collapse;}
+img,video 
+{width:100%;}
+.expanded {
+	display:none;}
+.w980 {
+	width:90%;
+	vertical-align:middle; 
+	position:relative;
+	box-sizing:border-box;}
+
+.hidden {
+	z-index:-1; 
+	position:absolute; 
+	top:50%; 
+	overflow:hidden; 
+	width:1px; 
+	height:1px; 
+	color:transparent; 
+	border:0; 
+	box-sizing:content-box;
+	clip: rect(1px, 1px, 1px, 1px); 
+	clip-path: inset(0px 0px 99.9% 99.9%);}
+body {
+	background-color:#121217; 
+	color:white; 
+	margin:0px; 
+	height:100%;}
+
+*,.w980 {margin:auto auto; 
+	text-align:center;
+	-webkit-font-smoothing:antialiased;
+	font-family:"SF Pro KR","SF Pro Display","SF Pro Icons","Apple Gothic","HY Gulim","MalgunGothic","HY Dotum","Lexi Gulim","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+
+/* background-color: #121217; */
+
+header {
+	background:rgba(0,0,0,0.8); 
+	z-index:9999; 
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	top:0em; 
+	left:0em;
+	position:relative; 
+	padding:0em; 
+	height:48px;
+}
+
+	nav *{letter-spacing:-1.5px !important;
+		}
+
+a {vertical-align:middle; 
+	background-position:center; 
+	text-decoration:none; 
+	display:inline-block;}
+
+
+#LOGO {
+	line-height: 3.14286;
+	height:44px; width:16px;
+	display:inline-block; 
+	direction: ltr; 
+	background-position:center center; 
+	background-size:16px 44px; 
+	position:relative;
+	-webkit-tap-highlight-color:transparent;}
+
+#GOSHOP {right:0px; position:absolute;}
+
+a path{
+	opacity:0.8; 
+	transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+-webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);}
+a:hover path,a:focus path {opacity:1;}
+
+
+
+#jump {
+	align-items:center;
+	justify-content:center;
+	height:48px; 
+	position:absolute; 
+	left:0px;
+	top:0px; 
+	z-index:-1; 
+	background-color:transparent;
+	font-weight:900; 
+	color:transparent; 
+	width:100%;
+	display:flex;
+	padding:0px; 
+	margin:0px;}
+
+#jump:focus {
+	z-index:99999; 
+	outline:#03B 3px dashed; 
+	color:black;
+	background:rgba(200,200,200,0.5);
+	backdrop-filter:blur(10px);}
+
+
+#notice {
+	box-sizing:border-box; 
+	color:white; 
+	z-index:9999; 
+	top:0px; 
+	position:sticky;
+	text-align:left; 
+	display:flex; 
+	margin:0px; 
+	font-size:21px; 
+	font-weight:600; 
+	letter-spacing: 0.012em; 
+	backdrop-filter: saturate(180%) blur(20px);
+	background-color:#121217b3;
+	height:63px;
+}
+
+#barline {
+	width:100%;
+	margin:0px;}
+#barline:after {
+	background-color: #ffffff3d;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    width:100%;
+    height: 1px;
+    z-index: 1;}
+
+#notice,#apple{
+	font-weight:900; 
+	vertical-align:middle; 
+	padding:0px; 
+	margin:0px auto;
+	display:flex;
+	justify-content:center;}
+
+#start {
+	text-align:center; 
+	position:relative; 
+	z-index:3;}
+
+#Atitle {
+    font-size: 21px;
+    line-height: 1.14286;
+    font-weight: 600;
+    letter-spacing: .011em;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    cursor: default;
+    display: block;
+    float: left;
+    margin: 14px 0 -14px;
+    padding: 0;
+    height: 52px;
+    white-space: nowrap;
+}
+
+#Stitle {
+	align-items: flex-start;
+	margin:0px; padding:0px;
+	text-align:left;
+	flex-direction: column-reverse;
+	display:flex;
+	opacity:0.92;}
+
+#Ptitle {
+	margin:0px; padding:0px;
+	line-height: 1.41667rem;
+    letter-spacing: 0em;
+	font-size:12px;
+	opacity:0.61;
+	position:relative;
+	top:0px;}
+
+#AT {font-size:1em;
+	position:relative;
+	color:white; 
+	text-align:left;
+}
+#AT:after {clear:both;}
+#gochatbox {position:absolute;
+	width:100%;
+	padding-top:34px;
+	justify-content:center;
+		top:0px;}
+
+#gochat {		
+		margin-top: -1px;
+
+		min-width:23px; 
+		letter-spacing:0em;
+		line-height:1.33337;
+	 	background-color:#0071e3; 
+		color:white; border-radius:12px; 
+		font-size:12px; 
+		font-weight:400; 
+		white-space:nowrap; 
+		display:inline-block;
+		align-items:center;
+		padding-left: 11px;
+	    padding-right: 11px;
+	    padding-top: 4px;
+	    padding-bottom: 4px;		
+    	position:relative;
+		right:0px; 
+		float:right;
+		box-sizing:content-box;
+		}
+
+#gochat:hover{background-color:#147ce5;}
+#gochat:active {background-color:#0068d1;;}
+#gochat:focus {box-shadow: 0 0 0 4px rgba(0,125,250,0.6);
+    outline: none;}
+
+
+.wrap {
+	box-sizing:border-box;}
+.nofoot {background-color:#222;}
+footer {
+	padding-top: 34px;
+	padding-bottom: calc(max(21px, env(safe-area-inset-bottom)));
+	background-color:#222; 
+	width:100%;
+	position:relative;
+	bottom:0px;
+	left:0px;
+	z-index:0;}
+
+#AppleA11Y {
+	position:relative;
+	font-weight:600;
+	margin:2rem auto;
+	color:white;
+}
+#AppleA11Y>div {
+	transform:translate(5%);
+	width:90%;
+	position:absolute;
+	bottom:2rem;
+}
+
+#AppleA11Y h2 {
+	line-height:1.34211;
+	font-size:21px; 
+	font-weight:900;
+	text-align:left;}
+#AppleA11Y p {
+	letter-spacing:0.007em;
+	font-size:32px;
+	margin:0px; 
+	font-weight:600;
+	padding:0px;
+	text-align:left;}
+#a11ymark {
+	display:flex;
+	margin:0px;
+	padding:0px;
+	color:white; 
+	font-size:17px;
+	text-align:left;}
+
+.made {font-size:12px; color:#6e6e73;}
+
+/*큰 기기PC등에서만 보이는 부분*/
+.wbig {display:block;}
+
+/*스마트폰 등에서만 보이는 부분*/
+.wsmall {display:none;}
+
+    /*iPhone SE용 레이아웃*/
+.m320 {display:none;}
+.no320 {display:block;}
+
+
+@media screen and (min-width:1200px) {
+	/*#LOGO {left:0px; position:absolute;}	*/
+	#apple {margin:0px auto;}
+	#LOGO {left:0px; position:absolute;}
+	#AppleA11Y {width:20%;}
+	.w980 {width:980px;}
+	header {height:44px;}
+	footer {padding-top: 34px;}
+
+}
+/*iPadPro*/
+@media screen and (max-width:1100px) {
+	.w980 {width:692px;}
+	#Atitle {
+		height:63px;
+		display: inline-block;
+	    margin: 12px 0 -12px;
+	    margin-top: 12px;
+	    margin-right: 0px;
+	    margin-bottom: -12px;
+	    margin-left: 0px;}
+	#gochatbox {padding-top:32px;}
+}
+/*SmartPhone,iPad*/
+@media screen and (max-width:800px) {
+	.w980{width:87.5%;}
+	#AppleA11Y h2 {font-size:19px;}
+	#AppleA11Y p {font-size:28px;}
+	.made {display:block;}
+	#Atitle {
+		height:63px;
+		display: inline-block;
+	    margin: 12px 0 -12px;
+	    margin-top: 12px;
+	    margin-right: 0px;
+	    margin-bottom: -12px;
+	    margin-left: 0px;}
+	#gochatbox {padding-top:32px;}
+	footer {
+		padding-bottom: calc(max(19px, env(safe-area-inset-bottom)));
+		padding-top: 17px;
+		}
+}
+
+
+
+/*iPhone SE*/
+	/*@media screen and (max-width:320px) {*/
+	/*@media screen and (max-width:420px) and (aspect-ratio:9/16) {*/
+@media (prefers-color-scheme:light) {
+
+	.no320 {display:none;}
+	.m320 {display:inline-block;}
+
+	body,main,.clip,#wrap {background-color:white !important;}
+	h1 span,h2, h4,h4 span {color:#1d1d1f !important;}
+	#gochatbox {
+		padding:0px;
+		height:52px;
+		transform:translateY(25%);}
+	#Ptitle {display:none;}
+	section,li,footer,div,p,h3,#controller {
+	box-sizing:border-box; 
+	background-clip:border-clip; 
+	font-size:17px;
+	letter-spacing: 0.011em; 
+	color: #8c8c8c;}
+
+
+	#notice {
+		background:rgba(255,255,255,0.7);
+		height:52px;}
+	.kr {color:#029d50;}
+	#notice:after {
+		content:"";
+		box-sizing:content-box;
+		display:block;
+		background-color: #00000029;
+		position:absolute;
+		z-index:10;
+		top:100%; 
+		left:0px;
+		margin:0px; 
+		padding:0px;
+		height:1px; 
+		width:100%;
+	}
+
+	footer,.nofoot {background-color:#f2f2f2;}
+	#AppleA11Y p,#AppleA11Y h2 {color:white !important;}
+	.langregion a{color:black;}
+}
+
+
+
+
+/*iPhone SE landscape*/
+@media screen and (min-width:560px) and (max-width:580px) {
+	.no320 {display:none;}
+	.m320 {display:inline-block;}
+	body,main,.clip,#wrap {background-color:white !important;}
+	h1 span,h2, h4,h4 span {color:#1d1d1f !important;}
+	section,li,footer,div,p,h3,#controller {
+	box-sizing:border-box; 
+	background-clip:border-clip; 
+	font-size:17px;
+	letter-spacing: 0.011em; 
+	color: #8c8c8c;}
+
+	.w980{width:85%;
+		font-size:17px;}
+
+	#notice {background:rgba(255,255,255,0.7);}
+	.kr {color:#029d50;}
+	footer {background-color:#f2f2f2;}
+	.langregion a{color:black;}
+}
+
+@media screen and (max-width:300px) {
+	#Stitle,h2 span,h2,h3 span,h3,h4 span,h4,h5{font-size:21px;}
+	li,li li,dt,dd,p,#hello div {font-size:17px !important;}
+	#gochat {z-index:10;}
+	#MinP {display:none;}
+}

@@ -1,0 +1,188 @@
+@charset "UTF-8";
+:lang(ko) {word-break: keep-all; line-break:normal;}
+:lang(ja) {word-wrap:break-word; word-break:break-all;}
+::selection {background:#76f; color:white;}
+img,video {width:100%;}
+body {
+	background:#560 url(../img/grassB.png);
+	background-repeat:repeat;
+	background-size:20%;
+	background-position: center center;
+	margin:0px auto;}
+header {z-index:9999;
+	position:sticky;
+	display:flex;
+	justify-content:center;
+/*	position:sticky;
+	top:0px;
+	left:0px;
+*/	z-index:9999;}
+nav {width:90%;
+	padding:0% 5%;
+}
+h1 {color:white;}
+.NH {width:3rem;}
+main {
+	/*background-color:rgba(255,255,255,0.6);*/
+	/*background-color:#ffe;*/
+
+	background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(233,233,206,1) 100%);
+	border:solid 1px white;
+	border-radius:30px;}
+section {
+	/*background-color:rgba(255,255,255,0.7);*/
+}
+a {text-decoration:none;
+	color:black;
+	font-weight:800;}
+a:focus,a:hover {text-decoration:underline;}
+.store {
+	padding:1%;
+	display:block;
+	width:calc(98%/2);}
+.store svg {width:100%;}
+
+
+table {border-collapse:collapse;
+	table-layout:fixed;
+	margin:5% auto;
+	width:100%;
+	table-layout:fixed;
+}
+caption {
+	padding:5%;
+	font-size:1.5rem;}
+th,td {padding:3%;
+	box-sizing:border-box;
+	border:1px solid black;}
+td {background-color:white;}
+th {background-color:#fe7;}
+th:first-child {width:33%;}
+ul,ol,dl {margin:0px;
+	padding:0px;
+	list-style:none;}
+li,dt,dd {padding:0.3rem 0px;
+	margin:0px;}
+li dl {padding-top:0.5rem;}
+li li,li dt,li dd {padding:0.15rem 0.5rem;}
+.w980 {width:50%; 
+	margin:0px auto;}
+
+.w980 section{
+		padding:1% 3%;
+	box-sizing:border-box;
+}
+
+#storebox {display:flex;}
+.XM {transform:scaleX(-1);}
+nav h1 {display:flex;
+	align-items:center;
+	justify-content:center;}
+#Hospital dt,#Hospital dd {
+	display:inline-flex;
+	padding:0px;}
+
+.metro {
+	margin-right:5px;
+	border-radius:100%; 
+	width:1.5rem; height:1.5rem;
+	display:inline-flex;
+	justify-content:center;
+	align-items:center;
+	text-shadow:1px 1px 1px black;
+	color:white;}
+.red {color:#d30;}
+.line1 {background-color:#00328E;}
+.line2 {background-color:#2FB823;}
+.line3 {background-color:#FF5E2A;}
+.line4 {background-color:#2F74D6;}
+.line5 {background-color:#8B3BB1;}
+.line6 {background-color:#964F10;}
+.line7 {background-color:#5B6D00;}
+.line8 {background-color:#E9206B;}
+.line9 {background-color:#BEA218;}
+.airline {background-color:#578EA8; width:2rem; font-size:0.8rem;}
+footer {
+	box-sizing:border-box;
+	margin-top:5rem;
+	color:white;
+	background-color:black;
+	padding:5% 0px;
+	margin-bottom:0px;
+}
+
+footer img {
+	width:50%; 
+	display:block;
+	margin:0px auto;}
+#rbl {display:flex;
+	justify-content:center;}
+#rabbitbook {width:80%;}
+#controller {
+	transition:0.2s;
+	padding:10px;
+	border:none;
+	font-weight:900;
+	background-color:#baf;
+	margin:10px auto;
+	display:flex;
+	justify-content:center;
+}
+
+#controller[aria-expanded="false"]:after {
+	content:" 보기"
+}
+#controller[aria-expanded="true"]:after {
+	content:" 닫기"
+}
+#controller[aria-expanded="true"] {background-color:#215;}
+
+.expanded {
+	visibility:hidden;
+	filter: blur(10px);
+	height:0px;
+	transform:scaleY(0.1);
+	opacity:0;
+	transition:0.5s;
+}
+
+.magic {
+	display:inline-flex;
+	background-color:#340; 
+	color:white; 
+	padding:0.1rem 0.5rem;
+	font-weight:900;}
+
+@media screen and (min-width:1050px) {
+	.w980 {width:50%;}
+	body {background-size:60%;}
+	th:first-child {width:15%;}
+	footer img {width:30%; }
+}
+
+@media screen and (min-width:760px) and (max-width:1040px){
+	.w980 {width:80%;}
+	body {background-size:40%;}
+	th:first-child {width:20%;}
+
+}
+
+@media screen and (max-width:750px) {
+	body {background-size:60%;}
+	.w980 {width:90%;}
+}
+
+@media screen and (max-width:320px) {
+ th:first-child {width:40%;}
+ .w980 {width:95%;}
+}
+@media (prefers-color-scheme:dark) {
+body,a {color:white;}
+main {border:solid 1px black;
+	background: linear-gradient(135deg, rgba(96,78,53,1) 0%,rgba(51,41,28,1) 100%);}
+td {background-color:#431;}
+th {background-color:#351;}
+.red {color:#f71; display:inline-flex;}
+#controller {background-color:#223; color:white;}
+.magic {color:#340; background-color:#cc7;}
+}

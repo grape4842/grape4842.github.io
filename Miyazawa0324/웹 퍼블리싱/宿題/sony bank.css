@@ -1,0 +1,10 @@
+*{font-weight:100; font-family:Arial Unicode MS;}
+td,th {border:solid 1px black;}
+table{border-collapse:collapse;}
+td{text-align:right; background-color:white: font-stretch:ultra-condensed;}
+caption{text-align:left;}
+#gray {background-color:#e0e0e0;}
+.blue{background-color:#c0e1ef;}
+th {background-color:#ecf3f7;}
+#time {width:20px;}
+a {text-decoration:none; color:#ff8800; font-weight:bolder; font-size:22pt; }
