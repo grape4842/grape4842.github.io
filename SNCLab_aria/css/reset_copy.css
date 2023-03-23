@@ -44,6 +44,7 @@
 *,
 *::before,
 *::after {
+	position: relative;
 	margin: 0; /* マージンは0に */
 	padding: 0; /* パディングも常に0に */
 	box-sizing: border-box; /* もちろん、より直感的なbox-sizingに設定 */
@@ -67,7 +68,7 @@
 	}
 }
  
-:where(body):not(img); {
+:where(body):not(img) {
 	block-size: 100%; /* サファリ以外のブラウザのフォールバック */
 	block-size: 100dvb; /* 1dvbは動的ビューポートの長さの1%、100dvbで高さいっぱいに */
 	line-height: 1.5; /* アクセシブルな行の高さ */
@@ -112,7 +113,7 @@
 }
  
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
-	display: block; /* 置換された要素をより予測可能にする */
+	display: inline-block; /* 置換された要素をより予測可能にする */
 	aspect-ratio:auto;
 	object-fit: contain;
 }

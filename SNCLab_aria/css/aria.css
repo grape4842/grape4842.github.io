@@ -63,9 +63,30 @@ a:where(:hover, :focus) {text-decoration:underline; }
 footer {
 	background: #222;
 	color:#999;}
-.office_adress p {
+address {
 	font-size: 1rem;
-	text-align: center;
+	font-style: normal;
+}
+address p {
+	padding-left:1.2rem;
+
+}
+address img {
+	position: absolute;
+	height:1rem;
+	left:0;
+	top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0.7;
+}
+.footer_in {
+	padding-top:0px;
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+}
+.footer_in h2{display:block;}
+.contact_info {
 }
 .copyright {
 	text-align: center;
@@ -112,18 +133,28 @@ footer {
 	}
 }
 
-
+/*desktop*/
+@media screen and (1200px < width) {
+	.footer_in {flex-direction: row;}
+}
 
 /*Tablet*/
 @media screen and (760px < width < 1200px) {
 	.width_center {width:80vw;}
+	.footer_in {flex-direction:column;}
+	.contact_info {
+		display:flex;
+		margin:5px 0;
+	}
+
 }
 /*Mobile*/
-@media screen and (320px < width < 760px) {
+@media screen and (310px < width < 760px) {
 	.width_center {width:90vw;}
+
 }
 /*iPhoneSE / Watch?*/
-@media screen and (width < 320px) {
+@media screen and (width < 310px) {
 	.width_center {width:95vw;}
 	input[type="text"], textarea {
 		overflow-x:hidden;
