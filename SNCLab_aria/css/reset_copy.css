@@ -67,7 +67,7 @@
 	}
 }
  
-:where(body) {
+:where(body):not(img); {
 	block-size: 100%; /* サファリ以外のブラウザのフォールバック */
 	block-size: 100dvb; /* 1dvbは動的ビューポートの長さの1%、100dvbで高さいっぱいに */
 	line-height: 1.5; /* アクセシブルな行の高さ */
@@ -113,6 +113,8 @@
  
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
 	display: block; /* 置換された要素をより予測可能にする */
+	aspect-ratio:auto;
+	object-fit: contain;
 }
  
 :where(img, picture, svg) {

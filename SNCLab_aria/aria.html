@@ -3,7 +3,7 @@
 <head>
 	<title>WAI-ARIA 테스트를 위한 컴포넌트 목록</title>
 	<meta charset="utf-8">
-	<meta name="author" content="@purplemiyazawa">
+	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 	<meta property="og:image" content="">
 	<meta property="og:title" content="WAI-ARIA를 사용한 각종 예시를 모아둔 목록 메인">
@@ -11,10 +11,17 @@
 	<meta property="og:locate" content="ko-kr">
 	<meta property="og:type" content="website">
 	<meta name="theme-color=" content="#7766dd">
-	<link rel="shortcut icon"  type="" href="../nCOIbLogo.png">
+	<!-- favicon -->
+	<link rel="icon" href="img/favicon/favicon.ico" sizes="any"><!-- 32×32 -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="css/reset_copy.css">
 	<link rel="stylesheet" type="text/css" href="css/aria.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- font -->
 	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic.woff2" as="font">
 	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
 	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
@@ -24,7 +31,7 @@
 <body>
 	<a href="#content" id="skip_nav">본문 바로가기</a>
 	<header>
-		<div>
+		<div class="width_center">
 			<h1>WAI-ARIA 지원 확인</h1>
 		</div>
 	</header>
@@ -35,9 +42,10 @@
 
 	<!-- 네비게이션 / 브레드크럼 끝 -->
 	<!-- 본문 -->
-	<main>
-		<h2 id="content">WAI-ARIA 지원 확인을 위한 컴포넌트 목록</h2>
-		<div>
+	<main class="width_center">
+		<h1 id="content">각 케이스 목록</h1>
+		<div class="read_first">
+			<img src="img/woman_blue.webp" id="woman_blue" alt="">
 			<h2>이 페이지를 탐색하기 전에</h2>
 			<p>잘못 구현된 aria는 aria를 제공하지 못한 것보다 사용자의 사이트 탐색을 어렵게 합니다. WAI_ARIA를 사용하기 전에 먼저 <a title="새 창" target="_blank" href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/">이 내용을 읽고</a> aria를 사용하는 이유를 이해하세요.</p>
 		</div>
@@ -80,20 +88,51 @@
 			</li>
 
 		</ul>
+
+		<a href="https://www.w3.org/WAI/ARIA/apg/patterns/" title="" target="_blank">참고 사이트 - ARIA Authoring Practices Guide (APG) Patterns</a>
 	</main>
+	<aside class="width_center">
+		<h2>관련 웹 사이트</h2>
+		<ul class="sites">
+			<li>
+				<a href="http://snclab.kr/wau/">
+					<img class="lightV" src="img/wau_school.png" alt="">
+					<img class="darkV" src="img/wau_school_dark.png" alt="">
+					<span class="a11y_txt">SNCLab 웹 접근성 스쿨</span>
+				</a>
+			</li>
+			<li>
+				<a href="http://snclab.kr/">
+					<img class="" src="img/logo_black.png" alt="">
+					<span class="a11y_txt">SNCLab 홈페이지</span>
+				</a>
+			</li>
+		</ul>
+	</aside>
 
 	<!-- 본문 끝 -->
 
 	<!-- 푸터 -->
 	<footer>
 		<h2 class="a11y_txt">Footer</h2>
-		<div class="footer_in">
+		<div class="footer_in width_center">
 			<img src="img/logo_footer.png" alt="">
-			<div class="copyright">Copyright © 2023</div>
+			<adress class="office_adress">
+				<p>서울특별시 성동구 아차산로17길 49 성수 생각공장 데시앙플렉스 1609호, 1610호</p>
+				<p>서울특별시 성동구 성수동2가 280-6 성수 생각공장 데시앙플렉스 1609호, 1610호</p>
+			</adress>
+			<address>
+				<p><img alt="" src="../icon/" height="100%">메일 : cs@snclab.kr</p>
+				<p>전화 : +82-2-2201-9928</p>
+				<p>팩스 : +82-2-6280-7842</p>
+			</address>
 		</div>
+		<p class="copyright">Copyright 2023 SNC Lab Corp. All rights reserved.</p>
 		<a href="" id="page_top" aria-label="페이지 최상단으로 이동">
-			<svg class="lightV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(85,68,170,1)"/></svg>
-			<svg class="darkV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(50,0,200,0.7)"/></svg>
+			<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+				<path fill="none" d="M0 0h24v24H0z"/>
+				<path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="#777"/>
+			</svg>
 		</a>
 	</footer>
 </body>

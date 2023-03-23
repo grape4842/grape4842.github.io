@@ -1,16 +1,17 @@
 @charset "utf-8";
 body {
 	font-size: 1.5rem;
-	cursor: url("img/PurpleDarkMouse.cur") -10 -10, auto;
+	cursor: url("img/purple_dark_mouse.cur") -10 -10, auto;
 }
-header > div, main , footer > div {
+.width_center {
 	position:relative;
 	margin:0 auto;
 	width:60vw;
-	padding:3rem 0px;
+	padding:2rem 0px;
 }
 input, progress {accent-color:#64d;}
 #skip_nav {
+	display:block;
 	text-align:center;
 	padding:0.5rem 0;
 	width:60vw;
@@ -33,13 +34,20 @@ input, progress {accent-color:#64d;}
     z-index:-1;
     top:-1px; left:-1px;
     width:1px; height:1px;}
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2rem;}
+h3 {font-size:1.7rem;}
+h4 {font-size: 1.5rem;}
 li {list-style:none;}
 a {
 	text-decoration:none;
 	padding:5px 0px;
 	margin:5px 0px;}
 a:where(:hover, :focus) {text-decoration:underline; }
-
+:where(button, a, label, input, select, summary):where(:hover), :focus {
+	box-shadow:0 0 0px 2px #b0d737;
+	outline: none;
+}
 
 ::-webkit-scrollbar {
     width: 20px;  /* 스크롤바의 너비 */
@@ -52,9 +60,19 @@ a:where(:hover, :focus) {text-decoration:underline; }
 ::-webkit-scrollbar-track {
     background:rgba(0 0 0 / 0.5);  /*스크롤바 뒷 배경 색상*/
 }
-
-.footer_in {display:flex;}
-
+footer {
+	background: #222;
+	color:#999;}
+.office_adress p {
+	font-size: 1rem;
+	text-align: center;
+}
+.copyright {
+	text-align: center;
+	font-size: 1rem;
+	padding:2rem;
+	background: #111;
+}
 
 #page_top {
 	width:2.5rem;
@@ -65,8 +83,8 @@ a:where(:hover, :focus) {text-decoration:underline; }
 	right:5vw;
 	border-radius:100%;
 	z-index:5;
-	background:#ddf;
-	border:2px solid #54a;
+	background:rgba(255 255 255 / 0.7);
+	border:2px solid #777;
 	opacity:0.7;
 }
 #page_top svg {
@@ -84,7 +102,8 @@ a:where(:hover, :focus) {text-decoration:underline; }
 	.lightV {display:none;}
 	.darkV {display:flex;}
 	body {
-		background-color:#222;
+		background-color:#333;
+		cursor: url("img/purple_light_mouse.cur") -10 -10, auto;
 	}
 
 	:where(button, a, label, input, select, summary):where(:hover), :focus {
@@ -97,15 +116,15 @@ a:where(:hover, :focus) {text-decoration:underline; }
 
 /*Tablet*/
 @media screen and (760px < width < 1200px) {
-	header > div, main , footer > div {width:80vw;}
+	.width_center {width:80vw;}
 }
 /*Mobile*/
-@media screen and (480px < width < 760px) {
-	header > div, main , footer > div {width:90vw;}
+@media screen and (320px < width < 760px) {
+	.width_center {width:90vw;}
 }
 /*iPhoneSE / Watch?*/
 @media screen and (width < 320px) {
-	header > div, main , footer > div {width:95vw;}
+	.width_center {width:95vw;}
 	input[type="text"], textarea {
 		overflow-x:hidden;
 		text-overflow:ellipsis;}
