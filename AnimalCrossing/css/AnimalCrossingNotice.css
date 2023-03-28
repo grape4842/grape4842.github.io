@@ -99,9 +99,9 @@ article {
 	margin-bottom:5rem;
 }
 ul, dl, ol {
-	margin:0.5rem 0;
+	margin:0.5rem 0px`;
 }
-li {
+li, p {
 	line-height: 2;
 	display: flex;
 	flex-direction: column;
@@ -112,12 +112,15 @@ h1 {
 	font-size: 2.5rem;
 	text-align: center;
 }
-
+h2 {
+	font-size: 2rem;
+	background-color:#fff9e4;
+	padding:2rem;
+}
 h3 {font-size:1.7rem;}
 h4 {font-size: 1.5rem;}
 h1, h2, h3 {
 	font-weight: 900;
-	padding:1rem 0;
 }
 a {
 	word-break:break-all;
@@ -132,7 +135,6 @@ a:where(:hover, :focus) {text-decoration:underline; }
 	color:#7E693A;
 	margin:1rem auto;
 	font-weight: 900;
-	padding:1rem 2rem;
 	border-radius: 3rem;
 	background-color: #FEEC9E;
 }
@@ -283,15 +285,25 @@ footer:after {
 		padding:2rem 1rem;
 		border-width: 1rem;
 	}
+	h1 {font-size: 2rem;}
+	h2 {
+		font-size: 1.7rem;
+		padding:1rem;
+	}
+	h3 {font-size:1.5rem;}
+	h4 {font-size: 1.5rem;}
 	.depth2 {margin-left:1rem;}
 	#page_top {width:7rem;}
-	dt {margin-left:1.3rem; }
-	dd {margin-left:1.7rem; }
 
 
 }
 /*iPhoneSE / Watch?*/
 @media screen and (width < 310px) {
+	body {font-size:1rem;}
+	h1 {font-size: 2rem;}
+	h2 {font-size: 1.5rem;}
+	h3 {font-size:1.3rem;}
+	h4 {font-size: 1.1rem;}
 	.width-center {width:95vw;}
 	input[type="text"], textarea {
 		overflow-x:hidden;
