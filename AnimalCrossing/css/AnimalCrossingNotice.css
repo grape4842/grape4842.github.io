@@ -1,5 +1,7 @@
 @charset "UTF-8";
 .width-center {
+	display: flex;
+	flex-direction: column;
 	position:relative;
 	margin:0 auto;
 	width:60vw;
@@ -46,6 +48,31 @@ header{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+.navi {
+	background-color: #fff;
+	display: flex;
+	height: 46px;
+	align-items: flex-start;
+    justify-content: space-between;
+}
+
+.nintendo-logo {
+	justify-content: center;
+	align-items:center;
+	width: 138px;
+	height: 46px;
+	background-color: #e60012;
+}
+.nintendo-logo img {
+   width: 82px;
+    height: 21px;
+    display: block;
+}
+.switch-online {
+	position: absolute;
+	right: 0;
+}
 main {
 	background-image:url(https://www.nintendo.co.jp/switch/acbaa/assets/images/top/content_bg01_pc.jpg);
 	display: flex;
@@ -61,6 +88,11 @@ main:before {
 	width:100vw;
 	height: 10rem;
 }
+.talk {
+	margin: 0 auto;
+	justify-content: space-beetwin;
+
+}
 .acnh-img {
 	display:flex;
 	margin:0 auto;
@@ -72,7 +104,7 @@ article {
 	margin-bottom:5rem;
 }
 ul, dl, ol {
-	margin:1rem 0;
+	margin:0.5rem 0;
 }
 li {
 	line-height: 2;
@@ -83,13 +115,12 @@ li:where(> ul, > dl), h3 ~ ul:where( > li > ul )
  {
 	margin-left:1rem;
 }
-dt {margin-left:2rem; }
-dd {margin-left:3rem; }
+.depth2 {margin-left:2rem;}
 h1 {
 	font-size: 2.5rem;
 	text-align: center;
 }
-h2 {
+h2:not(h2:has(.report)) {
 	text-align: center;
 	padding:1rem 2rem;
 	padding-top:4rem;
@@ -101,7 +132,7 @@ h3 {font-size:1.7rem;}
 h4 {font-size: 1.5rem;}
 h1, h2, h3 {
 	font-weight: 900;
-	padding:1rem;
+	padding:1rem 0;
 }
 a {
 	word-break:break-all;
@@ -110,7 +141,9 @@ a {
 
 a:where(:hover, :focus) {text-decoration:underline; }
 
-.report {
+.report, h2:has(.report) {
+	justify-content: center;
+	margin: 0 auto;
 	color:#7E693A;
 	margin:1rem auto;
 	font-weight: 900;
@@ -148,6 +181,7 @@ footer:after {
 }
 .footer-in {padding-bottom:5rem;}
 .tiles {
+	grid-row-gap: 1rem;
 	display:grid;
 	justify-self:center;
 	justify-content: space-between;
@@ -214,7 +248,6 @@ footer:after {
 @media screen and (1200px < width) {
 	.tiles {
 		grid-template-columns: 24% 24% 24% 24%; 
-		grid-row-gap: 1rem;
 	}
 	
 }
@@ -222,10 +255,18 @@ footer:after {
 /*iPad Pro*/
 @media screen and (1000px < width < 1200px) {
 	.width-center {width:80vw;}
+	.nintendo-logo {
+    width: 138px;
+    height: 100%;
+}
 }
 /*iPad*/
 @media screen and (760px < width < 1200px) {
 	.width-center {width:80vw;}
+	.nintendo-logo {
+    width: 138px;
+    height: 100%;
+}
 	.tiles {
 		grid-template-columns: 49% 49%; 
 	}
@@ -235,6 +276,24 @@ footer:after {
 /*Mobile*/
 @media screen and (310px < width < 760px) {
 	.width-center {width:90vw;}
+	.navi {
+		height: 50px;
+		background-color: #e60012;
+	}
+	.nintendo-logo {
+		width:auto;
+		height: 50px;
+		}
+	.nintendo-logo img {
+	margin-left:14px;
+    width: 82px;
+    height: 21px;
+}
+	.switch-online {
+    right: 6px;
+    top: 6px;
+    width: 50px;
+	}
 	article {
 		padding:2rem 1rem;
 		border-width: 1rem;
