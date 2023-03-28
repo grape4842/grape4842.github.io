@@ -1,0 +1,245 @@
+@charset "UTF-8";
+.width-center {
+	position:relative;
+	margin:0 auto;
+	width:60vw;
+	padding:3rem 0px;
+}
+
+body {
+	color:#827157;
+	font-weight: 700;
+	font-size:1.2rem;
+	background-size:contain;
+}
+
+#skip-nav {
+	display:block;
+	text-align:center;
+	padding:0.5rem 0;
+	width:60vw;
+	position:fixed;
+	background-color:#1abfe5;
+	color:black;
+	z-index: 2;
+	left:50%;
+	transition: top 0.3s;
+	transform: translate(-50%);
+	border-radius: 0px 0px 20px 20px;
+	top:-10rem;
+}
+#skip-nav:focus {top:0;}
+.a11y-txt {
+	overflow:hidden;
+	display:inline-block;
+    position:relative;
+    font-size:1px;
+    z-index:-1;
+    top:-1px; left:-1px;
+    width:1px; height:1px;
+}
+
+header{
+	background-image:url("../img/wood.jpg");
+	color: #794e27;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+main {
+	background-image:url(https://www.nintendo.co.jp/switch/acbaa/assets/images/top/content_bg01_pc.jpg);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+main:before {
+	content: '';
+	background-image: url("../img/leaf-happyhome.png");
+	display: block;
+	position: absolute;
+	top:-1rem; left:0;
+	width:100vw;
+	height: 10rem;
+}
+.acnh-img {
+	display:flex;
+	margin:0 auto;
+}
+article {
+	background-image: url("../img/leaf-bg.jpg");
+	padding:5rem;
+	border:solid #fff9e4 2rem;
+	margin-bottom:5rem;
+}
+li {
+	line-height: 2;
+	display: flex;
+	flex-direction: column;
+}
+li:where(> ul, > dl) {
+	margin-left:1rem;
+}
+dt {margin-left:2rem; }
+dd {margin-left:3rem; }
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+}
+h2 {
+	text-align: center;
+	padding:1rem 2rem;
+	padding-top:4rem;
+	margin-top:5rem;
+	font-size: 2rem;
+	background-color:#fff9e4;
+	}
+h3 {font-size:1.7rem;}
+h4 {font-size: 1.5rem;}
+a {
+	word-break:break-all;
+	text-decoration:none;
+}
+
+a:where(:hover, :focus) {text-decoration:underline; }
+
+.report {
+	margin:1rem auto;
+	font-weight: 900;
+	padding:1rem;
+	border-radius: 1rem;
+	background-color: #fff9e4;
+}
+
+footer::before {
+    background-image: url("../img/bump-top-yellow-2x.png");
+    background-position: 50% 0%;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    content: "";
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: -10px;
+    width: 100vw;
+}
+footer {
+	padding-bottom:10rem;
+	background-color: #f8eebc;
+}
+footer:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width:100vw;
+	height: 12rem;
+	background-repeat: repeat-x;
+	bottom:0; left:0;
+	background-image: url(../img/footer-illustration.svg);
+	background-position: bottom;
+}
+.footer-in {padding-bottom:5rem;}
+.tiles {
+	display:grid;
+	justify-self:center;
+	justify-content: space-between;
+}
+.tiles a {
+	padding-left:2.5rem;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-size:2.5rem auto;
+	}
+.forum {background-image: url("../img/FtrBulletinboard_Remake_0_2.webp");}
+.discord {
+	background-size:2.2rem auto !important;
+	background-image: url("../../icon/sns/discord.svg");
+	padding-left:2.5rem !important;
+}
+.dictionary {background-image: url("../img/FtrCrsPopupbook_Remake_0_0.webp");}
+.item {background-image: url("../img/item-leaf.png");}
+.jumin {background-image: url("../img/maaru.webp");}
+.rank {background-image: url("../img/jun.webp");}
+.recipe {background-image: url("../img/recipe.webp");}
+.fake {background-image: url("../img/tsunekichi.webp")}
+.flower {background-image: url("../img/purple-Hyacinthus.webp");}
+.amiibo {background-image: url("../img/amiibo-icon.png")}
+.copyright {
+	text-align: center;
+	font-size: 1rem;
+	padding:2rem;
+}
+
+#page_top {
+	padding:0px;
+	position:fixed;
+	bottom:5dvh;
+	right:5vw;
+	z-index:5;
+}
+
+.lightV {display:flex;}
+.darkV {display:none;}
+
+::-webkit-scrollbar {
+    width: 20px;  /* 스크롤바의 너비 */
+}
+::-webkit-scrollbar-thumb {
+    background:rgba(0 0 0 / 0.1); /* 스크롤바의 색상 */
+    border:solid 1px #326;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background:rgba(0 0 0 / 0.5);  /*스크롤바 뒷 배경 색상*/
+}
+
+/*다크 모드일 경우의 스타일*/
+@media (prefers-color-scheme:dark) {
+	.lightV {display:none;}
+	.darkV {display:flex;}
+	body {
+	}
+}
+
+/*desktop*/
+@media screen and (1200px < width) {
+	.tiles {
+		grid-template-columns: 24% 24% 24% 24%; 
+		grid-row-gap: 1rem;
+	}
+	
+}
+
+/*iPad Pro*/
+@media screen and (1000px < width < 1200px) {
+	.width-center {width:80vw;}
+}
+/*iPad*/
+@media screen and (760px < width < 1200px) {
+	.width-center {width:80vw;}
+	.tiles {
+		grid-template-columns: 49% 49%; 
+	}
+	article {padding:3rem;}
+}
+
+/*Mobile*/
+@media screen and (310px < width < 760px) {
+	.width-center {width:90vw;}
+	article {
+		padding:2rem 1rem;
+		border-width: 1rem;
+	}
+	#page_top {width:7rem;}
+	dt {margin-left:1.3rem; }
+	dd {margin-left:1.7rem; }
+
+
+}
+/*iPhoneSE / Watch?*/
+@media screen and (width < 310px) {
+	.width-center {width:95vw;}
+	input[type="text"], textarea {
+		overflow-x:hidden;
+		text-overflow:ellipsis;}
+}

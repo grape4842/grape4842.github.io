@@ -38,6 +38,8 @@
 	display:flex;
 }
 .sites a {padding:1rem;}
+
+
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
 	.read_first {background: #a60;}
