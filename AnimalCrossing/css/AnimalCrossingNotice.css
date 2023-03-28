@@ -88,11 +88,6 @@ main:before {
 	width:100vw;
 	height: 10rem;
 }
-.talk {
-	margin: 0 auto;
-	justify-content: space-beetwin;
-
-}
 .acnh-img {
 	display:flex;
 	margin:0 auto;
@@ -111,23 +106,13 @@ li {
 	display: flex;
 	flex-direction: column;
 }
-li:where(> ul, > dl), h3 ~ ul:where( > li > ul )
- {
-	margin-left:1rem;
-}
+
 .depth2 {margin-left:2rem;}
 h1 {
 	font-size: 2.5rem;
 	text-align: center;
 }
-h2:not(h2:has(.report)) {
-	text-align: center;
-	padding:1rem 2rem;
-	padding-top:4rem;
-	margin-top:5rem;
-	font-size: 2rem;
-	background-color:#fff9e4;
-	}
+
 h3 {font-size:1.7rem;}
 h4 {font-size: 1.5rem;}
 h1, h2, h3 {
@@ -298,6 +283,7 @@ footer:after {
 		padding:2rem 1rem;
 		border-width: 1rem;
 	}
+	.depth2 {margin-left:1rem;}
 	#page_top {width:7rem;}
 	dt {margin-left:1.3rem; }
 	dd {margin-left:1.7rem; }
