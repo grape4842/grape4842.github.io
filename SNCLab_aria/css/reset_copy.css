@@ -138,3 +138,5 @@
 	block-size: 0;
 	overflow: visible;
 }
+
+table {border-collapse: collapse;}

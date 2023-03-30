@@ -1,7 +1,7 @@
 @charset "utf-8";
 body {
+	background-color: #eee;
 	font-size: 1.5rem;
-	cursor: url("img/purple_dark_mouse.cur") -10 -10, auto;
 }
 .width_center {
 	position:relative;
@@ -35,7 +35,10 @@ input, progress {accent-color:#64d;}
     top:-1px; left:-1px;
     width:1px; height:1px;}
 h1 {font-size: 2.5rem;}
-h2 {font-size: 2rem;}
+#content {font-size:2rem;}
+h2 {
+	font-size: 2rem;
+	color:#437;}
 h3 {font-size:1.7rem;}
 h4 {font-size: 1.5rem;}
 li {list-style:none;}
@@ -63,15 +66,15 @@ a:where(:hover, :focus) {text-decoration:underline; }
 footer {
 	background: #222;
 	color:#999;}
-address {
+footer address {
 	font-size: 1rem;
 	font-style: normal;
 }
-address p {
+footer address p {
 	padding-left:1.2rem;
 
 }
-address img {
+footer address img {
 	position: absolute;
 	height:1rem;
 	left:0;
@@ -82,14 +85,29 @@ address img {
 .footer_in {
 	padding-top:0px;
 	display:flex;
-	flex-direction:column;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
-.footer_in h2{display:block;}
+.footer_in > * {
+	padding:5px 0px;
+}
+.ceo {
+	width:100%;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+.office_address img {
+	top:10px;
+	transform: none;}
 .contact_info {
+	display: flex;
+	flex-direction: column;
 }
 .copyright {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+
 	font-size: 1rem;
 	padding:2rem;
 	background: #111;
@@ -135,28 +153,37 @@ address img {
 
 /*desktop*/
 @media screen and (1200px < width) {
-	.footer_in {flex-direction: row;}
+
 }
 
 /*Tablet*/
 @media screen and (760px < width < 1200px) {
 	.width_center {width:80vw;}
-	.footer_in {flex-direction:column;}
-	.contact_info {
-		display:flex;
-		margin:5px 0;
+	.office_address, .contact_info {
+	flex:0 1 40%;
 	}
+
 
 }
 /*Mobile*/
 @media screen and (310px < width < 760px) {
 	.width_center {width:90vw;}
-
+	.office_address, .contact_info {
+		flex: 1 0 100%;
+	}
+	.ceo {flex-direction: row;}
+	.copyright {flex-direction: column;}
 }
 /*iPhoneSE / Watch?*/
 @media screen and (width < 310px) {
 	.width_center {width:95vw;}
+	.office_address, .contact_info {
+		flex: 1 0 100%;
+	}
 	input[type="text"], textarea {
 		overflow-x:hidden;
 		text-overflow:ellipsis;}
+	.ceo {flex-direction: row;}
+	.contact_info {flex-direction: row;}
+	.copyright {flex-direction: column;}
 }

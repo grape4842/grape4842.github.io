@@ -1,6 +1,7 @@
 @charset "utf-8";
-#content {font-size:2rem;}
 .read_first {
+	background: #fec;
+	border:1px solid #fda;
 	position:relative;
 	padding:2rem;
 	margin:2rem auto;
@@ -28,7 +29,8 @@
 	row-gap:2rem;
 }
 .tile {
-	padding:2rem;
+	padding:1rem;
+	border:1px #ddd solid;
 	background:#fff;
 	border-radius: 1rem;
 }
@@ -54,15 +56,15 @@
 	.read_first {padding-left:12rem;}
 }
 /*Tablet*/
-@media screen and (760px < width < 1200px) {
+@media screen and (780px < width < 1200px) {
 	.read_first {
 		padding:2rem 1rem;
 		margin-top:3rem;
-		padding-left:11rem;
+		padding-left:14rem;
 	}
 	#woman_blue {
 		height:90%;
-		left:0.1rem;}
+		left:1rem;}
 	.tiles {
 		grid-template-columns: 49% 49%;
 	}
@@ -71,7 +73,7 @@
 	}
 }
 /*Mobile*/
-@media screen and (310px < width < 760px) {
+@media screen and (310px < width < 780px) {
 	.read_first {
 	padding:2rem 1rem;
 	padding-left:auto;

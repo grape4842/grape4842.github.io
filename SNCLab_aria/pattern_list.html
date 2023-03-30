@@ -19,8 +19,8 @@
 	<link rel="manifest" href="img/favicon/site.webmanifest">
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="css/reset_copy.css">
-	<link rel="stylesheet" type="text/css" href="css/aria.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/pattern_list.css">
 	<!-- font -->
 	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic.woff2" as="font">
 	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
@@ -32,32 +32,41 @@
 	<a href="#content" id="skip_nav">본문 바로가기</a>
 	<header>
 		<div class="width_center">
-			<h1>WAI-ARIA 지원 확인</h1>
+			<p>WAI-ARIA 지원 확인</p>
 		</div>
 	</header>
 	<!-- 헤더 영역 끝 -->
 
-	<!-- 네비게이션 / 브레드크럼 -->
-	<nav></nav>
+	<!-- 네비게이션-->
+<!-- 	<nav>
+		<ul>
+			<li>
+				<a href="" aria-current="page">패턴</a>
+			</li>
+		</ul>
+	</nav> -->
 
-	<!-- 네비게이션 / 브레드크럼 끝 -->
+	<!-- 네비게이션-->
+	<!-- 브레드크럼 -->
+
+	<!-- 브레드크럼 끝 -->
 	<!-- 본문 -->
 	<main class="width_center">
-		<h1 id="content">각 케이스 목록</h1>
+		<h1 id="content">패턴 목록</h1>
 		<div class="read_first">
 			<img src="img/woman_blue.webp" id="woman_blue" alt="">
 			<h2>이 페이지를 탐색하기 전에</h2>
-			<p>잘못 구현된 aria는 aria를 제공하지 못한 것보다 사용자의 사이트 탐색을 어렵게 합니다. WAI_ARIA를 사용하기 전에 먼저 <a title="새 창" target="_blank" href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/">이 내용을 읽고</a> aria를 사용하는 이유를 이해하세요.</p>
+			<p>잘못 제공한 aria는 aria를 제공하지 못한 것보다 사용자의 사이트 탐색을 어렵게 합니다. WAI_ARIA를 사용하기 전에 먼저 <a title="새 창" target="_blank" href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/">이 내용을 읽고</a> aria를 사용하는 이유를 이해하세요.</p>
 		</div>
 		<ul class="tiles">
 			<li class="tile">
 				<a href="" target="새 창" target="_blank">
 					<h2 class="tile_name">
 						<img src="" alt="">
-						<span></span>
+						<span>패턴명</span>
 					</h2>
 				</a>
-				<p class="tile_desc"></p>
+				<p class="tile_desc">설명</p>
 			</li>
 			<li class="tile">
 				<a href="" target="새 창" target="_blank">
@@ -116,10 +125,14 @@
 	<footer>
 		<h2 class="width_center">
 			<span class="a11y_txt ">Footer</span>
-			<!-- <img src="img/logo_footer.png" alt=""> -->
+			<img src="img/logo_footer.png" alt="">
 		</h2>
-		<!-- <div class="footer_in width_center">
-			<address class="office_adress">
+		<div class="footer_in width_center">
+			<div class="ceo">
+				<p>(주)에스앤씨랩 </p>
+				<p>대표 장선영 </p>
+			</div>
+			<address class="office_address">
 				<img src="../icon/place_white_48dp.svg" alt="">
 				<p>서울특별시 성동구 아차산로17길 49 성수 생각공장 데시앙플렉스 1609호, 1610호</p>
 				<p>서울특별시 성동구 성수동2가 280-6 성수 생각공장 데시앙플렉스 1609호, 1610호</p>
@@ -129,9 +142,12 @@
 				<p><img alt="" src="../icon/call_white_48dp.svg">전화 : +82-2-2201-9928</p>
 				<p><img alt="" src="../icon/print_white_48dp.svg">팩스 : +82-2-6280-7842</p>
 			</address>
-		</div> -->
-		<!-- <p class="copyright">Copyright 2023 SNC Lab Corp. All rights reserved.</p> -->
-		<p class="copyright">@purplemiyazawa</p>
+		</div>
+		<p class="copyright">
+				<span>Copyright 2023 SNC Lab Corp. <span>
+				<span>All rights reserved.</span>
+			</p>
+		<!-- <p class="copyright">@purplemiyazawa</p> -->
 		<a href="" id="page_top" aria-label="페이지 최상단으로 이동">
 			<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
 				<path fill="none" d="M0 0h24v24H0z"/>

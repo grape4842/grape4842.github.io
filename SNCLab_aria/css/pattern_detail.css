@@ -1,0 +1,13 @@
+@charset "utf-8";
+article {
+	padding:2rem;
+	margin:3rem auto;
+}
+.keyboard {background: #fff;}
+tr {border-bottom:solid 1px;}
+th, td {padding:1rem;}
+td {border:solid 1px;}
+/*다크 모드일 경우의 스타일*/
+@media (prefers-color-scheme:dark) {
+	.keyboard {background: #444;}
+}
