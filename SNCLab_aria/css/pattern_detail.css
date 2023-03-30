@@ -8,7 +8,9 @@ article {
 	border:1px #ddd solid;
 	}
 .support {padding:2rem 0px;}
-table {overflow-x: scroll;}
+.ovsb {
+	display: block;
+	overflow-x: scroll;}
 tr {border-bottom:solid 1px;}
 th, td {padding:1rem;}
 td {border:solid 1px;}

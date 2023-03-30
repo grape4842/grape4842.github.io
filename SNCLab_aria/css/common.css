@@ -29,7 +29,7 @@ input, progress {accent-color:#64d;}
 .a11y_txt {
 	overflow:hidden;
 	display:inline-block;
-    position:relative;
+    position:absolute;
     font-size:1px;
     z-index:-1;
     top:-1px; left:-1px;
@@ -56,11 +56,12 @@ a:where(:hover, :focus) {text-decoration:underline; }
     width: 20px;  /* 스크롤바의 너비 */
 }
 ::-webkit-scrollbar-thumb {
-    background:rgba(0 0 0 / 0.1); /* 스크롤바의 색상 */
+    background:rgba(255 255 255 / 0.3); /* 스크롤바의 색상 */
     border:solid 1px #326;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-track {
+	border-radius: 10px;
     background:rgba(0 0 0 / 0.5);  /*스크롤바 뒷 배경 색상*/
 }
 footer {
