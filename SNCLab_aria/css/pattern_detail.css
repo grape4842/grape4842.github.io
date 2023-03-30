@@ -22,10 +22,10 @@ article {
 }
 .ovsb tbody {background-color: #fff;}
 
-tr {border-bottom:solid 1px;}
+
 th, td {padding:1rem;}
-td {
-	border:solid 1px;
+tr, td {
+	border:solid 1px #777;
 	border-right: none;
 }
 /*다크 모드일 경우의 스타일*/
