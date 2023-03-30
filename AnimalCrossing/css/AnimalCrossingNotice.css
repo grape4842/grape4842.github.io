@@ -138,7 +138,7 @@ a:where(:hover, :focus) {text-decoration:underline; }
 	border-radius: 3rem;
 	background-color: #FEEC9E;
 }
-
+.report:not(.talk) {padding:1rem;}
 footer::before {
     background-image: url("../img/bump-top-yellow-2x.png");
     background-position: 50% 0%;
