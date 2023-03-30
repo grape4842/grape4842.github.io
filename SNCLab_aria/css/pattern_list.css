@@ -34,11 +34,8 @@
 	background:#fff;
 	border-radius: 1rem;
 }
-.tile_name {display:flex;}
 
-.sites {
-	display:flex;
-}
+.sites {display:flex;}
 .sites a {padding:1rem;}
 
 

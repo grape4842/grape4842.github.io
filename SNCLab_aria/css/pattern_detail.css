@@ -3,11 +3,12 @@ article {
 	padding:2rem;
 	margin:3rem auto;
 }
-.keyboard {background: #fff;}
+.example {background: #fff;}
+.support {padding:2rem 0px;}
 tr {border-bottom:solid 1px;}
 th, td {padding:1rem;}
 td {border:solid 1px;}
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
-	.keyboard {background: #444;}
+	.example {background: #444;}
 }

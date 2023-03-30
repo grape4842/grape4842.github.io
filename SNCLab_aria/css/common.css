@@ -144,7 +144,7 @@ footer address img {
 		background-color:#333;
 		cursor: url("img/purple_light_mouse.cur") -10 -10, auto;
 	}
-
+	h2 {color:#dcf;}
 	:where(button, a, label, input, select, summary):where(:hover), :focus {
 		box-shadow:0 0 0px 2px #b0d737;
 		outline: none;
