@@ -9,14 +9,59 @@ article {
 	}
 .support {padding:2rem 0px;}
 .ovsb {
-	display: block;
-	overflow-x: scroll;}
+	display: flex;
+	flex-direction: column;
+}
+.ovsb table {
+	border-top:solid 1px #76a;
+	border-bottom:solid 1px #76a;
+	margin:1rem auto;
+}
+.ovsb thead {
+	background-color: rgba(230 220 255 / 1);
+}
+.ovsb tbody {background-color: #fff;}
+
 tr {border-bottom:solid 1px;}
 th, td {padding:1rem;}
-td {border:solid 1px;}
+td {
+	border:solid 1px;
+	border-right: none;
+}
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
 	.example {background: #444;
 	border:1px #222 solid;
 	}
+	.ovsb thead{
+		background-color: #37333f;
+	}
+	.ovsb tbody {
+		background-color: #444;
+	}
+}
+
+/*Desktop*/
+@media screen and (width > 1200px) {
+	.ovsb {
+		overflow-x: visible;
+		flex-direction:row;
+	}
+}
+/*Tablet*/
+@media screen and (760px < width < 1200px) {
+
+}
+/*Mobile*/
+@media screen and (310px < width < 760px) {
+	.ovsb {	
+		overflow-x: scroll;
+	}
+}
+/*iPhoneSE / Watch?*/
+@media screen and (width < 310px) {
+	.ovsb {	
+		overflow-x: scroll;
+	}
+
 }
