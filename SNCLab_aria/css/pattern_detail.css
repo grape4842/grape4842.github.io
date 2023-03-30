@@ -3,12 +3,18 @@ article {
 	padding:2rem;
 	margin:3rem auto;
 }
-.example {background: #fff;}
+.example {
+	background: #fff;
+	border:1px #ddd solid;
+	}
 .support {padding:2rem 0px;}
+table {overflow-x: scroll;}
 tr {border-bottom:solid 1px;}
 th, td {padding:1rem;}
 td {border:solid 1px;}
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
-	.example {background: #444;}
+	.example {background: #444;
+	border:1px #222 solid;
+	}
 }

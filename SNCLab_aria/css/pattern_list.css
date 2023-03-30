@@ -41,8 +41,14 @@
 
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
-	.read_first {background: #a60;}
-	.tile {background: #444;}
+	.read_first {
+		background: #a60;
+		border-color: #850;
+	}
+	.tile {
+		background: #444;
+		border:1px #222 solid;
+	}
 }
 
 /*Desktop*/
