@@ -4,7 +4,7 @@
 	border:1px solid #777;
 	background-color: #fff;
 }
-.content_table > * {
+.content_table h2, .content_table  a {
 	font-size: 1.2rem;
 	padding:1rem;
 }
@@ -17,22 +17,27 @@
 .content_table a {
 	display: block;
 }
-.read_first {
+.content_table.mobileV summary{
+	padding:0px;
+}
+
+.read_first details {
 	position:relative;
 	margin:2rem auto;
 	background: #fec;
 }
-.read_first > * {
+.read_first details > * {
 	border:1px solid #fda;
 	padding:1rem;
 }
 
 .read_first summary {
 	display: flex;
+	align-items: flex-start;
 	justify-content: space-between;
 	background: #feb;
 }
-.read_first summary::marker {
+summary::marker {
 	content:'';
 	display: none;
 }
@@ -41,10 +46,12 @@
 	align-content: center;
 	justify-content: center;
 }
-#Group_1 {
+.y_info {
 	margin-right: 1rem;
+	flex:1 0 30px;
 }
 .folding_arrow {
+	flex:1 0 30px;
 	width:30px; height: 30px;
 	rotate: 180deg;
 	background-color:#fd9;
@@ -62,12 +69,17 @@ details[open] .folding_arrow {
 	list-style: disc;
 	list-style-position: inside;}
 
+article {
+	padding:2rem 1rem;
+	margin:3rem auto;
+}
+
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
 	.content_table {background-color: #444;}
 	.content_table h2 {background-color: #222;}
-	.read_first {background-color: #b70;}
-	.read_first > * {
+	.read_first details {background-color: #b70;}
+	.read_first details > * {
 		border-color: #850;
 
 	}

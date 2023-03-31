@@ -1,6 +1,6 @@
 @charset "utf-8";
 article {
-	padding:2rem;
+	padding:2rem 1rem;
 	margin:3rem auto;
 }
 h2 {padding-bottom:2rem;}

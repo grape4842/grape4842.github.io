@@ -149,7 +149,7 @@ footer address img {
 #page_top svg {
 	width:100%;
 	height:100%;}
-
+svg {display: flex;}
 
 .lightV {display:flex;}
 .darkV {display:none;}
@@ -162,7 +162,6 @@ footer address img {
 	.darkV {display:flex;}
 	body {
 		background-color:#333;
-		cursor: url("img/purple_light_mouse.cur") -10 -10, auto;
 	}
 	h2 {color:#dcf;}
 	:where(button, a, label, input, select, summary):where(:hover), :focus {
@@ -179,12 +178,13 @@ footer address img {
 }
 
 /*desktop*/
-@media screen and (1200px < width) {
-
+@media screen and (1100px < width) {
+	.mobileV {display: none;}
 }
 
 /*Tablet*/
-@media screen and (760px < width < 1200px) {
+@media screen and (760px < width < 1100px) {
+	.pcV {display: none;}
 	.width_center {width:80vw;}
 	.office_address, .contact_info {
 	flex:0 1 40%;
@@ -194,6 +194,7 @@ footer address img {
 }
 /*Mobile*/
 @media screen and (310px < width < 760px) {
+	.pcV {display: none;}
 	.width_center {width:90vw;}
 	.office_address, .contact_info {
 		flex: 1 0 100%;
@@ -203,6 +204,7 @@ footer address img {
 }
 /*iPhoneSE / Watch?*/
 @media screen and (width < 310px) {
+	.pcV {display: none;}
 	.width_center {width:95vw;}
 	.office_address, .contact_info {
 		flex: 1 0 100%;

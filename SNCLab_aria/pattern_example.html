@@ -63,7 +63,7 @@
 	
 	<div class="width_center main_box">
 				<!-- 콘텐츠 목차 -->
-		<aside class="content_table">
+		<aside class="content_table pcV">
 			<h2>이 페이지의 목차</h2>
 			<ul>
 			<li><a href="">이 페이지를 읽기 전에</a></li>
@@ -75,103 +75,88 @@
 			<li><a href="">HTML 코드</a></li>
 			</ul>
 		</aside>
+
+		<details class="content_table mobileV">
+			<summary><h2>이 페이지의 목차</h2></summary>
+			<ul class="details_content">
+				<li><a href="">이 페이지를 읽기 전에</a></li>
+				<li><a href="">이 예시에 대하여</a></li>
+				<li><a href="">실제 구현 예시</a></li>
+				<li><a href="">키보드 지원</a></li>
+				<li><a href="">역할, 속성, 상태 및 Tabindex 특성</a></li>
+				<li><a href="">스크립트 및 스타일 코드</a></li>
+				<li><a href="">HTML 코드</a></li>
+			</ul>
+		</details>
+
 		<!-- 콘텐츠 목차 끝 -->
 
 		<!-- 본문 -->
 		<main>
 			<h1 id="content"><span class="a11y_txt">본문</span>구현 예시</h1>
-			<h2>이 페이지를 읽기 전에</h2>
-			<details class="read_first">
-				<summary>
-					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><g id="Group_1" data-name="Group 1" transform="translate(-11 -292)"><ellipse id="Ellipse_1" data-name="Ellipse 1" cx="15" cy="15.5" rx="15" ry="15.5" transform="translate(11 292)" fill="#d90"/><path id="Path_3" data-name="Path 3" d="M4.524-17.368a4.507,4.507,0,0,0-1.56.312.278.278,0,0,0-.13.286V-14.9c0,2.184.416,8.294.468,9.022a.172.172,0,0,0,.182.156h2.08c.156,0,.182-.078.182-.156.078-.78.52-6.916.52-9.1v-1.872a.326.326,0,0,0-.156-.286A5.112,5.112,0,0,0,4.524-17.368Zm0,17.576A1.7,1.7,0,0,0,6.4-1.534,1.741,1.741,0,0,0,4.524-3.328,1.77,1.77,0,0,0,2.652-1.534,1.7,1.7,0,0,0,4.524.208Z" transform="translate(22 316)" fill="#fff"/></g></svg>
-					<p>이 페이지에서 제공되는 코드는 구현 예시입니다. 실제 프로젝트에 적용하기 전에 여기를 읽고 	사용하십시오.</p>
-					<div class="folding_arrow">
-						<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6.861" viewBox="0 0 12 6.861"><path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M12.19,16.039,16.727,11.5a.854.854,0,0,1,1.211,0,.865.865,0,0,1,0,1.215L12.8,17.858a.856.856,0,0,1-1.183.025L6.438,12.717A.858.858,0,1,1,7.649,11.5Z" transform="translate(18.188 18.108) rotate(180)" /></svg>
+			<article class="read_first">
+				<h2>이 페이지를 읽기 전에</h2>
+				<details >
+					<summary>
+						<svg class="y_info" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><g id="Group_1" data-name="Group 1" transform="translate(-11 -292)"><ellipse id="Ellipse_1" data-name="Ellipse 1" cx="15" cy="15.5" rx="15" ry="15.5" transform="translate(11 292)" fill="#d90"/><path id="Path_3" data-name="Path 3" d="M4.524-17.368a4.507,4.507,0,0,0-1.56.312.278.278,0,0,0-.13.286V-14.9c0,2.184.416,8.294.468,9.022a.172.172,0,0,0,.182.156h2.08c.156,0,.182-.078.182-.156.078-.78.52-6.916.52-9.1v-1.872a.326.326,0,0,0-.156-.286A5.112,5.112,0,0,0,4.524-17.368Zm0,17.576A1.7,1.7,0,0,0,6.4-1.534,1.741,1.741,0,0,0,4.524-3.328,1.77,1.77,0,0,0,2.652-1.534,1.7,1.7,0,0,0,4.524.208Z" transform="translate(22 316)" fill="#fff"/></g></svg>
+						<p>이 페이지에서 제공되는 코드는 구현 예시입니다. 실제 프로젝트에 적용하기 전에 여기를 읽고 	사용하십시오.</p>
+						<div class="folding_arrow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6.861" viewBox="0 0 12 6.861"><path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M12.19,16.039,16.727,11.5a.854.854,0,0,1,1.211,0,.865.865,0,0,1,0,1.215L12.8,17.858a.856.856,0,0,1-1.183.025L6.438,12.717A.858.858,0,1,1,7.649,11.5Z" transform="translate(18.188 18.108) rotate(180)" /></svg>
+						</div>
+					</summary>
+					<div class="read_first_content details_content">
+						<p>이 코드는 WAI-ARIA의 사용하는 한 가지 방법입니다.</p>
+						<ul>
+							<li>일부 브라우저와 스크린 리더의 조합, 특히 모바일 / 터치 기기에서는 지원여부가 다를 수 있습니다. 실제 프로젝트에서 사용하기 전에 먼저 스크린 리더에서 해당 예제를 통해 테스트하여 실제 지원 여부를 반드시 확인하십시오.</li>
+							<li>최대한 시멘틱 HTML을 사용하십시오. 잘못 제공한 ARIA는 ARIA를 제공하지 않은 것보다 사용자에게 있어 사이트 탐색을 어렵게 합니다. 필요에 따라 ARIA를 올바르게 사용함으로써 접근성을 더욱 강화할 수 있습니다.</li>
+						</ul>
 					</div>
-				</summary>
-				<div class="read_first_content">
-					<p>이 코드는 WAI-ARIA의 사용하는 한 가지 방법입니다.</p>
-					<ul>
-						<li>일부 브라우저와 스크린 리더의 조합, 특히 모바일 / 터치 기기에서는 지원여부가 다를 수 있습니다. 실제 프로젝트에서 사용하기 전에 먼저 스크린 리더에서 해당 예제를 통해 테스트하여 실제 지원 여부를 반드시 확인하십시오.</li>
-						<li>최대한 시멘틱 HTML을 사용하십시오. 잘못 제공한 ARIA는 ARIA를 제공하지 않은 것보다 사용자에게 있어 사이트 탐색을 어렵게 합니다. 필요에 따라 ARIA를 올바르게 사용함으로써 접근성을 더욱 강화할 수 있습니다.</li>
-					</ul>
-				</div>
-			</details>
-			<article class="commentary">
-				<h2>이 패턴에 대해</h2>
+				</details>
+			</article>
+			<article class="example_about">
+				<h2 id="about_example">이 예시에 대해</h2>
 				<div>
 					<p>설명</p>
 				</div>
 			</article>
-			<article class="example">
+			<article class="example_area">
 				<div>
-					<h2>구현 예시</h2>
-					<a href="" target="_blank">패턴명 예시</a>
+					<h2 id="example_date">실제 구현 예시</h2>
+					<div class="example_box"></div>
 				</div>
 			</article>
-			<article class="keyboard">
+			<article class="keyboard_support">
 				<div>
-					<h2>키보드 상호작용</h2>
+					<h2 id="example_keyboard_support">키보드 지원</h2>
 					<p>설명</p>
 				</div>
 			</article>
-			<article class="aria_tech">
+			<article class="aria_date">
 				<div>
-					<h2>사용된 WAI-ARIA기술(역할, 상태, 속성)</h2>
+					<h2 id="example_aria_date">역할, 속성, 상태 및 Tabindex 특성</h2>
 					<p>설명</p>
 				</div>
 			</article>
-			<article class="support">
-				<h2>여기에서 사용된 WAI-ARIA의 스크린 리더 지원 여부</h2>
-				<div class="ovsb">
-					<table>
-						<caption class="a11y_txt">PC</caption>
-						<thead>
-							<tr>
-								<th scope="row">스크린 리더</th>
-								<th scope="col">센스리더</th>
-								<th scope="col">NVDA</th>
-								<th scope="col">JAWS</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">지원여부</th>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">부가설명</th>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
-					<table>
-						<caption class="a11y_txt">Mobile</caption>
-						<thead>
-							<tr>
-								<th scope="row">스크린 리더</th>
-								<th scope="col">Voice Over</th>
-								<th scope="col">Talk Back</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">지원여부</th>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">부가설명</th>
-								<td></td>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+			<article class="html_code">
+				<h2>HTML코드</h2>
+				<pre>
+					<code>
+<article>
+	<p>고양이</p>
+</article>
+					</code>
+				</pre>
+			</article>
+			<article class="css_code">
+				<h2 id="example_css_code"> 스타일 코드</h2>
+				<code>
+				</code>
+			</article>
+			<article class="script_code">
+				<h2 id="example_js_code">스크립트 코드</h2>
+				<code>
+<span>토끼 만세</span>
+				</code>
 			</article>
 		</main>
 		<!-- 본문 끝 -->
@@ -181,7 +166,7 @@
 
 	<!-- 푸터 -->
 	<footer>
-		<h2 class="width_center">
+<!-- 		<h2 class="width_center">
 			<span class="a11y_txt ">Footer</span>
 			<img src="img/logo_footer.png" alt="">
 		</h2>
@@ -202,10 +187,10 @@
 			</address>
 		</div>
 		<p class="copyright">
-				<span>Copyright 2023 SNC Lab Corp. <span>
-				<span>All rights reserved.</span>
-			</p>
-		<!-- <p class="copyright">@purplemiyazawa</p> -->
+			<span>Copyright 2023 SNC Lab Corp. <span>
+			<span>All rights reserved.</span>
+		</p> -->
+		<p class="copyright">@purplemiyazawa</p>
 		<a href="" id="page_top" aria-label="페이지 최상단으로 이동">
 			<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
 				<path fill="none" d="M0 0h24v24H0z"/>
@@ -214,5 +199,8 @@
 		</a>
 	</footer>
 </body>
+<script>
+document.querySelectorAll("code").forEach(el=>el.innerText = el.innerHTML);
+</script>
 </html>
 
