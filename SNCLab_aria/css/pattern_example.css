@@ -74,6 +74,22 @@ article {
 	margin:3rem auto;
 }
 
+.details_content {
+  // Hiding overflow is necessary for the slide-in effect.
+  overflow: hidden; // Spoils position:sticky on descendant elements if there is any.
+  overflow: clip; // New to Firefox 81, Chrome 90.
+
+  > *:first-child {
+	  transition: margin-top 500ms ease-out;
+
+    details:not([open]) + & {
+      margin-top: -20em;
+    }
+  }
+}
+
+
+
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
 	.content_table {background-color: #444;}
