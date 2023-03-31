@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<title>WAI-ARIA 테스트를 위한 [패턴명]</title>
+	<title>[패턴명] - WAI-ARIA 패턴</title>
 	<meta charset="utf-8">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 	<meta property="og:image" content="">
-	<meta property="og:title" content="WAI-ARIA를 사용한 각종 예시를 모아둔 목록 메인">
-	<meta property="og:description" content="스크린 리더가 어떠한 ARIA를 지원하는지 컴포넌트별로 테스트하기 위한 페이지">
+	<meta property="og:title" content="WAI-ARIA를 사용한 예시 패턴 설명">
+	<meta property="og:description" content="[패턴명] - 스크린 리더가 해당 ARIA를 지원하는지 테스트하기 위한 페이지">
 	<meta property="og:locate" content="ko-kr">
 	<meta property="og:type" content="website">
 	<meta name="theme-color=" content="#7766dd">
@@ -32,12 +32,34 @@
 <body>
 	<a href="#content" id="skip_nav">본문 바로가기</a>
 	<header>
+		<h2 class="a11y_txt">헤더</h2>
 		<div class="width_center">
 			<p>WAI-ARIA 지원 확인</p>
+
+			<!-- 네비게이션-->
+
+			<!-- 네비게이션-->
+			<!-- 브레드크럼 -->
+			<nav class="bread">
+				<h2 class="a11y_txt">브레드크럼</h2>
+				<ul>
+					<li>
+						<a href="">패턴</a>
+					</li>
+					<li>
+						<a href="" aria-current="page">[패턴명]</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- 브레드크럼 끝 -->
 		</div>
 	</header>
+	<!-- 헤더 영역 끝 -->
+
+	<!-- 본문 -->
 	<main class="width_center">
-		<h1 id="content">패턴명</h1>
+		<h1 id="content"><span class="a11y_txt">본문</span>[패턴명]</h1>
 		<article class="commentary">
 			<h2>이 패턴에 대해</h2>
 			<div>
@@ -115,5 +137,43 @@
 			</div>
 		</article>
 	</main>
+
+	<!-- 본문 끝 -->
+
+	<!-- 푸터 -->
+	<footer>
+		<h2 class="width_center">
+			<span class="a11y_txt ">Footer</span>
+			<img src="img/logo_footer.png" alt="">
+		</h2>
+		<div class="footer_in width_center">
+			<div class="ceo">
+				<p>(주)에스앤씨랩 </p>
+				<p>대표 장선영 </p>
+			</div>
+			<address class="office_address">
+				<img src="../icon/place_white_48dp.svg" alt="">
+				<p>서울특별시 성동구 아차산로17길 49 성수 생각공장 데시앙플렉스 1609호, 1610호</p>
+				<p>서울특별시 성동구 성수동2가 280-6 성수 생각공장 데시앙플렉스 1609호, 1610호</p>
+			</address>
+			<address class="contact_info">
+				<p><img alt="" src="../icon/email_white_48dp.svg" height="100%">메일 : cs@snclab.kr</p>
+				<p><img alt="" src="../icon/call_white_48dp.svg">전화 : +82-2-2201-9928</p>
+				<p><img alt="" src="../icon/print_white_48dp.svg">팩스 : +82-2-6280-7842</p>
+			</address>
+		</div>
+		<p class="copyright">
+				<span>Copyright 2023 SNC Lab Corp. <span>
+				<span>All rights reserved.</span>
+			</p>
+		<!-- <p class="copyright">@purplemiyazawa</p> -->
+		<a href="" id="page_top" aria-label="페이지 최상단으로 이동">
+			<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+				<path fill="none" d="M0 0h24v24H0z"/>
+				<path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="#777"/>
+			</svg>
+		</a>
+	</footer>
 </body>
 </html>
+

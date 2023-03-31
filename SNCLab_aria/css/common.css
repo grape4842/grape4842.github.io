@@ -6,7 +6,7 @@ body {
 .width_center {
 	position:relative;
 	margin:0 auto;
-	width:60vw;
+	width:65vw;
 	padding:2rem 0px;
 }
 input, progress {accent-color:#64d;}
@@ -35,6 +35,8 @@ input, progress {accent-color:#64d;}
     top:-1px; left:-1px;
     width:1px; height:1px;}
 h1 {font-size: 2.5rem;}
+.bread ul {display: flex;}
+.bread ul a {padding:1rem;}
 #content {font-size:2rem;}
 h2 {
 	font-size: 2rem;
@@ -51,6 +53,23 @@ a:where(:hover, :focus) {text-decoration:underline; }
 	box-shadow:0 0 0px 2px #b0d737;
 	outline: none;
 }
+table {
+	border-top:solid 1px #76a;
+	border-bottom:solid 1px #76a;
+	margin:1rem auto;
+}
+thead {
+	background-color: rgba(230 220 255 / 1);
+}
+tbody {background-color: #fff;}
+th, td {padding:1rem;}
+tr {border-bottom:1px solid #777;}
+td {
+	border:solid 1px #777;
+	border-right: none;
+}
+
+
 
 ::-webkit-scrollbar {
     width: 20px;  /* 스크롤바의 너비 */
@@ -150,6 +169,13 @@ footer address img {
 		box-shadow:0 0 0px 2px #b0d737;
 		outline: none;
 	}
+	thead{
+		background-color: #37333f;
+	}
+	tbody {
+		background-color: #444;
+	}
+
 }
 
 /*desktop*/

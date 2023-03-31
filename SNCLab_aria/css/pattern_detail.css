@@ -3,41 +3,21 @@ article {
 	padding:2rem;
 	margin:3rem auto;
 }
+h2 {padding-bottom:2rem;}
 .example {
 	background: #fff;
 	border:1px #ddd solid;
 	}
-.support {padding:2rem 0px;}
 .ovsb {
 	display: flex;
 	flex-direction: column;
 }
-.ovsb table {
-	border-top:solid 1px #76a;
-	border-bottom:solid 1px #76a;
-	margin:1rem auto;
-}
-.ovsb thead {
-	background-color: rgba(230 220 255 / 1);
-}
-.ovsb tbody {background-color: #fff;}
+table {margin:1rem auto;}
 
-
-th, td {padding:1rem;}
-tr, td {
-	border:solid 1px #777;
-	border-right: none;
-}
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
 	.example {background: #444;
-	border:1px #222 solid;
-	}
-	.ovsb thead{
-		background-color: #37333f;
-	}
-	.ovsb tbody {
-		background-color: #444;
+	`:1px #222 solid;
 	}
 }
 
