@@ -8,6 +8,7 @@
 	margin-top:5rem;
 }
 .read_first h2 {
+	color:#a60;
 	font-size: 1.7rem;
 }
 #woman_blue {
@@ -44,6 +45,7 @@
 		background: #a60;
 		border-color: #850;
 	}
+	.read_first h2 {color:#fec;}
 	.tile {
 		background: #444;
 		border:1px #222 solid;

@@ -2,8 +2,12 @@
 .main_box {
 	position: relative;}
 .content_table {
-	border:1px solid #777;
-	background-color: #fff;
+		z-index: 2;
+		position: sticky;
+		top:0px;
+		margin:1rem auto;
+		border:1px solid #777;
+		background-color: #fff;
 }
 .content_table h2, .content_table  a {
 	font-size: 1.2rem;
@@ -74,7 +78,38 @@ article {
 	padding:2rem 1rem;
 	margin:3rem auto;
 }
-
+.aria-date-table {
+	width:100%;
+}
+th, td {border:solid 1px #777;}
+th, table {border-top:none;}
+:where(th, td):first-child {
+	border-left:none;
+}
+:where(th, td):last-child {
+	border-right:none;
+}
+tr:last-child, tr:last-child td, table {
+	border-bottom:none;
+}
+.ovsb {overflow-x: scroll;}
+.role_th {width:10%}
+.attri_th {width:30%}
+.element_th {width:10%} 
+.desc_th {width:50%;}
+.code_url {
+	font-family:"BIZ-UDGothic";
+	background-color: #547; 
+	color:white;
+	font-weight: 900;
+	border-radius:5px;
+	padding:0.5rem 1rem;
+	}
+	.code_box {
+		background-color: #fff;
+		padding:0px 1rem;
+	}
+	code {font-family:"BIZ-UDGothic";}
 /*작동하지 않으나 이유는 불명
 .details_content {
   // Hiding overflow is necessary for the slide-in effect.
@@ -110,6 +145,7 @@ article {
 	#Icon_ionic-ios-arrow-down {
 	fill:rgba(255 255 255 / 0.5);
 	}
+	.code_box {background-color:#444;}
 }
 
 /*Desktop*/
@@ -120,11 +156,9 @@ article {
 	}
 	.content_table {
 		grid-column: 8/10;
-		position: sticky;
-		top:0;
 		margin-top:1rem;
 		align-self:start;
-		z-index: 2;
+		top:2rem;
 	}
 	main {
 	grid-column:2/8;
@@ -138,6 +172,13 @@ article {
 }
 /*Mobile*/
 @media screen and (310px < width < 760px) {
+		.content_table h2, .content_table a {
+    	font-size: 1rem;
+    	padding: 1rem;
+	}
+	.content_table h2 {
+		padding:0rem 1rem;
+	}
 
 }
 /*iPhoneSE / Watch?*/

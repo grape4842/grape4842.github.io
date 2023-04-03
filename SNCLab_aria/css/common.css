@@ -37,10 +37,29 @@ input, progress {accent-color:#64d;}
 h1 {font-size: 2.5rem;}
 .bread ul {display: flex;}
 .bread ul a {padding:1rem;}
+.bread li:after {
+	content: '';
+	rotate: 45deg;
+	width:1rem;
+	height: 1rem;
+	background-color: transparent;
+	border-right:1px solid rgba(0 0 0 / 0.5);
+	border-top:1px solid rgba(0 0 0 / 0.5);
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
+.bread li:last-child:after {display: none;}
 #content {font-size:2rem;}
 h2 {
+	line-height: 3rem;
 	font-size: 2rem;
 	color:#437;}
+article > h2 {
+	border-bottom:1px solid #999;
+	margin-bottom:2rem;}
 h3 {font-size:1.7rem;}
 h4 {font-size: 1.5rem;}
 li {list-style:none;}
@@ -69,7 +88,7 @@ td {
 	border-right: none;
 }
 
-
+code, pre {overflow-x: scroll;}
 
 ::-webkit-scrollbar {
     width: 20px;  /* 스크롤바의 너비 */
@@ -163,6 +182,10 @@ svg {display: flex;}
 	body {
 		background-color:#333;
 	}
+	.bread li:after {
+		border-right:1px solid rgba(255 255 255 / 0.5);
+		border-top:1px solid rgba(255 255 255 / 0.5);
+	}
 	h2 {color:#dcf;}
 	:where(button, a, label, input, select, summary):where(:hover), :focus {
 		box-shadow:0 0 0px 2px #b0d737;
@@ -196,6 +219,12 @@ svg {display: flex;}
 @media screen and (310px < width < 760px) {
 	.pcV {display: none;}
 	.width_center {width:90vw;}
+	.bread {font-size: 1rem;}
+	.bread li:after {
+		width:0.5rem;
+		height: 0.5rem;
+	}
+	th, td {padding:0.5rem;}
 	.office_address, .contact_info {
 		flex: 1 0 100%;
 	}
