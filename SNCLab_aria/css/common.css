@@ -35,7 +35,10 @@ input, progress {accent-color:#64d;}
     top:-1px; left:-1px;
     width:1px; height:1px;}
 h1 {font-size: 2.5rem;}
-.bread ul {display: flex;}
+.bread ul {
+	display: flex;
+ 	flex-wrap: wrap;
+}
 .bread ul a {padding:1rem;}
 .bread li:after {
 	content: '';
@@ -219,10 +222,12 @@ svg {display: flex;}
 
 }
 /*Mobile*/
-@media screen and (310px < width < 760px) {
+@media screen and (width < 760px) {
 	.pcV {display: none;}
 	.width_center {width:90vw;}
-	.bread {font-size: 1rem;}
+	.bread {
+		font-size: 1rem;
+		width:100vw;}
 	.bread li:after {
 		width:0.5rem;
 		height: 0.5rem;
@@ -236,17 +241,10 @@ svg {display: flex;}
 }
 /*iPhoneSE / Watch?*/
 @media screen and (width < 310px) {
-	.pcV {display: none;}
 	.width_center {width:95vw;}
-	.office_address, .contact_info {
-		flex: 1 0 100%;
-	}
 	input[type="text"], textarea {
 		overflow-x:hidden;
 		text-overflow:ellipsis;}
-	.ceo {flex-direction: row;}
-	.contact_info {flex-direction: row;}
-	.copyright {flex-direction: column;}
 }
 
 
