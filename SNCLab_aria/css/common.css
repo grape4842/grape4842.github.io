@@ -88,7 +88,10 @@ td {
 	border-right: none;
 }
 
-code, pre {overflow-x: scroll;}
+code, pre {
+	overflow-x: scroll;
+	font-size:1.2rem;
+}
 
 ::-webkit-scrollbar {
     width: 20px;  /* 스크롤바의 너비 */
@@ -244,4 +247,11 @@ svg {display: flex;}
 	.ceo {flex-direction: row;}
 	.contact_info {flex-direction: row;}
 	.copyright {flex-direction: column;}
+}
+
+
+
+/* details 태그 열리는 애니메이션 */
+details[open] > * {
+  animation: open-details 0.3s ease-in-out forwards;
 }
