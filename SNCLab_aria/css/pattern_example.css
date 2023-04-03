@@ -1,5 +1,6 @@
 @charset "utf-8";
-.main_box {position: relative;}
+.main_box {
+	position: relative;}
 .content_table {
 	border:1px solid #777;
 	background-color: #fff;
@@ -74,6 +75,7 @@ article {
 	margin:3rem auto;
 }
 
+/*작동하지 않으나 이유는 불명
 .details_content {
   // Hiding overflow is necessary for the slide-in effect.
   overflow: hidden; // Spoils position:sticky on descendant elements if there is any.
@@ -86,7 +88,7 @@ article {
       margin-top: -20em;
     }
   }
-}
+}*/
 
 
 
@@ -113,17 +115,22 @@ article {
 /*Desktop*/
 @media screen and (width > 1200px) {
 	.main_box {
-		display: flex;
-		flex-direction: row-reverse;
-		align-items: flex-start;
+	display: grid;
+	grid-column-gap:3rem ;
 	}
 	.content_table {
-		margin-left:3rem;
+		grid-column: 8/10;
 		position: sticky;
 		top:0;
+		margin-top:1rem;
+		align-self:start;
 		z-index: 2;
 	}
+	main {
+	grid-column:2/8;
+	grid-row-start:1;
 
+	}
 }
 /*Tablet*/
 @media screen and (760px < width < 1200px) {
