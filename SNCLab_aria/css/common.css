@@ -1,5 +1,6 @@
 @charset "utf-8";
 body {
+	box-sizing: border-box;
 	background-color: #eee;
 	font-size: 1.5rem;
 }
@@ -35,6 +36,7 @@ input, progress {accent-color:#64d;}
     top:-1px; left:-1px;
     width:1px; height:1px;}
 h1 {font-size: 2.5rem;}
+.bread {padding:0px;}
 .bread ul {
 	display: flex;
  	flex-wrap: wrap;
@@ -227,12 +229,15 @@ svg {display: flex;}
 	.width_center {width:90vw;}
 	.bread {
 		font-size: 1rem;
-		width:100vw;}
+		width:100vw!important;}
 	.bread li:after {
 		width:0.5rem;
 		height: 0.5rem;
 	}
+	.bread ul a {padding:0.5rem;}
+	h2 {font-size:1.7rem;}
 	th, td {padding:0.5rem;}
+
 	.office_address, .contact_info {
 		flex: 1 0 100%;
 	}
@@ -242,6 +247,7 @@ svg {display: flex;}
 /*iPhoneSE / Watch?*/
 @media screen and (width < 310px) {
 	.width_center {width:95vw;}
+	code {font-size:1rem;}
 	input[type="text"], textarea {
 		overflow-x:hidden;
 		text-overflow:ellipsis;}
