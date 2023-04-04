@@ -15,6 +15,7 @@ article {
     border-left-color:#c20d4a;
 }
 .note, .warning {
+	margin:1rem 0;
     border-left-width:0.5rem;
     border-left-style: solid;
     padding:1rem;
