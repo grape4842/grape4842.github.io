@@ -7,6 +7,18 @@ article {
 	background: #fff;
 	border:1px #ddd solid;
 	}
+.note {
+	border-left-color:#52e052;
+	background: #e9fbe9;}
+.warning {
+    background-color: #fdd4e1;
+    border-left-color:#c20d4a;
+}
+.note, .warning {
+    border-left-width:0.5rem;
+    border-left-style: solid;
+    padding:1rem;
+}
 .ovsb {
 	display: flex;
 	flex-direction: column;
@@ -16,8 +28,10 @@ table {margin:1rem auto;}
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
 	.example {background: #444;
-	`:1px #222 solid;
+	border:1px #222 solid;
 	}
+	.note {background: #464;}
+	.warning {background: #423;}
 }
 
 /*Desktop*/
