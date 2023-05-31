@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>カラーパレット - ねじ</title>
+	<meta charset="utf-8">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta property="og:image" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:locate" content="">
+	<meta property="og:type" content="website">
+	<meta name="theme-color=" content="#7766dd">
+	<!-- favicon -->
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/reset_copy.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	
+	<!-- font -->
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+</head>
+
+<body>
+	<header>
+		<div class="center">
+			<h1>カラーパレット</h1>
+		</div>
+	</header>
+	<main class="center">
+		<section>
+			<h2>色を選ぶ</h2>
+			<p>色の系統をまずおおまかに選びましょう。</p>
+			<ul class="base_color_list">
+				<li>
+					<button class="base_color_cell">
+						<span class="base_color_name">○○色</span>
+						<span class="selected_plural">2</span>
+					</button>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>色の明るさ · 色の濃さを選ぶ</h2>
+			<p>色の濃さを選んで次に明るさを選びましょう。</p>
+				<ul>
+					<li>
+						<label for="color-light">色の明るさ</label>
+						<div>
+							<span>明るい</span>
+							<input id="color-light" type="range" name="">
+							<span>暗い</span>
+						</div>
+					</li>
+					<li>
+						<label for="color-saturation">色の濃さ</label>
+						<div>
+							<span>薄い</span>
+							<input id="color-saturation" type="range" name="">
+							<span>濃い</span>
+						</div>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<button class="function">最初に戻す</button>
+					</li>
+					<li>
+						<button class="function">パレットに保存する</button>	
+					</li>
+				</ul>
+		</section>
+		<section>
+			<h2>カラーパレット</h2>
+			<p>色を細かく選んだらパレットに追加しましょう。トレイには1から順番に保存されます。</p>
+			<ul class="square_parent palette_list">
+				<li>
+					<input id="" type="radio" name="color_palette">
+					<label for="">番パレット</label>
+				</li>
+			</ul>
+			<ul class="palette_control">
+				<li>
+					<button class="function">選んだ色を削す</button>
+				</li>
+				<li>
+					<button class="function">パレットを空にする</button>
+				</li>
+				<li>
+					<button class="function">トレイに保存する</button>
+				</li>
+			</ul>
+			
+		</section>
+		<section>
+			<h2>カラーパレットトレイ</h2>
+			<p>カラーパレットを保管するトレイです。</p>
+			<ul class="square_parent tray_list">
+				<li>
+					<span class="" aria-hidden="true">1</span>
+					<input id="tray1" type="radio" name="">
+					<label class="a11y_txt" for="tray1">1番トレイ</label>
+				</li>
+				<li>
+					<span class="" aria-hidden="true">2</span>
+					<input id="tray2" type="radio" name="">
+					<label class="a11y_txt" for="tray2">2番トレイ</label>
+				</li>
+				<li>
+					<span class="" aria-hidden="true">3</span>
+					<input id="tray3" type="radio" name="">
+					<label class="a11y_txt" for="tray3">3番トレイ</label>
+				</li>
+				<li>
+					<span class="" aria-hidden="true">4</span>
+					<input id="tray4" type="radio" name="">
+					<label class="a11y_txt" for="tray4">4番トレイ</label>
+				</li>
+				<li>
+					<span class="" aria-hidden="true">5</span>
+					<input id="tray5" type="radio" name="">
+					<label class="a11y_txt" for="tray5">5番トレイ</label>
+				</li>
+				<li>
+					<span class="" aria-hidden="true">6</span>
+					<input id="tray6" type="radio" name="">
+					<label class="a11y_txt" for="tray6">6番トレイ</label>
+				</li>
+				<li>
+					<span class="" aria-hidden="true">7</span>
+					<input id="tray7" type="radio" name="">
+					<label class="a11y_txt" for="tray7">7番トレイ</label>
+				</li>
+				<li>
+					<span class="" aria-hidden="true">8</span>
+					<input id="tray8" type="radio" name="">
+					<label class="a11y_txt" for="tray8">8番トレイ</label>
+				</li>
+			</ul>
+			<ul class="tray_control">
+				<li>
+					<button class="function">選んだトレイを空にする</button>
+				</li>
+				<li>
+					<button class="function">すべてのトレイを空にする</button>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>その他説明</h2>
+		</section>
+	</main>
+	<footer>
+		<div class="center">
+			<p class="copyright">Copyright Neji</p>
+		</div>
+	</footer>
+</body>
+</html>
