@@ -72,18 +72,18 @@ td {}
 
 
 
-.copyright {text-align: center;`}
+.copyright {text-align: center;}
 
 
 /*Desktop*/
 @media screen and (1100px < width) {
-	.center {width:60vw;}
+	.center {width:55vw;}
 	.pc_view {display:block;}
 }
 
 /*Tablet*/
 @media screen and (760px < width < 1100px) {
-	.center {width:80vw;}
+	.center {width:70vw;}
 }
 
 /*Mobile*/
@@ -93,5 +93,5 @@ td {}
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-
+	footer {background-color: #000;}
 }
