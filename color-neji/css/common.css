@@ -15,13 +15,30 @@ main > * {padding:1rem 0px;}
 	width:90vw;
 	padding:2rem 0px;
 	margin:0px auto;}
+
 button, a, input {
+	position: relative;
 	min-width: 3rem;
 	min-height: 3rem;
 }
 button {
-	padding:5px;
+	margin:5px;
+	padding:5px 1rem;
 	border-radius:8px;
+	transition:0.1s scale, 0.1s filter;
+}
+button:active {
+	filter:contrast(300%);
+	scale: 0.9;
+}
+
+input {border:1px solid;}
+.square_parent li {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio:1;
+	border:1px solid black;
 }
 .base_color_cell {
 	position: relative;
@@ -32,22 +49,40 @@ button {
 	border:1px solid black;
 }
 .base_color_name {
-	background-color:rgba(255 255 255 / 0.7);
+	background-color:white;
+	border-radius: 5px;
 	color:black;
 	padding:5px;
 	position: absolute;
-	inset:0;
+	top:-2.5rem;
+	width:5rem;
+	height:2rem;
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+ button:where( :focus, :hover) .base_color_name{
+	opacity: 1;
 }
 .selected_plural {
 	justify-content: center;
+	align-items: center;
 	color:black;
 	display:inline-flex;
 	background-color: #fff;
 	aspect-ratio:1;
 	width:50%;
 	}
-.selected {box-shadow: box-shadow: 0px 0px 0px 2px white,0px 0px 0px 2px black;}
-.selected_light {box-shadow: box-shadow: 0px 0px 0px 1px white,0px 0px 0px 1px black;}
+.selected_cell:before {
+	content:'';
+	position: absolute;
+	top:-10px;
+	left:-10px;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 2rem;
+	background-color: #baf;
+}
+.selected_light {box-shadow: 0px 0px 0px 1px white,0px 0px 0px 1px black;}
 ul:has( .function) {
 	display: flex;
 }
@@ -61,12 +96,25 @@ input[type="radio"] {
 	aspect-ratio:1;
 	border-radius:8px;
 }
-.square_parent li {
-	display: inline-flex;
-	justify-content: center;
+.p_color {
+	padding:5px;
+	border-radius: 5px;
+	flex-wrap: wrap;
+	display: flex;
+	flex:1 1 30%;
+	justify-content: space-evenly;
 	align-items: center;
-	aspect-ratio:1;
-	border:1px solid black;}
+	width:100%;
+	height: 100%;
+	position: absolute;
+}
+.num_text {border:none !important;}
+.p_color li  {
+	border:0.1px solid;
+	width:30%;
+	height:30%;
+	aspect-ratio: 1;
+}
 td,th {margin:5px;}
 td {}
 
@@ -79,11 +127,18 @@ td {}
 @media screen and (1100px < width) {
 	.center {width:55vw;}
 	.pc_view {display:block;}
+	button, a, input {
+		min-width: 5rem;
+	}
 }
 
 /*Tablet*/
 @media screen and (760px < width < 1100px) {
 	.center {width:70vw;}
+		button, a, input {
+		min-width: 4rem;
+	}
+
 }
 
 /*Mobile*/

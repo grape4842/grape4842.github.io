@@ -34,9 +34,9 @@
 		<section>
 			<h2>色を選ぶ</h2>
 			<p>色の系統をまずおおまかに選びましょう。</p>
-			<ul class="base_color_list">
+			<ul class="base_color_list square_parent">
 				<li>
-					<button class="base_color_cell">
+					<button class="base_color_cell selected_cell">
 						<span class="base_color_name">○○色</span>
 						<span class="selected_plural">2</span>
 					</button>
@@ -48,19 +48,33 @@
 			<p>色の濃さを選んで次に明るさを選びましょう。</p>
 				<ul>
 					<li>
-						<label for="color-light">色の明るさ</label>
+						<label for="color_light">色の明るさ</label>
 						<div>
 							<span>明るい</span>
-							<input id="color-light" type="range" name="">
+							<input list="light_ctrl" id="color_light" type="range" name="color_ctrl" max="20">
 							<span>暗い</span>
+							<datalist id="light_ctrl">
+								<option value="0"></option>
+								<option value="5"></option>
+								<option value="10"></option>
+								<option value="15"></option>
+								<option value="20"></option>
+							</datalist>
 						</div>
 					</li>
 					<li>
-						<label for="color-saturation">色の濃さ</label>
+						<label for="color_saturation">色の濃さ</label>
 						<div>
 							<span>薄い</span>
-							<input id="color-saturation" type="range" name="">
+							<input list="saturation_ctrl" id="color_saturation" type="range" name=color_ctrl" max="20">
 							<span>濃い</span>
+							<datalist id="saturation_ctrl">
+								<option value="0"></option>
+								<option value="5"></option>
+								<option value="10"></option>
+								<option value="15"></option>
+								<option value="20"></option>
+							</datalist>
 						</div>
 					</li>
 				</ul>
@@ -78,8 +92,36 @@
 			<p>色を細かく選んだらパレットに追加しましょう。トレイには1から順番に保存されます。</p>
 			<ul class="square_parent palette_list">
 				<li>
-					<input id="" type="radio" name="color_palette">
-					<label for="">番パレット</label>
+					<input id="palette1" type="radio" name="palette">
+					<label for="palette1">1番パレット</label>
+				</li>
+				<li>
+					<input id="palette2" type="radio" name="palette">
+					<label for="palette2">2番パレット</label>
+				</li>
+				<li>
+					<input id="palette3" type="radio" name="palette">
+					<label for="palette3">3番パレット</label>
+				</li>
+				<li>
+					<input id="palette4" type="radio" name="palette">
+					<label for="palette4">4番パレット</label>
+				</li>
+				<li>
+					<input id="palette5" type="radio" name="palette">
+					<label for="palette5">5番パレット</label>
+				</li>
+				<li>
+					<input id="palette6" type="radio" name="palette">
+					<label for="palette6">6番パレット</label>
+				</li>
+				<li>
+					<input id="palette7" type="radio" name="palette">
+					<label for="palette7">7番パレット</label>
+				</li>
+				<li>
+					<input id="palette8" type="radio" name="palette">
+					<label for="palette8">8番パレット</label>
 				</li>
 			</ul>
 			<ul class="palette_control">
@@ -100,43 +142,131 @@
 			<p>カラーパレットを保管するトレイです。</p>
 			<ul class="square_parent tray_list">
 				<li>
-					<span class="" aria-hidden="true">1</span>
-					<input id="tray1" type="radio" name="">
+					<ul class="p_color">
+						<li style="background-color: #54a;"></li>
+						<li style="background-color: #76f;"></li>
+						<li style="background-color: #baf;"></li>
+						<li style="background-color: #edf;"></li>
+						<li class="num_text" aria-hidden="true">1</li>
+						<li style="background-color: #213;"></li>
+						<li style="background-color: #426;"></li>
+						<li style="background-color: #5f506a;"></li>
+						<li style="background-color: #0a0;"></li>
+					</ul>
+					
+					<input id="tray1" type="radio" name="tray">
 					<label class="a11y_txt" for="tray1">1番トレイ</label>
 				</li>
 				<li>
-					<span class="" aria-hidden="true">2</span>
-					<input id="tray2" type="radio" name="">
+					<ul class="p_color">
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li class="num_text" aria-hidden="true">2</li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+					</ul>
+					
+					<input id="tray2" type="radio" name="tray">
 					<label class="a11y_txt" for="tray2">2番トレイ</label>
 				</li>
 				<li>
-					<span class="" aria-hidden="true">3</span>
-					<input id="tray3" type="radio" name="">
+					<ul class="p_color">
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li class="num_text" aria-hidden="true">3</li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+					</ul>
+					
+					<input id="tray3" type="radio" name="tray">
 					<label class="a11y_txt" for="tray3">3番トレイ</label>
 				</li>
 				<li>
-					<span class="" aria-hidden="true">4</span>
-					<input id="tray4" type="radio" name="">
+					<ul class="p_color">
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li class="num_text" aria-hidden="true">4</li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+					</ul>
+					
+					<input id="tray4" type="radio" name="tray">
 					<label class="a11y_txt" for="tray4">4番トレイ</label>
 				</li>
 				<li>
-					<span class="" aria-hidden="true">5</span>
-					<input id="tray5" type="radio" name="">
+					<ul class="p_color">
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li class="num_text" aria-hidden="true">5</li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+					</ul>
+					
+					<input id="tray5" type="radio" name="tray">
 					<label class="a11y_txt" for="tray5">5番トレイ</label>
 				</li>
 				<li>
-					<span class="" aria-hidden="true">6</span>
-					<input id="tray6" type="radio" name="">
+					<ul class="p_color">
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li class="num_text" aria-hidden="true">6</li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+					</ul>
+					
+					<input id="tray6" type="radio" name="tray">
 					<label class="a11y_txt" for="tray6">6番トレイ</label>
 				</li>
 				<li>
-					<span class="" aria-hidden="true">7</span>
-					<input id="tray7" type="radio" name="">
+					<ul class="p_color">
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li class="num_text" aria-hidden="true">7</li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+					</ul>
+					
+					<input id="tray7" type="radio" name="tray">
 					<label class="a11y_txt" for="tray7">7番トレイ</label>
 				</li>
 				<li>
-					<span class="" aria-hidden="true">8</span>
-					<input id="tray8" type="radio" name="">
+					<ul class="p_color">
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li class="num_text" aria-hidden="true">8</li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+						<li style="background-color: ;"></li>
+					</ul>
+					
+					<input id="tray8" type="radio" name="tray">
 					<label class="a11y_txt" for="tray8">8番トレイ</label>
 				</li>
 			</ul>
@@ -158,5 +288,4 @@
 			<p class="copyright">Copyright Neji</p>
 		</div>
 	</footer>
-</body>
-</html>
+tray
