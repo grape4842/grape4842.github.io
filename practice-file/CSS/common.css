@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.pc_view {display: none;}
+main > * {padding:1rem 0px;}
+.a11y_txt {
+	overflow:hidden;
+	display:inline-block;
+    position:absolute;
+    font-size:1px;
+    z-index:-1;
+    top:-1px; left:-1px;
+    width:1px; height:1px;}
+
+.w90 {
+	width:90vw;
+	padding:2rem 0px;
+	margin:0px auto;
+}
+button, a, input, summary {
+	border:1px solid;
+	min-width: 3rem;
+	min-height: 3rem;
+}
+button {
+	aspect-ratio:1;
+}
+.profile_img {
+	background:url('../img/PurpleApple.png') contain center center;
+}
+
+/*Desktop*/
+@media screen and (1100px < width) {
+	.w90 {width:55vw;}
+	.pc_view {display:block;}
+}
+
+/*Tablet*/
+@media screen and (760px < width < 1100px) {
+	.w90 {width:70vw;}
+}
+
+/*Mobile*/
+@media screen and (width < 760px) {
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	
+}
