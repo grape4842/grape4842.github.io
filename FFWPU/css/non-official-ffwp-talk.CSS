@@ -8,9 +8,6 @@
 		transition: 0.3s ease;
 		}
 
-#logo {
-	width:3rem;
-	vertical-align:middle;}
 .hello p {
 	display:inline;
 	padding-right:1rem;
@@ -61,7 +58,9 @@
 	border-radius: 10px;
 	color:#ffa;
 }
-.entry svg {scale:3;}
+.entry svg {
+	scale:3;
+	padding-right: 0.5rem;}
 .map-icon {
 	width: 3rem;	
 }

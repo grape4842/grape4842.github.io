@@ -23,6 +23,7 @@ main, header > *, footer > div {
 	margin:0px auto; 
 	width:90vw;
 	box-sizing:border-box;
+	padding:0.5rem 0px;
 }
 section {margin:3rem auto;}
 article {
@@ -123,7 +124,7 @@ table {
 	margin-bottom:3rem;
 	width: 100%;
 	margin-top:0px;}
-td,th {
+th, td {
 	word-break: keep-all; line-break:normal;
 	border:1px solid #baf;
 	vertical-align:middle; 
@@ -134,6 +135,10 @@ th{background-color:#54a;
 	font-weight:700;
 	font-size:1.3rem;}
 td {font-weight:400;}
+th svg, td svg {
+	width: 2rem;
+	height: 2rem;
+}
 
 p {margin:0px; padding:0.3rem 0px;}
 ul {margin:0px; 
@@ -153,7 +158,6 @@ h2 {font-weight:900;
 }
 form {position:relative;}
 svg {
-	padding-right:10px;
 	vertical-align:middle;
 	display:inline-flex;
 	align-items:center;}
@@ -169,7 +173,10 @@ svg {
 	margin-right:10px;
 	min-width:2rem;
 	min-height:2rem;
- 	color:white;}
+ 	color:white;
+}
+
+#logo {min-width: 2rem; min-height: 2rem; padding-right: 0.5rem;}
 .line1 {background:#052F93; aspect-ratio:1/1;}
 .line2 {background:#10A643; aspect-ratio:1/1;}
 .line3 {background:#DE6D00; aspect-ratio:1/1;}
@@ -216,6 +223,6 @@ svg {
 }
 
 @media (prefers-color-scheme: dark) {
-	.meter {color:#fde;}
+	.meter {color:#fcb;}
 	h2 {color:#ffa;}
 }
