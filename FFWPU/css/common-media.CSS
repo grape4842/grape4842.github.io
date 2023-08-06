@@ -32,8 +32,6 @@
 @media screen and (350px > width) {
 	body {font-size:1rem;}
 	main, header > *, footer > div {width:95vw;}
-	h1 {font-size:1.4rem;}
-	h2 {font-size:1.2rem;}
 	th, td {padding:0.5rem;}
 	#logo {width:2rem; height:2rem;}
 }
