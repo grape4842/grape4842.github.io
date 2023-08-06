@@ -121,9 +121,7 @@ input[type="radio"] {
 table {
 	margin:0 auto;
 	border-collapse:collapse;
-	margin-bottom:3rem;
-	width: 100%;
-	margin-top:0px;}
+	width: 100%;}
 th, td {
 	word-break: keep-all; line-break:normal;
 	border:1px solid #baf;
@@ -147,6 +145,8 @@ ul {margin:0px;
 li {
 	list-style:none;}
 h1, h2, h3, h4, h5, h6 {
+	padding:0.5rem;
+	margin-bottom: 1rem;
 	position:relative;}
 h1 {
 	margin:0px;
@@ -158,9 +158,12 @@ h2 {font-weight:900;
 }
 form {position:relative;}
 svg {
+	padding:0px;
+	margin:0px;
 	vertical-align:middle;
 	display:inline-flex;
-	align-items:center;}
+	align-items:center;
+}
 .VPC {display:none;}
 
 .metro-line {
@@ -176,7 +179,7 @@ svg {
  	color:white;
 }
 
-#logo {min-width: 2rem; min-height: 2rem; padding-right: 0.5rem;}
+#logo {width: 3rem; height: 3rem; padding-right: 0.5rem;}
 .line1 {background:#052F93; aspect-ratio:1/1;}
 .line2 {background:#10A643; aspect-ratio:1/1;}
 .line3 {background:#DE6D00; aspect-ratio:1/1;}

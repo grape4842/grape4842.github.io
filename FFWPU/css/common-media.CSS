@@ -4,20 +4,25 @@
 	main, header > *, footer > div {
 		margin:0px auto; 
 		width:60vw;
+		padding:1rem 0px;
 	}
 	header {
 			top:0px;
 			display:flex;
-			z-index:2;}
+			z-index:2;
+		}
+	article {padding:3rem;}
 	table {margin-bottom:5rem;}
 	td,th {
 		padding:1rem;
-		font-size:1.4rem;}
-	th {font-size:1.5rem;}
-	h2 {font-size:1.5rem;}
-	h1 {
-		font-size:1.7rem;
-		padding:1rem 0px;}
+		}
+	th {font-size:1.2rem;}
+	h1,h1 * {
+		font-size:2.5rem;
+		padding:1rem 0px;
+	}
+	h2 {font-size:2rem;}
+	h3 {font-size: 1.5rem;}
 	#logo {width:4rem;}
 	textarea {font-size:2rem; line-height:2.5rem;}
 	}
@@ -25,13 +30,14 @@
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
 	main, header > *, footer > div {width:80vw;}
-	article:has(.site-list) {padding:3rem;}
+	article {padding:2rem;}
 	textarea {font-size:2rem; line-height:2.5rem;}
 }
 
 @media screen and (350px > width) {
 	body {font-size:1rem;}
 	main, header > *, footer > div {width:95vw;}
+	article {padding:1rem;}
 	th, td {padding:0.5rem;}
 	#logo {width:2rem; height:2rem;}
 }
