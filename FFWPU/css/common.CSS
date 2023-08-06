@@ -27,8 +27,7 @@ main, header > *, footer > div {
 section {margin:3rem auto;}
 article {
 	margin:3rem auto;
-	padding:2rem;
-	padding-top:1rem !important;
+	padding:1.5rem;
 	border-radius:30px;
 	border:2px solid #a7f;
 }
