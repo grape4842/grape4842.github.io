@@ -150,7 +150,8 @@ h1 {
 	font-weight:900;}
 h2 {font-weight:900;
 	font-size:1.3rem;
-	color:#ffa;}
+	color:#850;
+}
 form {position:relative;}
 svg {
 	padding-right:10px;
@@ -189,11 +190,12 @@ svg {
 	align-items:center;
 	margin-right:10px;
 	border-radius:5px;
+	color:#fff;
 	padding:0px 5px;}
 .g-bus {background-color:#5BB025;}
 .b-bus {background-color:#3D5BAB;}
 .r-bus {background-color:#F73711;}
-.meter {color:#fde; padding:0px 10px;}
+.meter {color:#C30; padding:0px 10px;}
 #page-top {
 	width:2.5rem;
 	height:2.5rem;
@@ -211,6 +213,10 @@ svg {
 	padding:0px;
 	margin:0px;
 	width:100%;
-	height:100%;}
+	height:100%;
+}
 
-
+@media (prefers-color-scheme: dark) {
+	.meter {color:#fde;}
+	h2 {color:#ffa;}
+}

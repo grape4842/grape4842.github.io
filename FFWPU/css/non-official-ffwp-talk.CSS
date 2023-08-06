@@ -59,8 +59,9 @@
 	background-color:#63B;
 	border: 2px solid rgba(255, 255, 255, 0.3);
 	border-radius: 10px;
+	color:#ffa;
 }
-.entry svg {scale:1.5;}
+.entry svg {scale:3;}
 .map-icon {
 	width: 3rem;	
 }
@@ -80,7 +81,6 @@
 		padding:30px;
 		margin:3rem auto;
 	}
-	.entry svg {scale:2;}
 }
 
 /*700px〜1200px iPad*/
