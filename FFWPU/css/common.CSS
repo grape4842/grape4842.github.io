@@ -171,15 +171,15 @@ svg {
 	min-width:2rem;
 	min-height:2rem;
  	color:white;}
-.line1 {background:#052F93;}
-.line2 {background:#10A643;}
-.line3 {background:#DE6D00;}
-.line4 {background:#0099d1;}
-.line5 {background:#A95094;}
-.line6 {background:#D08D1A;}
-.line7 {background:#657931;}
-.line8 {background:#E74E6D;}
-.line9 {background:#B58600;}
+.line1 {background:#052F93; aspect-ratio:1/1;}
+.line2 {background:#10A643; aspect-ratio:1/1;}
+.line3 {background:#DE6D00; aspect-ratio:1/1;}
+.line4 {background:#0099d1; aspect-ratio:1/1;}
+.line5 {background:#A95094; aspect-ratio:1/1;}
+.line6 {background:#D08D1A; aspect-ratio:1/1;}
+.line7 {background:#657931; aspect-ratio:1/1;}
+.line8 {background:#E74E6D; aspect-ratio:1/1;}
+.line9 {background:#B58600; aspect-ratio:1/1;}
 .gyline {background-color:#5F9C82; padding:0px 10px;}
 
 .bus-line {
