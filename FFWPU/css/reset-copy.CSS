@@ -2,18 +2,30 @@
 :lang(ko) {word-break: keep-all; line-break:normal;}
 ::selection {background:#31a; color:white;}
 @font-face { 
-	font-family:"BIZ-UDGothic";
-	src: url("../../font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
+	font-family:"BIZ-UDPGothic";
+	src: url("../../font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
 	font-weight:400;
 	font-display : swap;
 } 
 
 @font-face { 
-	font-family:"BIZ-UDGothic";
-	src: url("../../font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
+	font-family:"BIZ-UDPGothic";
+	src: url("../../font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
 	font-weight:700;
 	font-display : swap;
 } 
+
+.hidden {
+  overflow: hidden;
+  border: 0;
+  position: absolute;
+  /* relative를 사용해도 무관할 듯 하다 */
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
 
 
 *,
@@ -28,7 +40,7 @@
 :where(html) {
 	-webkit-text-size-adjust: none; /* iOSのランドスケープでテキストが調整されないようにする */
 	color-scheme: dark light; /* ユーザーがダークテーマを好む場合、自動的にダークテーマになる */
-	font-family:"BIZ-UDGothic", sans-serif, serif;
+	font-family:"KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
 }
  
 @supports not (min-block-size: 100dvb) {
@@ -45,8 +57,6 @@
 }
  
 :where(body):not(img) {
-	block-size: 100%; /* サファリ以外のブラウザのフォールバック */
-	block-size: 100dvb; /* 1dvbは動的ビューポートの長さの1%、100dvbで高さいっぱいに */
 	line-height: 1.5; /* アクセシブルな行の高さ */
 	-webkit-font-smoothing: antialiased; /* テキストのレンダリングを改善 */
 }
@@ -63,7 +73,7 @@
 	resize: block;
 }
  
-:where(button, label, select, summary, [role='button'], [role='option']) {
+:where(:focus, button, label, select, summary, [role='button'], [role='option']) {
 	cursor: pointer; /* インタラクティブなものにカーソルを合わせる */
 }
  
