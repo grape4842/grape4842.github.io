@@ -3,19 +3,45 @@
 ::selection {background:#31a; color:white;}
 @font-face { 
 	font-family:"BIZ-UDPGothic";
-	src: url("../../font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
+	src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
 	font-weight:400;
 	font-display : swap;
-	font-size: 1.1rem;
+	font-size: 18pt;
 } 
 
 @font-face { 
 	font-family:"BIZ-UDPGothic";
-	src: url("../../font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
+	src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
 	font-weight:700;
 	font-display : swap;
-	font-size: 1.1rem;
+	font-size: 18pt;
 } 
+
+@font-face { 
+	font-family:"KoddiUDOnGothic";
+	src: url("../../font/Koddi/KoddiUDOnGothic-Regular.woff2") format("woff2");
+	src: url("../../font/Koddi/KoddiUDOnGothic-Regular.woff") format("woff");
+	src: url("../../font/Koddi/KoddiUDOnGothic-Regular.otf") format("opentype");
+	font-weight:400;
+	font-display : swap;
+} 
+@font-face { 
+	font-family:"KoddiUDOnGothic";
+	src: url("../../font/Koddi/KoddiUDOnGothic-Bold.woff2") format("woff2");
+	src: url("../../font/Koddi/KoddiUDOnGothic-Bold.woff") format("woff");
+	src: url("../../font/Koddi/KoddiUDOnGothic-Bold.otf") format("opentype");
+	font-weight:700;
+	font-display : swap;
+} 
+@font-face { 
+	font-family:"KoddiUDOnGothic";
+	src: url("../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+	src: url("../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+	src: url("../../font/Koddi/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+	font-weight:900;
+	font-display : swap;
+}
+
 
 .hidden {
   overflow: hidden;
@@ -37,7 +63,7 @@
 	margin: 0; /* マージンは0に */
 	padding: 0; /* パディングも常に0に */
 	box-sizing: border-box; /* もちろん、より直感的なbox-sizingに設定 */
-	font-size: 1.1rem;
+	font-size: 18pt;
 }
  
 :where(html) {
@@ -60,15 +86,12 @@
 }
  
 :where(body):not(img) {
-	line-height: 1.5; /* アクセシブルな行の高さ */
+	line-height: 1.5rem; /* アクセシブルな行の高さ */
 	-webkit-font-smoothing: antialiased; /* テキストのレンダリングを改善 */
 }
  
 :where(input, button, textarea, select, a) {
 	font: inherit; /* フォーム コントロールは親フォントを継承 */
-}
-:where(a) {
-	color: inherit;
 }
  
 :where(textarea) {
@@ -93,16 +116,22 @@
 }
  
 :where(a) {
-	display: inline-flex;
+	color: inherit;
+	display: inline-flex;	
+	text-decoration:transparent; 
+	transition:text-decoration 0.2s;
 	text-underline-offset: 4px; /* 下線の上にスペースを追加する */
 }
- 
+a:focus, a:hover {
+	text-decoration:underline;
+}
+
 :where(ul, ol, li) {
 	list-style: none; /* ビュレットを削除、必要に応じて手動で追加する */
 }
  
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
-	display: inline-block; /* 置換された要素をより予測可能にする */
+	display: inline-flex; /* 置換された要素をより予測可能にする */
 	aspect-ratio:auto;
 	object-fit: contain;
 }
@@ -127,4 +156,20 @@
 	block-size: 0;
 	overflow: visible;
 }
-table {border-collapse: collapse;}
+table {
+	border-collapse: collapse;
+}
+::-webkit-scrollbar {
+    width: 1rem;  
+}
+/* 스크롤바의 너비 */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10rem;
+}
+/* 스크롤바의 색상 */
+
+::-webkit-scrollbar-track {
+	border-radius: 10rem;
+}
+/*스크롤바 뒷 배경 색상*/

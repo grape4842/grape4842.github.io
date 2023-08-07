@@ -1,46 +1,4 @@
 @charset "utf-8";
-:lang(ko) {word-break: keep-all; line-break:normal;}
-::selection {background:#31a; color:white;}
-@font-face { 
-	font-family:"BIZ-UDGothic";
-	src: url("../../font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
-} 
-
-@font-face { 
-	font-family:"BIZ-UDGothic";
-	src: url("../../font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
-	font-weight:700;
-	font-display : swap;
-} 
-
-@font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("../../font/Koddi/KoddiUDOnGothic-Regular.woff2") format("woff2");
-	src: url("../../font/Koddi/KoddiUDOnGothic-Regular.woff") format("woff");
-	src: url("../../font/Koddi/KoddiUDOnGothic-Regular.otf") format("opentype");
-	font-weight:400;
-	font-display : swap;
-} 
-@font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("../../font/Koddi/KoddiUDOnGothic-Bold.woff2") format("woff2");
-	src: url("../../font/Koddi/KoddiUDOnGothic-Bold.woff") format("woff");
-	src: url("../../font/Koddi/KoddiUDOnGothic-Bold.otf") format("opentype");
-	font-weight:700;
-	font-display : swap;
-} 
-@font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
-	src: url("../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff") format("woff");
-	src: url("../../font/Koddi/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
-	font-weight:900;
-	font-display : swap;
-}
-
-body * {-webkit-font-smoothing:antialiased !important;}
 body {background-color:#a9e; color:#103; margin:0px; accent-color:#5544aa;}
 main {
 	margin:2rem auto; 
