@@ -42,7 +42,18 @@
 
 body * {-webkit-font-smoothing:antialiased !important;}
 body {background-color:#a9e; color:#103; margin:0px; accent-color:#5544aa;}
-main {margin:2rem auto; width:60%; display:block;}
+main {
+	margin:2rem auto; 
+	width:60vw; 
+	display:block;
+}
+@media screen and (800px > width) {
+	main {
+	margin:2rem auto; 
+	width:90vw; 
+}
+
+}
 footer,header {
 	margin:0px; 
 	background-color:#103;
@@ -60,15 +71,12 @@ td, th {padding:10px; font-weight:bold; border:solid 1px #103;}
 	justify-content:center;}
 
 .h1:after {content:"";
-	display:block;
 	position:fixed;
-	width:80vmin; height:80vmin;
-	opacity:0.8;
-	transform:scale(1) translateY(0);
+	width:60vmin; height:60vmin;
+	aspect-ratio:1/1;
 	border-radius:100%;
-	background:radial-gradient(rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.4) 80%);
+	background:radial-gradient(rgba(220 200 255 / 0.05) 50%, rgba(220 200 255 / 0.4) 80%, rgba(220 200 255 / 0.1) 90%);
 	animation: bubble 10s infinite ease-in-out;
-	z-index:-1;
 	}
 
 .h1 .earth {
@@ -76,13 +84,13 @@ td, th {padding:10px; font-weight:bold; border:solid 1px #103;}
 	justify-content:center;
 	align-items:center;
 	transform:scale(0.7);
-	width: 80vmin;
-	height: 80vmin;
+	width: 50vmin;
+	height: 50vmin;
 	border-radius:100%;
 	background: url('https://raw.githubusercontent.com/Yousuke777/texture/main/blob.png') repeat-x;
 	background-size: auto 100%;
 	background-position:center center;
-	box-shadow: -20px -10px 40px rgba(0, 0, 0, .75) inset;
+	box-shadow: -1.5rem -1rem 2.5rem rgba(0 0 0 / .7) inset;
 	animation: rotate-anim 30s linear infinite, rotate-time 10s linear infinite;
 }
 @keyframes rotate-anim {
@@ -96,9 +104,9 @@ td, th {padding:10px; font-weight:bold; border:solid 1px #103;}
 }
 
 @keyframes bubble{
-	from {transform:opacity:0.6; transform:scale(1);}
+	from {transform:opacity:0.5; transform:scale(1);}
 	50%{transform:opacity:1; transform:scale(1.5);}
-	to{transform:opacity:0.6; transform:scale(1);}
+	to{transform:opacity:0.5; transform:scale(1);}
 }
 
 input {
