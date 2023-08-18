@@ -1,0 +1,111 @@
+@charset "utf-8";
+/*Mobile First*/
+.pc_view {display: none;}
+.dark_view {display: none;}
+.center {
+	width:90vw;
+	padding:2rem 0px;
+	margin:0px auto;
+}
+
+address {
+	text-align: center;
+	font-style: normal;
+}
+
+a:focus, a:hover {
+	text-decoration:underline wavy rgba(0 0 0 / 0.5);
+	text-underline-offset:4px;}
+a:active, summary:active {
+	transition:0.2s filter, 0.4s transform;
+	filter:brightness(1.2) saturation(1.2);
+}
+
+input, textarea {
+	accent-color:#54a;
+	padding:0px 0.5rem;
+}
+
+th,td, a, button {padding:0.5rem;}
+
+/*대중교통*/
+.metro-line {
+	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
+	display:inline-flex;
+	font-size: 1rem;
+	border-radius:100px;
+	justify-content:center;
+	align-items:center;
+	margin-right:10px;
+	min-width:2rem;
+	min-height:2rem;
+ 	color:white;
+}
+
+#logo {width: 3rem; height: 3rem; padding-right: 0.5rem;}
+.numline {aspet-ratio:1/1;}
+.line1 {background:#052F93;}
+.line2 {background:#10A643;}
+.line3 {background:#DE6D00;}
+.line4 {background:#0099d1;}
+.line5 {background:#A95094;}
+.line6 {background:#D08D1A;}
+.line7 {background:#657931;}
+.line8 {background:#E74E6D;}
+.line9 {background:#B58600;}
+.gyline {background-color:#5F9C82; padding:0px 10px;}
+
+.bus-line {
+	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
+	display:inline-flex;
+	font-size:1rem;
+	justify-content:center;
+	align-items:center;
+	margin-right:10px;
+	border-radius:5px;
+	color:#fff;
+	padding:0px 5px;}
+.g-bus {background-color:#5BB025;}
+.b-bus {background-color:#3D5BAB;}
+.r-bus {background-color:#F73711;}
+.meter {color:#C30; padding:0px 10px;}
+
+
+
+/*Desktop*/
+@media screen and (1100px < width) {
+	.center {
+		width:55vw;
+		margin:0px auto;
+	}
+	.pc_view {display:block;}
+	th,td {padding:1rem;}
+}
+
+/*Tablet*/
+@media screen and (760px < width < 1100px) {
+	.center {
+		width:70vw;
+		margin:0px auto;
+	}
+
+}
+
+/*Mobile*/
+@media screen and (320px < width < 760px) {
+
+}
+
+/*Watch*/
+@media screen and (width < 320px) {
+	.center {
+		width:95vw;
+		margin:0px auto;
+	}
+
+}
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	.light_view {display: none;}
+	.dark_view {display:unset;}
+}

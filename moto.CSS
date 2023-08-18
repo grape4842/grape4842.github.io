@@ -1,12 +1,12 @@
 @charset "utf-8";
 :lang(ko) {word-break: keep-all; line-break:normal;}
 ::selection {background:#31a; color:white;}
+/*폰트 설성*/
 @font-face { 
 	font-family:"BIZ-UDPGothic";
 	src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
 	font-weight:400;
 	font-display : swap;
-	font-size: 18pt;
 } 
 
 @font-face { 
@@ -14,7 +14,6 @@
 	src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
 	font-weight:700;
 	font-display : swap;
-	font-size: 18pt;
 } 
 
 @font-face { 
@@ -42,7 +41,7 @@
 	font-display : swap;
 }
 
-
+/*숨김텍스트 설정*/
 .hidden {
   overflow: hidden;
   border: 0;
@@ -60,15 +59,14 @@
 *::before,
 *::after {
 	position: relative;
-	margin: 0; /* マージンは0に */
-	padding: 0; /* パディングも常に0に */
-	box-sizing: border-box; /* もちろん、より直感的なbox-sizingに設定 */
-	font-size: 18pt;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* 보다 직관적인 box-sizing로 설정 */
 }
  
 :where(html) {
-	-webkit-text-size-adjust: none; /* iOSのランドスケープでテキストが調整されないようにする */
-	color-scheme: dark light; /* ユーザーがダークテーマを好む場合、自動的にダークテーマになる */
+	-webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트가 조절되지 않도록 한다 */
+	color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동적으로 다크 테마가 된다 */
 	font-family:"KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
 }
  
@@ -81,38 +79,38 @@
  html {scroll-behavior: smooth;}
 @media (prefers-reduced-motion: no-preference) {
 	:where(html:focus-within) {
-		scroll-behavior: smooth; /* 何かにフォーカスがある場合のみスムーズスクロール */
+		scroll-behavior: smooth; /* 무언가에 포커싱되었을 때만 부드럽게 스크롤 */
 	}
 }
  
 :where(body):not(img) {
-	line-height: 1.5rem; /* アクセシブルな行の高さ */
-	-webkit-font-smoothing: antialiased; /* テキストのレンダリングを改善 */
+	line-height: 1.5rem; /* 가독성 있는 행 높이 */
+	-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
 }
  
 :where(input, button, textarea, select, a) {
-	font: inherit; /* フォーム コントロールは親フォントを継承 */
+	font: inherit; /* 입력 서식은 부모의 폰트 속성 계승 */
 }
  
 :where(textarea) {
-	resize: vertical; /* テキストエリアの水平リサイズを無効に */
+	resize: vertical; /* 멀티라인 편집창의 가로 크기 조정 무효 */
 	resize: block;
 }
  
 :where(:focus, button, label, select, summary, [role='button'], [role='option']) {
-	cursor: pointer; /* インタラクティブなものにカーソルを合わせる */
+	cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 지정 */
 }
  
 :where(:disabled) {
-	cursor: not-allowed; /* フォームコントロール無効時のカーソルを許可しない */
+	cursor: not-allowed; /* 입력서식 비활성화 시 포커스 무효화 */
 }
  
 :where(label:has(> input:disabled), label:has(+ input:disabled)) {
-	cursor: not-allowed; /* ラベルにもカーソルを許可しない */
+	cursor: not-allowed; /* 입력서식 비활성화 시 라벨도 커서 무효화 */
 }
  
 :where(button) {
-	border-style: none; /* ボタンのボーダーのスタイルを設定しやすくする */
+	border-style: none; /* 버튼의 기본 테두리 제거 필요 시 별도 선언 */
 }
  
 :where(a) {
@@ -120,36 +118,36 @@
 	display: inline-flex;	
 	text-decoration:transparent; 
 	transition:text-decoration 0.2s;
-	text-underline-offset: 4px; /* 下線の上にスペースを追加する */
+	text-underline-offset: 4px; /* 링크 텍스트와 언더라인 사이에 공간 주기 */
 }
 a:focus, a:hover {
 	text-decoration:underline;
 }
 
 :where(ul, ol, li) {
-	list-style: none; /* ビュレットを削除、必要に応じて手動で追加する */
+	list-style: none; /* 뷰렛 삭제 필요 시 별도로 선언 */
 }
  
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
-	display: inline-flex; /* 置換された要素をより予測可能にする */
+	display: inline-flex; /* 보다 예측 가능한 멀티미디어 요소 */
 	aspect-ratio:auto;
 	object-fit: contain;
 }
  
 :where(img, picture, svg) {
 	max-inline-size: 100%; /* images should never overflow past the available space */
-	block-size: auto; /* アスペクト比を保持 */
+	block-size: auto; /* 콘텐츠 종횡비 유지 */
 }
  
 :where(p, h1, h2, h3, h4, h5, h6) {
-	overflow-wrap: break-word; /* 長い単語は改行 */
+	overflow-wrap: break-word; /* 길이가 넘칠 경우 줄바꿈 */
 }
  
 :where(h1, h2, h3) {
-	line-height: calc(1em + 0.5rem); /* 見出しの行の高さを減らす */
+	/*line-height: calc(1em + 0.5rem); /* 헤딩의 행높이를 줄이기 */*/
 }
  
-:where(hr) { /* より一貫性のある、スタイリッシュなhr */
+:where(hr) { /* 보다 일관성 있는 스타일리쉬한 hr */
 	border: none;
 	border-block-start: 1px solid;
 	color: inherit;
@@ -159,17 +157,20 @@ a:focus, a:hover {
 table {
 	border-collapse: collapse;
 }
+
 ::-webkit-scrollbar {
-    width: 1rem;  
+    width: 1rem;  /* 스크롤바의 너비 */
 }
-/* 스크롤바의 너비 */
+
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10rem;
+    border-radius: 10rem; /* 스크롤바의 스타일 */
+    border:1px solid rgba(0 0 0 / 0.3);
+    background-color:rgba(0 0 0 / 0.5);
 }
-/* 스크롤바의 색상 */
+
 
 ::-webkit-scrollbar-track {
-	border-radius: 10rem;
+	background-color:rgba(0 0 0 / 0.1);
+	border-radius: 10rem; /*스크롤바 뒷 배경 스타일*/
 }
-/*스크롤바 뒷 배경 색상*/

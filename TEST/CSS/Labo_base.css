@@ -1,0 +1,49 @@
+@charset "utf-8";
+/*Mobile First*/
+.pc_view {display: none;}
+.dark_view {display: none;}
+.center {
+	width:90vw;
+	padding:2rem 0px;
+	margin:0px auto;
+}
+
+.copyright {text-align: center;}
+
+
+/*Desktop*/
+@media screen and (1100px < width) {
+	.center {
+		width:55vw;
+		margin:0px auto;
+	}
+	.pc_view {display:block;}
+}
+
+/*Tablet*/
+@media screen and (760px < width < 1100px) {
+	.center {
+		width:70vw;
+		margin:0px auto;
+	}
+
+}
+
+/*Mobile*/
+@media screen and (320px < width < 760px) {
+
+}
+
+/*Watch*/
+@media screen and (width < 320px) {
+	.center {
+		width:95vw;
+		margin:0px auto;
+	}
+
+}
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	.light_view {display: none;}
+	.dark_view {display:unset;}
+}
