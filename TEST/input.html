@@ -34,9 +34,9 @@
 			<form>
 				<h2>입력 양식 테스트</h2>
 				<fieldset>
-					<legend>입력 양식</legend>
+					<legend>계정 생성을 위해 필요한 최소 정보</legend>
 					<table>
-						<caption>회원가입 양식 예시</caption>
+						<caption>필수 입력 사항</caption>
 						<tbody>
 							<tr>
 								<th scope="row">
@@ -96,24 +96,6 @@
 							</tr>
 							<tr>
 								<th scope="row">
-									<label for="user_phone" class="">
-										<span>전화번호</span>
-										<span class="hidden">필수</span>
-									</label>
-								</th>
-								<td>
-									<input id="user_phone" type="text" inputmode="numeric" name="">
-									<label for="user_phone" class="">
-										<p>
-											-
-											<span class="hidden">하이픈</span>
-											없이 숫자만 입력
-										</p>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">
 									<label for="user_email" class="">
 										<span>메일 주소</span>
 										<span class="hidden">필수</span>
@@ -136,42 +118,57 @@
 							</tr>
 							<tr>
 								<th scope="row">
-									<label for="" class="">
+									<p class="">
+										<span>성별</span>
 										<span class="hidden">필수</span>
+									</p>
+								</th>
+								<td>
+									<input id="user_man" type="radio" name="user_gender">
+									<label for="user_man" class="">남성</label>
+
+									<input id="user_woman" type="radio" name="user_gender">
+									<label for="user_woman" class="">여성</label>
+
+									<input id="user_gender_none" type="radio" name="user_gender">
+									<label for="user_gender_none" class="">공개하지 않음</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+
+				<fieldset>
+					<table>
+						<legend>맞춤 서비스, 알림을 위한 추가 정보</legend>
+						<caption>선택입력 사항</caption>
+							<tr>
+								<th scope="row">
+									<label for="user_phone" class="">
+										<span>휴대폰 번호</span>
 									</label>
 								</th>
 								<td>
-									<input type="" name="">
+									<input id="user_phone" readonly="" type="text" name="">
+									<button title="새 창 열림" type="button">휴대폰 본인인증</button>
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">
-									<label for="" class="">
-										<span class="hidden">필수</span>
-									</label>
-								</th>
+								<th scope="row">주소</th>
 								<td>
-									<input type="" name="">
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">
-									<label for="" class="">
-										<span class="hidden">필수</span>
-									</label>
-								</th>
-								<td>
-									<input type="" name="">
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">
-									<label for="" class="">
-										<span class="hidden">필수</span>
-									</label>
-								</th>
-								<td>
-									<input type="" name="">
+									<label for="user_post_number" class="hidden">우편번호</label>
+									<input id="user_post_number" type="text" name="">
+									<button title="새 창 열림" type="button">우편번호 찾기</button>
+									<p>
+									
+										<label for="user_adress1" class="hidden">도로명 주소</label>
+										<input readonly="" id="user_adress1" type="text" name="">
+									
+									</p>
+									<p>
+										<label for="user_address2" class="hidden">상세주소</label>
+										<input id="user_address2" type="text" name="">
+									</p>
 								</td>
 							</tr>
 							<tr>

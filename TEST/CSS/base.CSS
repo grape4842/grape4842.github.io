@@ -7,13 +7,13 @@
 	padding:2rem 0px;
 	margin:0px auto;
 }
-
+h2 {padding:1rem;}
 address {
 	text-align: center;
 	font-style: normal;
 }
 
-a:focus, a:hover {
+a:where(:hover, :focus) {
 	text-decoration:underline wavy rgba(0 0 0 / 0.5);
 	text-underline-offset:4px;}
 a:active, summary:active {
@@ -22,11 +22,21 @@ a:active, summary:active {
 }
 
 input, textarea {
+	display:inline-flex;
+	align-items: baseline;
+	min-width: 1.25rem;
+	min-height: 1.25rem;
+	vertical-align: middle;
 	accent-color:#54a;
 	padding:0px 0.5rem;
 }
 
 th,td, a, button {padding:0.5rem;}
+
+svg {
+	fill:#76f;
+	vertical-align: middle;
+	}
 
 /*대중교통*/
 .metro-line {
@@ -108,4 +118,6 @@ th,td, a, button {padding:0.5rem;}
 @media (prefers-color-scheme:dark) {
 	.light_view {display: none;}
 	.dark_view {display:unset;}
+	input {accent-color:#baf;}
+	svg {fill:#baf;}
 }

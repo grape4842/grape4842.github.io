@@ -1,8 +1,257 @@
 @charset "utf-8";
-form th {text-align: left;}
+
+table {margin:0px auto;}
+tr {
+	border:solid 1px;
+	}
+th {background: #ddd;}
+form th[scope="row"] {text-align: left;}
 #user_name {
 	-webkit-ime-mode:active;
 	-moz-ime-mode:active;
 	-ms-ime-mode:active;
 	ime-mode:active;
+}
+
+label[for="custom_text"] {
+	position: absolute;
+	top:calc(2rem + 5px);
+	left:calc(1rem + 5px);
+	background: inherit;
+	transition: top 0.2s, left 0.2s, scale 0.2s;
+	scale:1;
+}
+input:focus + label[for="custom_text"] {
+	cursor: text;
+	scale:0.8;
+	top:5px;
+	left:5px;
+
+}
+.custom_input input[type="text"] {
+	opacity: 0.5;
+	background:transparent;
+	border:none;
+	border-bottom: solid #65f 3px;
+	padding:5px;
+	transition: opacity 0.2s;
+	outline-offset: 4px;
+	margin-top:1rem;
+}
+.custom_input input[type="text"]:where(:focus) {
+	opacity:1;
+}
+.custom_input input[type="text"]::placeholder {
+	color:transparent;
+	transition: color 0.2s;
+}
+.custom_input input[type="text"]:where(:focus)::placeholder {
+	color:#888;
+}
+.custom_input :where(input[type="radio"], input[type="checkbox"]) {
+	border:2px solid #65f;
+	border-radius:10rem;
+	appearance:none;
+	-webkit-appearance:none;
+	transition: 0.1s scale;
+}
+label:hover + .custom_input :where(input[type="radio"], input[type="checkbox"]),
+.custom_input :where(input[type="radio"], input[type="checkbox"]):hover,
+.custom_input :where(input[type="radio"], input[type="checkbox"]):focus  {
+	scale:1.5;
+}
+.custom_input :where(input[type="checkbox"]:checked) {
+	background:radial-gradient(circle, rgba(70 40 150 / 1)30%, rgba(120 100 255 / 1) 70%);
+}
+.custom_input :where(input[type="checkbox"]:checked)::before {
+	content: '';
+	width:4px;
+	height: 8px;
+	position: absolute;
+	rotate:45deg;
+	top:4px;
+	right:6px;
+	border-bottom:2px solid white;
+	border-right:2px solid white;
+}
+.custom_input :where(input[type="radio"]:checked) {
+	background:radial-gradient(circle, rgba(70 40 150 / 1)10%, rgba(120 100 255 / 1) 50%, rgba(255 255 255 / 1) 50%);
+
+}
+.custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled) {
+	filter: brightness(1.5);
+}
+.custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):hover {
+	scale:1;
+}
+.custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):before {
+	content: '';
+	display:flex;
+	width: 1.25rem;
+	height: 1.25rem;
+	border: 2px solid #65f;
+	border-radius: 12rem;
+	position:absolute;
+	top: -2px;
+	left: -2px;
+	transform: translate(0%, 0%);
+	filter: brightness(0.75);
+}
+.custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):after {
+	content: '';
+	position:absolute;
+	top:-2px;
+	left:7px;
+	width:2px;
+	height:1.25rem;
+	rotate:45deg;
+	background-color: #65f;
+	filter: brightness(0.75);
+}
+
+/*별점 라디오 버튼*/
+.custom_input :where(input[name="star_radio"]) {
+	border:none;
+	scale:1!important;
+	background: transparent;
+	position: absolute;
+	left:0px;
+	width: 100%;
+	height: 100%;
+}
+.custom_input label:has(input[name="star_radio"]) {
+	padding:8px 0px 9px 10px;
+	border-radius: 10rem;
+}
+input[name="star_radio"]:where(:focus, :hover) {
+	scale:1;
+}
+.custom_input label:has(input[name="star_radio"]:checked) {
+	box-shadow: 0px 0px 0px 3px #65f inset;
+}
+label:has(input[name="star_radio"]) span {
+	position:absolute;
+	right:10px;
+	text-align: right;
+}
+label:has(svg) {
+	display: flex;
+	align-items: center;
+}
+
+/*탭 라디오*/
+.custom_input > p:has(input[name="tab_radio"]) + p {
+	width:80%;
+	padding:1rem;
+	border:5px solid #65f;
+	top:-1rem;
+	border-radius: 1rem;
+	border-top-left-radius: 0px;
+}
+.custom_input label:has(input[name="tab_radio"]) {
+	background: #65f;
+	display: inline-flex;
+	margin-right: -4px;
+	padding:1rem;
+	bottom:-5px;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	text-align: center;
+	border:5px solid #65f;
+	border-bottom:none;
+	cursor: pointer;
+	z-index: 2;
+	transition:background 0.2s, font-weight 0.2s;
+
+}
+.custom_input :where(input[name="tab_radio"]) {
+	border:none;
+	scale:1!important;
+	background: transparent;
+	position: absolute;
+	left:2.5px;
+	top:2.5px;
+	border-radius: 0px;
+	border-top-left-radius: calc(1rem - 5px);
+	border-top-right-radius: calc(1rem - 5px);
+	width: calc(100% - 5px);
+	height: calc(100% - 10px);
+	z-index: -1;
+}
+.custom_input label:has(input[name="tab_radio"]:checked) {
+	padding-bottom:2rem;
+	background:transparent;
+	font-weight: 900;
+	color:#65f;
+	top:calc(-1rem + 5px);
+}
+.custom_input :where(input[name="tab_radio"]:checked) {}
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	th {background: #333;}
+}
+
+
+/*슬라이더*/
+/*********** Baseline, reset styles ***********/
+.custom_input input[type="range"] {
+  appearance:none;
+  -webkit-appearance:none;
+  background: transparent;
+  cursor: pointer;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+}
+
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+.custom_input input[type="range"]::-webkit-slider-runnable-track {
+	/*background-color: #65f;*/
+	border:1px solid #76f;
+  	border-radius:10rem;
+	height: 0.5rem;
+	width:1rem;
+	position:relative;
+
+  }
+
+.custom_input input[type="range"]::-webkit-scrollbar {
+  	-webkit-appearance: none; /* Override default look */
+  	appearance: none; /* Centers thumb on the track */
+	background-color: #65f;
+
+}
+/* slider thumb */
+.custom_input input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none; /* Centers thumb on the track */
+  background-color: #ffffff;
+  border-radius: 1rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-top:-0.5rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+.custom_input input[type="range"]::-moz-range-track {
+  background-color: #65f;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+.custom_input input[type="range"]::-moz-range-thumb {
+  background-color: #ffffff;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 1rem;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.custom_input input[type="range"]:focus::-moz-range-thumb{
+  outline: 3px solid #ffffff;
+  outline-offset: 0.125rem;
 }
