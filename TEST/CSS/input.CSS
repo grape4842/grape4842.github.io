@@ -179,13 +179,14 @@ label[for="switch_checkbox"] + div:has(input:checked) {
 
 /*별점 라디오 버튼*/
 .custom_input :where(input[name="star_radio"]) {
-	border:none;
+	border:none!important;
 	scale:1!important;
 	background: transparent;
 	position: absolute;
 	left:0px;
 	width: 100%;
 	height: 100%;
+	transition: 0.2 hue-rotate;
 }
 .custom_input label:has(input[name="star_radio"]):hover {
 	filter: brightness(1.2) saturate(4) hue-rotate(-40deg);
@@ -236,7 +237,7 @@ label:has(svg) {
 
 }
 .custom_input :where(input[name="tab_radio"]) {
-	border:none;
+	border:none!important;
 	scale:1!important;
 	background: transparent;
 	position: absolute;
@@ -257,10 +258,6 @@ label:has(svg) {
 	top:calc(-1rem + 5px);
 }
 .custom_input :where(input[name="tab_radio"]:checked) {}
-/*Dark Mode Layout*/
-@media (prefers-color-scheme:dark) {
-	th {background: #333;}
-}
 
 
 /*슬라이더*/
@@ -279,7 +276,7 @@ label:has(svg) {
 /* slider track */
 .custom_input input[type="range"]::-webkit-slider-runnable-track {
 	/*background-color: #65f;*/
-	border:1px solid #76f;
+	border:1px solid #65f;
   	border-radius:10rem;
 	height: 0.5rem;
 	width:1rem;
@@ -359,8 +356,8 @@ label[for="custom_color"] > p {
 }
 
 .custom_input select,.custom_input select option {
-	background-color:#325;
-	border:1px solid #3259;
+	background-color:#baf;
+	border:1px solid #bafa;
 	padding:0.5rem;
 }
 .custom_input select:hover, .custom_input select option:hover {
@@ -393,4 +390,64 @@ span:has(#custom_design_file:focus) {
 	background-color: #65f;
 	padding:0.5rem;	
 	margin-left:0.5rem;
+}
+
+
+
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	th {background: #333;}
+	.custom_input select,.custom_input select option {
+		background-color:#325;
+		border:1px solid #3259;
+		}
+	.custom_input :where(input[type="text"], [type="password"]) {
+		border-bottom: solid #baf 3px;
+		}
+	.custom_input :where(input[type="radio"], input[type="checkbox"]) {
+		border:2px solid #baf;
+		}
+	.custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):before {
+		border: 2px solid #baf;
+		}
+	.custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):after {
+		background-color: #baf;
+	}
+	.custom_input label:has(input[name="tab_radio"]) {
+		background: #baf;
+		border:5px solid #baf;
+		color:black;
+		}
+	.custom_input label:has(input[name="star_radio"]:checked) {
+		box-shadow: 0px 0px 0px 3px #98f inset;
+		}
+	.custom_input label:has(input[name="tab_radio"]:checked) {
+		color:#baf;
+		}
+	.custom_input > p:has(input[name="tab_radio"]) + p {
+	    border: 5px solid #baf;
+	}
+	.custom_input label:has(input[name="tab_radio"]:checked) {
+		color:#baf;
+		}
+	.custom_input input[type="file"]::file-selector-button {
+		border:#bafa solid 2px;
+		background-color: #baf;
+		color:black;
+		}
+	.custom_input label[for="custom_design_file"] span {
+		border:#bafa solid 2px;
+		background-color: #baf;
+		color:black;
+		}
+	.custom_input input[type="range"]::-webkit-slider-runnable-track {
+		border:1px solid #baf;
+		}
+	.custom_input input[type="range"]::-webkit-scrollbar {
+		background-color: #baf;
+		}
+	.custom_input input[type="range"]::-moz-range-track {
+		background-color: #baf;
+		}
 }
