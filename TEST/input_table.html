@@ -10,7 +10,7 @@
 	<meta property="og:type" content="website">
 	<meta name="theme-color=" content="#855AB6">
 
-	<title>입력서식 테스트</title>
+	<title>요소 테스트 페이지</title>
 	<link rel="stylesheet" type="text/css" href="../moto.CSS">
 	<link rel="stylesheet" type="text/css" href="CSS/base.CSS">
 	<link rel="stylesheet" type="text/css" href="CSS/input.CSS">
@@ -28,7 +28,7 @@
 	</header>
 	<main>
 		<section class="center">
-			<p>JavaScript는 구현하지 못했습니다.</p>
+			<p>이 페이지는 입력 서식을 중심으로 여러 요소를 테스트 해보기 위해 일시적으로 제공되는 페이지입니다. 입력서식을 비롯해 자주 오류로 등장하는 컴포넌트들을 모아두었습니다. 다만 JavaScript는 구현하지 못했습니다.</p>
 		</section>
 		<section class="center">
 			<form>
@@ -73,18 +73,33 @@
 								</td>
 								<td class="custom_input">
 									<p>
-										<input id="custom_checkbox" type="checkbox" class="" name="" checked="">
-										<label for="custom_checkbox" class="">평범한 체크박스</label>
+										<input id="custom_checkbox" type="checkbox" class="" name="custom_checkbox" checked="">
+										<label for="custom_checkbox" class="">커스텀된 체크박스</label>
 									</p>	
 									<p>
-										<input id="custom_checkbox_disabled_on" type="checkbox" class="" name="" checked="" disabled="">
-										<label for="custom_checkbox_disabled_on" class="">비활성화된 체크박스(ON)</label>
+										<input id="custom_checkbox_disabled_on" type="checkbox" class="" name="custom_checkbox" checked="" disabled="">
+										<label for="custom_checkbox_disabled_on" class="">비활성화된 커스텀 체크박스(ON)</label>
 									</p>	
 									<p>
-										<input id="custom_checkbox_disabled_off" type="checkbox" class="" name="" disabled="">
-										<label for="cutom_checkbox_disabled_off" class="">비활성화된 체크박스(OFF)</label>
+										<input id="custom_checkbox_disabled_off" type="checkbox" class="" name="custom_checkbox" disabled="">
+										<label for="custom_checkbox_disabled_off" class="">비활성화된 커스텀 체크박스(OFF)</label>
 									</p>	
 								</td>
+							</tr>
+							<tr>
+								<td class="custom_input">
+									<label for="switch_checkbox">
+										<span>푸시 알림 수신 동의 여부</span>
+									</label>
+									<div>
+										<label for="switch_checkbox">
+											<i class="on"></i>
+											<input id="switch_checkbox" type="checkbox" name="switch_checkbox">
+											<i class="off"></i>
+										</label>
+									</div>
+								</td>
+								<td></td>
 							</tr>
 
 
@@ -114,19 +129,19 @@
 								<td class="custom_input">
 									<p>
 										<input id="custom_radio_normal_on" type="radio" class="" name="normal_custom" checked="">
-										<label for="custom_radio_normal_on" class="">커스텀된 평범한 라디오 버튼(기본ON)</label>
+										<label for="custom_radio_normal_on" class="">커스텀된 라디오 버튼(기본ON)</label>
 									</p>
 									<p>
 										<input id="custom_radio_normal_off" type="radio" class="" name="normal_custom">
-										<label for="cutom_radio_normal_off" class="">커스텀된 평범한 라디오 버튼(기본OFF)</label>
+										<label for="custom_radio_normal_off" class="">커스텀된 라디오 버튼(기본OFF)</label>
 									</p>
 									<p>
 										<input id="custom_radio_disabled_on" type="radio" class="" name="custom" checked="" disabled="">
-										<label for="custom_radio_disabled_on" class="">커스텀된 비활성화된 라디오 버튼(ON)</label>
+										<label for="custom_radio_disabled_on" class="">비활성화된 커스텀 라디오 버튼(ON)</label>
 									</p>
 									<p>
 										<input id="custom_radio_disabled_off" type="radio" class="" name="custom" disabled="">
-										<label for="custom_radio_disabled_off" class="">커스텀된 비활성화된 라디오 버튼 OFF</label>
+										<label for="custom_radio_disabled_off" class="">비활성화된 커스텀 라디오 버튼 OFF</label>
 									</p>
 								</td>
 							</tr>
@@ -219,11 +234,11 @@
 							</tr>
 							<tr>
 								<td>
-									<label for="original_range" class=""></label>
+									<label for="original_range" class="">비만도 설정</label>
 									<input id="original_range" type="range" class="" name="">
 								</td>
 								<td class="custom_input">
-									<label for="custom_range" class=""></label>
+									<label for="custom_range" class="">비만도 설정</label>
 									<input id="custom_range" type="range" class="" name="">
 								</td>
 							</tr>
@@ -233,12 +248,14 @@
 							</tr>
 							<tr>
 								<td>
-									<label for="original" class=""></label>
-									<input id="original" type="" class="" name="">
+									<label for="original_color" class="">테마 컬러 설정</label>
+									<input id="original_color" type="color" class="" name="">
 								</td>
-								<td>
-									<label for="custom" class=""></label>
-									<input id="custom" type="" class="" name="">
+								<td class="custom_input">
+									<label for="custom_color" class="">
+										<input value="#6655ff" id="custom_color" type="color" class="" name="">
+										<p>테마 컬러 설정</p>
+									</label>
 								</td>
 							</tr>
 
@@ -247,12 +264,26 @@
 							</tr>
 							<tr>
 								<td>
-									<label for="original" class=""></label>
-									<input id="original" type="" class="" name="">
+									<label for="original_combobox" class="">통신사</label>
+									<select id="original_combobox">
+										<option>KT</option>
+										<option>SKT</option>
+										<option>LG U+</option>
+										<option>KT 알뜰폰</option>
+										<option>SKT 알뜰폰</option>
+										<option>LG U+ 알뜰폰</option>
+									</select>
 								</td>
-								<td>
-									<label for="custom" class=""></label>
-									<input id="custom" type="" class="" name="">
+								<td class="custom_input">
+									<label for="custom_combobox" class="">통신사</label>
+									<select id="custom_combobox">
+										<option>KT</option>
+										<option>SKT</option>
+										<option>LG U+</option>
+										<option>KT 알뜰폰</option>
+										<option>SKT 알뜰폰</option>
+										<option>LG U+ 알뜰폰</option>
+									</select>
 								</td>
 							</tr>
 
