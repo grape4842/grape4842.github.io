@@ -222,6 +222,7 @@ label:has(svg) {
 }
 .custom_input label:has(input[name="tab_radio"]) {
 	background: #65f;
+	color:white;
 	display: inline-flex;
 	margin-right: -4px;
 	padding:1rem;
@@ -374,6 +375,7 @@ label:has(#file_text) {
 	border:#65fa solid 2px;
 	background-color: #65f;
 	padding:0.5rem;
+	color:white;
 
 }
 #file_text {
@@ -389,6 +391,7 @@ span:has(#custom_design_file:focus) {
 	border:#65fa solid 2px;
 	background-color: #65f;
 	padding:0.5rem;	
+	color:white;
 	margin-left:0.5rem;
 }
 
