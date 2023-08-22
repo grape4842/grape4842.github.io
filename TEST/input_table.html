@@ -54,6 +54,20 @@
 							</tr>
 
 							<tr>
+								<th scope="col" colspan="2">암호 편집 창</th>
+							</tr>
+							<tr>
+								<td>
+									<label for="original_password">비밀번호</label>
+									<input id="original_password" type="password" name="">
+								</td>
+								<td class="custom_input">
+									<label for="custom_password">비밀번호</label>
+									<input id="custom_password" type="password" name="">
+								</td>
+							</tr>
+
+							<tr>
 								<th scope="col" colspan="2">체크박스</th>
 							</tr>
 							<tr>
@@ -244,7 +258,7 @@
 							</tr>
 
 							<tr>
-								<th scope="col" colspan="2"></th>
+								<th scope="col" colspan="2">컬러 피커</th>
 							</tr>
 							<tr>
 								<td>
@@ -292,12 +306,23 @@
 							</tr>
 							<tr>
 								<td>
-									<label for="original" class=""></label>
-									<input id="original" type="" class="" name="">
+									<label for="original_file" class="">사진 첨부</label>
+									<input id="original_file" type="file" class="" name="">
 								</td>
-								<td>
-									<label for="custom" class=""></label>
-									<input id="custom" type="" class="" name="">
+								<td class="custom_input">
+									<p>
+										<label for="custom_file" class="">사진 첨부</label>
+										<input accept="image/*" id="custom_file" type="file" class="" name="">
+									</p>
+									<p>
+										<label for="custom_design_file" class="">
+											<input id="file_text" readonly="" type="text" name="">
+											<span>
+												<input accept="image/*" id="custom_design_file" type="file" class="hidden" name="">
+											사진 첨부</span>
+										</label>
+										<label for="file_text" class="hidden">첨부파일 명</label>
+									</p>
 								</td>
 							</tr>
 
@@ -306,12 +331,12 @@
 							</tr>
 							<tr>
 								<td>
-									<label for="original" class=""></label>
-									<input id="original" type="" class="" name="">
+									<label for="original_date" class="">달력</label>
+									<input id="original_date" type="date" class="" name="">
 								</td>
 								<td>
-									<label for="custom" class=""></label>
-									<input id="custom" type="" class="" name="">
+									<label for="custom_date" class="">달력</label>
+									<input id="custom_date" type="date" class="" name="">
 								</td>
 							</tr>
 						</tbody>

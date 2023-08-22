@@ -6,6 +6,8 @@ tr {
 	}
 th {background: #ddd;}
 form th[scope="row"] {text-align: left;}
+
+/*수정 창*/
 #user_name {
 	-webkit-ime-mode:active;
 	-moz-ime-mode:active;
@@ -28,7 +30,12 @@ input:focus + label[for="custom_text"] {
 	left:5px;
 
 }
-.custom_input input[type="text"] {
+.custom_input * {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.custom_input :where(input[type="text"], [type="password"]) {
 	opacity: 0.5;
 	background:transparent;
 	border:none;
@@ -38,7 +45,7 @@ input:focus + label[for="custom_text"] {
 	outline-offset: 4px;
 	margin-top:1rem;
 }
-.custom_input input[type="text"]:where(:focus) {
+.custom_input :where(input[type="text"], [type="password"]):focus {
 	opacity:1;
 }
 .custom_input input[type="text"]::placeholder {
@@ -48,17 +55,22 @@ input:focus + label[for="custom_text"] {
 .custom_input input[type="text"]:where(:focus)::placeholder {
 	color:#888;
 }
+/*암호 편집 창*/
+.custom_input [type="password"] {
+	margin-top:0px;
+	webkit-text-security: disc;
+    -moz-text-security:circle;
+     text-security:circle;
+ }
 .custom_input :where(input[type="radio"], input[type="checkbox"]) {
 	border:2px solid #65f;
 	border-radius:10rem;
-	appearance:none;
-	-webkit-appearance:none;
 	transition: 0.1s scale;
 }
 label:hover + .custom_input :where(input[type="radio"], input[name="custom_checkbox"]),
 .custom_input :where(input[type="radio"], input[name="custom_checkbox"]):hover,
 .custom_input :where(input[type="radio"], input[name="custom_checkbox"]):focus  {
-	scale:1.5;
+	scale:1.2;
 }
 .custom_input :where(input[type="checkbox"]:checked) {
 	background:radial-gradient(circle, rgba(70 40 150 / 1)30%, rgba(120 100 255 / 1) 70%);
@@ -175,6 +187,9 @@ label[for="switch_checkbox"] + div:has(input:checked) {
 	width: 100%;
 	height: 100%;
 }
+.custom_input label:has(input[name="star_radio"]):hover {
+	filter: brightness(1.2) saturate(4) hue-rotate(-40deg);
+}
 .custom_input label:has(input[name="star_radio"]) {
 	padding:8px 0px 9px 10px;
 	border-radius: 10rem;
@@ -251,8 +266,6 @@ label:has(svg) {
 /*슬라이더*/
 /*********** Baseline, reset styles ***********/
 .custom_input input[type="range"] {
-  appearance:none;
-  -webkit-appearance:none;
   background: transparent;
   cursor: pointer;
   min-width: 10rem;
@@ -320,15 +333,13 @@ label:has(svg) {
 	justify-content: center;
 }
 .custom_input input[type="color"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   width: 8rem;
   height: 8rem;
   background-color: transparent;
   border: none;
   padding:0px;
   cursor: pointer;
+  aspect-ratio:1/1;
 }
 .custom_input input[type="color"]::-webkit-color-swatch {
   border: none;
@@ -337,21 +348,49 @@ label:has(svg) {
   border: none;
 }
 label[for="custom_color"] {
-	display: inline-flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	padding:0px;
 	max-width: 8rem;
 	background: rgba(255 255 255 / 0.1);
-	box-shadow: 1rem 1rem 1rem rgba(0 0 0 / .1);
+	box-shadow: 1rem 1rem 1rem rgba(0 0 0 / 0.1);
+	aspect-ratio:1/1.58;
 }
 label[for="custom_color"] > p {
 	padding:1rem;
 }
 
 .custom_input select,.custom_input select option {
-	background-color:#326;
+	background-color:#325;
+	border:1px solid #3259;
+	padding:0.5rem;
+}
+.custom_input select:hover, .custom_input select option:hover {
+	filter:brightness(1.2) saturate(1.2);
+}
+
+/*파일*/
+label:has(#file_text) {
+	padding:1rem;
+	display: flex;
+	align-items: center;
+}
+.custom_input input[type="file"]::file-selector-button {
+	border:#65fa solid 2px;
+	background-color: #65f;
 	padding:0.5rem;
 
+}
+#file_text {
+	margin-top:0px;
+	z-index: -1;
+}
+span:has(#custom_design_file:focus) {
+	border: 2px solid white;
+	box-shadow: 0px 0px 0px 1px black inset;
+	border-radius: 4px;
+}
+.custom_input label[for="custom_design_file"] span {
+	border:#65fa solid 2px;
+	background-color: #65f;
+	padding:0.5rem;	
+	margin-left:0.5rem;
 }
