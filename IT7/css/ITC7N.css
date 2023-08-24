@@ -436,7 +436,8 @@ footer {
 	font-size: 0.8rem;
 	font-weight:600;
 	padding-bottom:1rem;
-	background-color:black;}
+	background-color:black;
+}
 #CP {
 	margin:0px auto;
 	display: flex;
@@ -653,13 +654,10 @@ footer {
 	.visual_title::after {
 		background:linear-gradient(to bottom, rgba(255 255 255 / 1)30%, rgba(255 255 255 / 0)100%);
 	}
-
-	#apple {background-color: transparent;
-		}
+	#apple {background-color: transparent;}
 	#notice::after {background-color:rgba(0,0,0,0.16);}
 	details[open] #sellform {
 		background-color: #ffc222;
-	}
 	}
 	#sellform > div {
 		background-color: #FFeeaa;
@@ -680,7 +678,6 @@ footer {
 	}
 	h2 {color:#50a;}
 	footer{
-		background-color:#630;
 		color:#fff;
 		background:linear-gradient(rgb(60 60 70) 10%, rgb(10 10 20)90%);
 	}
