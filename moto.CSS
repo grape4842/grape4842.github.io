@@ -18,25 +18,25 @@
 
 @font-face { 
 	font-family:"KoddiUDOnGothic";
-	src: url("font/Koddi/KoddiUDOnGothic-Regular.woff2") format("woff2");
-	src: url("font/Koddi/KoddiUDOnGothic-Regular.woff") format("woff");
-	src: url("font/Koddi/KoddiUDOnGothic-Regular.otf") format("opentype");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
 	font-weight:400;
 	font-display : swap;
 } 
 @font-face { 
 	font-family:"KoddiUDOnGothic";
-	src: url("font/Koddi/KoddiUDOnGothic-Bold.woff2") format("woff2");
-	src: url("font/Koddi/KoddiUDOnGothic-Bold.woff") format("woff");
-	src: url("font/Koddi/KoddiUDOnGothic-Bold.otf") format("opentype");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
 	font-weight:700;
 	font-display : swap;
 } 
 @font-face { 
 	font-family:"KoddiUDOnGothic";
-	src: url("font/Koddi/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
-	src: url("font/Koddi/KoddiUDOnGothic-ExtraBold.woff") format("woff");
-	src: url("font/Koddi/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
 	font-weight:900;
 	font-display : swap;
 }
@@ -97,7 +97,7 @@
 	resize: block;
 }
  
-:where(:focus, button, label, select, summary, [role='button'], [role='option']) {
+:where(:focus, button, label, select, summary, [role='button'], [role='option'], [type="file"], [type="file"]::file-selector-button) {
 	cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 지정 */
 }
  
@@ -132,8 +132,9 @@ a:focus, a:hover {
 	display: inline-flex; /* 보다 예측 가능한 멀티미디어 요소 */
 	aspect-ratio:auto;
 	object-fit: contain;
+	width:100%; /*부모요소에 꽉 차게 / 부모요소를 벗어나지 않도록*/
 }
- 
+
 :where(img, picture, svg) {
 	max-inline-size: 100%; /* images should never overflow past the available space */
 	block-size: auto; /* 콘텐츠 종횡비 유지 */
@@ -143,9 +144,6 @@ a:focus, a:hover {
 	overflow-wrap: break-word; /* 길이가 넘칠 경우 줄바꿈 */
 }
  
-:where(h1, h2, h3) {
-	/*line-height: calc(1em + 0.5rem); /* 헤딩의 행높이를 줄이기 */*/
-}
  
 :where(hr) { /* 보다 일관성 있는 스타일리쉬한 hr */
 	border: none;
@@ -167,6 +165,7 @@ table {
     border-radius: 10rem; /* 스크롤바의 스타일 */
     border:1px solid rgba(0 0 0 / 0.3);
     background-color:rgba(0 0 0 / 0.5);
+	cursor: pointer;
 }
 
 

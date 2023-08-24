@@ -7,6 +7,7 @@
 	padding:2rem 0px;
 	margin:0px auto;
 }
+fieldset {border:none;}
 h2 {padding:1rem;}
 address {
 	text-align: center;

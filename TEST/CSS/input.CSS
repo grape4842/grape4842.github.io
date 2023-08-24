@@ -264,23 +264,27 @@ label:has(svg) {
 /*슬라이더*/
 /*********** Baseline, reset styles ***********/
 .custom_input input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
   background: transparent;
   cursor: pointer;
   min-width: 10rem;
+  width:20rem;
   border-radius: 10rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  padding:1rem;
 }
 
 
 /******** Chrome, Safari, Opera and Edge Chromium styles ********/
 /* slider track */
 .custom_input input[type="range"]::-webkit-slider-runnable-track {
-	/*background-color: #65f;*/
+	background-color: #65f;
 	border:1px solid #65f;
   	border-radius:10rem;
 	height: 0.5rem;
-	width:1rem;
+	width:100%;
 	position:relative;
 
   }
@@ -289,6 +293,7 @@ label:has(svg) {
   	-webkit-appearance: none; /* Override default look */
   	appearance: none; /* Centers thumb on the track */
 	background-color: #65f;
+	width: 100%;
 
 }
 /* slider thumb */
@@ -372,17 +377,22 @@ label:has(#file_text) {
 	display: flex;
 	align-items: center;
 }
+label:has(#file_text):where(:hover, :focus) input {
+	opacity: 1;
+}
 .custom_input input[type="file"]::file-selector-button {
 	border:#65fa solid 2px;
 	background-color: #65f;
 	padding:0.5rem;
 	color:white;
+	cursor: pointer;
 
 }
 #file_text {
 	margin-top:0px;
 	z-index: -1;
 }
+
 span:has(#custom_design_file:focus) {
 	border: 2px solid white;
 	box-shadow: 0px 0px 0px 1px black inset;
