@@ -197,7 +197,7 @@ position:relative;
 
 main.w90 {padding:1rem 0px;}
 h1,h2,h3,h4 {font-weight:900;}
-
+#ITC7S main.w90 {padding:1rem 0px 5rem;}
 .ribbon {
 	margin:3rem 0;
 	}
@@ -474,29 +474,34 @@ footer {
 	0% {top:-100rem;}
 	100% {top:0em;}
 }
-#robin a,#robin dd{
+#robin dt {
+	background: linear-gradient(135deg, #432000 20%, #775533, #432000 80%);
+	color:#ced;
 	font-weight:900;
-	color:#bdf;
 }
-#robin dt, #robin a {
-	background: linear-gradient(135deg, #663300 30%, #cca99a 50%, #663300 70%);
-	color:#ced;}
 #robin dd{
 	text-align:center;
-	border:solid #630 5px;}
+	border:solid #432000 5px;}
 
 #robin dt, .STF dt {
 	display:inline-block;
-	border-top-left-radius:1rem;
-	border-top-right-radius:1rem;
-	padding:1rem;}
+	border-top-left-radius:2rem;
+	border-top-right-radius:2rem;
+	padding:1rem 1.5rem;
+	top:5px;
+	z-index: 2;
+}
+dt a {font-size:1rem;}
 #robin dd, .STF dd {
 	background-color:black;
 	padding:1rem;
-	border-radius: 1rem;
+	border-radius: 2rem;
 	border-top-left-radius: 0px;
 }
-
+:where(#robin dd, .STF dd) img {
+	border-radius: 1rem;
+	display: flex;
+}
 .STF, #robin {
 	width: 100%;
 	margin:1rem auto;
@@ -508,6 +513,7 @@ footer {
 	position:relative;
 	left:100rem;
 }
+dd article {padding-top:1rem;}
 @keyframes stafflist {
 	0% {left:10000px;}
 	40% {left:-2%}

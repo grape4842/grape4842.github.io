@@ -58,6 +58,7 @@
 *,
 *::before,
 *::after {
+	font-size:1rem;
 	position: relative;
 	margin: 0;
 	padding: 0;
@@ -83,13 +84,14 @@
 	}
 }
  
-:where(body):not(img) {
-	line-height: 1.5rem; /* 가독성 있는 행 높이 */
-	-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
-}
- 
 :where(input, button, textarea, select, a) {
 	font: inherit; /* 입력 서식은 부모의 폰트 속성 계승 */
+}
+ 
+:where(body):not(img) {
+	line-height: 1.5rem; /* 가독성 있는 행 높이 */
+	font-size:1rem;
+	-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
 }
  
 :where(textarea) {
