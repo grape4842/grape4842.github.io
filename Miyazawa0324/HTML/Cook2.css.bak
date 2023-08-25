@@ -1,4 +1,0 @@
-body {background-color:#bdf;}
-.knsl>li {background-color:#0c0; list-style-type:none;}
-.knsl>li>a{color:white;}
-ul a:nth-child(2n) {text-decoration:none; color:red; background-color:white; font-family:HY견고딕; padding:10px;}
