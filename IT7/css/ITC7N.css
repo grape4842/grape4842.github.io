@@ -319,10 +319,10 @@ details[open] #sellform {
 	display: none;
 } 
 #sellform > div {
-	border: #326 0.5rem solid;
+	border: #63c 0.5rem solid;
 	width: 100%;
 	padding:1rem;
-	background-color: #215;
+	background-color: #103;
 }
 details[open] #sellform :where(li, p) {
 	font-size: 1rem;
