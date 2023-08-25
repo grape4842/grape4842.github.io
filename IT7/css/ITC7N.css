@@ -180,11 +180,10 @@ header {
 	text-align:center;
 	overflow-x:hidden;
 	padding:2rem 1rem;
-	font-size:2rem;
 	line-height: 5rem;
 	font-weight: 900;
 }
-
+.hi p {	font-size:3rem;}
 #pluskakao svg {
 	display: none;
 	position: absolute;
