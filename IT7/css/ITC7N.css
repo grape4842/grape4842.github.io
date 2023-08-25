@@ -47,12 +47,21 @@ header {
 	display:flex;
 	background-color:rgba(0 0 0 / 0.8);
 }
-#apple > a {position: absolute;}
+#apple a {
+	position: absolute;
+	opacity: 0.8;
+	transition: opacity 0.2s;
+}
 #apple svg {
 	fill:currentColor;
 	transform:translateZ(0);
 	height: 48px;
 }
+
+#apple a:where(:hover, :focus) {
+    opacity: 1;
+}
+
 #GOSHOP {right: 0px;}
 /*떠 있는 상단바*/
 #notice {
@@ -555,9 +564,6 @@ dd article {padding-top:1rem;}
 	#apple svg {height: 44px;}
 	#LOGO {
 		left:1rem;
-	}
-	#GOSHOP {
-		right:1rem;
 	}
 	#notice {height: 66px;}
 	#notice::after {
