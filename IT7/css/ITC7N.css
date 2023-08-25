@@ -1,4 +1,4 @@
-@charset "utf-8"
+@charset "utf-8";
 :where(body):not(img) {line-height: 2rem!important;}
 body {
 	background-image:linear-gradient(to left, rgba(10 0 255 / 0.1), rgba(10 0 255 / 0.1), rgba(10 0 255 / 0.1)), 
@@ -170,10 +170,14 @@ header {
 	justify-content:center;
 	text-align:center;
 	overflow-x:hidden;
-	padding:3rem;
+	padding:2rem 1rem;
+	font-size:2rem;
+	line-height: 5rem;
+	font-weight: 900;
 }
 
 #pluskakao svg {
+	display: none;
 	position: absolute;
 	width: 1rem;
 	margin-right: 0.5rem;
@@ -201,6 +205,7 @@ h1,h2,h3,h4 {font-weight:900;}
 	font-size:1.7rem;
 	background: linear-gradient(to left, rgba(130,120,220,1), rgba(100,70,200,1), rgba(70,0,130,1), rgba(44,0,100,1));
 	color:white;
+	z-index: 2;
 	}
 .ribbon-text, .ribbon-tale {
 	padding:1rem;
@@ -249,7 +254,6 @@ h1,h2,h3,h4 {font-weight:900;}
 	  top:1rem;right:-5rem;
 	  border-width: 2.5rem 3rem 2.5rem 5rem;
 	  border-color: rgba(117, 107, 207, 1) transparent rgba(117, 107, 207, 1) rgba(117, 107, 207, 1);
-	  z-index:-1;
 	}
 	.ribbon-tale:before{
 		content:'';
@@ -265,7 +269,6 @@ h1,h2,h3,h4 {font-weight:900;}
 	margin:0px auto;
 	flex-wrap:wrap;}
 
-
 .menu, summary {
 	list-style:none;
 	display: inline-flex;
@@ -273,15 +276,20 @@ h1,h2,h3,h4 {font-weight:900;}
 	cursor: pointer;
 	text-align:center;
 	background:linear-gradient(to bottom, rgba(130,120,220,1) 0%, rgba(100,70,200,1) 49%, rgba(70,0,130,0.9) 50%, rgba(50,0,100,0.9) 100%);
-	padding:1rem 2.5rem;
+	padding:1rem 2rem;
 	border:1px solid #54a;
 	font-weight:900;
-	margin:1rem 0.5rem;
+	margin:1rem;
 	transition:transform 0.2s, filter 0.2s;
 	transform:translateY(0px);
 }
+:where(.menu, summary):active {
+	transform:translateY(5px);
+	filter:brightness(1.2);
+}
+
 details[open] #sellform_button {
-	z-index: 5;
+	z-index: 10;
 }
 summary::-webkit-details-marker {
   /* Hides marker on Safari */
@@ -289,28 +297,27 @@ summary::-webkit-details-marker {
 }
 details[open] #sellform {
 	position: fixed;
-	z-index: 2;
-	padding:0.5rem;
-	top:0px;
+	z-index: 9;
+	top:0vh;
 	left:50%;
 	width: 100%;
 	transform: translateX(-50%);
 	max-height: 90vh;
 	overflow-y:scroll; 
-	background-color: #326;
 }
 #sellform::-webkit-scrollbar {
 	display: none;
 } 
 #sellform > div {
-	line-height: 1.5rem;
+	border: #326 0.5rem solid;
 	width: 100%;
-	padding:0.5rem;
+	padding:1rem;
 	background-color: #215;
 }
-.menu:active {
-	transform:translateY(5px);
-	filter:brightness(1.2);}
+details[open] #sellform :where(li, p) {
+	font-size: 1rem;
+	font-weight: 600;
+}
 
 
 ol,ul,dl {
@@ -408,14 +415,16 @@ li li,li dl {
 	margin:0.3rem 0px;}
 li dt {font-weight:600;}
 li,strong,li a {
-	font-weight:800; 
+	font-weight:700; 
 	font-size:1.2rem;}
 
 .master {
 	background-color:white; 
 	color:#400;
 	display:inline-flex;
-	font-weight:800;}
+	font-weight:900;
+	padding:0px 0.5rem;
+}
 
 ::-webkit-scrollbar {
     width: 20px;  /* 스크롤바의 너비 */
@@ -435,13 +444,13 @@ li,strong,li a {
 footer {
 	font-size: 0.8rem;
 	font-weight:600;
-	padding-bottom:1rem;
+	padding:3rem 0px;
 	background-color:black;
 }
 #CP {
 	margin:0px auto;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	}
 .made {
 	padding:0px 1rem;
@@ -449,6 +458,7 @@ footer {
 	}
 .Copyright {
 	padding:1rem;
+	padding-top: 0px;
 	text-align: center;
 	}
 
@@ -533,7 +543,7 @@ footer {
 
 
 /*PC*/
-@media screen and (min-width:1030px) {
+@media screen and (1100px < width) {
 	.wsmall {display:none;}
 	.wbig {display:block;}
 	#apple {height: 44px;}
@@ -541,7 +551,6 @@ footer {
 	#LOGO {
 		left:1rem;
 	}
-
 	#GOSHOP {
 		right:1rem;
 	}
@@ -565,11 +574,33 @@ footer {
 		width:52vw;
 		padding:0px 16px;
 	}
-	details[open] #sellform {
-		width:52vw;
-		transform: translate(-50%, 50%);
+	.menu {
+		margin: 2.5rem;
+		padding:1rem 2.5rem;
 	}
-	details[open] #sellform > div {padding: 1rem;}
+	#pluskakao svg {
+		display: flex;
+	}
+	details[open] {position: static;}
+	details[open] #sellform {
+		width:auto;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+	}
+	details[open] #sellform > div {
+		border-radius: 3rem;
+		padding: 2rem;
+	}
+	details[open] #sellform :where(li, p) {
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+		padding-bottom:1.5rem;
+		font-weight: 600;
+	}
+	details[open] #sellform p:last-child {
+		padding: 0px;
+	}
 	.note20 {width:77vw; margin:0 auto;}
 	.Gram {
 		top:0px;
@@ -585,7 +616,7 @@ footer {
 }
 
 /*iPad*/
-@media screen and (max-width:1024px) {
+@media screen and (760px < width < 1100px) {
 	body {background-size:70%; }
 	.w90, details[open] #sellform {width:70vw;}
     .wsmall {display:block;}
@@ -596,7 +627,7 @@ footer {
 }
 
 /*mobile*/
-@media screen and (max-width:760px) {
+@media screen and (320px < width < 760px) {
 	#Atitle {
 		height:63px;
 		display: inline-block;
@@ -622,7 +653,7 @@ footer {
 }
 
 /*watch?*/
-@media screen and (max-width:320px){
+@media screen and (width < 320px) {
 	li,li li,dt,dd,p,.HELLO div {font-size:17px !important;}
 	#gochat {z-index:10;}
 	body {background-size:100%;}
@@ -656,15 +687,16 @@ footer {
 	}
 	#apple {background-color: transparent;}
 	#notice::after {background-color:rgba(0,0,0,0.16);}
-	details[open] #sellform {
-		background-color: #ffc222;
-	}
 	#sellform > div {
+		border-color: #ffc222;
 		background-color: #FFeeaa;
 	}
-	.menu {
-		background:linear-gradient(170deg, rgba(220,150,120,0.9) 0%, rgba(100,50,0,0.9) 39%, rgba(40,10,0,0.9) 40%, rgba(70,40,0,0.9) 100%);
-	border:rgba(165,0,52,0.9) solid 1px;
+	.menu, summary {
+		filter: hue-rotate(130deg);
+	}
+	.ribbon-text, .ribbon-tale, .ribbon:after, .ribbon-text:before {
+		filter: hue-rotate(60deg) brightness(2) saturate(0.7);
+
 	}
 	section > ul {
 		background:linear-gradient(160deg, rgba(50,10,0,0.8), rgba(70,40,0,0.8));
