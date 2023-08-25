@@ -197,7 +197,6 @@ position:relative;
 
 main.w90 {padding:1rem 0px;}
 h1,h2,h3,h4 {font-weight:900;}
-#ITC7S main.w90 {padding:1rem 0px 5rem;}
 .ribbon {
 	margin:3rem 0;
 	}
@@ -504,7 +503,7 @@ dt a {font-size:1rem;}
 }
 .STF, #robin {
 	width: 100%;
-	margin:1rem auto;
+	margin:4rem auto;
 }
 .STF {
 	animation-name:stafflist;
@@ -619,6 +618,10 @@ dd article {padding-top:1rem;}
 		grid-gap:2rem 4rem;
 		grid-template-columns: 1fr 1fr;
 	}
+	.STF, #robin {
+		margin:1rem;
+	}
+
 }
 
 /*iPad*/
