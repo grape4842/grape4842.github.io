@@ -1,0 +1,99 @@
+.content_width {
+	width:90vw;
+	margin: 0px auto;
+}
+.content_width > * {
+	width: 100%;
+}
+h1 img {
+	width: 50%;
+	margin: 0px auto;
+}
+header nav {
+	background: #350D3F;
+}
+main {
+	background: url("../img/CB_bg_sky.jpg"); no-repeat top center;
+	background-size: cover;
+}
+header, .menu {
+	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
+
+}
+.menu {
+	justify-content: space-between;
+	text-align: center;
+	position:sticky;
+	bottom:0px;
+	z-index: 2;
+}
+
+a {
+	width: 100%;
+	padding:1rem;
+	display: flex;
+	flex-direction: column;
+}
+ul {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	}
+
+.main_content {
+/*	background: rgba( 0, 0, 0, 0.45 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 10px );
+	-webkit-backdrop-filter: blur( 10px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+*/
+}
+.main_content ul {
+	display: inline-grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	justify-content: center;
+
+}
+.main_content li {
+	margin: 1rem 0px;
+}
+.main_content a {
+	align-items: center;
+}
+.main_content img {
+	width:50px;
+	max-width: 80px;
+}
+.main_content span {
+	padding: 1rem;
+	padding-bottom: 0px;
+}
+
+.menu img {
+	width:20px;
+}
+
+.sub_content li {
+ 	width: 50%;
+ 	justify-self: center;
+}
+`
+/*기기별 CSS*/
+@media screen and (width >= 1400px) {
+	.VPC {display:unset;}
+	.VM {display:none;}
+	.content_width {width:55vw;}
+	}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+	.content_width {width:70vw;}
+}
+
+/*watch*/
+@media screen and (350px > width) {
+	.content_width {width:95vw;}
+}
