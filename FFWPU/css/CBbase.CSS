@@ -9,11 +9,15 @@ h1 img {
 	width: 50%;
 	margin: 0px auto;
 }
+header nav > div {
+	display: flex;
+	justify-content: space-between;\
+}
 header nav {
 	background: #350D3F;
 }
 main {
-	background: url("../img/CB_bg_sky.jpg"); no-repeat top center;
+	background: url("../img/CB_bg_sky.jpg") no-repeat center;
 	background-size: cover;
 }
 header, .menu {
@@ -29,11 +33,12 @@ header, .menu {
 }
 
 a {
+	display: block;
+	text-align: center;
 	width: 100%;
-	padding:1rem;
-	display: flex;
-	flex-direction: column;
+	padding:0.5rem;
 }
+span {display: block;}
 ul {
 	width: 100%;
 	display: flex;
@@ -41,24 +46,27 @@ ul {
 	justify-content: space-between;
 	}
 
-.main_content {
-/*	background: rgba( 0, 0, 0, 0.45 );
+section {
+	padding:1rem;
+	background: rgba( 0, 0, 0, 0.3 );
 	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-	backdrop-filter: blur( 10px );
+	backdrop-filter: blur(0.5rem);
 	-webkit-backdrop-filter: blur( 10px );
-	border-radius: 10px;
+	border-radius: 2rem;
 	border: 1px solid rgba( 255, 255, 255, 0.18 );
-*/
 }
+section.content_width {
+		margin: 3rem auto;
+}
+
 .main_content ul {
 	display: inline-grid;
 	grid-template-columns: repeat(3, 1fr);
 	justify-items: center;
 	justify-content: center;
-
 }
 .main_content li {
-	margin: 1rem 0px;
+	margin: 0.5rem;
 }
 .main_content a {
 	align-items: center;
@@ -66,21 +74,22 @@ ul {
 .main_content img {
 	width:50px;
 	max-width: 80px;
+	padding-bottom:0.5rem;
 }
-.main_content span {
-	padding: 1rem;
-	padding-bottom: 0px;
+
+
+.sub_content li {
+ 	width: 50%;
+ 	justify-self: center;
+}
+.sub_content a {
+	text-align: left;
 }
 
 .menu img {
 	width:20px;
 }
 
-.sub_content li {
- 	width: 50%;
- 	justify-self: center;
-}
-`
 /*기기별 CSS*/
 @media screen and (width >= 1400px) {
 	.VPC {display:unset;}
