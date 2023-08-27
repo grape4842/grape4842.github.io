@@ -223,13 +223,14 @@ section.content_width:last-child {
 }
 
 .CB_home svg {
-	fill:#c91f61;
+	fill:#AD236E;
 }
 .CB_home span{
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
+	font-weight: 900;
 	}
 
 .copyright {
