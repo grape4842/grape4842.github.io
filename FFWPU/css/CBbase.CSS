@@ -1,54 +1,73 @@
+@charset "utf-8";
 .content_width {
-	width:90vw;
+	width:95vw;
+	max-width: 320px;
 	margin: 0px auto;
 }
 .content_width > * {
 	width: 100%;
 }
+h1 {
+	text-align: center;
+}
+h1 a {
+	font-size: 2rem;
+	width: 40%;
+	padding:3rem 0px 1.5rem!important;
+	display: inline-flex;
+	justify-content: center;
+}
 h1 img {
-	width: 50%;
-	margin: 0px auto;
+	width: 100%;
+	height: auto;
+	max-width: 230px;
+	max-height: 75px;
 }
-header nav > div {
-	display: flex;
-	justify-content: space-between;\
-}
-header nav {
+
+.bar_menu {
+	text-align: center;
 	background: #350D3F;
+}
+.bar_menu > div {
+	display: flex;
+	justify-content: space-between;
+}
+.bar_menu a {
+	color:#fff;
+	width: 100%;
+}
+.bar_menu a:first-child {
+	text-align: left;
+}
+.bar_menu a:last-child {
+	text-align: right;
 }
 main {
 	background: url("../img/CB_bg_sky.jpg") no-repeat center;
 	background-size: cover;
+	padding:3rem 0px;
+	margin-bottom: -0.2rem;
 }
-header, .menu {
+header, .bottom_box {
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
 
-}
-.menu {
-	justify-content: space-between;
-	text-align: center;
-	position:sticky;
-	bottom:0px;
-	z-index: 2;
 }
 
 a {
 	display: block;
-	text-align: center;
-	width: 100%;
-	padding:0.5rem;
+}
+a:not(main a) {
+	padding: 1rem;
 }
 span {display: block;}
 ul {
 	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
 	}
 
 section {
-	padding:1rem;
-	background: rgba( 0, 0, 0, 0.3 );
+	background: rgba( 255 255 255 / 0.5 );
 	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 	backdrop-filter: blur(0.5rem);
 	-webkit-backdrop-filter: blur( 10px );
@@ -56,53 +75,238 @@ section {
 	border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 section.content_width {
-		margin: 3rem auto;
+	margin: 3rem auto;
 }
-
+section.content_width:last-child {
+	margin-bottom: 0px;
+}
+.main_content {
+	margin-top: 0px!important;
+}
 .main_content ul {
-	display: inline-grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	flex-wrap: wrap;
 	justify-items: center;
-	justify-content: center;
+	justify-content: space-between;
+	width: 100%;
+	padding:1.5rem 1rem 2rem;
 }
 .main_content li {
-	margin: 0.5rem;
+	margin-bottom: 1.5rem;
+	width:33%;
+}
+.main_content li:nth-child(2) {
+	padding:0px 0.5rem;
+}
+.main_content li:nth-child(n+7) {
+	margin-bottom: 0px;
 }
 .main_content a {
 	align-items: center;
+	padding-top:0.5rem;
 }
+.main_content p {
+	text-align: center;
+	padding-bottom: 0.5rem;
+}
+.main_content li:after {
+	content: '';
+	height:30%;
+	width:1px;
+	display: block;
+	background: rgba(0 0 0 / 0.9);
+	position: absolute;
+	bottom:33%;
+	right: -1px;
+}
+.main_content li:nth-child(3n)::after {
+	display: none;
+}
+
 .main_content img {
-	width:50px;
+	width:45%;
+	padding-bottom:0px;
 	max-width: 80px;
-	padding-bottom:0.5rem;
+	vertical-align: bottom;
+	filter: brightness(0.1);
 }
-
-
+.main_content span {
+	text-align: center;
+	width: 100%;
+}
+.sub_content {
+	padding:2rem;
+}
+.sub_content h3 {
+	font-size: 1.5rem;
+}
+.sub_content ul {
+	flex-direction: column;
+	padding-top:1rem;
+}
 .sub_content li {
- 	width: 50%;
  	justify-self: center;
 }
-.sub_content a {
-	text-align: left;
+.sub_content ul a {
+	white-space: nowrap;
+	overflow: hidden;
+	min-height: 3rem;
+	line-height: 3rem;
+	border-bottom: rgba(255 255 255 / 0.5) 1px solid;
+	text-overflow: ellipsis;
+}
+.sub_content ul a:before {
+	content:'';
+	margin:0px 0rem 0px 0.3rem;
+	display: inline-flex;
+	width:0px;
+	height:0px;
+	border:solid transparent 0.5rem;
+	border-left-color:rgba(0 0 0 / 0.7);
+	vertical-align: middle;
+}
+.more {
+	line-height: 1.5rem;
+	position: absolute;
+	top:2rem; right:2rem;
+	width: unset;
 }
 
-.menu img {
+.menu {
+	color:white;
+	padding:1rem 0px;
+	justify-content: space-between;
+	text-align: center;
+	position:sticky;
+	bottom:0px;
+	z-index: 2;
+}
+.menu li {
+	display: flex;
+	justify-content: center;
+}
+.menu li:nth-child(2) {
+	margin:0px 1rem;
+}
+.menu a {
+	aspect-ratio: 1/1;
+	width:100%;
+	max-width: 8rem;
+	border-radius: 100rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.menu span {
+	padding-top:0.5rem;
+}
+.CB_home {
+	margin: 0px auto;
+}
+.CB_home:before {
+	content: '';
+	width:80%;
+	background-color: #fff;
+	position: absolute;
+	top:0; left:0; bottom: 0; right: 0;
+	margin: auto;
+	aspect-ratio: 1/1;
+	border-radius: 100rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.menu :where(img, svg) {
 	width:20px;
 }
+
+.CB_home svg {
+	fill:#c91f61;
+}
+.CB_home span{
+	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	}
+
+.copyright {
+	color: white;
+	text-align: center;
+	padding-bottom:1rem;
+
+	opacity: 0.7;
+
+}
+
 
 /*기기별 CSS*/
 @media screen and (width >= 1400px) {
 	.VPC {display:unset;}
 	.VM {display:none;}
-	.content_width {width:55vw;}
+	.bar_menu a {
+		text-align: center;
+		margin:1rem;
 	}
+	main {padding:7rem 0px;}
+	section {border-radius: 4rem;}
+	.content_width {
+		max-width: 980px;
+	}
+	section.content_width {
+    margin: 7rem auto;
+	}
+	.main_content ul {
+		padding:2.5rem 0px 3rem;
+	}
+	.main_content a {
+		margin: 1rem;
+		padding:3rem 0rem;
+	}
+	.sub_content {
+		padding:4rem;
+	}
+	.sub_content ul {
+    flex-direction: column;
+    padding-top: 2rem;
+	}
+	.more {
+		top:4rem;
+		right:4rem;
+	}
+	.sub_content ul a:before {
+		margin:0px 0.5rem 0px 1rem;
+	}
+}
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
-	.content_width {width:70vw;}
+	.content_width {
+		max-width:692px;
+		}
+}
+@media (340px <= width < 700px ) {
+	.main_content li {aspect-ratio: 1/1}
+}
+/*watch*/
+@media screen and (330px > width) {
+
 }
 
-/*watch*/
-@media screen and (350px > width) {
-	.content_width {width:95vw;}
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	section {
+		background: rgba( 0 0 0 / 0.5 );
+	}
+	.main_content li:after {
+		background: rgba(255 255 255 / 0.9);
+	}
+	.main_content img {
+		filter: brightness(1);
+	}
+	.sub_content ul a:before {
+		border-left-color:rgba(255 255 255 / 0.9);
+	}
 }
