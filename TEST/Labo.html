@@ -114,23 +114,12 @@
 			<img src="https://kmug.co.kr/data/file/demand/data_demand_1017766_10152330284200750_5483578990376025968_n.jpg" alt="">
 			<figcaption>천일국 마크</figcaption>
 		</figure>
-		<ul style="display:inline-flex;">
-			<li>
-				<a href="" aria-current="page">1</a>
-			</li>
-			<li>
-				<a href="">2</a>
-			</li>
-			<li>
-				<a title="비활성화됨">3</a>
-			</li>
-		</ul>
 
 		<button type="button" aria-pressed="true">aria-pressed test</button>
 		<a href="" aria-expanded="false">aria-expanded="false"</a>
 		<seciton>
 				<h2>숨김텍스트 실험</h2>
-				<p >다양한 방법으로 CSS를 활용하여 숨김텍스트를 제공해보고 스크린리더에서 인지가 가능한지, 초점이 튀지는 않는지 테스트합니다. 이 문장은 올바른 숨김텍스트 제공 예시의 CSS로 숨겨져 있습니다. 올바르게 접근되는지 확인해보세요.</p>
+				<p class="a11y-txt">다양한 방법으로 CSS를 활용하여 숨김텍스트를 제공해보고 스크린리더에서 인지가 가능한지, 초점이 튀지는 않는지 테스트합니다. 이 문장은 올바른 숨김텍스트 제공 예시의 CSS로 숨겨져 있습니다. 올바르게 접근되는지 확인해보세요.</p>
 				<ul>
 					<li style="position:absolute; text-indent:-99999px;">1번 예시 : position absolute와 text-indent로 날리는 방법</li>
 					<li class="blind">2번 예시 : overflow:hidden; display:inline-block; position:relative; font-size:1px; z-index:-1; top:-1px; left:-1px; width:1px; height:1px; blind class 적용</li>
