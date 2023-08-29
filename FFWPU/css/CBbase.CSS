@@ -43,7 +43,7 @@ h1 img {
 	text-align: right;
 }
 main {
-	background: url("../img/CB_bg_sky.jpg") no-repeat center;
+	background: url("../img/CB_bg_sky.webp") no-repeat center;
 	background-size: cover;
 	padding:3rem 0px;
 	margin-bottom: -0.2rem;
@@ -251,7 +251,11 @@ section.content_width:last-child {
 		text-align: center;
 		margin:1rem;
 	}
-	main {padding:7rem 0px;}
+	main {
+		padding:7rem 0px;
+		background: url("../img/CB_bg_sky_pc.webp") no-repeat center;
+	}
+
 	section {border-radius: 4rem;}
 	.content_width {
 		max-width: 980px;
