@@ -43,7 +43,9 @@ h1 img {
 	text-align: right;
 }
 main {
-	background: url("../img/CB_bg_sky.webp") no-repeat center;
+	background-image: url("../img/CB_bg_sky.webp");
+	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: cover;
 	padding:3rem 0px;
 	margin-bottom: -0.2rem;
@@ -245,15 +247,12 @@ section.content_width:last-child {
 
 /*기기별 CSS*/
 @media screen and (width >= 1400px) {
-	.VPC {display:unset;}
-	.VM {display:none;}
 	.bar_menu a {
 		text-align: center;
 		margin:1rem;
 	}
 	main {
 		padding:7rem 0px;
-		background: url("../img/CB_bg_sky_pc.webp") no-repeat center;
 	}
 
 	section {border-radius: 4rem;}
@@ -261,28 +260,7 @@ section.content_width:last-child {
 		max-width: 980px;
 	}
 	section.content_width {
-    margin: 7rem auto;
-	}
-	.main_content ul {
-		padding:2.5rem 0px 3rem;
-	}
-	.main_content a {
-		margin: 1rem;
-		padding:3rem 0rem;
-	}
-	.sub_content {
-		padding:4rem;
-	}
-	.sub_content ul {
-    flex-direction: column;
-    padding-top: 2rem;
-	}
-	.more {
-		top:4rem;
-		right:4rem;
-	}
-	.sub_content ul a:before {
-		margin:0px 0.5rem 0px 1rem;
+	    margin: 7rem auto;
 	}
 }
 
@@ -290,10 +268,13 @@ section.content_width:last-child {
 @media (700px <= width < 1400px )  {
 	.content_width {
 		max-width:692px;
-		}
+	}
+	main {
+		padding:5rem 0px;
+	}
+
 }
 @media (340px <= width < 700px ) {
-	.main_content li {aspect-ratio: 1/1}
 }
 /*watch*/
 @media screen and (330px > width) {
@@ -304,14 +285,5 @@ section.content_width:last-child {
 @media (prefers-color-scheme:dark) {
 	section {
 		background: rgba( 0 0 0 / 0.5 );
-	}
-	.main_content li:after {
-		background: rgba(255 255 255 / 0.9);
-	}
-	.main_content img {
-		filter: brightness(1);
-	}
-	.sub_content ul a:before {
-		border-left-color:rgba(255 255 255 / 0.9);
 	}
 }
