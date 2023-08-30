@@ -1,4 +1,5 @@
 @charset "utf-8";
+.pc_view {display: none;}
 .content_width {
 	width:95vw;
 	max-width: 320px;
@@ -24,6 +25,45 @@ h1 img {
 	max-height: 75px;
 }
 
+.gnb_menu {
+	position: absolute;
+	top:3rem;
+	left:0; right: 0;
+	margin:0px auto;
+}
+.gnb_menu summary::-webkit-details-marker {
+	display: none;
+}
+.gnb_menu summary {
+	position: absolute;
+	top:0px; right:0px;
+	list-style: none;
+	appearance: none;
+	-webkit-appearance: none;
+	width:3rem;
+	height: 3rem;
+	padding:0.5rem;
+	text-align: center;
+	z-index: 3;
+}
+.gnb_menu ul {
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+}
+.gnb_menu a {
+	display: flex;
+	align-items: center;
+}
+.gnb_menu a img {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right:1rem;
+}
+.gnb_menu img + span {
+	display: inline-block;
+}
 .bar_menu {
 	text-align: center;
 	background: #350D3F;
@@ -130,10 +170,19 @@ section.content_width:last-child {
 	justify-content: center;
 	flex-direction: row;
 }
-.page_number_ui :where(a, button) {
-	width:1.5rem;
-	aspect-ratio: 1/1;
+.page_number_ui a {
+	margin:0px 0.5rem;
+	border:1px #c91f61 solid;
 }
+.page_number_ui :where(a, button) {
+	width:2rem;
+	aspect-ratio: 1/1;
+	text-align: center;
+	line-height: 2rem;
+}
+.page_number_ui :disabled {visibility: hidden;}
+.page_number_ui :where(a[aria-current], button) {
+	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);}
 .menu {
 	color:white;
 	padding:1rem 0px;
@@ -209,6 +258,7 @@ section.content_width:last-child {
 
 /*PC*/
 @media screen and (width >= 1400px) {
+	.pc_view {display: flex;}
 	.bar_menu a {
 		text-align: center;
 		margin:1rem;
