@@ -1,5 +1,5 @@
 section {
-	background: rgba( 255 255 255 / 0.5 );
+	background: rgba( 255 255 255 / 0.7 );
 	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 	backdrop-filter: blur(0.5rem);
 	-webkit-backdrop-filter: blur( 10px );
@@ -63,27 +63,6 @@ section {
 	text-align: center;
 	width: 100%;
 }
-.list_ui {
-	padding:2rem;
-}
-.list_ui h3 {
-	font-size: 1.5rem;
-}
-.list_ui ul {
-	flex-direction: column;
-	padding-top:1rem;
-}
-.list_ui li {
- 	justify-self: center;
-}
-.list_ui ul a {
-	white-space: nowrap;
-	overflow: hidden;
-	min-height: 3rem;
-	line-height: 3rem;
-	border-bottom: rgba(255 255 255 / 0.5) 1px solid;
-	text-overflow: ellipsis;
-}
 .more {
 	outline-offset:0.5rem;
 	line-height: 1.5rem;
@@ -127,13 +106,6 @@ section {
 		margin: 1rem;
 		padding:3rem 0rem;
 	}
-	.list_ui {
-		padding:4rem;
-	}
-	.list_ui ul {
-    flex-direction: column;
-    padding-top: 2rem;
-	}
 	.more {
 		top:4rem;
 		right:4rem;
@@ -167,7 +139,7 @@ section {
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
 	section {
-		background: rgba( 0 0 0 / 0.5 );
+		background: rgba( 0 0 0 / 0.7 );
 	}
 	.main_content li:after {
 		background: rgba(255 255 255 / 0.9);

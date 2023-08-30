@@ -52,10 +52,13 @@ main {
 	background-size: cover;
 	padding:3rem 0px;
 	margin-bottom: -0.2rem;
+	min-height: 100dvh;
 }
 header, .bottom_box {
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
-
+}
+.area_title {
+	font-size: 1.5rem;
 }
 
 a {
@@ -73,6 +76,7 @@ ul {
 	}
 
 section {
+	background: #111;
 	border-radius: 2rem;
 }
 section.content_width {
@@ -80,6 +84,27 @@ section.content_width {
 }
 section.content_width:last-child {
 	margin-bottom: 0px;
+}
+.list_ui {
+	padding:2rem;
+}
+.page_number_ui {
+	padding-top:2rem;
+}
+.list_ui ul {
+	flex-direction: column;
+	padding-top:1rem;
+}
+.list_ui li {
+ 	justify-self: center;
+}
+.list_ui ul a {
+	white-space: nowrap;
+	overflow: hidden;
+	min-height: 3rem;
+	line-height: 3rem;
+	border-bottom: rgba(255 255 255 / 0.5) 1px solid;
+	text-overflow: ellipsis;
 }
 
 .list_ui ul a:before {
@@ -96,7 +121,19 @@ section.content_width:last-child {
 .list_ui ul a:where(:hover, :focus)::before {
 	opacity: 1;
 }
-
+.page_number_ui {
+	display: flex;
+	justify-content: center;
+}
+.page_number_ui ol {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.page_number_ui :where(a, button) {
+	width:1.5rem;
+	aspect-ratio: 1/1;
+}
 .menu {
 	color:white;
 	padding:1rem 0px;
@@ -187,6 +224,17 @@ section.content_width:last-child {
 	section.content_width {
 	    margin: 7rem auto;
 	}
+	.list_ui {
+		padding:4rem;
+	}
+	.page_number_ui {
+		padding-top:4rem;
+	}
+	.list_ui ul {
+    flex-direction: column;
+    padding-top: 2rem;
+	}
+
 }
 
 /*700px〜1200px iPad*/
