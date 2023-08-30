@@ -35,11 +35,7 @@ h1 img {
 	display: none;
 }
 .gnb_menu summary {
-	position: absolute;
-	top:0px; right:0px;
 	list-style: none;
-	appearance: none;
-	-webkit-appearance: none;
 	width:3rem;
 	height: 3rem;
 	padding:0.5rem;
@@ -47,12 +43,21 @@ h1 img {
 	z-index: 3;
 }
 .gnb_menu ul {
-	display: flex;
+	background: #222;
+	display: inline-flex;
 	flex-direction: column;
 	z-index: 2;
+	padding:2rem;
+	padding-top:5rem;
+	position: absolute;
+	top:calc(-3rem + -40px);
+}
+.gnb_menu li {
+	display: inline-flex;
 }
 .gnb_menu a {
-	display: flex;
+	width: unset;
+	display: inline-flex;
 	align-items: center;
 }
 .gnb_menu a img {
