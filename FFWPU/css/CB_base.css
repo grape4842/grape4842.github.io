@@ -57,6 +57,7 @@ header, .bottom_box {
 
 a {
 	display: block;
+	text-underline-offset: 0.5rem;
 }
 a:not(main a) {
 	padding: 1rem;
@@ -155,6 +156,8 @@ section.content_width:last-child {
 
 
 /*기기별 CSS*/
+
+/*PC*/
 @media screen and (width >= 1400px) {
 	.bar_menu a {
 		text-align: center;
@@ -180,6 +183,9 @@ section.content_width:last-child {
 	}
 	main {
 		padding:5rem 0px;
+	}
+	section.content_width {
+    	margin: 5rem auto;
 	}
 
 }

@@ -7,7 +7,7 @@
 	justify-items: center;
 	justify-content: space-between;
 	width: 100%;
-	padding:1.5rem 1rem 2rem;
+	padding:2rem 1rem;
 }
 .main_content li {
 	margin-bottom: 1.5rem;
@@ -16,8 +16,11 @@
 .main_content li:nth-child(2) {
 	padding:0px 0.5rem;
 }
+.main_content li:nth-child(-n+3) {
+/*	margin-top:1.5rem;*/
+}
 .main_content li:nth-child(n+7) {
-	margin-bottom: 0px;
+	margin-bottom: 0.5rem;
 }
 .main_content a {
 	align-items: center;
@@ -85,11 +88,33 @@
 }
 .more {
 	line-height: 1.5rem;
+	font-size:2rem;
 	position: absolute;
 	top:2rem; right:2rem;
-	width: unset;
+	width: 1.5rem;
+	height: 1.5rem;
+	text-align: center;
+	border-radius: 10rem;
+	text-decoration: none;
+}
+.more:where(:hover, :focus) {text-decoration: none!important;}
+.more::after {
+	opacity: 0;
+	content: '';
+	display: flex;
+	width:100%; height: 100%;
+	position: absolute;
+	top:0px; right: 0px; bottom: 0px; left: 0px;
+	margin:auto;
+	border-radius: 10rem;
+	background: rgba(0 0 0 / 0.2);
+	box-shadow:0 0 0.15rem 0.5rem rgba(0 0 0 / 0.2);
+	transition: 0.2s opacity;
 }
 
+.more:where(:focus, :hover)::after {
+	opacity: 1;
+}
 
 /*기기별 CSS*/
 @media screen and (width >= 1400px) {
@@ -124,6 +149,14 @@
 	main {
 		background-image: url("../img/CB_bg_sky_pc.webp");
 		}
+	.main_content ul {
+		padding:4rem 1rem;
+	}
+	.main_content li:nth-child(n+7) {
+		margin-bottom: 1rem;
+	}
+
+
 
 }
 @media (340px <= width < 700px ) {
@@ -144,5 +177,9 @@
 	}
 	.sub_content ul a:before {
 		border-left-color:rgba(255 255 255 / 0.9);
+	}
+	.more:after {
+		background: rgba(255 255 255 / 0.2);
+		box-shadow:0 0 0.15rem 0.5rem rgba(255 255 255 / 0.2);
 	}
 }
