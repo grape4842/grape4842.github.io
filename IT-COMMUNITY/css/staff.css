@@ -1,0 +1,120 @@
+/*관리자 소개 페이지 CSS*/
+#robin {
+	justify-content:center;
+	position:relative;
+	top:-100rem;
+	animation-name:robin;
+	animation-duration:0.3s;
+	animation-fill-mode:forwards;}
+@keyframes robin {
+	0% {top:-100rem;}
+	100% {top:0em;}
+}
+#robin dt {
+	background: linear-gradient(135deg, #432000 20%, #775533, #432000 80%);
+	color:#ced;
+	font-weight:900;
+}
+#robin dd{
+	text-align:center;
+	border:solid #432000 5px;}
+
+#robin dt, .STF dt {
+	display:inline-block;
+	border-top-left-radius:2rem;
+	border-top-right-radius:2rem;
+	padding:1rem 1.5rem;
+	top:5px;
+	z-index: 2;
+}
+dt a {font-size:1rem;}
+#robin dd, .STF dd {
+	background-color:black;
+	padding:1rem;
+	border-radius: 2rem;
+	border-top-left-radius: 0px;
+}
+:where(#robin dd, .STF dd) img {
+	border-radius: 1rem;
+	display: flex;
+}
+.STF, #robin {
+	width: 100%;
+	margin:4rem auto;
+}
+.STF {
+	animation-name:stafflist;
+	animation-fill-mode:forwards;
+	animation-duration:0.5s;
+	position:relative;
+	left:100rem;
+}
+dd article {padding-top:1rem;}
+@keyframes stafflist {
+	0% {left:10000px;}
+	40% {left:-2%}
+	60% {left:0.5rem;}
+	75% {left:-1%;}
+	100% {left:0rem;}
+}
+.STF dt {
+	font-size:1.2rem;
+	font-weight:800;}
+.STF dd {
+	font-size:1.0rem;
+	font-weight:700;}
+.staffs {
+	width:100%; 
+	height:100%;}
+#aorus {animation-delay:0.2s}
+#aorus dt,#aorus a {background-color:#226; color:#def;}
+#aorus dd {border:solid #236 5px;}
+
+#kejang {animation-delay:0.3s}
+#kejang dt {background-color:#333;}
+#kejang dd {border:solid 5px #333;}
+
+#psps {animation-delay:0.4s}
+#psps dt,#psps a {background-color:#080;}
+#psps dd {border:#080 solid 5px;}
+
+#purple {animation-delay:0.5s}
+#purple dt {background-color:#439;}
+#purple dd {border:#439 solid 5px;}
+
+
+
+
+/*PC*/
+@media screen and (1100px < width) {
+
+	#ITC7S main {
+		padding:4rem 0px;
+		display: grid; 
+		grid-gap:2rem 4rem;
+		grid-template-columns: 1fr 1fr;
+	}
+	.STF, #robin {
+		margin:1rem;
+	}
+
+}
+@media (prefers-color-scheme:light) {
+	#ITC7S header::before {
+		background-color: white!important;
+		box-shadow: 0px 0px 1rem 3rem #fff;
+	}
+	#robin dd,.STF dd {
+		background-color:white;
+		color:black;
+		width:100%;
+	}
+
+	#purple dt,#purple a {background-color:#baf; color:#307;}
+	#purple dd {border:#baf solid 5px;}
+
+	#kejang dt,#kejang a {background-color:#ccc; color:black;}
+	#kejang dd {border:solid 5px #ccc;}
+
+	#psps dt,#psps a {background-color:#fce; color:#540;}
+	#psps dd {border:#fce solid 5px;}

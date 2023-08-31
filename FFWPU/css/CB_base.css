@@ -311,6 +311,7 @@ section.content_width:last-child {
 		margin:1rem;
 	}
 	main {
+		background-image: url("../img/CB_bg_sky_pc.png");
 		padding:7rem 0px;
 	}
 
@@ -340,6 +341,7 @@ section.content_width:last-child {
 		max-width:692px;
 	}
 	main {
+		background-image: url("../img/CB_bg_sky_pc.png");
 		padding:5rem 0px;
 	}
 	section.content_width {

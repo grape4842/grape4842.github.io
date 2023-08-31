@@ -1,0 +1,32 @@
+.site_list {
+	padding:0px;
+	display:inline-flex;
+	flex-wrap:wrap;
+	align-content: flex-start;
+	justify-content: center;
+}
+.site_list li {
+	margin: 1rem!important;
+}
+.site_list a {
+	background-color: #fff;
+	border-radius: 0.5rem;
+	padding: 2rem;
+	vertical-align: middle;
+	text-align: center;
+}
+.site_list li img {
+	height: 5rem;
+}
+
+.hover_logo {
+	position: absolute;
+	top:0; left:0; bottom:0; right: 0;
+	margin:auto;
+	opacity: 0;
+	will-change: opacity;
+	transition: opacity 0.4s;
+}
+a:has(.hover_logo):where(:hover, :focus, :active) .hover_logo {
+	opacity: 1;
+	}
