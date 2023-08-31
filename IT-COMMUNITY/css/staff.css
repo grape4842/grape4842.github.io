@@ -100,10 +100,6 @@ dd article {padding-top:1rem;}
 
 }
 @media (prefers-color-scheme:light) {
-	#ITC7S header::before {
-		background-color: white!important;
-		box-shadow: 0px 0px 1rem 3rem #fff;
-	}
 	#robin dd,.STF dd {
 		background-color:white;
 		color:black;
