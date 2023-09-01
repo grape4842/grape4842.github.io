@@ -133,7 +133,7 @@ header {
 #gochat:focus {box-shadow: 0 0 0 4px rgba(0,125,250,0.6); outline: none;}
 
 /*본문*/
-:is(header, .visual_title, .HELLO)::before {
+:is(header, .visual_title, .visual_title section)::before {
 	content: '';
 	position: absolute;
 	top:0px;
@@ -144,9 +144,6 @@ header {
 	background-color:#000;
 }
 
-:is(header, .visual_title,.HELLO)::before {
-	background-color: transparent;
-}
 
 header::before {
 	content: '';
@@ -641,12 +638,12 @@ footer {
 	.dark, .note20 {display:none;}
 	body {background-image:url("../img/mintback.png"); 
 		background-attachment:fixed;}
-	:is(header, .visual_title, .HELLO)::before {
+	:is(header, .visual_title, .visual_title section)::before {
 		background-color: white;
 	}
 	header::before {
 		background-color: white!important;
-		box-shadow: 0px 0px 1rem 3rem #fff;
+		box-shadow: 0px 0px 1rem 1rem #fff;
 	}
 	.visual_title::after {
 		background:linear-gradient(to bottom, rgba(255 255 255 / 1)30%, rgba(255 255 255 / 0)100%);
