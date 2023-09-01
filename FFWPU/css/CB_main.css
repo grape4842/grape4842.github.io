@@ -55,36 +55,6 @@
 	text-align: center;
 	width: 100%;
 }
-.more {
-	outline-offset:0.5rem;
-	line-height: 1.5rem;
-	font-size:2rem;
-	position: absolute;
-	top:2rem; right:2rem;
-	width: 1.5rem;
-	height: 1.5rem;
-	text-align: center;
-	border-radius: 10rem;
-	text-decoration: none;
-}
-.more:where(:hover, :focus) {text-decoration: none!important;}
-.more::after {
-	opacity: 0;
-	content: '';
-	display: flex;
-	width:100%; height: 100%;
-	position: absolute;
-	top:0px; right: 0px; bottom: 0px; left: 0px;
-	margin:auto;
-	border-radius: 10rem;
-	background: rgba(0 0 0 / 0.2);
-	box-shadow:0 0 0.15rem 0.5rem rgba(0 0 0 / 0.2);
-	transition: 0.2s opacity;
-}
-
-.more:where(:focus, :hover)::after {
-	opacity: 1;
-}
 
 /*기기별 CSS*/
 @media screen and (width >= 1400px) {
@@ -94,10 +64,6 @@
 	.main_content a {
 		margin: 1rem;
 		padding:3rem 0rem;
-	}
-	.more {
-		top:4rem;
-		right:4rem;
 	}
 
 }
@@ -129,9 +95,5 @@
 	}
 	.main_content img {
 		filter: brightness(1);
-	}
-	.more:after {
-		background: rgba(255 255 255 / 0.2);
-		box-shadow:0 0 0.15rem 0.5rem rgba(255 255 255 / 0.2);
 	}
 }
