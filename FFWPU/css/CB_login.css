@@ -7,8 +7,8 @@
 .with_login a {
 	display: flex;
 	align-items: center;
-	width:5rem;
-	max-width: 7rem;
+	overflow: visible!important;
+	height: 3rem;
 }
 .google_signin_button {
 	color:#fff;
