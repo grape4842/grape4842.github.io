@@ -38,7 +38,7 @@
 	<script type="text/javascript" src="../include_script.js"></script>
 	<header w3-include-html="CheonBo_header.html"></header>
 	<main>
-		<section class="content_width">
+		<section class="content_width list_ui">
 			<form accept-charset="utf-8" method="post" action="./logincheck.php">
 				<fieldset>
 					<legend>
@@ -51,38 +51,34 @@
 					<input type="submit">
 				</fieldset>
 			</form>
+			<ul class="with_login">
+				<li></li>
+				<li>
+					<a href="" class="google_signin_button">
+						<img alt="" src="../icon/google_signin_buttons/web/vector/btn_google_light_normal_ios.svg">
+						<span class="">Google로 로그인</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img alt="" src="../icon/apple_login.webp">
+						<span class="hidden">애플로 로그인</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img alt="" src="../icon/">
+						<span class="hidden"></span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img alt="" src="../icon/">
+						<span class="hidden"></span>
+					</a>
+				</li>
+			</ul>
 		</section>
-		<ul class="content_width">
-			<li>
-				<a href="" id="dark_apple_login" w3-include-html="apple_sign_in.html">
-				</a>
-				<a href="" id="light_apple_login" w3-include-html="apple_sign_in.html_white"></a>
-			</li>
-			<li>
-				<a href="">
-					<img alt="" src="../icon/google_signin_buttons/web/vector/btn_google_light_normal_ios.svg">
-					<span class="hidden"></span>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img alt="" src="../icon/">
-					<span class="hidden"></span>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img alt="" src="../icon/">
-					<span class="hidden"></span>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img alt="" src="../icon/">
-					<span class="hidden"></span>
-				</a>
-			</li>
-		</ul>
 	</main>
 	<div class="bottom_box" w3-include-html="CheonBo_footer.html"></div>
 	<script>

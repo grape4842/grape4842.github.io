@@ -57,6 +57,7 @@
 }
 
 /*기기별 CSS*/
+/*PC*/
 @media screen and (width >= 1400px) {
 	.main_content ul {
 		padding:2.5rem 0px 3rem;
@@ -76,10 +77,9 @@
 	.main_content li:nth-child(n+7) {
 		margin-bottom: 1rem;
 	}
-
-
-
 }
+
+/*Mobile*/
 @media (340px <= width < 700px ) {
 	.main_content li {aspect-ratio: 1/1}
 }

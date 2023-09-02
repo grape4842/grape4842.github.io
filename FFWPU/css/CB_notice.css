@@ -1,0 +1,43 @@
+.with_login  {
+	width: unset;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.with_login a {
+	display: flex;
+	align-items: center;
+	width:5rem;
+	max-width: 7rem;
+}
+.google_signin_button {
+	color:#fff;
+	background: #4285F4;
+}
+.google_signin_button span {
+	white-space: nowrap;
+}
+/*기기별 CSS*/
+/*PC*/
+@media screen and (width >= 1400px) {
+	
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+	
+}
+
+/*Mobile*/
+@media (340px <= width < 700px ) {
+	
+}
+/*watch*/
+@media screen and (330px > width) {
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	
+}
