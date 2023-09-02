@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<title>천보가정교회 - 로그인</title>
+	<title>천보가정교회 - 회원가입</title>
 	<link rel="stylesheet" type="text/css" href="../root.css">
 	<link rel="stylesheet" type="text/css" href="css/CB_base.css">
-	<link rel="stylesheet" type="text/css" href="css/CB_login.css">
+	<link rel="stylesheet" type="text/css" href="css/CB_signup.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta property="og:description" content="">
@@ -33,78 +33,23 @@
 	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
 </head>
 <body>
-	<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/ko_KR/appleid.auth.js"></script>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script type="text/javascript" src="../include_script.js"></script>
 	<header w3-include-html="CheonBo_header.html"></header>
 	<main>
 		<section class="content_width list_ui">
-			<form accept-charset="utf-8" method="post" action="./logincheck.php">
-				<fieldset class="login_box">
-					<legend>
-						<h2>로그인</h2>
-						<p>이메일주소와 비밀번호를 입력해주시기 바랍니다.</p>
-					</legend>
-					<div class="login_controls">
-						<div class="login_input_box">
-							<div class="input_box">
-								<label for="login_id">아이디</label>
-								<input type="text" name="" id="login_id">
-							</div>
-							<div class="input_box">
-								<label for="login_pw">비밀번호</label>
-								<input type="password" name="" id="login_pw">
-							</div>
-						</div>
-						<button type="button" id="login_button">로그인</button>
-					</div>
-					<ul>
-						<li><a href="">아이디 찾기</a></li>
-						<li><a href="">비밀번호 찾기</a></li>
-					</ul>
-				</fieldset>
+			<h2>회원가입</h2>
+			<p>서비스 약관 및 개인정보 수집, 이용에 동의해 주세요.</p>
+			<form>
+				<label for="agree1">천보가정교회 서비스 약관 동의</label>
+				<input type="checkbox" name="" id="agree1">
+				<label for="agree2">천보가정교회 개인정보처리방침</label>
+				<input type="checkbox" name="" id="agree2">
 			</form>
-			<ul class="with_login">
-				<li>
-					<script src="https://accounts.google.com/gsi/client" async defer></script>
-					<div id="g_id_onload"
-					data-client_id="YOUR_GOOGLE_CLIENT_ID"
-					data-login_uri="https://your.domain/your_login_endpoint"
-					data-auto_prompt="false"></div>
-					<div id="google_signin" class="g_id_signin"
-					data-type="standard"
-					data-size="large"
-					data-theme="filled_blue"
-					data-text="sign_in_with"
-					data-shape="rectangular"
-					data-locate="ko-kr"
-					data-logo_alignment="left"></div>
-				</li>
-        		<li>
-					<a href="">
-						<img alt="" src="../icon/apple_login.webp">
-						<span class="hidden">애플로 로그인</span>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img alt="" src="../icon/kakao_login/ko/kakao_login_large_narrow.png">
-						<span class="hidden">카카오 로그인</span>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img alt="" src="../icon/2021_Login_with_naver_guidelines_Kr/btnG_완성형.png">
-						<span class="hidden">네이버 로그인</span>
-					</a>
-				</li>
-			</ul>
+			<div>
+				<button type="button">취소</button>
+				<button type="button">확인</button>
+			</div>
 		</section>
 	</main>
-	<div class="bottom_box" w3-include-html="CheonBo_footer.html"></div>
-	<script>
-	includeHTML();
-	</script>
-
 </body>
 </html>
