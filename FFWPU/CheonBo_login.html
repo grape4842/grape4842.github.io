@@ -33,6 +33,8 @@
 	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
 </head>
 <body>
+	<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/ko_KR/appleid.auth.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script type="text/javascript" src="../include_script.js"></script>
 	<header w3-include-html="CheonBo_header.html"></header>
 	<main>
@@ -41,23 +43,44 @@
 				<fieldset class="login_box">
 					<legend>
 						<h2>로그인</h2>
+						<p>이메일주소와 비밀번호를 입력해주시기 바랍니다.</p>
 					</legend>
-					<div class="input_box">
-						<input type="text" name="">
-						<input type="password" name="">
+					<div class="login_controls">
+						<div class="login_input_box">
+							<div class="input_box">
+								<label for="login_id">아이디</label>
+								<input type="text" name="" id="login_id">
+							</div>
+							<div class="input_box">
+								<label for="login_pw">비밀번호</label>
+								<input type="password" name="" id="login_pw">
+							</div>
+						</div>
+						<button type="button" id="login_button">로그인</button>
 					</div>
-					<input type="submit" value="로그인" id="login_button">
+					<ul>
+						<li><a href="">아이디 찾기</a></li>
+						<li><a href="">비밀번호 찾기</a></li>
+					</ul>
 				</fieldset>
 			</form>
 			<ul class="with_login">
-				<li></li>
 				<li>
-					<a href="" class="google_signin_button">
-						<img alt="" src="../icon/google_signin_buttons/web/vector/btn_google_light_normal_ios.svg">
-						<span class="">Google로 로그인</span>
-					</a>
+					<script src="https://accounts.google.com/gsi/client" async defer></script>
+					<div id="g_id_onload"
+					data-client_id="YOUR_GOOGLE_CLIENT_ID"
+					data-login_uri="https://your.domain/your_login_endpoint"
+					data-auto_prompt="false"></div>
+					<div id="google_signin" class="g_id_signin"
+					data-type="standard"
+					data-size="large"
+					data-theme="filled_blue"
+					data-text="sign_in_with"
+					data-shape="rectangular"
+					data-locate="ko-kr"
+					data-logo_alignment="left"></div>
 				</li>
-				<li>
+        		<li>
 					<a href="">
 						<img alt="" src="../icon/apple_login.webp">
 						<span class="hidden">애플로 로그인</span>
@@ -65,14 +88,14 @@
 				</li>
 				<li>
 					<a href="">
-						<img alt="" src="../icon/">
-						<span class="hidden"></span>
+						<img alt="" src="../icon/kakao_login/ko/kakao_login_large_narrow.png">
+						<span class="hidden">카카오 로그인</span>
 					</a>
 				</li>
 				<li>
 					<a href="">
-						<img alt="" src="../icon/kakao_login/ko/kakao_login_large_narrow.png">
-						<span class="hidden"></span>
+						<img alt="" src="../icon/2021_Login_with_naver_guidelines_Kr/btnG_완성형.png">
+						<span class="hidden">네이버 로그인</span>
 					</a>
 				</li>
 			</ul>
