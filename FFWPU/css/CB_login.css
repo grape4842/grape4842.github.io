@@ -1,5 +1,5 @@
 .with_login  {
-	width: unset;
+	width: unset ;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

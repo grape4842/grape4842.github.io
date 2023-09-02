@@ -195,7 +195,7 @@ section.content_width:last-child {
 	text-overflow: ellipsis;
 }
 
-.list_ui ul a:before {
+.list_ui ul.arrow_list a:before {
 	opacity: 0.3;
 	content:'';
 	margin:0px 0rem 0px 0.3rem;
@@ -206,7 +206,7 @@ section.content_width:last-child {
 	border-left-color:rgba(0 0 0 / 0.7);
 	vertical-align: middle;
 }
-.list_ui ul a:where(:hover, :focus)::before {
+.list_ui ul.arrow_list a:where(:hover, :focus)::before {
 	opacity: 1;
 }
 .page_number_ui {
@@ -396,7 +396,7 @@ section.content_width:last-child {
 	section.content_width {
     	margin: 5rem auto;
 	}
-	.list_ui ul a:before {
+	.list_ui ul.arrow_list a:before {
 		margin:0px 0.5rem 0px 1rem;
 	}
 
@@ -422,7 +422,7 @@ section.content_width:last-child {
 	section {
 		background: rgba( 0 0 0 / 0.7 );
 	}
-	.list_ui ul a:before {
+	.list_ui ul.arrow_list a:before {
 		border-left-color:rgba(255 255 255 / 0.9);
 	}
 	.more:after {
