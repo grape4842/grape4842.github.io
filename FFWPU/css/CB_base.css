@@ -410,6 +410,9 @@ section.content_width:last-child {
 }
 /*watch*/
 @media screen and (330px > width) {
+	.list_ui {
+    	padding: 1rem;
+	}
 	.gnb_menu summary {
 		width:39.87px;
 		height:39.87px;

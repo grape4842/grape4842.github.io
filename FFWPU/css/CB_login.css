@@ -53,20 +53,20 @@ legend p {
 .with_login li {
 	text-align: center;
 }
-.with_login a, #google_signin {
+.with_login li > *:last-child {
 	margin:1rem auto;
-	min-height:41px;
 	display: inline-flex;
+	justify-content: center;
 	align-items: center;
-	overflow: visible!important;
 	width:15rem;
 }
+.with_login li > *:not(a):focus-within {
+	outline:solid black 1px;
+}
+
 .with_login img {
 	width:auto;
 	height: 100%;
-}
-li:has(#google_signin) div[tabindex="0"]:focus {
-	outline: 2px double #000;
 }
 
 
@@ -83,10 +83,28 @@ li:has(#google_signin) div[tabindex="0"]:focus {
 
 /*Mobile*/
 @media (340px <= width < 700px ) {
-	
+	.login_controls {
+		flex-direction: column;
+	}
+	#login_button {
+		width:15rem;
+		height:4rem;
+		aspect-ratio: auto;
+	}
+
 }
 /*watch*/
 @media screen and (330px > width) {
+	.login_controls {
+		flex-direction: column;
+	}
+	#login_button {
+		width:15rem;
+		height:4rem;
+		aspect-ratio: auto;
+		margin: 0px;
+	}
+
 
 }
 
