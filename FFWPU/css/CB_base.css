@@ -124,7 +124,7 @@ h2 {font-size: 1.5rem;}
 .bar_menu a {
 	color:#fff;
 	width: 100%;
-	padding:0.5rem 1rem;
+	padding:1rem;
 }
 .bar_menu a:first-child {
 	text-align: left;
@@ -140,11 +140,14 @@ main {
 	background-position: center center;
 	background-size: cover;
 	padding:3rem 0px;
-	margin-bottom: -0.2rem;
 	min-height: 100dvh;
 }
 header, .bottom_box {
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
+}
+.bottom_box {
+	position: sticky;
+	bottom:0px;
 }
 .area_title {
 	font-size: 1.5rem;
