@@ -1,0 +1,79 @@
+.agree_please {text-align:center;}
+form {
+	width:100%;
+	}
+fieldset {
+	border: 1px solid #e6e6e6;
+	margin: 2rem auto;
+}
+fieldset dt {
+	font-weight: 700;
+	padding:0.5rem 0rem;
+}
+fieldset dd {
+	padding:0.2rem;
+}
+form h3 {
+	display: flex;
+	justify-content: space-between;
+	padding:1rem;
+	background: #f1f1f1;
+	border-bottom: 1px solid #e6e6e6;
+	font-weight: 700;
+}
+.policy_box {
+	background-color: rgba(255 258 255 / 0.4);
+	height: 10rem;
+	overflow-y: scroll;
+	padding:1rem;
+}
+.buttons {
+	display: flex;
+	justify-content: space-between;
+}
+.buttons button{
+	width:49%;
+	border-radius: 5px;
+	justify-content: center;
+	padding:0.5rem;
+}
+.buttons .ok {
+	background-color: #242e62;
+	color:#fff;
+}
+
+/*기기별 CSS*/
+/*PC*/
+@media screen and (width >= 1400px) {
+
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+
+}
+
+/*Mobile*/
+@media (340px <= width < 700px ) {
+
+}
+
+/*watch*/
+@media screen and (330px > width) {
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	fieldset {
+		border: 1px solid rgba(100 100 100 / 0.5);
+	}
+	form h3 {
+		background-color:rgba(0 0 0 / 0.7);
+		border-bottom: 1px solid rgba(100 100 100 / 0.5);
+	}
+	.policy_box {
+		background-color: rgba(0 0 0 / 0.5);
+	}
+
+}

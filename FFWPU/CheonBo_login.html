@@ -60,30 +60,24 @@
 						</div>
 						<button type="button" id="login_button">로그인</button>
 					</div>
-					<ul>
-						<li><a href="">아이디 찾기</a></li>
-						<li><a href="">비밀번호 찾기</a></li>
-					</ul>
+					<div class="login_account_menu">
+						<a href="">아이디 / 비밀번호를 분실하셨나요?</a>
+						<a href="">회원가입</a>
+					</div>
 				</fieldset>
 			</form>
 			<ul class="with_login">
 				<li>
-					<script src="https://accounts.google.com/gsi/client" async defer></script>
-					<div id="g_id_onload"
-					data-client_id="YOUR_GOOGLE_CLIENT_ID"
-					data-login_uri="https://your.domain/your_login_endpoint"
-					data-auto_prompt="false"></div>
-					<div id="google_signin" class="g_id_signin"
-					data-type="standard"
-					data-size="large"
-					data-theme="filled_blue"
-					data-text="sign_in_with"
-					data-shape="square"
-					data-locate="ko-kr"
-					data-logo_alignment="left"></div>
+					<a href="">
+						<img src="../icon/google_login_button.webp" alt="">
+						<span class="hidden">구글 계정으로 로그인</span>
+					</a>
 				</li>
 				<li>
-					<div class="fb-login-button" data-width="15rem" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+					<a href="">
+						<img src="../icon/facebook_login.webp" alt="">
+						<span class="hidden">페이스북으로 로그인</span>
+					</a>
 				</li>
         		<li>
 					<a href="">

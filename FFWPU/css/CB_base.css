@@ -8,6 +8,18 @@
 .content_width > * {
 	width: 100%;
 }
+th, td {
+	border:solid 1px;
+}
+input {
+	accent-color: #c91f61;
+	min-width:1.1rem;
+	min-height: 1.1rem;
+	vertical-align: middle;
+	}
+fieldset {
+	border:none;
+}
 h1 {
 	text-align: center;
 }
@@ -24,7 +36,11 @@ h1 img {
 	max-width: 230px;
 	max-height: 75px;
 }
-h2 {font-size: 1.5rem;}
+h2 {
+	font-size: 1.5rem;
+	padding:3rem 1rem;
+	text-align: center;
+}
 .gnb_menu {
 	position: absolute;
 	top:0px;
@@ -299,7 +315,7 @@ section.content_width:last-child {
 	aspect-ratio: 1/1;
 	width:100%;
 	padding:0px;
-	max-width: 7rem;
+	max-width: 6rem;
 	border-radius: 100rem;
 	display: flex;
 	flex-direction: column;

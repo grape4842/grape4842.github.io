@@ -18,7 +18,7 @@ legend p {
 	max-width: 420px;
 }
 .login_box :where(.input_box, button) {
-	width:13rem;
+	width:20rem;
 }
 .login_controls {
 	width: 100%;
@@ -33,6 +33,9 @@ legend p {
 	height: 36px;
 	margin-bottom:2rem;
 }
+.input_box label {
+	line-height: 2rem;
+}
 #login_button {
 	background: #1f97db;
 	color:white;
@@ -42,6 +45,12 @@ legend p {
 	border-radius: 0.5rem;
 	margin-left: 1rem;
 
+}
+
+.login_account_menu {
+	padding:0rem!important;
+	flex-direction: row!important;
+	justify-content: flex-start;
 }
 
 .with_login  {
@@ -58,7 +67,7 @@ legend p {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	width:13rem;
+	width:20rem;
 }
 .with_login li > *:not(a):focus-within {
 	outline:solid black 1px;
@@ -86,6 +95,12 @@ legend p {
 	.login_controls {
 		flex-direction: column;
 	}
+	.login_box :where(.input_box, button) {
+		width:13rem;
+	}
+	.with_login li > *:last-child {
+		width:13rem;
+	}
 	#login_button {
 		width:13rem;
 		height:4rem;
@@ -99,6 +114,13 @@ legend p {
 	.login_controls {
 		flex-direction: column;
 	}
+	.login_box :where(.input_box, button) {
+		width:13rem;
+	}
+	.with_login li > *:last-child {
+		width:13rem;
+	}
+
 	#login_button {
 		width:13rem;
 		height:3rem;
