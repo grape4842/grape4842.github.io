@@ -282,7 +282,6 @@ section.content_width:last-child {
 /*하단 메뉴바*/
 .menu {
 	color:white;
-	padding:1rem 0px;
 	justify-content: space-between;
 	text-align: center;
 	position:sticky;
@@ -299,7 +298,7 @@ section.content_width:last-child {
 .menu a {
 	aspect-ratio: 1/1;
 	width:100%;
-	max-width: 8rem;
+	max-width: 7rem;
 	border-radius: 100rem;
 	display: flex;
 	flex-direction: column;
@@ -331,7 +330,7 @@ section.content_width:last-child {
 }
 
 .CB_home svg {
-	fill:#AD236E;
+	fill:#91287c;
 }
 .CB_home span{
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
