@@ -79,6 +79,12 @@ h2 {font-size: 1.5rem;}
 	top:0; left:0;
 	padding:1rem;
 }
+.gnb_menu_login {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	padding:1rem;
+}
 .gnb_menu ul {
 	display: inline-flex;
 	flex-direction: column;
