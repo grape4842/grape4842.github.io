@@ -18,7 +18,7 @@ legend p {
 	max-width: 420px;
 }
 .login_box :where(.input_box, button) {
-	width:15rem;
+	width:13rem;
 }
 .login_controls {
 	width: 100%;
@@ -58,7 +58,7 @@ legend p {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	width:15rem;
+	width:13rem;
 }
 .with_login li > *:not(a):focus-within {
 	outline:solid black 1px;
@@ -87,7 +87,7 @@ legend p {
 		flex-direction: column;
 	}
 	#login_button {
-		width:15rem;
+		width:13rem;
 		height:4rem;
 		aspect-ratio: auto;
 		margin: 0px;
@@ -100,7 +100,7 @@ legend p {
 		flex-direction: column;
 	}
 	#login_button {
-		width:15rem;
+		width:13rem;
 		height:3rem;
 		aspect-ratio: auto;
 		margin: 0px;
