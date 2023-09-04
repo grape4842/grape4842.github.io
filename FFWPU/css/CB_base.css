@@ -298,6 +298,7 @@ section.content_width:last-child {
 .menu a {
 	aspect-ratio: 1/1;
 	width:100%;
+	padding:0px;
 	max-width: 7rem;
 	border-radius: 100rem;
 	display: flex;
@@ -343,7 +344,8 @@ section.content_width:last-child {
 .copyright {
 	color: white;
 	text-align: center;
-	padding-bottom:1rem;
+	font-size: 14px;
+	padding-bottom:0.5rem;
 
 	opacity: 0.7;
 
