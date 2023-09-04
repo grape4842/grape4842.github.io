@@ -90,6 +90,7 @@ legend p {
 		width:15rem;
 		height:4rem;
 		aspect-ratio: auto;
+		margin: 0px;
 	}
 
 }
@@ -100,7 +101,7 @@ legend p {
 	}
 	#login_button {
 		width:15rem;
-		height:4rem;
+		height:3rem;
 		aspect-ratio: auto;
 		margin: 0px;
 	}

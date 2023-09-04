@@ -45,6 +45,7 @@ h2 {font-size: 1.5rem;}
 	aspect-ratio: 1/1;
 }
 .gnb_menu summary img {
+	scale:0.7;
 	max-width: 75px;
 	max-height: 75px;
 	aspect-ratio: 1/1;
@@ -76,6 +77,7 @@ h2 {font-size: 1.5rem;}
 	z-index: 2;
 	position: absolute;
 	top:0; left:0;
+	padding:1rem;
 }
 .gnb_menu ul {
 	display: inline-flex;
@@ -105,6 +107,11 @@ h2 {font-size: 1.5rem;}
 .gnb_menu img + span {
 	display: inline-block;
 }
+.gnb_menu .sub_menu a {
+	padding:0.5rem 1rem;
+}
+
+
 
 .bar_menu {
 	text-align: center;
