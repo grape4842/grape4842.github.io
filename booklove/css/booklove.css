@@ -60,6 +60,7 @@ main section > div > div {
 	position: absolute;
 	top:0px;
 }
+.gnb_box h2 {padding:1rem;}
 .gnb_button {
 	position: absolute;
 	right: 0px;
@@ -70,7 +71,7 @@ main section > div > div {
 	width:3rem; height:3rem;
 	color:white;
 	background-color: rgb(51, 41, 23);
-    box-shadow: rgb(48, 27, 5) 0px 0px 3px;
+	box-shadow: rgb(48, 27, 5) 0px 0px 3px;
 }
 .gnb_button h2 + ol {
 	flex-wrap:wrap;
@@ -80,12 +81,28 @@ main section > div > div {
 
 
 .gnb_list {
-	position: absolute;
+	position: fixed;
+	height: 100dvh;
+	top:0px; left:0px;
+	z-index: 5;
 	background-image:url("../img/bookbg.jpg");
-	padding:5rem 1.5rem;
+	padding:4rem 1.5rem;
 	animation-duration:0.4s;
 	animation-name:load;
 	animation-fill-mode:forwards;
+}
+.gnb_list > ol {
+	height: 100%;
+	position: relative;
+	padding:0px;
+	width: 100%;
+	overflow-y: scroll;
+}
+.gnb_list > ol::-webkit-scrollbar {
+	display: none;
+}
+.gnb_list > ol > li {
+	border-radius: 1rem;
 }
 @keyframes load {
 	from {left:-100%;}
@@ -95,7 +112,8 @@ main section > div > div {
 .gnb_list::before, .gnb_list::after {
 	content:'';
 	z-index:500;
-	position:absolute; left:0px;
+	position: absolute;
+	left:0px;
 	display:flex;
 	width:100%; height:50px;
 	background-image:url("../img/navrace.png");
@@ -136,6 +154,7 @@ a {
 .gnb_list a:after {
 	content:'';
 	transition: opacity 0.6s ease-out, right 0.4s;
+
 	opacity:0;
 	position:absolute;
 	right:90%;
@@ -145,6 +164,7 @@ a {
 	background-repeat:no-repeat;
 	background-position: center center;
 }
+
 .now {
 	opacity:1;
 }
@@ -173,12 +193,14 @@ a:focus:before, a:hover:before {
 	position:sticky;
 	border:white solid 1px;
 	text-align:center;
-	z-index:10;
-	background:#333;
+	z-index:5;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-weight: 900;
+	color: white;
+    background-color: rgb(51, 41, 23);
+    box-shadow: rgb(48, 27, 5) 0px 0px 3px;
 }
 
 #gobottom{
@@ -193,10 +215,18 @@ a:focus:before, a:hover:before {
 
 /*PC*/
 @media screen and (width >= 1400px) {
+	.width_center {
+		width:55vw;
+	}
+
 }
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
+	.width_center {
+		width:70vw;'
+		max-width: 980px;
+	}
 
 }
 
@@ -208,6 +238,10 @@ a:focus:before, a:hover:before {
 
 /*watch*/
 @media screen and (330px > width) {
+	.width_center {
+		width:95vw;
+	}
+
 }
 
 /*darkmode*/
@@ -220,7 +254,9 @@ a:focus:before, a:hover:before {
 		width:100%; height: 100%;
 		background-color: rgba(0 0 0 / 0.7);
 	}
+	.gnb_button img {filter:invert(1);}
 	.gnb_list {background-image:url("../img/bookbgd.jpg");}
+/*	.gnb_list::before, .gnb_list::after {background-image:url("../img/navrace-dark.png");}*/
 	header,footer {background-color:#015;}
 	main section>div {
 		box-shadow: 0px 0px 1rem 0.5rem inset #655;
@@ -229,7 +265,7 @@ a:focus:before, a:hover:before {
 	a:focus,a:hover {
 		text-decoration:underline wavy #fffd;
 	}
-	a:after {background-image:url("../img/haned.png");}
+	.gnb_list a:after {background-image:url("../img/haned.png");}
 	a:focus:before, a:hover:before {background-color:#0003;}
 	.nextfile:visited,.prefile:visited {color:#ddf;}
 }
