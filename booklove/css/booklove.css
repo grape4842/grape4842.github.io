@@ -1,5 +1,10 @@
-body {
-	font-family:"KoddiUDOnGothic", "BIZ-UDGothic", sans-serif, serif;
+body:before {
+	content: "";
+	position: fixed;
+	display: flex;
+	width:100vw;
+	height: 100dvh;
+	filter: brightness(2) contrast(50%) saturate(150%);
 	background-image:url("../img/wood2.jpg");
 	background-attachment:fixed;
 	background-size:cover;
@@ -65,28 +70,31 @@ main section > div > div {
 	position: absolute;
 	right: 0px;
 	display:flex;
+	border:white solid 1px;
 	justify-content:center;
 	align-items:center;
 	z-index:9999;
 	width:3rem; height:3rem;
-	color:white;
-	background-color: rgb(51, 41, 23);
-	box-shadow: rgb(48, 27, 5) 0px 0px 3px;
+	color:#fff;
+	background-color: rgb(51 41 23);
+	box-shadow: rgb(48 27 5) 0px 0px 3px;
 }
 .gnb_button h2 + ol {
 	flex-wrap:wrap;
 	display:flex;
 	justify-content: space-around;
 }
-
+.gnb_button img {filter: invert(1);}
 
 .gnb_list {
 	position: fixed;
 	height: 100dvh;
 	top:0px; left:0px;
 	z-index: 5;
-	background-image:url("../img/bookbg.jpg");
 	padding:4rem 1.5rem;
+	background-image:url("../img/bookbg.jpg");
+}
+.gnb_box[open] .gnb_list {
 	animation-duration:0.4s;
 	animation-name:load;
 	animation-fill-mode:forwards;
@@ -105,8 +113,8 @@ main section > div > div {
 	border-radius: 1rem;
 }
 @keyframes load {
-	from {left:-100%;}
-	to {left:0px;}
+	from {left:-100rem;}
+	to {left:0rem;}
 }
 
 .gnb_list::before, .gnb_list::after {
@@ -154,10 +162,9 @@ a {
 .gnb_list a:after {
 	content:'';
 	transition: opacity 0.6s ease-out, right 0.4s;
-
 	opacity:0;
 	position:absolute;
-	right:90%;
+	right:calc(100% - 46px);
 	width:46px; height:33px;
 	background-image:url("../img/hane.png");
 	background-size:100%;
@@ -173,12 +180,13 @@ a:focus,a:hover {
 	text-decoration:underline wavy #000c;
 	text-underline-offset:4px;
 }
-a:focus:after, a:hover:after {
+.gnb_list a:focus::after, .gnb_list a:hover::after {
 	opacity:1;
 	right:5px;
 }
 a:focus:before, a:hover:before {
 	background-color:#fff3;
+	filter: saturate(2);
 }
 .nextfile, .prefile{
 	background-color: rgba(0 0 0 / 0.5);
@@ -198,9 +206,9 @@ a:focus:before, a:hover:before {
 	align-items: center;
 	justify-content: center;
 	font-weight: 900;
-	color: white;
-    background-color: rgb(51, 41, 23);
-    box-shadow: rgb(48, 27, 5) 0px 0px 3px;
+	color: #fff;
+	background-color: rgb(51, 41, 23);
+	box-shadow: rgb(48, 27, 5) 0px 0px 3px;
 }
 
 #gobottom{
@@ -218,13 +226,23 @@ a:focus:before, a:hover:before {
 	.width_center {
 		width:55vw;
 	}
+	main section > div {
+		line-height: 3rem;
+		font-size: 2rem;
+		padding:2rem 4rem;
+		margin:7rem auto;
+	}
+	main section > div > div {
+		padding:3rem 0px;
+	}
+	main section :where(div, p) {font-size: 1.5rem;}
 
 }
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
 	.width_center {
-		width:70vw;'
+		width:70vw;
 		max-width: 980px;
 	}
 
@@ -247,16 +265,12 @@ a:focus:before, a:hover:before {
 /*darkmode*/
 @media (prefers-color-scheme:dark) {
 	body::before {
-		content: '';
-		display: block;
-		position: absolute;
-		top:0px; left:0px;
-		width:100%; height: 100%;
-		background-color: rgba(0 0 0 / 0.7);
+		filter: brightness(0.3) saturate(100%) hue-rotate(2deg);
 	}
-	.gnb_button img {filter:invert(1);}
-	.gnb_list {background-image:url("../img/bookbgd.jpg");}
-/*	.gnb_list::before, .gnb_list::after {background-image:url("../img/navrace-dark.png");}*/
+	.gnb_list {background-image:url("../img/bookbg_dark_puple.webp");}
+	.gnb_list::before, .gnb_list::after {
+		background-image:url("../img/navrace.png");
+	}
 	header,footer {background-color:#015;}
 	main section>div {
 		box-shadow: 0px 0px 1rem 0.5rem inset #655;
