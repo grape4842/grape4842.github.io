@@ -48,18 +48,17 @@
 .ycl img {border-radius:10rem;}
 .entry {
 	width:80%;
-	padding:2rem;
+	padding:1rem 0px;
 	display:flex;
 	justify-content:center;
 	align-items:center;
 	margin:2rem auto;
 	background-color:#63B;
 	border: 2px solid rgba(255, 255, 255, 0.3);
-	border-radius: 10px;
+	border-radius: 1rem;
 	color:#ffa;
 }
 .entry svg {
-	scale:4;
 	padding:0px;
 	padding-right: 0.5rem;
 }
@@ -79,6 +78,7 @@
 	.site-list img {width:4rem; height:4rem;}
 	.entry {
 		width:50%;
+		padding:2rem;
 		margin:3rem auto;
 	}
 }

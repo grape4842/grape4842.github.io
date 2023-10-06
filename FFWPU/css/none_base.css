@@ -40,9 +40,15 @@ footer > div {
 		padding:2rem;
 		margin:0px auto}
 address {
+	width: 100%;
+	line-height: 3rem;
 	display:flex;
 	justify-content:center;
 	align-items:center;
+}
+address svg {
+	height: 2rem;
+	width: 2rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -102,6 +108,11 @@ textarea {
 	overflow-x: scroll;
 }
 
+svg {
+	aspect-ratio: auto;
+	max-height: 2rem;
+	max-width: 2rem ;
+}
 
 /*표 관련 선언*/
 table {
