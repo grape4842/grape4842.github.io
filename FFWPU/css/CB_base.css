@@ -13,10 +13,12 @@ th, td {
 }
 input {
 	accent-color: #c91f61;
-	min-width:1.1rem;
-	min-height: 1.1rem;
-	vertical-align: middle;
 	}
+input, button {
+	min-width:1.5rem;
+	min-height: 1.5rem;
+	vertical-align: middle;
+}
 fieldset {
 	border:none;
 }
@@ -38,7 +40,6 @@ h1 img {
 }
 h2 {
 	font-size: 1.5rem;
-	padding:3rem 1rem;
 	text-align: center;
 }
 .gnb_menu {
@@ -256,6 +257,7 @@ section.content_width:last-child {
 }
 .page_number_ui :where(a, button) {
 	width:2rem;
+	height: 2rem;
 	aspect-ratio: 1/1;
 	text-align: center;
 	line-height: 2rem;
