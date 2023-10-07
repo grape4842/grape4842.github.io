@@ -37,8 +37,6 @@ var lis = [
 ];
 
 
-
-
 function value_check() {
     var check_cnt = document.getElementsByName("lan").length;
     for (var i = 0; i < check_cnt; i++) {

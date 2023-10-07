@@ -32,7 +32,7 @@
 *,
 *::before,
 *::after {
-    font-size: 1rem;
+    font-size: 1.2rem;
     position: relative;
     margin: 0;
     padding: 0;
@@ -71,7 +71,7 @@ html {
 }
 
 :where(body):not(img) {
-    line-height: 1.5rem;
+    line-height: 2rem;
     /* 가독성 있는 행 높이 */
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
@@ -83,6 +83,7 @@ html {
     /* 멀티라인 편집창의 가로 크기 조정 무효 */
     resize: block;
     padding: 1rem;
+    font-size:1rem;
 }
 
 :where(:focus, button, label, select, summary, [role='button'], [role='option'], [type="file"], [type="file"]::file-selector-button) {
@@ -186,37 +187,49 @@ fieldset {
 /*여기까지 공통 CSS*/
 
 /*페이지 고유 CSS*/
-:where(#example, #ex_result, #dic, textarea) {
+:where(#example, #ex_result, #dic, #check, textarea) {
     font-family: "Jeju Gothic", sans-serif;
 }
 
+section {
+    padding:2rem;
+    margin:3rem auto;
+    border-radius: 1rem;
+    background-color: rgba(0 0 0 / .1);
+}
 .centered {
     width: 50vw;
     max-width: 980px;
     margin: 0 auto;
 }
 
-:where(#dic, textarea) {
+:where(#dic h2 + *) {
     background-color: cornsilk;
 }
-
-#check {
-    font-family: "Jua", sans-serif;
+.addbox label {
+    display: inline-flex;
+    width: 4rem;
 }
-
+.controlbox button {
+    display: block;
+}
 textarea {
     width: 100%;
+    min-height: 30rem;
     margin: 2rem;
-    flex-direction: column;
     border-color: cornsilk;
+    color:black;
     border-radius: 1rem;
     background-color: beige;
 }
-
+li {
+    display: block;
+    padding:1rem 0px;
+}
 button {
     background-color: #64a;
     color: #fff;
-    padding: 2rem 1rem;
+    padding: 1rem;
     text-align: center;
     border-radius: 1rem;
 }

@@ -20,7 +20,7 @@
 <body>
     <header id="in1">
         <div class="centered">
-            <h1> 높임말 반말 변환 </h1>
+            <h1>한국어 높임말 반말 변환 </h1>
         </div>
     </header>
     <script>
@@ -30,9 +30,9 @@
   document.getElementById("show").onclick = calllis;
   };
   function calllis() {
-  dicstr = "<p>";
+  dicstr = "<ul>";
   for (var i = 0; i < lis.length; i++) {
-  dicstr += "<li>" + "높임말: " + lis[i][0] + " 반말: " + lis[i][1] + "</li>";
+  dicstr += "<li>" + "높임말 : " + lis[i][0] + "↔" + " 반말 : " + lis[i][1] + "</li>";
   }
   showlis2 = document.getElementById("dic");
   showlis2.innerHTML = dicstr;
@@ -41,7 +41,7 @@
   hightxt = document.getElementById("htxt").value;
   lowtxt = document.getElementById("ltxt").value;
   lis.push([hightxt, lowtxt]);
-  alert("높임말: " + hightxt + "\n" + "반말: " + lowtxt + "\n" + "추가하였습니다.");
+  alert("높임말 : " + hightxt + "\n" + "↔"+ "반말 : " + lowtxt + "\n" + "추가하였습니다.");
   }
   function processText() {
   txtBox = document.getElementById("inputbox");
@@ -65,61 +65,60 @@
                 <ul id="select_mode">
                     <li role="none">
                         <input id="replace1" type="radio" checked name="lan" value="반->높">
-                        <label for="replace1">반말 -> 높임말</label>
+                        <label for="replace1">반말 → 높임말</label>
                     </li>
                     <li role="none">
                         <input id="replace2" type="radio" name="lan" value="높->만">
-                        <label for="replace2">높임말 -> 반말</label>
+                        <label for="replace2">높임말 → 반말</label>
                     </li>
                 </ul>
                 <p id="example">
                     ex) 나는 노래를 좋아한다. 저는 운동을 좋아합니다.
                 </p>
                 <div id="ex_result">
-                    <p>
-                        반말 -> 높임말: 저는 노래를 좋아합니다. 저는 운동을 좋아합니다.
-                    </p>
-                    <p>
-                        높임말 -> 반말: 나는 노래를 좋아한다. 나는 운동을 좋아한다.
-                    </p>
+                    <p>반말 → 높임말 : 저는 노래를 좋아합니다. 저는 운동을 좋아합니다.</p>
+                    <p>높임말 → 반말 : 나는 노래를 좋아한다. 나는 운동을 좋아한다.</p>
                 </div>
             </seciton>
             <seciton>
                 <h2>변환하기</h2>
                 <p class="redtext"> 들여쓰기에 유의하세요. </p>
                 <form id="in2">
-                    <fieldset>
+                    <fieldset class="beforebox">
                         <legend>
                             <label for="inputbox">바꿀 내용을 입력해주세요</label>
                         </legend>
                         <textarea class="autosize" id="inputbox" name="tet" wrap="virtual" placeholder="바꿀 내용을 입력해주세요."></textarea>
                     </fieldset>
-                    <fieldset id="add_listitem">
+                    <fieldset id="add_listitem" class="addbox">
                         <ul>
-                            <ll role="none">
+                            <lil role="none">
                                 <label for="htxt">높임말 : </label>
                                 <input type="text" name="highh" id="htxt">
-                            </ll>
-                            <ll role="none">
+                            </li>
+                            <li role="none">↕</li>
+                            <li role="none">
                                 <label for="ltxt"> 반말 : </label>
                                 <input type="text" name="loww" id="ltxt">
-                            </ll>
-                            <ll role="none">
-                                <button id="add"> 추가</button>
-                            </ll>
+                            </li>
+                            <li role="none">
+                                <button id="add"> 단어 리스트에 추가</button>
+                            </li>
                         </ul>
                     </fieldset>
-                    <button id="show">단어 리스트 보기</button>
-                    <button id="trans">변환</button>
+                    <fieldset class="controlbox">
+                        <button id="show">단어 리스트 보기</button>
+                        <button id="trans">변환하기</button>
+                    </fieldset>
                 </form>
             </seciton>
             <section id="dic">
                 <h2>단어 리스트</h2>
             </section>
             <section>
-              <h2>변환된 내용 확인하기</h2>
+                <h2>변환된 내용 확인하기</h2>
                 <form>
-                    <fieldset>
+                    <fieldset class="afterbox">
                         <legend>
                             <label for="resul">바뀐 내용</label>
                         </legend>
