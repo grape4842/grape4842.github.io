@@ -97,6 +97,7 @@
 :where(textarea) {
 	resize: vertical; /* 멀티라인 편집창의 가로 크기 조정 무효 */
 	resize: block;
+	padding:1rem;
 }
  
 :where(:focus, button, label, select, summary, [role='button'], [role='option'], [type="file"], [type="file"]::file-selector-button) {
@@ -175,3 +176,5 @@ table {
 	background-color:rgba(0 0 0 / 0.1);
 	border-radius: 10rem; /*스크롤바 뒷 배경 스타일*/
 }
+
+fieldset {boreder:none;}
