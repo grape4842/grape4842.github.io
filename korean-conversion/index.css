@@ -59,7 +59,7 @@ html {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    :where(html: focus-within) {
+    :where(:focus-within) {
         scroll-behavior: smooth;
         /* 무언가에 포커싱되었을 때만 부드럽게 스크롤 */
     }
@@ -122,7 +122,7 @@ a:hover {
 
 :where(ul, ol, li) {
     list-style: none;
-    /* 뷰렛 삭제 필요 시 별도로 선언 */
+    /* 뷰렛 삭제, 필요 시 별도로 선언 */
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
@@ -161,6 +161,7 @@ table {
 }
 
 ::-webkit-scrollbar {
+    display: inline-flex;
     width: 1rem;
     /* 스크롤바의 너비 */
 }
@@ -198,11 +199,15 @@ section {
     background-color: rgba(0 0 0 / .1);
 }
 .centered {
-    width: 50vw;
     max-width: 980px;
     margin: 0 auto;
 }
-
+.arrow {
+    text-align: center;
+}
+.addbox .arrow {
+    margin-top:2rem;
+}
 :where(#dic h2 + *) {
     background-color: cornsilk;
 }
@@ -216,31 +221,84 @@ section {
 textarea {
     width: 100%;
     min-height: 30rem;
-    margin: 2rem;
     border-color: cornsilk;
     color:black;
     border-radius: 1rem;
     background-color: beige;
 }
-li {
-    display: block;
-    padding:1rem 0px;
+input {
+    min-height: 1.3rem;
+    min-width: 1.3rem;
+    vertical-align: middle;
+    accent-color: #64a;
 }
-button {
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:1rem 0rem;
+}
+button, summary {
+    display: flex;
     background-color: #64a;
     color: #fff;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    margin:1rem auto;
     text-align: center;
     border-radius: 1rem;
 }
 
 svg {
-  width:1rem;
-  height: 1rem;
+  width:1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+footer {
+    padding:3rem;
+    background-color: #333;
+    color:#fff;
 }
 footer a {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+}
 
+footer a span {
+    padding:0.5rem;
+}
+
+.redtext {
+    color:#b20;
+    font-weight: 900;
+}
+#select_mode {}
+#select_mode li {
+    padding:0.5rem;
+}
+/*기기별 CSS*/
+
+/*PC*/
+@media screen and (width >= 1400px) {}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+    section {padding:1.5rem;}
+}
+
+/*Mobile*/
+@media (340px <= width < 700px ) {
+    .centered {width: 87.5%;}
+    section {padding:1rem;}
+    input[type="text"] {width: 100%}
+}
+/*watch*/
+@media screen and (330px > width) {
+    .centered {width: 95vw;}
+    input[type="text"] {width: 100%}
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+    .redtext {color:#fce}
 }

@@ -60,7 +60,7 @@
   </script>
     <main>
         <div class="centered" id="content">
-            <seciton>
+            <section class="examplebox">
                 <h2>이용방법</h2>
                 <ul id="select_mode">
                     <li role="none">
@@ -72,15 +72,18 @@
                         <label for="replace2">높임말 → 반말</label>
                     </li>
                 </ul>
-                <p id="example">
-                    ex) 나는 노래를 좋아한다. 저는 운동을 좋아합니다.
-                </p>
-                <div id="ex_result">
-                    <p>반말 → 높임말 : 저는 노래를 좋아합니다. 저는 운동을 좋아합니다.</p>
-                    <p>높임말 → 반말 : 나는 노래를 좋아한다. 나는 운동을 좋아한다.</p>
-                </div>
-            </seciton>
-            <seciton>
+                <p id="example">ex) 나는 노래를 좋아한다. 저는 운동을 좋아합니다.</p>
+                <p class="arrow">↓</p>
+                <dl id="ex_result">
+                    <dt>반말 → 높임말</dt>
+                    <dd>저는 노래를 좋아합니다. 저는 운동을 좋아합니다.</dd>
+                </dl>
+                <dl>
+                    <dt>높임말 → 반말</dt>
+                    <dd>나는 노래를 좋아한다. 나는 운동을 좋아한다.</dd>
+                </dl>
+            </section>
+            <section>
                 <h2>변환하기</h2>
                 <p class="redtext"> 들여쓰기에 유의하세요. </p>
                 <form id="in2">
@@ -90,30 +93,8 @@
                         </legend>
                         <textarea class="autosize" id="inputbox" name="tet" wrap="virtual" placeholder="바꿀 내용을 입력해주세요."></textarea>
                     </fieldset>
-                    <fieldset id="add_listitem" class="addbox">
-                        <ul>
-                            <lil role="none">
-                                <label for="htxt">높임말 : </label>
-                                <input type="text" name="highh" id="htxt">
-                            </li>
-                            <li role="none">↕</li>
-                            <li role="none">
-                                <label for="ltxt"> 반말 : </label>
-                                <input type="text" name="loww" id="ltxt">
-                            </li>
-                            <li role="none">
-                                <button id="add"> 단어 리스트에 추가</button>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <fieldset class="controlbox">
-                        <button id="show">단어 리스트 보기</button>
-                        <button id="trans">변환하기</button>
-                    </fieldset>
                 </form>
-            </seciton>
-            <section id="dic">
-                <h2>단어 리스트</h2>
+                <button type="button" id="trans">변환하기</button>
             </section>
             <section>
                 <h2>변환된 내용 확인하기</h2>
@@ -122,7 +103,38 @@
                         <legend>
                             <label for="resul">바뀐 내용</label>
                         </legend>
-                        <textarea class="autosize" id="resul" name="tet" wrap="virtual"></textarea>
+                        <textarea readonly placeholder="바뀐 내용이 표시됩니다." class="autosize" id="resul" name="tet" wrap="virtual"></textarea>
+                    </fieldset>
+                </form>
+            </section>
+            <section>
+                <h2>단어 리스트</h2>
+                <details>
+                    <summary id="show">단어 리스트 보기</summary>
+                    <div id="dic">
+                    </div>
+                </details>
+            </section>
+            <section>
+                <form>
+                    <fieldset id="add_listitem" class="addbox">
+                        <legend>
+                            <h2>변환 단어 추가하기</h2>
+                        </legend>
+                        <ul>
+                            <li role="none">
+                                <label for="htxt">높임말 : </label>
+                                <input type="text" name="highh" id="htxt">
+                            </li>
+                            <li role="none" class="arrow">↕</li>
+                            <li role="none">
+                                <label for="ltxt"> 반말 : </label>
+                                <input type="text" name="loww" id="ltxt">
+                            </li>
+                            <li role="none">
+                                <button type="button" id="add"> 단어 리스트에 추가</button>
+                            </li>
+                        </ul>
                     </fieldset>
                 </form>
             </section>
@@ -136,6 +148,7 @@
                 </svg>
                 <span>jo-gunhee Github</span>
             </a>
+            <a href="https://jo-gunhee.github.io/website1/high_low/index.html">원본 변환기</a>
         </div>
     </footer>
 </body>
