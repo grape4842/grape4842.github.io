@@ -83,7 +83,7 @@ html {
     /* 멀티라인 편집창의 가로 크기 조정 무효 */
     resize: block;
     padding: 1rem;
-    font-size:1rem;
+    font-size: 1rem;
 }
 
 :where(:focus, button, label, select, summary, [role='button'], [role='option'], [type="file"], [type="file"]::file-selector-button) {
@@ -185,153 +185,219 @@ table {
 fieldset {
     border: none;
 }
+
 /*여기까지 공통 CSS*/
 
 /*페이지 고유 CSS*/
 :where(#example, #ex_result, #dic, #check, textarea) {
     font-family: "Jeju Gothic", sans-serif;
 }
+.examplebox .arrow {
+    padding:1rem;
+}
 
 section {
-    padding:2rem;
-    margin:3rem auto;
+    padding: 2rem;
+    margin: 3rem auto;
     border-radius: 1rem;
+}
+section:first-child {
+    padding-top:0rem;
+}
+section:last-child {
+    padding-bottom:0rem;
 }
 .centered {
     max-width: 980px;
     margin: 0 auto;
+    padding:1rem 0rem;
 }
+
 .addbox {
-    margin:0px auto;
+    margin: 0px auto;
 }
+
 .addform {
     display: inline-flex;
-    flex-direction: column;
     justify-content: center;
 }
-.addform p {
+
+.addform > span {
     border-radius: 1rem;
     background-color: cornsilk;
-    padding-top:2rem;
+    padding: 1rem;
+    padding-top: 2rem;
     text-align: center;
+    margin: 0rem auto;
 }
-.addbox input {
-    padding:0px;
-    border:none;
-    background-color: transparent!important;
-}
-.addbox label {
-    color:black;
-    position: absolute;
-    top:0px; left:0px;
-    padding:1rem;
-    font-size: 1rem;
 
+.addform input {
+    color: black;
+    padding: 0px;
+    border: none;
+    background-color: transparent !important;
+    border-bottom: #64a 2px solid;
+    opacity: 0.8;
 }
+
+.addform label {
+    color: black;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem;
+    opacity: 0.5;
+    transition: top 0.2s, opacity 0.2s, font-size 0.2s;
+}
+
+.addform input:focus+label,
+.addform input {
+    opacity: 1;
+    top: 0rem;
+    font-size: 1rem;
+}
+
 .addbox .arrow {
-    margin:1rem auto;
+    margin: 1rem auto;
 }
+
 .arrow {
     background-color: transparent;
     text-align: center;
 }
+
 #dic p {
     display: flex;
 }
-:where(#dic h2 + *) {    
+
+:where(#dic h2 + *) {
     background-color: cornsilk;
 }
+
 .controlbox button {
     display: block;
 }
+
 textarea {
     width: 100%;
     min-height: 30rem;
     border-color: cornsilk;
-    color:black;
+    color: black;
     border-radius: 1rem;
     background-color: beige;
 }
+
 input {
     min-height: 1.3rem;
-    aspect-ratio: 1/1;
+    min-width: 1.3rem;
     vertical-align: middle;
     accent-color: #64a;
 }
+
 fieldset {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:1rem 0rem;
+    padding: 1rem 0rem;
 }
-button, summary {
+
+button,
+summary {
     display: flex;
     background-color: #64a;
     color: #fff;
     padding: 0.5rem 1rem;
-    margin:1rem auto;
+    margin: 1rem auto;
     text-align: center;
     border-radius: 1rem;
 }
 
 svg {
-  width:1.5rem;
-  height: 1.5rem;
-  vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
 }
+
 footer {
-    padding:3rem;
+    padding: 3rem;
     background-color: #333;
-    color:#fff;
+    color: #fff;
 }
+
 footer a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 footer a p {
     display: inline-block;
-    padding:0.5rem;
-    }
+    padding: 0.5rem;
+}
+
 footer a img {
     border-radius: 10rem;
-    width:2rem;
+    width: 2rem;
     aspect-ratio: 1/1;
 }
 
 .redtext {
-    color:#c10;
+    color: #c10;
     font-weight: 900;
 }
+
 #select_mode {
     display: flex;
     justify-content: center;
 }
+
 #select_mode li {
-    padding:0.5rem;
+    padding: 0.5rem;
 }
+
 /*기기별 CSS*/
 
 /*PC*/
-@media screen and (width >= 1400px) {}
+@media screen and (width >=1400px) {}
 
 /*700px〜1200px iPad*/
-@media (700px <= width < 1400px )  {
-    section {padding:1.5rem;}
-    .centered {width:692px;}
+@media (700px <=width < 1400px) {
+    section {
+        padding: 1.5rem;
+    }
+    .centered {
+        width: 692px;
+    }
 }
 
 /*Mobile*/
 @media (700px > width) {
-    .centered {width: 87.5%;}
-    section {padding:1rem;}
-    input[type="text"] {width: 100%;}
-    #select_mode, #dic p {display: block;}
-    footer a span {display: block;}
+    .centered {
+        width: 87.5%;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    #select_mode,
+    #dic p {
+        display: block;
+    }
+
+    .addform {
+        flex-direction: column;
+    }
+    .addform .arrow {rotate: 90deg;}
+    footer a span {
+        display: block;
+    }
 
 }
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-    .redtext {color:#ffafaa;}
+    .redtext {
+        color: #ffafaa;
+    }
 }
