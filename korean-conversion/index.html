@@ -32,7 +32,7 @@
   function calllis() {
   dicstr = "<ul>";
   for (var i = 0; i < lis.length; i++) {
-  dicstr += "<li>" + "높임말 : " + lis[i][0] + "↔" + " 반말 : " + lis[i][1] + "</li>";
+  dicstr += "<li><p>" + "높임말 : " + lis[i][0] + "</p> <p class="arrow"> ↕ </p> <p>" + "반말 : " + lis[i][1] + "</li>";
   }
   showlis2 = document.getElementById("dic");
   showlis2.innerHTML = dicstr;
@@ -85,7 +85,7 @@
             </section>
             <section>
                 <h2>변환하기</h2>
-                <p class="redtext"> 들여쓰기에 유의하세요. </p>
+                <p class="redtext"> ※ 들여쓰기에 유의하세요. </p>
                 <form id="in2">
                     <fieldset class="beforebox">
                         <legend>
@@ -121,20 +121,18 @@
                         <legend>
                             <h2>변환 단어 추가하기</h2>
                         </legend>
-                        <ul>
-                            <li role="none">
+                        <div class="addform">
+                            <p>
                                 <label for="htxt">높임말 : </label>
                                 <input type="text" name="highh" id="htxt">
-                            </li>
-                            <li role="none" class="arrow">↕</li>
-                            <li role="none">
+                            </p>
+                            <span class="arrow">↕</span>
+                            <p>
                                 <label for="ltxt"> 반말 : </label>
                                 <input type="text" name="loww" id="ltxt">
-                            </li>
-                            <li role="none">
+                            </p>
                                 <button type="button" id="add"> 단어 리스트에 추가</button>
-                            </li>
-                        </ul>
+                        </div>
                     </fieldset>
                 </form>
             </section>
@@ -142,11 +140,17 @@
     </main>
     <footer>
         <div class="centered">
-            <a href="https://github.com/jo-gunhee/website1">
-                <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default">
-                    <path fill="#fff" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-                </svg>
-                <span>jo-gunhee Github</span>
+            <a href="https://github.com/jo-gunhee/website1" target="_blank">
+                <img src="https://avatars.githubusercontent.com/u/62457985?v=4" alt>
+                <p>
+                    <span>made by</span> <span>jo-gunhee</span>
+                </p>
+            </a>
+            <a href="https://github.com/grape4842/grape4842.github.io" target="_blank">
+                <img src="https://avatars.githubusercontent.com/u/58101308?v=4" alt>
+                <p>
+                    <span>add style by</span> <span>grape4842</span>
+                </p>
             </a>
             <a href="https://jo-gunhee.github.io/website1/high_low/index.html">원본 변환기</a>
         </div>

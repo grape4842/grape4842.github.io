@@ -196,24 +196,50 @@ section {
     padding:2rem;
     margin:3rem auto;
     border-radius: 1rem;
-    background-color: rgba(0 0 0 / .1);
 }
 .centered {
     max-width: 980px;
     margin: 0 auto;
 }
-.arrow {
+.addbox {
+    margin:0px auto;
+}
+.addform {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.addform p {
+    border-radius: 1rem;
+    background-color: cornsilk;
+    padding-top:2rem;
     text-align: center;
 }
-.addbox .arrow {
-    margin-top:2rem;
-}
-:where(#dic h2 + *) {
-    background-color: cornsilk;
+.addbox input {
+    padding:0px;
+    border:none;
+    background-color: transparent!important;
 }
 .addbox label {
-    display: inline-flex;
-    width: 4rem;
+    color:black;
+    position: absolute;
+    top:0px; left:0px;
+    padding:1rem;
+    font-size: 1rem;
+
+}
+.addbox .arrow {
+    margin:1rem auto;
+}
+.arrow {
+    background-color: transparent;
+    text-align: center;
+}
+#dic p {
+    display: flex;
+}
+:where(#dic h2 + *) {    
+    background-color: cornsilk;
 }
 .controlbox button {
     display: block;
@@ -228,7 +254,7 @@ textarea {
 }
 input {
     min-height: 1.3rem;
-    min-width: 1.3rem;
+    aspect-ratio: 1/1;
     vertical-align: middle;
     accent-color: #64a;
 }
@@ -263,16 +289,24 @@ footer a {
     justify-content: center;
     align-items: center;
 }
-
-footer a span {
+footer a p {
+    display: inline-block;
     padding:0.5rem;
+    }
+footer a img {
+    border-radius: 10rem;
+    width:2rem;
+    aspect-ratio: 1/1;
 }
 
 .redtext {
-    color:#b20;
+    color:#c10;
     font-weight: 900;
 }
-#select_mode {}
+#select_mode {
+    display: flex;
+    justify-content: center;
+}
 #select_mode li {
     padding:0.5rem;
 }
@@ -284,21 +318,20 @@ footer a span {
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
     section {padding:1.5rem;}
+    .centered {width:692px;}
 }
 
 /*Mobile*/
-@media (340px <= width < 700px ) {
+@media (700px > width) {
     .centered {width: 87.5%;}
     section {padding:1rem;}
-    input[type="text"] {width: 100%}
-}
-/*watch*/
-@media screen and (330px > width) {
-    .centered {width: 95vw;}
-    input[type="text"] {width: 100%}
+    input[type="text"] {width: 100%;}
+    #select_mode, #dic p {display: block;}
+    footer a span {display: block;}
+
 }
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-    .redtext {color:#fce}
+    .redtext {color:#ffafaa;}
 }
