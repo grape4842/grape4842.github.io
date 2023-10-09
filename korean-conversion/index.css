@@ -10,6 +10,47 @@
     color: white;
 }
 
+@charset "utf-8";
+
+:lang(ko) {
+    word-break: keep-all;
+    line-break: normal;
+}
+
+::selection {
+    background: #31a;
+    color: white;
+}
+
+/*폰트 설성*/
+
+@font-face {
+    font-family: "KoddiUDOnGothic";
+    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
+    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
+    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KoddiUDOnGothic";
+    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
+    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
+    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KoddiUDOnGothic";
+    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+    font-weight: 900;
+    font-display: swap;
+}
+
 /*드래그 시 스타일*/
 
 /*숨김텍스트 설정*/
@@ -45,7 +86,7 @@
     /* iOS의 가로 모드에서 텍스트가 조절되지 않도록 한다 */
     color-scheme: dark light;
     /* 사용자가 다크 테마일 경우 자동적으로 다크 테마가 된다 */
-    font-family: "Jua", sans-serif, serif;
+    font-family: "KoddiUDOnGothic", sans-serif, serif;
 }
 
 @supports not (min-block-size: 100dvb) {
@@ -192,8 +233,9 @@ fieldset {
 :where(#example, #ex_result, #dic, #check, textarea) {
     font-family: "Jeju Gothic", sans-serif;
 }
+
 .examplebox .arrow {
-    padding:1rem;
+    padding: 1rem;
 }
 
 section {
@@ -201,16 +243,19 @@ section {
     margin: 3rem auto;
     border-radius: 1rem;
 }
+
 section:first-child {
-    padding-top:0rem;
+    padding-top: 0rem;
 }
+
 section:last-child {
-    padding-bottom:0rem;
+    padding-bottom: 0rem;
 }
+
 .centered {
     max-width: 980px;
     margin: 0 auto;
-    padding:1rem 0rem;
+    padding: 1rem 0rem;
 }
 
 .addbox {
@@ -222,7 +267,7 @@ section:last-child {
     justify-content: center;
 }
 
-.addform > span {
+.addform>span {
     border-radius: 1rem;
     background-color: cornsilk;
     padding: 1rem;
@@ -365,6 +410,7 @@ footer a img {
     section {
         padding: 1.5rem;
     }
+
     .centered {
         width: 692px;
     }
@@ -388,7 +434,11 @@ footer a img {
     .addform {
         flex-direction: column;
     }
-    .addform .arrow {rotate: 90deg;}
+
+    .addform .arrow {
+        rotate: 90deg;
+    }
+
     footer a span {
         display: block;
     }

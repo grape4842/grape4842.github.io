@@ -48,32 +48,32 @@ var lis = [
 ];
 
 
-function value_check() {
+function value_check(){
     var check_cnt = document.getElementsByName("lan").length;
-    for (var i = 0; i < check_cnt; i++) {
+    for (var i=0; i<check_cnt;i++){
         if (document.getElementsByName("lan")[0].checked == true) {
             low_high();
-            break
-        } else if (document.getElementsByName("lan")[1].checked == true) {
+            break        
+        }else if(document.getElementsByName("lan")[1].checked == true){
             high_low();
             break;
         }
-    }
+    }   
 }
 String.prototype.replaceAll = function(org, dest) {
     return this.split(org).join(dest);
 }
 
 //  입니다 이다 이다 입니다 한다 한다 합니다 합니다
-function low_high() {
-    for (var i = 0; i < lis.length; i++) {
-        resultString = resultString.replaceAll(lis[i][1], lis[i][0]);
+function low_high(){
+    for(var i=0; i<lis.length;i++){
+        resultString = resultString.replaceAll(lis[i][1],lis[i][0]);
     }
 }
 
-function high_low() {
-    for (var i = 0; i < lis.length; i++) {
-        resultString = resultString.replaceAll(lis[i][0], lis[i][1]);
+function high_low(){
+    for(var i=0; i<lis.length;i++){
+        resultString = resultString.replaceAll(lis[i][0],lis[i][1]);
     }
 }
 
