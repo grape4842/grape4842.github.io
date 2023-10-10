@@ -230,11 +230,9 @@ fieldset {
 /*여기까지 공통 CSS*/
 
 /*페이지 고유 CSS*/
-:where(#example, #ex_result, #dic, #check, textarea) {
-    font-family: "Jeju Gothic", sans-serif;
-}
-
-.examplebox .arrow {
+:whe .examplebox .arrow {
+    font-weight: 900;
+    font-size: 1.5rem;
     padding: 1rem;
 }
 
@@ -311,8 +309,18 @@ section:last-child {
     text-align: center;
 }
 
-#dic p {
+#dic li {
     display: flex;
+    padding:0.5rem;
+    margin:1px auto;
+    color:black;
+    background-color: cornsilk;
+
+}
+
+#dic li .arrow {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 :where(#dic h2 + *) {
@@ -437,6 +445,14 @@ footer a img {
 
     .addform .arrow {
         rotate: 90deg;
+    }
+
+    #dic li {
+        flex-direction: column;
+    }
+
+    #dic li .arrow {
+        rotate:90deg;
     }
 
     footer a span {

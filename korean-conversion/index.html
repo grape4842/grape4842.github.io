@@ -35,7 +35,11 @@
   function calllis() {
   dicstr = "<ul>";
   for (var i = 0; i < lis.length; i++) {
-  dicstr += "<li><p>" + "높임말 : " + lis[i][0] + "</p> <p class="arrow"> ↕ </p> <p>" + "반말 : " + lis[i][1] + "</li>";
+  dicstr += `<li>
+    <p>높임말 : ${lis[i][0]}</p>
+    <p class="arrow" inert> ↔ </p>
+    <p>반말 : ${lis[i][1]}</p>
+</li>`;
   }
   showlis2 = document.getElementById("dic");
   showlis2.innerHTML = dicstr;
