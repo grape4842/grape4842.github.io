@@ -393,13 +393,16 @@ label:has(svg) {
 }
 
 .custom_input input[type="color"] {
-    width: 8rem;
-    height: 8rem;
+	display: flex;
+	justify-content: center;
+    width: 7rem;
+    height: auto;
     background-color: transparent;
     border: none;
     padding: 0px;
     cursor: pointer;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
+    text-align: center;
 }
 
 .custom_input input[type="color"]::-webkit-color-swatch {
@@ -411,16 +414,16 @@ label:has(svg) {
 }
 
 label[for="custom_color"] {
-    padding: 0px;
+    padding: 1rem;
     border: #eee 1px solid;
     max-width: 8rem;
     background: rgba(255 255 255 / 0.1);
     box-shadow: 1rem 1rem 1rem rgba(0 0 0 / 0.1);
     aspect-ratio: 1/1.58;
 }
-
-label[for="custom_color"]>p {
-    padding: 1rem;
+label[for="custom_color"] div {
+	display: flex;
+	justify-content: center;
 }
 
 .custom_input select,
@@ -447,13 +450,17 @@ label:has(#file_text) {
 label:has(#file_text):where(:hover, :focus) input {
     opacity: 1;
 }
-
+.custom_input input[type="file"] {
+	min-height: 3rem;
+}
 .custom_input input[type="file"]::file-selector-button {
     border: #64aa solid 2px;
     background-color: #64a;
     padding: 0.5rem;
     color: white;
     cursor: pointer;
+    position:absolute;
+    right:0px;
 
 }
 
