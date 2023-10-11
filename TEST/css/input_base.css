@@ -104,7 +104,7 @@ svg {
 
 /*Mobile*/
 @media screen and (320px < width < 760px) {
-
+	tr {display: flex;}
 }
 
 /*Watch*/

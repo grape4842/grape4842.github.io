@@ -269,7 +269,7 @@ section:last-child {
     border-radius: 1rem;
     background-color: cornsilk;
     padding: 1rem;
-    padding-top: 2rem;
+    padding-top: 3rem;
     text-align: center;
     margin: 0rem auto;
 }
@@ -282,19 +282,21 @@ section:last-child {
     border-bottom: #64a 2px solid;
     opacity: 0.8;
 }
+.addform input::placeholder {
+    color:transparent;
+}
 
 .addform label {
     color: black;
     position: absolute;
     top: 1rem;
-    left: 1rem;
-    padding: 0.5rem;
-    opacity: 0.5;
+    left:0rem;
+    padding:0.5rem 1rem;
+    opacity: 0.7;
     transition: top 0.2s, opacity 0.2s, font-size 0.2s;
 }
 
-.addform input:focus+label,
-.addform input {
+.addform input:where(:focus, :not(:placeholder-shown)) + label {
     opacity: 1;
     top: 0rem;
     font-size: 1rem;
