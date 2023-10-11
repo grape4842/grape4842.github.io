@@ -307,6 +307,7 @@ section:last-child {
 .arrow {
     background-color: transparent;
     text-align: center;
+    font-weight: 900;
 }
 
 #dic li {
