@@ -47,7 +47,7 @@ input:where(:focus, :not(:placeholder-shown))+label[for="custom_text"] {
 }
 
 .custom_input :where(input[type="text"], [type="password"])+label {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .custom_input :where(input[type="text"], [type="password"]) {
@@ -70,7 +70,7 @@ input:where(:focus, :not(:placeholder-shown))+label[for="custom_text"] {
 }
 
 .custom_input input[type="text"]:where(:focus)::placeholder {
-    color: #888;
+    color: #768;
 }
 
 /*암호 편집 창*/
@@ -179,7 +179,7 @@ label[for="switch_checkbox"]+div:has(input:checked) {
 }
 
 .custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled) {
-    filter: brightness(1.5);
+    filter: brightness(1.5) saturate(0.3);
 }
 
 .custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):hover {
@@ -425,9 +425,11 @@ label[for="custom_color"]>p {
 
 .custom_input select,
 .custom_input select option {
-    background-color: #baf;
-    border: 1px solid #bafa;
+    background-color: #64a;
+    color:#fff;
+    border: 1px solid #64aa;
     padding: 0.5rem;
+    transition:filter 0.2s;
 }
 
 .custom_input select:hover,
@@ -490,24 +492,24 @@ span:has(#custom_design_file:focus) {
     }
 
     .custom_input :where(input[type="text"], [type="password"]) {
-        border-bottom: solid #baf 3px;
+        border-bottom: solid #64a 3px;
     }
 
     .custom_input :where(input[type="radio"], input[type="checkbox"]) {
-        border: 2px solid #baf;
+        border: 2px solid #64a;
     }
 
     .custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):before {
-        border: 2px solid #baf;
+        border: 2px solid #64a;
     }
 
     .custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):after {
-        background-color: #baf;
+        background-color: #64a;
     }
 
     .custom_input label:has(input[name="tab_radio"]) {
-        background: #baf;
-        border: 5px solid #baf;
+        background: #64a;
+        border: 5px solid #64a;
         color: black;
     }
 
@@ -550,7 +552,7 @@ span:has(#custom_design_file:focus) {
     .custom_input input[type="file"]::file-selector-button {
         border: #bafa solid 2px;
         background-color: #baf;
-        color: black;
+        color: #fff;
     }
 
     .custom_input label[for="custom_design_file"] span {

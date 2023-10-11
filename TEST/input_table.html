@@ -1,361 +1,367 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta property="og:description" content="">
-	<meta property="og:locate" content="ko-kr">
-	<meta property="og:type" content="website">
-	<meta name="theme-color=" content="#855AB6">
-
-	<title>요소 테스트 페이지</title>
-	<link rel="stylesheet" type="text/css" href="../root.css">
-	<link rel="stylesheet" type="text/css" href="css/input_base.css">
-	<link rel="stylesheet" type="text/css" href="css/input_table.css">
-	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
-	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
-	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
-	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
-	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta property="og:description" content="">
+    <meta property="og:locate" content="ko-kr">
+    <meta property="og:type" content="website">
+    <meta name="theme-color=" content="#855AB6">
+    <title>요소 테스트 페이지</title>
+    <link rel="stylesheet" type="text/css" href="../root.css">
+    <link rel="stylesheet" type="text/css" href="css/input_base.css">
+    <link rel="stylesheet" type="text/css" href="css/input_table.css">
+    <link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
+    <link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
+    <link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+    <link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
+    <link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
 </head>
+
 <body>
-	<header>
-		<div class="center">
-			<h1>입력서식 테스트</h1>
-		</div>
-	</header>
-	<main>
-		<section class="center">
-			<p>이 페이지는 입력 서식을 중심으로 여러 요소를 테스트 해보기 위해 일시적으로 제공되는 페이지입니다. 입력서식을 비롯해 자주 오류로 등장하는 컴포넌트들을 모아두었습니다. 다만 JavaScript는 구현하지 못했습니다.</p>
-		</section>
-		<section class="center">
-			<form>
-				<fieldset>
-					<h2>
-						<legend>입력 서식 예시</legend>
-					</h2>
-					<table>
-						<caption class="hidden">입력 서식을 전시하는 표</caption>
-						<tbody>
-							<tr>
-								<th scope="col" colspan="2">수정 창 | 편집창</th>
-							</tr>
-							<tr>
-								<td>
-									<label for="original_text" class="">기본 편집창</label>
-									<input placeholder="토끼 만세" id="original_text" type="text" class="" name="" >
-								</td>
-								<td class="custom_input">
-									<input placeholder="토끼 만세" id="custom_text" type="text" class="" name="">
-									<label for="custom_text" class="">커스텀 편집창</label>
-								</td>
-							</tr>
-
-							<tr>
-								<th scope="col" colspan="2">암호 편집 창</th>
-							</tr>
-							<tr>
-								<td>
-									<label for="original_password">비밀번호</label>
-									<input id="original_password" type="password" name="">
-								</td>
-								<td class="custom_input">
-									<label for="custom_password">비밀번호</label>
-									<input id="custom_password" type="password" name="">
-								</td>
-							</tr>
-
-							<tr>
-								<th scope="col" colspan="2">체크박스</th>
-							</tr>
-							<tr>
-								<td>
-									<p>
-										<input id="original_checkbox" type="checkbox" class="" name="" checked="">
-										<label for="original_checkbox" class="">평범한 체크박스</label>
-									</p>	
-									<p>
-										<input id="original_checkbox_disabled_on" type="checkbox" class="" name="" checked="" disabled="">
-										<label for="original_checkbox_disabled_on" class="">비활성화된 체크박스(ON)</label>
-									</p>	
-									<p>
-										<input id="original_checkbox_disabled_off" type="checkbox" class="" name="" disabled="">
-										<label for="original_checkbox_disabled_off" class="">비활성화된 체크박스(OFF)</label>
-									</p>	
-								</td>
-								<td class="custom_input">
-									<p>
-										<input id="custom_checkbox" type="checkbox" class="" name="custom_checkbox" checked="">
-										<label for="custom_checkbox" class="">커스텀된 체크박스</label>
-									</p>	
-									<p>
-										<input id="custom_checkbox_disabled_on" type="checkbox" class="" name="custom_checkbox" checked="" disabled="">
-										<label for="custom_checkbox_disabled_on" class="">비활성화된 커스텀 체크박스(ON)</label>
-									</p>	
-									<p>
-										<input id="custom_checkbox_disabled_off" type="checkbox" class="" name="custom_checkbox" disabled="">
-										<label for="custom_checkbox_disabled_off" class="">비활성화된 커스텀 체크박스(OFF)</label>
-									</p>	
-								</td>
-							</tr>
-							<tr>
-								<td class="custom_input">
-									<label for="switch_checkbox">
-										<span>푸시 알림 수신 동의 여부</span>
-									</label>
-									<div>
-										<label for="switch_checkbox">
-											<i class="on"></i>
-											<input id="switch_checkbox" type="checkbox" name="switch_checkbox">
-											<i class="off"></i>
-										</label>
-									</div>
-								</td>
-								<td></td>
-							</tr>
-
-
-							<tr>
-								<th scope="col" colspan="2">라디오 버튼</th>
-							</tr>
-							<tr>
-								<td class="">
-									<p>
-										<input id="original_radio_normal_on" type="radio" class="" name="original_normal" checked="">
-										<label for="original_radio_normal_on" class="">평범한 라디오 버튼(기본 ON)</label>
-									</p>									
-									<p>
-										<input id="original_radio_normal_off" type="radio" class="" name="original_normal" >
-										<label for="original_radio_normal_off" class="">평범한 라디오 버튼(기본 OFF)</label>
-									</p>
-
-									<p>
-										<input id="original_radio_disabled_on" type="radio" class="" name="original" checked="" disabled="">
-										<label for="original_radio_disabled_on" class="">비활성화된 라디오 버튼(ON)</label>
-									</p>
-									<p>
-										<input id="original_radio_disabled_off" type="radio" class="" name="original" disabled="">
-										<label for="original_radio_disabled_off" class="">비활성화된 라디오 버튼(OFF)</label>
-									</p>
-								</td>
-								<td class="custom_input">
-									<p>
-										<input id="custom_radio_normal_on" type="radio" class="" name="normal_custom" checked="">
-										<label for="custom_radio_normal_on" class="">커스텀된 라디오 버튼(기본ON)</label>
-									</p>
-									<p>
-										<input id="custom_radio_normal_off" type="radio" class="" name="normal_custom">
-										<label for="custom_radio_normal_off" class="">커스텀된 라디오 버튼(기본OFF)</label>
-									</p>
-									<p>
-										<input id="custom_radio_disabled_on" type="radio" class="" name="custom" checked="" disabled="">
-										<label for="custom_radio_disabled_on" class="">비활성화된 커스텀 라디오 버튼(ON)</label>
-									</p>
-									<p>
-										<input id="custom_radio_disabled_off" type="radio" class="" name="custom" disabled="">
-										<label for="custom_radio_disabled_off" class="">비활성화된 커스텀 라디오 버튼 OFF</label>
-									</p>
-								</td>
-							</tr>
-							<tr>
-								<td class="custom_input tab_radio_cell">
-									<p>
-										<label for="tab_radio_on" class="">
-											<input id="tab_radio_on" type="radio" class="" name="tab_radio" checked="">
-											보라색
-											<span class="hidden">탭</span>
-										</label>
-										<label for="tab_radio_off" class="">
-											<input  id="tab_radio_off" type="radio" class="" name="tab_radio">
-											초록색
-											<span class="hidden">탭</span>
-										</label>
-									</p>
-									<p>청보라색</p>
-								</td>
-
-								<td class="custom_input star_radio_cell">
-									<p>
-										<label for="star_radio5" class="">
-											<input id="star_radio5" type="radio" class="" name="star_radio" checked="">
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524v-12.005zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											<span class="hidden">별점</span>
-											<span>4.5점 이상</span>
-										</label>
-									</p>
-									<p>
-										<label for="star_radio4" class="">
-											<input id="star_radio4" type="radio" class="" name="star_radio" checked="">
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											<span class="hidden">별점</span>
-											<span>4점 이상</span>
-										</label>
-									</p>
-									<p>
-										<label for="star_radio3" class="">
-											<input id="star_radio3" type="radio" class="" name="star_radio" checked="">
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											
-											<span class="hidden">별점</span>
-											<span>3점 이상</span>
-										</label>
-									</p>
-									<p>
-										<label for="star_radio2">
-											<input id="star_radio2" type="radio" class="" name="star_radio">
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											
-											<span class="hidden">별점</span>
-											<span>2점 이상</span>
-										</label>
-									</p>
-									<p>
-										<label for="star_radio1" class="">
-											<input id="star_radio1" type="radio" class="" name="star_radio">
-											<svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											<svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"/></svg>
-											
-											<span class="hidden">별점</span>
-											<span>1점 이상</span>
-										</label>
-									</p>
-								</td>
-							</tr>
-
-							<tr>
-								<th scope="col" colspan="2">슬라이더</th>
-							</tr>
-							<tr>
-								<td>
-									<label for="original_range" class="">비만도 설정</label>
-									<input id="original_range" type="range" class="" name="">
-								</td>
-								<td class="custom_input">
-									<label for="custom_range" class="">비만도 설정</label>
-									<input id="custom_range" type="range" class="" name="">
-								</td>
-							</tr>
-
-							<tr>
-								<th scope="col" colspan="2">컬러 피커</th>
-							</tr>
-							<tr>
-								<td>
-									<label for="original_color" class="">테마 컬러 설정</label>
-									<input id="original_color" type="color" class="" value="#6655ff" name="">
-								</td>
-								<td class="custom_input">
-									<label for="custom_color" class="">
-										<input value="#6655ff" id="custom_color" type="color" class="" name="">
-										<p>테마 컬러 설정</p>
-									</label>
-								</td>
-							</tr>
-
-							<tr>
-								<th scope="col" colspan="2">콤보상자</th>
-							</tr>
-							<tr>
-								<td>
-									<label for="original_combobox" class="">통신사</label>
-									<select id="original_combobox">
-										<option>KT</option>
-										<option>SKT</option>
-										<option>LG U+</option>
-										<option>KT 알뜰폰</option>
-										<option>SKT 알뜰폰</option>
-										<option>LG U+ 알뜰폰</option>
-									</select>
-								</td>
-								<td class="custom_input">
-									<label for="custom_combobox" class="">통신사</label>
-									<select id="custom_combobox">
-										<option>KT</option>
-										<option>SKT</option>
-										<option>LG U+</option>
-										<option>KT 알뜰폰</option>
-										<option>SKT 알뜰폰</option>
-										<option>LG U+ 알뜰폰</option>
-									</select>
-								</td>
-							</tr>
-
-							<tr>
-								<th scope="col" colspan="2">첨부파일</th>
-							</tr>
-							<tr>
-								<td>
-									<label for="original_file" class="">사진 첨부</label>
-									<input id="original_file" type="file" class="" name="">
-								</td>
-								<td class="custom_input">
-									<p>
-										<label for="custom_file" class="">사진 첨부</label>
-										<input accept="image/*" id="custom_file" type="file" class="" name="">
-									</p>
-									<p>
-										<label for="custom_design_file" class="">
-											<input id="file_text" readonly="" type="text" name="">
-											<span>
-												<input accept="image/*" id="custom_design_file" type="file" class="hidden" name="">
-											사진 첨부</span>
-										</label>
-										<label for="file_text" class="hidden">첨부파일 명</label>
-									</p>
-								</td>
-							</tr>
-
-							<tr>
-								<th scope="col" colspan="2">날짜 선택</th>
-							</tr>
-							<tr>
-								<td>
-									<label for="original_date" class="">달력</label>
-									<input id="original_date" type="date" class="" name="">
-								</td>
-								<td>
-									<label for="custom_date" class="">달력</label>
-									<input id="custom_date" type="date" class="" name="">
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</fieldset>
-			</form>
-		</section>
-		<section class="center">
-			
-		</section>
-	</main>
-	<footer>
-		<div class="center">
-			
-		</div>
-		<address>@purplemiyazawa</address>
-	</footer>
+    <header>
+        <div class="center">
+            <h1>입력서식 테스트</h1>
+        </div>
+    </header>
+    <main>
+        <section class="center">
+            <p>이 페이지는 입력 서식을 중심으로 여러 요소를 테스트 해보기 위해 일시적으로 제공되는 페이지입니다. 입력서식을 비롯해 자주 오류로 등장하는 컴포넌트들을 모아두었습니다. 다만 JavaScript는 구현하지 못했습니다.</p>
+        </section>
+        <section class="center">
+            <form>
+                <fieldset>
+                    <h2>
+                        <legend>입력 서식 예시</legend>
+                    </h2>
+                    <table>
+                        <caption class="hidden">입력 서식을 전시하는 표</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col" colspan="2">수정 창 | 편집창</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="original_text" class="">기본 편집창</label>
+                                    <input placeholder="토끼 만세" id="original_text" type="text" class="" name="">
+                                </td>
+                                <td class="custom_input">
+                                    <input placeholder="토끼 만세" id="custom_text" type="text" class="" name="">
+                                    <label for="custom_text" class="">커스텀 편집창</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" colspan="2">암호 편집 창</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="original_password">비밀번호</label>
+                                    <input id="original_password" type="password" name="">
+                                </td>
+                                <td class="custom_input">
+                                    <label for="custom_password">비밀번호</label>
+                                    <input id="custom_password" type="password" name="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" colspan="2">체크박스</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <input id="original_checkbox" type="checkbox" class="" name="" checked="">
+                                        <label for="original_checkbox" class="">평범한 체크박스</label>
+                                    </p>
+                                    <p>
+                                        <input id="original_checkbox_disabled_on" type="checkbox" class="" name="" checked="" disabled="">
+                                        <label for="original_checkbox_disabled_on" class="">비활성화된 체크박스(ON)</label>
+                                    </p>
+                                    <p>
+                                        <input id="original_checkbox_disabled_off" type="checkbox" class="" name="" disabled="">
+                                        <label for="original_checkbox_disabled_off" class="">비활성화된 체크박스(OFF)</label>
+                                    </p>
+                                </td>
+                                <td class="custom_input">
+                                    <p>
+                                        <input id="custom_checkbox" type="checkbox" class="" name="custom_checkbox" checked="">
+                                        <label for="custom_checkbox" class="">커스텀된 체크박스</label>
+                                    </p>
+                                    <p>
+                                        <input id="custom_checkbox_disabled_on" type="checkbox" class="" name="custom_checkbox" checked="" disabled="">
+                                        <label for="custom_checkbox_disabled_on" class="">비활성화된 커스텀 체크박스(ON)</label>
+                                    </p>
+                                    <p>
+                                        <input id="custom_checkbox_disabled_off" type="checkbox" class="" name="custom_checkbox" disabled="">
+                                        <label for="custom_checkbox_disabled_off" class="">비활성화된 커스텀 체크박스(OFF)</label>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="custom_input">
+                                    <label for="switch_checkbox">
+                                        <span>푸시 알림 수신 동의 여부</span>
+                                    </label>
+                                    <div>
+                                        <label for="switch_checkbox">
+                                            <i class="on"></i>
+                                            <input id="switch_checkbox" type="checkbox" name="switch_checkbox">
+                                            <i class="off"></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="col" colspan="2">라디오 버튼</th>
+                            </tr>
+                            <tr>
+                                <td class="">
+                                    <p>
+                                        <input id="original_radio_normal_on" type="radio" class="" name="original_normal" checked="">
+                                        <label for="original_radio_normal_on" class="">평범한 라디오 버튼(기본 ON)</label>
+                                    </p>
+                                    <p>
+                                        <input id="original_radio_normal_off" type="radio" class="" name="original_normal">
+                                        <label for="original_radio_normal_off" class="">평범한 라디오 버튼(기본 OFF)</label>
+                                    </p>
+                                    <p>
+                                        <input id="original_radio_disabled_on" type="radio" class="" name="original" checked="" disabled="">
+                                        <label for="original_radio_disabled_on" class="">비활성화된 라디오 버튼(ON)</label>
+                                    </p>
+                                    <p>
+                                        <input id="original_radio_disabled_off" type="radio" class="" name="original" disabled="">
+                                        <label for="original_radio_disabled_off" class="">비활성화된 라디오 버튼(OFF)</label>
+                                    </p>
+                                </td>
+                                <td class="custom_input">
+                                    <p>
+                                        <input id="custom_radio_normal_on" type="radio" class="" name="normal_custom" checked="">
+                                        <label for="custom_radio_normal_on" class="">커스텀된 라디오 버튼(기본ON)</label>
+                                    </p>
+                                    <p>
+                                        <input id="custom_radio_normal_off" type="radio" class="" name="normal_custom">
+                                        <label for="custom_radio_normal_off" class="">커스텀된 라디오 버튼(기본OFF)</label>
+                                    </p>
+                                    <p>
+                                        <input id="custom_radio_disabled_on" type="radio" class="" name="custom" checked="" disabled="">
+                                        <label for="custom_radio_disabled_on" class="">비활성화된 커스텀 라디오 버튼(ON)</label>
+                                    </p>
+                                    <p>
+                                        <input id="custom_radio_disabled_off" type="radio" class="" name="custom" disabled="">
+                                        <label for="custom_radio_disabled_off" class="">비활성화된 커스텀 라디오 버튼 OFF</label>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="custom_input tab_radio_cell">
+                                    <p>
+                                        <label for="tab_radio_on" class="">
+                                            <input id="tab_radio_on" type="radio" class="" name="tab_radio" checked="">
+                                            보라색
+                                            <span class="hidden">탭</span>
+                                        </label>
+                                        <label for="tab_radio_off" class="">
+                                            <input id="tab_radio_off" type="radio" class="" name="tab_radio">
+                                            초록색
+                                            <span class="hidden">탭</span>
+                                        </label>
+                                    </p>
+                                    <p>청보라색</p>
+                                </td>
+                                <td class="custom_input star_radio_cell">
+                                    <p>
+                                        <label for="star_radio5" class="">
+                                            <input id="star_radio5" type="radio" class="" name="star_radio" checked="">
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524v-12.005zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <span class="hidden">별점</span>
+                                            <span>4.5점 이상</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label for="star_radio4" class="">
+                                            <input id="star_radio4" type="radio" class="" name="star_radio" checked="">
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <span class="hidden">별점</span>
+                                            <span>4점 이상</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label for="star_radio3" class="">
+                                            <input id="star_radio3" type="radio" class="" name="star_radio" checked="">
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <span class="hidden">별점</span>
+                                            <span>3점 이상</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label for="star_radio2">
+                                            <input id="star_radio2" type="radio" class="" name="star_radio">
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <span class="hidden">별점</span>
+                                            <span>2점 이상</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label for="star_radio1" class="">
+                                            <input id="star_radio1" type="radio" class="" name="star_radio">
+                                            <svg class="fill_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <svg class="air_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" /></svg>
+                                            <span class="hidden">별점</span>
+                                            <span>1점 이상</span>
+                                        </label>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" colspan="2">슬라이더</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="original_range" class="">비만도 설정</label>
+                                    <input id="original_range" type="range" class="" name="">
+                                </td>
+                                <td class="custom_input">
+                                    <label for="custom_range" class="">비만도 설정</label>
+                                    <input id="custom_range" type="range" class="" name="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" colspan="2">컬러 피커</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="original_color" class="">테마 컬러 설정</label>
+                                    <input id="original_color" type="color" class="" value="#6644aa" name="">
+                                </td>
+                                <td class="custom_input">
+                                    <label for="custom_color" class="">
+                                        <input value="#6644aa" id="custom_color" type="color" class="" name="">
+                                        <p>테마 컬러 설정</p>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" colspan="2">콤보상자</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="original_combobox" class="">통신사</label>
+                                    <select id="original_combobox">
+                                        <option>KT</option>
+                                        <option>SKT</option>
+                                        <option>LG U+</option>
+                                        <option>KT 알뜰폰</option>
+                                        <option>SKT 알뜰폰</option>
+                                        <option>LG U+ 알뜰폰</option>
+                                    </select>
+                                </td>
+                                <td class="custom_input">
+                                    <label for="custom_combobox" class="">통신사</label>
+                                    <select id="custom_combobox">
+                                        <option>KT</option>
+                                        <option>SKT</option>
+                                        <option>LG U+</option>
+                                        <option>KT 알뜰폰</option>
+                                        <option>SKT 알뜰폰</option>
+                                        <option>LG U+ 알뜰폰</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" colspan="2">첨부파일</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="original_file" class="">사진 첨부</label>
+                                    <input id="original_file" type="file" class="" name="">
+                                </td>
+                                <td class="custom_input">
+                                    <p>
+                                        <label for="custom_file" class="">사진 첨부</label>
+                                        <input accept="image/*" id="custom_file" type="file" class="" name="">
+                                    </p>
+                                    <p>
+                                        <label for="custom_design_file" class="">
+                                            <input id="file_text" readonly="" type="text" name="">
+                                            <span>
+                                                <input accept="image/*" id="custom_design_file" type="file" class="hidden" name="">
+                                                사진 첨부</span>
+                                        </label>
+                                        <label for="file_text" class="hidden">첨부파일 명</label>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" colspan="2">날짜 선택</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="original_date" class="">달력</label>
+                                    <input id="original_date" type="date" class="" name="">
+                                </td>
+                                <td>
+                                    <label for="custom_date" class="">달력</label>
+                                    <input id="custom_date" type="date" class="" name="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+        </section>
+        <section class="center">
+        </section>
+    </main>
+    <footer>
+        <div class="center">
+        </div>
+        <address>@purplemiyazawa</address>
+    </footer>
 </body>
+
 </html>
-
-
-

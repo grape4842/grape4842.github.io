@@ -35,7 +35,7 @@ input, textarea {
 th,td, a, button {padding:0.5rem;}
 
 svg {
-	fill:#76f;
+	fill:#64a;
 	vertical-align: middle;
 	}
 
@@ -119,6 +119,7 @@ svg {
 @media (prefers-color-scheme:dark) {
 	.light_view {display: none;}
 	.dark_view {display:unset;}
-	input {accent-color:#baf;}
-	svg {fill:#baf;}
+	svg {fill:#64a;}
 }
+
+
