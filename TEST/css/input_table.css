@@ -23,8 +23,7 @@ label[for="custom_text"] {
 	transition: top 0.2s, left 0.2s, scale 0.2s;
 	scale:1;
 }
-input:focus + label[for="custom_text"] {
-	cursor: text;
+input:where(:focus, :not(:placeholder-shown)) + label[for="custom_text"] {
 	scale:0.8;
 	top:5px;
 	left:5px;
@@ -35,8 +34,10 @@ input:focus + label[for="custom_text"] {
   -moz-appearance: none;
   appearance: none;
 }
+.custom_input :where(input[type="text"], [type="password"]) + label{
+	opacity: 0.5;	
+}
 .custom_input :where(input[type="text"], [type="password"]) {
-	opacity: 0.5;
 	background:transparent;
 	border:none;
 	border-bottom: solid #65f 3px;
@@ -45,7 +46,7 @@ input:focus + label[for="custom_text"] {
 	outline-offset: 4px;
 	margin-top:1rem;
 }
-.custom_input :where(input[type="text"], [type="password"]):focus {
+.custom_input :where(input[type="text"], [type="password"]):focus + label{
 	opacity:1;
 }
 .custom_input input[type="text"]::placeholder {
