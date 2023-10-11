@@ -326,13 +326,14 @@
                                         <input accept="image/*" id="custom_file" type="file" class="" name="">
                                     </p>
                                     <p>
+                                        <input id="file_text" readonly="" type="text" name="" value="첨부 파일 이름">
+                                        <label for="file_text" class="hidden">첨부파일 명</label>
                                         <label for="custom_design_file" class="">
-                                            <input id="file_text" readonly="" type="text" name="">
                                             <span>
                                                 <input accept="image/*" id="custom_design_file" type="file" class="hidden" name="">
-                                                사진 첨부</span>
+                                                사진 첨부
+                                            </span>
                                         </label>
-                                        <label for="file_text" class="hidden">첨부파일 명</label>
                                     </p>
                                 </td>
                             </tr>
@@ -362,6 +363,12 @@
         </div>
         <address>@purplemiyazawa</address>
     </footer>
+    <script type="text/javascript">
+    $("#custom_design_file").on('change', function() {
+        var fileName = $("#custom_design_file").val();
+        $("#file_text").val(fileName);
+    });
+    </script>
 </body>
 
 </html>

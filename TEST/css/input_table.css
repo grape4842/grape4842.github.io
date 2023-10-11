@@ -487,29 +487,30 @@ span:has(#custom_design_file:focus) {
 
     .custom_input select,
     .custom_input select option {
-        background-color: #325;
-        border: 1px solid #3259;
+        background-color: #baf;
+        border: 1px solid #baf9;
+        color:black;
     }
 
     .custom_input :where(input[type="text"], [type="password"]) {
-        border-bottom: solid #64a 3px;
+        border-bottom: solid #baf 3px;
     }
 
     .custom_input :where(input[type="radio"], input[type="checkbox"]) {
-        border: 2px solid #64a;
+        border: 2px solid #baf;
     }
 
     .custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):before {
-        border: 2px solid #64a;
+        border: 2px solid #baf;
     }
 
     .custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):after {
-        background-color: #64a;
+        background-color: #baf;
     }
 
     .custom_input label:has(input[name="tab_radio"]) {
-        background: #64a;
-        border: 5px solid #64a;
+        background: #baf;
+        border: 5px solid #baf;
         color: black;
     }
 
@@ -526,7 +527,7 @@ span:has(#custom_design_file:focus) {
     }
 
     .custom_input label:has(input[name="star_radio"]:checked) {
-        box-shadow: 0px 0px 0px 3px #98f inset;
+        box-shadow: 0px 0px 0px 3px #baf inset;
     }
 
     .custom_input label:has(input[name="star_radio"]):hover {
@@ -552,7 +553,7 @@ span:has(#custom_design_file:focus) {
     .custom_input input[type="file"]::file-selector-button {
         border: #bafa solid 2px;
         background-color: #baf;
-        color: #fff;
+        color: #000;
     }
 
     .custom_input label[for="custom_design_file"] span {

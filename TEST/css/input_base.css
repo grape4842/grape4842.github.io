@@ -119,7 +119,7 @@ svg {
 @media (prefers-color-scheme:dark) {
 	.light_view {display: none;}
 	.dark_view {display:unset;}
-	svg {fill:#64a;}
+	svg {fill:#baf;}
 }
 
 
