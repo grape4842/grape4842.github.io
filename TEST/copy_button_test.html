@@ -27,12 +27,15 @@
     </header>
     <main>
         <section class="center">
-            <!-- The text field -->
-            <input type="text" value="https://www.nintendo.co.kr/switch/acbaa/index.html" id="myInput" class="blind" inert>
-            <img src="https://www.nintendo.co.kr/switch/acbaa/assets/images/top/visual_logo__pc.png" alt="모여봐요 동물의 숲">
-
-            <!-- The button used to copy the text -->
-            <button onclick="myFunction()">URL 복사</button>
+            <div class="imgbox">
+                <img src="https://www.nintendo.co.kr/switch/acbaa/assets/images/top/visual_logo__pc.png" alt="모여봐요 동물의 숲">
+            </div>
+            <form>
+                <!-- The text field -->
+                <input type="text" value="https://www.nintendo.co.kr/switch/acbaa/index.html" id="myInput" class="blind" inert>
+                <!-- The button used to copy the text -->
+                <button onclick="myFunction()">URL 복사</button>
+            </form>
         </section>
         <footer>
             <div class="center">
@@ -53,8 +56,8 @@
 
             // Alert the copied text
             alert("클립브도에 ( " + copyText.value + " ) URL이 복사되었습니다.");
-            }
-</script>
+        }
+    </script>
 </body>
 
 </html>
