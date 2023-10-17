@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta property="og:description" content="">
+    <meta property="og:locate" content="ko-kr">
+    <meta property="og:type" content="website">
+    <meta name="theme-color=" content="#855AB6">
+    <title>복사 버튼</title>
+    <link rel="stylesheet" type="text/css" href="../root.css">
+    <link rel="stylesheet" type="text/css" href="css/input_base.css">
+    <link rel="stylesheet" type="text/css" href="css/input_table.css">
+    <link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
+    <link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
+    <link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+    <link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
+    <link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <h1>복사 버튼 테스트</h1>
+        </div>
+    </header>
+    <main>
+        <section class="center">
+            <div class="imgbox">
+                <img src="https://www.nintendo.co.kr/switch/acbaa/assets/images/top/visual_logo__pc.png" alt="모여봐요 동물의 숲">
+            </div>
+            <form>
+                <!-- The text field -->
+                <input type="text" value="https://www.nintendo.co.kr/switch/acbaa/index.html" id="myInput" class="blind" inert>
+                <!-- The button used to copy the text -->
+                <button onclick="myFunction()">URL 복사</button>
+            </form>
+        </section>
+        <footer>
+            <div class="center">
+            </div>
+            <address>@purplemiyazawa</address>
+        </footer>
+        <script type="">
+            function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("클립브도에 ( " + copyText.value + " ) URL이 복사되었습니다.");
+        }
+    </script>
+</body>
+
+</html>
