@@ -570,3 +570,23 @@ span:has(#custom_design_file:focus) {
     }
 
 }
+
+/*기기별 CSS*/
+
+/*PC*/
+@media screen and (width >=1400px) {}
+
+/*700px〜1200px iPad*/
+@media (700px <=width < 1400px) {
+
+}
+
+/*Mobile*/
+@media (700px > width) {
+    tr {
+        border:none;
+        display: flex;
+        flex-direction: column;
+    }
+    th, td {border:1px solid;}
+}
