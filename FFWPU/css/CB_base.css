@@ -1,5 +1,9 @@
 @charset "utf-8";
 .pc_view {display: none;}
+.mobile_view {}
+.dark_view {display: none;}
+.light_view {}
+
 .content_width {
 	width:90vw;
 	max-width: 320px;
@@ -434,6 +438,7 @@ section.content_width:last-child {
 	.list_ui ul.arrow_list a:before {
 		margin:0px 0.5rem 0px 1rem;
 	}
+	.pc_view {display: unset;}
 
 }
 /*Mobile*/
@@ -457,6 +462,8 @@ section.content_width:last-child {
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
+	.light_view {display: none;}
+	.dark_view {display: unset;}
 	section {
 		background: rgba( 0 0 0 / 0.7 );
 	}
