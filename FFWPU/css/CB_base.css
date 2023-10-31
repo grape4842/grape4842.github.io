@@ -51,6 +51,7 @@ h2 {
 	top:0px;
 	left:0; right: 0;
 	margin:0px auto;
+	transition: all 0.2s;
 }
 .gnb_menu summary::-webkit-details-marker {
 	display: none;
@@ -74,7 +75,7 @@ h2 {
 .gnb_menu[open] summary {
 	top:0rem;
 	right:0rem;
-	margin:1rem;
+	margin:0rem;
 }
 .gnb_menu[open] summary:after {
 	content:"\00d7";
@@ -94,6 +95,7 @@ h2 {
 	display: none;
 }
 .gnb_menu nav {
+	transition: all 0.2s;
 	background: #222;
 	z-index: 2;
 	position: absolute;
@@ -102,18 +104,20 @@ h2 {
 }
 .gnb_menu_login {
 	position: absolute;
-	top:0px;
+	top:0rem;
 	left: 0px;
 	padding:1rem;
+	font-weight: 900;
+	font-size: 1.5rem;
 }
 .gnb_menu ul {
 	display: inline-flex;
 	flex-direction: column;
 }
-.gnb_menu ul:first-child {
+.gnb_menu .arrow_list {
 	margin-top:4rem;
 }
-.gnb_menu ul:first-child a {
+.gnb_menu .arrow_list a {
 	border-bottom:1px solid #515151;
 }
 .gnb_menu li {
@@ -381,13 +385,16 @@ section.content_width:last-child {
 	.pc_view {display: block;}
 	.gnb_menu nav {
 		display: flex;
+		padding-bottom: 2rem;
 	}
 	.gnb_menu nav ul {
-		margin-top:4rem;
 		justify-content: flex-start;
 	}
-	.gnb_menu nav ul:first-child {
+	.gnb_menu .arrow_list {
 		margin-right: 1rem;
+	}
+	.gnb_menu .sub_menu {
+	margin-top:4rem;
 	}
 	.bar_menu a {
 		text-align: center;
