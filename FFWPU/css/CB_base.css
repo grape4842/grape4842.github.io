@@ -96,7 +96,8 @@ h2 {
 }
 .gnb_menu nav {
 	transition: all 0.2s;
-	background: #222;
+	background:#353539;
+	box-shadow:0px 0px 15px #464646;
 	z-index: 2;
 	position: absolute;
 	top:0; left:0;
