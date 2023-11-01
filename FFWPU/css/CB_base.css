@@ -12,9 +12,15 @@
 .content_width > * {
 	width: 100%;
 }
+table {
+	border:none;
+	margin:1rem 0px;
+}
 th, td {
+	padding:1rem;
 	border:solid 1px;
 }
+dl {padding:0.5rem 0px;}
 input {
 	accent-color: #c91f61;
 	}
@@ -42,10 +48,19 @@ h1 img {
 	max-width: 230px;
 	max-height: 75px;
 }
+h2, h3 {
+	padding:1rem;
+}
+
 h2 {
 	font-size: 1.5rem;
 	text-align: center;
 }
+h3 {
+	font-size:1.3rem;
+	padding-left:0px;
+}
+
 .gnb_menu {
 	position: absolute;
 	top:0px;
@@ -221,7 +236,7 @@ section.content_width:last-child {
 	flex-wrap: wrap;
 	padding-top:2rem;
 }
-.list_ui ul {
+.list_ui ul.arrow_list {
 	flex-direction: column;
 	padding-top:1rem;
 }
@@ -420,7 +435,7 @@ section.content_width:last-child {
 	.page_number_ui {
 		padding-top:4rem;
 	}
-	.list_ui ul {
+	.list_ui ul.arrow_list {
     flex-direction: column;
     padding-top: 2rem;
 	}
