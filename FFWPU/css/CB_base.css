@@ -273,6 +273,7 @@ section.content_width:last-child {
 }
 .page_number_ui :disabled {visibility: hidden;}
 .page_number_ui :where(a[aria-current], button) {
+	margin:0rem 0.5rem;
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);}
 
 .more {
