@@ -208,7 +208,7 @@ a:not(main a) {
 	padding: 1rem;
 }
 span {display: block;}
-ul {
+ul.page_number_ui, .menu ul {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -491,6 +491,8 @@ section.content_width:last-child {
 	section {
 		background: rgba( 0 0 0 / 0.7 );
 	}
+	th{background: rgba( 0 0 0 / 0.7 );}
+	th{background: rgba( 0 0 0 / 0.3 );}
 	.list_ui ul.arrow_list a:before {
 		border-left-color:rgba(255 255 255 / 0.9);
 	}
