@@ -1,137 +1,190 @@
-section, form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf)format('truetype');
 }
-legend  {
-	text-align: center;
-	width: 100%;
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc9.ttf)format('truetype');
 }
+
+@font-face {
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owps.ttf)format('truetype');
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtzCwM.ttf)format('truetype');
+}
+
+section,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+legend {
+    text-align: center;
+    width: 100%;
+}
+
 legend p {
-	margin:2rem;
+    margin: 2rem;
 }
+
 .login_box {
-	display: inline-flex;
-	flex-direction: column;
-	align-items: center;
-	border: none;
-	max-width: 420px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    max-width: 420px;
 }
+
 .login_box :where(.input_box, button) {
-	width:20rem;
+    width: 20rem;
 }
+
 .login_controls {
-	width: 100%;
-	display: flex;
-	align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
 
 }
+
 .input_box :where(label, input) {
-	width: 100%;
+    width: 100%;
 }
+
 .input_box input {
-	height: 36px;
-	margin-bottom:2rem;
+    height: 36px;
+    margin-bottom: 2rem;
 }
+
 .input_box label {
-	line-height: 2rem;
+    line-height: 2rem;
 }
+
 #login_button {
-	background: #1f97db;
-	color:white;
-	font-weight: 900;
-	width: 9rem; height: 9rem;
-	aspect-ratio: 1/1;
-	border-radius: 0.5rem;
-	margin-left: 1rem;
+    background: #1f97db;
+    color: white;
+    font-weight: 900;
+    width: 9rem;
+    height: 9rem;
+    aspect-ratio: 1/1;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
 
 }
 
 .login_account_menu {
-	padding:0rem!important;
-	flex-direction: row!important;
-	justify-content: flex-start;
+    padding: 0rem !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
 }
 
-.with_login  {
-	width: unset ;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+.with_login {
+    width: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .with_login li {
-	text-align: center;
+    text-align: center;
 }
-.with_login li > *:last-child {
-	margin:1rem auto;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	width:20rem;
+
+.with_login li>*:last-child {
+    margin: 1rem auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
 }
-.with_login li > *:not(a):focus-within {
-	outline:solid black 1px;
+
+.with_login li>*:not(a):focus-within {
+    outline: solid black 1px;
 }
 
 .with_login img {
-	width:auto;
-	height: 100%;
+    width: auto;
+    height: 100%;
 }
 
-
+/*.google_login>span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    font-size: 1.5rem;
+    background: #4285F4;
+    padding: 1rem 0px;
+    font-family: Google Sans, arial, sans-serif;
+    font-weight: 500;
+}
+*/
 /*기기별 CSS*/
 /*PC*/
-@media screen and (width >= 1400px) {
-	
-}
+@media screen and (width >=1400px) {}
 
 /*700px〜1200px iPad*/
-@media (700px <= width < 1400px )  {
-	
-}
+@media (700px <=width < 1400px) {}
 
 /*Mobile*/
-@media (340px <= width < 700px ) {
-	.login_controls {
-		flex-direction: column;
-	}
-	.login_box :where(.input_box, button) {
-		width:13rem;
-	}
-	.with_login li > *:last-child {
-		width:13rem;
-	}
-	#login_button {
-		width:13rem;
-		height:4rem;
-		aspect-ratio: auto;
-		margin: 0px;
-	}
+@media (340px <=width < 700px) {
+    .login_controls {
+        flex-direction: column;
+    }
+
+    .login_box :where(.input_box, button) {
+        width: 13rem;
+    }
+
+    .with_login li>*:last-child {
+        width: 13rem;
+    }
+
+    #login_button {
+        width: 13rem;
+        height: 4rem;
+        aspect-ratio: auto;
+        margin: 0px;
+    }
 
 }
+
 /*watch*/
 @media screen and (330px > width) {
-	.login_controls {
-		flex-direction: column;
-	}
-	.login_box :where(.input_box, button) {
-		width:13rem;
-	}
-	.with_login li > *:last-child {
-		width:13rem;
-	}
+    .login_controls {
+        flex-direction: column;
+    }
 
-	#login_button {
-		width:13rem;
-		height:3rem;
-		aspect-ratio: auto;
-		margin: 0px;
-	}
+    .login_box :where(.input_box, button) {
+        width: 13rem;
+    }
+
+    .with_login li>*:last-child {
+        width: 13rem;
+    }
+
+    #login_button {
+        width: 13rem;
+        height: 3rem;
+        aspect-ratio: auto;
+        margin: 0px;
+    }
 
 
 }
 
 /*Dark Mode Layout*/
-@media (prefers-color-scheme:dark) {
-	
-}
+@media (prefers-color-scheme:dark) {}
