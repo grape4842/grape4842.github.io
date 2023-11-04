@@ -29,6 +29,7 @@ form h3 {
 }
 .buttons {
 	display: flex;
+	gap:2rem;
 	justify-content: space-between;
 }
 .buttons button{
