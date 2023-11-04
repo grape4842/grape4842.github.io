@@ -1,0 +1,16 @@
+.video_list summary {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+.video_list summary > *{
+	padding:0.5rem;
+}
+.video_img {
+	width:35%;
+	vertical-align: middle;
+	display: inline-flex;
+}
+.video_time {
+
+}
