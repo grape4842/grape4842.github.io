@@ -81,11 +81,12 @@ a:active, summary:active {
 summary {
 	padding:1rem;
 	transition:list-style 0.2s;
-	background-color:#63B;}
+	background-color:#63B;
+	color:#fff;
+}
 
 details {
 	transition:height 3s ease-in;
-	background-color:rgba(0 0 0 /0.3);
 	margin:1rem auto;
 	border:1px solid #235;
 	box-sizing:border-box;
@@ -125,12 +126,16 @@ th, td {
 	word-break: keep-all; line-break:normal;
 	border:1px solid #baf;
 	vertical-align:middle; 
-	border:1px solid #235;
+	border:1px solid #325;
 	line-height: 2rem; 
 	padding:0.7rem;}
-th{background-color:#54a;
+th, .bus_table tr > *:first-child {
+	background-color:#54a;
+	color: #fff;
 	font-weight:700;
-	font-size:1.3rem;}
+	font-size:1.3rem;
+	text-align: center;
+}
 td {font-weight:400;}
 th svg, td svg {
 	width: 2rem;

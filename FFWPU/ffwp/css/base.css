@@ -1,0 +1,147 @@
+@charset "utf-8";
+.pc_view {display: none;}
+.mobile_view {}
+
+.dark_view {display: none;}
+.light_view {}
+
+#skipnav {
+	border-radius: 1rem;
+	background-color: #4156A0;
+	font-weight: 900;
+	position: fixed;
+	left:20%; right: 20%;
+	justify-content: center;
+	z-index: 2;
+	top:-5rem;
+	padding:1rem 1.5rem;
+	text-align: center;
+	outline-offset: 4px;
+	transition:0.2s top
+}
+#skipnav:focus {top:0.5rem;}
+.content_width {
+	padding:12px 15px;
+	margin: 0px auto;
+}
+.content_width > * {
+	width: 100%;
+}
+table {
+	border:none;
+	margin:1rem 0px;
+}
+th, td {
+	padding:0.5`rem;
+	border:solid 1px;
+}
+dl {padding:0.5rem 0px;}
+input {
+	accent-color: #c91f61;
+	}
+input, button {
+	min-width:1.5rem;
+	min-height: 1.5rem;
+	vertical-align: middle;
+}
+fieldset {
+	border:none;
+}
+h1 {
+	text-align: center;
+}
+h1 a {
+	font-size: 2rem;
+	width: 40%;
+	padding:40px 0px 20px!important;
+	display: inline-flex;
+	justify-content: center;
+}
+h2, h3 {
+	padding:1rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	text-align: center;
+}
+h3 {
+	font-size:1.3rem;
+	padding-left:0px;
+}
+dialog {
+	cursor: default;
+	position: fixed;
+	margin:0px auto;
+	width:50vw;
+	height: 100dvh;
+	z-index: 2;
+} 
+dialog::-webkit-scrollbar {
+	width:0px;
+}
+.popup_title {
+	text-align: left;
+	display: flex;
+	align-items: center;
+	height: 4rem;
+	padding:0px;
+	border-bottom:#777 1px solid;
+	padding-left:2rem;
+}
+.popup_contents {
+	overflow-y: scroll;
+	padding:1rem 2rem;
+}
+.popup_close {
+	border-radius:10rem; ;
+	width:4rem;
+	height:4rem;
+	background-color:transparent;
+	position: absolute;
+	top:0px; right:2rem;
+	scale:80%;
+}
+.popup_close:where(:focus, :hover) {
+	background-color: rgba(255 255 255 / 0.2);
+}
+
+::backdrop {
+	background-color: rgba(0, 0, 0, .5);
+	opacity: 0.7;
+}
+
+
+/*기기별 CSS*/
+
+/*PC*/
+@media screen and (width >= 1400px) {
+	.pc_view {display: unset;}
+	.mobile_view {display: none;}
+	.content_width {
+		width:1200px;
+		padding: 30px 0 20px;
+	}
+
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+	.pc_view {display: unset;}
+	.mobile_view {display: none;}
+	
+}
+/*Mobile*/
+@media (340px <= width < 700px ) {
+}
+/*watch*/
+@media screen and (330px > width) {
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	.light_view {display: none;}
+	.dark_view {display: unset;}
+	.popup_close img {filter: invert(1);}
+}
