@@ -39,7 +39,7 @@
     <script type="text/javascript" src="../../include_script.js"></script>
     <dialog id="first_popup" popover>
         <h2 class="popup_title">세계평화통일가정연합 세계회장 메시지</h2>
-        <section class="popup_contents" tabindex="0">
+        <section class="popup_contents img_popup" tabindex="0">
             <img src="https://ffwp.org/ffwpData/popup/20231015105935127198.jpg" alt="">
             <article class="blind">
                 <p>일본 세계평화통일가겅연합에 대한 법인해산명령 청구와 콴련하여 </p>
@@ -59,26 +59,38 @@
         </button>
     </dialog>
     <a href="#main_area" id="skipnav">공통영역 건너뛰고 콘텐츠로 바로가기</a>
-    <header class="mobile.view" w3-include-html="header_PC.html"></header>
+    <header class="mobile_view" w3-include-html="header_PC.html"></header>
     <header class="pc_view" w3-include-html="header_mobile.html"></header>
     <section class="login_area">
         <button class="login_popup_button" popovertarget="login_popup">로그인 / 회원가입</button>
         <dialog id="login_popup" popover>
             <form>
-                <fieldset>
+                <legend>
                     <h2 class="popup_title">로그인 / 회원가입</h2>
+                </legend>
+                <fieldset class="popup_contents">
                     <div class="id_input_box">
-                    <label for="login_id">아이디</label>
-                    <input type="text" name="" id="login_id">
-                </div>
+                        <label for="login_id">아이디</label>
+                        <input type="text" name="" id="login_id">
+                    </div>
                     <div class="pw_input_box">
                         <label for="login_pw">비밀번호</label>
-                        <input type="password" name="" id="login_pw">
+                        <input type="password" name="" id="login_pw" autocomplete="current-password">
+                        <input type="checkbox" name="" id="password_view">
+                        <label class="blind" for="password_view">비밀번호 표시</label>
                     </div>
                 </fieldset>
+                <ul>
+                    <li>
+                        <button type="submit">로그인</button>
+                    </li>
+                    <li>
+                        <a href="join_consent_term.html">회원으로 등록하기</a>
+                    </li>
+                </ul>
             </form>
             <button class="popup_close" popovertarget="login_popup" popovertargetaction="hide">
-                <span class="blind">팝업 닫기</span>
+                <img src="../../icon/Xclose.svg" alt="팝업 닫기">
             </button>
         </dialog>
     </section>
@@ -87,164 +99,225 @@
         <section class="main_gallary">
             <img src="https://ffwp.org/ffwpData/banner/20230717185558143881.jpg" alt="">
         </section>
-        <section class="content_width">
-            <div class="true_parents_log">
-                <h2>참부모님 섭리</h2>
-                <ul>
+        <section class="today_box content_width">
+            <p class="today_date">
+                <span>천일국 11년 10월 14일</span>
+                <span>2023.11.26. 일요일</span>
+            </p>
+            <p class="today_word">
+                <p class="today_word_title"></p>
+                <p class="today_word_contents">오늘의 훈독말씀여러분은 훌륭한 부모를 모신 것을 자랑해야 되겠다. 참부모를 모신 것을 자랑하는 것이 통일교회의 전통이다.</p>
+            </p>
+        </section>
+        <section class="content_width true_parents_log">
+                <h2>참부모님 동정</h2>
+                <ul class="card_list horizontal_flex_box">
                     <li>
                         <a href="">
-                            <img src="" alt="">
-                            <p></p>
-                            <p></p>
+                            <img src="https://ffwp.org/ffwpData/content/thumb/202311/2023112017001200_thumbW.jpg" alt="">
+                            <p>천지인참부모님 남양주대교회방문 남북통일기원 참사랑축제 예배</p>
+                            <p class="card_contents_date">2023.11.20</p>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
-                            <p></p>
-                            <p></p>
+                            <img src="https://ffwp.org/ffwpData/content/thumb/202311/2023111513345180_thumbW.jpg" alt="">
+                            <p>신한국 지도자 효정특별수련 (2일차_천지인참부모님 특별집회)</p>
+                            <p class="card_contents_date">2023.11.15</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://ffwp.org/ffwpData/content/thumb/202310/2023101616532669_thumbW.jpg" alt="">
+                            <p>천지인참부모님 승리귀국 특별연합예배</p>
+                            <p class="card_contents_date">2023.10.16</p>
                         </a>
                     </li>
                 </ul>
-                <a href="">
+                <a href="" class="more_link">
                     <span class="blind">참부모님 동정</span>
                     모두 보기</a>
-            </div>
-            <div class="ffwp_korea">
+                </section>
+            <section class="ffwp_korea content_width">
                 <h2>신한국협회</h2>
-                <ul>
+                <ul class="card_list horizontal_flex_box">
                     <li>
                         <a href="">
-                            <img src="" alt="">
-                            <p></p>
-                            <p></p>
+                            <img src="https://ffwp.org/ffwpData/content/thumb/202311/2023111720510981_thumbW.png" alt="">
+                            <p>송광석 협회장 초청 성북대교회 새식구 환영 감사예배</p>
+                            <p class="card_contents_date">2023.11.17</p>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
-                            <p></p>
-                            <p></p>
+                            <img src="https://ffwp.org/ffwpData/content/thumb/202311/2023111513394195_thumbW.jpg" alt="">
+                            <p>신한국 지도자 효정특별수련 (1일차)</p>
+                            <p class="card_contents_date">2023.11.15</p>
                         </a>
                     </li>
                 </ul>
-                <a href="">
+                <a href="" class="more_link">
                     <span class="blind">신한국협회</span>
                     모두 보기</a>
-            </div>
         </section>
-        <section class="notice">
-            <h2>공지사항</h2>
-            <ol>
+        <section class="notice content_width">
+            <h2 class="notice_heading">공지사항</h2>
+            <ol class="notice_list">
                 <li>
                     <a href="">
-                        <p></p>
-                        <p class="notice_date"></p>
-                        <p class="notice_title"></p>
+                        <span class="notice_title">2024년도 전기 선문대학교 대학원 신(편)입생 모집 연장 안내</span>
+                        <span class="notice_info">
+                            <span class="notice_date">[공지사항]</span>
+                            <span class="notice_date">2023.11.21</span>
+                        </span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <p></p>
-                        <p class="notice_date"></p>
-                        <p class="notice_title"></p>
+                        <span class="notice_title">천일국 12년 (2024년) 존영달력 구매안내</span>
+                        <span class="notice_info">
+                            <span class="notice_date">[공지사항]</span>
+                            <span class="notice_date">2023.11.21</span>
+                        </span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <p></p>
-                        <p class="notice_date"></p>
-                        <p class="notice_title"></p>
+                        <span class="notice_title"></span>
+                        <span class="notice_info">
+                            <span class="notice_date"></span>
+                            <span class="notice_date"></span>
+                        </span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <p></p>
-                        <p class="notice_date"></p>
-                        <p class="notice_title"></p>
+                        <span class="notice_title"></span>
+                        <span class="notice_info">
+                            <span class="notice_date"></span>
+                            <span class="notice_date"></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="notice_title"></span>
+                        <span class="notice_info">
+                            <span class="notice_date"></span>
+                            <span class="notice_date"></span>
+                        </span>
                     </a>
                 </li>
             </ol>
-            <a href="">모두 보기</a>
+            <a href="" class="more_link">모두 보기</a>
         </section>
         <section class="content_width ffwp_korea_area">
             <h2>신한국 권역별 소식</h2>
-            <ul>
+            <ul class="card_list horizontal_flex_box">
                 <li>
                     <a href="">
-                        <p></p>
-                        <img src="" alt="">
+                        <p class="ffwp_korea_title">서울 • 인천권</p>
+                        <img src="https://ffwp.org/ffwpData/content/thumb/202311/2023112217150168_thumbW.jpg" alt="">
+                        <p>
+                            <span>서울북부</span>
+                            <span class="card_contents_date">2023.11.22</span>
+                        </p>
+                        <p>천원교회, 천승교회 성화회장단 교류회</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="ffwp_korea_title">경기 • 강원권</p>
+                        <img src="https://ffwp.org/ffwpData/content/thumb/202311/2023112521305040_thumbW.png" alt="">
                         <p>
                             <span></span>
-                            <span class="date"></span>
+                            <span class="card_contents_date"></span>
                         </p>
                         <p></p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <p></p>
-                        <img src="" alt="">
+                        <p class="ffwp_korea_title">충청권</p>
+                        <img src="https://ffwp.org/ffwpData/content/thumb/202311/2023112519374638_thumbW.jpg" alt="">
                         <p>
                             <span></span>
+                            <span class="card_contents_date"></span>
+                        </p>
+                        <p></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="ffwp_korea_title">호남 • 제주권</p>
+                        <img src="https://ffwp.org/ffwpData/content/thumb/202311/2023112512145211_thumbW.jpg" alt="">
+                        <p>
                             <span></span>
+                            <span class="card_contents_date"></span>
+                        </p>
+                        <p></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="ffwp_korea_title">영남권</p>
+                        <img src="https://ffwp.org/ffwpData/content/thumb/202311/2023112007131536_thumbW.jpg" alt="">
+                        <p>
+                            <span></span>
+                            <span class="card_contents_date"></span>
                         </p>
                         <p></p>
                     </a>
                 </li>
             </ul>
-            <a href="">
+            <a href="" class="more_link">
                 <span class="blind">신한국협회 권역별 소식</span>
                 모두 보기</a>
         </section>
-            <div class="ffwp_hjmedia">
-                <h2>효정미디어</h2>
-                <ul>
-                    <li>
-                        <a href="">
-                            <img src="" alt="">
-                            <p></p>
-                            <p></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="" alt="">
-                            <p></p>
-                            <p></p>
-                        </a>
-                    </li>
-                </ul>
-                <a href="">
-                    <span class="blind">효정미디어</span>
-                    모두 보기</a>
-            </div>
+        <section class="ffwp_hjmedia content_width">
+            <h2>효정미디어</h2>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="" alt="">
+                        <p></p>
+                        <p></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="" alt="">
+                        <p></p>
+                        <p></p>
+                    </a>
+                </li>
+            </ul>
+            <a href="" class="more_link">
+                <span class="blind">효정미디어</span>
+                모두 보기</a>
         </section>
-            <div class="ffwp_media">
-                <h2>언론보도</h2>
-                <ul>
-                    <li>
-                        <a href="">
-                            <img src="" alt="">
-                            <p></p>
-                            <p></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="" alt="">
-                            <p></p>
-                            <p></p>
-                        </a>
-                    </li>
-                </ul>
-                <a href="">
-                    <span class="blind">언론보도</span>
-                    모두 보기</a>
-            </div>
+        <section class="ffwp_media content_width">
+            <h2>언론보도</h2>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="" alt="">
+                        <p></p>
+                        <p></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="" alt="">
+                        <p></p>
+                        <p></p>
+                    </a>
+                </li>
+            </ul>
+            <a href="" class="more_link">
+                <span class="blind">언론보도</span>
+                모두 보기</a>
         </section>
-
-
     </main>
     <a href="#skipnav" id="page-top" aria-label="페이지 최상단으로 이동">
         <svg class="light_view" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">

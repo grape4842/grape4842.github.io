@@ -1,0 +1,87 @@
+#password_view {
+	appearance: none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	background-size: contain;
+	background-image: url("../../../icon/visibility_eye.png");
+}
+#password_view::after {
+	transition: all 0.2s;
+}
+#password_view:checked::after {
+	background: transparent;
+}
+
+
+.ffwp_korea_area a {
+	display: flex;
+	flex-direction: column;
+}
+.ffwp_korea_title {
+	font-weight: 900;
+	line-height: 3rem;
+}
+
+.notice {
+	background: #4156A0;
+	color:white;
+}
+	.notice_list {
+		padding:0px 1rem;
+	}
+	.notice_list a {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		margin-bottom:1px;
+		padding:0.5rem;
+		background: rgba(0, 0, 0, 0.2);
+		transition: background 0.2s;
+	}
+.notice_list a:where(:focus, :hover) {
+	background: rgba(0, 0, 0, 0.5);
+}
+.notice_date {padding:0.5rem;}
+.notice .more_link {
+	border-radius: 10rem;
+	font-weight: 500;
+	border:2px solid white;
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+
+ /*기기별 CSS*/
+
+/*PC*/
+@media screen and (width >= 1400px) {
+	.pc_view {display: unset;}
+	.mobile_view {display: none;}
+	.notice_heading {
+		padding:3rem;
+	}
+	.notice_list {
+		padding:0px 3rem;
+	}
+	.notice .more_link {
+		margin:3rem auto;
+	}
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+		
+	
+}
+/*Mobile*/
+@media (340px <= width < 700px ) {
+}
+/*watch*/
+@media screen and (330px > width) {
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+}
