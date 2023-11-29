@@ -1,35 +1,75 @@
-.product_area {}
+.product_area > ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.product_area :where(a, summary) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
+    width: 15rem;
+    transition: border 0.2s;
+}
+
+
 .product_area img {
-	opacity: 0.5;
-	width:1.5rem;
-	aspect-ratio: 1/1;
+    opacity: 0.5;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    justify-content: center;
+}
+
+.product_area .category_name {
+    white-space: nowrap;
+    display: inline-flex;
 }
 
 /*기기별 CSS*/
 /*PC*/
-@media screen and (width >= 1400px) {
+@media screen and (width >=1400px) {
+	.product_area > ul {
+		flex-direction: column;
+	}
+	
+    .product_area a {
+        border: rgba(255 255 255 / 0) solid 1px;
+        justify-content: stretch;
+
+    }
+
+    .product_area a:where(:focus, :hover) {
+        border: rgba(255 255 255 / 0.5) solid 1px;
+
+    }
 
 }
 
 /*700px〜1200px iPad*/
-@media (700px <= width < 1400px )  {
-	.pc_view {display: unset;}
-	.mobile_view {display: none;}
+@media (700px <=width < 1400px) {
+    .pc_view {
+        display: unset;
+    }
 
-	
+    .mobile_view {
+        display: none;
+    }
+
+
 }
+
 /*Mobile*/
-@media (340px <= width < 700px ) {
-}
-/*watch*/
-@media screen and (330px > width) {
+@media (340px <=width < 700px) {}
 
-}
+/*watch*/
+@media screen and (330px > width) {}
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-	.product_area img {
-	opacity: 0.9;
-	filter: invert(1);
-	}
+    .product_area img {
+        opacity: 0.8;
+        filter: invert(1);
+    }
 }

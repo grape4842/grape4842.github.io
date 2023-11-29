@@ -90,6 +90,7 @@ dialog::-webkit-scrollbar {
 	display: flex;
 	align-items: center;
 	height: 4rem;
+	width: 100%;
 	padding:0px;
 	border-bottom:#777 1px solid;
 	padding:0rem 2rem;

@@ -1,0 +1,94 @@
+.menu_icon,
+.all_menu img {
+    opacity: 0.5;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    justify-content: center;
+}
+
+:where(.login_control, .sns_login) a,
+.login_control button {
+    width: 10rem;
+    margin: 1rem;
+    min-height: 2rem;
+    justify-content: center;
+}
+
+.right_ad {
+    padding: 2rem;
+    background-color: white;
+}
+
+.main_menu {
+    display: flex;
+    width: 100%;
+}
+
+.main_menu > li > a {
+    padding: 1rem;
+}
+
+.all_menu summary {
+    border: solid 1px white;
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+}
+
+.all_menu_list {
+    position: fixed;
+    font-size: 1rem;
+    border: rgba(0 0 0 / 0.8) solid 1px;
+    box-shadow: 3px 4px 1rem rgba(0 0 0 / 0.2);
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.all_menu a {
+	padding:0.5rem;
+}
+
+/*기기별 CSS*/
+/*PC*/
+@media screen and (width >=1400px) {
+
+    .popup_contents .flex_form,
+    .login_control,
+    .sns_login {
+        display: flex;
+    }
+
+}
+
+/*700px〜1200px iPad*/
+@media (700px <=width < 1400px) {
+    .pc_view {
+        display: unset;
+    }
+
+    .mobile_view {
+        display: none;
+    }
+
+
+}
+
+/*Mobile*/
+@media (340px <=width < 700px) {}
+
+/*watch*/
+@media screen and (330px > width) {}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+
+    .menu_icon,
+    .all_menu img {
+        opacity: 0.8;
+        filter: invert(1);
+    }
+
+    .all_menu summary + ul {
+        border: rgba(255 255 255 / 0.8) solid 1px;
+    }
+
+}
