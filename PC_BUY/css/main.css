@@ -1,0 +1,35 @@
+.product_area {}
+.product_area img {
+	opacity: 0.5;
+	width:1.5rem;
+	aspect-ratio: 1/1;
+}
+
+/*기기별 CSS*/
+/*PC*/
+@media screen and (width >= 1400px) {
+
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+	.pc_view {display: unset;}
+	.mobile_view {display: none;}
+
+	
+}
+/*Mobile*/
+@media (340px <= width < 700px ) {
+}
+/*watch*/
+@media screen and (330px > width) {
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	.product_area img {
+	opacity: 0.9;
+	filter: invert(1);
+	}
+}

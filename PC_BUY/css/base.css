@@ -24,6 +24,7 @@
 	width:320px;
 	margin: 0px auto;
 }
+main{padding:5rem;}
 table {
 	border:none;
 	margin:1rem 0px;
@@ -65,6 +66,12 @@ h2 {
 h3 {
 	font-size:1.3rem;
 	padding-left:0px;
+}
+summary {
+	list-style: none;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
 }
 dialog {
 	cursor: default;
