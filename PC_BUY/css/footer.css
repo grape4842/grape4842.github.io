@@ -9,4 +9,37 @@ footer {
 	padding:1rem;
 	white-space: nowrap;
 }
-dd {display: inline-flex;}
+dl {
+	display: flex;
+}
+dt {display: inline-flex;}
+#page-top {
+	position: fixed;
+	bottom:1rem; right:1rem;
+	}
+
+
+/*기기별 CSS*/
+/*PC*/
+@media screen and (width >=1400px) {
+	.policy_box {
+		margin:0px auto;
+	}
+	dl {width:50%;}
+}
+
+/*700px〜1200px iPad*/
+@media (700px <=width < 1400px) {
+
+}
+
+/*Mobile*/
+@media (340px <=width < 700px) {}
+
+/*watch*/
+@media screen and (330px > width) {}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+
+}

@@ -1,27 +1,37 @@
 .top_menu {
     display: flex;
     justify-content: space-between;
-    margin:1rem auto;
+    margin: 1rem auto;
     flex-direction: column;
 }
-.top_menu h1 > a{
-    padding:1rem;
+
+.top_menu h1>a {
+    padding: 1rem;
 }
-h1 {display: inline-flex;}
+
+h1 {
+    display: inline-flex;
+}
+
 .right_top_menu {
     display: flex;
-    }
-.right_top_menu > div > a, .right_top_menu > button {
-    padding:0.5rem;
+}
+
+.right_top_menu>div>a,
+.right_top_menu>button {
+    padding: 0.5rem;
     min-height: 3.5rem;
+    display: inline-flex;
     align-items: center;
     background-color: transparent;
 }
-.right_top_menu .menu_icon + p {
+
+.right_top_menu .menu_icon+p {
     width: 1px;
     height: 1px;
     overflow: hidden;
 }
+
 :where(.menu_icon,
 .all_menu, .right_top_menu, .fixed_footer_menu) img {
     opacity: 0.5;
@@ -29,6 +39,7 @@ h1 {display: inline-flex;}
     aspect-ratio: 1/1;
     justify-content: center;
 }
+
 #login_popup img {
     aspect-ratio: auto;
     width: 100%;
@@ -44,47 +55,56 @@ h1 {display: inline-flex;}
     align-items: center;
     min-height: 3rem;
 }
+
 .ip_input_box {
     display: flex;
     justify-content: space-between;
 }
+
 #password_view {
     appearance: none;
     -webkit-appearance: none;
     position: absolute;
-    top:0px; right: 0px;
+    top: 0px;
+    right: 0px;
 }
 
 .pw_input_box .eyecon {
-        scale:0.8;
-        width:1.5rem!important;
-        position: absolute;
-        top:2px; right: 0px;
-    }
+    scale: 0.8;
+    width: 1.5rem !important;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+}
+
 .eyecon::after {
-    contents:'';
-    position: left:0; top:0;
-    rotate:45deg;
-    height:100%;
+    contents: '';
+    position: left:0;
+    top: 0;
+    rotate: 45deg;
+    height: 100%;
     width: 1px;
     background-color: #777;
 }
+
 .right_ad {
     padding: 2rem;
     background-color: white;
 }
 
 nav {
-    border:solid 1px transparent;
+    border: solid 1px transparent;
     border-top-color: #777;
     border-bottom-color: #777;
 }
+
 .main_menu {
     display: flex;
     justify-content: space-between;
-    overflow-x:scroll;
-    padding-bottom: -1rem;
+    overflow-x: scroll;
+    margin: 0px auto;
 }
+
 .main_menu::-webkit-scrollbar {
     height: 0rem;
 }
@@ -128,13 +148,21 @@ nav {
     border: rgba(0 0 0 / 0.8) solid 1px;
     box-shadow: 3px 4px 1rem rgba(0 0 0 / 0.2);
     overflow-y: scroll;
-    max-height: 70vh;
+    max-height: 80vh;
+}
+.all_menu_list::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
 }
 
 .all_menu a {
     padding: 0.5rem;
+    display: flex;
 }
 
+.categorylink > img {
+    margin-right:0.5rem;
+}
 
 .fixed_footer_menu .fixed_menu {
     position: fixed;
@@ -149,7 +177,7 @@ nav {
     flex: 1 1;
 }
 
- .fixed_category {
+.fixed_category {
     background-color: #eee;
     display: flex;
     flex-direction: column;
@@ -164,25 +192,41 @@ nav {
 .fixed_footer_menu .fixed_menu :where(a, button, summary) p {
     font-size: 12px;
 }
+
 .submenu {
-    padding:0.5rem;
+    padding: 0.5rem;
     background-color: transparent;
 }
 
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >=1400px) {
-    .top_menu {flex-direction: row;}
-    .right_top_menu .menu_icon + p {
-        width:100%;
-        height: 100%;
+    .top_menu {
+        flex-direction: row;
     }
+
+    .right_top_menu .menu_icon+p {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+    }
+
     .popup_contents .flex_form,
     .login_control,
     .sns_login {
         display: flex;
     }
-    .popup_contents .flex_form {justify-content: space-between;}
+
+    .popup_contents .flex_form {
+        justify-content: space-between;
+    }
+
+    :where(.right_top_menu > div > a, .right_top_menu > button) img {
+        margin-right: 0.5rem;
+    }
+
 }
 
 /*700px〜1200px iPad*/
@@ -200,16 +244,20 @@ nav {
 
 /*Mobile*/
 @media (340px <=width < 700px) {
-    :where(.login_control, .sns_login) a, .login_control button {
-        width:100%;
+
+    :where(.login_control, .sns_login) a,
+    .login_control button {
+        width: 100%;
         margin: 1rem 0px;
     }
 }
 
 /*watch*/
 @media screen and (330px > width) {
-    :where(.login_control, .sns_login) a, .login_control button {
-        width:100%;
+
+    :where(.login_control, .sns_login) a,
+    .login_control button {
+        width: 100%;
         margin: 1rem 0px;
     }
 }
@@ -227,6 +275,7 @@ nav {
         filter: invert(0);
         opacity: 1;
     }
+
     .pw_input_box .eyecon {
         filter: invert(1);
     }
