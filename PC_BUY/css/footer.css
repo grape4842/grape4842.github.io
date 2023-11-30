@@ -1,0 +1,12 @@
+footer {
+	border-top:2px solid #777;
+}
+.policy_box {
+	display:flex; 
+	overflow-x: scroll;
+}
+.policy_box a {
+	padding:1rem;
+	white-space: nowrap;
+}
+dd {display: inline-flex;}

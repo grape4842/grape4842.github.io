@@ -17,8 +17,8 @@
     background-color: #4156A0;
     font-weight: 900;
     position: fixed;
-    left: 20%;
-    right: 20%;
+    left: 5%;
+    right: 5%;
     justify-content: center;
     z-index: 2;
     top: -5rem;
@@ -102,7 +102,7 @@ dialog {
     cursor: default;
     position: fixed;
     margin: auto auto;
-    max-width: 90vw;
+    width: 90vw;
     max-height: 100dvh;
     z-index: 2;
     border-radius: 1rem;
@@ -142,7 +142,7 @@ dialog::-webkit-scrollbar {
     background-color: transparent;
     transition: 0.2s background-color;
 }
-
+.popup_close img {width: 100%;}
 .popup_close:where(:focus, :hover) {
     background-color: rgba(255 255 255 / 0.2);
 }
@@ -195,7 +195,7 @@ dialog::backdrop {
         padding: 5rem;
     }
 
-    .content_width {
+    .content_width, .main_menu, .policy_box {
         width: 60vw;
     }
 
@@ -238,7 +238,9 @@ dialog::backdrop {
     dialog {
         width: 70vw;
     }
-
+    .content_width, .main_menu, .policy_box {
+    	width:80vw;
+    }
 }
 
 /*Mobile*/

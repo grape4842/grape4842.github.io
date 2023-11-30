@@ -27,14 +27,15 @@
                                     <h3>로그인 / 회원가입</h3>
                                 </legend>
                                 <fieldset>
-                                    <div class="id_input_box">
+                                    <div class="id_input_box ip_input_box">
                                         <label for="login_id">아이디</label>
                                         <input required type="text" name="" id="login_id">
                                     </div>
-                                    <div class="pw_input_box">
+                                    <div class="pw_input_box ip_input_box">
                                         <label for="login_pw">비밀번호</label>
                                         <input required type="password" name="" id="login_pw" autocomplete="current-password">
                                         <input type="checkbox" name="" id="password_view">
+                                        <img class="eyecon" src="img/visibility_FILL1_wght400_GRAD200_opsz48.svg" alt="">
                                         <label class="blind" for="password_view">비밀번호 표시</label>
                                     </div>
                                     <div class="save_login">
@@ -96,7 +97,7 @@
         </section>
     </div>
     <nav>
-        <ul class="main_menu content_width">
+        <ul class="main_menu">
             <li class="pc_view">
                 <details class="all_menu">
                     <summary>
@@ -145,272 +146,319 @@
     <nav>
         <ul class="fixed_menu">
             <li>
-                <button popovertarget="category_menu_mobile">
+                <button class="fixed_category" popovertarget="category_menu_mobile">
                     <img src="img/grid_on_FILL1_wght400_GRAD200_opsz48.svg" alt="">
                     <p>카테고리</p>
                 </button>
                 <dialog popover id="category_menu_mobile">
-                    <ul>
+                    <h2 class="popup_title">카테고리</h2>
+                    <ul class="popup_contents">
                         <li>
-                            <summary class="submenu"><img src="img/desktop_windows_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">데스크탑ㆍ서버</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/desktop_windows_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">데스크탑ㆍ서버</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/laptop_windows_FILL0_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">노트북ㆍ테블릿</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/laptop_windows_FILL0_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">노트북ㆍ테블릿</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/memory_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">컴퓨터 부품</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/memory_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">컴퓨터 부품</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/Apple_logo_black.svg" alt=""><span class="category_name">Apple</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/Apple_logo_black.svg" alt=""><span class="category_name">Apple</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/smartphone_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">모바일</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/smartphone_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">모바일</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/terminal_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">소프트웨어</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/terminal_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">소프트웨어</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/desktop_windows_FILL0_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">모니터</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/desktop_windows_FILL0_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">모니터</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/mouse_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">키보드ㆍ마우스ㆍ타블렛</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/mouse_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">키보드ㆍ마우스ㆍ타블렛</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/hard_drive_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">저장장치</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/hard_drive_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">저장장치</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/print_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">프린터ㆍ전산소모품</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/print_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">프린터ㆍ전산소모품</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/cable_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">네트워크ㆍ케이블</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/cable_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">네트워크ㆍ케이블</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/stadia_controller_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">게임ㆍ드론ㆍ완구</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/stadia_controller_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">게임ㆍ드론ㆍ완구</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/speaker_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">음향</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/speaker_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">음향</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/photo_camera_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">영상ㆍ카메라</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/photo_camera_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">영상ㆍ카메라</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/cached_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">중고ㆍ리퍼비시</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/cached_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">중고ㆍ리퍼비시</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/scene_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">가구ㆍ조명ㆍ전기</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/scene_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">가구ㆍ조명ㆍ전기</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/vacuum_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">생활가전</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/vacuum_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">생활가전</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/local_laundry_service_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">세탁기ㆍ건조기</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/local_laundry_service_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">세탁기ㆍ건조기</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/kitchen_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">주방가전</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/kitchen_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">주방가전</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/mode_fan_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">계절가전</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/mode_fan_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">계절가전</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/construction_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">자동차ㆍ공구ㆍ안전</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/construction_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">자동차ㆍ공구ㆍ안전</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
-                            <summary class="submenu"><img src="img/directions_bike_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">스포츠ㆍ아웃도어</span></summary>
-                            <ul>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                                <li><a href="" class="submenu"></a></li>
-                            </ul>
+                            <details class="subdepth">
+                                <summary class="submenu"><img src="img/directions_bike_FILL1_wght400_GRAD200_opsz48.svg" alt=""><span class="category_name">스포츠ㆍ아웃도어</span></summary>
+                                <ul>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                    <li><a href="" class="submenu"></a></li>
+                                </ul>
+                            </details>
                         </li>
                     </ul>
-                    <button class="popup_close" popovertarget="login_popup" popovertargetaction="hide">
+                    <button class="popup_close" popovertarget="category_menu_mobile" popovertargetaction="hide">
+                        <img src="img/Xclose.svg" alt="팝업 닫기">
+                    </button>
                 </dialog>
             </li>
-            <li><a href="">
+            <li><a href="" class="fixed_category">
                     <img src="img/support_agent_FILL1_wght400_GRAD200_opsz48.svg" alt="">
                     <p>상담센터</p>
                 </a></li>
-            <li><a href="main.html">
+            <li><a href="main.html" class="fixed_category">
                     <img src="img/home_FILL1_wght400_GRAD200_opsz48.svg" alt="">
                     <p>홈</p>
                 </a></li>
-            <li><a href="">
+            <li><a href="" class="fixed_category">
                     <img src="img/person_FILL1_wght400_GRAD200_opsz48.svg" alt="">
                     <p>마이 컴퓨존</p>
                 </a></li>
             <li>
-                <a href="">
+                <a href="" class="fixed_category">
                     <img src="img/history_FILL1_wght400_GRAD200_opsz48.svg" alt="">
                     <p>최근 본 상품</p>
                 </a>
