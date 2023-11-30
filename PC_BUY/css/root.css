@@ -1,180 +1,229 @@
 @charset "utf-8";
-:lang(ko) {word-break: keep-all; line-break:normal;}
-::selection {background:#31a; color:white;}
+
+:lang(ko) {
+    word-break: keep-all;
+    line-break: normal;
+}
+
+::selection {
+    background: #31a;
+    color: white;
+}
+
 /*폰트 설성*/
-@font-face { 
-	font-family:"BIZ-UDPGothic";
-	src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
-} 
+@font-face {
+    font-family: "BIZ-UDPGothic";
+    src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
 
-@font-face { 
-	font-family:"BIZ-UDPGothic";
-	src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
-	font-weight:700;
-	font-display : swap;
-} 
+@font-face {
+    font-family: "BIZ-UDPGothic";
+    src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+}
 
-@font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
-	font-weight:400;
-	font-display : swap;
-} 
-@font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
-	font-weight:700;
-	font-display : swap;
-} 
-@font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
-	font-weight:900;
-	font-display : swap;
+@font-face {
+    font-family: "KoddiUDOnGothic";
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KoddiUDOnGothic";
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KoddiUDOnGothic";
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+    font-weight: 900;
+    font-display: swap;
 }
 
 /*숨김텍스트 설정*/
-.hidden, .blind, .a11y-txt, .sr-only, .a11y_txt {
-  overflow: hidden;
-  border: 0;
-  position: absolute;
-  /* relative를 사용해도 무관할 듯 하다 */
-  z-index: -1;
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
+.hidden,
+.blind,
+.a11y-txt,
+.sr-only,
+.a11y_txt {
+    overflow: hidden;
+    border: 0;
+    position: absolute;
+    /* relative를 사용해도 무관할 듯 하다 */
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
 }
 
 
 *,
 *::before,
 *::after {
-	font-size:1rem;
-	position: relative;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box; /* 보다 직관적인 box-sizing로 설정 */
+    font-size: 1rem;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 보다 직관적인 box-sizing로 설정 */
 }
- 
+
 :where(html) {
-	-webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트가 조절되지 않도록 한다 */
-	color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동적으로 다크 테마가 된다 */
-	font-family:"KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
+    -webkit-text-size-adjust: none;
+    /* iOS의 가로 모드에서 텍스트가 조절되지 않도록 한다 */
+    color-scheme: dark light;
+    /* 사용자가 다크 테마일 경우 자동적으로 다크 테마가 된다 */
+    font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
 }
- 
+
 @supports not (min-block-size: 100dvb) {
-	:where(html) {
-		block-size: 100%;
-	}
+    :where(html) {
+        block-size: 100%;
+    }
 }
- 
- html {scroll-behavior: smooth;}
+
+html {
+    scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-	:where(html:focus-within) {
-		scroll-behavior: smooth; /* 무언가에 포커싱되었을 때만 부드럽게 스크롤 */
-	}
+    :where(html: focus-within) {
+        scroll-behavior: smooth;
+        /* 무언가에 포커싱되었을 때만 부드럽게 스크롤 */
+    }
 }
- 
+
 :where(input, button, textarea, select, a) {
-	font: inherit; /* 입력 서식은 부모의 폰트 속성 계승 */
+    font: inherit;
+    /* 입력 서식은 부모의 폰트 속성 계승 */
 }
- 
+
 :where(body):not(img) {
-	line-height: 1.5rem; /* 가독성 있는 행 높이 */
-	font-size:1rem;
-	-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
+    line-height: 1.5rem;
+    /* 가독성 있는 행 높이 */
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+    /* 텍스트 렌더링 개선 */
 }
- 
+
 :where(textarea) {
-	resize: vertical; /* 멀티라인 편집창의 가로 크기 조정 무효 */
-	resize: block;
-	padding:1rem;
+    resize: vertical;
+    /* 멀티라인 편집창의 가로 크기 조정 무효 */
+    resize: block;
+    padding: 1rem;
 }
- 
+
 :where(:focus, button, label, select, summary, [role='button'], [role='option'], [type="file"], [type="file"]::file-selector-button) {
-	cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 지정 */
+    cursor: pointer;
+    /* 상호작용 가능한 요소임을 알 수 있도록 커서 지정 */
 }
- 
+
 :where(:disabled) {
-	cursor: not-allowed; /* 입력서식 비활성화 시 포커스 무효화 */
+    cursor: not-allowed;
+    /* 입력서식 비활성화 시 포커스 무효화 */
 }
- 
+
 :where(label:has(> input:disabled), label:has(+ input:disabled), input[type="radio"]:disabled + label, input[type="checkbox"]:disabled + label) {
-	cursor: not-allowed; /* 입력서식 비활성화 시 라벨도 커서 무효화 */
+    cursor: not-allowed;
+    /* 입력서식 비활성화 시 라벨도 커서 무효화 */
 }
- 
+
 :where(button) {
-	border-style: none; /* 버튼의 기본 테두리 제거 필요 시 별도 선언 */
+    border-style: none;
+    /* 버튼의 기본 테두리 제거 필요 시 별도 선언 */
 }
- 
+
 :where(a) {
-	color: inherit;
-	display: inline-flex;	
-	text-decoration:transparent; 
-	transition:text-decoration 0.2s;
-	text-underline-offset: 4px; /* 링크 텍스트와 언더라인 사이에 공간 주기 */
+    color: inherit;
+    display: inline-flex;
+    text-decoration: transparent;
+    transition: text-decoration 0.2s;
+    text-underline-offset: 4px;
+    /* 링크 텍스트와 언더라인 사이에 공간 주기 */
 }
-a:focus, a:hover {
-	text-decoration:underline;
+
+a:focus,
+a:hover {
+    text-decoration: underline;
 }
 
 :where(ul, ol, li) {
-	list-style: none; /* 뷰렛 삭제 필요 시 별도로 선언 */
+    list-style: none;
+    /* 뷰렛 삭제 필요 시 별도로 선언 */
 }
- 
+
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
-	display: inline-flex; /* 보다 예측 가능한 멀티미디어 요소 */
-	aspect-ratio:auto;
-	object-fit: contain;
-	width:100%; /*부모요소에 꽉 차게 / 부모요소를 벗어나지 않도록*/
+    display: inline-flex;
+    /* 보다 예측 가능한 멀티미디어 요소 */
+    aspect-ratio: auto;
+    object-fit: contain;
+    width: 100%;
+    /*부모요소에 꽉 차게 / 부모요소를 벗어나지 않도록*/
 }
 
 :where(img, picture, svg) {
-	max-inline-size: 100%; /* images should never overflow past the available space */
-	block-size: auto; /* 콘텐츠 종횡비 유지 */
+    max-inline-size: 100%;
+    /* images should never overflow past the available space */
+    block-size: auto;
+    /* 콘텐츠 종횡비 유지 */
 }
- 
+
 :where(p, h1, h2, h3, h4, h5, h6) {
-	overflow-wrap: break-word; /* 길이가 넘칠 경우 줄바꿈 */
+    overflow-wrap: break-word;
+    /* 길이가 넘칠 경우 줄바꿈 */
 }
- 
- 
-:where(hr) { /* 보다 일관성 있는 스타일리쉬한 hr */
-	border: none;
-	border-block-start: 1px solid;
-	color: inherit;
-	block-size: 0;
-	overflow: visible;
+
+
+:where(hr) {
+    /* 보다 일관성 있는 스타일리쉬한 hr */
+    border: none;
+    border-block-start: 1px solid;
+    color: inherit;
+    block-size: 0;
+    overflow: visible;
 }
+
 table {
-	border-collapse: collapse;
+    border-collapse: collapse;
 }
 
-::-webkit-scrollbar {
-    width: 1rem;  /* 스크롤바의 너비 */
+fieldset {
+    border: none;
 }
 
+/*PC*/
+@media screen and (width >=1400px) {
 
-::-webkit-scrollbar-thumb {
-    border-radius: 10rem; /* 스크롤바의 스타일 */
-    border:1px solid rgba(0 0 0 / 0.3);
-    background-color:rgba(0 0 0 / 0.5);
-	cursor: pointer;
+    ::-webkit-scrollbar {
+        width: 1rem;
+        position: fixed;
+        /* 스크롤바의 너비 */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10rem;
+        /* 스크롤바의 스타일 */
+        border: 1px solid rgba(0 0 0 / 0.3);
+        background-color: rgba(0 0 0 / 0.5);
+        cursor: pointer;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: rgba(0 0 0 / 0.1);
+        border-radius: 10rem;
+        /*스크롤바 뒷 배경 스타일*/
+    }
 }
-
-
-::-webkit-scrollbar-track {
-	background-color:rgba(0 0 0 / 0.1);
-	border-radius: 10rem; /*스크롤바 뒷 배경 스타일*/
-}
-
-fieldset {border:none;}

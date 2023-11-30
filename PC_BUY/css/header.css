@@ -1,10 +1,39 @@
-.menu_icon,
-.all_menu img {
+.top_menu {
+    display: flex;
+    justify-content: space-between;
+    margin:1rem auto;
+    flex-direction: column;
+}
+.top_menu h1 > a{
+    padding:1rem;
+}
+h1 {display: inline-flex;}
+.right_top_menu {
+    display: flex;
+    }
+.right_top_menu > div > a, .right_top_menu > button {
+    padding:0.5rem;
+    min-height: 3.5rem;
+    align-items: center;
+    background-color: transparent;
+}
+.right_top_menu .menu_icon + p {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+:where(.menu_icon,
+.all_menu, .right_top_menu, .fixed_footer_menu) img {
     opacity: 0.5;
     width: 1.5rem;
     aspect-ratio: 1/1;
     justify-content: center;
 }
+#login_popup img {
+    aspect-ratio: auto;
+    width: 100%;
+}
+
 
 :where(.login_control, .sns_login) a,
 .login_control button {
@@ -12,6 +41,8 @@
     margin: 1rem;
     min-height: 2rem;
     justify-content: center;
+    align-items: center;
+    min-height: 3rem;
 }
 
 .right_ad {
@@ -19,19 +50,48 @@
     background-color: white;
 }
 
+nav {
+    border:solid 1px transparent;
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
 .main_menu {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    overflow-x:scroll;
 }
+::-webkit-scrollbar {width:0rem;}
 
-.main_menu > li > a {
-    padding: 1rem;
+.main_menu>li>a {
+    padding: 1rem 0.5rem;
+    width: 8rem;
 }
 
 .all_menu summary {
     border: solid 1px white;
     width: 3.5rem;
     aspect-ratio: 1/1;
+}
+
+.all_menu summary img {
+    width: 100%;
+    transition: display 0.2s;
+}
+
+.all_menu[open] .opened_img {
+    display: flex;
+}
+
+.all_menu[open] .closed_img {
+    display: none;
+}
+
+.all_menu .closed_img {
+    display: flex;
+}
+
+.all_menu .opened_img {
+    display: none;
 }
 
 .all_menu_list {
@@ -44,19 +104,52 @@
 }
 
 .all_menu a {
-	padding:0.5rem;
+    padding: 0.5rem;
+}
+
+
+.fixed_footer_menu .fixed_menu {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    flex-basis: 1;
+    justify-content: space-between;
+}
+
+.fixed_footer_menu .fixed_menu>li {
+    flex: 1 1;
+}
+
+.fixed_footer_menu .fixed_menu :where(a, button, summary) {
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.fixed_footer_menu .fixed_menu :where(a, button, summary) p {
+    font-size: 12px;
 }
 
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >=1400px) {
-
+    .top_menu {flex-direction: row;}
+    .right_top_menu .menu_icon + p {
+        width:100%;
+        height: 100%;
+    }
     .popup_contents .flex_form,
     .login_control,
     .sns_login {
         display: flex;
     }
-
+    .popup_contents .flex_form {justify-content: space-between;}
 }
 
 /*700px〜1200px iPad*/
@@ -73,22 +166,41 @@
 }
 
 /*Mobile*/
-@media (340px <=width < 700px) {}
+@media (340px <=width < 700px) {
+    :where(.login_control, .sns_login) a, .login_control button {
+        width:100%;
+        margin: 1rem 0px;
+    }
+}
 
 /*watch*/
-@media screen and (330px > width) {}
+@media screen and (330px > width) {
+    :where(.login_control, .sns_login) a, .login_control button {
+        width:100%;
+        margin: 1rem 0px;
+    }
+}
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
 
-    .menu_icon,
-    .all_menu img {
+    :where(.menu_icon,
+    .all_menu, .right_top_menu, .fixed_footer_menu) img {
         opacity: 0.8;
         filter: invert(1);
     }
 
-    .all_menu summary + ul {
+    dialog img {
+        filter: invert(0);
+        opacity: 1;
+    }
+
+    .all_menu summary+ul {
         border: rgba(255 255 255 / 0.8) solid 1px;
+    }
+
+    .fixed_footer_menu .fixed_menu :where(a, button, summary) {
+        background-color: #222;
     }
 
 }

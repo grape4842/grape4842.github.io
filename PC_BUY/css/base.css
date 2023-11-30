@@ -1,178 +1,268 @@
 @charset "utf-8";
-.pc_view {display: none;}
+
+.pc_view {
+    display: none;
+}
+
 .mobile_view {}
 
-.dark_view {display: none;}
+.dark_view {
+    display: none;
+}
+
 .light_view {}
 
 #skipnav {
-	border-radius: 1rem;
-	background-color: #4156A0;
-	font-weight: 900;
-	position: fixed;
-	left:20%; right: 20%;
-	justify-content: center;
-	z-index: 2;
-	top:-5rem;
-	padding:1rem 1.5rem;
-	text-align: center;
-	outline-offset: 4px;
-	transition:0.2s top
+    border-radius: 1rem;
+    background-color: #4156A0;
+    font-weight: 900;
+    position: fixed;
+    left: 20%;
+    right: 20%;
+    justify-content: center;
+    z-index: 2;
+    top: -5rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    outline-offset: 4px;
+    transition: 0.2s top
 }
-#skipnav:focus {top:0.5rem;}
+
+#skipnav:focus {
+    top: 0.5rem;
+}
+
 .content_width {
-	width:320px;
-	margin: 0px auto;
+    width: 320px;
+    margin: 0px auto;
 }
-main{padding:5rem;}
+
 table {
-	border:none;
-	margin:1rem 0px;
+    border: none;
+    margin: 1rem 0px;
 }
-th, td {
-	padding:0.5`rem;
-	border:solid 1px;
+
+th,
+td {
+    padding: 0.5`rem;
+    border: solid 1px;
 }
-dl {padding:0.5rem 0px;}
+
+dl {
+    padding: 0.5rem 0px;
+}
+
 input {
-	accent-color: #c91f61;
-	}
-input, button, a {
-	min-width:1.5rem;
-	min-height: 1.5rem;
-	vertical-align: middle;
+    accent-color: #c91f61;
 }
+
+input,
+button,
+a {
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    vertical-align: middle;
+}
+
 fieldset {
-	border:none;
+    border: none;
 }
+
 h1 {
-	text-align: center;
+    text-align: center;
 }
+
 h1 a {
-	font-size: 2rem;
-	width: 40%;
-	padding:40px 0px 20px!important;
-	display: inline-flex;
-	justify-content: center;
+    font-size: 2rem;
 }
-h2, h3 {
-	padding:1rem;
+
+h2,
+h3 {
+    padding: 1rem;
 }
 
 h2 {
-	font-size: 1.5rem;
-	text-align: center;
+    font-size: 1.5rem;
+    text-align: center;
 }
+
 h3 {
-	font-size:1.3rem;
-	padding-left:0px;
+    font-size: 1.3rem;
+    padding-left: 0px;
 }
+
 summary {
-	list-style: none;
-	vertical-align: middle;
-	display: flex;
-	align-items: center;
+    list-style: none;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
+
 dialog {
-	cursor: default;
-	position: fixed;
-	margin:auto auto;
-	max-width:50vw;
-	max-height: 100dvh;
-	z-index: 2;
-	border-radius: 1rem;
-} 
+    cursor: default;
+    position: fixed;
+    margin: auto auto;
+    max-width: 90vw;
+    max-height: 100dvh;
+    z-index: 2;
+    border-radius: 1rem;
+    transition: all 0.2s;
+}
+
 dialog::-webkit-scrollbar {
-	width:0px;
+    width: 0px;
 }
+
 .popup_title {
-	text-align: left;
-	display: flex;
-	align-items: center;
-	height: 4rem;
-	width: 100%;
-	padding:0px;
-	border-bottom:#777 1px solid;
-	padding:0rem 2rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    padding: 0px;
+    border-bottom: #777 1px solid;
+    padding-left: 1rem;
+    padding-right: 5rem;
 }
+
 .popup_contents {
-	overflow-y: scroll;
-	padding:1rem 2rem;
+    overflow-y: scroll;
+    padding: 1rem;
+    padding-right: 1rem;
 }
+
 .popup_close {
-	border-radius:1rem;
-	width:4rem;
-	height:4rem;
-	position: absolute;
-	top:0px; right:1.5rem;
-	scale:80%;
-	background-color: transparent;
-	transition: 0.2s background-color;
+    border-radius: 1rem;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 0px;
+    right: .5rem;
+    scale: 80%;
+    background-color: transparent;
+    transition: 0.2s background-color;
 }
+
 .popup_close:where(:focus, :hover) {
-	background-color: rgba(255 255 255 / 0.2);
+    background-color: rgba(255 255 255 / 0.2);
 }
 
-::backdrop {
-	background-color: rgba(0, 0, 0, .5);
-	opacity: 0.7;
-	filter: blur(1rem);
+dialog::backdrop {
+    backdrop-filter: blur(2px) brightness(0.8);
 }
 
-.horizontal_flex_box {display: flex;}
+.horizontal_flex_box {
+    display: flex;
+}
+
 .more_link {
-	padding:1rem;
+    padding: 1rem;
 }
+
 .card_list a {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
+
 .card_list img {
-	aspect-ratio: 16/9;
-	overflow-y: hidden;
+    aspect-ratio: 16/9;
+    overflow-y: hidden;
 }
-.card_list p {text-align: center;}
-.card_contents_date {padding: 1rem;}
+
+.card_list p {
+    text-align: center;
+}
+
+.card_contents_date {
+    padding: 1rem;
+}
 
 
 
 /*기기별 CSS*/
 /*PC*/
-@media screen and (width >= 1400px) {
-	.pc_view {display: unset;}
-	.mobile_view {display: none;}
-	.content_width {
-		width:60vw;
-	}
-	.card_list li{
-		margin-right:1rem;
-	}
-	.card_list li:last-child {
-		margin-right:0px;
-	}
+@media screen and (width >=1400px) {
+    .pc_view {
+        display: inline-flex;
+    }
+
+    .mobile_view {
+        display: none;
+    }
+
+    main {
+        padding: 5rem;
+    }
+
+    .content_width {
+        width: 60vw;
+    }
+
+    dialog {
+        width: 60vw;
+    }
+
+    .popup_title {
+        padding-left: 2rem;
+    }
+
+    .popup_contents {
+        padding: 2rem;
+    }
+
+    .popup_close {
+        right: 1.5rem;
+    }
+
+    .card_list li {
+        margin-right: 1rem;
+    }
+
+    .card_list li:last-child {
+        margin-right: 0px;
+    }
 
 }
 
 /*700px〜1200px iPad*/
-@media (700px <= width < 1400px )  {
-	.pc_view {display: unset;}
-	.mobile_view {display: none;}
+@media (700px <=width < 1400px) {
+    .pc_view {
+        display: inline-flex;
+    }
 
-	
+    .mobile_view {
+        display: none;
+    }
+
+    dialog {
+        width: 70vw;
+    }
+
 }
+
 /*Mobile*/
-@media (340px <= width < 700px ) {
-}
+@media (340px <=width < 700px) {}
+
 /*watch*/
 @media screen and (330px > width) {
-
+    dialog {
+        width: 100dvw;
+    }
 }
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-	.light_view {display: none;}
-	.dark_view {display: unset;}
-	main {background-color: #29212F;}
-	.popup_close img, #password_view {filter: invert(1);}
+    .light_view {
+        display: none;
+    }
+
+    .dark_view {
+        display: inline-flex;
+    }
+
+    .popup_close img,
+    #password_view {
+        filter: invert(1);
+    }
 }
