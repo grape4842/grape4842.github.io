@@ -113,7 +113,9 @@ nav {
     margin:0px 0.5rem;
     outline-offset: -2px;
 }
-
+.main_menu>li:focus-within {
+    
+}
 .all_menu summary {
     border: solid 1px white;
     width: 3.5rem;
@@ -142,12 +144,13 @@ nav {
 }
 
 .all_menu_list {
-    position: fixed;
+    position: sticky;
     font-size: 1rem;
     border: rgba(0 0 0 / 0.8) solid 1px;
     box-shadow: 3px 4px 1rem rgba(0 0 0 / 0.2);
     overflow-y: scroll;
     max-height: 80vh;
+    z-index: 2;
 }
 .all_menu_list::-webkit-scrollbar {
     height: 0px;
