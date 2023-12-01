@@ -1,6 +1,7 @@
 footer {
 	border-top:2px solid #777;
 }
+a {align-items: center;}
 .policy_box {
 	display:flex; 
 	overflow-x: scroll;
@@ -8,11 +9,30 @@ footer {
 .policy_box a {
 	padding:1rem;
 	white-space: nowrap;
+	margin:2px;
 }
-dl {
+.company_data_box {
+	flex-direction: column;
+}
+.company_data_box, .company_info {
 	display: flex;
+	vertical-align: middle;
 }
-dt {display: inline-flex;}
+
+.company_info {
+	white-space: nowrap;
+	opacity: 0.8;
+	padding-right: 0.5rem;
+}
+.company_info :where(dt, dd) {
+	display: flex;
+	align-items: center;
+	padding-right: 0.3rem;
+}
+.company_info a {
+	padding:2px;
+	margin:0px 2px;
+}
 #page-top {
 	position: fixed;
 	bottom:1rem; right:1rem;
@@ -25,7 +45,9 @@ dt {display: inline-flex;}
 	.policy_box {
 		margin:0px auto;
 	}
-	dl {width:50%;}
+	 .company_data_box {
+	 	flex-direction: row;
+	 }
 }
 
 /*700px〜1200px iPad*/

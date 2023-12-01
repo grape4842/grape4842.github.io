@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .pc_view {
-    display: none!important;
+    display: none;
     transition: all 0.2s;
 }
 
@@ -33,8 +33,15 @@
     top: 0.5rem;
 }
 
+main {
+	padding:3rem 0rem;
+}
+section {
+	padding:2rem 0px;
+}
 .content_width {
-    width: 320px;
+	width:95vw;
+    max-width: 320px;
     margin: 0px auto;
 }
 
@@ -193,11 +200,12 @@ dialog::backdrop {
     }
 
     main {
-        padding: 5rem;
+        padding: 5rem 0rem;
     }
 
     .content_width, .main_menu, .policy_box {
         width: 60vw;
+        max-width: 1200px;
     }
 
     dialog {
@@ -237,18 +245,22 @@ dialog::backdrop {
     }
 
     dialog {
-        width: 70vw;
+        width: 80vw;
     }
-    .content_width, .main_menu, .policy_box {
-    	width:80vw;
+    .content_width, .main_menu {
+    	width:85vw;
+    	max-width: 700px;
     }
 }
 
 /*Mobile*/
-@media (340px <=width < 700px) {}
+@media (340px <=width < 700px) {
+	.pc_view {display: none;}
+}
 
 /*watch*/
 @media screen and (330px > width) {
+	.pc_view {display: none;}
     dialog {
         width: 100dvw;
     }

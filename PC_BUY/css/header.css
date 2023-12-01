@@ -100,7 +100,6 @@ nav {
 
 .main_menu {
     display: flex;
-    justify-content: space-between;
     overflow-x: scroll;
     margin: 0px auto;
 }
@@ -111,7 +110,7 @@ nav {
 
 .main_menu>li>a {
     padding: 1rem 0.5rem;
-    width: 8rem;
+    margin:0px 0.5rem;
     outline-offset: -2px;
 }
 
@@ -163,6 +162,7 @@ nav {
 .categorylink > img {
     margin-right:0.5rem;
 }
+.all_menu hr {border: rgba }
 
 .fixed_footer_menu .fixed_menu {
     position: fixed;
