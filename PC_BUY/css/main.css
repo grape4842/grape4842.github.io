@@ -1,7 +1,9 @@
-.product_area > ul {
+.product_category_list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
+    position: sticky;
+    top:0px;
 }
 .product_area li {
     display: inline-flex;
