@@ -2,9 +2,16 @@ footer {
 	border-top:2px solid #777;
 }
 a {align-items: center;}
-.policy_box {
+.policy_box, .policy_box li, .company_data_box, .company_info {
 	display:flex; 
+}
+.policy_box {
+	margin:0px auto;
 	overflow-x: scroll;
+}
+.policy_box::-webkit-scrollbar {
+	width:5px;
+	height: 5px;
 }
 .policy_box a {
 	padding:1rem;
@@ -13,10 +20,6 @@ a {align-items: center;}
 }
 .company_data_box {
 	flex-direction: column;
-}
-.company_data_box, .company_info {
-	display: flex;
-	vertical-align: middle;
 }
 
 .company_info {

@@ -190,7 +190,7 @@ dialog::backdrop {
 
 /*기기별 CSS*/
 /*PC*/
-@media screen and (width >=1400px) {
+@media screen and (width >=1100px) {
     .pc_view {
         display: inline-flex;
     }
@@ -235,7 +235,7 @@ dialog::backdrop {
 }
 
 /*700px〜1200px iPad*/
-@media (700px <=width < 1400px) {
+@media (600px <=width < 1100px) {
     .pc_view {
         display: inline-flex;
     }
@@ -254,12 +254,12 @@ dialog::backdrop {
 }
 
 /*Mobile*/
-@media (340px <=width < 700px) {
+@media (340px <=width < 600px) {
 	.pc_view {display: none;}
 }
 
 /*watch*/
-@media screen and (330px > width) {
+@media screen and (340px > width) {
 	.pc_view {display: none;}
     dialog {
         width: 100dvw;
