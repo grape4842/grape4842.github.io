@@ -50,7 +50,6 @@ h1 {
 .login_control button {
     width: 10rem;
     margin: 1rem;
-    min-height: 2rem;
     justify-content: center;
     align-items: center;
     min-height: 3rem;
@@ -59,34 +58,57 @@ h1 {
 .ip_input_box {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
-
+.ip_input_box input {
+    padding:0.5rem;
+}
+.ip_input_box label {
+    padding:0.5rem 0rem;
+}
 #password_view {
     appearance: none;
     -webkit-appearance: none;
     position: absolute;
-    top: 0px;
+    bottom: -2px;
     right: 0px;
+    width:3rem;
+    aspect-ratio: 1/1;
+    z-index: 2;
 }
 
 .pw_input_box .eyecon {
     scale: 0.8;
-    width: 1.5rem !important;
+    width: 3rem !important;
     position: absolute;
-    top: 2px;
+    bottom: -2px;
     right: 0px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
 }
+.login_control button {
+    background-color: #684DB3;
+    color:white;
 
-.eyecon::after {
-    contents: '';
-    position: left:0;
-    top: 0;
+}
+#password_view:after {
+    content: '';
+    display: flex;
+    position:absolute; 
+    bottom:0; right: 1.5rem;
     rotate: 45deg;
-    height: 100%;
-    width: 1px;
-    background-color: #777;
+    height: 3rem;
+    width: 2px;
+    background-color: #684DB3;
+    opacity: 1;
+    transition: opacity 0.2s;   
 }
-
+#password_view:checked + .eyecon {
+    opacity: 0.9;
+}
+#password_view:checked:after {
+    opacity: 0;
+}
 .right_ad {
     padding: 2rem;
     background-color: white;
@@ -204,7 +226,7 @@ nav {
 
 /*기기별 CSS*/
 /*PC*/
-@media screen and (width >=1400px) {
+@media screen and (width >=1200px) {
     .top_menu {
         flex-direction: row;
     }
@@ -226,7 +248,7 @@ nav {
     .popup_contents .flex_form {
         justify-content: space-between;
     }
-
+.login_field {margin-right:1rem;}
     :where(.right_top_menu > div > a, .right_top_menu > button) img {
         margin-right: 0.5rem;
     }
@@ -234,16 +256,18 @@ nav {
 }
 
 /*700px〜1200px iPad*/
-@media (700px <=width < 1400px) {
-    .pc_view {
-        display: unset;
+@media (700px <=width < 1200px) {
+
+    .top_menu {
+        flex-direction: row;
     }
-
-    .mobile_view {
-        display: none;
+    .popup_contents .flex_form {
+        justify-content: space-between;
     }
-
-
+    .login_field {margin-right:1rem;}
+.popup_contents .flex_form, .login_control, .sns_login {
+    display: flex;
+}
 }
 
 /*Mobile*/
@@ -283,7 +307,10 @@ nav {
     .pw_input_box .eyecon {
         filter: invert(1);
     }
-
+    #password_view:after {
+        filter: invert(1);
+        background-color: #987DE8;;
+    }
 
     .all_menu summary+ul {
         border: rgba(255 255 255 / 0.8) solid 1px;
