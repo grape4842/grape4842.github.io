@@ -19,17 +19,20 @@ h1 {
 
 .right_top_menu>div>a,
 .right_top_menu>button {
+    white-space: nowrap;
     padding: 0.5rem;
-    min-height: 3.5rem;
+    min-height: 3rem;
     display: inline-flex;
     align-items: center;
     background-color: transparent;
+    box-sizing: content-box;
 }
-
+.right_link {display: flex;}
 .right_top_menu .menu_icon+p {
     width: 1px;
     height: 1px;
     overflow: hidden;
+    align-items: center;
 }
 
 :where(.menu_icon,
@@ -40,11 +43,14 @@ h1 {
     justify-content: center;
 }
 
+
+
 #login_popup img {
     aspect-ratio: auto;
     width: 100%;
 }
 
+.login_option_checkbox {margin-top:1rem;}
 
 :where(.login_control, .sns_login) a,
 .login_control button {
@@ -209,8 +215,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    margin:2.5%;
     aspect-ratio: 1/1;
     outline-offset: -2px;
 }
@@ -272,11 +278,16 @@ nav {
 
 /*Mobile*/
 @media (340px <=width < 700px) {
+    :where(.menu_icon, .all_menu, .right_top_menu, .fixed_footer_menu) img {
+        width:3rem;
 
+    }
     :where(.login_control, .sns_login) a,
     .login_control button {
         width: 100%;
         margin: 1rem 0px;
+        min-height: 5rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -309,7 +320,7 @@ nav {
     }
     #password_view:after {
         filter: invert(1);
-        background-color: #987DE8;;
+        background-color: #B8A3F5;
     }
 
     .all_menu summary+ul {
@@ -321,3 +332,5 @@ nav {
     }
 
 }
+
+

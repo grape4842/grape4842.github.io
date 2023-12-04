@@ -34,14 +34,16 @@
 }
 
 main {
-	padding:3rem 0rem;
+    padding: 3rem 0rem;
 }
+
 section {
-	padding:2rem 0px;
+    padding: 2rem 0px;
 }
+
 .content_width {
-	width:95vw;
-    max-width: 320px;
+    width: 95vw;
+    max-width: 360px;
     margin: 0px auto;
 }
 
@@ -52,7 +54,7 @@ table {
 
 th,
 td {
-    padding: 0.5`rem;
+    padding: 0.5rem;
     border: solid 1px;
 }
 
@@ -61,18 +63,24 @@ dl {
 }
 
 input {
-	accent-color: #684DB3;
-} 
+    accent-color: #684DB3;
+}
+
 .back_color {
     background-color: #684DB3;
 }
+
 .text_color {
-	color: #684DB3;
+    color: #684DB3;
 }
+
 .border_color {
-	border:1px solid #684DB3;
+    border: 2px solid #684DB3;
 }
-input, button, a {
+
+input,
+button,
+a {
     min-width: 1.5rem;
     min-height: 1.5rem;
     vertical-align: middle;
@@ -156,7 +164,11 @@ dialog::-webkit-scrollbar {
     background-color: transparent;
     transition: 0.2s background-color;
 }
-.popup_close img {width: 100%;}
+
+.popup_close img {
+    width: 100%;
+}
+
 .popup_close:where(:focus, :hover) {
     background-color: rgba(255 255 255 / 0.2);
 }
@@ -209,7 +221,9 @@ dialog::backdrop {
         padding: 5rem 0rem;
     }
 
-    .content_width, .main_menu, .policy_box {
+    .content_width,
+    .main_menu,
+    .policy_box {
         width: 60vw;
         max-width: 1200px;
     }
@@ -242,24 +256,42 @@ dialog::backdrop {
 
 /*700px〜1200px iPad*/
 @media (600px <=width < 1200px) {
-    .pc_view {display: none;}
+    .pc_view {
+        display: none;
+    }
+
     dialog {
         width: 80vw;
     }
-    .content_width, .main_menu {
-    	width:85vw;
-    	max-width: 980px;
+
+    .content_width,
+    .main_menu {
+        width: 85vw;
+        max-width: 980px;
     }
 }
 
 /*Mobile*/
 @media (340px <=width < 600px) {
-	.pc_view {display: none;}
+    .pc_view {
+        display: none;
+    }
+
+    input,
+    button,
+    a {
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+    }
+
 }
 
 /*watch*/
 @media screen and (340px > width) {
-	.pc_view {display: none;}
+    .pc_view {
+        display: none;
+    }
+
     dialog {
         width: 100dvw;
     }
@@ -274,16 +306,26 @@ dialog::backdrop {
     .dark_view {
         display: unset;
     }
-    input {
-    	accent-color:#987DE8;
 
-    } 
-    .back_color {
-    	background-color:#987DE8;
+    input {
+        accent-color: #B8A3F5;
+
     }
-    .text_color {color:#987DE8;}
-    .border_color {border:1px solid #987DE8;}
-    .popup_close img, #password_view {
+
+    .back_color {
+        background-color: #B8A3F5;
+    }
+
+    .text_color {
+        color: #B8A3F5;
+    }
+
+    .border_color {
+        border-color: #B8A3F5;
+    }
+
+    .popup_close img,
+    #password_view {
         filter: invert(1);
     }
 }
