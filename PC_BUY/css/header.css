@@ -112,6 +112,7 @@ nav {
     padding: 1rem 0.5rem;
     margin:0px 0.5rem;
     outline-offset: -2px;
+    white-space: nowrap;
 }
 .main_menu>li:focus-within {
     
@@ -144,7 +145,7 @@ nav {
 }
 
 .all_menu_list {
-    position: sticky;
+    position: fixed;
     font-size: 1rem;
     border: rgba(0 0 0 / 0.8) solid 1px;
     box-shadow: 3px 4px 1rem rgba(0 0 0 / 0.2);
