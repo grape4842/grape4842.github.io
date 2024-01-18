@@ -1,3 +1,4 @@
+:hover {outline:none;}
 .site_list {
 	padding:0px;
 	display:inline-flex;
@@ -14,6 +15,13 @@
 	padding: 2rem;
 	vertical-align: middle;
 	text-align: center;
+}
+
+.site_list a#nintendo {
+	background-color: RGB(230, 0, 18);
+}
+.site_list a#sony {
+	background-color: #000;
 }
 .site_list li img {
 	height: 5rem;
