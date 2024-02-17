@@ -42,7 +42,7 @@
 }
 
 /*숨김텍스트 설정*/
-.hidden, .blind, .a11y-txt, .sr-only, .a11y_txt {
+.hidden, .blind, .a11y-txt, .sr-only, .sr_only, .a11y_txt {
   overflow: hidden;
   border: 0;
   position: absolute;
