@@ -43,7 +43,7 @@ header {
 	stroke:#aaa0ff;
 }
 .darkV {display:none;}
-main, header > *, footer > div {
+main, header > *, footer > div, .content_width {
 	margin:0px auto; width:90vw;
 }
 
