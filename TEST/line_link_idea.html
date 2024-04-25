@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+	<title>선긋기 생각해보기</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../root.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta name="theme-color=" content="#855AB6">
+	<style>
+		@charset "utf-8";
+		:lang(ko) {word-break: keep-all; line-break:normal;}
+		::selection {background:#31a; color:white;}
+
+		@font-face {
+			font-family: 'Pretendard-Regular';
+			src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+		}
+		
+		.content_width {
+			width: 90%;
+			min-width:320px;
+			margin: 0 auto;
+			padding:2rem 0;
+		}
+		main {
+			background-color: rgba(200, 200, 200, 0.1);
+			min-height: 90dvh;
+		}
+		.line_linkbox {
+			display: flex;
+			gap:5rem;
+		}
+		.line_linkbox li {
+			padding:1rem;
+			vertical-align: middle;
+
+		}
+		input[type="checkbox"] {
+			appearance: none;
+			-webkit-appearance: none;
+			aspect-ratio: 1/1;
+			width:1rem;
+			background: #76b;
+			border-radius: 1rem;
+			transition: width 0.2s;
+		}
+		input[type="checkbox"]:checked {
+			background: radial-gradient(circle, rgba(220,215,255,1) 0%, rgba(220,215,255,1) 40%, rgba(119,102,187,1) 40%, rgba(119,102,187,1) 100%);
+		}
+		input[type="checkbox"]:checked::after {
+			content:'';
+			height: 6px;
+			border-radius: 1rem;
+			border:1px solid baf;
+			position: absolute;
+			z-index: 2;
+		}
+		#right_item01:checked::after {
+			background-color: #bbaaff;
+			background-image: linear-gradient(to right, #7766bb, #7766bb 10.5px, #bbaaff 10.5px, #bbaaff );
+			background-size: 21px 100%;
+			top:4.4rem;
+			left:-1.3rem;
+			rotate:45deg;
+			width: 11.5rem;
+
+		}
+		#right_item02:checked::after {
+			width:9rem;
+			rotate:-27deg;
+			top:-1.6rem;
+			left:-0rem;
+			background: repeating-linear-gradient(transparent, transparent 2.5px, #7766bb 2.5px, #7766bb 3.75px, transparent 3.75px, transparent 5px, #7766bb 3.75px, #7766bb 10px, transparent 10px, transparent 11.25px, #7766bb 11.25px, #7766bb 12.5px, transparent 12.5px, transparent 20px), repeating-linear-gradient(90deg, transparent, transparent 2.5px, #7766bb 2.5px, #7766bb 3.75px, transparent 3.75px, transparent 5px, #7766bb 3.75px, #7766bb 10px, transparent 10px, transparent 11.25px, #7766bb 11.25px, #7766bb 12.5px, transparent 12.5px, transparent 20px), #bbaaff;
+			background-blend-mode: multiply;
+			background-color: #bbaaff;
+		}
+/*반응형 기술*/
+
+/*PC*/
+@media screen and (min-width:1000px) {
+	* {
+		font-size:1.5rem; 
+		line-height: 2rem;
+
+	}
+	.content_width {
+		width:60%;
+		min-width:980px;
+	}
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="content_width">
+			<h1>선긋기 생각해보기</h1>
+		</div>
+	</header>
+	<main>
+		<div class="content_width line_linkbox">
+			<ul class="right_select">
+				<li>
+					<label for="right_item01">토끼</label>
+					<input checked  onClick="return false" id="right_item01" type="checkbox" name="">
+					<label class="blind" for="right_item01">반대편 3번(Rabbit)과 연결됨</label>
+				</li>
+				<li>
+					<label for="right_item02">회사</label>
+					<input checked  onClick="return false" id="right_item02" type="checkbox" name="">
+					<label for="right_item02" class="blind">반대편 1번(Company)와 연결됨</label>
+				</li>
+				<li>
+					<label for="right_item03">화면</label>
+					<input id="right_item03" type="checkbox" name="">
+				</li>
+			</ul>
+			<ul class="left_select">
+				<li>
+					<input checked onClick="return false" id="left_item01" type="checkbox" name="">
+					<label for="left_item01">Company</label>
+				</li>
+				<li>
+					<input id="left_item02" type="checkbox" name="">
+					<label for="left_item02">Display</label>
+				</li>
+				<li>
+					<input  onClick="return false" checked 
+					id="left_item03" type="checkbox" name="">
+					<label for="left_item03">Rabbit</label>
+				</li>
+			</ul>
+
+		</div>
+	</main>
+	<footer>
+		<div class="content_width">
+			<address>©copyright 2024 </address>
+		</div>
+	</footer>
+</body>
+</html>
