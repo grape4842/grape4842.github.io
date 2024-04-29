@@ -9,7 +9,11 @@ footer, header {
     padding:2rem 0;
 }
 h1 {font-size:2rem;}
-h2 {font-size:1.5rem;}
+h2 {
+	font-size:1.5rem;
+	line-height: 2rem;
+	padding:1rem 0;
+}
 h1, h2, h3, dt {font-weight: 900;}
 dt {padding-top:1rem;}
 h3 {padding-bottom:1rem;}
