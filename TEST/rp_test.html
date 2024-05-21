@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<title>ルピテスト</title>
+	<link rel="stylesheet" type="text/css" href="../root.css">
+	<link rel="stylesheet" type="text/css" href="css/rp.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta property="og:description" content="">
+	<meta property="og:locate" content="ja-JP">
+	<meta property="og:type" content="website">
+	<meta name="theme-color=" content="#855AB6">
+		<meta name="msapplication-TileColor" content="#855AB6">
+	<meta name="theme-color" content="#855AB6">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+</head>
+<body>
+	<header>
+		<div class="content_width">
+			<h1>スクリーンリーダーでのルピの読み上げテスト</h1>
+		</div>
+	</header>
+	<main>
+		<div class="content_width">
+			<p class="test_desc">ルピと漢字をスクリーンリーダーで重ねて読む問題を実装したものをテストします。
+アクセシビリティテストタイプは下の漢字を読み上げないようにaria-hidden="true" / inertを施します。</p>
+				<section class="test_area">
+					<div class="test_box test_box_false">
+						<h2 class="test_box_title">基本</h2>
+						<article class="test_box_content">私達は、最も制約の多いユーザーが簡単かつ便利に使えるUX·UIを設計することで、誰もが便利に使えるデジタルサービスや 経験を生み出しています。</article>
+					</div>
+					<div class="test_box rp_box test_box_false">
+						<h2 class="test_box_title">ルピ入り</h2>
+						<article class="test_box_content">
+							<div class="rp"><p class="rp_text">わたしたち</p><span class="rp_hidden">私達</span></div>は、<div class="rp"><p class="rp_text">もっと</p><span class="rp_hidden">最</span></div>も<div class="rp"><p class="rp_text">せいやく</p><span class="rp_hidden">制約</span></div>の<div class="rp"><p class="rp_text">おお</p><span class="rp_hidden">多</span></div>いユーザーが<div class="rp"><p class="rp_text">かんたん</p><span class="rp_hidden">簡単</span></div>かつ<div class="rp"><p class="rp_text">べんり</p><span class="rp_hidden">便利</span></div>に<div class="rp"><p class="rp_text">つか</p><span class="rp_hidden">使</span></div>える<div class="rp long_rp"><p class="rp_text">ユーエックス·ユーアイ</p><span class="rp_hidden">UX·UI</span></div>を<div class="rp"><p class="rp_text">せっけい</p><span class="rp_hidden">設計</span></div>することで、<div class="rp"><p class="rp_text">だれ</p><span class="rp_hidden">誰</span></div>もが<div class="rp"><p class="rp_text">べんり</p><span class="rp_hidden">便利</span></div>に<div class="rp"><p class="rp_text">つか</p><span class="rp_hidden">使</span></div>えるデジタルサービスや<div class="rp"><p class="rp_text">けいけん</p><span class="rp_hidden">経験</span></div>を<div class="rp"><p class="rp_text">う</p><span class="rp_hidden">生</span></div>み<div class="rp"><p class="rp_text">だ</p><span class="rp_hidden">出</span></div>しています。
+						</article>
+					</div>
+					<div class="test_box a11y_rp_box test_box_ok">
+						<h2 class="test_box_title">
+							<p>ルピ入り</p>
+							<p class="a11y_test_type">アクセシビリティテスト」aria-hidden type</p>
+						</h2>	
+						<article class="test_box_content test_box_ok">
+							<div class="rp"><p class="rp_text">わたしたち</p><span class="rp_hidden" aria-hidden="true">私達</span></div>は、<div class="rp"><p class="rp_text">もっと</p><span class="rp_hidden" aria-hidden="true">最</span></div>も<div class="rp"><p class="rp_text">せいやく</p><span class="rp_hidden" aria-hidden="true">制約</span></div>の<div class="rp"><p class="rp_text">おお</p><span class="rp_hidden" aria-hidden="true">多</span></div>いユーザーが<div class="rp"><p class="rp_text">かんたん</p><span class="rp_hidden" aria-hidden="true">簡単</span></div>かつ<div class="rp"><p class="rp_text">べんり</p><span class="rp_hidden" aria-hidden="true">便利</span></div>に<div class="rp"><p class="rp_text">つか</p><span class="rp_hidden" aria-hidden="true">使</span></div>える<div class="rp long_rp"><p class="rp_text">ユーエックス·ユーアイ</p><span class="rp_hidden" aria-hidden="true">UX·UI</span></div>を<div class="rp"><p class="rp_text">せっけい</p><span class="rp_hidden" aria-hidden="true">設計</span></div>することで、<div class="rp"><p class="rp_text">だれ</p><span class="rp_hidden" aria-hidden="true">誰</span></div>もが<div class="rp"><p class="rp_text">べんり</p><span class="rp_hidden" aria-hidden="true">便利</span></div>に<div class="rp"><p class="rp_text">つか</p><span class="rp_hidden" aria-hidden="true">使</span></div>えるデジタルサービスや<div class="rp"><p class="rp_text">けいけん</p><span class="rp_hidden" aria-hidden="true">経験</span></div>を<div class="rp"><p class="rp_text">う</p><span class="rp_hidden" aria-hidden="true">生</span></div>み<div class="rp"><p class="rp_text">だ</p><span class="rp_hidden" aria-hidden="true">出</span></div>しています。
+						</article>
+					</div>
+					<div class="test_box a11y_rp_box test_box_ok">
+						<h2 class="test_box_title">	
+							<p>ルピ入り</p>
+							<p class="a11y_test_type">「アクセシビリティテスト」inert type</p>
+						</h2>	
+						<article class="test_box_content">
+							<div class="rp"><p class="rp_text">わたしたち</p><span class="rp_hidden" inert>私達</span></div>は、<div class="rp"><p class="rp_text">もっと</p><span class="rp_hidden" inert>最</span></div>も<div class="rp"><p class="rp_text">せいやく</p><span class="rp_hidden" inert>制約</span></div>の<div class="rp"><p class="rp_text">おお</p><span class="rp_hidden" inert>多</span></div>いユーザーが<div class="rp"><p class="rp_text">かんたん</p><span class="rp_hidden" inert>簡単</span></div>かつ<div class="rp"><p class="rp_text">べんり</p><span class="rp_hidden" inert>便利</span></div>に<div class="rp"><p class="rp_text">つか</p><span class="rp_hidden" inert>使</span></div>える<div class="rp long_rp"><p class="rp_text">ユーエックス·ユーアイ</p><span class="rp_hidden" inert>UX·UI</span></div>を<div class="rp"><p class="rp_text">せっけい</p><span class="rp_hidden" inert>設計</span></div>することで、<div class="rp"><p class="rp_text">だれ</p><span class="rp_hidden" inert>誰</span></div>もが<div class="rp"><p class="rp_text">べんり</p><span class="rp_hidden" inert>便利</span></div>に<div class="rp"><p class="rp_text">つか</p><span class="rp_hidden" inert>使</span></div>えるデジタルサービスや<div class="rp"><p class="rp_text">けいけん</p><span class="rp_hidden" inert>経験</span></div>を<div class="rp"><p class="rp_text">う</p><span class="rp_hidden" inert>生</span></div>み<div class="rp"><p class="rp_text">だ</p><span class="rp_hidden" inert>出</span></div>しています。
+						</article>
+					</div>
+				</section>
+		</div>
+	</main>
+	<footer>
+		<div class="content_width">
+			<address>@purplemiyazawa</address>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@charset "utf-8";
+:lang(ja) {
+	word-break: auto-phrase; 
+	line-break:normal;
+	font-feature-settings: "palt";
+}
+:where(html) {
+	font-family:"BIZ-UDPGothic", "KoddiUDOnGothic", sans-serif, serif;
+}
+*, *::before, *::after {
+		font-size: 1.2rem;
+}
+:where(body):not(img) {
+	line-height: 2.5rem;
+}
+
+
+.pc_view {display: none;}
+.mobile_view {}
+.dark_view {display: none;}
+.light_view {}
+
+.content_width {
+/*	font-size: 1.2rem;*/
+	width:90vw;
+	max-width: 320px;
+	margin: 0px auto;
+}
+
+header, footer {
+	background-color:rgba(80, 50, 255, 0.4);
+}
+:where(header, footer) .content_width {
+	padding:2rem 0px;
+}
+main .content_width {
+	padding:3rem 0px;
+}
+.test_desc {
+	margin-bottom: 5rem;
+}
+.test_area {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap:4rem;
+}
+.test_box {
+/*	margin:6rem auto;*/
+}
+.test_box_title {
+	display: inline-block;
+	padding:0.5rem 1rem;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	font-size: 1.3rem;
+	font-weight: 900;
+}
+.test_box_false h2 {background-color: rgba(255, 50, 200, 0.4);}
+.test_box_ok h2 {background-color:rgba(20, 255, 0, 0.4);}
+
+.test_box_false article {border:2px solid rgba(255, 50, 200, 0.4);}
+.test_box_ok article {border:2px solid rgba(20, 255, 0, 0.4);}
+ .a11y_test_type {
+ 	font-size: 1rem;
+ 	line-height: 1.5rem;
+ }
+.test_box_content {
+	padding:1rem;
+	background-color: #fff2;
+
+}
+.rp {
+	display: inline-block;
+}
+.long_rp .rp_hidden {
+	padding:0px 1rem;
+}
+.rp_text {
+	font-size: 0.5rem;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top:-1rem;
+}
+/*기기별 CSS*/
+
+/*PC*/
+@media screen and (width >= 1400px) {
+	.pc_view {display: block;}
+	.content_width {
+		max-width:1024px;
+	}
+
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+	.content_width {
+		max-width:980px;
+	}
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	.light_view {display: none;}
+	.dark_view {display: unset;}
+}

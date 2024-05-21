@@ -146,7 +146,9 @@ a:focus, a:hover {
 :where(p, h1, h2, h3, h4, h5, h6) {
 	overflow-wrap: break-word; /* 길이가 넘칠 경우 줄바꿈 */
 }
- 
+:where(h1, h2, h3, h4, h5, h6) * {
+	font: inherit; /*헤딩의 자식은 부모의 속성값 계승*/
+}
  
 :where(hr) { /* 보다 일관성 있는 스타일리쉬한 hr */
 	border: none;
