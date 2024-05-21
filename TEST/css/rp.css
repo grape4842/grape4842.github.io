@@ -90,7 +90,7 @@ ruby {
 /*기기별 CSS*/
 
 /*PC*/
-@media screen and (width >= 1400px) {
+@media screen and (width >= 1100px) {
 	.pc_view {display: block;}
 	.content_width {
 		max-width:1024px;
@@ -103,7 +103,7 @@ ruby {
 }
 
 /*700px〜1200px iPad*/
-@media (700px <= width < 1400px )  {
+@media (700px <= width < 1100px )  {
 	.test_area {
 	display: grid;
 }
