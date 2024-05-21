@@ -40,12 +40,12 @@ main .content_width {
 	margin-bottom: 5rem;
 }
 .test_area {
-	display: grid;
+/*	display: grid;*/
 	grid-template-columns: 1fr 1fr;
 	gap:4rem;
 }
 .test_box {
-/*	margin:6rem auto;*/
+	margin:6rem auto;
 }
 .test_box_title {
 	display: inline-block;
@@ -90,14 +90,22 @@ main .content_width {
 	.content_width {
 		max-width:1024px;
 	}
+	.test_area {
+	display: grid;
+}
+	.test_box {margin: 0px;}
 
 }
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
+	.test_area {
+	display: grid;
+}
 	.content_width {
 		max-width:980px;
 	}
+	.test_box {margin: 0px;}
 }
 
 /*Dark Mode Layout*/
