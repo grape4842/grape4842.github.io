@@ -69,6 +69,11 @@ main .content_width {
 	background-color: #fff2;
 
 }
+ruby {
+	width:100%;
+	display: flex;
+	position: absolute;
+}
 .rp {
 	display: inline-block;
 }
@@ -80,7 +85,7 @@ main .content_width {
 	width: 100%;
 	text-align: center;
 	position: absolute;
-	top:-1rem;
+/*	top:-1rem;*/
 }
 /*기기별 CSS*/
 
