@@ -56,10 +56,10 @@ main .content_width {
 	font-weight: 900;
 }
 .test_box_false h2 {background-color: rgba(255, 70, 200, 0.4);}
-.test_box_ok h2 {background-color:rgba(40, 255, 0, 0.4);}
+.test_box_ok h2 {background-color:rgba(0, 100, 255, 0.4);}
 
 .test_box_false article {border:2px solid rgba(255, 70, 200, 0.4);}
-.test_box_ok article {border:2px solid rgba(40, 255, 0, 0.4);}
+.test_box_ok article {border:2px solid rgba(0, 100, 255, 0.4);}
  .a11y_test_type {
  	font-size: 1rem;
  	line-height: 1.5rem;
