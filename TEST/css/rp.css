@@ -67,14 +67,16 @@ main .content_width {
 .test_box_content {
 	padding:1rem;
 	background-color: #fff2;
-
+}
+ruby {
+	
 }
 .long_rp .rp_hidden {
 	padding:0px 1rem;
 }
 .rp_text {
 	font-size: 0.5rem;
-	width: 100%;
+	min-width: 100%;
 	display: inline-block;
 	text-align: center;
 	position: absolute;
