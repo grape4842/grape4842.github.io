@@ -1,5 +1,6 @@
 @charset "utf-8";
 :lang(ko) {word-break: keep-all; line-break:normal;}
+:lang(ja) {word-break: auto-phrase; font-feature-settings: "palt";}
 ::selection {background:#31a; color:white;}
 /*폰트 설성*/
 @font-face { 

@@ -1,0 +1,63 @@
+@charset "utf-8";
+.pc_view {display: none;}
+.mobile_view {}
+.dark_view {display: none;}
+.light_view {}
+
+.content_width {
+	width:90vw;
+	margin: 0px auto;
+}
+
+body {
+	overflow-x:hidden;
+	word-break: keep-all; 
+	line-break:normal; 
+	font-size:18px;
+	display:block; 
+	padding:0px; margin:0px; 
+	box-sizing:border-box;
+	background:linear-gradient(to left,rgba(200, 190, 255,0.1) , rgba(230, 225, 255, 1) 5%, rgba(230, 220, 255, 0.1) 95%, rgba(200, 190, 255, 0.1)),
+	url(../img/purple_flower.png);
+	background-attachment:fixed center center cover;
+}
+ol {
+	display: flex;
+}
+label:has(input[type="checkbox"]) {
+	border:1px solid #76b;
+}
+input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance:none;
+}
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	.light_view {display: none;}
+	.dark_view {display: unset;}
+}
+
+/*기기별 CSS*/
+
+/*PC*/
+@media screen and (width >= 1400px) {
+	.pc_view {display: block;}
+	.content_width {
+/*		max-width: 60vw;*/
+	}
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+	.content_width {
+		max-width:80vw;
+	}
+	.pc_view {display: unset;}
+
+}
+/*Mobile*/
+@media (340px <= width < 700px ) {
+}
+/*watch*/
+@media screen and (330px > width) {
+}
