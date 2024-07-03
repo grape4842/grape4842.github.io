@@ -99,6 +99,7 @@ input[type="text"]{
 	aspect-ratio: 21/9;
 	border:1px solid #76b;
 	padding:0.5rem 1rem;
+	background: rgba(100 70 255 / 0.1);
 	transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
 	border-radius: 1rem;
 	box-shadow: 0px 0px 1px 1px #fff0 inset;
