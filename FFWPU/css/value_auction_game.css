@@ -125,15 +125,15 @@ input[type="text"]{
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	color:#910;
 	font-weight: 900;
 	font-size: 1.5rem;
-	box-shadow:0 0 0 4px #910, 0 0 0 2px #910 inset;
-	border:4px solid transparent;
 	aspect-ratio: 21/9;
 	border-radius: 1px;
 	rotate:-21deg;
 	opacity: 0;
+	border:4px solid transparent;
+	box-shadow:0 0 0 4px #910, 0 0 0 2px #910 inset;
+	color:#910;
 }
 @keyframes bid {
 	from {opacity:0; scale: 3;}
@@ -190,6 +190,11 @@ input[type="text"]{
 
 	}
 	.value_name {color:#acf;}
+	.value_label:has(input[type="checkbox"]:checked)::after { 
+		box-shadow:0 0 0 4px #fba, 0 0 0 2px #fba inset;
+		color:#fba;
+
+}
 	.light_view {display: none;}
 	.dark_view {display: unset;}
 }
