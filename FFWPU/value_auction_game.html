@@ -37,18 +37,347 @@
 	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
 </head>
 <body>
+	<a id="skipnav" href="#game_board">가치관 목록 열기 바로가기</a>
 	<header>
 		<div class="content_width">
 			<h1>가치관 경매 게임</h1>
 		</div>
 	</header>
 	<main>
-		<ol>
-			
-		</ol>
-	</main>
-	<footer>
-		
-	</footer>
-</body>
-</html>
+		<section  class="content_width">
+			<h2>게임 설명</h2>
+			<ol class="rule">
+				<li>당신은 <input id="total_money" type="text" maxlength="4" title="최초 총 금액(만원단위)" inputmode="nurmeric">만원 으로 행복하기 위해 필요한 것을 얻는 경매에 참여하게 됩니다.</li>
+				<li>최소<input id="min_money" type="text" inputmode="nurmeric" maxlength="3" title="최소 단위 금액(만원)">만원부터 시작하여 금액을 <input id="up_money" type="text" inputmode="nurmeric" maxlength="3" title="올릴 단위 금액(만원)">만원 단위로 올려갑니다.</li>
+				<li>항목명과 제부 사항을 확인하고 무엇을 얻고 싶은지 생각해 봅시다.</li>
+				<li>참여한 다른 사람들과 함께 각자 어떤 결과였는지 이야기를 나눠봅시다.</li>
+			</ol>
+		</section>
+		<section class="content_width">
+			<h2>주의사항</h2>
+			<ul class="rule">
+				<li>해당 페이지는 단순히 외형만 구현되어 정보가 저장되지 않습니다.</li>
+				<ll>새로고침 할 경우 모든 정보가 초기화됩니다.</ll>
+			</ul>
+			<button id="game_board_open" popovertarget="game_board">가치관 목록 열기</button>
+		</section>
+		<dialog id="game_board" popover>
+			<h2 class="sr_only">가치관 목록</h2>
+			<ol id="value_list">
+				<li>
+					<label class="value_label" for="auction_value1">
+						<input type="checkbox" id="auction_value1">
+						<span class="value_text">다른 사람을 즐겁게 하는
+							<span class="value_name">유머감각</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value2">
+						<input type="checkbox" id="auction_value2">
+						<span class="value_text">원하는 것을 할 수 있는 
+							<span class="value_name">자유</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value3">
+						<input type="checkbox" id="auction_value3">
+						<span class="value_text">어떤 어려움도 해결할 수 있는
+							<span class="value_name">삶의 지혜</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value4">
+						<input type="checkbox" id="auction_value4">
+						<span class="value_text">나의 재능을 펼칠 수 있고 인정해 주는
+							<span class="value_name">직장</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value5">
+						<input type="checkbox" id="auction_value5">
+						<span class="value_text">모든 
+							<span class="value_name">언어</span>를 자유롭게 구사하는 어휘력
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value6">
+						<input type="checkbox" id="auction_value6">
+						<span class="value_text">모든
+							<span class="value_name">스포츠</span>를 프로처럼 잘하는 몸
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value7">
+						<input type="checkbox" id="auction_value7">
+						<span class="value_text">마음을 터놓고 의지할 수 있는
+							<span class="value_name">형제자매</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value8">
+						<input type="checkbox" id="auction_value8">
+						<span class="value_text">나라를 다스릴 수 있는
+							<span class="value_name">권위와 권력</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value9">
+						<input type="checkbox" id="auction_value9">
+						<span class="value_text">영원히 변치않는 이상형과의
+							<span class="value_name">사랑</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value10">
+						<input type="checkbox" id="auction_value10">
+						<span class="value_text">모든 사람들로부터 얻는
+							<span class="value_name">존경, 명예</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value11">
+						<input type="checkbox" id="auction_value11">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value12">
+						<input type="checkbox" id="auction_value12">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value13">
+						<input type="checkbox" id="auction_value13">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value14">
+						<input type="checkbox" id="auction_value14">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value15">
+						<input type="checkbox" id="auction_value15">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value16">
+						<input type="checkbox" id="auction_value16">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value17">
+						<input type="checkbox" id="auction_value17">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value18">
+						<input type="checkbox" id="auction_value18">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value19">
+						<input type="checkbox" id="auction_value19">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value20">
+						<input type="checkbox" id="auction_value20">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value21">
+						<input type="checkbox" id="auction_value21">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value22">
+						<input type="checkbox" id="auction_value22">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value23">
+						<input type="checkbox" id="auction_value23">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value24">
+						<input type="checkbox" id="auction_value24">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value25">
+						<input type="checkbox" id="auction_value25">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value26">
+						<input type="checkbox" id="auction_value26">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value27">
+						<input type="checkbox" id="auction_value27">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value28">
+						<input type="checkbox" id="auction_value28">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value29">
+						<input type="checkbox" id="auction_value29">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value30">
+						<input type="checkbox" id="auction_value30">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value31">
+						<input type="checkbox" id="auction_value31">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value32">
+						<input type="checkbox" id="auction_value32">
+						<span class="value_text">
+							<span class="value_name"></span>
+						</span>
+					</label>
+				</li>
+				<li><label class="value_label" for="auction_value33">
+					<input type="checkbox" id="auction_value33">
+					<span class="value_text">
+						<span class="value_name"></span>
+					</span>
+				</label></li>
+				<li><label class="value_label" for="auction_value34">
+					<input type="checkbox" id="auction_value34">
+					<span class="value_text">
+						<span class="value_name"></span>
+					</span>
+				</label></li>
+				<li><label class="value_label" for="auction_value35">
+					<input type="checkbox" id="auction_value35">
+					<span class="value_text">
+						<span class="value_name"></span>
+					</span>
+				</label></li>
+				<li><label class="value_label" for="auction_value36">
+					<input type="checkbox" id="auction_value36">
+					<span class="value_text">
+						<span class="value_name"></span>
+					</span>
+				</label></li>
+				<li><label class="value_label" for="auction_value37">
+					<input type="checkbox" id="auction_value37">
+					<span class="value_text">
+						<span class="value_name"></span>
+					</span>
+				</label></li>
+				<li><label class="value_label" for="auction_value38">
+					<input type="checkbox" id="auction_value38">
+					<span class="value_text">
+						<span class="value_name"></span>
+					</span>
+				</label></li>
+				<li><label class="value_label" for="auction_value39">
+					<input type="checkbox" id="auction_value39">
+					<span class="value_text">
+						<span class="value_name"></span>
+					</span>
+				</label></li>
+				<li><label class="value_label" for="auction_value40">
+					<input type="checkbox" id="auction_value40">
+					<span class="value_text">
+						<span class="value_name">
+							
+						</span></span></label></li>
+					</ol>
+					<button id="game_board_close" popovertarget="game_board">
+						<span class="sr_only">가치관 목록 닫기</span>
+					</button>
+				</dialog>
+			</main>
+			<footer>
+				<div class="content_width">
+					<address>@puirplemiyazawa</address>
+				</div>
+			</footer>
+		</body>
+		</html>

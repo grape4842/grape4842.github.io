@@ -4,6 +4,13 @@
 .dark_view {display: none;}
 .light_view {}
 
+*, *::before, *::after {
+    font-size: 1.2rem;
+}
+:where(body):not(img) {
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
 .content_width {
 	width:90vw;
 	margin: 0px auto;
@@ -17,22 +24,171 @@ body {
 	display:block; 
 	padding:0px; margin:0px; 
 	box-sizing:border-box;
-	background:linear-gradient(to left,rgba(200, 190, 255,0.1) , rgba(230, 225, 255, 1) 5%, rgba(230, 220, 255, 0.1) 95%, rgba(200, 190, 255, 0.1)),
-	url(../img/purple_flower.png);
-	background-attachment:fixed center center cover;
+	background: linear-gradient(90deg, rgba(210,200,255,0.8) 0%, rgba(200,190,255,0.8) 50%, rgba(210,200,255,0.8) 100%), url(../img/purplestar.jpg);
+	background-attachment:fixed;
+	backdrop-filter:hue-rotate(-10deg);
 }
-ol {
+header, footer {
+	padding:1rem;
+	text-align: center;
+}
+footer {
+	position: sticky;
+	bottom:0px;
+	color:#fff;
+	background-color:#103;
+}
+h1 {
+	font-weight: 900;
+}
+section {
+	padding:1rem;
+	margin:2rem auto!important;
+	backdrop-filter: blur(20px);
+	border-radius: 3rem;
+	background: rgba(255 255 255 / 0.7);
+	border: 1px solid rgba(255, 255, 255, 1);
+	box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+}
+.rule {
+	padding:1rem;
+}
+
+input[type="text"]{
+	border: none;
+	text-align: center;
+	height: 1.5rem;
+	background-color:#ff05;
+	width:3rem;
+}
+#game_board_open {
+	padding:1rem;
+	background: #54a;
+	color:#fff;
+	border-radius: 1rem;
+	margin:1rem auto;
 	display: flex;
+	justify-content: center;
+
 }
-label:has(input[type="checkbox"]) {
+#game_board {
+	position: fixed;
+	top:0px; left:0px;
+	z-index: 2;
+	width:100vw;
+	height: 100dvh;
+	max-width:100vw;
+	max-height: 100dvh;
+	border:1px solid #54a;
+	padding:1rem;
+}
+#value_list {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+	/*grid-auto-rows: repeat(auto-fill, minmax(10%, auto));
+	grid-auto-flow: dense;*/
+	gap:1rem;
+}
+.value_label {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio: 21/9;
 	border:1px solid #76b;
+	padding:0.5rem 1rem;
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+	border-radius: 1rem;
+	box-shadow: 0px 0px 1px 1px #fff0 inset;
+
 }
-input[type="checkbox"] {
+.value_label input[type="checkbox"] {
+	position: absolute;
 	appearance: none;
 	-webkit-appearance:none;
+	width:100%; height: 100%;
+	top:0; left:0;
+	border-radius: 1rem;
+	outline-offset: -0.5rem;
 }
+.value_label:has(input[type="checkbox"]:checked) {
+	background: rgba(60 50 100 / 0.2);
+	border:4px solid #54a;
+}
+.value_label:has(input[type="checkbox"]:checked)::after {
+	content: '낙찰';
+	height:50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	color:#910;
+	font-weight: 900;
+	font-size: 1.5rem;
+	box-shadow:0 0 0 4px #910, 0 0 0 2px #910 inset;
+	border:4px solid transparent;
+	aspect-ratio: 21/9;
+	border-radius: 1px;
+	rotate:-21deg;
+	opacity: 0;
+}
+@keyframes bid {
+	from {opacity:0; scale: 3;}
+	to {opacity: 1; scale: 1;}
+}
+.value_label:has(input[type="checkbox"]:checked)::after {
+	animation-name: bid;
+   animation-duration: 0.2s;
+   animation-timing-function:ease-in-out;
+   animation-fill-mode: forwards;
+	opacity: 1;
+}
+
+.value_text {
+	font-size: 1.1rem;
+	text-align: center;
+}
+.value_name {
+	font-weight: 900;
+	color:#23a;
+	transition: color 0.2s;
+}
+#game_board_close {
+	width:2rem;
+	position: fixed;
+	top:0px; right:0px;
+	transition: width 0.2s;
+	aspect-ratio: 1/1;
+	background: #54a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#game_board_close::after, #game_board_close::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width:2px; 
+	height: 1rem;
+	background: #fff;
+}
+#game_board_close::after {rotate:-45deg;}
+#game_board_close::before {rotate:45deg;}
+
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
+	body {
+			background: linear-gradient(90deg, rgba(150,100,255,0.2) 0%, rgba(120,70,255,0.2) 50%, rgba(150,100,255,0.2) 100%), url(../img/purplestar.jpg);
+	}
+	section {
+		background: rgba(0 0 0 / 0.7);
+		border: 1px solid rgba(0 0 0 / 1);
+		box-shadow: 0 0.5rem 2rem rgba(0 0 0 / 0.1);
+
+	}
+	.value_name {color:#acf;}
 	.light_view {display: none;}
 	.dark_view {display: unset;}
 }
@@ -43,7 +199,11 @@ input[type="checkbox"] {
 @media screen and (width >= 1400px) {
 	.pc_view {display: block;}
 	.content_width {
-/*		max-width: 60vw;*/
+		max-width: 60vw;
+	}
+	section {padding:2rem;}
+	#value_list {
+			grid-template-columns: repeat(7, 1fr);
 	}
 }
 
