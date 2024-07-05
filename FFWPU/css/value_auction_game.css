@@ -111,7 +111,7 @@ input[type="text"]{
 	box-shadow: 0px 0px 0px 4px #87e;
 
 }
-.value_label input[type="checkbox"] {
+.value_item {
 	position: absolute;
 	appearance: none;
 	-webkit-appearance:none;
@@ -120,11 +120,11 @@ input[type="text"]{
 	border-radius: 1rem;
 	outline-offset: -0.5rem;
 }
-.value_label:has(input[type="checkbox"]:checked) {
+.value_label:has(.value_item:checked) {
 	background: rgba(60 50 150 / 0.3);
 	box-shadow: 0px 0px 0px 2px #76b;
 }
-.value_label:has(input[type="checkbox"]:checked)::after {
+.value_label:has(.value_item:checked)::after {
 	content: '낙찰';
 	height:60%;
 	display: flex;
@@ -146,13 +146,13 @@ input[type="text"]{
 	from {opacity:0; scale: 3;}
 	to {opacity: .8; scale: 1;}
 }
-.value_label:has(input[type="checkbox"]:checked)::after {
+.value_label:has(.value_item:checked)::after {
 	animation-name: bid;
    animation-duration: 0.2s;
    animation-timing-function:ease-in-out;
    animation-fill-mode: forwards;
 }
-input[type="checkbox"]:checked ~ span {
+.value_item:checked ~ span {
 	transition: color 0.2s, filter 0.2s;
 }
 .value_text {
@@ -164,9 +164,15 @@ input[type="checkbox"]:checked ~ span {
 	color:#23a;
 	transition: color 0.2s;
 }
-#game_board_close {
-	width:2rem;
-	position: fixed;
+.popup_h {
+	width:100%;
+	background: #54a;
+}
+:where(.popup_close, .popup_h) {
+	height: 2rem;
+}
+.popup_close{
+	position: absolute;
 	top:0px; right:0px;
 	transition: width 0.2s;
 	aspect-ratio: 1/1;
@@ -175,6 +181,7 @@ input[type="checkbox"]:checked ~ span {
 	justify-content: center;
 	align-items: center;
 }
+
 #game_board_close::after, #game_board_close::before {
 	content: '';
 	position: absolute;
@@ -198,14 +205,14 @@ input[type="checkbox"]:checked ~ span {
 
 	}
 	.value_name {color:#acf;}
-	.value_label:has(input[type="checkbox"]:checked) {
+	.value_label:has(.value_item:checked) {
 		box-shadow: 0px 0px 0px 2px #54a;
 	}
-	.value_label:has(input[type="checkbox"]:checked)::after { 
+	.value_label:has(.value_item:checked)::after { 
 		box-shadow:0 0 0 4px #b32, 0 0 0 2px #b32 inset;
 		color:#b32;
 }
-input[type="checkbox"]:checked ~ span {
+.value_item:checked ~ span {
 	filter: brightness(0.5);
 }
 	.light_view {display: none;}
@@ -223,6 +230,7 @@ input[type="checkbox"]:checked ~ span {
 	section {
 		padding:3rem;
 	}
+	:where(.popup_h,.popup_close) {height:3rem;}
 	#game_board {
 		padding:1.2rem 1rem;
 	}
