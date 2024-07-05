@@ -47,14 +47,37 @@
 		<section  class="content_width">
 			<h2>게임 설명</h2>
 			<ol class="rule">
-				<li>당신은 <input id="total_money" type="text" maxlength="4" title="최초 총 금액(만원단위)" inputmode="nurmeric">만원 으로 행복하기 위해 필요한 것을 얻는 경매에 참여하게 됩니다.</li>
-				<li>최소<input id="min_money" type="text" inputmode="nurmeric" maxlength="3" title="최소 단위 금액(만원)">만원부터 시작하여 금액을 <input id="up_money" type="text" inputmode="nurmeric" maxlength="3" title="올릴 단위 금액(만원)">만원 단위로 올려갑니다.</li>
+				<li>여러분께서는 <input class="rule_money" id="total_money" type="text" maxlength="4" title="최초 총 금액(만원단위)" inputmode="nurmeric">만원 으로 행복하기 위해 필요한 것을 얻는 경매에 참여하게 됩니다.</li>
+				<li>최소<input class="rule_money" id="min_money" type="text" inputmode="nurmeric" maxlength="3" title="최소 단위 금액(만원)">만원부터 시작하여 금액을 <input class="rule_money" id="up_money" type="text" inputmode="nurmeric" maxlength="3" title="올릴 단위 금액(만원)">만원 단위로 올려갑니다.</li>
 				<li>항목명과 제부 사항을 확인하고 무엇을 얻고 싶은지 생각해 봅시다.</li>
 				<li>참여한 다른 사람들과 함께 각자 어떤 결과였는지 이야기를 나눠봅시다.</li>
 			</ol>
+			<h3>화폐가 아닌 표를 받았을 경우</h3>
+			<ol class="rule">
+				<li>각 품목을 확인하고 얼마를 투자하여 낙찰할지 [예상 사용 금액]란에 적습니다.</li>
+				<li>경매를 진행하면서 실제로 사용한 금액을 [실제 사용 금액]란에 적습니다.</li>
+				<li>비고란에는 품목을 보며 이 품목을 원했던 이유 등을 적어봅시다.</li>
+				<li>경매를 마친 후 예상했던 금액과 실제로 사용한 금액을 비교해봅시다.</li>
+			</ol>
+			<button id="game_ready_open" popovertarget="game_ready">사회자가 준비할 내용</button>
+			<dialog class="popup_box" id="game_ready" popover>
+				<h2 class="popup_h">사회자가 준비할 내용</h2>
+				<ol class="rule">
+					<li>사회자는 총 금액, 최소 금액, 올릴 단위 금액을 결정합니다.</li>
+					<li>화폐를 나누어줄지 표를 나누어줄지 선택하여 진행 방식을 선택합니다.</li>
+					<li>참가자에게 표 또는 화폐를 나눠줍니다.</li>
+					<!-- <li><a href="img/money/"><img src="" alt=""></a></li> -->
+					<!-- <li><a href="img/money/"><img src="" alt=""></a></li> -->
+					<!-- <li><a href="img/money/"><img src="" alt=""></a></li> -->
+				</ol>
+				<button class="popup_close" id="game_ready_close" popovertarget="game_ready">
+					<span class="sr_only">사회자가 준비할 내용 닫기</span>
+					<span class="ani"></span>
+				</button>
+			</dialog>
 		</section>
 		<section class="content_width">
-			<h2>주의사항</h2>
+			<h2>❗주의사항</h2>
 			<ul class="rule">
 				<li>해당 페이지는 단순히 외형만 구현되어 정보가 저장되지 않습니다.</li>
 				<li>새로고침 할 경우 모든 정보가 초기화됩니다.</li>
@@ -69,7 +92,7 @@
 				<li>
 					<label class="value_label" for="auction_value1">
 						<input type="checkbox" class="value_item" id="auction_value1">
-						<span class="value_text">다른 사람을 즐겁게 하는
+						<span class="value_text">와하하! 모두를 즐겁게 웃게 하는
 							<span class="value_name">유머감각</span>
 						</span>
 					</label>
@@ -133,8 +156,8 @@
 				<li>
 					<label class="value_label" for="auction_value9">
 						<input type="checkbox" class="value_item" id="auction_value9">
-						<span class="value_text">영원히 변치않는 이상형과의
-							<span class="value_name">사랑</span>
+						<span class="value_text">해보니까 무엇이든 이루어진다!
+							<span class="value_name">노력의 재능</span>
 						</span>
 					</label>
 				</li>
@@ -149,7 +172,7 @@
 				<li>
 					<label class="value_label" for="auction_value11">
 						<input type="checkbox" class="value_item" id="auction_value11">
-						<span class="value_text">천상의 목소리
+						<span class="value_text">천상의 목소리 모두가 빠지는
 							<span class="value_name">노래 실력</span>
 						</span>
 					</label>
@@ -181,7 +204,7 @@
 				<li>
 					<label class="value_label" for="auction_value15">
 						<input type="checkbox" class="value_item" id="auction_value15">
-						<span class="value_text">휼륭한 배우자와의
+						<span class="value_text">영원히 사랑하는 휼륭한 배우자와
 							<span class="value_name">행복한 결혼 생활</span>
 						</span>
 					</label>
@@ -237,7 +260,7 @@
 				<li>
 					<label class="value_label" for="auction_value22">
 						<input type="checkbox" class="value_item" id="auction_value22">
-						<span class="value_text">
+						<span class="value_text">이게 다 무료라고?!
 							<span class="value_name">백화점 평생 무료 이용권</span>
 						</span>
 					</label>
@@ -245,7 +268,7 @@
 				<li>
 					<label class="value_label" for="auction_value23">
 						<input type="checkbox" class="value_item" id="auction_value23">
-						<span class="value_text">재미난 아이디가 한가득! 빛나는
+						<span class="value_text">재미난 아이디가 한가득! 언제나 빛나는
 							<span class="value_name">창의력</span>
 						</span>
 					</label>
@@ -301,7 +324,7 @@
 				<li>
 					<label class="value_label" for="auction_value30">
 						<input type="checkbox" class="value_item" id="auction_value30">
-						<span class="value_text">수 많은 사람에게 주목받는
+						<span class="value_text">수 많은 사람이 나를 좋아해! 엄청난
 							<span class="value_name">인기 </span>
 						</span>
 					</label>
@@ -325,7 +348,7 @@
 				<li>
 					<label class="value_label" for="auction_value33">
 						<input type="checkbox" class="value_item" id="auction_value33">
-						<span class="value_text">
+						<span class="value_text">여기저기 날아가자!
 							<span class="value_name">평생 세계 여행 무료 이용권</span>
 						</span>
 					</label>
@@ -373,8 +396,8 @@
 				<li>
 					<label class="value_label" for="auction_value39">
 						<input type="checkbox" class="value_item" id="auction_value39">
-						<span class="value_text">믿고 따를 수 밖에 없는 
-							<span class="value_name">빛나는 돈</span>
+						<span class="value_text">당신을 따라가고 싶어요! 
+							<span class="value_name">빛나는 리더십</span>
 						</span>
 					</label>
 				</li>
@@ -397,7 +420,7 @@
 				<li>
 					<label class="value_label" for="auction_value42">
 						<input type="checkbox" class="value_item" id="auction_value42">
-						<span class="value_text">전세계에 영향력 만
+						<span class="value_text">전세계에 영향력 만점
 							<span class="value_name">엄청난 인맥(인간관계)</span>
 						</span>
 					</label>
@@ -405,6 +428,7 @@
 			</ol>
 			<button class="popup_close" id="game_board_close" popovertarget="game_board">
 				<span class="sr_only">가치관 목록 닫기</span>
+				<span class="ani"></span>
 			</button>
 		</dialog>
 	</main>

@@ -15,11 +15,29 @@
     line-height: 2rem;
     font-size: 1.5rem;
 }
-.content_width {
+.content_width, .popup_box {
 	width:90vw;
-	margin: 0px auto;
 }
-
+.content_width {
+	margin:0 auto;
+}
+.popup_box {
+	position: fixed;
+	width:90vw;
+	margin:auto;
+	min-height: 50vh;
+	max-height: 90vh;
+	overflow-y: scroll;
+	border:4px solid #54a;
+	border-radius: 0.5rem;
+}
+.popup_box::backdrop {
+	transition: background 0.2s;
+	background: rgba(0 0 0 / 0.5);
+}
+body:has(.popup_box:popover-open) {
+	overflow: hidden;
+}
 body {
 	overflow-x:hidden;
 	word-break: keep-all; 
@@ -53,29 +71,64 @@ section {
 	box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
 }
 .rule {
-	padding:1rem;
+	padding:0.5rem;
+	display: flex;
+	flex-direction: column;
+
 }
 section li {
 	display: inline-block;
+	flex-direction: column;
 	padding:0.25rem 0px;
 	border-bottom:1px solid rgba(100 70 255 / 0.3);
 }
-input[type="text"]{
+ .rule_money {
 	border: none;
 	text-align: center;
 	height: 1.5rem;
 	background-color:#ff05;
 	width:3rem;
+	margin:0px 0.25rem;
+	font-weight: 600;
 }
-#game_board_open {
-	padding:1rem;
+.popup_close{
+	position: absolute;
+	top:0px; right:0px;
+	transition: width 0.2s;
+	aspect-ratio: 1/1;
 	background: #54a;
-	color:#fff;
-	border-radius: 1rem;
-	margin:1rem auto;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+}
+.popup_close .ani::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 1px;
+	aspect-ratio: 1/1;
+	border-radius: 1rem;
+	background: rgba(255 255 255 / 0.1);
+	transition: scale 0.1s;
+}
+.popup_close:where(:focus, :hover) .ani::after {
+	scale: 45;
+}
+:where(#game_ready_open, #game_board_open) {
+	padding: 1rem;
+	border-radius: 1rem;
+	display: flex;
+	justify-content: center;
+	border:6px solid #76b;
+}
+#game_ready_open {
+	background: transparent;
 
+}
+#game_board_open {
+	background: #54a;
+	color:#fff;
+	margin:1rem auto;
 }
 #game_board {
 	position: fixed;
@@ -165,33 +218,34 @@ input[type="text"]{
 	transition: color 0.2s;
 }
 .popup_h {
+	display: flex;
+	align-items: center;
 	width:100%;
 	background: #54a;
+	color:#fff;
+	font-weight: 700;
+	padding:0rem 1rem;
 }
 :where(.popup_close, .popup_h) {
-	height: 2rem;
-}
-.popup_close{
-	position: absolute;
-	top:0px; right:0px;
-	transition: width 0.2s;
-	aspect-ratio: 1/1;
-	background: #54a;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 3rem;
 }
 
-#game_board_close::after, #game_board_close::before {
+.popup_close::after, .popup_close::before {
 	content: '';
 	position: absolute;
 	display: block;
+	transition: width 0.1s;
+	border-radius: 1rem;
 	width:2px; 
 	height: 1rem;
 	background: #fff;
 }
-#game_board_close::after {rotate:-45deg;}
-#game_board_close::before {rotate:45deg;}
+.popup_close:where(:focus, :hover)::before,
+.popup_close:where(:focus, :hover)::after {
+	width:4px;
+}
+.popup_close::after {rotate:-45deg;}
+.popup_close::before {rotate:45deg;}
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
@@ -224,13 +278,14 @@ input[type="text"]{
 /*PC*/
 @media screen and (width >= 1400px) {
 	.pc_view {display: block;}
-	.content_width {
+	.mobile_view {display: none;}
+	.content_width, .popup_box {
 		max-width: 60vw;
 	}
 	section {
 		padding:3rem;
 	}
-	:where(.popup_h,.popup_close) {height:3rem;}
+	.rule {padding:1rem;}
 	#game_board {
 		padding:1.2rem 1rem;
 	}
@@ -240,17 +295,14 @@ input[type="text"]{
 	}
 }
 
-/*700px〜1200px iPad*/
+/*800px〜1200px iPad*/
 @media (800px <= width < 1400px )  {
-	.content_width {
-		max-width:80vw;
+	#value_list {
+		grid-template-columns: repeat(3, 1fr);
 	}
-	.pc_view {display: unset;}
-		#value_list {
-			grid-template-columns: repeat(3, 1fr);
-	}
-
 }
+
+/*500px~800px Fold?*/
 @media (500px <= width < 800px )  {
 			#value_list {
 			grid-template-columns: repeat(2, 1fr);
@@ -259,7 +311,11 @@ input[type="text"]{
 }
 /*Mobile*/
 @media (340px <= width < 500px ) {
+
 }
 /*watch*/
 @media screen and (330px > width) {
+	.content_width, .popup_box {
+		max-width:95vw;
+	}
 }
