@@ -15,17 +15,16 @@
     line-height: 2rem;
     font-size: 1.5rem;
 }
-.content_width, .popup_box {
-	width:90vw;
-}
+
 .content_width {
 	margin:0 auto;
+	width:90vw;
 }
 .popup_box {
 	position: fixed;
-	width:90vw;
+	max-width:90vw;
 	margin:auto;
-	min-height: 50vh;
+	min-height: 10rem;
 	max-height: 90vh;
 	overflow-y: scroll;
 	border:4px solid #54a;
@@ -114,7 +113,7 @@ section li {
 .popup_close:where(:focus, :hover) .ani::after {
 	scale: 45;
 }
-:where(#game_ready_open, #game_board_open) {
+.game_open {
 	padding: 1rem;
 	border-radius: 1rem;
 	display: flex;
@@ -125,12 +124,15 @@ section li {
 	background: transparent;
 
 }
-#game_board_open {
+.button_area {
+	display: flex;
+}
+.board_open {
 	background: #54a;
 	color:#fff;
 	margin:1rem auto;
 }
-#game_board {
+.board_contents {
 	position: fixed;
 	top:0px; left:0px;
 	z-index: 2;
@@ -141,6 +143,13 @@ section li {
 	border:1px solid #54a;
 	padding:2rem;
 }
+#value_table_list :where(thead, .value_number) {
+	background: #54a;
+	color:#fff;
+	text-align: center;
+	font-weight: ;
+}
+
 #value_list {
 	display: grid;
 /*	width:100%; height: 100%;*/
@@ -225,6 +234,7 @@ section li {
 	color:#fff;
 	font-weight: 700;
 	padding:0rem 1rem;
+	padding-right: 3rem;
 }
 :where(.popup_close, .popup_h) {
 	height: 3rem;
@@ -279,8 +289,12 @@ section li {
 @media screen and (width >= 1400px) {
 	.pc_view {display: block;}
 	.mobile_view {display: none;}
-	.content_width, .popup_box {
-		max-width: 60vw;
+	.content_width {
+		width: 60vw;
+	}
+	.popup_box {
+		min-width: 20rem;
+		max-width: 50vw;
 	}
 	section {
 		padding:3rem;
@@ -316,6 +330,6 @@ section li {
 /*watch*/
 @media screen and (330px > width) {
 	.content_width, .popup_box {
-		max-width:95vw;
+		width:95vw;
 	}
 }
