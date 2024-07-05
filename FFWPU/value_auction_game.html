@@ -57,7 +57,7 @@
 			<h2>주의사항</h2>
 			<ul class="rule">
 				<li>해당 페이지는 단순히 외형만 구현되어 정보가 저장되지 않습니다.</li>
-				<ll>새로고침 할 경우 모든 정보가 초기화됩니다.</ll>
+				<li>새로고침 할 경우 모든 정보가 초기화됩니다.</li>
 			</ul>
 			<button id="game_board_open" popovertarget="game_board">가치관 목록 열기</button>
 		</section>
@@ -66,7 +66,7 @@
 			<ol id="value_list">
 				<li>
 					<label class="value_label" for="auction_value1">
-						<input type="checkbox" id="auction_value1">
+						<input type="checkbox" class="value_item" id="auction_value1">
 						<span class="value_text">다른 사람을 즐겁게 하는
 							<span class="value_name">유머감각</span>
 						</span>
@@ -74,7 +74,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value2">
-						<input type="checkbox" id="auction_value2">
+						<input type="checkbox" class="value_item" id="auction_value2">
 						<span class="value_text">원하는 것을 할 수 있는 
 							<span class="value_name">자유</span>
 						</span>
@@ -82,7 +82,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value3">
-						<input type="checkbox" id="auction_value3">
+						<input type="checkbox" class="value_item" id="auction_value3">
 						<span class="value_text">어떤 어려움도 해결할 수 있는
 							<span class="value_name">삶의 지혜</span>
 						</span>
@@ -90,7 +90,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value4">
-						<input type="checkbox" id="auction_value4">
+						<input type="checkbox" class="value_item" id="auction_value4">
 						<span class="value_text">나의 재능을 펼칠 수 있고 인정해 주는
 							<span class="value_name">직장</span>
 						</span>
@@ -98,7 +98,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value5">
-						<input type="checkbox" id="auction_value5">
+						<input type="checkbox" class="value_item" id="auction_value5">
 						<span class="value_text">모든 
 							<span class="value_name">언어</span>를 자유롭게 구사하는 어휘력
 						</span>
@@ -106,7 +106,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value6">
-						<input type="checkbox" id="auction_value6">
+						<input type="checkbox" class="value_item" id="auction_value6">
 						<span class="value_text">모든
 							<span class="value_name">스포츠</span>를 프로처럼 잘하는 몸
 						</span>
@@ -114,7 +114,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value7">
-						<input type="checkbox" id="auction_value7">
+						<input type="checkbox" class="value_item" id="auction_value7">
 						<span class="value_text">마음을 터놓고 의지할 수 있는
 							<span class="value_name">형제자매</span>
 						</span>
@@ -122,7 +122,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value8">
-						<input type="checkbox" id="auction_value8">
+						<input type="checkbox" class="value_item" id="auction_value8">
 						<span class="value_text">나라를 다스릴 수 있는
 							<span class="value_name">권위와 권력</span>
 						</span>
@@ -130,7 +130,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value9">
-						<input type="checkbox" id="auction_value9">
+						<input type="checkbox" class="value_item" id="auction_value9">
 						<span class="value_text">영원히 변치않는 이상형과의
 							<span class="value_name">사랑</span>
 						</span>
@@ -138,7 +138,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value10">
-						<input type="checkbox" id="auction_value10">
+						<input type="checkbox" class="value_item" id="auction_value10">
 						<span class="value_text">모든 사람들로부터 얻는
 							<span class="value_name">존경, 명예</span>
 						</span>
@@ -146,7 +146,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value11">
-						<input type="checkbox" id="auction_value11">
+						<input type="checkbox" class="value_item" id="auction_value11">
 						<span class="value_text">천상의 목소리
 							<span class="value_name">노래 실력</span>
 						</span>
@@ -154,7 +154,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value12">
-						<input type="checkbox" id="auction_value12">
+						<input type="checkbox" class="value_item" id="auction_value12">
 						<span class="value_text">어벤져스같은 슈퍼 히어로
 							<span class="value_name">초능력</span>
 						</span>
@@ -162,7 +162,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value13">
-						<input type="checkbox" id="auction_value13">
+						<input type="checkbox" class="value_item" id="auction_value13">
 						<span class="value_text">목숨을 주어도 아깝지 않을
 							<span class="value_name">우정</span>
 						</span>
@@ -170,7 +170,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value14">
-						<input type="checkbox" id="auction_value14">
+						<input type="checkbox" class="value_item" id="auction_value14">
 						<span class="value_text">삶을 긍정적으로 볼 수 있는
 							<span class="value_name">자신감</span>
 						</span>
@@ -178,7 +178,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value15">
-						<input type="checkbox" id="auction_value15">
+						<input type="checkbox" class="value_item" id="auction_value15">
 						<span class="value_text">휼륭한 배우자와의
 							<span class="value_name">행복한 결혼 생활</span>
 						</span>
@@ -186,7 +186,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value16">
-						<input type="checkbox" id="auction_value16">
+						<input type="checkbox" class="value_item" id="auction_value16">
 						<span class="value_text">내가 즐겁게 할 수 있는 만족스러운
 							<span class="value_name">직업</span>
 						</span>
@@ -194,7 +194,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value17">
-						<input type="checkbox" id="auction_value17">
+						<input type="checkbox" class="value_item" id="auction_value17">
 						<span class="value_text">무엇이든 만들어내는
 							<span class="value_name">뛰어난 손재주</span>
 						</span>
@@ -202,7 +202,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value18">
-						<input type="checkbox" id="auction_value18">
+						<input type="checkbox" class="value_item" id="auction_value18">
 						<span class="value_text">사랑이 넘치는 행복한 
 							<span class="value_name">가족</span>
 						</span>
@@ -210,7 +210,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value19">
-						<input type="checkbox" id="auction_value19">
+						<input type="checkbox" class="value_item" id="auction_value19">
 						<span class="value_text">세상 모든 사람이 좋아하는
 							<span class="value_name">뛰어난 외모</span>
 						</span>
@@ -218,7 +218,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value20">
-						<input type="checkbox" id="auction_value20">
+						<input type="checkbox" class="value_item" id="auction_value20">
 						<span class="value_text">어떤 시련도 견뎌낼 수 있는
 							<span class="value_name">인내</span>
 						</span>
@@ -226,7 +226,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value21">
-						<input type="checkbox" id="auction_value21">
+						<input type="checkbox" class="value_item" id="auction_value21">
 						<span class="value_text">나를 언제나 온화하게
 							<span class="value_name">감정 조절 능력</span>
 						</span>
@@ -234,7 +234,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value22">
-						<input type="checkbox" id="auction_value22">
+						<input type="checkbox" class="value_item" id="auction_value22">
 						<span class="value_text">
 							<span class="value_name">백화점 평생 무료 이용권</span>
 						</span>
@@ -242,7 +242,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value23">
-						<input type="checkbox" id="auction_value23">
+						<input type="checkbox" class="value_item" id="auction_value23">
 						<span class="value_text">재미난 아이디가 한가득! 빛나는
 							<span class="value_name">창의력</span>
 						</span>
@@ -250,7 +250,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value24">
-						<input type="checkbox" id="auction_value24">
+						<input type="checkbox" class="value_item" id="auction_value24">
 						<span class="value_text">보험 없이 오래오래 건강하게!
 							<span class="value_name">무병 장수</span>
 						</span>
@@ -258,7 +258,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value25">
-						<input type="checkbox" id="auction_value25">
+						<input type="checkbox" class="value_item" id="auction_value25">
 						<span class="value_text">세상의 모든 것을 아는
 							<span class="value_name">지식</span>
 						</span>
@@ -266,7 +266,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value26">
-						<input type="checkbox" id="auction_value26">
+						<input type="checkbox" class="value_item" id="auction_value26">
 						<span class="value_text">모든 사람에게, 모든 일에 너그럽게
 							<span class="value_name">포용력</span>
 						</span>
@@ -274,7 +274,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value27">
-						<input type="checkbox" id="auction_value27">
+						<input type="checkbox" class="value_item" id="auction_value27">
 						<span class="value_text">세계가 인정하는
 							<span class="value_name">에술적 재능</span>
 						</span>
@@ -282,7 +282,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value28">
-						<input type="checkbox" id="auction_value28">
+						<input type="checkbox" class="value_item" id="auction_value28">
 						<span class="value_text">보기만 해도 똑같이 춘다! 최고의
 							<span class="value_name">춤 실력</span>
 						</span>
@@ -290,7 +290,7 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value29">
-						<input type="checkbox" id="auction_value29">
+						<input type="checkbox" class="value_item" id="auction_value29">
 						<span class="value_text">어떠한 유혹에도 굴하지 않는
 							<span class="value_name">정직함</span>
 						</span>
@@ -298,86 +298,137 @@
 				</li>
 				<li>
 					<label class="value_label" for="auction_value30">
-						<input type="checkbox" id="auction_value30">
+						<input type="checkbox" class="value_item" id="auction_value30">
 						<span class="value_text">수 많은 사람에게 주목받는
-							<span class="value_name">인기</span>
+							<span class="value_name">인기 </span>
 						</span>
 					</label>
 				</li>
 				<li>
 					<label class="value_label" for="auction_value31">
-						<input type="checkbox" id="auction_value31">
-						<span class="value_text">
-							<span class="value_name"></span>
+						<input type="checkbox" class="value_item" id="auction_value31">
+						<span class="value_text">몸은 튼튼하고! 마음은 깨끗한!
+							<span class="value_name">건강</span>
 						</span>
 					</label>
 				</li>
 				<li>
 					<label class="value_label" for="auction_value32">
-						<input type="checkbox" id="auction_value32">
-						<span class="value_text">
-							<span class="value_name"></span>
+						<input type="checkbox" class="value_item" id="auction_value32">
+						<span class="value_text">마음껏 쉴 수 있는
+							<span class="value_name">5년간의 휴가</span>
 						</span>
 					</label>
 				</li>
-				<li><label class="value_label" for="auction_value33">
-					<input type="checkbox" id="auction_value33">
-					<span class="value_text">
-						<span class="value_name"></span>
-					</span>
-				</label></li>
-				<li><label class="value_label" for="auction_value34">
-					<input type="checkbox" id="auction_value34">
-					<span class="value_text">
-						<span class="value_name"></span>
-					</span>
-				</label></li>
-				<li><label class="value_label" for="auction_value35">
-					<input type="checkbox" id="auction_value35">
-					<span class="value_text">
-						<span class="value_name"></span>
-					</span>
-				</label></li>
-				<li><label class="value_label" for="auction_value36">
-					<input type="checkbox" id="auction_value36">
-					<span class="value_text">
-						<span class="value_name"></span>
-					</span>
-				</label></li>
-				<li><label class="value_label" for="auction_value37">
-					<input type="checkbox" id="auction_value37">
-					<span class="value_text">
-						<span class="value_name"></span>
-					</span>
-				</label></li>
-				<li><label class="value_label" for="auction_value38">
-					<input type="checkbox" id="auction_value38">
-					<span class="value_text">
-						<span class="value_name"></span>
-					</span>
-				</label></li>
-				<li><label class="value_label" for="auction_value39">
-					<input type="checkbox" id="auction_value39">
-					<span class="value_text">
-						<span class="value_name"></span>
-					</span>
-				</label></li>
-				<li><label class="value_label" for="auction_value40">
-					<input type="checkbox" id="auction_value40">
-					<span class="value_text">
-						<span class="value_name">
-							
-						</span></span></label></li>
-					</ol>
-					<button id="game_board_close" popovertarget="game_board">
-						<span class="sr_only">가치관 목록 닫기</span>
-					</button>
-				</dialog>
-			</main>
-			<footer>
-				<div class="content_width">
-					<address>@puirplemiyazawa</address>
-				</div>
-			</footer>
-		</body>
-		</html>
+				<li>
+					<label class="value_label" for="auction_value33">
+						<input type="checkbox" class="value_item" id="auction_value33">
+						<span class="value_text">
+							<span class="value_name">평생 세계 여행 무료 이용권</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value34">
+						<input type="checkbox" class="value_item" id="auction_value34">
+						<span class="value_text">결단이 더 이상 어렵지 않다!
+							<span class="value_name">뛰어난 판단력</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value35">
+						<input type="checkbox" class="value_item" id="auction_value35">
+						<span class="value_text">최고의 엄마아빠!
+							<span class="value_name">좋은 부모가 되는 미래</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value36">
+						<input type="checkbox" class="value_item" id="auction_value36">
+						<span class="value_text">모든 것에 부드럽게
+							<span class="value_name">마음의 평화</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value37">
+						<input type="checkbox" class="value_item" id="auction_value37">
+						<span class="value_text">자격증도 착착!
+							<span class="value_name">모든 시험에서 1등하기</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value38">
+						<input type="checkbox" class="value_item" id="auction_value38">
+						<span class="value_text">평생 걱정 없이 살 수 있는
+							<span class="value_name">엄청나게 많은 돈</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value39">
+						<input type="checkbox" class="value_item" id="auction_value39">
+						<span class="value_text">믿고 따를 수 밖에 없는 
+							<span class="value_name">빛나는 돈</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value40">
+						<input type="checkbox" class="value_item" id="auction_value40">
+						<span class="value_text">끝까지 한결같아 믿음가는
+							<span class="value_name">근면성실</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value41">
+						<input type="checkbox" class="value_item" id="auction_value41">
+						<span class="value_text">모두가 이목을 집중하는
+							<span class="value_name">부드러운 카리스마</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="value_label" for="auction_value42">
+						<input type="checkbox" class="value_item" id="auction_value42">
+						<span class="value_text">전세계에 영향력 만
+							<span class="value_name">엄청난 인맥(인간관계)</span>
+						</span>
+					</label>
+				</li>
+			</ol>
+			<button id="game_board_close" popovertarget="game_board">
+				<span class="sr_only">가치관 목록 닫기</span>
+			</button>
+		</dialog>
+	</main>
+	<footer>
+		<div class="content_width">
+			<address>@puirplemiyazawa</address>
+		</div>
+	</footer>
+	
+	<audio id="gold" src="media/gold.mp3"></audio>
+	<script>
+		const checkboxes = document.querySelectorAll('.value_item');
+		const audio = document.getElementById('gold');
+
+		function playSound() {
+				audio.currentTime = 0; // 음원을 처음으로 되감기
+				audio.play();
+			}
+
+			checkboxes.forEach(checkbox => {
+				checkbox.addEventListener('change', function() {
+					if (this.checked) {
+						playSound();
+					}
+				});
+			});
+	</script>
+</body>
+</html>
