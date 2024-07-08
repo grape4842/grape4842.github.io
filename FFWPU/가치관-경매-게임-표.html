@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+	<title>가치관 경매 게임 표</title>
+	<link rel="stylesheet" type="text/css" href="../root.css">
+	<link rel="stylesheet" type="text/css" href="css/value_auction_game.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta property="og:description" content="경매 상품을 통해 나에게 무엇이 소중한지 생각하고 낙찰해보세요!">
+	<meta property="og:image" content="img/value_auction_game_title.png">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta name="theme-color=" content="#855AB6">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/ffwpu_logo_favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/ffwpu_logo_favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/ffwpu_logo_favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/ffwpu_logo_favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/ffwpu_logo_favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/ffwpu_logo_favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/ffwpu_logo_favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/ffwpu_logo_favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/ffwpu_logo_favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/ffwpu_logo_favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/ffwpu_logo_favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/ffwpu_logo_favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/ffwpu_logo_favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+</head>
+<body>
+	<a id="skipnav" href="#game_board">가치관 목록 열기 바로가기</a>
+	<header>
+		<div class="content_width">
+			<h1>가치관 경매 게임</h1>
+		</div>
+	</header>
+	<main>
+		<section  class="content_width">
+
+<table id="value_table_list">
+	<thead>
+		<tr class="row0">
+			<th scope="col" class="column0 style1 s">품번</th>
+			<th scope="col" class="column1 style1 s">품목명</th>
+			<th scope="col" class="column2 style1 s">예상 사용 금액</th>
+			<th scope="col" class="column3 style1 s">실제 사용 금액</th>
+			<th scope="col" class="column4 style1 s">비고</th>
+			<th scope="col" class="column5">&nbsp;</th>
+		</tr>
+	</thead>
+		<tbody>
+		<tr class="row1">
+			<td class="column0 value_number">1</td>
+			<td class="column1 value_items">모두를 즐겁게 웃게 하는 유머감각</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row2">
+			<td class="column0 value_number">2</td>
+			<td class="column1 value_items">원하는 것을 할 수 있는 자유</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row3">
+			<td class="column0 value_number">3</td>
+			<td class="column1 value_items">어떤 어려움도 해결할 수 있는 삶의 지혜</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row4">
+			<td class="column0 value_number">4</td>
+			<td class="column1 value_items">내 재능을 펼칠 수 있고 인정해 주는 직장</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row5">
+			<td class="column0 value_number">5</td>
+			<td class="column1 value_items">모든 언어를 자유롭게 구사하는 어휘력</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row6">
+			<td class="column0 value_number">6</td>
+			<td class="column1 value_items">모든 스포츠를 프로처럼 잘하는 몸</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row7">
+			<td class="column0 value_number">7</td>
+			<td class="column1 value_items">마음을 터놓고 의지할 수 있는 형제자매</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row8">
+			<td class="column0 value_number">8</td>
+			<td class="column1 value_items">나라를 다스릴 수 있는 권위와 권력</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row9">
+			<td class="column0 value_number">9</td>
+			<td class="column1 value_items">무엇이든 이루어진다! 노력의 재능</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row10">
+			<td class="column0 value_number">10</td>
+			<td class="column1 value_items">모든 사람들로부터 얻는 존경, 명예</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row11">
+			<td class="column0 value_number">11</td>
+			<td class="column1 value_items">천상의 목소리 모두가 빠지는 노래 실력</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row12">
+			<td class="column0 value_number">12</td>
+			<td class="column1 value_items">어벤져스같은 슈퍼 히어로 초능력</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row13">
+			<td class="column0 value_number">13</td>
+			<td class="column1 value_items">목숨을 주어도 아깝지 않을 우정</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row14">
+			<td class="column0 value_number">14</td>
+			<td class="column1 value_items">삶을 긍정적으로 볼 수 있는 자신감</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row15">
+			<td class="column0 value_number">15</td>
+			<td class="column1 style6 s">휼륭한 배우자와 행복한 결혼 생활</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row16">
+			<td class="column0 value_number">16</td>
+			<td class="column1 value_items">내가 즐겁게 할 수 있는 만족스러운 직업</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row17">
+			<td class="column0 value_number">17</td>
+			<td class="column1 value_items">무엇이든 만들어내는 뛰어난 손재주</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row18">
+			<td class="column0 value_number">18</td>
+			<td class="column1 value_items">사랑이 넘치는 행복한 가족</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row19">
+			<td class="column0 value_number">19</td>
+			<td class="column1 style6 s">내가 원했던 체형과 외모</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row20">
+			<td class="column0 value_number">20</td>
+			<td class="column1 value_items">어떤 시련도 견뎌낼 수 있는 인내</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row21">
+			<td class="column0 value_number">21</td>
+			<td class="column1 value_items">나를 언제나 온화하게 감정 조절 능력</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row22">
+			<td class="column0 value_number">22</td>
+			<td class="column1 value_items">백화점 평생 무료 이용권</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row23">
+			<td class="column0 value_number">23</td>
+			<td class="column1 style6 s">언제나 빛나는 창의력</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row24">
+			<td class="column0 value_number">24</td>
+			<td class="column1 value_items">보험 없이 오래오래 건강하게! 무병 장수</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row25">
+			<td class="column0 value_number">25</td>
+			<td class="column1 value_items">세상의 모든 것을 아는 지식</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row26">
+			<td class="column0 value_number">26</td>
+			<td class="column1 value_items">모든 일에 너그러운 포용력</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row27">
+			<td class="column0 value_number">27</td>
+			<td class="column1 value_items">세계가 인정하는 에술적 재능</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row28">
+			<td class="column0 value_number">28</td>
+			<td class="column1 value_items">보기만 해도 똑같이 춘다! 최고의 춤 실력</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row29">
+			<td class="column0 value_number">29</td>
+			<td class="column1 value_items">어떠한 유혹에도 굴하지 않는 정직함</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row30">
+			<td class="column0 value_number">30</td>
+			<td class="column1 value_items">수 많은 사람이 나를 좋아해! 엄청난 인기</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row31">
+			<td class="column0 value_number">31</td>
+			<td class="column1 value_items">몸은 튼튼하고! 마음은 깨끗한! 건강</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row32">
+			<td class="column0 value_number">32</td>
+			<td class="column1 value_items">마음껏 쉴 수 있는 5년간의 휴가</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row33">
+			<td class="column0 value_number">33</td>
+			<td class="column1 style6 s">평생 세계 여행 무료 이용권</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row34">
+			<td class="column0 value_number">34</td>
+			<td class="column1 value_items">뛰어난 판단력</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row35">
+			<td class="column0 value_number">35</td>
+			<td class="column1 value_items">좋은 부모가 되는 미래</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row36">
+			<td class="column0 value_number">36</td>
+			<td class="column1 value_items">모든 것에 부드럽게 마음의 평화</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row37">
+			<td class="column0 value_number">37</td>
+			<td class="column1 value_items">모든 시험에서 1등하기</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row38">
+			<td class="column0 value_number">38</td>
+			<td class="column1 value_items">엄청나게 많은 돈</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row39">
+			<td class="column0 value_number">39</td>
+			<td class="column1 value_items">빛나는 리더십</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row40">
+			<td class="column0 value_number">40</td>
+			<td class="column1 value_items">끝까지 한결같아 믿음가는 근면성실</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row41">
+			<td class="column0 value_number">41</td>
+			<td class="column1 value_items">부드러운 카리스마</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+		<tr class="row42">
+			<td class="column0 value_number">42</td>
+			<td class="column1 value_items">엄청난 인맥(인간관계)</td>
+			<td class="column2 style5 null"></td>
+			<td class="column3 style5 null"></td>
+			<td class="column4 style5 null"></td>
+			
+		</tr>
+	</tbody>
+</table>
+		</section>
+	</main>
+</body>
+</html>
