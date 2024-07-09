@@ -269,7 +269,7 @@ tr:has(.auction_item_value:checked) {
 tr:has(.auction_item_value:checked) .value_number::after {
 	content: '낙찰';
 	animation-name: bid_table;
-   animation-duration: 0.1s;
+   animation-duration: 0.13s;
    animation-timing-function:ease-in-out;
    animation-fill-mode: forwards;
 	font-size: 1rem;
@@ -277,16 +277,16 @@ tr:has(.auction_item_value:checked) .value_number::after {
 	width:100%;
 	scale: 0.9;
 	aspect-ratio: 1/1;
-	border:4px solid #920;
-	color:#920;
+	border:4px solid #820;
+	color:#820;
 	font-weight: 900;
 	border-radius: 2rem;
 	position: absolute;
 	left:0; top:0;
 }
 @keyframes bid_table {
-	from {opacity:0; scale: 2;}
-	to {opacity: .9; scale: 0.9;}
+	from {opacity:0; scale: 3;}
+	to {opacity: 1; scale: 0.9;}
 }
 
 .value_text {
