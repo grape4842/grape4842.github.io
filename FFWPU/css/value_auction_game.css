@@ -81,17 +81,24 @@ section li {
 	padding:0.25rem 0px;
 	border-bottom:1px solid rgba(100 70 255 / 0.3);
 }
- .rule_money, .value_cost {
+.button_area {
+	display: flex;
+}
+
+.rule_money, .value_cost {
 	border: none;
 	text-align: center;
 	height: 1.5rem;
 	width:3rem;
+	padding:0.25rem;
+	box-sizing: content-box;
 	margin:0px 0.25rem;
 	font-weight: 600;
 	border-bottom:solid 1px;
 	background: transparent;
 }
-.rule_money {background-color:#ff05;}
+.rule_money {background-color:#baf5;}
+
 .auction_memo {
 	background: transparent;
 	border:none;
@@ -174,11 +181,27 @@ section li {
 	grid-auto-flow: row dense;
 	gap:2.5rem 2rem;
 }
-.value_label {
+label {
 	cursor: pointer;
-	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+label[for="gold_sound"] {
+	width:12rem;
+	margin: 1rem auto;
+}
+#gold_sound ~ img {
+	aspect-ratio: 1/1;
+	width:1.5rem;
+	margin-right: 1rem;
+	filter: invert(80%);
+}
+#gold_sound:checked ~ .gs_on{display: flex;}
+#gold_sound:checked ~ .gs_off{display: none;}
+#gold_sound ~ .gs_on{display: none;}
+
+.value_label {
+	display: flex;
 	aspect-ratio: 21/9;
 	padding:1rem;
 	background: rgba(100 70 255 / 0.1);
@@ -187,7 +210,7 @@ section li {
 	box-shadow: 0px 0px 0px 4px #87e;
 
 }
-.value_item {
+input[type="checkbox"] {
 	position: absolute;
 	appearance: none;
 	-webkit-appearance:none;
@@ -232,11 +255,40 @@ section li {
 	transition: color 0.2s, filter 0.2s;
 }
 .auction_items label {
+	padding:0.5rem;
+	display: flex;
+	justify-content: flex-start;
+}
+tr:has(.auction_item_value) {
+	transition: all 0.2s;
+}
+tr:has(.auction_item_value:checked) {
+	background: #54aa;
+	color:#fff;
+}
+tr:has(.auction_item_value:checked) .value_number::after {
+	content: '낙찰';
+	animation-name: bid_table;
+   animation-duration: 0.1s;
+   animation-timing-function:ease-in-out;
+   animation-fill-mode: forwards;
+	font-size: 1rem;
+	display: block;
+	width:100%;
+	scale: 0.9;
+	aspect-ratio: 1/1;
+	border:4px solid #920;
+	color:#920;
+	font-weight: 900;
+	border-radius: 2rem;
+	position: absolute;
+	left:0; top:0;
+}
+@keyframes bid_table {
+	from {opacity:0; scale: 2;}
+	to {opacity: .9; scale: 0.9;}
+}
 
-}
-.auction_items input[type="checkbox"] {
- appearance: none;
-}
 .value_text {
 	font-size: 1.1rem;
 	text-align: center;
@@ -290,19 +342,22 @@ section li {
 		box-shadow: 0 0.5rem 2rem rgba(0 0 0 / 0.1);
 
 	}
+	#gold_sound ~ img {
+		filter: invert(0%);
+	}
 	.value_name {color:#acf;}
 	.value_label:has(.value_item:checked) {
 		box-shadow: 0px 0px 0px 2px #54a;
 	}
 	.value_label:has(.value_item:checked)::after { 
-		box-shadow:0 0 0 4px #b32, 0 0 0 2px #b32 inset;
-		color:#b32;
-}
-.value_item:checked ~ span {
-	filter: brightness(0.5);
-}
-	.light_view {display: none;}
-	.dark_view {display: unset;}
+		box-shadow:0 0 0 4px #d32, 0 0 0 2px #d32 inset;
+		color:#d32;
+	}
+	.value_item:checked ~ span {
+		filter: brightness(0.5);
+	}
+		.light_view {display: none;}
+		.dark_view {display: unset;}
 }
 
 /*기기별 CSS*/
@@ -329,9 +384,6 @@ section li {
 		gap:1.2rem 1rem;
 		grid-template-columns: repeat(6, 1fr);
 	}
-	.button_area {
-		display: flex;
-	}
 
 }
 
@@ -351,7 +403,7 @@ section li {
 }
 /*Mobile*/
 @media (340px <= width < 500px ) {
-
+	.button_area {flex-direction: column;}
 }
 /*watch*/
 @media screen and (330px > width) {

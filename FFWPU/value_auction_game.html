@@ -81,6 +81,15 @@
 			<ul class="rule">
 				<li>해당 페이지는 단순히 외형만 구현되어 정보가 저장되지 않습니다.</li>
 				<li>새로고침 할 경우 모든 정보가 초기화됩니다.</li>
+				<li>가치관 목록에서 가치관을 체크할 경우 소리가 납니다. 소리를 끄려면 [소리 끄기]를 눌러 체크하세요.
+					<label class="game_open" for="gold_sound">
+						<input type="checkbox" id="gold_sound">
+						<img class="gs_off" src="../icon/sound_off.svg" alt="">
+						<span class="gs_off">소리 끄기</span>
+						<img class="gs_on" src="../icon/sound.svg" alt="">
+						<span class="gs_on">소리 켜기</span>
+					</label>
+				</li>
 			</ul>
 			<div class="button_area">
 				<button class="game_open board_open" id="game_board_open" popovertarget="game_board">가치관 목록 열기</button>
@@ -90,7 +99,7 @@
 
 		<dialog class="board_contents" id="game_board" popover>
 			<h2 class="sr_only">
-				<span class="popup_htxt" class="sr_only">가치관 목록</span>
+				<span class="popup_htxt sr_only">가치관 목록</span>
 			</h2>
 			<ol id="value_list">
 				<li>
@@ -456,8 +465,12 @@
 					<tr>
 						<td class="value_number">1</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item">
-							<label for="auction_item1"></label>
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item1">
+							<label for="auction_item1">
+								<span class="value_text">와하하! 모두를 즐겁게 웃게 하는
+									<span class="value_name">유머감각</span>
+								</span>
+							</label>
 						</td>
 						<td class="value_es_cost">
 							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost1">
@@ -472,8 +485,12 @@
 					<tr>
 						<td class="value_number">2</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item2">
-							<label for="auction_item2"></label>
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item2">
+							<label for="auction_item2">
+								<span class="value_text">원하는 것을 할 수 있는 
+									<span class="value_name">자유</span>
+								</span>
+							</label>
 
 						</td>
 						<td class="value_es_cost">
@@ -489,8 +506,12 @@
 					<tr>
 						<td class="value_number">3</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item3">
-							<label for="auction_item3"></label>
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item3">
+							<label for="auction_item3">
+								<span class="value_text">어떤 어려움도 해결할 수 있는
+									<span class="value_name">삶의 지혜</span>
+								</span>
+							</label>
 						</td>
 						<td class="value_es_cost">
 							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost3">
@@ -505,7 +526,7 @@
 					<tr>
 						<td class="value_number">4</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item4">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item4">
 							<label for="auction_item4"></label>
 						</td>
 						<td class="value_es_cost">
@@ -521,7 +542,7 @@
 					<tr>
 						<td class="value_number">5</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item5">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item5">
 							<label for="auction_item5"></label>
 						</td>
 						<td class="value_es_cost">
@@ -537,7 +558,7 @@
 					<tr>
 						<td class="value_number">6</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item6">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item6">
 							<label for="auction_item6"></label>
 
 						</td>
@@ -554,7 +575,7 @@
 					<tr>
 						<td class="value_number">7</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item7">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item7">
 							<label for="auction_item7"></label>
 
 						</td>
@@ -571,7 +592,7 @@
 					<tr>
 						<td class="value_number">8</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item8">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item8">
 							<label for="auction_item8"></label>
 
 						</td>
@@ -588,7 +609,7 @@
 					<tr>
 						<td class="value_number">9</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item9">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item9">
 							<label for="auction_item9"></label>
 
 						</td>
@@ -605,7 +626,7 @@
 					<tr>
 						<td class="value_number">10</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item10">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item10">
 							<label for="auction_item10"></label>
 
 						</td>
@@ -622,7 +643,7 @@
 					<tr>
 						<td class="value_number">11</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item11">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item11">
 							<label for="auction_item11"></label>
 
 						</td>
@@ -639,7 +660,7 @@
 					<tr>
 						<td class="value_number">12</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item12">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item12">
 							<label for="auction_item12"></label>
 
 						</td>
@@ -656,7 +677,7 @@
 					<tr>
 						<td class="value_number">13</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item13">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item13">
 							<label for="auction_item13"></label>
 
 						</td>
@@ -673,7 +694,7 @@
 					<tr>
 						<td class="value_number">14</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item14">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item14">
 							<label for="auction_item14"></label>
 
 						</td>
@@ -690,7 +711,7 @@
 					<tr>
 						<td class="value_number">15</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item15">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item15">
 							<label for="auction_item15"></label>
 
 						</td>
@@ -707,7 +728,7 @@
 					<tr>
 						<td class="value_number">16</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item16">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item16">
 							<label for="auction_item16"></label>
 
 						</td>
@@ -724,7 +745,7 @@
 					<tr>
 						<td class="value_number">17</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item17">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item17">
 							<label for="auction_item17"></label>
 
 						</td>
@@ -741,7 +762,7 @@
 					<tr>
 						<td class="value_number">18</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item18">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item18">
 							<label for="auction_item18"></label>
 
 						</td>
@@ -758,7 +779,7 @@
 					<tr>
 						<td class="value_number">19</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item19">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item19">
 							<label for="auction_item19"></label>
 
 						</td>
@@ -775,7 +796,7 @@
 					<tr>
 						<td class="value_number">20</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item20">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item20">
 							<label for="auction_item20"></label>
 
 						</td>
@@ -792,7 +813,7 @@
 					<tr>
 						<td class="value_number">21</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item21">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item21">
 							<label for="auction_item21"></label>
 
 						</td>
@@ -809,7 +830,7 @@
 					<tr>
 						<td class="value_number">22</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item22">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item22">
 							<label for="auction_item22"></label>
 
 						</td>
@@ -826,7 +847,7 @@
 					<tr>
 						<td class="value_number">23</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item23">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item23">
 							<label for="auction_item23"></label>
 
 						</td>
@@ -843,7 +864,7 @@
 					<tr>
 						<td class="value_number">24</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item24">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item24">
 							<label for="auction_item24"></label>
 
 						</td>
@@ -860,7 +881,7 @@
 					<tr>
 						<td class="value_number">25</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item25">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item25">
 							<label for="auction_item25"></label>
 
 						</td>
@@ -877,7 +898,7 @@
 					<tr>
 						<td class="value_number">26</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item26">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item26">
 							<label for="auction_item26"></label>
 
 						</td>
@@ -894,7 +915,7 @@
 					<tr>
 						<td class="value_number">27</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item27">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item27">
 							<label for="auction_item27"></label>
 
 						</td>
@@ -911,7 +932,7 @@
 					<tr>
 						<td class="value_number">28</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item28">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item28">
 							<label for="auction_item28"></label>
 
 						</td>
@@ -928,7 +949,7 @@
 					<tr>
 						<td class="value_number">29</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item29">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item29">
 							<label for="auction_item29"></label>
 
 						</td>
@@ -945,7 +966,7 @@
 					<tr>
 						<td class="value_number">30</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item30">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item30">
 							<label for="auction_item30"></label>
 
 						</td>
@@ -962,7 +983,7 @@
 					<tr>
 						<td class="value_number">31</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item31">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item31">
 							<label for="auction_item31"></label>
 
 						</td>
@@ -979,7 +1000,7 @@
 					<tr>
 						<td class="value_number">32</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item32">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item32">
 							<label for="auction_item32"></label>
 
 						</td>
@@ -996,7 +1017,7 @@
 					<tr>
 						<td class="value_number">33</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item33">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item33">
 							<label for="auction_item33"></label>
 
 						</td>
@@ -1013,7 +1034,7 @@
 					<tr>
 						<td class="value_number">34</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item34">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item34">
 							<label for="auction_item34"></label>
 
 						</td>
@@ -1030,7 +1051,7 @@
 					<tr>
 						<td class="value_number">35</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item35">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item35">
 							<label for="auction_item35"></label>
 
 						</td>
@@ -1047,7 +1068,7 @@
 					<tr>
 						<td class="value_number">36</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item36">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item36">
 							<label for="auction_item36"></label>
 
 						</td>
@@ -1064,7 +1085,7 @@
 					<tr>
 						<td class="value_number">37</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item37">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item37">
 							<label for="auction_item37"></label>
 
 						</td>
@@ -1081,7 +1102,7 @@
 					<tr>
 						<td class="value_number">38</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item38">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item38">
 							<label for="auction_item38"></label>
 
 						</td>
@@ -1098,7 +1119,7 @@
 					<tr>
 						<td class="value_number">39</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item39">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item39">
 							<label for="auction_item39"></label>
 
 						</td>
@@ -1115,7 +1136,7 @@
 					<tr>
 						<td class="value_number">40</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item40">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item40">
 							<label for="auction_item40"></label>
 
 						</td>
@@ -1132,7 +1153,7 @@
 					<tr>
 						<td class="value_number">41</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item41">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item41">
 							<label for="auction_item41"></label>
 
 						</td>
@@ -1149,9 +1170,8 @@
 					<tr>
 						<td class="value_number">42</td>
 						<td class="auction_items">
-							<input type="checkbox" name="" id="auction_item42">
+							<input type="checkbox" class="auction_item_value" name="" id="auction_item42">
 							<label for="auction_item42"></label>
-
 						</td>
 						<td class="value_es_cost">
 							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost42">
@@ -1298,39 +1318,71 @@
 					<label for="value_memo41">부드러운 카리스마, 항목 비고</label>
 					<label for="value_memo42">엄청난 인맥(인간관계), 항목 비고</label>
 				</div>
-				<div>
+			</div>
+			<button class="popup_close" id="game_board_table_close" popovertarget="game_board_table">
+				<span class="sr_only">가치관 목록(표) 닫기</span>
+				<span class="ani"></span>
+			</button>
+		</dialog>
+	</main>
+	<footer>
+		<div class="content_width">
+			<address>@puirplemiyazawa</address>
+		</div>
+	</footer>
 
+	<audio id="gold" src="media/gold.mp3"></audio>
+	<audio id="dageki1" src="media/dageki1.mp3"></audio>
+	<script>
+		const checkboxes = document.querySelectorAll('.value_item');
+		const audio = document.getElementById('gold');
+		const toggleCheckbox = document.getElementById('gold_sound');
+		let soundEnabled = true;
 
-					<button class="popup_close" id="game_board_table_close" popovertarget="game_board_table">
-						<span class="sr_only">가치관 목록(표) 닫기</span>
-						<span class="ani"></span>
-					</button>
-				</dialog>
-
-			</main>
-			<footer>
-				<div class="content_width">
-					<address>@puirplemiyazawa</address>
-				</div>
-			</footer>
-
-			<audio id="gold" src="media/gold.mp3"></audio>
-			<script>
-				const checkboxes = document.querySelectorAll('.value_item');
-				const audio = document.getElementById('gold');
-
-				function playSound() {
-				audio.currentTime = 0; // 음원을 처음으로 되감기
+		function playSound() {
+			if (soundEnabled) {
+				audio.currentTime = 0;
 				audio.play();
 			}
+		}
 
-			checkboxes.forEach(checkbox => {
-				checkbox.addEventListener('change', function() {
-					if (this.checked) {
-						playSound();
-					}
-				});
+		toggleCheckbox.addEventListener('change', function() {
+			soundEnabled = !this.checked;
+		});
+
+		checkboxes.forEach(checkbox => {
+			checkbox.addEventListener('change', function() {
+				if (this.checked) {
+					playSound();
+				}
 			});
-		</script>
-	</body>
-	</html>
+		});
+	</script>
+	<script>
+		const checkboxes = document.querySelectorAll('.auction_item_value');
+		const audio = document.getElementById('dageki1');
+		const toggleCheckbox = document.getElementById('gold_sound');
+		let soundEnabled = true;
+
+		function playSound() {
+			if (soundEnabled) {
+				audio.currentTime = 0;
+				audio.play();
+			}
+		}
+
+		toggleCheckbox.addEventListener('change', function() {
+			soundEnabled = !this.checked;
+		});
+
+		checkboxes.forEach(checkbox => {
+			checkbox.addEventListener('change', function() {
+				if (this.checked) {
+					playSound();
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
