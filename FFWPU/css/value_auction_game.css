@@ -263,7 +263,7 @@ input[type="checkbox"] {
 tr:has(.auction_item_value) {
 	transition: all 0.2s;
 }
-tr:has(.auction_item_value:checked) {
+td:has(.auction_item_value:checked) {
 	background: #54a;
 	color:#fff;
 }
