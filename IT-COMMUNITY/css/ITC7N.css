@@ -158,7 +158,8 @@ header::before {
 }
 
 .visual_title {
-	padding-bottom: 5rem;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .visual_title::after {
