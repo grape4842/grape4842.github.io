@@ -158,7 +158,7 @@ header::before {
 }
 
 .visual_title {
-	min-height: calc(100dvh - 111px);
+	padding-bottom: 5rem;
 }
 
 .visual_title::after {
@@ -172,6 +172,8 @@ header::before {
 }
 .HELLO video {
 	max-height:95dvh;
+	margin:0;
+	padding-top:1rem;
 }
 .mainment {
 	justify-content:center;
@@ -526,8 +528,7 @@ footer {
 	}
 	#gochatbox {padding-top:34px;}
 	.HELLO {
-		top:-124px;
-		margin-bottom: -10rem;
+
 	}
 	.w90 {
 		width:52vw;
