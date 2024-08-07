@@ -195,7 +195,7 @@ header::before {
 	transform: translateY(-50%);
 }
 
-#ITtitle *, .menu {
+#ITtitle *, .menu, #copy_product_profile {
 animation-duration:2s;
 animation-name:load; 
 animation-delay:0.3s;
@@ -280,7 +280,7 @@ h1,h2,h3,h4 {font-weight:900;}
 	margin:0px auto;
 	flex-wrap:wrap;}
 
-.menu, summary {
+.menu, summary, #copy_product_profile {
 	list-style:none;
 	display: inline-flex;
 	color:white;
@@ -294,76 +294,74 @@ h1,h2,h3,h4 {font-weight:900;}
 	transition:transform 0.2s, filter 0.2s;
 	transform:translateY(0px);
 }
-:where(.menu, summary):active {
+:where(.menu, summary, #copy_product_profile):active {
 	transform:translateY(5px);
 	filter:brightness(1.2);
 }
+#copy_product_profile {
+	margin:1.5rem auto!important;
+}
 
-details[open] #sellform_button {
+.popup_close {
 	z-index: 10;
 	position: absolute;
-	top:0; right: 0;
+	top:1rem; right: 1rem;
 	background: transparent;
 	border:none;
-	min-width: 2rem;
 	aspect-ratio: 1/1;
 	border-radius: 10rem;
+	width:3rem;
+	aspect-ratio: 1/1;
 }
-details[open] #sellform_button::before,
-details[open] #sellform_button::after {
+.close_x {
+	display: block;
+	position: relative;
+	width:100%;
+	aspect-ratio: 1/1;
+}
+.close_x::before,
+.close_x::after {
 	content: '';
-	width:4px;
-	height: 50%;
+	height:4px;
+	width: 100%;
 	display: block;
 	position: absolute;
-	top:0; right:0; bottom:0; left:0;
-	margin: auto;
+	top:50%;
+	right:0;
 	background-color: #fff;
+	scale:0.5;
 }
-details[open] #sellform_button::before {
+.close_x::before {
 	rotate: -45deg;
 }
-details[open] #sellform_button::after {
+.close_x::after {
 	rotate:45deg;
-}
-details[open] #sellform_button span {
-  overflow: hidden;
-  border: 0;
-  position: absolute;
-  z-index: -1;
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
 }
 
 summary::-webkit-details-marker {
   /* Hides marker on Safari */
   display: none;
 }
-details[open]:has(#sellform) {
-	width:100%;
-	position: fixed;
+#sellform {
 	z-index: 9;
-	top:0vh;
-	left:50%;
-	margin:0 auto;
-	transform: translateX(-50%);
+	margin:auto auto;
+	border: #63c 0.5rem solid;
+	padding:1rem;
+	background-color: #103;
+	border-radius: 2rem;
 }
 #sellform::-webkit-scrollbar {
 	display: none;
 } 
-#sellform > div {
-	border: #63c 0.5rem solid;
-	width: 100%;
-	padding:1rem;
-	background-color: #103;
-}
-details[open] #sellform :where(li, p) {
+
+#sellform :where(li, p) {
 	font-size: 1rem;
 	font-weight: 600;
 }
 
+dialog h2 {
+	line-height:3rem;
+}
 
 ol,ul,dl {
 	margin:0px; 
@@ -414,7 +412,7 @@ dd,dt {margin:0px; font-weight:400;}
     opacity:1;
    	transform:translateX(0%);}
 
-   	#ITtitle *, .menu, dl#robin, #aorus, #psps, #kejang, #purple, .STF {
+   	#ITtitle *, .menu, dl#robin, #aorus, #psps, #kejang, #purple, .STF, #copy_product_profile {
 	animation:none;
 	left:0;
 	top:0px;
@@ -535,31 +533,27 @@ footer {
 		width:52vw;
 		padding:0px 16px;
 	}
-	.menu {
+	.menu, #copy_product_profile {
 		margin:4rem 2.5rem;
 		padding:1rem 2.5rem;
 	}
 	#pluskakao svg {
 		display: flex;
 	}
-	details[open] {position: static;}
-	details[open]:has(#sellform) {
+	#sellform {
 		width:55vw;
-		top:50%;
-		transform:translate(-50%, -50%);
-	}
-	details[open] #sellform > div {
 		border-radius: 3rem;
 		padding: 2rem;
 	}
-	details[open] #sellform :where(li, p) {
+	#sellform :where(li, p) {
 		font-size: 1.2rem;
 		line-height: 1.2rem;
 		padding-bottom:1.5rem;
 		font-weight: 600;
 	}
-	details[open] #sellform p:last-child {
-		padding: 0px;
+	.popup_close {
+		top:2rem;
+		right:2rem;
 	}
 
 	.note20 {width:77vw; margin:0 auto;}
@@ -577,15 +571,11 @@ footer {
 /*iPad*/
 @media screen and (760px < width < 1100px) {
 	body {background-size:70%; }
-	.w90, details[open]:has(#sellform) {
+	#sellform {
 		width:70vw;
 	}
     .wsmall {display:block;}
 	.wbig {display:none;}
-	details[open]:has(#sellform) {
-		top:50%;
-		transform:translate(-50%, -50%);
-	}
 }
 
 /*mobile*/
@@ -652,16 +642,16 @@ footer {
 	}
 	#apple {background-color: transparent;}
 	#notice::after {background-color:rgba(0,0,0,0.16);}
-	#sellform > div {
+	#sellform {
 		border-color: #ffc222;
 		background-color: #FFeeaa;
 	}
-	details[open] #sellform_button::before,
-	details[open] #sellform_button::after {
+	.close_x::before,
+	.close_x::after {
 		background-color: #111;
 	}
 
-	.menu, summary {
+	.menu, summary, #copy_product_profile {
 		filter: hue-rotate(130deg);
 	}
 	.ribbon-text, .ribbon-tale, .ribbon:after, .ribbon-text:before {

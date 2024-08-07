@@ -1,3 +1,40 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="author" content="@purplemiyazawa">
+	<meta name="theme-color=" content="#ccffdd">
+	<meta property="og:site_name" content="IT COMMUNITY">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="img/ITCT.jpg">
+	<meta property="og:title" content="IT COMMUNITY">
+	<meta property="og:description" content="다양한 IT 제품의 기업 사이트 목록 페이지입니다.">
+	<title>IT COMMUNITY 7th - 공지사항</title>
+	<link rel="shortcut icon" href="">
+	<link rel="stylesheet" type="text/css" href="../root.css">
+	<link rel="stylesheet" type="text/css" href="css/ITC7N.css">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ccffdd">
+	<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+</head>
+
 					<a id="STFLIST" href="staff.html" class="menu">관리자 소개</a>
 					<a id="pluskakao" class="menu" href="http://pf.kakao.com/_xlyzdxb" target="_blank" aria-label="KakaoTalk 플러스 친구로 연결">
 						<svg tabindex="-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 40 40">
@@ -5,18 +42,17 @@
 						</svg>
 					플러스 친구</a>
 					<a class="menu" href="link.html" target="_blank">사이트 목록</a>
-					<details>
-						<summary class="menu" id="sellform_button">
+						<button popovertarget="sellform" type="button" class="menu" id="sellform_button">
 							<span>판매글 양식</span>
-						</summary>
-						<div id="sellform">
-							<div tabindex="0">
-								<p>🈺️ 판매글</p>
+						</button>
+						<dialog id="sellform" popover>
+							<h2 class="popup_head">🈺️ 판매글</h2>
+							<div class="popup_body">
 								<p>모든 항목을 채워주세요.</p>
 								<p>해당하지 않는 항목은 지우셔도 됩니다.</p>
 
 								<p>❗ 실물 사진 첨부 필수</p>
-								<ul>
+								<ul id="product_profile_list">
 									<li>✅ 제품명 : </li>
 									<li>📄 제품 정보(색상, 용량 등) : </li>
 									<li>❓ 제품 상태(기스, 파손 등) : </li>
@@ -32,5 +68,32 @@
 								</ul>
 								<p>❗ 중고거래 피해에 대한 책임은 거래자간에 있으며 방에서는 책임지지 않습니다.</p>
 							</div>
-						</div>
-					</details>
+							<button id="copy_product_profile" onclick="copyListContent()">판매글 양식 복사</button>
+							<button class="popup_close" type="button" popovertarget="sellform">
+								<span class="close_x"></span>
+								<span class="hidden">판매글 양식 팝업 닫기</span>
+							</button>
+						</dialog>
+						 <script>
+        function copyListContent() {
+            // <ul> 요소를 선택
+            var list = document.getElementById('product_profile_list');
+            
+            // <ul>의 모든 텍스트를 추출
+            var range = document.createRange();
+            range.selectNode(list);
+            window.getSelection().removeAllRanges();  // 현재 선택된 영역이 있으면 제거
+            window.getSelection().addRange(range);
+
+            // 클립보드에 복사
+            try {
+                document.execCommand('copy');
+                alert('판매글 양식이 클립보드에 복사되었습니다!');
+            } catch (err) {
+                alert('판매글 양식 복사에 실패했습니다. 브라우저가 복사를 지원하는지 확인해주세요.');
+            }
+
+            // 선택 영역 제거
+            window.getSelection().removeAllRanges();
+        }
+    </script>
