@@ -82,6 +82,8 @@ section:first-child {
 }
 .button_area {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .arrow {
