@@ -248,6 +248,7 @@ footer a img {
 
 	.addform {
 		flex-direction: column;
+		justify-content: center;
 	}
 
 	.addform .arrow {
