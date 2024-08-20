@@ -1,475 +1,273 @@
-@charset "utf-8";
-
-:lang(ko) {
-    word-break: keep-all;
-    line-break: normal;
-}
-
-::selection {
-    background: #31a;
-    color: white;
-}
-
-@charset "utf-8";
-
-:lang(ko) {
-    word-break: keep-all;
-    line-break: normal;
-}
-
-::selection {
-    background: #31a;
-    color: white;
-}
-
-/*폰트 설성*/
-
-@font-face {
-    font-family: "KoddiUDOnGothic";
-    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
-    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
-    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "KoddiUDOnGothic";
-    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
-    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
-    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
-    font-weight: 700;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "KoddiUDOnGothic";
-    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
-    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
-    src: url("../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
-    font-weight: 900;
-    font-display: swap;
-}
-
-/*드래그 시 스타일*/
-
-/*숨김텍스트 설정*/
-.hidden,
-.blind,
-.a11y-txt,
-.sr-only,
-.a11y_txt {
-    overflow: hidden;
-    border: 0;
-    position: absolute;
-    /* relative를 사용해도 무관할 듯 하다 */
-    z-index: -1;
-    width: 1px;
-    height: 1px;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-}
-
-*,
-*::before,
-*::after {
-    font-size: 1.2rem;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* 보다 직관적인 box-sizing로 설정 */
-}
-
-:where(html) {
-    -webkit-text-size-adjust: none;
-    /* iOS의 가로 모드에서 텍스트가 조절되지 않도록 한다 */
-    color-scheme: dark light;
-    /* 사용자가 다크 테마일 경우 자동적으로 다크 테마가 된다 */
-    font-family: "KoddiUDOnGothic", sans-serif, serif;
-}
-
-@supports not (min-block-size: 100dvb) {
-    :where(html) {
-        block-size: 100%;
-    }
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    :where(:focus-within) {
-        scroll-behavior: smooth;
-        /* 무언가에 포커싱되었을 때만 부드럽게 스크롤 */
-    }
-}
-
-:where(input, button, textarea, select, a) {
-    font: inherit;
-    /* 입력 서식은 부모의 폰트 속성 계승 */
-}
-
-:where(body):not(img) {
-    line-height: 2rem;
-    /* 가독성 있는 행 높이 */
-    font-size: 1rem;
-    -webkit-font-smoothing: antialiased;
-    /* 텍스트 렌더링 개선 */
-}
-
-:where(textarea) {
-    resize: vertical;
-    /* 멀티라인 편집창의 가로 크기 조정 무효 */
-    resize: block;
-    padding: 1rem;
-    font-size: 1rem;
-}
-
-:where(:focus, button, label, select, summary, [role='button'], [role='option'], [type="file"], [type="file"]::file-selector-button) {
-    cursor: pointer;
-    /* 상호작용 가능한 요소임을 알 수 있도록 커서 지정 */
-}
-
-:where(:disabled) {
-    cursor: not-allowed;
-    /* 입력서식 비활성화 시 포커스 무효화 */
-}
-
-:where(label:has(> input:disabled), label:has(+ input:disabled), input[type="radio"]:disabled + label, input[type="checkbox"]:disabled + label) {
-    cursor: not-allowed;
-    /* 입력서식 비활성화 시 라벨도 커서 무효화 */
-}
-
-:where(button) {
-    border-style: none;
-    /* 버튼의 기본 테두리 제거 필요 시 별도 선언 */
-}
-
-:where(a) {
-    color: inherit;
-    display: inline-flex;
-    text-decoration: transparent;
-    transition: text-decoration 0.2s;
-    text-underline-offset: 4px;
-    /* 링크 텍스트와 언더라인 사이에 공간 주기 */
-}
-
-a:focus,
-a:hover {
-    text-decoration: underline;
-}
-
-:where(ul, ol, li) {
-    list-style: none;
-    /* 뷰렛 삭제, 필요 시 별도로 선언 */
-}
-
-:where(img, svg, video, canvas, audio, iframe, embed, object) {
-    display: inline-flex;
-    /* 보다 예측 가능한 멀티미디어 요소 */
-    aspect-ratio: auto;
-    object-fit: contain;
-    width: 100%;
-    /*부모요소에 꽉 차게 / 부모요소를 벗어나지 않도록*/
-}
-
-:where(img, picture, svg) {
-    max-inline-size: 100%;
-    /* images should never overflow past the available space */
-    block-size: auto;
-    /* 콘텐츠 종횡비 유지 */
-}
-
-:where(p, h1, h2, h3, h4, h5, h6) {
-    overflow-wrap: break-word;
-    /* 길이가 넘칠 경우 줄바꿈 */
-}
-
-
-:where(hr) {
-    /* 보다 일관성 있는 스타일리쉬한 hr */
-    border: none;
-    border-block-start: 1px solid;
-    color: inherit;
-    block-size: 0;
-    overflow: visible;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-::-webkit-scrollbar {
-    display: inline-flex;
-    width: 1rem;
-    /* 스크롤바의 너비 */
-}
-
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10rem;
-    /* 스크롤바의 스타일 */
-    border: 1px solid rgba(0 0 0 / 0.3);
-    background-color: rgba(0 0 0 / 0.5);
-    cursor: pointer;
-}
-
-
-::-webkit-scrollbar-track {
-    background-color: rgba(0 0 0 / 0.1);
-    border-radius: 10rem;
-    /*스크롤바 뒷 배경 스타일*/
-}
-
-fieldset {
-    border: none;
-}
-
-/*여기까지 공통 CSS*/
-
 /*페이지 고유 CSS*/
+:root {font-size:20px;}
 
-:whe .examplebox .arrow {
-    font-weight: 900;
-    font-size: 1.5rem;
-    padding: 1rem;
+.examplebox .arrow {
+	font-weight: 900;
+	font-size: 1.5rem;
+	padding: 1rem;
 }
 
 section {
-    padding: 2rem;
-    margin: 3rem auto;
-    border-radius: 1rem;
+	padding: 2rem;
+	margin: 2rem auto;
+	border-radius: 1rem;
 }
 
 section:first-child {
-    padding-top: 0rem;
-}
-
-section:last-child {
-    padding-bottom: 0rem;
+	padding-top: 0rem;
 }
 
 .centered {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 1rem 0rem;
+	max-width: 90vw;
+	margin: 0 auto;
+	padding: 1rem 0rem;
 }
 
 .addbox {
-    margin: 0px auto;
+	margin: 0px auto;
 }
 
 .addform {
-    display: inline-flex;
-    justify-content: center;
+	display: inline-flex;
+	justify-content: center;
 }
 
-.addform>span {
-    border-radius: 1rem;
-    background-color: cornsilk;
-    padding: 1rem;
-    padding-top: 3rem;
-    text-align: center;
-    margin: 0rem auto;
+.addform > span {
+	border-radius: 1rem;
+	background-color: cornsilk;
+	padding: 1rem;
+	padding-top: 3rem;
+	text-align: center;
+	margin: 0rem auto;
 }
 
 .addform input {
-    color: black;
-    padding: 0px;
-    border: none;
-    background-color: transparent !important;
-    border-bottom: #64a 2px solid;
-    opacity: 0.8;
+	color: black;
+	padding: 0px;
+	border: none;
+	background-color: transparent !important;
+	border-bottom: #64a 2px solid;
+	opacity: 0.8;
 }
 
-.addform input::placeholder {
-    color: transparent;
-}
 
 .addform label {
-    color: black;
-    position: absolute;
-    top: 1rem;
-    left: 0rem;
-    padding: 0.5rem 1rem;
-    opacity: 0.7;
-    transition: top 0.2s, opacity 0.2s, font-size 0.2s;
+	color: black;
+	position: absolute;
+	top: 2rem;
+	left: 0rem;
+	padding: 0.5rem 1rem;
+	padding-bottom: 0;
+	opacity: 0.7;
+	transition: top 0.2s, opacity 0.2s, font-size 0.2s;
+}
+
+.addform input:not(:focus)::placeholder {
+	color: transparent;
 }
 
 .addform input:where(:focus, :not(:placeholder-shown))+label {
-    opacity: 1;
-    top: 0rem;
-    font-size: 1rem;
+	opacity: 1;
+	top: 0rem;
+	font-size: 1rem;
+}
+.addform button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .addbox .arrow {
-    margin: 1rem auto;
+	margin: 1rem auto;
+}
+.button_area {
+	display: flex;
 }
 
 .arrow {
-    background-color: transparent;
-    text-align: center;
-    font-weight: 900;
+	background-color: transparent;
+	text-align: center;
+	font-weight: 900;
 }
-
+#dic {
+	padding:1rem;
+	border-radius: 1rem;
+	background-color: cornsilk;
+}
 #dic li {
-    display: flex;
-    padding: 0.5rem;
-    margin: 1px auto;
-    color: black;
-    background-color: cornsilk;
+	display: flex;
+	padding: 0.5rem;
+	color: black;
+	border-bottom: 1px solid;
 
 }
 
 #dic li .arrow {
-    width: 1.5rem;
-    height: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
 }
 
 :where(#dic h2 + *) {
-    background-color: cornsilk;
+	background-color: cornsilk;
 }
 
 .controlbox button {
-    display: block;
+	display: block;
 }
 
 textarea {
-    width: 100%;
-    min-height: 30rem;
-    border-color: cornsilk;
-    color: black;
-    border-radius: 1rem;
-    background-color: beige;
+	width: 100%;
+	min-height: 8rem;
+	border-color: cornsilk;
+	color: black;
+	border-radius: 1rem;
+	background-color: beige;
 }
 
 input {
-    min-height: 1.3rem;
-    min-width: 1.3rem;
-    vertical-align: middle;
-    accent-color: #64a;
+	min-height: 1.3rem;
+	min-width: 1.3rem;
+	vertical-align: middle;
+	accent-color: #64a;
 }
 
 fieldset {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem 0rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem 0rem;
 }
 
 button,
 summary {
-    display: flex;
-    background-color: #64a;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    margin: 1rem auto;
-    text-align: center;
-    border-radius: 1rem;
+	display: flex;
+	background-color: #64a;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	margin: 1rem auto;
+	text-align: center;
+	border-radius: 1rem;
 }
 
 svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    vertical-align: middle;
+	width: 1.5rem;
+	height: 1.5rem;
+	vertical-align: middle;
 }
 
 footer {
-    padding: 3rem;
-    background-color: #333;
-    color: #fff;
+	padding: 3rem;
+	margin-top: 5rem;
+	background-color: #333;
+	color: #fff;
 }
 
 footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 footer a p {
-    display: inline-block;
-    padding: 0.5rem;
+	display: inline-block;
+	padding: 0.5rem;
 }
 
 footer a img {
-    border-radius: 10rem;
-    width: 2rem;
-    aspect-ratio: 1/1;
+	border-radius: 10rem;
+	width: 2rem;
+	aspect-ratio: 1/1;
 }
 
 .redtext {
-    color: #c10;
-    font-weight: 900;
+	color: #c10;
+	font-weight: 900;
 }
 
 #select_mode {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 #select_mode li {
-    padding: 0.5rem;
+	padding: 0.5rem;
 }
 
 /*기기별 CSS*/
 
 /*PC*/
-@media screen and (width >=1400px) {}
+@media screen and (min-width:1200px) {
+	.centered {width:60vw;}
+	.transducer {
+		display: flex;
+		justify-content: space-between;
+	}
+	.transducer section {
+		width:45%;
+		padding:0px;
+	}
+	.transducer.centered {
+		min-width:70vw;
+	}
+	.examplebox.centered {
+		width:40vw;
+	}
+
+}
 
 /*700px〜1200px iPad*/
-@media (700px <=width < 1400px) {
-    section {
-        padding: 1.5rem;
-    }
+@media (min-width: 701px) and (max-width: 1200px) {
+	section {
+		padding: 1.5rem;
+	}
 
-    .centered {
-        width: 692px;
-    }
+	.centered {
+		width: 80vw;
+	}
+	.transducer.centered {
+		min-width:85vw;
+	}
+
 }
 
 /*Mobile*/
-@media (700px > width) {
-    .centered {
-        width: 87.5%;
-    }
+@media (max-width:700px) {
+	.centered {
+		width: 90vw;
+	}
+	section {
+		padding: 1rem;
+	}
 
+	#select_mode,
+	#dic p {
+		display: block;
+	}
 
-    section {
-        padding: 1rem;
-    }
+	.addform {
+		flex-direction: column;
+	}
 
-    #select_mode,
-    #dic p {
-        display: block;
-    }
+	.addform .arrow {
+		rotate: 90deg;
+	}
 
-    .addform {
-        flex-direction: column;
-    }
+	#dic li {
+		flex-direction: column;
+	}
 
-    .addform .arrow {
-        rotate: 90deg;
-    }
+	#dic li .arrow {
+		rotate: 90deg;
+	}
 
-    #dic li {
-        flex-direction: column;
-    }
-
-    #dic li .arrow {
-        rotate: 90deg;
-    }
-
-    footer a span {
-        display: block;
-    }
-
+	footer a span {
+		display: block;
+	}
 }
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-    .redtext {
-        color: #ffafaa;
-    }
+	.redtext {
+		color: #ffafaa;
+	}
 }
