@@ -172,7 +172,7 @@ header::before {
 	background:linear-gradient(to bottom, rgba(0 0 0 / 1)30%, rgba(0 0 0 / 0)100%);
 }
 .HELLO video {
-	max-height:95dvh;
+	max-height:100dvh;
 	margin:0 auto;
 	padding-top:1rem;
 }
