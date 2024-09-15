@@ -83,7 +83,7 @@ main {
 	justify-content: center;
 }
 .notice, .rule_block {
-	padding:2vmax;
+	padding:3vmax 2vmax;
 	margin:3vmax auto;
 	border-radius: 2vmax;
 }
@@ -93,6 +93,9 @@ main {
 .rule_block h3 {padding-bottom: 1vmax;}
 .rule_block h3 ~ :where(p, ul) {
 	padding-left:1vmax;
+}
+.qna_room h3 {
+	text-align: center;
 }
 .decoline {text-align: center;}
 .links {
@@ -130,7 +133,19 @@ footer {
 	font-size: 1rem;
 	color:white;
 }
-
+.tree_img {
+	position: absolute;
+	width:10vmax;
+	bottom:-2rem;
+	right:-1rem;
+}
+.fuuta_img {
+	position: absolute;
+	width:10vmax;
+	bottom:0.5rem;
+	right:1rem;
+	transform: rotatey(180deg);
+}
 .lightV {display:flex;}
 .darkV {display:none;}
 
