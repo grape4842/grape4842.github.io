@@ -118,6 +118,18 @@ footer {
 }
 
 
+#page_top {
+	padding:0px;
+	position:fixed;
+	bottom:3dvh;
+	right:3dvh;
+	z-index:5;
+}
+.copyright {
+	text-align: center;
+	font-size: 1rem;
+	color:white;
+}
 
 .lightV {display:flex;}
 .darkV {display:none;}

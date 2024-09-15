@@ -177,7 +177,10 @@ footer:after {
 .recipe {background-image: url("../img/recipe.webp");}
 .fake {background-image: url("../img/tsunekichi.webp")}
 .flower {background-image: url("../img/purple-Hyacinthus.webp");}
-.amiibo {background-image: url("../img/amiibo-icon.png")}
+.amiibo {
+	background-image: url("../img/amiibo-icon.png");
+	background-size:2rem auto !important;
+}
 .copyright {
 	text-align: center;
 	font-size: 1rem;
@@ -187,8 +190,8 @@ footer:after {
 #page_top {
 	padding:0px;
 	position:fixed;
-	bottom:5dvh;
-	right:5vw;
+	bottom:3dvh;
+	right:3dvh;
 	z-index:5;
 }
 
