@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.width-center {
+.width_center {
 	display: flex;
 	flex-direction: column;
 	position:relative;
@@ -9,9 +9,9 @@
 }
 
 body {
+/*	color:rgb(130, 113, 87);*/
 	color:#827157;
 	font-weight: 700;
-	font-size:1.2rem;
 	background-size:contain;
 }
 
@@ -42,51 +42,27 @@ body {
 }
 
 header{
-	background-image:url("../img/wood.jpg");
-	color: #794e27;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-image:url("../img/kv-up-txt-bg-pc.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    width: 100%;
+    background-position: 50% 0;
+    z-index: 2;
 }
 
-.navi {
-	background-color: #fff;
-	display: flex;
-	height: 46px;
-	align-items: flex-start;
-    justify-content: space-between;
-}
 
-.nintendo-logo {
-	justify-content: center;
-	align-items:center;
-	width: 138px;
-	height: 46px;
-	background-color: #e60012;
-}
-.nintendo-logo img {
-   width: 82px;
-    height: 21px;
-    display: block;
-}
-.switch-online {
+.nintendo_logo {
 	position: absolute;
-	right: 0;
+	right:0; top:0;
 }
 main {
 	background-image:url(https://www.nintendo.co.jp/switch/acbaa/assets/images/top/content_bg01_pc.jpg);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
-main:before {
-	content: '';
-	background-image: url("../img/leaf-happyhome.png");
-	display: block;
-	position: absolute;
-	top:-1rem; left:0;
-	width:100vw;
-	height: 10rem;
 }
 .acnh-img {
 	display:flex;
@@ -109,8 +85,8 @@ li, p {
 
 .depth2 {margin-left:2rem;}
 h1 {
-	font-size: 2.5rem;
 	text-align: center;
+	color:white;
 }
 h2 {
 	font-size: 2rem;
@@ -211,17 +187,6 @@ footer:after {
 .lightV {display:flex;}
 .darkV {display:none;}
 
-::-webkit-scrollbar {
-    width: 20px;  /* 스크롤바의 너비 */
-}
-::-webkit-scrollbar-thumb {
-    background:rgba(0 0 0 / 0.1); /* 스크롤바의 색상 */
-    border:solid 1px #326;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-    background:rgba(0 0 0 / 0.5);  /*스크롤바 뒷 배경 색상*/
-}
 
 /*다크 모드일 경우의 스타일*/
 @media (prefers-color-scheme:dark) {
@@ -233,27 +198,23 @@ footer:after {
 
 /*desktop*/
 @media screen and (1200px < width) {
+	body {font-size:1.2rem;}
 	.tiles {
 		grid-template-columns: 24% 24% 24% 24%; 
+	}
+	header {
+    height: 97px;
 	}
 	
 }
 
 /*iPad Pro*/
 @media screen and (1000px < width < 1200px) {
-	.width-center {width:80vw;}
-	.nintendo-logo {
-    width: 138px;
-    height: 100%;
-}
+	.width_center {width:80vw;}
 }
 /*iPad*/
 @media screen and (760px < width < 1200px) {
-	.width-center {width:80vw;}
-	.nintendo-logo {
-    width: 138px;
-    height: 100%;
-}
+	.width_center {width:80vw;}
 	.tiles {
 		grid-template-columns: 49% 49%; 
 	}
@@ -262,36 +223,30 @@ footer:after {
 
 /*Mobile*/
 @media screen and (310px < width < 760px) {
-	.width-center {width:90vw;}
-	.navi {
-		height: 50px;
-		background-color: #e60012;
+	.width_center {width:90vw;}
+	header {
+		width: 100vw;
+        height: 10.8vw;
+        text-align: left;
 	}
-	.nintendo-logo {
-		width:auto;
-		height: 50px;
-		}
-	.nintendo-logo img {
-	margin-left:14px;
-    width: 82px;
-    height: 21px;
-}
-	.switch-online {
-    right: 6px;
-    top: 6px;
-    width: 50px;
+	.nintendo_logo {
+    aspect-ratio: 1/1;
+    top: 1.3333333333vw;
+    right: 1.3333333333vw;
+    width: 11.7333333333vw;
+    height: 11.7333333333vw;
 	}
 	article {
 		padding:2rem 1rem;
 		border-width: 1rem;
 	}
-	h1 {font-size: 2rem;}
+	h1 {font-size: 1.5rem;}
 	h2 {
-		font-size: 1.7rem;
+		font-size: 1.4rem;
 		padding:1rem;
 	}
-	h3 {font-size:1.5rem;}
-	h4 {font-size: 1.5rem;}
+	h3 {font-size:1.3rem;}
+	h4 {font-size: 1.2rem;}
 	.depth2 {margin-left:1rem;}
 	#page_top {width:7rem;}
 
@@ -304,7 +259,7 @@ footer:after {
 	h2 {font-size: 1.5rem;}
 	h3 {font-size:1.3rem;}
 	h4 {font-size: 1.1rem;}
-	.width-center {width:95vw;}
+	.width_center {width:95vw;}
 	input[type="text"], textarea {
 		overflow-x:hidden;
 		text-overflow:ellipsis;}

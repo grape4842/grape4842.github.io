@@ -90,7 +90,7 @@
 }
  
 :where(body):not(img) {
-	line-height: 1.5rem; /* 가독성 있는 행 높이 */
+	line-height: 1.6rem; /* 가독성 있는 행 높이 */
 	font-size:1rem;
 	-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
 }
