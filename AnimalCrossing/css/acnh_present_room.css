@@ -60,7 +60,7 @@ header {
 h1 {
 	color:white;
 	font-weight: 900;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	position: absolute;
 	left:2vmax;
 	margin-top:-2%;
@@ -81,6 +81,7 @@ main {
 	margin:3vmax auto;
 	border-radius: 2vmax;
 }
+.decoline {text-align: center;}
 .links {
 	color:#7E693A;
 	background-color:#FEEC9E;
@@ -111,25 +112,26 @@ footer {
 }
 
 /*desktop PC*/
-@media screen and (1025px < width) {
+@media screen and (1100px < width) {
 	body {font-size:1.2rem;}
-	.tiles {
-		grid-template-columns: 24% 24% 24% 24%; 
-	}
 	.headline, header {
     height: 97px;
 	}
 	.nintendo_logo {
 		height: 100px;
 	}
-	
+	h1 {font-size:1.5rem;}
 }
 
 /*iPad */
-@media screen and (761px < width < 1024px) {
+@media screen and (761px < width < 1100px) {
 	.width_center {width:80vw;}
 	.headline, header {
 		height: 6.0625vw;
+	}
+	h1 {
+		font-size: 1.5rem;
+		margin-top: -1%;
 	}
 }
 
@@ -160,9 +162,6 @@ footer {
 		padding:2rem 1rem;
 		border-width: 1rem;
 	}
-	h1 {
-		font-size: 1rem;
-	}
 	h2 {
 		font-size: 1.4rem;
 		padding:1rem;
@@ -177,7 +176,6 @@ footer {
 /*iPhoneSE / Watch?*/
 @media screen and (width < 310px) {
 	body {font-size:1rem;}
-	h1 {font-size: 1rem;}
 	h2 {font-size: 1.4rem;}
 	h3 {font-size:1.3rem;}
 	h4 {font-size: 1.1rem;}
