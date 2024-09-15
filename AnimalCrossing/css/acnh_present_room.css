@@ -1,4 +1,10 @@
 @charset "utf-8";
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 .width_center {
 	display: flex;
 	flex-direction: column;
@@ -11,8 +17,9 @@ header .width_center {
 	padding:0px;
 }
 body {
+	font-family: 'Cafe24Ssurround'!important;
 /*	color:rgb(130, 113, 87);*/
-	color:#827157;
+	color:#837516;
 	font-weight: 700;
 	background-image:url(https://www.nintendo.co.jp/switch/acbaa/assets/images/top/content_bg01_pc.jpg);
 	max-width: 100vw;
@@ -75,22 +82,35 @@ main {
 	flex-direction: column;
 	justify-content: center;
 }
-.rule_block {
-	background-color:#fff9e4;
+.notice, .rule_block {
 	padding:2vmax;
 	margin:3vmax auto;
 	border-radius: 2vmax;
 }
+.rule_block {
+	background-color:#fff9e4;
+}
+.rule_block h3 {padding-bottom: 1vmax;}
+.rule_block h3 ~ :where(p, ul) {
+	padding-left:1vmax;
+}
 .decoline {text-align: center;}
 .links {
-	color:#7E693A;
+	color:#7e693a;
 	background-color:#FEEC9E;
 	padding:1.5vmax 2vmax;
 	margin:1rem auto;
 	border-radius: 200rem;
 
 }
+.notice {
+	background-color:#fff9e4;
+	color:#7e725c;
+}
 ul, ol {padding:1rem 0;}
+h3 + :where(ul, ol) {
+	padding-top:0;
+}
 li {padding:0.2rem 0;}
 footer {
 	padding:3rem auto;
