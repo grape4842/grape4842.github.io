@@ -23,6 +23,7 @@ body {
 	font-weight: 700;
 	background-image:url(https://www.nintendo.co.jp/switch/acbaa/assets/images/top/content_bg01_pc.jpg);
 	max-width: 100vw;
+	letter-spacing: -0.5px;
 }
 
 #skip-nav {
@@ -90,6 +91,7 @@ main {
 .rule_block {
 	background-color:#fff9e4;
 }
+h3 {font-size:1.2rem;}
 .rule_block h3 {padding-bottom: 1vmax;}
 .rule_block h3 ~ :where(p, ul) {
 	padding-left:1vmax;
