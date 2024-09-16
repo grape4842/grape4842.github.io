@@ -350,6 +350,7 @@ summary::-webkit-details-marker {
 	border: #63c 0.5rem solid;
 	padding:1rem;
 	max-width: 90vw;
+	max-height: 90vh;
 	background-color: #103;
 	border-radius: 2rem;
 }
