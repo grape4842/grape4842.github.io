@@ -18,6 +18,7 @@ header, footer {
 	background: #333;
 	color:white;
 }
+.copyright {text-align: center;}
 main > p {
 	padding:1rem 0px;
 }
