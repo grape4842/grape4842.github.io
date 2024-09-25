@@ -14,14 +14,13 @@ body {
 }
 main {
 	background: #feb;
-	box-sizing: content-box;
 	padding:2rem;
 	border-radius: 2vmax;
 	margin:3rem auto!important;
 	border: 2px solid rgba(200, 150, 0, 0.5);
 }
 main > p, .center {
-	width:90vw;
+	max-width:90vw;
 	margin: 0px auto;
 }
 header, footer {
@@ -40,9 +39,9 @@ a {vertical-align: middle;}
 	align-content: center;
 	text-align: center;
 	margin:0px auto;
-	font-size: 1rem;
 }
 .original_video a {
+	font-size: 1rem;
 	background: #f00;
 	color:#fff;
 	font-weight: 900;
@@ -87,6 +86,9 @@ a {vertical-align: middle;}
 		line-height: 3rem;
 		letter-spacing: 3px;
 	}
+	main {
+		box-sizing: content-box;
+	}
 	main > p, .center {
 		width: 55vw;
 	}
@@ -108,6 +110,7 @@ a {vertical-align: middle;}
 }
 /*Mobile*/
 @media (340px <= width < 700px ) {
+	main {padding:0rem 1rem;}
 }
 /*watch*/
 @media screen and (330px > width) {
