@@ -9,6 +9,7 @@
 	line-height: 2rem;
 	font-feature-settings: "palt";
 }
+main {margin:2rem auto;}
 main > p, .center {
 	width:90vw;
 	margin: 0px auto;
@@ -22,7 +23,33 @@ header, footer {
 main > p {
 	padding:1rem 0px;
 }
-
+a {vertical-align: middle;}
+.original_video {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin:0px auto;
+	font-size: 1rem;
+}
+.original_video a {
+	background: #f00;
+	color:#fff;
+	font-weight: 900;
+	padding:1rem;
+	border-radius: 1rem;
+	transition:0.1s scale;
+	scale:1;
+	margin:1rem auto;
+}
+.original_video a:where(:focus, :hover) {
+	scale:1.1;
+}
+.one_icon {
+	aspect-ratio: 1/1;
+	border-radius: 100%;
+	max-width: 2rem;
+	margin-right: 0.5rem;
+}
 
 /*기기별 CSS*/
 
