@@ -51,7 +51,9 @@ a {vertical-align: middle;}
 	max-width: 2.1rem;
 	margin-right: 0.5rem;
 }
-
+.true_parents {
+	font-weight: bold;
+}
 /*기기별 CSS*/
 
 /*PC*/
