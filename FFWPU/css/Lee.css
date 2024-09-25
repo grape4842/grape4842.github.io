@@ -4,12 +4,12 @@
 .dark_view {display: none;}
 .light_view {}
 *, body {
-	letter-spacing:0.2rem;
+	letter-spacing:0.1rem;
 	font-size:1.2rem;
-	line-height: 2rem;
+	line-height: 2.2rem;
 	font-feature-settings: "palt";
 }
-main {margin:2rem auto;}
+main {padding:2rem;}
 main > p, .center {
 	width:90vw;
 	margin: 0px auto;
@@ -37,17 +37,18 @@ a {vertical-align: middle;}
 	font-weight: 900;
 	padding:1rem;
 	border-radius: 1rem;
-	transition:0.1s scale;
+	transition:0.2s scale;
 	scale:1;
 	margin:1rem auto;
 }
 .original_video a:where(:focus, :hover) {
-	scale:1.1;
+	scale:1.05;
 }
 .one_icon {
+	border:3px solid #c00;
 	aspect-ratio: 1/1;
 	border-radius: 100%;
-	max-width: 2rem;
+	max-width: 2.1rem;
 	margin-right: 0.5rem;
 }
 
@@ -57,7 +58,7 @@ a {vertical-align: middle;}
 @media screen and (width >= 1400px) {
 	.pc_view {display: block;}
 main > p, .center {
-		width: 60vw;
+		width: 55vw;
 	}
 
 }
