@@ -9,13 +9,16 @@
 	line-height: 2.2rem;
 	font-feature-settings: "palt";
 }
+body {
+		background: rgba(255, 250, 230);
+}
 main {
-	background: rgba(120, 120, 120, 0.1);
+	background: #feb;
 	box-sizing: content-box;
 	padding:2rem;
 	border-radius: 2vmax;
 	margin:3rem auto!important;
-	border: 2px solid rgba(120, 120, 120, 0.5);
+	border: 2px solid rgba(200, 150, 0, 0.5);
 }
 main > p, .center {
 	width:90vw;
@@ -90,4 +93,6 @@ main > p, .center {
 @media (prefers-color-scheme:dark) {
 	.light_view {display: none;}
 	.dark_view {display: unset;}
+	body {background:rgba(20, 10, 0, 1.0);}
+	main {background:rgba(40, 30, 20, 1.0);}
 }
