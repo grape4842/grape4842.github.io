@@ -4,9 +4,9 @@
 .dark_view {display: none;}
 .light_view {}
 *, body {
-	letter-spacing:0.1rem;
+	letter-spacing:2px;
 	font-size:1.2rem;
-	line-height: 2.2rem;
+	line-height: 2.5rem;
 	font-feature-settings: "palt";
 }
 body {
@@ -64,12 +64,27 @@ a {vertical-align: middle;}
 .true_parents {
 	font-weight: bold;
 }
+.mother_speek {
+	font-weight: 900;
+	background: #ffeefa;
+	box-shadow:0 0 0 1rem #ffeefa;
+}
+.red_text {color:#c00f00;}
+.lilac_text {
+	color:#7a0066;
+}
+.underline_text {color:#cc0066;}
 /*기기별 CSS*/
 
 /*PC*/
 @media screen and (width >= 1400px) {
 	.pc_view {display: block;}
-main > p, .center {
+	*, body {
+		font-size:1.4rem;
+		line-height: 3rem;
+		letter-spacing: 3px;
+	}
+	main > p, .center {
 		width: 55vw;
 	}
 
@@ -77,9 +92,16 @@ main > p, .center {
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
+	*, body {
+		font-size:1.3rem;
+		line-height: 2.5rem;
+		letter-spacing: 3px;
+	}
+
 	main > p, .center {
 		width:80vw;
 	}
+
 }
 /*Mobile*/
 @media (340px <= width < 700px ) {
@@ -95,4 +117,11 @@ main > p, .center {
 	.dark_view {display: unset;}
 	body {background:rgba(20, 10, 0, 1.0);}
 	main {background:rgba(40, 30, 20, 1.0);}
+	.mother_speek {
+		background:#312;
+		box-shadow:0 0 0 1rem #312;
+	}
+	.red_text {color:#FFCBCA;}
+	.lilac_text {color:#F0C0ED;}
+	.underline_text {color:#FFC7D3;}
 }
