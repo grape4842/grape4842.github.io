@@ -41,6 +41,25 @@
 	font-weight:900;
 	font-display : swap;
 }
+@font-face { 
+	font-family:"BIZ-UDMincho";
+	src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
+} 
+@font-face { 
+	font-family:"BIZ-UDGothic";
+	src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
+} 
+
+@font-face { 
+	font-family:"BIZ-UDGothic";
+	src: url("font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
+	font-weight:700;
+	font-display : swap;
+} 
 
 /*숨김텍스트 설정*/
 .hidden, .blind, .a11y-txt, .sr-only, .sr_only, .a11y_txt {
