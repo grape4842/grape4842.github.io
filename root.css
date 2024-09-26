@@ -48,6 +48,12 @@
 	font-display : swap;
 } 
 @font-face { 
+	font-family:"BIZ-UDPMincho";
+	src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
+} 
+@font-face { 
 	font-family:"BIZ-UDGothic";
 	src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
 	font-weight:400;
