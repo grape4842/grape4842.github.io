@@ -10,12 +10,13 @@
 	font-feature-settings: "palt";
 }
 body {
-		background: rgba(255, 250, 230);
+	background: rgba(255, 250, 230);
 }
 main {
 	background: #feb;
-	padding:2rem;
+	padding:1rem 2rem;
 	border-radius: 2vmax;
+	box-sizing: content-box;
 	margin:3rem auto!important;
 	border: 2px solid rgba(200, 150, 0, 0.5);
 }
@@ -76,6 +77,79 @@ a {vertical-align: middle;}
 	color:#7a0066;
 }
 .underline_text {color:#cc0066;}
+
+.menu {
+	position:-webkit-sticky;
+	position: sticky;
+	display: flex;
+	z-index: 10000;
+	top:0;
+	justify-content: flex-end;
+}
+.menu * {
+	font-size: 1rem;
+}
+.font-control, .panel button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1/1;
+	min-height: 2rem;
+}
+.font-control {
+	height: 3rem;
+}
+.font-control, .font-size button  {
+	aspect-ratio: 1/1;
+}
+
+.panel {
+	border-radius: 1rem;
+	position: absolute;
+	top:3rem;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	transition: max-height 0.4s ease-out;
+	max-height: 0px;
+	z-index: 2;
+}
+.panel form {
+	display: flex;
+}
+.font-control.active + .panel {
+	max-height: 1000px; /* 충분히 큰 값으로 설정 */
+}
+.font-size, .font-family {
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	padding:1rem;
+	background: #fff;
+}
+.font-size button {
+	height:2rem;
+}
+#fontSizeDisplay {
+	text-align: center;
+	max-width: 5rem;
+	height: 2rem;
+}
+.font-family label {
+	padding:0 0.5rem;
+	margin:0 0.5rem;
+	background: rgba(40, 30, 20, 1.0);
+}
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+ }
+ label input[type="radio"] {
+ 	position: absolute;
+ 	width: 100%;
+ 	height: 100%;
+ }
 /*기기별 CSS*/
 
 /*PC*/
@@ -85,9 +159,6 @@ a {vertical-align: middle;}
 		font-size:1.4rem;
 		line-height: 3rem;
 		letter-spacing: 3px;
-	}
-	main {
-		box-sizing: content-box;
 	}
 	main > p, .center {
 		width: 55vw;
@@ -110,10 +181,14 @@ a {vertical-align: middle;}
 }
 /*Mobile*/
 @media (340px <= width < 700px ) {
-	main {padding:0rem 1rem;}
+	main {
+		padding:0rem 1rem;
+		box-sizing: border-box;
+	}
 }
 /*watch*/
 @media screen and (330px > width) {
+	main {box-sizing: border-box;}
 
 }
 
@@ -130,4 +205,7 @@ a {vertical-align: middle;}
 	.red_text {color:#FFCBCA;}
 	.lilac_text {color:#F0C0ED;}
 	.underline_text {color:#FFC7D3;}
+	.font-size, .font-family {
+		background: #222;
+	}
 }
