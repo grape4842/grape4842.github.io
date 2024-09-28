@@ -80,21 +80,16 @@
   clip-path: inset(50%);
 }
 
-
-*,
-*::before,
-*::after {
+:root {
 	font-size:1rem;
 	position: relative;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box; /* 보다 직관적인 box-sizing로 설정 */
-}
- 
-:where(html) {
 	-webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트가 조절되지 않도록 한다 */
 	color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동적으로 다크 테마가 된다 */
 	font-family:"KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
+	scroll-behavior: smooth;
 }
  
 @supports not (min-block-size: 100dvb) {
@@ -103,7 +98,6 @@
 	}
 }
  
- html {scroll-behavior: smooth;}
 @media (prefers-reduced-motion: no-preference) {
 	:where(html:focus-within) {
 		scroll-behavior: smooth; /* 무언가에 포커싱되었을 때만 부드럽게 스크롤 */

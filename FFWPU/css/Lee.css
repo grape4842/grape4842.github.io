@@ -3,12 +3,7 @@
 .mobile_view {}
 .dark_view {display: none;}
 .light_view {}
-*, body {
-	letter-spacing:2px;
-	font-size:1.2rem;
-	line-height: 2.5rem;
-	font-feature-settings: "palt";
-}
+
 body {
 	background: rgba(255, 250, 230);
 }
@@ -19,6 +14,9 @@ main {
 	box-sizing: content-box;
 	margin:3rem auto!important;
 	border: 2px solid rgba(200, 150, 0, 0.5);
+	letter-spacing:2px;
+	font-size:1.2rem;
+	line-height: 2.5rem;
 }
 main > p, .center {
 	max-width:90vw;
@@ -155,9 +153,9 @@ input[type="radio"] {
 /*PC*/
 @media screen and (width >= 1400px) {
 	.pc_view {display: block;}
-	*, body {
-		font-size:1.4rem;
-		line-height: 3rem;
+	main {
+		font-size:1.7rem;
+		line-height: 4rem;
 		letter-spacing: 3px;
 	}
 	main > p, .center {
@@ -168,7 +166,7 @@ input[type="radio"] {
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
-	*, body {
+	main {
 		font-size:1.3rem;
 		line-height: 2.5rem;
 		letter-spacing: 3px;
