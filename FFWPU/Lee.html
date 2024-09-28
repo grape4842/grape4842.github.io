@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="ja">
-
 <head>
 	<title>天心苑の摂理天宝役事の恩恵 李権祐(イー·グォンウ)特別巡回師</title>
 	<link rel="stylesheet" type="text/css" href="../root.css">
@@ -51,39 +50,63 @@
 				元動画 : 천심원의 섭리 천보역사 은혜 _ 이권우 특별순회사</a>
 			</p>
 			<nav class="menu">
-				<button class="font-control" aria-expanded="false">
-					<span aria-hidden="true">文</span>
-					<span class="hidden">フォント設定</span>
-					<i class="fas fa-font"></i> <!-- 아이콘 추가 -->
-				</button>
-				<div class="panel">
-					<div class="font-size">
-						<h3>文字サイズ(修理中)</h3>
-						<form>
-							<button type="button" onclick="changeFontSize('decrease', event)">
-								<span class="hidden">文字サイズを小さくする</span> -
-							</button>
-							<label for="fontSizeDisplay" class="hidden">現在の文字サイズ:</label>
-							<input type="text" id="fontSizeDisplay" value="1.2rem" readonly>
-							<button type="button" onclick="changeFontSize('increase', event)">
-								<span class="hidden">文字サイズを大きくする</span> +
-							</button>
-						</form>
-					</div>
-					<div class="font-family">
-						<h3>フォントスタイル</h3>
-						<form>
-							<label for="udp_gothic">
-								<input type="radio" id="udp_gothic" name="font" value="BIZ-UDPGothic" onclick="changeFont('BIZ-UDPGothic', event)">
-								<span>ゴシック体</span>
-							</label>
+				<div class="font_setting_box">
+					<button class="font_control" aria-expanded="false" onclick="toggleAccordion(event)" onkeypress="handleKeyPress(event)">
+						<span aria-hidden="true">文</span>
+						<span class="hidden">フォント設定</span>
+					</button>
+					<!-- パネル -->
+					<div class="panel" aria-hidden="true">
+						<div class="font_setting">
+							<!-- 文字サイズ -->
+							<div class="font_size">
+								<h3>文字サイズ</h3>
+								<form>
+									<div class="font_size_adjust">
+										<label for="decrease_font_button">
+												<span class="hidden">文字サイズを小さくする</span>
+											</label>
+											<button type="button" onclick="changeFontSize('decrease', event)" id="decrease_font_button" aria-disabled="false"> -
+											</button>
+											<label for="decrease_font_button">
+												<span id="min_font_size_label" style="display: none;">フォントサイズはすでに最小値です</span>
+										</label>
+										<label for="font_size_display" class="hidden">現在の文字サイズ:</label>
+										<input type="text" id="font_size_display" value="1.2rem" readonly>
+										<button type="button" onclick="changeFontSize('increase', event)" id="increase_font_button">
+											<span class="hidden">文字サイズを大きくする</span> +
+										</button>
+									</div>
+									<div class="font_size_direct">
+										<button type="button" onclick="setFontSizeTo1rem(event)" id="set_font_1rem_button">
+											<span class="hidden">文字サイズを1remに設定する</span> 1rem
+										</button>
+										<button type="button" onclick="resetFontSize(event)" id="reset_font_button">
+											<span class="hidden">文字サイズを初期化する</span> リセット
+										</button>
+									</div>
+								</form>
+							</div>
+							<!-- 文字サイズend -->
 
-							<label for="ud_mincho">
-								<input type="radio" id="ud_mincho" name="font" value="BIZ-UDPMincho" onclick="changeFont('BIZ-UDPMincho', event)">
-								<span>明朝体</span>
-							</label>
-						</form>
+							<!-- フォントスタイル -->
+							<div class="font_family">
+								<h3>フォントスタイル</h3>
+								<form>
+									<label for="udp_gothic">
+										<input type="radio" id="udp_gothic" name="font" value="BIZ-UDPGothic" onclick="changeFont('BIZ-UDPGothic', event)" checked>
+										<span>ゴシック体</span>
+									</label>
+									<label for="ud_mincho">
+										<input type="radio" id="ud_mincho" name="font" value="BIZ-UDPMincho" onclick="changeFont('BIZ-UDPMincho', event)">
+										<span>明朝体</span>
+									</label>
+								</form>
+							</div>
+							<!-- フォントスタイルend -->
+						</div>
 					</div>
+					<!-- パネルend -->
 				</div>
 			</nav>
 		</div>
@@ -277,85 +300,6 @@
 			</div>
 		</div>
 	</footer>
-
-	<script>
-// 현재 폰트 크기 표시를 업데이트하는 함수
-function updateFontSizeDisplay() {
-    // main_content 요소를 가져옴
-    const content = document.getElementById('main_content');
-    // 현재 폰트 크기를 rem 단위로 가져옴
-    const currentSize = parseFloat(window.getComputedStyle(content).fontSize) / parseFloat(window.getComputedStyle(document.documentElement).fontSize);
-    // 폰트 크기 표시 요소의 값을 업데이트
-    document.getElementById('fontSizeDisplay').value = currentSize.toFixed(1) + 'rem';
-}
-
-// 폰트 크기를 변경하는 함수
-function changeFontSize(action, event) {
-    // 이벤트 버블링 방지
-    event.stopPropagation();
-    // main_content 요소를 가져옴
-    const content = document.getElementById('main_content');
-    // 현재 폰트 크기를 rem 단위로 가져옴
-    let currentSize = parseFloat(window.getComputedStyle(content).fontSize) / parseFloat(window.getComputedStyle(document.documentElement).fontSize);
-    // 폰트 크기를 증가 또는 감소
-    if (action === 'increase') {
-        currentSize += 0.1; // 0.1rem 증가
-    } else if (action === 'decrease') {
-        currentSize -= 0.1; // 0.1rem 감소
-    }
-    // 변경된 폰트 크기를 rem 단위로 설정
-    content.style.fontSize = currentSize + 'rem';
-    // 폰트 크기 표시를 업데이트
-    updateFontSizeDisplay();
-}
-
-// 폰트 스타일을 변경하는 함수
-function changeFont(font, event) {
-    // 이벤트 버블링 방지
-    event.stopPropagation();
-    // main_content 요소를 가져옴
-    const content = document.getElementById('main_content');
-    // 폰트 패밀리를 변경
-    content.style.fontFamily = font;
-
-    // 모든 라디오 버튼에서 'checked' 속성 제거
-    const radios = document.querySelectorAll('.font-family input[type="radio"]');
-    radios.forEach(radio => {
-        // 현재 선택된 폰트와 일치하는 라디오 버튼에 'checked' 속성 추가
-        if (radio.value === font) {
-            radio.checked = true;
-        } else {
-            radio.checked = false;
-        }
-    });
-}
-
-// 창 크기 조정 시 폰트 크기 표시를 업데이트
-window.addEventListener('resize', updateFontSizeDisplay);
-// 문서가 로드된 후 폰트 크기 표시를 업데이트
-document.addEventListener('DOMContentLoaded', updateFontSizeDisplay);
-
-// 아코디언 메뉴를 제어하는 코드
-const acc = document.getElementsByClassName("font-control");
-for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function(event) {
-        // 이벤트 버블링 방지
-        event.stopPropagation();
-        // active 클래스 토글
-        this.classList.toggle("active");
-        // 다음 형제 요소(panel)를 가져옴
-        const panel = this.nextElementSibling;
-        // aria-expanded 속성 토글
-        const expanded = this.getAttribute("aria-expanded") === "true" || false;
-        this.setAttribute("aria-expanded", !expanded);
-        // 패널의 maxHeight 설정
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
-</script>
+	<script src="js/Lee.js" type="text/javascript"></script>
 </body>
 </html>

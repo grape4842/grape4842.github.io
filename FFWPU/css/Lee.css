@@ -6,7 +6,11 @@
 
 body {
 	background: rgba(255, 250, 230);
+	letter-spacing:3px;
+	font-size:1.2rem;
+	line-height: 2.5rem;
 }
+h1 {font-size: 1.5rem;}
 main {
 	background: #feb;
 	padding:1rem 2rem;
@@ -14,9 +18,6 @@ main {
 	box-sizing: content-box;
 	margin:3rem auto!important;
 	border: 2px solid rgba(200, 170, 150, 0.5);
-	letter-spacing:2px;
-	font-size:1.2rem;
-	line-height: 2.5rem;
 }
 main > p, .center {
 	max-width:90vw;
@@ -79,118 +80,157 @@ a {vertical-align: middle;}
 .underline_text {color:#cc0066;}
 
 .menu {
-	position:-webkit-sticky;
+	position: -webkit-sticky;
 	position: sticky;
 	display: flex;
 	z-index: 10000;
-	top:0;
+	top: 0;
 	justify-content: flex-end;
 }
 .menu * {
 	font-size: 1rem;
 }
-.font-control, .panel button{
+.font_control {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	aspect-ratio: 1/1;
-	min-height: 2rem;
-}
-.font-control {
 	height: 3rem;
+	border: 1px solid #777;
 }
-.font-control, .font-size button  {
-	aspect-ratio: 1/1;
+.panel {
+    position: absolute; /* 패널을 절대 위치로 설정 */
+    top: 100%; /* 부모 요소 바로 아래에 위치 */
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* 패딩 전환 추가 */
+    max-height: 0; /* 초기값 설정 */
+    z-index: 2;
+    padding: 0 1rem; /* 패딩 초기값 수정 */
+    box-sizing: border-box;
 }
 
-.panel {
+.font_control[aria-expanded="true"] .panel {
+    max-height: 50rem; /* 열렸을 때 최대 높이 설정 */
+    padding: 1rem; /* 열렸을 때 패딩 추가 */
+}
+.font_setting {
+	background: #333;
 	border-radius: 1rem;
-	position: absolute;
-	top:3rem;
+	border:1px solid #777;
+}
+.font_setting button:where(:focus, :hover) {
+	background: #555;
+}
+.font_size, .font_family {
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
-	transition: max-height 0.4s ease-out;
-	max-height: 0px;
-	z-index: 2;
+	justify-content: center;
+	padding: 1rem;
+	padding-top: 0rem;
 }
-.panel form {
+:where(.font_size, .font_family) form div {
 	display: flex;
+	justify-content: center;
+	padding-bottom: 1rem;
 }
-.font-control.active + .panel {
-	max-height: 1000px; /* 충분히 큰 값으로 설정 */
-}
-.font-size, .font-family {
-	display: flex;
+:where(.font_size) form {
 	flex-direction: column;
-	justify-content:center;
-	padding:1rem;
-	padding-top:0rem;
-	background: #fff;
 }
-.font-size button {
-	height:2rem;
+
+.menu .panel h3 {
+	line-height: 1.5rem;
 }
-#fontSizeDisplay {
+#font_size_display {
 	text-align: center;
 	max-width: 5rem;
-	height: 1lh;
+	line-height: 2rem;
+	max-height: 3rem!important;
 }
-.font-family label {
-	padding:0 0.5rem;
-	margin:0 0.5rem;
+#font_size_display, .font_size button {
+	border: 1px solid #777;
+	height: 3rem;
+	line-height: 3rem;
+}
+.font_size_adjust button {
+	aspect-ratio: 1/1;
+}
+.font_family label {
+	padding: 0 0.5rem;
+	margin: 0 0.5rem;
+	border: 2px solid rgba(200, 170, 150, 0.5);
 	background: rgba(40, 30, 20, 1.0);
 }
+label:has(input[type="radio"]) {
+	padding:1rem;
+}
 input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
- }
- label input[type="radio"] {
- 	position: absolute;
- 	width: 100%;
- 	height: 100%;
- }
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+label:has(input[type="radio"]:checked)::after {
+	content: '';
+	position: absolute;
+	border-radius: 1rem;
+	width: 1rem;
+	line-height: 1rem;
+	display: block;
+	aspect-ratio: 1/1;
+	background: transparent;
+	border: 4px solid #feb;
+	left: -1rem;
+	top: -1rem;
+}
+label input[type="radio"] {
+	position: absolute;
+	top:0;
+	left:0;
+	padding:0;
+	margin:0;
+	width: 100%;
+	height: 100%;
+}
 /*기기별 CSS*/
 
 /*PC*/
-@media screen and (width >= 1400px) {
+@media screen and (min-width: 1400px) {
 	.pc_view {display: block;}
-	main {
-		font-size:1.7rem;
+	body {
+		font-size: 1.7rem;
 		line-height: 4rem;
 		letter-spacing: 3px;
 	}
 	main > p, .center {
 		width: 55vw;
 	}
-
 }
 
 /*700px〜1200px iPad*/
-@media (700px <= width < 1400px )  {
-	main {
-		font-size:1.3rem;
-		line-height: 2.5rem;
+@media (min-width: 700px) and (max-width: 1399px) {
+	body {
+		font-size: 1.5rem;
+		line-height: 3rem;
 		letter-spacing: 3px;
 	}
-
 	main > p, .center {
-		width:80vw;
+		width: 75vw;
 	}
-
 }
+
 /*Mobile*/
-@media (340px <= width < 700px ) {
+@media (min-width: 340px) and (max-width: 699px) {
 	main {
-		padding:0rem 1rem;
+		padding: 0rem 1rem;
 		box-sizing: border-box;
 	}
 }
-/*watch*/
-@media screen and (330px > width) {
-	main {box-sizing: border-box;}
 
+/*watch*/
+@media screen and (max-width: 339px) {
+	main {box-sizing: border-box;}
 }
 
 /*Dark Mode Layout*/
