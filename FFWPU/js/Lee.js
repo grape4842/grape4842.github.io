@@ -175,69 +175,32 @@ function scrollFunction() {
 
 
 let isPlaying = false;
-let isPaused = false;
-let currentIndex = 0;
-let textChunks = [];
-const CHUNK_SIZE = 200; // 단어 수 기준으로 청크 크기 설정
+let speech = new SpeechSynthesisUtterance();
+speech.lang = 'ja-JP';
 
-function splitTextIntoChunks(text) {
-    const words = text.split(' ');
-    const chunks = [];
-    for (let i = 0; i < words.length; i += CHUNK_SIZE) {
-        chunks.push(words.slice(i, i + CHUNK_SIZE).join(' '));
-    }
-    return chunks;
-}
-
-function readMainContent() {
-    const mainContentElement = document.querySelector('#main_content');
-    const mainContent = Array.from(mainContentElement.childNodes)
-        .filter(node => !(node.nodeType === Node.ELEMENT_NODE && node.getAttribute('aria-hidden') === 'true'))
-        .map(node => node.textContent)
-        .join(' ');
-
-    textChunks = splitTextIntoChunks(mainContent);
-    currentIndex = 0;
-    
-    readNextChunk();
-}
-
-function readNextChunk() {
-    if (currentIndex < textChunks.length) {
-        const speech = new SpeechSynthesisUtterance(textChunks[currentIndex]);
-        speech.lang = 'ja-JP';
-        speech.onend = () => {
-            currentIndex++;
-            readNextChunk();
-        };
-        speech.onerror = (event) => {
-            console.error('音声合成エラーが発生しました:', event.error);
-            currentIndex++;
-            readNextChunk();
-        };
-        window.speechSynthesis.speak(speech);
-    } else {
-        isPlaying = false;
-        document.querySelector('#content_reader').classList.remove('voice');
-    }
-}
-
-document.querySelector('#content_reader').addEventListener('click', () => {
+function toggleSpeech() {
     const contentReaderButton = document.querySelector('#content_reader');
+    const mainContent = document.querySelector('#main_content').textContent;
 
-    if (isPlaying) {
-        if (isPaused) {
-            window.speechSynthesis.resume();
-            isPaused = false;
-            contentReaderButton.classList.add('voice');
-        } else {
-            window.speechSynthesis.pause();
-            isPaused = true;
-            contentReaderButton.classList.remove('voice');
-        }
-    } else {
-        isPlaying = true;
+    if (!isPlaying) {
+        // 재생 시작
+        speech.text = mainContent;
+        window.speechSynthesis.speak(speech);
         contentReaderButton.classList.add('voice');
-        readMainContent();
+        isPlaying = true;
+    } else {
+        // 일시 정지
+        window.speechSynthesis.pause();
+        contentReaderButton.classList.remove('voice');
+        isPlaying = false;
     }
-});
+}
+
+speech.onend = function() {
+    // 재생 종료 시
+    const contentReaderButton = document.querySelector('#content_reader');
+    contentReaderButton.classList.remove('voice');
+    isPlaying = false;
+};
+
+document.querySelector('#content_reader').addEventListener('click', toggleSpeech);
