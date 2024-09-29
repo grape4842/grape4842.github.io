@@ -162,6 +162,8 @@
 }
 
 :where(p, h1, h2, h3, h4, h5, h6) {
+    margin-block-start: 0;
+    margin-block-end: 0;
     overflow-wrap: break-word; /* 긴 단어가 넘칠 경우 줄바꿈 */
 }
 

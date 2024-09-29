@@ -15,11 +15,10 @@ main {
 	background: #feb;
 	padding:1rem 2rem;
 	border-radius: 2vmax;
-	box-sizing: content-box;
 	margin:3rem auto!important;
 	border: 2px solid rgba(200, 170, 150, 0.5);
 }
-main > p, .center {
+.center {
 	max-width:90vw;
 	margin: 0px auto;
 }
@@ -79,16 +78,17 @@ a {vertical-align: middle;}
 }
 .underline_text {color:#cc0066;}
 
-.menu {
+.menu * {
+	font-size: 1rem;
+}
+
+.font_setting_box {
 	position: -webkit-sticky;
 	position: sticky;
 	display: flex;
 	z-index: 10000;
 	top: 0;
 	justify-content: flex-end;
-}
-.menu * {
-	font-size: 1rem;
 }
 .font_control {
 	display: flex;
@@ -109,7 +109,6 @@ a {vertical-align: middle;}
     max-height: 0; /* 초기값 설정 */
     z-index: 2;
     padding: 0 1rem; /* 패딩 초기값 수정 */
-    box-sizing: border-box;
 }
 
 .font_control[aria-expanded="true"] .panel {
@@ -203,7 +202,7 @@ label input[type="radio"] {
 		line-height: 4rem;
 		letter-spacing: 3px;
 	}
-	main > p, .center {
+	.center {
 		width: 55vw;
 	}
 }
@@ -215,7 +214,7 @@ label input[type="radio"] {
 		line-height: 3rem;
 		letter-spacing: 3px;
 	}
-	main > p, .center {
+	.center {
 		width: 75vw;
 	}
 }
@@ -224,13 +223,11 @@ label input[type="radio"] {
 @media (min-width: 340px) and (max-width: 699px) {
 	main {
 		padding: 0rem 1rem;
-		box-sizing: border-box;
 	}
 }
 
 /*watch*/
 @media screen and (max-width: 339px) {
-	main {box-sizing: border-box;}
 }
 
 /*Dark Mode Layout*/
