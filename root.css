@@ -19,9 +19,9 @@
 
 @font-face { 
 	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
 	font-weight:400;
 	font-display : swap;
 } 

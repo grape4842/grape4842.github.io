@@ -174,38 +174,70 @@ function scrollFunction() {
 
 
 
-let isPlaying = false; // 재생 상태를 추적하는 변수
-let speech = new SpeechSynthesisUtterance(); // SpeechSynthesisUtterance 객체를 저장할 변수
-speech.lang = 'ja-JP'; // 언어 설정 (일본어)
+let isPlaying = false;
+let isPaused = false;
+let currentIndex = 0;
+let textChunks = [];
+const CHUNK_SIZE = 200; // 단어 수 기준으로 청크 크기 설정
 
-// main 요소의 내용을 읽어주는 함수
+function splitTextIntoChunks(text) {
+    const words = text.split(' ');
+    const chunks = [];
+    for (let i = 0; i < words.length; i += CHUNK_SIZE) {
+        chunks.push(words.slice(i, i + CHUNK_SIZE).join(' '));
+    }
+    return chunks;
+}
+
 function readMainContent() {
     const mainContentElement = document.querySelector('#main_content');
     const mainContent = Array.from(mainContentElement.childNodes)
         .filter(node => !(node.nodeType === Node.ELEMENT_NODE && node.getAttribute('aria-hidden') === 'true'))
         .map(node => node.textContent)
-        .join(' '); // aria-hidden이 true인 요소를 제외한 텍스트 내용 가져오기
+        .join(' ');
 
-    console.log('Main content:', mainContent); // 콘솔에 메인 콘텐츠 출력
-    speech.text = mainContent; // 텍스트 업데이트
-    console.log('Speech text:', speech.text); // 콘솔에 음성 텍스트 출력
+    textChunks = splitTextIntoChunks(mainContent);
+    currentIndex = 0;
+    
+    readNextChunk();
+}
 
-    const contentReaderButton = document.querySelector('#content_reader');
-
-    if (isPlaying) {
-        window.speechSynthesis.pause(); // 음성 일시정지
-        contentReaderButton.classList.remove('voice'); // voice 클래스 제거
-        isPlaying = false;
+function readNextChunk() {
+    if (currentIndex < textChunks.length) {
+        const speech = new SpeechSynthesisUtterance(textChunks[currentIndex]);
+        speech.lang = 'ja-JP';
+        speech.onend = () => {
+            currentIndex++;
+            readNextChunk();
+        };
+        speech.onerror = (event) => {
+            console.error('音声合成エラーが発生しました:', event.error);
+            currentIndex++;
+            readNextChunk();
+        };
+        window.speechSynthesis.speak(speech);
     } else {
-        if (window.speechSynthesis.paused) {
-            window.speechSynthesis.resume(); // 음성 재개
-        } else {
-            window.speechSynthesis.speak(speech); // 음성 재생
-        }
-        contentReaderButton.classList.add('voice'); // voice 클래스 추가
-        isPlaying = true;
+        isPlaying = false;
+        document.querySelector('#content_reader').classList.remove('voice');
     }
 }
 
-// 버튼 클릭 시 main 내용을 읽어주는 이벤트 리스너 추가
-document.querySelector('#content_reader').addEventListener('click', readMainContent);
+document.querySelector('#content_reader').addEventListener('click', () => {
+    const contentReaderButton = document.querySelector('#content_reader');
+
+    if (isPlaying) {
+        if (isPaused) {
+            window.speechSynthesis.resume();
+            isPaused = false;
+            contentReaderButton.classList.add('voice');
+        } else {
+            window.speechSynthesis.pause();
+            isPaused = true;
+            contentReaderButton.classList.remove('voice');
+        }
+    } else {
+        isPlaying = true;
+        contentReaderButton.classList.add('voice');
+        readMainContent();
+    }
+});
