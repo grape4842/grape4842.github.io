@@ -21,6 +21,7 @@ main {
 .center {
 	max-width:90vw;
 	margin: 0px auto;
+	box-sizing: border-box;
 }
 header, footer {
 	padding:1rem 0;
@@ -83,7 +84,6 @@ a {vertical-align: middle;}
 }
 
 .font_setting_box {
-	position: -webkit-sticky;
 	position: sticky;
 	display: flex;
 	z-index: 10000;
@@ -99,21 +99,21 @@ a {vertical-align: middle;}
 	border: 1px solid #777;
 }
 .panel {
-    position: absolute; /* 패널을 절대 위치로 설정 */
-    top: 100%; /* 부모 요소 바로 아래에 위치 */
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* 패딩 전환 추가 */
-    max-height: 0; /* 초기값 설정 */
-    z-index: 2;
-    padding: 0 1rem; /* 패딩 초기값 수정 */
+	position: absolute; /* 패널을 절대 위치로 설정 */
+	top: 100%; /* 부모 요소 바로 아래에 위치 */
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* 패딩 전환 추가 */
+	max-height: 0; /* 초기값 설정 */
+	z-index: 2;
+	padding: 0 1rem; /* 패딩 초기값 수정 */
 }
 
 .font_control[aria-expanded="true"] .panel {
-    max-height: 50rem; /* 열렸을 때 최대 높이 설정 */
-    padding: 1rem; /* 열렸을 때 패딩 추가 */
+	max-height: 50rem; /* 열렸을 때 최대 높이 설정 */
+	padding: 1rem; /* 열렸을 때 패딩 추가 */
 }
 .font_setting {
 	background: #333;
@@ -214,6 +214,10 @@ label input[type="radio"] {
 		line-height: 3rem;
 		letter-spacing: 3px;
 	}
+	main {
+		padding: 1.5rem 3rem;
+	}
+
 	.center {
 		width: 75vw;
 	}
