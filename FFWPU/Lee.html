@@ -51,62 +51,64 @@
 			</p>
 		</div>
 	</header>
-	<nav class="menu center">
-		<details class="font_setting_box">
-			<summary class="font_control">
-				<span aria-hidden="true">文</span>
-				<span class="hidden">文字設定</span>
-			</summary>
+	<nav class="menu">
+		<div class="center">
+			<details class="font_setting_box">
+				<summary class="font_control">
+					<span aria-hidden="true">文</span>
+					<span class="hidden">文字設定</span>
+				</summary>
 
-			<div class="font_setting">
-				<!-- 文字サイズ -->
-				<div class="font_size">
-					<h3>文字サイズ</h3>
-					<form>
-						<div class="font_size_adjust">
-							<label for="decrease_font_button">
-								<span class="hidden">文字サイズを小さくする</span>
-							</label>
-							<button type="button" onclick="changeFontSize('decrease', event)" id="decrease_font_button" aria-disabled="false"> -
-							</button>
-							<label for="decrease_font_button">
-								<span id="min_font_size_label" style="display: none;">フォントサイズはすでに最小値です</span>
-							</label>
-							<label for="font_size_display" class="hidden">現在の文字サイズ:</label>
-							<input type="text" id="font_size_display" value="1.2rem" readonly>
-							<button type="button" onclick="changeFontSize('increase', event)" id="increase_font_button">
-								<span class="hidden">文字サイズを大きくする</span> +
-							</button>
-						</div>
-						<div class="font_size_direct">
-							<button type="button" onclick="setFontSizeTo1rem(event)" id="set_font_1rem_button">
-								<span class="hidden">文字サイズを1remに設定する</span> 1rem
-							</button>
-							<button type="button" onclick="resetFontSize(event)" id="reset_font_button">
-								<span class="hidden">文字サイズを初期化する</span> リセット
-							</button>
-						</div>
-					</form>
-				</div>
-				<!-- 文字サイズend -->
+				<div class="font_setting">
+					<!-- 文字サイズ -->
+					<div class="font_size">
+						<h3>文字サイズ</h3>
+						<form>
+							<div class="font_size_adjust">
+								<label for="decrease_font_button">
+									<span class="hidden">文字サイズを小さくする</span>
+								</label>
+								<button type="button" onclick="changeFontSize('decrease', event)" id="decrease_font_button" aria-disabled="false"> -
+								</button>
+								<label for="decrease_font_button">
+									<span id="min_font_size_label" style="display: none;">フォントサイズはすでに最小値です</span>
+								</label>
+								<label for="font_size_display" class="hidden">現在の文字サイズ:</label>
+								<input type="text" id="font_size_display" value="1.2rem" readonly>
+								<button type="button" onclick="changeFontSize('increase', event)" id="increase_font_button">
+									<span class="hidden">文字サイズを大きくする</span> +
+								</button>
+							</div>
+							<div class="font_size_direct">
+								<button type="button" onclick="setFontSizeTo1rem(event)" id="set_font_1rem_button">
+									<span class="hidden">文字サイズを1remに設定する</span> 1rem
+								</button>
+								<button type="button" onclick="resetFontSize(event)" id="reset_font_button">
+									<span class="hidden">文字サイズを初期化する</span> リセット
+								</button>
+							</div>
+						</form>
+					</div>
+					<!-- 文字サイズend -->
 
-				<!-- フォントスタイル -->
-				<div class="font_family">
-					<h3>フォントスタイル</h3>
-					<form>
-						<label for="udp_gothic">
-							<input type="radio" id="udp_gothic" name="font" value="BIZ-UDPGothic" onclick="changeFont('BIZ-UDPGothic', event)" checked>
-							<span>ゴシック体</span>
-						</label>
-						<label for="ud_mincho">
-							<input type="radio" id="ud_mincho" name="font" value="BIZ-UDPMincho" onclick="changeFont('BIZ-UDPMincho', event)">
-							<span>明朝体</span>
-						</label>
-					</form>
+					<!-- フォントスタイル -->
+					<div class="font_family">
+						<h3>フォントスタイル</h3>
+						<form>
+							<label for="udp_gothic">
+								<input type="radio" id="udp_gothic" name="font" value="BIZ-UDPGothic" onclick="changeFont('BIZ-UDPGothic', event)" checked>
+								<span>ゴシック体</span>
+							</label>
+							<label for="ud_mincho">
+								<input type="radio" id="ud_mincho" name="font" value="BIZ-UDPMincho" onclick="changeFont('BIZ-UDPMincho', event)">
+								<span>明朝体</span>
+							</label>
+						</form>
+					</div>
+					<!-- フォントスタイルend -->
 				</div>
-				<!-- フォントスタイルend -->
-			</div>
-		</details>
+			</details>
+		</div>
 	</nav>
 	<main class="center" id="main_content">
 		<p>愛しく、尊敬する天苑大教会の<span class="family" aria-hidden="true">食口</span><span class="hidden">しっく</span>の皆さん、こんにちは。 はい、こんにちは。 今日は本当に特別な一日です。 <span class="true_parents" aria-hidden="true">真の御父母様</span><span class="hidden">まことのごふぼさま</span>は、このHJ天苑団地を中心にして、特にこの地域の最も中心となり、また天の父母様、<span class="true_parents" aria-hidden="true">真の御父母様</span><span class="hidden">まことのごふぼさま</span>が臨まれたいこの特別祭壇、特別教区を中心にして、今日、孝情<span class="cheonbo" aria-hidden="true">天宝</span><span class="hidden">てんぽう</span>特別修錬会を許可してくださいました。 そして、今日この時間、この場に一緒にいる私たちは本当に特別な人たちだと思います。 </p>
