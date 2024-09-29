@@ -29,9 +29,9 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.ttf" as="font">
-	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.ttf" as="font">
-	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
 	<link rel="preload" href="../font/BIZ-UD/BIZ-UDPGothic-Bold.ttf" as="font">
 	<link rel="preload" href="../font/BIZ-UD/BIZ-UDPGothic.ttf" as="font">
 	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
@@ -54,12 +54,12 @@
 	</header>
 	<nav class="menu">
 		<div class="font_setting_box center">
-			<button class="font_control" aria-expanded="false" onclick="toggleAccordion(event)" onkeypress="handleKeyPress(event)">
+			<button class="font_control" aria-expanded="false" aria-controls="font-panel" type="button" aria-expanded="false">
 				<span aria-hidden="true">文</span>
 				<span class="hidden">フォント設定</span>
 			</button>
 			<!-- パネル -->
-			<div class="panel" aria-hidden="true">
+			<div id="font_panel" class="panel" aria-hidden="true">
 				<div class="font_setting">
 					<!-- 文字サイズ -->
 					<div class="font_size">
@@ -112,7 +112,6 @@
 			</div>
 			<!-- パネルend -->
 			<button type="button" id="content_reader">
-				<span>故障</span>
 				<img class="sound" alt="" src="../icon/volume_up_24dp_E8EAED_FILL1_wght700_GRAD200_opsz24.svg">
 				<img class="pause" src="../icon/pause_24dp_FFFFFF_FILL1_wght600_GRAD0_opsz24.svg" alt="">
 				<span class="hidden">読み上げる</span>

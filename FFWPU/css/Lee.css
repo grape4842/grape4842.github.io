@@ -104,6 +104,7 @@ a {vertical-align: middle;}
 	font-weight: 900;
 	background: #ffeefa;
 	box-shadow:0 0 0 1rem #ffeefa;
+	text-shadow:0 0 5px #fff;
 }
 
 
@@ -142,19 +143,15 @@ a {vertical-align: middle;}
 	top: calc(100% - 1px); /* 부모 요소 바로 아래에 위치 */
 	right: 0;
 	display: flex;
-	visibility: hidden; /* 패널을 숨김 */
 	flex-direction: column;
-	overflow: hidden;
 	color: #fff;
-	transition: max-height 0.4s ease-out, padding 0.4s ease-out, visibility 0.4s ease-out; /* 패딩 및 가시성 전환 추가 */
-	max-height: 0; /* 초기값 설정 */
 	z-index: 2;
 }
 
-.font_control[aria-expanded="true"] .panel {
-	visibility: visible; /* 패널을 표시 */
-	max-height: 50rem; /* 열렸을 때 최대 높이 설정 */
-	padding: 1rem; /* 열렸을 때 패딩 추가 */
+.panel[aria-hidden="false"] {
+	max-height: 50rem; /* 적절한 최대 높이 설정 */
+	opacity: 1;
+	visibility: visible;
 }
 
 .font_setting {
@@ -261,6 +258,9 @@ label input[type="radio"] {
 #content_reader.voice .pause {
 	display: block;
 }
+
+
+
 /*기기별 CSS*/
 
 /*PC*/
