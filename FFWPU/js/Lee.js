@@ -85,122 +85,42 @@ function updateButtonState(currentSize) {
     }
 }
 
-
-
 // 폰트 스타일을 변경하는 함수
 function changeFont(font, event) {
-    event.stopPropagation();
+    event.stopPropagation(); // 이벤트 전파 중지
     const content = document.getElementById('main_content');
-    content.style.fontFamily = font;
+    content.style.fontFamily = font; // 폰트 스타일 변경
 
     const radios = document.querySelectorAll('.font_family input[type="radio"]');
     radios.forEach(radio => {
-        radio.checked = radio.value === font;
+        radio.checked = radio.value === font; // 선택된 폰트 라디오 버튼 체크
     });
 }
 
-window.addEventListener('resize', updateFontSizeDisplay);
-document.addEventListener('DOMContentLoaded', updateFontSizeDisplay);
+// 폰트 크기 표시를 업데이트하는 함수
+function updateFontSizeDisplay() {
+    // 폰트 크기 표시 업데이트 로직
+}
 
-
+window.addEventListener('resize', updateFontSizeDisplay); // 창 크기 조정 시 폰트 크기 표시 업데이트
+document.addEventListener('DOMContentLoaded', updateFontSizeDisplay); // DOM 로드 완료 시 폰트 크기 표시 업데이트
 
 // 아코디언 메뉴를 토글하는 함수
-function toggleAccordion(event) {
-    const button = event.currentTarget; // 클릭된 버튼 요소
-    const panel = button.nextElementSibling; // 버튼 다음에 위치한 패널 요소
-    const isExpanded = button.getAttribute('aria-expanded') === 'true'; // 버튼의 aria-expanded 속성 값 확인
+function toggleAccordion() {
+    const button = document.querySelector('.font_control.accordion-button');
+    const panel = document.getElementById('font_panel');
 
-    if (isExpanded) {
-        // 패널이 열려 있을 때
-        panel.style.maxHeight = panel.scrollHeight + "px"; // 패널의 최대 높이를 설정
-        requestAnimationFrame(() => {
-            panel.style.maxHeight = "0"; // 패널을 닫을 때 최대 높이를 0으로 설정
-            button.setAttribute('aria-expanded', 'false'); // aria-expanded 속성을 false로 설정
-            panel.setAttribute('aria-hidden', 'true'); // 패널을 숨김 상태로 설정
-        });
-        // max-height 전환이 끝난 후 visibility를 변경
-        panel.addEventListener('transitionend', function handleTransitionEnd() {
-            panel.style.visibility = 'hidden'; // 패널을 숨김
-            panel.removeEventListener('transitionend', handleTransitionEnd);
-        });
+    // 아코디언 패널의 최대 높이를 설정하여 부드럽게 열리고 닫히도록 함
+    if (panel.style.maxHeight) {
+        panel.style.maxHeight = null; // 패널 닫기
+        button.setAttribute('aria-expanded', 'false'); // aria-expanded 속성 업데이트
+        panel.setAttribute('aria-hidden', 'true'); // aria-hidden 속성 업데이트
     } else {
-        // 패널이 닫혀 있을 때
-        panel.style.visibility = 'visible'; // 패널을 보임
-        panel.style.maxHeight = panel.scrollHeight + "px"; // 패널을 열 때 최대 높이를 설정
-        requestAnimationFrame(() => {
-            panel.style.maxHeight = panel.scrollHeight + "px"; // 패널의 최대 높이를 유지
-            button.setAttribute('aria-expanded', 'true'); // aria-expanded 속성을 true로 설정
-            panel.setAttribute('aria-hidden', 'false'); // 패널을 보임 상태로 설정
-        });
+        panel.style.maxHeight = panel.scrollHeight + 'px'; // 패널 열기
+        button.setAttribute('aria-expanded', 'true'); // aria-expanded 속성 업데이트
+        panel.setAttribute('aria-hidden', 'false'); // aria-hidden 속성 업데이트
     }
 }
 
-// 키보드 접근성을 위한 함수
-function handleKeyPress(event) {
-    if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault(); // 기본 동작을 막음
-        toggleAccordion(event); // 아코디언 메뉴를 토글
-    }
-}
-
-// 이벤트 리스너 추가
-document.querySelectorAll('.accordion-button').forEach(button => {
-    button.addEventListener('click', toggleAccordion);
-    button.addEventListener('keypress', handleKeyPress);
-});
-
-
-// 링크 요소 가져오기
-let myLink = document.getElementById("go_top");
-
-// 사용자가 페이지를 스크롤할 때 실행되는 함수
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    // 페이지가 10% 이상 스크롤되었는지 확인
-    if (document.body.scrollTop > document.documentElement.scrollHeight * 0.1 || 
-        document.documentElement.scrollTop > document.documentElement.scrollHeight * 0.1) {
-        myLink.style.display = "block";
-        myLink.style.opacity = "1"; // 투명도 변경
-    } else {
-        myLink.style.opacity = "0"; // 투명도 변경
-        setTimeout(function() {
-            myLink.style.display = "none";
-        }, 500); // 전환 효과 시간과 일치시킴
-    }
-}
-
-
-
-
-
-let isPlaying = false;
-let speech = new SpeechSynthesisUtterance();
-speech.lang = 'ja-JP';
-
-function toggleSpeech() {
-    const contentReaderButton = document.querySelector('#content_reader');
-    const mainContent = document.querySelector('#main_content').textContent;
-
-    if (!isPlaying) {
-        // 재생 시작
-        speech.text = mainContent;
-        window.speechSynthesis.speak(speech);
-        contentReaderButton.classList.add('voice');
-        isPlaying = true;
-    } else {
-        // 일시 정지
-        window.speechSynthesis.pause();
-        contentReaderButton.classList.remove('voice');
-        isPlaying = false;
-    }
-}
-
-speech.onend = function() {
-    // 재생 종료 시
-    const contentReaderButton = document.querySelector('#content_reader');
-    contentReaderButton.classList.remove('voice');
-    isPlaying = false;
-};
-
-document.querySelector('#content_reader').addEventListener('click', toggleSpeech);
+// 아코디언 버튼 클릭 시 아코디언 메뉴 토글
+document.querySelector('.font_control.accordion-button').addEventListener('click', toggleAccordion);

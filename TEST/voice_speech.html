@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="stylesheet" type="text/css" href="../root.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>음성 합성 테스트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>음성 합성 테스트</h1>
+        <textarea id="text_to_speak" placeholder="여기에 읽을 텍스트를 입력하세요...">こんにちは、世界！これは音声合成のテストです。</textarea>
+        <br>
+        <button id="speak_button">읽기</button>
+    </div>
+
+    <script>
+        let isPlaying = false;
+        let utterance = null;
+
+        function toggleSpeech() {
+            const speakButton = document.getElementById('speak_button');
+            const textToSpeak = document.getElementById('text_to_speak').value;
+
+            if (!isPlaying) {
+                // 재생 시작
+                utterance = new SpeechSynthesisUtterance(textToSpeak);
+                
+                // 사용 가능한 음성 중 일본어 음성 찾기
+                const voices = speechSynthesis.getVoices();
+                const japaneseVoice = voices.find(voice => voice.lang.startsWith('ja-'));
+                if (japaneseVoice) {
+                    utterance.voice = japaneseVoice;
+                } else {
+                    console.warn('일본어 음성을 찾을 수 없습니다. 기본 음성을 사용합니다.');
+                }
+
+                utterance.onend = function() {
+                    speakButton.textContent = '읽기';
+                    isPlaying = false;
+                };
+
+                speechSynthesis.speak(utterance);
+                speakButton.textContent = '정지';
+                isPlaying = true;
+            } else {
+                // 일시 정지
+                speechSynthesis.cancel();
+                speakButton.textContent = '읽기';
+                isPlaying = false;
+            }
+        }
+
+        // 음성 목록이 로드되었을 때 이벤트
+        speechSynthesis.onvoiceschanged = function() {
+            const voices = speechSynthesis.getVoices();
+            console.log('사용 가능한 음성:', voices);
+        };
+
+        document.getElementById('speak_button').addEventListener('click', toggleSpeech);
+    </script>
+</body>
+</html>
