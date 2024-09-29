@@ -112,14 +112,20 @@ function toggleAccordion(event) {
 
     if (isExpanded) {
         // 패널이 열려 있을 때
-        panel.style.maxHeight = panel.scrollHeight + "rem"; // 패널의 최대 높이를 설정
+        panel.style.maxHeight = panel.scrollHeight + "px"; // 패널의 최대 높이를 설정
         requestAnimationFrame(() => {
             panel.style.maxHeight = "0"; // 패널을 닫을 때 최대 높이를 0으로 설정
             button.setAttribute('aria-expanded', 'false'); // aria-expanded 속성을 false로 설정
             panel.setAttribute('aria-hidden', 'true'); // 패널을 숨김 상태로 설정
         });
+        // max-height 전환이 끝난 후 visibility를 변경
+        panel.addEventListener('transitionend', function handleTransitionEnd() {
+            panel.style.visibility = 'hidden'; // 패널을 숨김
+            panel.removeEventListener('transitionend', handleTransitionEnd);
+        });
     } else {
         // 패널이 닫혀 있을 때
+        panel.style.visibility = 'visible'; // 패널을 보임
         panel.style.maxHeight = panel.scrollHeight + "px"; // 패널을 열 때 최대 높이를 설정
         requestAnimationFrame(() => {
             panel.style.maxHeight = panel.scrollHeight + "px"; // 패널의 최대 높이를 유지
@@ -136,3 +142,70 @@ function handleKeyPress(event) {
         toggleAccordion(event); // 아코디언 메뉴를 토글
     }
 }
+
+// 이벤트 리스너 추가
+document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', toggleAccordion);
+    button.addEventListener('keypress', handleKeyPress);
+});
+
+
+// 링크 요소 가져오기
+let myLink = document.getElementById("go_top");
+
+// 사용자가 페이지를 스크롤할 때 실행되는 함수
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    // 페이지가 10% 이상 스크롤되었는지 확인
+    if (document.body.scrollTop > document.documentElement.scrollHeight * 0.1 || 
+        document.documentElement.scrollTop > document.documentElement.scrollHeight * 0.1) {
+        myLink.style.display = "block";
+        myLink.style.opacity = "1"; // 투명도 변경
+    } else {
+        myLink.style.opacity = "0"; // 투명도 변경
+        setTimeout(function() {
+            myLink.style.display = "none";
+        }, 500); // 전환 효과 시간과 일치시킴
+    }
+}
+
+
+
+
+
+let isPlaying = false; // 재생 상태를 추적하는 변수
+let speech = new SpeechSynthesisUtterance(); // SpeechSynthesisUtterance 객체를 저장할 변수
+speech.lang = 'ja-JP'; // 언어 설정 (일본어)
+
+// main 요소의 내용을 읽어주는 함수
+function readMainContent() {
+    const mainContentElement = document.querySelector('#main_content');
+    const mainContent = Array.from(mainContentElement.childNodes)
+        .filter(node => !(node.nodeType === Node.ELEMENT_NODE && node.getAttribute('aria-hidden') === 'true'))
+        .map(node => node.textContent)
+        .join(' '); // aria-hidden이 true인 요소를 제외한 텍스트 내용 가져오기
+
+    console.log('Main content:', mainContent); // 콘솔에 메인 콘텐츠 출력
+    speech.text = mainContent; // 텍스트 업데이트
+    console.log('Speech text:', speech.text); // 콘솔에 음성 텍스트 출력
+
+    const contentReaderButton = document.querySelector('#content_reader');
+
+    if (isPlaying) {
+        window.speechSynthesis.pause(); // 음성 일시정지
+        contentReaderButton.classList.remove('voice'); // voice 클래스 제거
+        isPlaying = false;
+    } else {
+        if (window.speechSynthesis.paused) {
+            window.speechSynthesis.resume(); // 음성 재개
+        } else {
+            window.speechSynthesis.speak(speech); // 음성 재생
+        }
+        contentReaderButton.classList.add('voice'); // voice 클래스 추가
+        isPlaying = true;
+    }
+}
+
+// 버튼 클릭 시 main 내용을 읽어주는 이벤트 리스너 추가
+document.querySelector('#content_reader').addEventListener('click', readMainContent);

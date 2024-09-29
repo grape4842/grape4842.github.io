@@ -33,6 +33,38 @@ main > p {
 	padding:1rem 0px;
 }
 a {vertical-align: middle;}
+#go_top {
+	display: none; /* 기본적으로 숨김 */
+	position: fixed; /* 고정 위치 */
+	right: 1rem; bottom:1rem;
+	width:3rem;
+	aspect-ratio: 1/1;
+	z-index: 99; /* 다른 요소 위에 표시 */
+	background-color: #333; /* 배경색 */
+	border-radius: 3rem; /* 둥근 모서리 */
+	border:1px solid #ddd;
+	text-align: center; /* 텍스트 가운데 정렬 */
+	text-decoration: none; /* 밑줄 제거 */
+	opacity: 0; /* 투명도 초기값 */
+	transition: opacity 0.5s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+#go_top:focus {
+	display: block; /* 포커스 시 표시 */
+}
+#go_top::after {
+	content: '';
+	position: absolute; /* 절대 위치 설정 */
+	top: 65%; /* 부모 요소의 50% 지점으로 이동 */
+	left: 25%; /* 부모 요소의 50% 지점으로 이동 */
+	transform: translate(-50%, -50%); /* 요소를 자신의 크기만큼 이동하여 중앙 정렬 */	
+	display: block;
+	rotate:45deg;
+	aspect-ratio: 1/1;
+	width: 1em;
+	border-left: 4px solid #fff;
+	border-top: 4px solid #fff;
+}
 .original_video {
 	display: flex;
 	justify-content: center;
@@ -72,7 +104,10 @@ a {vertical-align: middle;}
 	font-weight: 900;
 	background: #ffeefa;
 	box-shadow:0 0 0 1rem #ffeefa;
+	text-shadow:0 0 5px #fff;
 }
+
+
 .red_text {color:#c00f00;}
 .lilac_text {
 	color:#7a0066;
@@ -102,28 +137,33 @@ a {vertical-align: middle;}
 	height: 3rem;
 	border: 1px solid #777;
 }
+
 .panel {
 	position: absolute; /* 패널을 절대 위치로 설정 */
 	top: calc(100% - 1px); /* 부모 요소 바로 아래에 위치 */
 	right: 0;
 	display: flex;
+	visibility: hidden; /* 패널을 숨김 */
 	flex-direction: column;
 	overflow: hidden;
-	transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* 패딩 전환 추가 */
+	color: #fff;
+	transition: max-height 0.4s ease-out, padding 0.4s ease-out, visibility 0.4s ease-out; /* 패딩 및 가시성 전환 추가 */
 	max-height: 0; /* 초기값 설정 */
 	z-index: 2;
 }
 
 .font_control[aria-expanded="true"] .panel {
+	visibility: visible; /* 패널을 표시 */
 	max-height: 50rem; /* 열렸을 때 최대 높이 설정 */
 	padding: 1rem; /* 열렸을 때 패딩 추가 */
 }
+
 .font_setting {
 	background: #333;
 	border-radius: 2rem;
 	padding:2rem;
 	padding-top:1rem;
-	border-top-right-radius: 0;
+	border-top-right-radius: 0rem!important;
 	border:1px solid #777;
 }
 .font_setting button:where(:focus, :hover) {
@@ -163,6 +203,10 @@ a {vertical-align: middle;}
 .font_size_adjust button {
 	aspect-ratio: 1/1;
 }
+label:has(#min_font_size_label) {
+	font-size:1rem;
+	line-height: 1.5rem;
+}
 .font_family label {
 	padding: 0 0.5rem;
 	margin: 0 0.5rem;
@@ -198,6 +242,25 @@ label input[type="radio"] {
 	margin:0;
 	width: 100%;
 	height: 100%;
+}
+#content_reader {
+	height: 3rem;
+	aspect-ratio: 1/1;
+	border:1px solid #777;
+	display: flex;
+	align-items: center;
+}
+#content_reader img {
+	filter: brightness(0.4);
+}
+#content_reader .pause {
+	display: none;
+}
+#content_reader.voice .sound {
+	display: none;
+}
+#content_reader.voice .pause {
+	display: block;
 }
 /*기기별 CSS*/
 
@@ -241,7 +304,7 @@ label input[type="radio"] {
 		border-radius: 1rem;
 	}
 	:where(.font_family) label {
-	flex-direction: column;
+		flex-direction: column;
 	}
 }
 
@@ -264,5 +327,8 @@ label input[type="radio"] {
 	.underline_text {color:#FFC7D3;}
 	.font-size, .font-family {
 		background: #222;
+	}
+	#content_reader img {
+		filter: brightness(1.0);
 	}
 }
