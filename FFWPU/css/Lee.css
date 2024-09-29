@@ -44,6 +44,7 @@ a {vertical-align: middle;}
 	display: flex;
 	align-items: center;
 	font-size: 1rem;
+	line-height: 1.5rem;
 	background: #f00;
 	color:#fff;
 	font-weight: 900;
@@ -51,7 +52,6 @@ a {vertical-align: middle;}
 	border-radius: 1rem;
 	transition:0.2s scale;
 	scale:1;
-	vertical-align: middle;
 	margin:1rem auto;
 }
 .original_video a:where(:focus, :hover) {
@@ -83,12 +83,16 @@ a {vertical-align: middle;}
 	font-size: 1rem;
 }
 
-.font_setting_box {
+.menu {
 	position: sticky;
-	display: flex;
 	z-index: 10000;
 	top: 0;
+}
+.font_setting_box {
+	display: flex;
 	justify-content: flex-end;
+	align-items: center;
+	position: relative;
 }
 .font_control {
 	display: flex;
@@ -100,7 +104,7 @@ a {vertical-align: middle;}
 }
 .panel {
 	position: absolute; /* 패널을 절대 위치로 설정 */
-	top: 100%; /* 부모 요소 바로 아래에 위치 */
+	top: calc(100% - 1px); /* 부모 요소 바로 아래에 위치 */
 	right: 0;
 	display: flex;
 	flex-direction: column;
@@ -108,7 +112,6 @@ a {vertical-align: middle;}
 	transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* 패딩 전환 추가 */
 	max-height: 0; /* 초기값 설정 */
 	z-index: 2;
-	padding: 0 1rem; /* 패딩 초기값 수정 */
 }
 
 .font_control[aria-expanded="true"] .panel {
@@ -117,20 +120,27 @@ a {vertical-align: middle;}
 }
 .font_setting {
 	background: #333;
-	border-radius: 1rem;
+	border-radius: 2rem;
+	padding:2rem;
+	padding-top:1rem;
+	border-top-right-radius: 0;
 	border:1px solid #777;
 }
 .font_setting button:where(:focus, :hover) {
 	background: #555;
 }
+.font_setting h3 {
+	line-height: 4rem;
+}
 .font_size, .font_family {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 1rem;
-	padding-top: 0rem;
 }
-:where(.font_size, .font_family) form div {
+.font_setting form {
+	display: flex;
+}
+.font_setting form > div {
 	display: flex;
 	justify-content: center;
 	padding-bottom: 1rem;
@@ -139,9 +149,6 @@ a {vertical-align: middle;}
 	flex-direction: column;
 }
 
-.menu .panel h3 {
-	line-height: 1.5rem;
-}
 #font_size_display {
 	text-align: center;
 	max-width: 5rem;
@@ -227,6 +234,14 @@ label input[type="radio"] {
 @media (min-width: 340px) and (max-width: 699px) {
 	main {
 		padding: 0rem 1rem;
+	}
+	.font_setting {
+		padding:1.5rem;
+		padding-top: 0;
+		border-radius: 1rem;
+	}
+	:where(.font_family) label {
+	flex-direction: column;
 	}
 }
 
