@@ -211,7 +211,7 @@ fieldset {
     border: none; /* 필드셋의 기본 테두리 제거 */
 }
 
-:where(#skipnav, #jumpnav) {
+:where(#skipnav, #jumpnav, #skip_nav) {
     position: fixed;
     display: block;
     z-index: 2;
@@ -228,7 +228,7 @@ fieldset {
     backdrop-filter: blur(20px);
 }
 
-:where(#skipnav, #jumpnav):where(:focus, :hover) {
+:where(#skipnav, #jumpnav, #skip_nav):where(:focus, :hover) {
     top: 0rem;
     text-decoration: #fff underline wavy 2px;
     text-underline-offset: 0.4rem;
