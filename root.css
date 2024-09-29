@@ -126,6 +126,12 @@
     cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 변경 */
     position: relative;
 }
+summary::-webkit-details-marker { /* Safari 브라우저용 사용자 정의 스타일 */
+    display: none;
+}
+summary {
+    list-style-type: none; /* 그 외의 브라우저용 사용자 정의 스타일 */
+}
 
 :where(:disabled) {
     cursor: not-allowed; /* 비활성화된 요소의 커서 변경 */
@@ -205,7 +211,7 @@ fieldset {
     border: none; /* 필드셋의 기본 테두리 제거 */
 }
 
-:where(#skipnav, #jumpnav, #skip_nav) {
+:where(#skipnav, #jumpnav) {
     position: fixed;
     display: block;
     z-index: 2;
@@ -222,7 +228,7 @@ fieldset {
     backdrop-filter: blur(20px);
 }
 
-:where(#skipnav, #jumpnav, #skip_nav):where(:focus, :hover) {
+:where(#skipnav, #jumpnav):where(:focus, :hover) {
     top: 0rem;
     text-decoration: #fff underline wavy 2px;
     text-underline-offset: 0.4rem;
