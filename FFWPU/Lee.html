@@ -68,22 +68,22 @@
 								<label for="decrease_font_button">
 									<span class="hidden">文字サイズを小さくする</span>
 								</label>
-								<button type="button" onclick="changeFontSize('decrease', event)" id="decrease_font_button" aria-disabled="false"> -
+								<button type="button" id="decrease_font_button" aria-disabled="false"> -
 								</button>
 								<label for="decrease_font_button">
 									<span id="min_font_size_label" style="display: none;">フォントサイズはすでに最小値です</span>
 								</label>
 								<label for="font_size_display" class="hidden">現在の文字サイズ:</label>
 								<input type="text" id="font_size_display" value="1.2rem" readonly>
-								<button type="button" onclick="changeFontSize('increase', event)" id="increase_font_button">
+									<button type="button" id="increase_font_button">
 									<span class="hidden">文字サイズを大きくする</span> +
 								</button>
 							</div>
 							<div class="font_size_direct">
-								<button type="button" onclick="setFontSizeTo1rem(event)" id="set_font_1rem_button">
+								<button type="button" id="set_font_1rem_button">
 									<span class="hidden">文字サイズを1remに設定する</span> 1rem
 								</button>
-								<button type="button" onclick="resetFontSize(event)" id="reset_font_button">
+								<button type="button" id="reset_font_button">
 									<span class="hidden">文字サイズを初期化する</span> リセット
 								</button>
 							</div>
@@ -96,11 +96,11 @@
 						<h3>フォントスタイル</h3>
 						<form>
 							<label for="udp_gothic">
-								<input type="radio" id="udp_gothic" name="font" value="BIZ-UDPGothic" onclick="changeFont('BIZ-UDPGothic', event)" checked>
+								<input type="radio" id="udp_gothic" name="font" value="BIZ-UDPGothic" checked>
 								<span>ゴシック体</span>
 							</label>
 							<label for="ud_mincho">
-								<input type="radio" id="ud_mincho" name="font" value="BIZ-UDPMincho" onclick="changeFont('BIZ-UDPMincho', event)">
+								<input type="radio" id="ud_mincho" name="font" value="BIZ-UDPMincho">
 								<span>明朝体</span>
 							</label>
 						</form>
