@@ -33,6 +33,7 @@ main > p {
 	padding:1rem 0px;
 }
 a {vertical-align: middle;}
+details {position: relative;}
 .original_video {
 	display: flex;
 	justify-content: center;
