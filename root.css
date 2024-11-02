@@ -4,67 +4,67 @@
 ::selection {background:#31a; color:white;}
 /*폰트 설성*/
 @font-face { 
-	font-family:"BIZ-UDPGothic";
-	src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
+    font-family:"BIZ-UDPGothic";
+    src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
+    font-weight:400;
+    font-display : swap;
 } 
 
 @font-face { 
-	font-family:"BIZ-UDPGothic";
-	src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
-	font-weight:700;
-	font-display : swap;
+    font-family:"BIZ-UDPGothic";
+    src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
+    font-weight:700;
+    font-display : swap;
 } 
 
 @font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
+    font-family:"KoddiUDOnGothic";
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-display : swap;
 } 
 @font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
-	font-weight:700;
-	font-display : swap;
+    font-family:"KoddiUDOnGothic";
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
+    font-weight:700;
+    font-display : swap;
 } 
 @font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
-	font-weight:900;
-	font-display : swap;
+    font-family:"KoddiUDOnGothic";
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+    font-weight:900;
+    font-display : swap;
 }
 @font-face { 
-	font-family:"BIZ-UDMincho";
-	src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
+    font-family:"BIZ-UDMincho";
+    src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-display : swap;
 } 
 @font-face { 
-	font-family:"BIZ-UDPMincho";
-	src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
+    font-family:"BIZ-UDPMincho";
+    src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-display : swap;
 } 
 @font-face { 
-	font-family:"BIZ-UDGothic";
-	src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
+    font-family:"BIZ-UDGothic";
+    src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
+    font-weight:400;
+    font-display : swap;
 } 
 
 @font-face { 
-	font-family:"BIZ-UDGothic";
-	src: url("font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
-	font-weight:700;
-	font-display : swap;
+    font-family:"BIZ-UDGothic";
+    src: url("font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
+    font-weight:700;
+    font-display : swap;
 } 
 
 /*숨김텍스트 설정*/
