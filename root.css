@@ -82,16 +82,9 @@
 
 :root {
     font-size: 1rem;
-    position: relative;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
-    -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
-    color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
-    font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
-    scroll-behavior: smooth; /* 부드러운 스크롤 */
 }
-
 @supports not (min-block-size: 100dvb) {
     :where(html) {
         block-size: 100%; /* 브라우저 호환성을 위한 설정 */
@@ -109,12 +102,18 @@
     box-sizing: border-box;
 }
 
-:where(body):not(img) {
+*, :where(body):not(img) {
     line-height: 1.6rem; /* 가독성을 위한 행 높이 */
     font-size: 1rem;
     -webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
     padding:0;
     margin:0;
+    position: relative;
+    box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
+    -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
+    color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
+    font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
+    scroll-behavior: smooth; /* 부드러운 스크롤 */
 }
 
 :where(textarea) {
@@ -162,6 +161,7 @@ summary {
     aspect-ratio: auto; /* 콘텐츠의 종횡비 유지 */
     object-fit: contain; /* 콘텐츠가 부모 요소를 벗어나지 않도록 설정 */
     width: 100%; /* 부모 요소에 꽉 차게 설정 */
+    position: relative;
 }
 
 :where(img, picture, svg) {

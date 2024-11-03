@@ -172,6 +172,8 @@ header::before {
 	background:linear-gradient(to bottom, rgba(0 0 0 / 1)30%, rgba(0 0 0 / 0)100%);
 }
 .HELLO video {
+	position: relative;
+	z-index: 2;
 	max-height:95dvh;
 	margin:0 auto;
 	padding-top:1rem;
@@ -202,6 +204,7 @@ header::before {
 	animation-fill-mode:forwards;
 	opacity:0; 
 	position:relative;
+	line-height: 4rem;
 }
 
 main.w90 {padding:1rem 0px;}
