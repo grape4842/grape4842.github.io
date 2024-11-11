@@ -6,7 +6,7 @@
 
 .content_width {
 	width:90vw;
-	max-width: 320px;
+	max-width: 360px;
 	margin: 0px auto;
 }
 table {
@@ -218,7 +218,7 @@ section.content_width:last-child {
 	margin-bottom: 0px;
 }
 .list_ui {
-	padding:2rem;
+	padding:2rem 1.5rem;
 }
 .page_number_ui {
 	display: flex;
@@ -226,6 +226,7 @@ section.content_width:last-child {
 	padding-top:2rem;
 }
 .list_ui ul.arrow_list {
+	display: flex;
 	flex-direction: column;
 	padding-top:1rem;
 }
@@ -259,13 +260,15 @@ section.content_width:last-child {
 	display: flex;
 	justify-content: center;
 }
+.page_number_ui :where(a, button) {
+	margin:0px 0.25rem;
+}
 .page_number_ui ol {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 }
 .page_number_ui a {
-	margin:0px 0.5rem;
 	border:1px #c91f61 solid;
 }
 .page_number_ui :where(a, button) {
@@ -275,9 +278,8 @@ section.content_width:last-child {
 	text-align: center;
 	line-height: 2rem;
 }
-.page_number_ui :disabled {visibility: hidden;}
+.page_number_ui :disabled {display: none;}
 .page_number_ui :where(a[aria-current], button) {
-	margin:0rem 0.5rem;
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);}
 
 	.more {
@@ -451,7 +453,7 @@ section.content_width:last-child {
 /*watch*/
 @media screen and (330px > width) {
 	.list_ui {
-		padding: 1rem;
+		padding: 1rem 1.5rem;
 	}
 	.gnb_menu summary {
 		width:39.87px;
