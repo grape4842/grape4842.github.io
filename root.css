@@ -145,6 +145,7 @@ summary {
 }
 
 :where(a) {
+    position: relative;
     color: inherit; /* 링크의 색상을 부모 요소와 동일하게 설정 */
     display: inline-flex;
     text-decoration: transparent underline wavy; /* 링크의 밑줄 스타일 설정 */
