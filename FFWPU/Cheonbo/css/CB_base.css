@@ -21,7 +21,7 @@ dl {padding:0.5rem 0px;}
 input {
 	accent-color: #c91f61;
 }
-:focus {
+input, button, img, svg {
 	min-width:1.5rem;
 	min-height: 1.5rem;
 	vertical-align: middle;
