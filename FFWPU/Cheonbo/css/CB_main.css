@@ -1,30 +1,22 @@
 .main_content {
 	margin-top: 0px!important;
+	padding:1.5rem 1rem;
+
 }
 .main_content ul {
-	display: flex;
-	flex-wrap: wrap;
-	justify-items: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: stretch;
 	justify-content: space-between;
 	width: 100%;
-	padding:2rem 1rem;
-}
-.main_content li {
-	margin-bottom: 1.5rem;
-	width:33%;
-}
-.main_content li:nth-child(2) {
-	padding:0px 0.5rem;
-}
-.main_content li:nth-child(-n+3) {
-/*	margin-top:1.5rem;*/
-}
-.main_content li:nth-child(n+7) {
-	margin-bottom: 0.5rem;
 }
 .main_content a {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-	padding-top:0.5rem;
+	padding:0.5rem;
+	height: 100%;
+	margin:0.25rem;
 }
 .main_content p {
 	text-align: center;
@@ -59,20 +51,30 @@
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >= 1400px) {
+	.main_content {
+		padding:2.5rem 2rem;
+	}
 	.main_content ul {
-		padding:2.5rem 0px 3rem;
+		display: inline-flex;
+	}
+	.main_content li {
+		margin:0 auto;
+		width:25%;
+	}
+	.main_content li:not(:last-child)::after{
+		display: flex!important;
 	}
 	.main_content a {
-		margin: 1rem;
-		padding:3rem 0rem;
+		padding: 0.5rem;
+		margin:0.5rem;
 	}
 
 }
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
-	.main_content ul {
-		padding:4rem 1rem;
+	.main_content {
+		padding:3rem 2.5rem;
 	}
 	.main_content li:nth-child(n+7) {
 		margin-bottom: 1rem;
@@ -81,10 +83,15 @@
 
 /*Mobile*/
 @media (340px <= width < 700px ) {
-	.main_content li {aspect-ratio: 1/1}
 }
-/*watch*/
+/*iPhone SE, Galaxy Fold3, watch*/
 @media screen and (330px > width) {
+	*, :where(body):not(img) {
+		font-size: 0.8rem;
+		line-height: 1.5rem;
+	}
+	.main_content {padding:1.5rem 1rem;}
+
 
 }
 

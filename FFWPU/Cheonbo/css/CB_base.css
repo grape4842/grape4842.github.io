@@ -21,7 +21,7 @@ dl {padding:0.5rem 0px;}
 input {
 	accent-color: #c91f61;
 }
-input, button {
+:focus {
 	min-width:1.5rem;
 	min-height: 1.5rem;
 	vertical-align: middle;
@@ -170,7 +170,7 @@ h3 {
 	padding-right:0px;
 }
 main {
-	background-image: url("../img/CB_bg_sky.webp");
+	background-image: url("../../img/CB_bg_sky.webp");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
@@ -294,7 +294,7 @@ section.content_width:last-child {
 		border-radius: 10rem;
 		text-decoration: none;
 	}
-	.more:where(:hover, :focus) {text-decoration: none!important;}
+	.more {text-decoration: none!important;}
 	.more::after {
 		opacity: 0;
 		content: '';
@@ -396,7 +396,7 @@ section.content_width:last-child {
 		margin:1rem;
 	}
 	main {
-		background-image: url("../img/CB_bg_sky_pc.png");
+		background-image: url("../../img/CB_bg_sky_pc.png");
 		padding:7rem 0px;
 	}
 
@@ -408,7 +408,7 @@ section.content_width:last-child {
 		margin: 7rem auto;
 	}
 	.list_ui {
-		padding:4rem;
+		padding:4rem 3.5rem;
 	}
 	.page_number_ui {
 		padding-top:4rem;
@@ -431,7 +431,7 @@ section.content_width:last-child {
 		max-width:692px;
 	}
 	main {
-		background-image: url("../img/CB_bg_sky_pc.png");
+		background-image: url("../../img/CB_bg_sky_pc.png");
 		padding:5rem 0px;
 	}
 	section.content_width {
@@ -453,11 +453,11 @@ section.content_width:last-child {
 /*watch*/
 @media screen and (330px > width) {
 	.list_ui {
-		padding: 1rem 1.5rem;
+		padding: 3rem 2.5rem;
 	}
 	.gnb_menu summary {
-		width:39.87px;
-		height:39.87px;
+		width:2.5rem;
+		aspect-ratio: 1/1;
 	}
 
 }
