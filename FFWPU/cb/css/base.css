@@ -245,6 +245,9 @@ section.content_width:last-child {
 	border:1px #c91f61 solid;
 }
 .page_number_ui :where(a, button) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width:2rem;
 	height: 2rem;
 	aspect-ratio: 1/1;
@@ -354,7 +357,7 @@ section.content_width:last-child {
 
 /*PC*/
 @media screen and (width >= 1400px) {
-	.pc_view {display: block;}
+	.pc_view {display: unset;}
 	main {
 		background-image: url("../../img/CB_bg_sky_pc.png");
 		padding:7rem 0px;
