@@ -19,7 +19,7 @@ main {
 	border: 2px solid rgba(200, 170, 150, 0.5);
 }
 .center {
-	max-width:90vw;
+	width:90vw;
 	margin: 0px auto;
 	box-sizing: border-box;
 }
@@ -33,38 +33,7 @@ main > p {
 	padding:1rem 0px;
 }
 a {vertical-align: middle;}
-#go_top {
-	display: none; /* 기본적으로 숨김 */
-	position: fixed; /* 고정 위치 */
-	right: 1rem; bottom:1rem;
-	width:3rem;
-	aspect-ratio: 1/1;
-	z-index: 99; /* 다른 요소 위에 표시 */
-	background-color: #333; /* 배경색 */
-	border-radius: 3rem; /* 둥근 모서리 */
-	border:1px solid #ddd;
-	text-align: center; /* 텍스트 가운데 정렬 */
-	text-decoration: none; /* 밑줄 제거 */
-	opacity: 0; /* 투명도 초기값 */
-	transition: opacity 0.5s ease-in-out; /* 부드러운 전환 효과 */
-}
-
-#go_top:focus {
-	display: block; /* 포커스 시 표시 */
-}
-#go_top::after {
-	content: '';
-	position: absolute; /* 절대 위치 설정 */
-	top: 65%; /* 부모 요소의 50% 지점으로 이동 */
-	left: 25%; /* 부모 요소의 50% 지점으로 이동 */
-	transform: translate(-50%, -50%); /* 요소를 자신의 크기만큼 이동하여 중앙 정렬 */	
-	display: block;
-	rotate:45deg;
-	aspect-ratio: 1/1;
-	width: 1em;
-	border-left: 4px solid #fff;
-	border-top: 4px solid #fff;
-}
+details {position: relative;}
 .original_video {
 	display: flex;
 	justify-content: center;
@@ -105,8 +74,6 @@ a {vertical-align: middle;}
 	background: #ffeefa;
 	box-shadow:0 0 0 1rem #ffeefa;
 }
-
-
 .red_text {color:#c00f00;}
 .lilac_text {
 	color:#7a0066;
@@ -122,69 +89,62 @@ a {vertical-align: middle;}
 	z-index: 10000;
 	top: 0;
 }
+.menu > .center {
+	display: flex;
+	justify-content: flex-end;
+}
 .font_setting_box {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	position: relative;
+	width: 3rem;
+
+}
+.font_setting_box :where(button, summary) {
+	background: #555;
+	border: 1px solid #999;
+	color:#fff;
+}
+.font_setting_box :where(button, summary):where(:focus, :hover) {
+	background: #666;
 }
 .font_control {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	aspect-ratio: 1/1;
 	height: 3rem;
-	border: 1px solid #777;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio: 1/1;
 }
-
-.panel {
-	position: absolute; /* 패널을 절대 위치로 설정 */
-	top: calc(100% - 1px); /* 부모 요소 바로 아래에 위치 */
-	right: 0;
+.font_setting {
+	position: absolute;
+	top:100%;
+	right:0;
+	border: #666 1px solid;
+	background: #fff;
+	min-width: 16rem;
+	border-radius: 2rem;
+	border-top-right-radius: 0!important;
+	padding:2rem;
 	display: flex;
 	flex-direction: column;
-	color: #fff;
-	z-index: 2;
-}
-
-.panel[aria-hidden="false"] {
-	max-height: 50rem; /* 적절한 최대 높이 설정 */
-	opacity: 1;
-	visibility: visible;
-}
-
-.font_setting {
-	background: #333;
-	border-radius: 2rem;
-	padding:2rem;
-	padding-top:1rem;
-	border-top-right-radius: 0rem!important;
-	border:1px solid #777;
-}
-.font_setting button:where(:focus, :hover) {
-	background: #555;
 }
 .font_setting h3 {
-	line-height: 4rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
-.font_size, .font_family {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-.font_setting form {
+.font_size form {
 	display: flex;
 }
-.font_setting form > div {
+.font_size form > div {
 	display: flex;
 	justify-content: center;
-	padding-bottom: 1rem;
+	align-items: center;
 }
-:where(.font_size) form {
-	flex-direction: column;
+.font_size .font_size_direct {
+	margin:1rem;
 }
-
 #font_size_display {
+	display: none;
 	text-align: center;
 	max-width: 5rem;
 	line-height: 2rem;
@@ -198,18 +158,23 @@ a {vertical-align: middle;}
 .font_size_adjust button {
 	aspect-ratio: 1/1;
 }
-label:has(#min_font_size_label) {
-	font-size:1rem;
-	line-height: 1.5rem;
+.font_family form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.font_family label[for="ud_mincho"] {
+	margin:1rem;
 }
 .font_family label {
+	max-height: 3rem;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
 	padding: 0 0.5rem;
 	margin: 0 0.5rem;
-	border: 2px solid rgba(200, 170, 150, 0.5);
-	background: rgba(40, 30, 20, 1.0);
-}
-label:has(input[type="radio"]) {
-	padding:1rem;
+	border: 1px solid rgba(200, 170, 150, 0.5);
+	background: #feb;
 }
 input[type="radio"] {
 	appearance: none;
@@ -219,15 +184,15 @@ input[type="radio"] {
 label:has(input[type="radio"]:checked)::after {
 	content: '';
 	position: absolute;
-	border-radius: 1rem;
-	width: 1rem;
-	line-height: 1rem;
+	height: 10px;
+	width: 4px;
+	rotate:45deg;
 	display: block;
-	aspect-ratio: 1/1;
 	background: transparent;
-	border: 4px solid #feb;
-	left: -1rem;
-	top: -1rem;
+	border-right: 4px solid rgba(40, 30, 20, 1.0);
+	border-bottom: 4px solid rgba(40, 30, 20, 1.0);
+	left: 6px;
+	top: -2px;
 }
 label input[type="radio"] {
 	position: absolute;
@@ -237,25 +202,6 @@ label input[type="radio"] {
 	margin:0;
 	width: 100%;
 	height: 100%;
-}
-#content_reader {
-	height: 3rem;
-	aspect-ratio: 1/1;
-	border:1px solid #777;
-	display: flex;
-	align-items: center;
-}
-#content_reader img {
-	filter: brightness(0.4);
-}
-#content_reader .pause {
-	display: none;
-}
-#content_reader.voice .sound {
-	display: none;
-}
-#content_reader.voice .pause {
-	display: block;
 }
 
 
@@ -298,7 +244,6 @@ label input[type="radio"] {
 	}
 	.font_setting {
 		padding:1.5rem;
-		padding-top: 0;
 		border-radius: 1rem;
 	}
 	:where(.font_family) label {
@@ -323,10 +268,14 @@ label input[type="radio"] {
 	.red_text {color:#FFCBCA;}
 	.lilac_text {color:#F0C0ED;}
 	.underline_text {color:#FFC7D3;}
-	.font-size, .font-family {
+	.font_setting {
 		background: #222;
 	}
-	#content_reader img {
-		filter: brightness(1.0);
+	.font_family label {
+		background: rgba(40, 30, 20, 1.0);
+	}
+	label:has(input[type="radio"]:checked)::after {
+		border-right: 4px solid #feb;
+		border-bottom: 4px solid #feb;
 	}
 }

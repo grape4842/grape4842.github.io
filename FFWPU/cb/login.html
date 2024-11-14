@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>천보가정교회 - 로그인</title>
+	<link rel="stylesheet" type="text/css" href="../../root.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta property="og:description" content="">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="../img/Card.webp">
+	<meta name="theme-color=" content="#855AB6">
+	<link rel="apple-touch-icon" sizes="57x57" href="../img/ffwpu_logo_favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../img/ffwpu_logo_favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../img/ffwpu_logo_favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../img/ffwpu_logo_favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../img/ffwpu_logo_favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../img/ffwpu_logo_favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../img/ffwpu_logo_favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../img/ffwpu_logo_favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/ffwpu_logo_favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../img/ffwpu_logo_favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../img/ffwpu_logo_favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../img/ffwpu_logo_favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../img/ffwpu_logo_favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preload" href="../../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+</head>
+<body>
+	<script type="text/javascript" src="../../include_script.js"></script>
+	<header w3-include-html="header.html"></header>
+	<main>
+		<section class="content_width list_ui">
+			<form accept-charset="utf-8" method="post" action="./logincheck.php">
+				<fieldset class="login_box">
+					<legend>
+						<h2>로그인</h2>
+						<p>이메일주소와 비밀번호를 입력해주시기 바랍니다.</p>
+					</legend>
+					<div class="login_controls">
+						<div class="login_input_box">
+							<div class="input_box">
+								<label for="login_id">아이디</label>
+								<input type="text" name="" id="login_id">
+							</div>
+							<div class="input_box">
+								<label for="login_pw">비밀번호</label>
+								<input type="password" name="" id="login_pw">
+							</div>
+						</div>
+						<button type="button" id="login_button">로그인</button>
+					</div>
+					<div class="login_account_menu">
+						<a href="">아이디 / 비밀번호를 분실하셨나요?</a>
+						<a href="signup1.html">회원가입</a>
+					</div>
+				</fieldset>
+			</form>
+			<ul class="with_login">
+				<li>
+					<a href="" class="google_login">
+						<img class="light_view" src="../../icon/google_login_buttonW.webp" alt="">
+						<img class="dark_view" src="../../icon/google_login_buttonD.webp" alt="">
+						<span class="hidden">구글 계정으로 로그인</span>
+					</a>
+				</li>
+				<li>
+					<a href="" class="facebook_login">
+						<img src="../../icon/facebook_login.webp" alt="">
+						<span class="hidden">페이스북으로 로그인</span>
+					</a>
+				</li>
+        		<li>
+					<a href="" class="apple_login">
+						<img class="light_view" alt="" src="../../icon/apple_loginW.webp">
+						<img class="dark_view" alt="" src="../../icon/apple_loginD.webp">
+						<span class="hidden">애플로 로그인</span>
+					</a>
+				</li>
+				<li>
+					<a href="" class="kakao_login">
+						<img alt="" src="../../icon/kakao_login/ko/kakao_login_large_narrow.png">
+						<span class="hidden">카카오 로그인</span>
+					</a>
+				</li>
+				<li>
+					<a href="" class="naver_login">
+						<img class="light_view" alt="" src="../../icon/2021_Login_with_naver_guidelines_Kr/btnW_완성형.png">
+						<img class="dark_view" alt="" src="../../icon/2021_Login_with_naver_guidelines_Kr/btnD_완성형.png">
+						<span class="hidden">네이버 로그인</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+	<div class="bottom_box" w3-include-html="footer.html"></div>
+	<script>
+	includeHTML();
+	</script>
+
+</body>
+</html>

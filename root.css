@@ -4,67 +4,67 @@
 ::selection {background:#31a; color:white;}
 /*폰트 설성*/
 @font-face { 
-    font-family:"BIZ-UDPGothic";
-    src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
-    font-weight:400;
-    font-display : swap;
+	font-family:"BIZ-UDPGothic";
+	src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
 } 
 
 @font-face { 
-    font-family:"BIZ-UDPGothic";
-    src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
-    font-weight:700;
-    font-display : swap;
+	font-family:"BIZ-UDPGothic";
+	src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
+	font-weight:700;
+	font-display : swap;
 } 
 
 @font-face { 
-    font-family:"KoddiUDOnGothic";
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.ttf") format("truetype");
-    font-weight:400;
-    font-display : swap;
+	font-family:"KoddiUDOnGothic";
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
+	font-weight:400;
+	font-display : swap;
 } 
 @font-face { 
-    font-family:"KoddiUDOnGothic";
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
-    font-weight:700;
-    font-display : swap;
+	font-family:"KoddiUDOnGothic";
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
+	font-weight:700;
+	font-display : swap;
 } 
 @font-face { 
-    font-family:"KoddiUDOnGothic";
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
-    font-weight:900;
-    font-display : swap;
+	font-family:"KoddiUDOnGothic";
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+	font-weight:900;
+	font-display : swap;
 }
 @font-face { 
-    font-family:"BIZ-UDMincho";
-    src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
-    font-weight:400;
-    font-display : swap;
+	font-family:"BIZ-UDMincho";
+	src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
 } 
 @font-face { 
-    font-family:"BIZ-UDPMincho";
-    src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
-    font-weight:400;
-    font-display : swap;
+	font-family:"BIZ-UDPMincho";
+	src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
 } 
 @font-face { 
-    font-family:"BIZ-UDGothic";
-    src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
-    font-weight:400;
-    font-display : swap;
+	font-family:"BIZ-UDGothic";
+	src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
 } 
 
 @font-face { 
-    font-family:"BIZ-UDGothic";
-    src: url("font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
-    font-weight:700;
-    font-display : swap;
+	font-family:"BIZ-UDGothic";
+	src: url("font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
+	font-weight:700;
+	font-display : swap;
 } 
 
 /*숨김텍스트 설정*/
@@ -82,16 +82,9 @@
 
 :root {
     font-size: 1rem;
-    position: relative;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
-    -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
-    color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
-    font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
-    scroll-behavior: smooth; /* 부드러운 스크롤 */
 }
-
 @supports not (min-block-size: 100dvb) {
     :where(html) {
         block-size: 100%; /* 브라우저 호환성을 위한 설정 */
@@ -109,12 +102,18 @@
     box-sizing: border-box;
 }
 
-:where(body):not(img) {
+*, :where(body):not(img), body {
     line-height: 1.6rem; /* 가독성을 위한 행 높이 */
     font-size: 1rem;
     -webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
     padding:0;
     margin:0;
+    position: relative;
+    box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
+    -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
+    color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
+    font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
+    scroll-behavior: smooth; /* 부드러운 스크롤 */
 }
 
 :where(textarea) {
@@ -125,6 +124,12 @@
 :where(:focus, button, label, select, summary, [role='button'], [role='option'], [type="file"], [type="file"]::file-selector-button) {
     cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 변경 */
     position: relative;
+}
+summary::-webkit-details-marker { /* Safari 브라우저용 사용자 정의 스타일 */
+    display: none;
+}
+summary {
+    list-style-type: none; /* 그 외의 브라우저용 사용자 정의 스타일 */
 }
 
 :where(:disabled) {
@@ -140,6 +145,7 @@
 }
 
 :where(a) {
+    position: relative;
     color: inherit; /* 링크의 색상을 부모 요소와 동일하게 설정 */
     display: inline-flex;
     text-decoration: transparent underline wavy; /* 링크의 밑줄 스타일 설정 */
@@ -156,6 +162,8 @@
     aspect-ratio: auto; /* 콘텐츠의 종횡비 유지 */
     object-fit: contain; /* 콘텐츠가 부모 요소를 벗어나지 않도록 설정 */
     width: 100%; /* 부모 요소에 꽉 차게 설정 */
+    position: relative;
+    vertical-align: middle;
 }
 
 :where(img, picture, svg) {
