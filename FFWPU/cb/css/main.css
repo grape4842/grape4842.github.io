@@ -8,19 +8,13 @@
 	grid-template-columns: repeat(3, 1fr);
 	justify-items: stretch;
 	justify-content: space-between;
-	width: 100%;
 }
 .main_content a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding:0.5rem;
-	height: 100%;
 	margin:0.25rem;
-}
-.main_content p {
 	text-align: center;
-	padding-bottom: 0.5rem;
 }
 .main_content li:after {
 	content: '';
