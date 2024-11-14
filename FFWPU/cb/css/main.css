@@ -38,6 +38,7 @@
 	filter: brightness(0.1);
 }
 .main_content span {
+	display: block;
 	text-align: center;
 	width: 100%;
 }

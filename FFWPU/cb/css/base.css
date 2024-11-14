@@ -17,7 +17,7 @@ header, .bottom_box {
 }
 a {
 	padding:0.5rem;
-	display: inline-flex;
+	display: flex;
 	text-underline-offset: 0.5rem;
 }
 
@@ -210,6 +210,7 @@ section.content_width:last-child {
 	justify-self: center;
 }
 .list_ui ul.arrow_list a {
+	display: block;
 	white-space: nowrap;
 	overflow: hidden;
 	min-height: 3rem;
