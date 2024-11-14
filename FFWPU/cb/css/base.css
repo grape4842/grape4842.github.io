@@ -9,6 +9,11 @@
 	max-width: 360px;
 	margin: 0px auto;
 }
+header, .bottom_box {
+	background-image: url("../../img/head_bg.jpg");
+	background-size: 100%;
+
+}
 table {
 	border:none;
 	margin:1rem 0px;
@@ -21,9 +26,9 @@ dl {padding:0.5rem 0px;}
 input {
 	accent-color: #c91f61;
 }
-input, button, img, svg {
-	min-width:1.5rem;
-	min-height: 1.5rem;
+input, button {
+	min-width:2.5rem;
+	min-height: 2.5rem;
 	vertical-align: middle;
 }
 fieldset {
@@ -34,16 +39,11 @@ h1 {
 }
 h1 a {
 	font-size: 2rem;
-	width: 40%;
-	padding:40px 0px 20px!important;
 	display: inline-flex;
 	justify-content: center;
 }
 h1 img {
-	width: 100%;
-	height: auto;
-	max-width: 230px;
-	max-height: 75px;
+	max-height: 3rem;
 }
 h2, h3 {
 	padding:1rem;
@@ -57,19 +57,12 @@ h3 {
 	font-size:1.3rem;
 	padding-left:0px;
 }
-
-.gnb_menu {
-	position: absolute;
-	top:0px;
-	left:0; right: 0;
-	margin:0px auto;
-	transition: all 0.2s;
+a {
+	padding:0.5rem;
 }
 #gnb_open {
 	z-index: 3;
-	max-width: 44px;
-	max-height: 44px;
-	margin:40px auto 20px;
+	width: 3rem;
 	aspect-ratio: 1/1;
 	background: transparent;
 }
@@ -78,18 +71,11 @@ h3 {
 	left:-100rem; top:0;
 	transition: display 0.2s;
 	background:#353539;
-	box-shadow:0px 0px 15px #464646;
+	box-shadow:0px 0px 1rem #464646;
 	z-index: 2;
 	animation-duration: 0.2s;
 	animation-name: open_gnb;
 	animation-fill-mode: forwards;
-}
-
-#gnb_menu img {
-	scale:0.7;
-	max-width: 75px;
-	max-height: 75px;
-	aspect-ratio: 1/1;
 }
 
 @keyframes open_gnb{
@@ -129,15 +115,18 @@ h3 {
 .gnb_menu .sub_menu a {
 	padding:0.5rem 0rem;
 }
-.gnb_menu .sub_menu a:before {
-	opacity: 0.3;
+.gnb_menu .sub_menu a::before {
 	content: '';
 	display: inline-flex;
 	width: 0px;
 	height: 0px;
 	border: solid transparent 0.5rem;
-	border-left-color: rgba(0 0 0 / 0.7);
+	border-left-color: rgba(220 220 255 / 0.7);
+	transition: border-left-color 0.2s;
 	vertical-align: middle;
+}
+.gnb_menu .sub_menu a:where(:hover, :focus)::before {
+	border-left-color: rgba(220 220 255 / 1);
 }
 
 #gnb_close {
@@ -155,19 +144,6 @@ h3 {
 .bar_menu > div {
 	display: flex;
 	justify-content: space-between;
-}
-.bar_menu a {
-	color:#fff;
-	width: 100%;
-	padding:1rem;
-}
-.bar_menu a:first-child {
-	text-align: left;
-	padding-left:0px;
-}
-.bar_menu a:last-child {
-	text-align: right;
-	padding-right:0px;
 }
 main {
 	background-image: url("../../img/CB_bg_sky.webp");
@@ -193,10 +169,6 @@ a {
 	display: block;
 	text-underline-offset: 0.5rem;
 }
-a:not(main a) {
-	padding: 1rem;
-}
-span {display: block;}
 ul.page_number_ui, .menu ul {
 	width: 100%;
 	display: flex;
@@ -237,7 +209,6 @@ section.content_width:last-child {
 	white-space: nowrap;
 	overflow: hidden;
 	min-height: 3rem;
-	line-height: 3rem;
 	border-bottom: rgba(255 255 255 / 0.5) 1px solid;
 	text-overflow: ellipsis;
 }
@@ -391,35 +362,28 @@ section.content_width:last-child {
 /*PC*/
 @media screen and (width >= 1400px) {
 	.pc_view {display: block;}
-	.bar_menu a {
-		text-align: center;
-		margin:1rem;
-	}
 	main {
 		background-image: url("../../img/CB_bg_sky_pc.png");
 		padding:7rem 0px;
 	}
-
-	section {border-radius: 4rem;}
 	.content_width {
 		max-width: 980px;
 	}
 	section.content_width {
 		margin: 7rem auto;
-	}
-	.list_ui {
-		padding:4rem 3.5rem;
+		border-radius: 3rem;
+		padding:3rem;
 	}
 	.page_number_ui {
-		padding-top:4rem;
+		padding-top:3rem;
 	}
 	.list_ui ul.arrow_list {
 		flex-direction: column;
 		padding-top: 2rem;
 	}
 	.more {
-		top:4rem;
-		right:4rem;
+		top:3rem;
+		right:2.5rem;
 	}
 
 
@@ -477,9 +441,6 @@ section.content_width:last-child {
 	.more:after {
 		background: rgba(255 255 255 / 0.2);
 		box-shadow:0 0 0.15rem 0.5rem rgba(255 255 255 / 0.2);
-	}
-	.gnb_menu .sub_menu a:before {
-    border-left-color: rgba(255 255 255 / 0.9);
 	}
 
 }
