@@ -27,8 +27,8 @@ input {
 	accent-color: #c91f61;
 }
 input, button {
-	min-width:2.5rem;
-	min-height: 2.5rem;
+	min-width:2rem;
+	min-height: 2rem;
 	vertical-align: middle;
 }
 fieldset {
@@ -57,14 +57,11 @@ h3 {
 	font-size:1.3rem;
 	padding-left:0px;
 }
-a {
-	padding:0.5rem;
-}
 #gnb_open {
 	z-index: 3;
-	width: 3rem;
 	aspect-ratio: 1/1;
 	background: transparent;
+	width:2rem;
 }
 #gnb_menu {
 	position: fixed;
@@ -87,6 +84,9 @@ a {
 	padding:1rem;
 	font-weight: 900;
 	font-size: 1.5rem;
+}
+#gnb_menu :where(ul,ol) {
+	flex-direction: column;
 }
 .gnb_menu .arrow_list a {
 	border-bottom:1px solid #515151;
@@ -166,6 +166,7 @@ header, .bottom_box {
 }
 
 a {
+	padding:0.5rem;
 	display: block;
 	text-underline-offset: 0.5rem;
 }
@@ -300,7 +301,7 @@ section.content_width:last-child {
 .menu li:nth-child(2) {
 	margin:0px 1rem;
 }
-.menu a {
+ .bar_menu_item > a {
 	aspect-ratio: 1/1;
 	width:100%;
 	padding:0px;
