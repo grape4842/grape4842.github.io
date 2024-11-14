@@ -300,13 +300,9 @@ section.content_width:last-child {
 }
  .bar_menu_item >:where(a, button) {
 	aspect-ratio: 1/1;
-	width:3rem;
-	padding:0px;
+	height:3rem;
 	border-radius: 100rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	font-size: 14px;
 }
 .menu span {
 	padding-top:0.5rem;
@@ -314,7 +310,7 @@ section.content_width:last-child {
 .CB_home {
 	margin: 0px auto;
 }
-.CB_home:before {
+.CB_home::before {
 	content: '';
 	width:80%;
 	background-color: #fff;
