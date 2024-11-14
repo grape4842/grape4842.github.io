@@ -65,6 +65,7 @@ h3 {
 }
 #gnb_menu {
 	position: fixed;
+	min-width: 12rem;
 	left:-100rem; top:0;
 	transition: display 0.2s;
 	background:#353539;
@@ -296,16 +297,11 @@ section.content_width:last-child {
 }
 .menu li {
 	display: flex;
-	justify-content: center;
 }
-.menu li:nth-child(2) {
-	margin:0px 1rem;
-}
- .bar_menu_item > a {
+ .bar_menu_item >:where(a, button) {
 	aspect-ratio: 1/1;
-	width:100%;
+	width:3rem;
 	padding:0px;
-	max-width: 6rem;
 	border-radius: 100rem;
 	display: flex;
 	flex-direction: column;

@@ -163,6 +163,7 @@ summary {
     object-fit: contain; /* 콘텐츠가 부모 요소를 벗어나지 않도록 설정 */
     width: 100%; /* 부모 요소에 꽉 차게 설정 */
     position: relative;
+    vertical-align: middle;
 }
 
 :where(img, picture, svg) {
