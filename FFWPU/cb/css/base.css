@@ -14,6 +14,12 @@ header, .bottom_box {
 	background-size: 100%;
 
 }
+a {
+	padding:0.5rem;
+	display: inline-flex;
+	text-underline-offset: 0.5rem;
+}
+
 table {
 	border:none;
 	margin:1rem 0px;
@@ -59,9 +65,7 @@ h3 {
 }
 #gnb_open {
 	z-index: 3;
-	aspect-ratio: 1/1;
 	background: transparent;
-	width:2rem;
 }
 #gnb_menu {
 	position: fixed;
@@ -166,11 +170,6 @@ header, .bottom_box {
 	font-size: 1.5rem;
 }
 
-a {
-	padding:0.5rem;
-	display: block;
-	text-underline-offset: 0.5rem;
-}
 ul.page_number_ui, .menu ul {
 	width: 100%;
 	display: flex;
@@ -194,6 +193,8 @@ section.content_width:last-child {
 .list_ui {
 	padding:2rem 1.5rem;
 }
+.more{top:2rem; right:1.5rem;}
+
 .page_number_ui {
 	display: flex;
 	flex-wrap: wrap;
@@ -215,19 +216,19 @@ section.content_width:last-child {
 	text-overflow: ellipsis;
 }
 
-.list_ui ul.arrow_list a:before {
-	opacity: 0.3;
+.list_ui ul.arrow_list a::before {
 	content:'';
 	margin:0px 0rem 0px 0.3rem;
 	display: inline-flex;
 	width:0px;
 	height:0px;
 	border:solid transparent 0.5rem;
-	border-left-color:rgba(0 0 0 / 0.7);
+	border-left-color:rgba(220 220 255 / 0.7);
+	transition: border-left-color 0.2s;
 	vertical-align: middle;
 }
 .list_ui ul.arrow_list a:where(:hover, :focus)::before {
-	opacity: 1;
+	border-left-color:rgba(220 220 255 / 1);
 }
 .page_number_ui {
 	display: flex;
@@ -260,12 +261,11 @@ section.content_width:last-child {
 
 	.more {
 		outline-offset:0.5rem;
-		line-height: 1.5rem;
+		line-height: 2rem;
 		font-size:2rem;
 		position: absolute;
-		top:2rem; right:2rem;
-		width: 1.5rem;
-		height: 1.5rem;
+		width: 2rem;
+		height: 2rem;
 		text-align: center;
 		border-radius: 10rem;
 		text-decoration: none;
@@ -304,11 +304,12 @@ section.content_width:last-child {
  .bar_menu_item >:where(a, button) {
 	aspect-ratio: 1/1;
 	height:3rem;
-	border-radius: 100rem;
+	border-radius: 1rem;
 	font-size: 14px;
-}
-.menu span {
-	padding-top:0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .CB_home {
 	margin: 0px auto;
@@ -415,6 +416,9 @@ section.content_width:last-child {
 	.list_ui {
 		padding: 3rem 2.5rem;
 	}
+	.more {
+		top:3rem; right:2.5rem;
+	}
 	.gnb_menu summary {
 		width:2.5rem;
 		aspect-ratio: 1/1;
@@ -431,9 +435,6 @@ section.content_width:last-child {
 	}
 	th{background: rgba( 0 0 0 / 0.7 );}
 	th{background: rgba( 0 0 0 / 0.3 );}
-	.list_ui ul.arrow_list a:before {
-		border-left-color:rgba(255 255 255 / 0.9);
-	}
 	.more:after {
 		background: rgba(255 255 255 / 0.2);
 		box-shadow:0 0 0.15rem 0.5rem rgba(255 255 255 / 0.2);
