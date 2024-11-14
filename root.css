@@ -157,6 +157,10 @@ summary {
     list-style: none; /* 목록의 기본 스타일 제거 */
 }
 
+:where(span) {
+    display: inline-flex;
+}
+
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
     display: inline-flex; /* 멀티미디어 요소의 예측 가능한 디스플레이 설정 */
     aspect-ratio: auto; /* 콘텐츠의 종횡비 유지 */
