@@ -1,5 +1,5 @@
 @charset "utf-8";
-.pc_view {display: none;}
+.pc_view {display: none!important;}
 .mobile_view {}
 .dark_view {display: none;}
 .light_view {}
@@ -19,6 +19,7 @@ a {
 	padding:0.5rem;
 	display: flex;
 	text-underline-offset: 0.5rem;
+	align-items: center;
 }
 
 table {
@@ -52,9 +53,6 @@ h1 a {
 h1 img {
 	max-height: 3rem;
 }
-h2, h3 {
-	padding:1rem;
-}
 
 h2 {
 	font-size: 1.5rem;
@@ -86,7 +84,8 @@ h3 {
 	to {left:0rem;}
 
 }
-.gnb_menu_login {
+#gnb_menu_login {
+	display: inline-flex;
 	padding:1rem;
 	font-weight: 900;
 	font-size: 1.5rem;
@@ -94,34 +93,33 @@ h3 {
 #gnb_menu :where(ul,ol) {
 	flex-direction: column;
 }
-.gnb_menu .arrow_list a {
+#gnb_menu .arrow_list a {
 	border-bottom:1px solid #515151;
 	padding:0.5rem;
 	display: flex;
 	align-items: center;
 	padding-right: 10rem;
 }
-.gnb_menu a {
+#gnb_menu a {
 	width:100%;
 	color:#fff;
-	display: block;
 }
-.gnb_menu a img {
+#gnb_menu a img {
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
 	margin-right:0.5rem;
 }
-.gnb_menu img + span {
+#gnb_menu img + span {
 	display: inline-block;
 }
-.gnb_menu .sub_menu {
+#gnb_menu .sub_menu {
 	padding:1rem;
 }
-.gnb_menu .sub_menu a {
+#gnb_menu .sub_menu a {
 	padding:0.5rem 0rem;
 }
-.gnb_menu .sub_menu a::before {
+#gnb_menu .sub_menu a::before {
 	content: '';
 	display: inline-flex;
 	width: 0px;
@@ -131,7 +129,8 @@ h3 {
 	transition: border-left-color 0.2s;
 	vertical-align: middle;
 }
-.gnb_menu .sub_menu a:where(:hover, :focus)::before {
+
+#gnb_menu .sub_menu a:where(:hover, :focus)::before {
 	border-left-color: rgba(220 220 255 / 1);
 }
 
@@ -139,6 +138,7 @@ h3 {
 	background: transparent;
 	position: absolute;
 	top:0; right: 0;
+	padding:0.5rem;
 }
 #gnb_close img {
 	filter:invert(1);
@@ -185,9 +185,6 @@ section {
 	border: 1px solid rgba( 255, 255, 255, 0.18 );
 	border-radius: 2rem;
 }
-section.content_width {
-	margin: 3rem auto;
-}
 section.content_width:last-child {
 	margin-bottom: 0px;
 }
@@ -198,8 +195,8 @@ section.content_width:last-child {
 
 .page_number_ui {
 	display: flex;
-	flex-wrap: wrap;
 	padding-top:2rem;
+	flex-wrap: wrap;
 }
 .list_ui ul.arrow_list {
 	display: flex;
@@ -207,13 +204,15 @@ section.content_width:last-child {
 	padding-top:1rem;
 }
 .list_ui li {
-	justify-self: center;
+	display: flex;
 }
 .list_ui ul.arrow_list a {
 	display: block;
+	width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	min-height: 3rem;
+	padding:0rem;
+	line-height: 3rem;
 	border-bottom: rgba(255 255 255 / 0.5) 1px solid;
 	text-overflow: ellipsis;
 }
@@ -318,7 +317,10 @@ section.content_width:last-child {
 .CB_home {
 	margin: 0px auto;
 }
-.CB_home::before {
+.bar_menu_item > :where(a, button)[aria-current="page"] :where(span, svg) {
+	fill:;
+}
+.bar_menu_item > :where(a, button)[aria-current="page"]::before {
 	content: '';
 	width:80%;
 	background-color: #fff;
@@ -333,8 +335,8 @@ section.content_width:last-child {
 	justify-content: center;
 }
 .menu :where(img, svg) {
-	height:20px;
-	aspect-ratio: 1/1;
+	height:1.5rem;
+	width: 1.5rem;
 
 }
 
@@ -364,7 +366,7 @@ section.content_width:last-child {
 
 /*PC*/
 @media screen and (width >= 1400px) {
-	.pc_view {display: unset;}
+	.pc_view {display: inherit!important;}
 	main {
 		background-image: url("../../img/CB_bg_sky_pc.png");
 		padding:7rem 0px;
@@ -404,10 +406,10 @@ section.content_width:last-child {
 	section.content_width {
 		margin: 5rem auto;
 	}
-	.list_ui ul.arrow_list a:before {
+	.list_ui ul.arrow_list a::before {
 		margin:0px 0.5rem 0px 1rem;
 	}
-	.pc_view {display: unset;}
+	.pc_view {display: inherit!important;}
 
 }
 /*Mobile*/
@@ -419,9 +421,6 @@ section.content_width:last-child {
 }
 /*watch*/
 @media screen and (330px > width) {
-	.list_ui {
-		padding: 3rem 2.5rem;
-	}
 	.more {
 		top:3rem; right:2.5rem;
 	}
@@ -441,6 +440,12 @@ section.content_width:last-child {
 	}
 	th{background: rgba( 0 0 0 / 0.7 );}
 	th{background: rgba( 0 0 0 / 0.3 );}
+	.gnb_menu .sub_menu a::before {
+		border-left-color: rgba(0 0 10 / 0.3);
+	}
+	.gnb_menu .sub_menu a:where(:hover, :focus)::before {
+		border-left-color: rgba(0 0 10 / 0.3);
+	}
 	.more:after {
 		background: rgba(255 255 255 / 0.2);
 		box-shadow:0 0 0.15rem 0.5rem rgba(255 255 255 / 0.2);

@@ -6,15 +6,17 @@
 .main_content ul {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	justify-items: stretch;
+	justify-items: center;
 	justify-content: space-between;
 }
 .main_content a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-items: center;
 	margin:0.25rem;
 	text-align: center;
+	aspect-ratio: 1/1;
 }
 .main_content li:after {
 	content: '';
