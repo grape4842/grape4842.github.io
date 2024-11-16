@@ -158,7 +158,9 @@ summary {
 }
 
 :where(span) {
+    vertical-align: middle;
     display: inline-flex;
+    align-items: center;
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {

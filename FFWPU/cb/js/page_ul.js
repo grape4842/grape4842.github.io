@@ -1,3 +1,4 @@
+
 const totalPages = 30; // 총 페이지 수를 설정합니다.
 let maxVisiblePages; // 현재 뷰포트 크기에 따라 보여질 최대 페이지 수를 저장하는 변수입니다.
 let currentPage = 1; // 현재 페이지를 저장하는 변수입니다. 처음에는 1로 설정됩니다.
@@ -61,22 +62,31 @@ function renderPagination() {
     }
 
     // 페이지 번호를 생성하고 컨테이너에 추가합니다.
-    for (let i = start; i <= end; i++) {
+    for (let i = 1; i <= totalPages; i++) {
         const pageItem = document.createElement('li');
         const pageLink = document.createElement('a');
         pageLink.href = '#';
         pageLink.textContent = i;
-        if (i === currentPage) {
-            pageLink.className = 'current';
-            pageLink.setAttribute('aria-current', 'page');
+
+        if (i < start || i > end) {
+            // 페이지가 시작과 끝 범위를 벗어나면 숨깁니다.
+            pageItem.style.display = 'none';
         } else {
-            pageLink.className = '';
-            pageLink.removeAttribute('aria-current');
+            pageItem.style.display = 'flex'; // 표시합니다.
+            if (i === currentPage) {
+                pageLink.className = 'current';
+                pageLink.setAttribute('aria-current', 'page');
+            } else {
+                pageLink.className = '';
+                pageLink.removeAttribute('aria-current');
+            }
         }
+
         pageLink.addEventListener('click', (event) => {
             event.preventDefault();
             setPage(i); // 페이지 번호를 클릭하면 해당 페이지로 이동합니다.
         });
+        
         pageItem.appendChild(pageLink);
         pageNumbersContainer.appendChild(pageItem);
     }

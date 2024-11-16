@@ -1,135 +1,149 @@
 @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf)format('truetype');
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf)format('truetype');
 }
 
 @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc9.ttf)format('truetype');
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc9.ttf)format('truetype');
 }
 
 @font-face {
-    font-family: 'Google Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owps.ttf)format('truetype');
+	font-family: 'Google Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owps.ttf)format('truetype');
 }
 
 @font-face {
-    font-family: 'Google Sans';
-    font-style: normal;
-    font-weight: 500;
-    src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtzCwM.ttf)format('truetype');
+	font-family: 'Google Sans';
+	font-style: normal;
+	font-weight: 500;
+	src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtzCwM.ttf)format('truetype');
 }
 
+/*이 문서는 PC를 기준으로 작성되었습니다.*/
 section,
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 legend {
-    text-align: center;
-    width: 100%;
+	text-align: center;
+	width: 100%;
 }
 
 legend p {
-    margin: 2rem;
+	margin: 2rem 0px;
 }
 
 .login_box {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    border: none;
-    max-width: 420px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	border: none;
+	max-width: 420px;
 }
 
-.login_box :where(.input_box, button) {
-    width: 20rem;
+.input_box {
+	display: flex;
+	padding:1rem 0rem;
+	border-radius: 1rem;
+	min-width: 13rem;
+	max-width: 20rem;
 }
-
-.login_controls {
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-}
-
 .input_box :where(label, input) {
-    width: 100%;
+	min-width:5rem;
+	outline-offset: 2px;
+	background-color: transparent;
+	border: none;
+	border-bottom: #54b5 2px solid;
+	transition: background-color 0.1s, border-bottom 0.1s;
 }
+.input_box:has(input:focus) :where(label,input) {
+	background-color: rgba(255 255 255 / 0.1);
+	border-bottom: #54b 2px solid;
+}
+.login_controls {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-.input_box input {
-    height: 36px;
-    margin-bottom: 2rem;
 }
 
 .input_box label {
-    line-height: 2rem;
+	line-height: 2rem;
 }
 
 #login_button {
-    background: #1f97db;
-    color: white;
-    font-weight: 900;
-    width: 9rem;
-    height: 9rem;
-    aspect-ratio: 1/1;
-    border-radius: 0.5rem;
-    margin-left: 1rem;
+	background: #54b;
+	color: #fff;
+	font-weight: 900;
+	border-radius: 0.5rem;
+	margin-left:1rem;
+	height:5rem;
+	aspect-ratio: 1.618/1;
 
 }
 
 .login_account_menu {
-    padding: 0rem !important;
-    flex-direction: row !important;
-    justify-content: flex-start;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+.login_account_menu a {
+	gap:0.5rem;
+	padding:0rem;
+
 }
 
 .with_login {
-    width: unset;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	margin-top:2rem;
+	width: unset;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .with_login li {
-    text-align: center;
+	text-align: center;
 }
 
 .with_login li>*:last-child {
-    margin: 1rem auto;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 20rem;
+	margin: 0.25rem auto;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 20rem;
+	padding:0rem;
 }
 
 .with_login li>*:not(a):focus-within {
-    outline: solid black 1px;
+	outline: solid black 1px;
 }
 
 .with_login img {
-    width: auto;
-    height: 100%;
+	width: auto;
+	height: 100%;
 }
 
 /*.google_login>span {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 1rem;
-    font-size: 1.5rem;
-    background: #4285F4;
-    padding: 1rem 0px;
-    font-family: Google Sans, arial, sans-serif;
-    font-weight: 500;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 1rem;
+	font-size: 1.5rem;
+	background: #4285F4;
+	padding: 1rem 0px;
+	font-family: Google Sans, arial, sans-serif;
+	font-weight: 500;
 }
 */
 /*기기별 CSS*/
@@ -141,50 +155,54 @@ legend p {
 
 /*Mobile*/
 @media (340px <=width < 700px) {
-    .login_controls {
-        flex-direction: column;
-    }
+	.login_controls,.input_box {
+		flex-direction: column;
+	}
+	.input_box label,.input_box:has(input:focus) label {
+		background-color: transparent;
+		border:none;
+	}
+	.login_box :where(.input_box, button) {
+		width: 13rem;
+	}
 
-    .login_box :where(.input_box, button) {
-        width: 13rem;
-    }
+	.with_login li>*:last-child {
+		width: 13rem;
+	}
 
-    .with_login li>*:last-child {
-        width: 13rem;
-    }
-
-    #login_button {
-        width: 13rem;
-        height: 4rem;
-        aspect-ratio: auto;
-        margin: 0px;
-    }
+	#login_button {
+		width: 13rem;
+		height: 3rem;
+		aspect-ratio: auto;
+		margin: 1rem auto;
+	}
 
 }
 
 /*watch*/
 @media screen and (330px > width) {
-    .login_controls {
-        flex-direction: column;
-    }
+	.login_controls {
+		flex-direction: column;
+	}
 
-    .login_box :where(.input_box, button) {
-        width: 13rem;
-    }
+	.login_box :where(.input_box, button) {
+		width: 13rem;
+	}
 
-    .with_login li>*:last-child {
-        width: 13rem;
-    }
+	.with_login li>*:last-child {
+		width: 13rem;
+	}
 
-    #login_button {
-        width: 13rem;
-        height: 3rem;
-        aspect-ratio: auto;
-        margin: 0px;
-    }
+	#login_button {
+		width: 13rem;
+		height: 3rem;
+		aspect-ratio: auto;
+		margin: 0px;
+	}
 
 
 }
 
 /*Dark Mode Layout*/
-@media (prefers-color-scheme:dark) {}
+@media (prefers-color-scheme:dark) {
+}
