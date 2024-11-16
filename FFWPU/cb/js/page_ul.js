@@ -66,7 +66,13 @@ function renderPagination() {
         const pageLink = document.createElement('a');
         pageLink.href = '#';
         pageLink.textContent = i;
-        pageLink.className = (i === currentPage) ? 'current' : '';
+        if (i === currentPage) {
+            pageLink.className = 'current';
+            pageLink.setAttribute('aria-current', 'page');
+        } else {
+            pageLink.className = '';
+            pageLink.removeAttribute('aria-current');
+        }
         pageLink.addEventListener('click', (event) => {
             event.preventDefault();
             setPage(i); // 페이지 번호를 클릭하면 해당 페이지로 이동합니다.

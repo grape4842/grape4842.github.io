@@ -185,6 +185,9 @@ section {
 	border: 1px solid rgba( 255, 255, 255, 0.18 );
 	border-radius: 2rem;
 }
+section.content_width {
+	margin:3rem auto;
+}
 section.content_width:last-child {
 	margin-bottom: 0px;
 }
@@ -197,6 +200,9 @@ section.content_width:last-child {
 	display: flex;
 	padding-top:2rem;
 	flex-wrap: wrap;
+}
+.page_number_ui .hidden {
+    display: none;
 }
 .list_ui ul.arrow_list {
 	display: flex;
