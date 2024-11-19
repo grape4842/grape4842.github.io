@@ -62,13 +62,13 @@ legend p {
 	min-width:5rem;
 	outline-offset: 2px;
 	background-color: rgba(255 255 255 / 0.05);
-	border: none;
-	border-bottom: #94b5 2px solid;
+	border-bottom: #54b7 2px solid;
 	transition: background-color 0.2s, border-bottom 0.1s;
+	padding:0.25rem 0.5rem;
 }
 .input_box:has(input:focus) :where(label,input) {
 	background-color: rgba(255 255 255 / 0.15);
-	border-bottom: #94b 2px solid;
+	border-bottom: #54b 2px solid;
 }
 .login_controls {
 	width: 100%;
