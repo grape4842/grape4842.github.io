@@ -7,7 +7,6 @@
 .content_width {
 	width:90vw;
 	margin: 0px auto;
-	padding:0.5rem 0;
 }
 header, .bottom_box {
 	background-image: url("../../img/head_bg.jpg");
@@ -178,6 +177,7 @@ header, .bottom_box {
 }
 nav.menu {
 	position: sticky;
+	padding:0.5rem 0;
 	bottom:0px;
 }
 .area_title {
