@@ -77,12 +77,12 @@ h1 img {
 }
 
 h2 {
-	font-size: 1.8rem;
+	font-size: 2rem;
+	padding-bottom:1rem;
 	text-align: center;
 }
 h3 {
 	font-size:1.5rem;
-	padding-left:0px;
 }
 .gnb {
 display: flex;
