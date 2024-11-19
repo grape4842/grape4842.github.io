@@ -334,16 +334,16 @@ section.content_width:last-child {
 	justify-content: center;
 	align-items: center;
 }
-.CB_home {
-	margin: 0px auto;
+.bar_menu_item >:where(a, button) span {
+	line-height: 1.3rem;
 }
+
 .bar_menu_item > :where(a, button)[aria-current="page"] :where(svg, img) {
 	fill: #91287c;
 	filter: invert(45%) sepia(63%) saturate(1946%) hue-rotate(-70deg)
 	brightness(0.7);
 }
 .bar_menu_item > :where(a, button)[aria-current="page"] span {
-	line-height: 1.3rem;
 	background: linear-gradient(135deg, #c91f61 10%,#91287c 48%,#5c2e91 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
