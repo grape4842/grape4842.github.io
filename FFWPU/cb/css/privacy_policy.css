@@ -23,3 +23,6 @@ a {
 li {
     line-height: 2rem;
 }
+.stable li {
+    justify-content: flex-start;
+}
