@@ -75,9 +75,6 @@ input, button {
 fieldset {
 	border:none;
 }
-h1 {
-	padding:1rem 0rem;
-}
 h1 a {
 	font-size: 2rem;
 	display: inline-flex;
@@ -210,6 +207,9 @@ label[for="total_search"] img {
 	display: flex;
 	justify-content: space-between;
 }
+main {
+	min-height: 100vh;
+}
 main::before {
 	content: '';
 	display: block;
@@ -233,9 +233,6 @@ nav.menu {
     background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
     width: 100vw;
     padding:0.5rem 0rem;
-}
-.area_title {
-	font-size: 1.5rem;
 }
 
 ul.page_number_ui, .menu ul {
@@ -442,6 +439,9 @@ article {padding:1rem 0rem;}
 	.pc_view {display: inherit!important;}
 	main::before {
 		background-image: url("../../img/CB_bg_sky_pc.png");
+	}
+	h1 {
+		padding:1rem 0rem;
 	}
 	.content_width {
 		min-width: 980px;
