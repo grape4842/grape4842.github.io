@@ -43,18 +43,30 @@ input {
 input, button {
 	min-width:2rem;
 	min-height: 2rem;
+	max-height: 3rem;
 	vertical-align: middle;
 }
-:where(input[type="text"], input[type="password"]) {
+:where(input[type="text"], input[type="password"], input[type="search"]) {
+	min-width:5rem;
+	outline-offset: 2px;
+	background-color: rgba(255 255 255 / 0.05);
+	border: none;
+	border-bottom: #54b5 2px solid;
+	transition: background-color 0.2s, border-bottom 0.1s;
 	padding:0.25rem 0.5rem;
-
+}
+:where(input[type="text"], input[type="password"], input[type="search"]):where(:focus, :hover) {
+	background-color: rgba(255 255 255 / 0.15);
+	border-bottom: #54b 2px solid;
+}
+::placeholder {
+	color:rgba(20, 0, 20, 0.7);
 }
 fieldset {
 	border:none;
 }
 h1 {
 	padding:1rem 0rem;
-	text-align: center;
 }
 h1 a {
 	font-size: 2rem;
@@ -72,6 +84,24 @@ h2 {
 h3 {
 	font-size:1.3rem;
 	padding-left:0px;
+}
+.gnb {
+display: flex;
+justify-content:space-between;
+align-items: center;
+}
+label[for="total_search"] :where(input, button) {
+	background: transparent;
+}
+label[for="total_search"] img {
+	opacity: 0.7;
+	scale:0.8;
+	max-width: 2rem;
+	aspect-ratio: 1/1;
+}
+.gnb :where(button, input) {
+	min-width: 2.25rem;
+	min-height: 2.25rem;
 }
 #gnb_open {
 	z-index: 3;
@@ -442,20 +472,11 @@ section.content_width {
 
 }
 /*Mobile*/
-@media (340px <= width < 700px ) {
-	.gnb_menu summary {
-		width:58.94px;
-		height:58.94px;
-	}
-}
+
 /*watch*/
 @media screen and (330px > width) {
 	.more {
 		top:3rem; right:2.5rem;
-	}
-	.gnb_menu summary {
-		width:2.5rem;
-		aspect-ratio: 1/1;
 	}
 
 }
@@ -464,6 +485,12 @@ section.content_width {
 @media (prefers-color-scheme:dark) {
 	.light_view {display: none;}
 	.dark_view {display: unset;}
+		::placeholder {
+		color:rgba(255 220 255 / 0.7);
+	}
+	label[for="total_search"] img {
+		filter: invert(1);
+	}
 	section {
 		background: rgba( 0 0 0 / 0.7 );
 	}
