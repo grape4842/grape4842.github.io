@@ -6,14 +6,7 @@ fieldset {
 	border: 1px solid #e6e6e6;
 	margin: 2rem auto;
 }
-fieldset dt {
-	font-weight: 700;
-	padding:0.5rem 0rem;
-}
-fieldset dd {
-	padding:0.2rem;
-}
-form h3 {
+form h3 label {
 	display: flex;
 	justify-content: space-between;
 	padding:1rem;
@@ -31,21 +24,23 @@ form h3 {
 	display: flex;
 	gap:2rem;
 	justify-content: space-between;
+	margin:0rem auto;
 }
 .buttons button{
-	width:49%;
-	border-radius: 5px;
-	justify-content: center;
 	padding:0.5rem;
+	width:100%;
+	text-align: center;
 }
 .buttons .ok {
 	background-color: #242e62;
 	color:#fff;
+	font-weight: 900;
 }
 
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >= 1400px) {
+	.buttons {max-width:13rem;}
 
 }
 
@@ -69,7 +64,7 @@ form h3 {
 	fieldset {
 		border: 1px solid rgba(100 100 100 / 0.5);
 	}
-	form h3 {
+	form h3 label {
 		background-color:rgba(0 0 0 / 0.7);
 		border-bottom: 1px solid rgba(100 100 100 / 0.5);
 	}
