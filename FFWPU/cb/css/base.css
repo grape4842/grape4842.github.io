@@ -53,6 +53,7 @@ fieldset {
 	border:none;
 }
 h1 {
+	padding:1rem 0rem;
 	text-align: center;
 }
 h1 a {
