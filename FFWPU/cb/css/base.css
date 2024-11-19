@@ -18,6 +18,9 @@ header, .bottom_box {
 :where(.bar_menu a, #gnb_open, #gnb_menu) {
 	color:#fff;
 }
+footer {
+    margin-bottom: 4rem;
+}
 a {
 	padding:0.5rem;
 	display: flex;
@@ -176,9 +179,11 @@ header, .bottom_box {
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
 }
 nav.menu {
-	position: sticky;
-	padding:0.5rem 0;
-	bottom:0px;
+    position: fixed;
+    bottom: 0px;
+    Z-INDEX: 2;
+    background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
+    width: 100vw;
 }
 .area_title {
 	font-size: 1.5rem;
@@ -380,7 +385,6 @@ section.content_width {
 	color: rgba(255 255 255 / 0.7);
 	text-align: center;
 	font-size: 14px;
-	padding-bottom:0.5rem;
 	width: 100%;
 
 }
