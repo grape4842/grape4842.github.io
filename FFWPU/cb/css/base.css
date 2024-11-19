@@ -89,6 +89,7 @@ h1 img {
 
 h2 {
 	font-size: 1.8rem;
+	line-height: 2rem;
 	padding-bottom:1rem;
 	text-align: center;
 }
@@ -268,17 +269,12 @@ article {padding:1rem 0rem;}
 .page_number_ui .hidden {
 	display: none;
 }
-.list_ui ul.arrow_list {
+.arrow_list {
 	display: flex;
 	flex-direction: column;
 	padding-top:1rem;
 }
-.list_ui li {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.list_ui ul.arrow_list a {
+.arrow_list a {
 	display: block;
 	width: 100%;
 	white-space: nowrap;
@@ -289,7 +285,7 @@ article {padding:1rem 0rem;}
 	text-overflow: ellipsis;
 }
 
-.list_ui ul.arrow_list a::before {
+.arrow_list a::before {
 	content:'';
 	margin:0px 0rem 0px 0.3rem;
 	display: inline-flex;
@@ -300,7 +296,7 @@ article {padding:1rem 0rem;}
 	transition: border-left-color 0.2s;
 	vertical-align: middle;
 }
-.list_ui ul.arrow_list a:where(:hover, :focus)::before {
+.arrow_list a:where(:hover, :focus)::before {
 	border-left-color:rgba(0 0 20 / 0.7);
 }
 .page_number_ui {
@@ -458,6 +454,7 @@ article {padding:1rem 0rem;}
 	}
 	h2 {
 		font-size: 2rem;
+		line-height: 2.5rem;
 		padding-bottom:2rem;
 	}
 	h3 {
@@ -466,7 +463,7 @@ article {padding:1rem 0rem;}
 	.page_number_ui {
 		padding-top:3rem;
 	}
-	.list_ui ul.arrow_list {
+	.arrow_list {
 		flex-direction: column;
 		padding-top: 2rem;
 	}
@@ -490,7 +487,7 @@ article {padding:1rem 0rem;}
 	section.content_width {
 		margin: 5rem auto;
 	}
-	.list_ui ul.arrow_list a::before {
+	.arrow_list a::before {
 		margin:0px 0.5rem 0px 1rem;
 	}
 	.pc_view {display: inherit!important;}
@@ -527,13 +524,13 @@ article {padding:1rem 0rem;}
 	.gnb_menu .sub_menu a:where(:hover, :focus)::before {
 		border-left-color: rgba(0 0 10 / 0.3);
 	}
-	.list_ui ul.arrow_list a {
+	.arrow_list a {
 			border-bottom: rgba(220 220 255 / 0.2) 1px solid;
 		}
-	.list_ui ul.arrow_list a::before {
+	.arrow_list a::before {
 		border-left-color: rgba(220 220 255 / 0.5);
 	}
-	.list_ui ul.arrow_list a:where(:hover, :focus)::before {
+	.arrow_list a:where(:hover, :focus)::before {
 		border-left-color: rgba(220 220 255 / 0.9);
 	}
 	.more:after {
