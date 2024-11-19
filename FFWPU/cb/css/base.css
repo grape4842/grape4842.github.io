@@ -183,7 +183,7 @@ label[for="total_search"] img {
 	padding:0.5rem;
 }
 #gnb_close img {
-	filter:invert(1);
+	filter:invert(1) contrast(2);
 }
 .bar_menu {
 	text-align: center;
@@ -215,6 +215,7 @@ nav.menu {
     Z-INDEX: 2;
     background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
     width: 100vw;
+    padding:0.5rem 0rem;
 }
 .area_title {
 	font-size: 1.5rem;
