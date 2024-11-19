@@ -467,6 +467,9 @@ section.content_width:last-child {
 	.gnb_menu .sub_menu a:where(:hover, :focus)::before {
 		border-left-color: rgba(0 0 10 / 0.3);
 	}
+	.list_ui ul.arrow_list a {
+			border-bottom: rgba(220 220 255 / 0.2) 1px solid;
+		}
 	.list_ui ul.arrow_list a::before {
 		border-left-color: rgba(220 220 255 / 0.5);
 	}
