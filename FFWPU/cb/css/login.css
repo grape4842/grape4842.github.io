@@ -96,7 +96,8 @@ legend p {
 .login_account_menu {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: space-between;
+	gap:1rem;
 }
 .login_account_menu a {
 	gap:0.5rem;

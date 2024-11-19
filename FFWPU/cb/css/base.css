@@ -13,6 +13,7 @@ header, .bottom_box {
 	background-image: url("../../img/head_bg.jpg");
 	background-size: 100%;
 	min-height: 3rem;
+	z-index: 2;
 
 }
 :where(.bar_menu a, #gnb_open, #gnb_menu) {
@@ -159,14 +160,18 @@ h3 {
 	display: flex;
 	justify-content: space-between;
 }
-main {
+main::before {
+	content: '';
+	display: block;
+	position: fixed;
+	width: 100vw;
+	min-height: 100dvh;
+	top:0rem;
 	background-image: url("../../img/CB_bg_sky.webp");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
 	background-size: cover;
-	padding:3rem 0px;
-	min-height: 100dvh;
 }
 header, .bottom_box {
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
@@ -194,13 +199,8 @@ section {
 	border-radius: 2rem;
 }
 section.content_width {
-	margin:3rem auto;
-}
-section.content_width:last-child {
-	margin-bottom: 0px;
-}
-.list_ui {
 	padding:2rem 1.5rem;
+	margin:4rem auto;
 }
 .more{top:2rem; right:1.5rem;}
 
@@ -392,9 +392,8 @@ section.content_width:last-child {
 /*PC*/
 @media screen and (width >= 1400px) {
 	.pc_view {display: inherit!important;}
-	main {
+	main::before {
 		background-image: url("../../img/CB_bg_sky_pc.png");
-		padding:7rem 0px;
 	}
 	.content_width {
 		min-width: 980px;
