@@ -337,12 +337,24 @@ section.content_width:last-child {
 .CB_home {
 	margin: 0px auto;
 }
-.bar_menu_item > :where(a, button)[aria-current="page"] :where(span, svg) {
-	fill:;
+.bar_menu_item > :where(a, button)[aria-current="page"] :where(svg, img) {
+	fill: #91287c;
+	filter: invert(45%) sepia(63%) saturate(1946%) hue-rotate(-70deg)
+	brightness(0.7);
 }
+.bar_menu_item > :where(a, button)[aria-current="page"] span {
+	line-height: 1.3rem;
+	background: linear-gradient(135deg, #c91f61 10%,#91287c 48%,#5c2e91 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	font-weight: 900;
+}
+
 .bar_menu_item > :where(a, button)[aria-current="page"]::before {
 	content: '';
-	width:80%;
+	width:100%;
+	scale: 1.1;
 	background-color: #fff;
 	position: absolute;
 	top:0; left:0; bottom: 0; right: 0;
@@ -362,13 +374,6 @@ section.content_width:last-child {
 
 .CB_home svg {
 	fill:#91287c;
-}
-.CB_home span{
-	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-	font-weight: 900;
 }
 
 .copyright {
