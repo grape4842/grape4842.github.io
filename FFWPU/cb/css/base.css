@@ -171,7 +171,7 @@ main {
 header, .bottom_box {
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
 }
-.bottom_box {
+nav.menu {
 	position: sticky;
 	bottom:0px;
 }
