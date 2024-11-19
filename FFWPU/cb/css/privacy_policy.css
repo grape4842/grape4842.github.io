@@ -1,6 +1,8 @@
-ul,
-ol {
+ul, ol {
     padding: 0.5rem 0px;
+}
+article > :where(ul, ol) > li {
+    padding-left: 1rem;
 }
 
 dt {
@@ -25,4 +27,7 @@ li {
 }
 .stable li {
     justify-content: flex-start;
+}
+.subli li {
+    padding-left:1rem;
 }

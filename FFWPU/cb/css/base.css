@@ -94,31 +94,33 @@ h3 {
 	font-size:1.3rem;
 }
 .gnb {
-display: flex;
-justify-content:space-between;
-align-items: center;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
 }
+
 label[for="total_search"] {
 	background-color:rgba(0, 0, 0, 0.5);
-	padding:0.5rem;
+	padding:0.25rem;
 	border-radius: 10rem;
 	backdrop-filter: blur(1rem);
 }
-label[for="total_search"] :where(input, button) {
+:where(label[for="total_search"], .search_m_box) :where(input, button) {
 	background: transparent;
 	min-width: 2.25rem;
 	min-height: 2.25rem;
 	color:white;
+	border-radius: 10rem;
 }
-#total_search {
+#total_search ,#total_search_m {
 	color:#fff;
 	font-weight: 500;
 	font-size:18px;
 }
-#total_search::placeholder {
+:where(#total_search, #total_search_m)::placeholder {
 	color:#fdf;
 }
-label[for="total_search"] img {
+:where(label[for="total_search"], .search_m_box) img {
 	opacity: 0.8;
 	scale:0.8;
 	max-width: 2rem;

@@ -1,11 +1,4 @@
 .agree_please {text-align:center;}
-form {
-	width:100%;
-	}
-fieldset {
-	border: 1px solid #e6e6e6;
-	margin: 2rem auto;
-}
 form h3 label {
 	display: flex;
 	justify-content: space-between;
@@ -22,14 +15,17 @@ form h3 label {
 }
 .buttons {
 	display: flex;
+	text-align: center;
 	gap:2rem;
-	justify-content: space-between;
+	justify-content: center;
 	margin:0rem auto;
 }
-.buttons button{
+.buttons a{
 	padding:0.5rem;
-	width:100%;
+	min-width: 5rem;
 	text-align: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 .buttons .ok {
 	background-color: #242e62;
