@@ -185,7 +185,6 @@ nav.menu {
 }
 
 ul.page_number_ui, .menu ul {
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
 }
