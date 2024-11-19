@@ -51,13 +51,13 @@ input, button {
 	outline-offset: 2px;
 	background-color: rgba(255 255 255 / 0.05);
 	border: none;
-	border-bottom: #54b5 2px solid;
+	border-bottom: #94b5 2px solid;
 	transition: background-color 0.2s, border-bottom 0.1s;
 	padding:0.25rem 0.5rem;
 }
 :where(input[type="text"], input[type="password"], input[type="search"]):where(:focus, :hover) {
 	background-color: rgba(255 255 255 / 0.15);
-	border-bottom: #54b 2px solid;
+	border-bottom: #94b 2px solid;
 }
 ::placeholder {
 	color:rgba(20, 0, 20, 0.7);
