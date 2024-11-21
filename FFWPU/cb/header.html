@@ -16,12 +16,12 @@
 				<img src="../../icon/search_FILL1_wght400_GRAD200_opsz48.svg" alt="검색">
 			</button>
 		</label>
-		<div class="search_m_box">
-			<button type="button">
+		<div class="search_m_box" class="mobile_view">
+			<button type="button" popovertarget="search_m_area">
 				<img src="../../icon/search_FILL1_wght400_GRAD200_opsz48.svg" alt="검색">
 			</button>
-			<dialog id="search_m_area">
-				<label for="total_search_m" class="pc_view">
+			<dialog id="search_m_area" popover>
+				<label for="total_search_m">
 					<input placeholder="통합검색" type="search" name="" id="total_search_m">
 					<span class="hidden">통합검색</span>
 					<button type="submit">
