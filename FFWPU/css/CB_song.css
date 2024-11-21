@@ -1,0 +1,63 @@
+.video_list summary {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	border-bottom:rgba(150 150 150 / 0.3) solid 1px;
+}
+.video_list summary > *{
+	margin:1rem 0px;
+}
+.video_img {
+	width:40%;
+	display: inline-flex;
+}
+.video_title_area {
+	width:60%;
+	padding-left:1rem;
+}
+.video_time {
+	font-size:14px;
+	opacity: 0.9;
+}
+
+iframe {
+	border:none;
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+
+
+/*기기별 CSS*/
+/*PC*/
+@media screen and (width >= 1400px) {
+	.video_img {
+		width: 35%;
+	}
+	.video_name {
+		font-size:1.5rem;
+		line-height: 2rem;
+	}
+	.video_time {
+		font-size:1rem;
+	}
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+
+}
+
+/*Mobile*/
+@media (340px <= width < 700px ) {
+
+}
+
+/*watch*/
+@media screen and (330px > width) {
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+
+}

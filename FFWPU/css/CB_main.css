@@ -1,0 +1,99 @@
+.main_content {
+	margin-top: 0px!important;
+}
+.main_content ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding:2rem 1rem;
+}
+.main_content li {
+	margin-bottom: 1.5rem;
+	width:33%;
+}
+.main_content li:nth-child(2) {
+	padding:0px 0.5rem;
+}
+.main_content li:nth-child(-n+3) {
+/*	margin-top:1.5rem;*/
+}
+.main_content li:nth-child(n+7) {
+	margin-bottom: 0.5rem;
+}
+.main_content a {
+	align-items: center;
+	padding-top:0.5rem;
+}
+.main_content p {
+	text-align: center;
+	padding-bottom: 0.5rem;
+}
+.main_content li:after {
+	content: '';
+	height:30%;
+	width:1px;
+	display: block;
+	background: rgba(0 0 0 / 0.9);
+	position: absolute;
+	bottom:33%;
+	right: -1px;
+}
+.main_content li:nth-child(3n)::after {
+	display: none;
+}
+
+.main_content img {
+	width:45%;
+	padding-bottom:0px;
+	max-width: 80px;
+	vertical-align: bottom;
+	filter: brightness(0.1);
+}
+.main_content span {
+	text-align: center;
+	width: 100%;
+}
+
+/*기기별 CSS*/
+/*PC*/
+@media screen and (width >= 1400px) {
+	.main_content ul {
+		padding:2.5rem 0px 3rem;
+	}
+	.main_content a {
+		margin: 1rem;
+		padding:3rem 0rem;
+	}
+
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+	.main_content ul {
+		padding:4rem 1rem;
+	}
+	.main_content li:nth-child(n+7) {
+		margin-bottom: 1rem;
+	}
+}
+
+/*Mobile*/
+@media (340px <= width < 700px ) {
+	.main_content li {aspect-ratio: 1/1}
+}
+/*watch*/
+@media screen and (330px > width) {
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	.main_content li:after {
+		background: rgba(255 255 255 / 0.9);
+	}
+	.main_content img {
+		filter: brightness(1);
+	}
+}

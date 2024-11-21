@@ -1,0 +1,483 @@
+@charset "utf-8";
+.pc_view {display: none;}
+.mobile_view {}
+.dark_view {display: none;}
+.light_view {}
+
+.content_width {
+	width:90vw;
+	max-width: 320px;
+	margin: 0px auto;
+}
+table {
+	border:none;
+	margin:1rem 0px;
+}
+th, td {
+	padding:0.5rem;
+	border:solid 1px;
+}
+dl {padding:0.5rem 0px;}
+input {
+	accent-color: #c91f61;
+}
+input, button {
+	min-width:1.5rem;
+	min-height: 1.5rem;
+	vertical-align: middle;
+}
+fieldset {
+	border:none;
+}
+h1 {
+	text-align: center;
+}
+h1 a {
+	font-size: 2rem;
+	width: 40%;
+	padding:40px 0px 20px!important;
+	display: inline-flex;
+	justify-content: center;
+}
+h1 img {
+	width: 100%;
+	height: auto;
+	max-width: 230px;
+	max-height: 75px;
+}
+h2, h3 {
+	padding:1rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	text-align: center;
+}
+h3 {
+	font-size:1.3rem;
+	padding-left:0px;
+}
+
+.gnb_menu {
+	position: absolute;
+	top:0px;
+	left:0; right: 0;
+	margin:0px auto;
+	transition: all 0.2s;
+}
+#gnb_open {
+	z-index: 3;
+	max-width: 44px;
+	max-height: 44px;
+	margin:40px auto 20px;
+	aspect-ratio: 1/1;
+	background: transparent;
+}
+#gnb_menu {
+	position: fixed;
+	left:-100rem; top:0;
+	transition: display 0.2s;
+	background:#353539;
+	box-shadow:0px 0px 15px #464646;
+	z-index: 2;
+	animation-duration: 0.2s;
+	animation-name: open_gnb;
+	animation-fill-mode: forwards;
+}
+
+#gnb_menu img {
+	scale:0.7;
+	max-width: 75px;
+	max-height: 75px;
+	aspect-ratio: 1/1;
+}
+
+@keyframes open_gnb{
+	from {left:-100rem;}
+	to {left:0rem;}
+
+}
+.gnb_menu_login {
+	padding:1rem;
+	font-weight: 900;
+	font-size: 1.5rem;
+}
+.gnb_menu .arrow_list a {
+	border-bottom:1px solid #515151;
+	padding:0.5rem;
+	display: flex;
+	align-items: center;
+	padding-right: 10rem;
+}
+.gnb_menu a {
+	width:100%;
+	color:#fff;
+	display: block;
+}
+.gnb_menu a img {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right:0.5rem;
+}
+.gnb_menu img + span {
+	display: inline-block;
+}
+.gnb_menu .sub_menu {
+	padding:1rem;
+}
+.gnb_menu .sub_menu a {
+	padding:0.5rem 0rem;
+}
+.gnb_menu .sub_menu a:before {
+	opacity: 0.3;
+	content: '';
+	display: inline-flex;
+	width: 0px;
+	height: 0px;
+	border: solid transparent 0.5rem;
+	border-left-color: rgba(0 0 0 / 0.7);
+	vertical-align: middle;
+}
+
+#gnb_close {
+	background: transparent;
+	position: absolute;
+	top:0; right: 0;
+}
+#gnb_close img {
+	filter:invert(1);
+}
+.bar_menu {
+	text-align: center;
+	background: #350D3F;
+}
+.bar_menu > div {
+	display: flex;
+	justify-content: space-between;
+}
+.bar_menu a {
+	color:#fff;
+	width: 100%;
+	padding:1rem;
+}
+.bar_menu a:first-child {
+	text-align: left;
+	padding-left:0px;
+}
+.bar_menu a:last-child {
+	text-align: right;
+	padding-right:0px;
+}
+main {
+	background-image: url("../img/CB_bg_sky.webp");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	padding:3rem 0px;
+	min-height: 100dvh;
+}
+header, .bottom_box {
+	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
+}
+.bottom_box {
+	position: sticky;
+	bottom:0px;
+}
+.area_title {
+	font-size: 1.5rem;
+}
+
+a {
+	display: block;
+	text-underline-offset: 0.5rem;
+}
+a:not(main a) {
+	padding: 1rem;
+}
+span {display: block;}
+ul.page_number_ui, .menu ul {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+section {
+	background: rgba( 255 255 255 / 0.7 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur( 2px );
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	border-radius: 2rem;
+}
+section.content_width {
+	margin: 3rem auto;
+}
+section.content_width:last-child {
+	margin-bottom: 0px;
+}
+.list_ui {
+	padding:2rem;
+}
+.page_number_ui {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top:2rem;
+}
+.list_ui ul.arrow_list {
+	flex-direction: column;
+	padding-top:1rem;
+}
+.list_ui li {
+	justify-self: center;
+}
+.list_ui ul.arrow_list a {
+	white-space: nowrap;
+	overflow: hidden;
+	min-height: 3rem;
+	line-height: 3rem;
+	border-bottom: rgba(255 255 255 / 0.5) 1px solid;
+	text-overflow: ellipsis;
+}
+
+.list_ui ul.arrow_list a:before {
+	opacity: 0.3;
+	content:'';
+	margin:0px 0rem 0px 0.3rem;
+	display: inline-flex;
+	width:0px;
+	height:0px;
+	border:solid transparent 0.5rem;
+	border-left-color:rgba(0 0 0 / 0.7);
+	vertical-align: middle;
+}
+.list_ui ul.arrow_list a:where(:hover, :focus)::before {
+	opacity: 1;
+}
+.page_number_ui {
+	display: flex;
+	justify-content: center;
+}
+.page_number_ui ol {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.page_number_ui a {
+	margin:0px 0.5rem;
+	border:1px #c91f61 solid;
+}
+.page_number_ui :where(a, button) {
+	width:2rem;
+	height: 2rem;
+	aspect-ratio: 1/1;
+	text-align: center;
+	line-height: 2rem;
+}
+.page_number_ui :disabled {visibility: hidden;}
+.page_number_ui :where(a[aria-current], button) {
+	margin:0rem 0.5rem;
+	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);}
+
+	.more {
+		outline-offset:0.5rem;
+		line-height: 1.5rem;
+		font-size:2rem;
+		position: absolute;
+		top:2rem; right:2rem;
+		width: 1.5rem;
+		height: 1.5rem;
+		text-align: center;
+		border-radius: 10rem;
+		text-decoration: none;
+	}
+	.more:where(:hover, :focus) {text-decoration: none!important;}
+	.more::after {
+		opacity: 0;
+		content: '';
+		display: flex;
+		width:100%; height: 100%;
+		position: absolute;
+		top:0px; right: 0px; bottom: 0px; left: 0px;
+		margin:auto;
+		border-radius: 10rem;
+		background: rgba(0 0 0 / 0.2);
+		box-shadow:0 0 0.15rem 0.5rem rgba(0 0 0 / 0.2);
+		transition: 0.2s opacity;
+	}
+
+	.more:where(:focus, :hover)::after {
+		opacity: 1;
+	}
+
+/*하단 메뉴바*/
+.menu {
+	color:white;
+	justify-content: space-between;
+	text-align: center;
+	position:sticky;
+	bottom:0px;
+	z-index: 2;
+}
+.menu li {
+	display: flex;
+	justify-content: center;
+}
+.menu li:nth-child(2) {
+	margin:0px 1rem;
+}
+.menu a {
+	aspect-ratio: 1/1;
+	width:100%;
+	padding:0px;
+	max-width: 6rem;
+	border-radius: 100rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.menu span {
+	padding-top:0.5rem;
+}
+.CB_home {
+	margin: 0px auto;
+}
+.CB_home:before {
+	content: '';
+	width:80%;
+	background-color: #fff;
+	position: absolute;
+	top:0; left:0; bottom: 0; right: 0;
+	margin: auto;
+	aspect-ratio: 1/1;
+	border-radius: 100rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.menu :where(img, svg) {
+	width:20px;
+}
+
+.CB_home svg {
+	fill:#91287c;
+}
+.CB_home span{
+	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	font-weight: 900;
+}
+
+.copyright {
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	padding-bottom:0.5rem;
+
+	opacity: 0.7;
+
+}
+
+
+/*기기별 CSS*/
+
+/*PC*/
+@media screen and (width >= 1400px) {
+	.pc_view {display: block;}
+	.bar_menu a {
+		text-align: center;
+		margin:1rem;
+	}
+	main {
+		background-image: url("../img/CB_bg_sky_pc.png");
+		padding:7rem 0px;
+	}
+
+	section {border-radius: 4rem;}
+	.content_width {
+		max-width: 980px;
+	}
+	section.content_width {
+		margin: 7rem auto;
+	}
+	.list_ui {
+		padding:4rem;
+	}
+	.page_number_ui {
+		padding-top:4rem;
+	}
+	.list_ui ul.arrow_list {
+		flex-direction: column;
+		padding-top: 2rem;
+	}
+	.more {
+		top:4rem;
+		right:4rem;
+	}
+
+
+}
+
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+	.content_width {
+		max-width:692px;
+	}
+	main {
+		background-image: url("../img/CB_bg_sky_pc.png");
+		padding:5rem 0px;
+	}
+	section.content_width {
+		margin: 5rem auto;
+	}
+	.list_ui ul.arrow_list a:before {
+		margin:0px 0.5rem 0px 1rem;
+	}
+	.pc_view {display: unset;}
+
+}
+/*Mobile*/
+@media (340px <= width < 700px ) {
+	.gnb_menu summary {
+		width:58.94px;
+		height:58.94px;
+	}
+}
+/*watch*/
+@media screen and (330px > width) {
+	.list_ui {
+		padding: 1rem;
+	}
+	.gnb_menu summary {
+		width:39.87px;
+		height:39.87px;
+	}
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
+	.light_view {display: none;}
+	.dark_view {display: unset;}
+	section {
+		background: rgba( 0 0 0 / 0.7 );
+	}
+	th{background: rgba( 0 0 0 / 0.7 );}
+	th{background: rgba( 0 0 0 / 0.3 );}
+	.list_ui ul.arrow_list a:before {
+		border-left-color:rgba(255 255 255 / 0.9);
+	}
+	.more:after {
+		background: rgba(255 255 255 / 0.2);
+		box-shadow:0 0 0.15rem 0.5rem rgba(255 255 255 / 0.2);
+	}
+	.gnb_menu .sub_menu a:before {
+    border-left-color: rgba(255 255 255 / 0.9);
+	}
+
+}
