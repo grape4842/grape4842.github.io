@@ -3,12 +3,16 @@ form h3 {
 	padding:0rem;
 }
 form h3 label {
+	font-size: 1rem;
 	display: flex;
 	justify-content: space-between;
 	padding:1rem;
 	background: #f1f1f1;
 	border-bottom: 1px solid #e6e6e6;
 	font-weight: 700;
+}
+form h3 label input {
+	min-width: 1.5rem;
 }
 fieldset {
 	margin:4rem auto;
@@ -44,26 +48,33 @@ fieldset {
 .join_step {
 	display: flex;
 	justify-content:flex-end;
+	padding-bottom: 1rem;
 }
 .join_step li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin:0 1rem;
+	margin:0 0.5rem;
 	flex-direction: column;
 }
+.join_step li p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+}
 .join_step li .step_num {
-	width: 2.5rem;
-	text-align: center;
+	width: 2rem;
+	padding:0rem;
 	border-radius: 5rem;
 	aspect-ratio: 1/1;
-	padding:0.5rem;
 	background-color: rgba(70 70 70 / 0.7);
 }
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >= 1400px) {
-
+	form h3 label {font-size:1.2rem;}
+	.join_step li {margin:0rem 1rem;}
 }
 
 /*700px〜1200px iPad*/
