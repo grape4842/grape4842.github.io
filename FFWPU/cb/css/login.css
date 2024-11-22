@@ -39,10 +39,6 @@ legend {
 	width: 100%;
 }
 
-legend p {
-	margin: 2rem 0px;
-}
-
 .login_box {
 	display: inline-flex;
 	flex-direction: column;
