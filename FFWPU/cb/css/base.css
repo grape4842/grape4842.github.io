@@ -121,6 +121,7 @@ dialog {
 }
 .modal_content {
 	margin:0 auto;
+	justify-content: center;
 }
 .gnb {
 	display: flex;
