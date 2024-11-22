@@ -8,7 +8,7 @@
 	width:90vw;
 	margin: 0px auto;
 }
-header, .bottom_box :where(nav, footer) {
+header, .bottom_box :where(.menu, footer) {
 	background-image: url("../../img/head_bg.jpg");
 	background-size: 100%;
 	min-height: 3rem;
