@@ -16,16 +16,17 @@ form h3 label {
 .buttons {
 	display: flex;
 	text-align: center;
-	gap:2rem;
-	justify-content: center;
+	justify-content: space-evenly;
 	margin:0rem auto;
 }
 .buttons a{
+	min-height: 3rem;
+	min-width: 3rem;
 	padding:0.5rem;
-	min-width: 5rem;
 	text-align: center;
 	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(70 70 70 / 0.7);
+	aspect-ratio: 1.618/1;
 }
 .buttons .ok {
 	background-color: #242e62;
@@ -36,7 +37,6 @@ form h3 label {
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >= 1400px) {
-	.buttons {max-width:13rem;}
 
 }
 

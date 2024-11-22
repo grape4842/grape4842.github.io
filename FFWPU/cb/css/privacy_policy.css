@@ -1,21 +1,13 @@
-ul, ol {
-    padding: 0.5rem 0px;
-}
 article > :where(ul, ol) > li {
     padding-left: 1rem;
 }
 
 dt {
     font-size: 1.1rem;
-    font-weight: 900;
-}
-
-p {
-    padding: 0.5rem 0px;
 }
 
 .dpb.tcol_b {
-    font-weight: 900;
+    font-weight: 600;
 }
 
 a {

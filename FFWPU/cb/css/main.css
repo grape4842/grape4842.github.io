@@ -36,7 +36,7 @@
 	max-width: 5rem;;
 	filter: brightness(0.1);
 	vertical-align: text-bottom;
-	aspect-ratio: 1.58/1;
+	aspect-ratio: 1.618/1;
 }
 .main_content span {
 	display: block;
@@ -60,7 +60,7 @@
 		display: flex!important;
 	}
 	.main_content a {
-		aspect-ratio: 1.58/1;
+		aspect-ratio: 1.618/1;
 		margin:0rem 0.25rem;
 		height: 4.5rem;
 	}

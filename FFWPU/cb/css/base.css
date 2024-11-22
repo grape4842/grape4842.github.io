@@ -44,17 +44,24 @@ fieldset {
 	margin: 2rem auto;
 }
 dl {padding:1rem 0px;}
-dt {font-weight: 700;}
+dt {font-weight: 600;}
 dd {
 	padding:0.25rem 0rem;
 	padding-left:1rem;
 }
+dd :where(ol, ul, p) {
+	padding-left: 0.5rem;
+}
 input {
 	accent-color: #c91f61;
-}
-input, button {
 	min-width:2rem;
 	min-height: 2rem;
+}
+button {
+	min-width:3rem;
+	min-height:3rem;
+}
+input, button {
 	max-height: 3rem;
 	vertical-align: middle;
 }
@@ -98,7 +105,6 @@ h3 {
 	justify-content:space-between;
 	align-items: center;
 }
-
 label[for="total_search"] {
 	background-color:rgba(0, 0, 0, 0.5);
 	padding:0.25rem;
@@ -252,7 +258,7 @@ ul.page_number_ui, .menu ul {
 
 section {
 	border-radius: 2rem;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.66);
 	box-shadow: 0.5rem 0.5rem 1rem 0 rgba(10, 0, 30, 0.2);
 	backdrop-filter: blur(1rem) saturate(1.5);
 	-webkit-backdrop-filter: blur(1rem) saturate(1.5);
@@ -269,9 +275,6 @@ article {padding:1rem 0rem;}
 	display: flex;
 	padding-top:2rem;
 	flex-wrap: wrap;
-}
-.page_number_ui button {
-	color:#fff;
 }
 .page_number_ui .hidden {
 	display: none;
@@ -310,18 +313,12 @@ article {padding:1rem 0rem;}
 	display: flex;
 	justify-content: center;
 }
-.page_number_ui :where(a, button) {
-	margin:0px 0.25rem;
-}
 .page_number_ui ol {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 }
 .page_number_ui a {
-	border:1px #c91f61 solid;
-}
-.page_number_ui :where(a, button) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -330,10 +327,14 @@ article {padding:1rem 0rem;}
 	aspect-ratio: 1/1;
 	text-align: center;
 	line-height: 2rem;
+	margin:0px 0.25rem;
+	border:1px #c91f61 solid;
 }
 .page_number_ui :disabled {display: none;}
-.page_number_ui :where(a[aria-current], button) {
-	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);}
+.page_number_ui :where(a[aria-current], .page_arrow_control) {
+	color: #fff;
+	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
+}
 
 	.more {
 		outline-offset:0.5rem;
@@ -525,7 +526,7 @@ article {padding:1rem 0rem;}
 		color:rgba(255 220 255 / 0.7);
 	}
 	section {
-		background: rgba(0 0 0 / 0.5);
+		background: rgba(0 0 0 / 0.66);
 		border: 1px solid rgba(255 255 255 / 0.2);
 	}
 	th{background: rgba( 0 0 0 / 0.7 );}
