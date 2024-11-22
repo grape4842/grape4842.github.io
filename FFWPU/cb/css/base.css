@@ -116,6 +116,7 @@ dialog {
 }
 .modal_header {
 	max-height: 3rem;
+	font-size:1.5rem;
 	border-bottom: rgba(255 255 255 / 0.2);
 }
 .modal_content {
