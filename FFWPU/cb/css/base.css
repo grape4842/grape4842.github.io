@@ -8,7 +8,7 @@
 	width:90vw;
 	margin: 0px auto;
 }
-header, .bottom_box {
+header, .bottom_box :where(nav, footer) {
 	background-image: url("../../img/head_bg.jpg");
 	background-size: 100%;
 	min-height: 3rem;
@@ -19,7 +19,10 @@ header, .bottom_box {
 	color:#fff;
 }
 footer {
-	margin-bottom: 4rem;
+	position: absolute;
+	bottom:4rem;
+	width: 100vw;
+	padding:1rem;
 }
 a {
 	padding:0.5rem;
@@ -239,9 +242,6 @@ main::before {
 	background-attachment: fixed;
 	background-position: center center;
 	background-size: cover;
-}
-header, .bottom_box {
-	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
 }
 nav.menu {
 	position: fixed;
