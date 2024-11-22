@@ -275,7 +275,7 @@ ul.page_number_ui, .menu ul {
 	justify-content: space-between;
 }
 
-section, dialog {
+section, .modal_popup {
 	border-radius: 2rem;
 	background: rgba(255, 255, 255, 0.66);
 	box-shadow: 0.5rem 0.5rem 1rem 0 rgba(10, 0, 30, 0.2);
@@ -554,7 +554,7 @@ article {padding:1rem 0rem;}
 	::placeholder {
 		color:rgba(255 220 255 / 0.7);
 	}
-	section, dialog {
+	section, .modal_popup {
 		background: rgba(0 0 0 / 0.66);
 		border: 1px solid rgba(255 255 255 / 0.2);
 	}
