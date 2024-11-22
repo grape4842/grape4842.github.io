@@ -1,4 +1,7 @@
 .agree_please {text-align:center;}
+form h3 {
+	padding:0rem;
+}
 form h3 label {
 	display: flex;
 	justify-content: space-between;
@@ -28,12 +31,32 @@ form h3 label {
 	background-color: rgba(70 70 70 / 0.7);
 	aspect-ratio: 1.618/1;
 }
-.buttons .ok {
+
+.buttons .ok, .join_step li[aria-current="step"] .step_num {
 	background-color: #242e62;
 	color:#fff;
 	font-weight: 900;
 }
-
+.join_step li[aria-current="step"] {font-weight: 900;}
+.join_step {
+	display: flex;
+	justify-content:flex-end;
+}
+.join_step li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:0 1rem;
+	flex-direction: column;
+}
+.join_step li .step_num {
+	width: 2.5rem;
+	text-align: center;
+	border-radius: 5rem;
+	aspect-ratio: 1/1;
+	padding:0.5rem;
+	background-color: rgba(70 70 70 / 0.7);
+}
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >= 1400px) {
