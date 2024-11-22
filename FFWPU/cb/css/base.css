@@ -238,6 +238,7 @@ label[for="total_search"] {
 }
 main {
 	min-height: 100vh;
+	margin-bottom: 10rem;
 }
 main::before {
 	content: '';
