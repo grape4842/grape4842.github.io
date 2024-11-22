@@ -153,6 +153,7 @@ label[for="total_search"], label[for="total_search_m"] {
 	color:#fdf;
 }
 :where(label[for="total_search"], .search_m_box) img {
+	background: transparent;
 	opacity: 0.8;
 	scale:0.8;
 	max-width: 2rem;
