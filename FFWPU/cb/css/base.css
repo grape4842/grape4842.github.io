@@ -56,8 +56,8 @@ dd :where(ol, ul, p) {
 }
 input {
 	accent-color: #c91f61;
-	min-width:2rem;
-	min-height: 2rem;
+	min-width:1.5rem;
+	min-height: 1.5rem;
 }
 button {
 	min-width:3rem;

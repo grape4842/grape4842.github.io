@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>회원가입(2. 정보 입력) - 천보가정교회</title>
+	<link rel="stylesheet" type="text/css" href="../../root.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/signup.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta property="og:description" content="">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="../img/Card.webp">
+	<meta name="theme-color=" content="#855AB6">
+	<link rel="apple-touch-icon" sizes="57x57" href="../img/ffwpu_logo_favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../img/ffwpu_logo_favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../img/ffwpu_logo_favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../img/ffwpu_logo_favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../img/ffwpu_logo_favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../img/ffwpu_logo_favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../img/ffwpu_logo_favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../img/ffwpu_logo_favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/ffwpu_logo_favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../img/ffwpu_logo_favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../img/ffwpu_logo_favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../img/ffwpu_logo_favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../img/ffwpu_logo_favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preload" href="../../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+</head>
+
+<body>
+	<script type="text/javascript" src="../../include_script.js"></script>
+	<header w3-include-html="header.html"></header>
+	<main>
+		<section class="content_width">
+			<ol class="join_step">
+				<li aria-current="step">
+					<p class="step_num">1</p>
+					<p>약관 동의</p>
+				</li>
+				<li>
+					<p class="step_num">2</p>
+					<p>정보 입력</p>
+				</li>
+				<li>
+					<p class="step_num">3</p>
+					<p>가입 완료</p>
+				</li>
+			</ol>
+			<h2>회원가입</h2>
+			<p class="agree_please">회원가입에 필요한 정보를 입력해주세요.</p>
+			<form accept-charset="utf-8" method="post" action="/membership/join_submit.php">
+				<fieldset>
+					<legend>
+						<h3>기본정보(필수)</h3>
+					</legend>
+					<ol>
+						<li>
+							<label for="">
+								<span class="label_text"></span>
+								<input id="" type="text">
+							</label>
+							<label for="email_push">
+								<input type="checkbox" id="email_push">
+								<span>이메일을 수신하겠습니다.</span>
+							</label>
+						</li>
+						<li>
+							<label for="">
+								<span class="label_text"></span>
+								<input id="" type="text">
+							</label>
+						</li>
+						<li>
+							<label for="">
+								<span class="label_text"></span>
+								<input id="" type="text">
+							</label>
+						</li>
+						<li>
+							<label for="">
+								<span class="label_text"></span>
+								<input id="" type="text">
+							</label>
+						</li>
+					</ol>
+				</fieldset>
+				<fieldset>
+					<legend>
+						<h3>추가정보(선택)</h3>
+						<ol>
+							<li>
+								<label>
+									<span></span>
+									<input type="text">
+								</label>
+							</li>
+							<li>
+								<label>
+									<span></span>
+									<input type="text">
+								</label>
+							</li>
+						</ol>
+					</legend>
+				</fieldset>
+			</form>
+		</section>
+	</main>
+	<div class="bottom_box" w3-include-html="footer.html"></div>
+</body>
+</html>

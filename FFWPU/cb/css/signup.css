@@ -2,11 +2,13 @@
 form h3 {
 	padding:0rem;
 }
+form h3 label, .policy_box {
+	padding:0.5rem;
+}
 form h3 label {
 	font-size: 1rem;
 	display: flex;
 	justify-content: space-between;
-	padding:1rem;
 	background: #f1f1f1;
 	border-bottom: 1px solid #e6e6e6;
 	font-weight: 700;
@@ -15,13 +17,15 @@ form h3 label input {
 	min-width: 1.5rem;
 }
 fieldset {
-	margin:4rem auto;
+	margin:2rem auto;
+}
+.policy_box dl {
+	padding:0rem;
 }
 .policy_box {
 	background-color: rgba(255 258 255 / 0.4);
 	aspect-ratio: 4/1;
 	overflow-y: scroll;
-	padding:0rem 1rem;
 }
 .buttons {
 	display: flex;
@@ -44,7 +48,9 @@ fieldset {
 	color:#fff;
 	font-weight: 900;
 }
-.join_step li[aria-current="step"] {font-weight: 900;}
+.join_step li[aria-current="step"] {
+	font-weight: 900;
+}
 .join_step {
 	display: flex;
 	justify-content:flex-end;
@@ -75,6 +81,13 @@ fieldset {
 @media screen and (width >= 1400px) {
 	form h3 label {font-size:1.2rem;}
 	.join_step li {margin:0rem 1rem;}
+	form h3 label, .policy_box {
+		padding:1rem;
+	}
+	fieldset {
+		margin:4rem auto;
+	}
+
 }
 
 /*700px〜1200px iPad*/
