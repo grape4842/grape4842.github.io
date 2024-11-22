@@ -10,6 +10,9 @@ form h3 label {
 	border-bottom: 1px solid #e6e6e6;
 	font-weight: 700;
 }
+fieldset {
+	margin:4rem auto;
+}
 .policy_box {
 	background-color: rgba(255 258 255 / 0.4);
 	aspect-ratio: 4/1;
