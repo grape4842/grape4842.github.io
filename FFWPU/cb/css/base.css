@@ -255,8 +255,7 @@ main::before {
 nav.menu {
 	position: fixed;
 	bottom: 0px;
-	Z-INDEX: 2;
-	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
+	Z-INDEX: 3;
 	width: 100vw;
 	padding:0.5rem 0rem;
 }
