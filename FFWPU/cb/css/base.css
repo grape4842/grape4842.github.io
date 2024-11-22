@@ -19,7 +19,7 @@ header, .bottom_box {
 	color:#fff;
 }
 footer {
-    margin-bottom: 4rem;
+	margin-bottom: 4rem;
 }
 a {
 	padding:0.5rem;
@@ -38,7 +38,7 @@ th, td {
 }
 form {
 	width:100%;
-	}
+}
 fieldset {
 	border: 1px solid #e6e6e6;
 	margin: 2rem auto;
@@ -237,12 +237,12 @@ header, .bottom_box {
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%); 
 }
 nav.menu {
-    position: fixed;
-    bottom: 0px;
-    Z-INDEX: 2;
-    background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
-    width: 100vw;
-    padding:0.5rem 0rem;
+	position: fixed;
+	bottom: 0px;
+	Z-INDEX: 2;
+	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
+	width: 100vw;
+	padding:0.5rem 0rem;
 }
 
 ul.page_number_ui, .menu ul {
@@ -251,12 +251,12 @@ ul.page_number_ui, .menu ul {
 }
 
 section {
-	background: rgba( 255 255 255 / 0.7 );
-	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-	backdrop-filter: blur(2px);
-	-webkit-backdrop-filter: blur( 2px );
-	border: 1px solid rgba( 255, 255, 255, 0.18 );
 	border-radius: 2rem;
+	background: rgba(255, 255, 255, 0.5);
+	box-shadow: 0.5rem 0.5rem 1rem 0 rgba(10, 0, 30, 0.2);
+	backdrop-filter: blur(1rem) saturate(1.5);
+	-webkit-backdrop-filter: blur(1rem) saturate(1.5);
+	border: 1px solid rgba(255, 255, 255, 0.7);
 }
 section.content_width {
 	padding:2rem 1.5rem;
@@ -447,6 +447,7 @@ article {padding:1rem 0rem;}
 /*PC*/
 @media screen and (width >= 1400px) {
 	.pc_view {display: inherit!important;}
+	.mobile_view {display: none;}
 	main::before {
 		background-image: url("../../img/CB_bg_sky_pc.png");
 	}
@@ -520,11 +521,12 @@ article {padding:1rem 0rem;}
 @media (prefers-color-scheme:dark) {
 	.light_view {display: none;}
 	.dark_view {display: unset;}
-		::placeholder {
+	::placeholder {
 		color:rgba(255 220 255 / 0.7);
 	}
 	section {
-		background: rgba( 0 0 0 / 0.7 );
+		background: rgba(0 0 0 / 0.5);
+		border: 1px solid rgba(255 255 255 / 0.2);
 	}
 	th{background: rgba( 0 0 0 / 0.7 );}
 	th{background: rgba( 0 0 0 / 0.3 );}
@@ -535,8 +537,8 @@ article {padding:1rem 0rem;}
 		border-left-color: rgba(0 0 10 / 0.3);
 	}
 	.arrow_list a {
-			border-bottom: rgba(220 220 255 / 0.2) 1px solid;
-		}
+		border-bottom: rgba(220 220 255 / 0.2) 1px solid;
+	}
 	.arrow_list a::before {
 		border-left-color: rgba(220 220 255 / 0.5);
 	}
