@@ -109,7 +109,7 @@ dialog {
 	margin:0 auto;
 }
 .modal_header, .modal_content {
-	padding:1rem;
+	padding:1rem !important;
 	display: flex;
 	width: 100%;
 	align-items: center;
