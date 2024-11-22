@@ -118,6 +118,7 @@ dialog {
 label[for="total_search"] {
 	background-color:rgba(0, 0, 0, 0.5);
 	border-radius: 10rem;
+	padding:0.25rem 0.5rem;
 	backdrop-filter: blur(1rem);
 }
 :where(label[for="total_search"], .search_m_box) :where(input, button) {
