@@ -72,6 +72,7 @@
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
+	h1 {padding:0.5rem 0rem;}
 	.main_content a {
 		aspect-ratio: 1.618/1;
 		margin:0rem 0.25rem;
