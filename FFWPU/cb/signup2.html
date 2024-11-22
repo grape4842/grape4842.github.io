@@ -57,15 +57,15 @@
 			<h2>회원가입</h2>
 			<p class="agree_please">회원가입에 필요한 정보를 입력해주세요.</p>
 			<form accept-charset="utf-8" method="post" action="/membership/join_submit.php">
-				<fieldset>
+				<fieldset class="signup2_must">
 					<legend>
 						<h3>기본정보(필수)</h3>
 					</legend>
 					<ol>
 						<li>
-							<label for="">
-								<span class="label_text"></span>
-								<input id="" type="text">
+							<label for="user_email">
+								<span class="label_text">이메일</span>
+								<input id="user_email" type="text">
 							</label>
 							<label for="email_push">
 								<input type="checkbox" id="email_push">
@@ -73,21 +73,21 @@
 							</label>
 						</li>
 						<li>
-							<label for="">
-								<span class="label_text"></span>
-								<input id="" type="text">
+							<label for="user_pw">
+								<span class="label_text">비밀번호</span>
+								<input id="user_pw" type="password">
 							</label>
 						</li>
 						<li>
-							<label for="">
-								<span class="label_text"></span>
-								<input id="" type="text">
+							<label for="user_pw_re">
+								<span class="label_text">비밀번호 확인</span>
+								<input id="user_pw_re" type="password">
 							</label>
 						</li>
 						<li>
-							<label for="">
-								<span class="label_text"></span>
-								<input id="" type="text">
+							<label for="user_name">
+								<span class="label_text">이름</span>
+								<input id="user_name" type="text">
 							</label>
 						</li>
 					</ol>
@@ -97,15 +97,15 @@
 						<h3>추가정보(선택)</h3>
 						<ol>
 							<li>
-								<label>
-									<span></span>
-									<input type="text">
+								<label for="user_phone_number">
+									<span class="label_text">연락처</span>
+									<input id="user_phone_number" type="text" inputmode="numeric">
 								</label>
 							</li>
 							<li>
-								<label>
-									<span></span>
-									<input type="text">
+								<label for="user_church">
+									<span class="label_text">소속교회</span>
+									<input id="user_church" type="text">
 								</label>
 							</li>
 						</ol>

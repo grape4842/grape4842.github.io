@@ -76,6 +76,16 @@ fieldset {
 	aspect-ratio: 1/1;
 	background-color: rgba(70 70 70 / 0.7);
 }
+
+/*2난계 위주*/
+.signup2_must label:has(input[type="text"], input[type="password"]) {
+	display: flex;
+	flex-direction: column;
+	padding:1rem 0rem;
+}
+
+
+
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >= 1400px) {
@@ -107,9 +117,6 @@ fieldset {
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-	fieldset {
-		border: 1px solid rgba(100 100 100 / 0.5);
-	}
 	form h3 label {
 		background-color:rgba(0 0 0 / 0.7);
 		border-bottom: 1px solid rgba(100 100 100 / 0.5);
