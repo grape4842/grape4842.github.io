@@ -209,7 +209,7 @@ label[for="total_search"] {
 	border-left-color: rgba(220 220 255 / 1);
 }
 
-#gnb_close {
+.close_btn {
 	background: transparent;
 	position: absolute;
 	top:0; right: 0;
