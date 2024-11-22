@@ -252,13 +252,6 @@ main::before {
 	background-position: center center;
 	background-size: cover;
 }
-nav.menu {
-	position: fixed;
-	bottom: 0px;
-	Z-INDEX: 3;
-	width: 100vw;
-	padding:0.5rem 0rem;
-}
 
 ul.page_number_ui, .menu ul {
 	display: flex;
@@ -345,46 +338,49 @@ article {padding:1rem 0rem;}
 	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
 }
 
-	.more {
-		outline-offset:0.5rem;
-		aspect-ratio: 1/1;
-		padding: 0rem;
-		width:1.5rem;
-		line-height: 1.5rem;
-		font-size:2rem;
-		position: absolute;
-		justify-content: center;
-		align-items: center;
-		border-radius: 10rem;
-		text-decoration: none;
-	}
-	.more::after {
-		opacity: 0;
-		content: '';
-		display: flex;
-		aspect-ratio: 1/1;
-		width:100%; height: 100%;
-		position: absolute;
-		inset:0;
-		margin:auto;
-		border-radius: 10rem;
-		background: rgba(0 0 0 / 0.2);
-		box-shadow:0 0 0.15rem 0.5rem rgba(0 0 0 / 0.2);
-		transition: 0.2s opacity;
-	}
+.more {
+	outline-offset:0.5rem;
+	aspect-ratio: 1/1;
+	padding: 0rem;
+	width:1.5rem;
+	line-height: 1.5rem;
+	font-size:2rem;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10rem;
+	text-decoration: none;
+}
+.more::after {
+	opacity: 0;
+	content: '';
+	display: flex;
+	aspect-ratio: 1/1;
+	width:100%; height: 100%;
+	position: absolute;
+	inset:0;
+	margin:auto;
+	border-radius: 10rem;
+	background: rgba(0 0 0 / 0.2);
+	box-shadow:0 0 0.15rem 0.5rem rgba(0 0 0 / 0.2);
+	transition: 0.2s opacity;
+}
 
-	.more:where(:focus, :hover)::after {
-		opacity: 1;
-	}
+.more:where(:focus, :hover)::after {
+	opacity: 1;
+}
 
 /*하단 메뉴바*/
 .menu {
-	color:white;
+	display: flex;
 	justify-content: space-between;
 	text-align: center;
-	position:sticky;
-	bottom:0px;
-	z-index: 2;
+	position: fixed;
+	bottom: 0px;
+	z-index: 3;
+	width: 100vw;
+	padding:0.5rem 0rem;
+	color:white;
 }
 .menu li {
 	display: flex;
