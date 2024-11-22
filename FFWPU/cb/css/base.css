@@ -129,6 +129,7 @@ label[for="total_search"] {
 	border-radius: 10rem;
 }
 #search_m_area {
+	display: flex;
 	width:100%;
 	align-items: center;
 }
