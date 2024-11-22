@@ -398,7 +398,7 @@ article {padding:1rem 0rem;}
 	align-items: center;
 }
 .bar_menu_item >:where(a, button) span {
-	line-height: 1.3rem;
+	line-height: 1rem;
 	font-size: 14px;
 }
 
@@ -418,7 +418,6 @@ article {padding:1rem 0rem;}
 .bar_menu_item > :where(a, button)[aria-current="page"]::before {
 	content: '';
 	width:100%;
-	scale: 1.1;
 	background-color: #fff;
 	position: absolute;
 	top:0; left:0; bottom: 0; right: 0;
