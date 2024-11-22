@@ -238,7 +238,7 @@ label[for="total_search"] {
 	justify-content: space-between;
 }
 main {
-	min-height: 100vmax;
+	min-height: 100vh;
 	margin-bottom: 10rem;
 }
 main::before {
