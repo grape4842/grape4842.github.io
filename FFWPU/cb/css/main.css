@@ -72,11 +72,9 @@
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
-	.main_content {
-		padding:3rem 2.5rem;
-	}
-	.main_content li:nth-child(n+7) {
-		margin-bottom: 1rem;
+	.main_content a {
+		aspect-ratio: 1.618/1;
+		margin:0rem 0.25rem;
 	}
 }
 
@@ -89,9 +87,6 @@
 		font-size: 0.8rem;
 		line-height: 1.5rem;
 	}
-	.main_content {padding:1.5rem 1rem;}
-
-
 }
 
 /*Dark Mode Layout*/
