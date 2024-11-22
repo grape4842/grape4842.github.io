@@ -227,6 +227,10 @@ label[for="total_search"] {
 	top:0; right: 0;
 	padding:0.5rem;
 }
+.close_btn img {
+	aspect-ratio: 1/1;
+	width:2rem;
+}
 #gnb_close img {
 	filter:invert(1) contrast(2);
 }
