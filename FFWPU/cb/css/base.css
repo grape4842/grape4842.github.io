@@ -108,8 +108,17 @@ dialog {
 	padding:0rem;
 	margin:0 auto;
 }
-dialog > * {
+.modal_header, .modal_content {
 	padding:1rem;
+	display: flex;
+	align-items: center;
+}
+.modal_header {
+	max-height: 3rem;
+	border-bottom: rgba(255 255 255 / 0.2);
+}
+.modal_content {
+	margin:0 auto;
 }
 .gnb {
 	display: flex;
