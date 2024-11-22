@@ -403,6 +403,7 @@ article {padding:1rem 0rem;}
 }
 .bar_menu_item >:where(a, button) span {
 	line-height: 1.3rem;
+	font-size: 14px;
 }
 
 .bar_menu_item > :where(a, button)[aria-current="page"] :where(svg, img) {
