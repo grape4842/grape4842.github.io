@@ -105,8 +105,11 @@ h3 {
 }
 dialog {
 	min-height: 5rem;
-	padding:1rem;
+	padding:0rem;
 	margin:0 auto;
+}
+dialog > * {
+	padding:1rem;
 }
 .gnb {
 	display: flex;
