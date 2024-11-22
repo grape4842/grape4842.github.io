@@ -77,11 +77,16 @@ fieldset {
 	background-color: rgba(70 70 70 / 0.7);
 }
 
+
+
+
 /*2난계 위주*/
-.signup2_must label:has(input[type="text"], input[type="password"]) {
+.signup2 label:has(input[type="text"], input[type="password"]) {
 	display: flex;
 	flex-direction: column;
-	padding:1rem 0rem;
+	padding:1rem;
+	padding-right: 0rem;
+	max-width:21rem;
 }
 
 
