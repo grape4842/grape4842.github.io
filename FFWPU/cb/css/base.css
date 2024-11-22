@@ -521,6 +521,11 @@ article {padding:1rem 0rem;}
 
 /*watch*/
 @media screen and (330px > width) {
+	h1 img {
+		height: 1.5rem;}
+	h1 {
+		padding:0.25rem 0rem;
+	}
 	.more {
 		top:3rem; right:2.5rem;
 		section.content_width {
