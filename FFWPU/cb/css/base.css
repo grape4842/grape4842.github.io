@@ -104,8 +104,8 @@ h3 {
 	padding:0.5rem;
 	font-size:1.3rem;
 }
-
-dialog {
+dialog[open] {
+	display: flex;
 	min-height: 5rem;
 	padding:1rem;
 	margin:0 auto;
@@ -129,7 +129,6 @@ label[for="total_search"] {
 	border-radius: 10rem;
 }
 #search_m_area {
-	display: flex;
 	width:100%;
 	align-items: center;
 }
