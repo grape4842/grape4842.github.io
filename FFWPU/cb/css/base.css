@@ -104,6 +104,12 @@ h3 {
 	padding:0.5rem;
 	font-size:1.3rem;
 }
+
+dialog {
+	min-height: 5rem;
+	padding:1rem;
+	margin:0 auto;
+}
 .gnb {
 	display: flex;
 	justify-content:space-between;
@@ -120,6 +126,10 @@ label[for="total_search"] {
 	min-height: 2.25rem;
 	color:white;
 	border-radius: 10rem;
+}
+#search_m_area {
+	width:100%;
+	align-items: center;
 }
 #total_search ,#total_search_m {
 	color:#fff;
