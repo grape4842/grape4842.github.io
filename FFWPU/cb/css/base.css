@@ -224,6 +224,7 @@ label[for="total_search"] {
 	position: absolute;
 	top:0; right: 0;
 	padding:0.5rem;
+	z-index: 2;
 }
 .close_btn img {
 	aspect-ratio: 1/1;
