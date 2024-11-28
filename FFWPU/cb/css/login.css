@@ -9,6 +9,7 @@ form {
 legend {
 	text-align: center;
 	width: 100%;
+	padding-bottom:1rem;
 }
 h3 {text-align: center;}
 .login_input_box {
@@ -47,11 +48,15 @@ h3 {text-align: center;}
 .save_login {
 	display: flex;
 	gap:1rem;
+	align-items: center;
+}
+.save_login input {
+	margin-right: 0.5rem;
 }
 .login_controls {
 	width: 100%;
 	display: flex;
-	gap:1rem;
+	gap:2rem;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;

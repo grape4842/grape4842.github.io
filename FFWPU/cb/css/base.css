@@ -66,6 +66,10 @@ button {
 input, button {
 	max-height: 3rem;
 	vertical-align: middle;
+	transition: background 0.2s, border 0.2s, filter 0.2s;
+}
+:where(input, button):where(:focus, :hover) {
+	filter: brightness(1.1) saturate(110%);
 }
 :where(input[type="text"], input[type="password"], input[type="search"]) {
 	min-width:5rem;
@@ -75,9 +79,7 @@ input, button {
 	transition: background-color 0.2s, border-bottom 0.1s;
 	padding:0.25rem 0.5rem;
 }
-:where(input[type="text"], input[type="password"], input[type="search"]):where(:focus, :hover) {
-	background-color: rgba(255 255 255 / 0.15);
-}
+
 ::placeholder {
 	color:rgba(20, 0, 20, 0.7);
 }
