@@ -108,6 +108,7 @@ dialog {
 	padding:0rem;
 	margin:0 auto;
 }
+label {display: flex;}
 .modal_header, .modal_content {
 	padding:1rem !important;
 	display: flex;
@@ -257,7 +258,6 @@ label[for="total_search"], label[for="total_search_m"] {
 	justify-content: space-between;
 }
 main {
-	min-height: 100vh;
 	margin-bottom: 10rem;
 }
 main::before {
@@ -477,6 +477,7 @@ article {padding:1rem 0rem;}
 	.mobile_view {display: none;}
 	main {margin-bottom: 5rem;}
 	main::before {
+		background-attachment: fixed;
 		background-image: url("../../img/CB_bg_sky_pc.png");
 	}
 	h1 {

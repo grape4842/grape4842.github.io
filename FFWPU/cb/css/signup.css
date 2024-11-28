@@ -84,11 +84,12 @@ fieldset {
 .signup2 label:has(input[type="text"], input[type="password"]) {
 	display: flex;
 	flex-direction: column;
-	padding:1rem;
-	padding-right: 0rem;
+	padding:1rem 0rem;
 	max-width:21rem;
 }
-
+.label_text {
+	padding:0.5rem 0rem;
+}
 
 
 /*기기별 CSS*/
@@ -102,7 +103,13 @@ fieldset {
 	fieldset {
 		margin:4rem auto;
 	}
-
+	.signup2 label:has(input[type="text"], input[type="password"]) {
+		flex-direction: row;
+	}
+	.label_text {
+		width: 7rem;
+		text-align: right;
+	}
 }
 
 /*700px〜1200px iPad*/

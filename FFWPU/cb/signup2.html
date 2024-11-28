@@ -111,9 +111,43 @@
 						</ol>
 					</legend>
 				</fieldset>
+				<fieldset class="signup2">
+					<h3>약관 동의</h3>
+					<ul>
+						<li>
+							<label>
+								<input type="checkbox" onclick="toggleCheckboxes(this)" id="">
+								<span class="label_text">전체 동의</span>
+							</label>
+							<ul>
+								<li>
+									<label>
+										<input type="checkbox" id="">
+										<span class="label_text"></span>
+									</label>
+									<button onclick="openPrivacyPolicy()">개인정보 처리방침 보기</button>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" id="">
+										<span class="label_text"></span>
+									</label>
+									<button onclick="openPrivacyPolicy()">이용약관 처리방침 보기</button>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" id="">
+										<span class="label_text"></span>
+									</label>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</fieldset>
 			</form>
 		</section>
 	</main>
 	<div class="bottom_box" w3-include-html="footer.html"></div>
+	<script type="text/javascript" src="js/all_check.js"></script>
 </body>
 </html>
