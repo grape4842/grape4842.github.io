@@ -477,7 +477,6 @@ article {padding:1rem 0rem;}
 @media screen and (width >= 1400px) {
 	.pc_view {display: inherit!important;}
 	.mobile_view {display: none;}
-	main {margin-bottom: 5rem;}
 	main::before {
 		background-attachment: fixed;
 		background-image: url("../../img/CB_bg_sky_pc.png");
