@@ -103,6 +103,11 @@ form#signup1_form {
 	flex-direction: column;
 }
 
+.agree_sign_messege {
+	text-align: center;
+	padding:1rem;
+}
+
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >= 1400px) {
