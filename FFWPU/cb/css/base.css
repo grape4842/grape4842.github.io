@@ -25,7 +25,7 @@ header, .bottom_box {
 }
 footer {
 	width: 100%;
-	padding:0.5rem 0rem;
+	padding-bottom: 0.5rem;
 }
 a {
 	padding:0.5rem;
