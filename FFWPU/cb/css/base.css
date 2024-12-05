@@ -305,7 +305,7 @@ section, .modal_popup {
 	-webkit-backdrop-filter: blur(1rem) saturate(1.5);
 	border: 1px solid rgba(255, 255, 255, 0.7);
 }
-section.content_width {
+section.content_width, .modal_popup {
 	border-radius: 2rem;
 	padding:2rem 1.5rem;
 	margin:4rem auto;
@@ -511,7 +511,7 @@ article {padding:1rem 0rem;}
 		justify-content: flex-start;
 		gap:1rem;
 	}
-	section.content_width {
+	section.content_width, .modal_popup {
 		margin: 5rem auto;
 		border-radius: 3rem;
 		padding:3rem;
@@ -548,7 +548,7 @@ article {padding:1rem 0rem;}
 		background-image: url("../../img/CB_bg_sky_pc.png");
 		padding:5rem 0px;
 	}
-	section.content_width {
+	section.content_width, .modal_popup {
 		margin: 3rem auto;
 	}
 	.arrow_list a::before {
@@ -569,7 +569,7 @@ article {padding:1rem 0rem;}
 		}
 		.more {
 			top:3rem; right:2.5rem;
-			section.content_width {
+			section.content_width, .modal_popup {
 				margin:1rem auto;
 			}
 		}
