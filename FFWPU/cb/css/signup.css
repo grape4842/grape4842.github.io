@@ -86,7 +86,7 @@ fieldset {
 	top:-0.5rem;
 }
 
-/*2난계 위주*/
+/*통합된 이후에 특수 CSS 위주*/
 .signup2 label:has(input[type="text"], input[type="password"]) {
 	display: flex;
 	flex-direction: column;
@@ -103,7 +103,9 @@ form#signup1_form {
 	text-align: center;
 	padding:1rem;
 }
-
+#signup1_form h3 {
+	text-align: left;
+}
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >= 1400px) {

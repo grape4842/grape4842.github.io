@@ -19,8 +19,6 @@ header, .bottom_box :where(.menu, footer) {
 	color:#fff;
 }
 footer {
-	position: absolute;
-	bottom:4rem;
 	width: 100%;
 	padding:0.5rem 0rem;
 }
