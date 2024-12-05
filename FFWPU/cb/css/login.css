@@ -41,7 +41,7 @@ h3 {text-align: center;}
 	transition: font-size 0.2s, top 0.2s, opacity 0.2s;
 	z-index: 2;
 }
-.input_box label:has(input:focus, input:valid, input:-webkit-autofill) .label_text {
+.input_box label:has(input:focus, input:-webkit-autofill) .label_text {
 	opacity: 0.9;
 	top:0rem;
 	font-size: 14px;
