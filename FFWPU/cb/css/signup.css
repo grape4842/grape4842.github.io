@@ -113,7 +113,7 @@ form#signup1_form {
 		padding:1rem;
 	}
 	fieldset {
-		margin:4rem auto;
+		margin:3rem auto;
 	}
 	.signup2 label:has(input[type="text"], input[type="password"]) {
 		flex-direction: row;
