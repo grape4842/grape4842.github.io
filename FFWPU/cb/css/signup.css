@@ -78,7 +78,13 @@ fieldset {
 }
 
 
+#signup3_form_login .label_text{
+	top:0.25rem;
+}
 
+#signup3_form_login label:has(input:focus) .label_text {
+	top:-0.5rem;
+}
 
 /*2난계 위주*/
 .signup2 label:has(input[type="text"], input[type="password"]) {
