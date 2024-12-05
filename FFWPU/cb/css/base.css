@@ -55,7 +55,7 @@ dd :where(ol, ul, p) {
 	padding-left: 0.5rem;
 }
 input {
-	accent-color: #c91f61;
+	accent-color: #c91f6f;
 	min-width:1.5rem;
 	min-height: 1.5rem;
 }
