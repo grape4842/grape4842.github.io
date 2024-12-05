@@ -64,12 +64,13 @@ button {
 	min-height:3rem;
 }
 input, button {
+	border-radius: 0.5rem;
 	max-height: 3rem;
 	vertical-align: middle;
 	transition: background 0.2s, border 0.2s, filter 0.2s;
 }
-:where(input, button):where(:focus, :hover) {
-	filter: brightness(1.1) saturate(110%);
+:focus:where(:focus, :hover) {
+	filter: brightness(1.1) saturate(1.1) contrast(1.1);
 }
 :where(input[type="text"], input[type="password"], input[type="search"]) {
 	min-width:5rem;
@@ -79,7 +80,9 @@ input, button {
 	transition: background-color 0.2s, border-bottom 0.1s;
 	padding:0.25rem 0.5rem;
 }
-
+input[type="checkbox"] + span {
+	margin-left: 0.5rem;
+}
 ::placeholder {
 	color:rgba(20, 0, 20, 0.7);
 }

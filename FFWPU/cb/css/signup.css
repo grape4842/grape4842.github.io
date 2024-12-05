@@ -91,6 +91,11 @@ fieldset {
 	padding:0.5rem 0rem;
 }
 
+form#signup1_form {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
 
 /*기기별 CSS*/
 /*PC*/
@@ -109,6 +114,9 @@ fieldset {
 	.label_text {
 		width: 7rem;
 		text-align: right;
+	}
+	form#signup1_form {
+		flex-direction: row;
 	}
 }
 
