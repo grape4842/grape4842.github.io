@@ -32,6 +32,7 @@ fieldset {
 	text-align: center;
 	justify-content: space-evenly;
 	margin:0rem auto;
+	min-width: 50vw;
 }
 .buttons a{
 	min-height: 3rem;
