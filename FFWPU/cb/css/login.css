@@ -79,8 +79,8 @@ h3 {text-align: center;}
 .login_account_menu {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	gap:1rem;
+	justify-content:center;
+	gap:2rem;
 }
 .login_account_menu a {
 	gap:0.5rem;
