@@ -581,6 +581,9 @@ article {padding:1rem 0rem;}
 	::placeholder {
 		color:rgba(255 220 255 / 0.7);
 	}
+	main::before {
+		filter: brightness(0.7);
+	}
 	section, .modal_popup {
 		background: rgba(10 5 15 / 0.9);
 		border: 1px solid rgba(240 230 255 / 0.3);
