@@ -76,12 +76,12 @@ input, button {
 	min-width:5rem;
 	outline-offset: 0.25rem;
 	background-color:#fff;
-	border:1px solid #54a3;
+	border:1px solid #54a7;
 	transition: background-color 0.2s, border-bottom 0.1s;
 	padding:0.25rem 0.5rem;
 }
 :where(input[type="text"], input[type="password"], input[type="search"]):focus {
-	border:2px solid #54aa;
+	border:2px solid #54ac;
 }
 input[type="checkbox"] + span {
 	margin-left: 0.5rem;
