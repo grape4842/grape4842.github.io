@@ -80,6 +80,10 @@ input, button {
 	transition: background-color 0.2s, border-bottom 0.1s;
 	padding:0.25rem 0.5rem;
 }
+input[type="search"] {
+	background: transparent;	
+	border-radius: 10rem;
+}
 :where(input[type="text"], input[type="password"], input[type="search"]):focus {
 	border:2px solid #54ac;
 }
@@ -149,6 +153,10 @@ label[for="total_search"], label[for="total_search_m"] {
 	min-height: 2.25rem;
 	color:white;
 	border-radius: 10rem;
+}
+.search_m_box {
+	position: absolute;
+	right:0px;
 }
 #search_m_area {
 	width:100%;
@@ -510,7 +518,7 @@ article {padding:1rem 0rem;}
 	.menu {
 		padding-bottom: 1rem;
 	}
-	
+
 	.page_number_ui {
 		padding-top:3rem;
 	}
