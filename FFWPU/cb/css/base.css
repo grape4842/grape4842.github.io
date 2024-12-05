@@ -409,7 +409,6 @@ article {padding:1rem 0rem;}
 	z-index: 3;
 	width: 100vw;
 	padding:0.5rem 0rem;
-	padding-bottom: 1rem;
 	color:white;
 }
 .menu li {
@@ -508,6 +507,10 @@ article {padding:1rem 0rem;}
 	h3 {
 		font-size:1.5rem;
 	}
+	.menu {
+		padding-bottom: 1rem;
+	}
+	
 	.page_number_ui {
 		padding-top:3rem;
 	}
@@ -548,17 +551,17 @@ article {padding:1rem 0rem;}
 @media screen and (330px > width) {
 	h1 img {
 		height: 1.5rem;}
-	h1 {
-		padding:0.25rem 0rem;
-	}
-	.more {
-		top:3rem; right:2.5rem;
-		section.content_width {
-			margin:1rem auto;
+		h1 {
+			padding:0.25rem 0rem;
 		}
-	}
+		.more {
+			top:3rem; right:2.5rem;
+			section.content_width {
+				margin:1rem auto;
+			}
+		}
 
-}
+	}
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
