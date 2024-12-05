@@ -536,7 +536,14 @@ article {padding:1rem 0rem;}
 		top:3rem;
 		right:2.5rem;
 	}
-
+	#gnb_menu {
+		max-height: auto;
+		padding:2rem;
+		border-radius: 3rem;
+	}
+	#gnb_menu nav {
+		
+	}
 
 }
 
