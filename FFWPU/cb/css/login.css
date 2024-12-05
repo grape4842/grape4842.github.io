@@ -122,10 +122,6 @@ h3 {text-align: center;}
 	width:1.5rem;
 }
 
-input[type="checkbox"] {
-	min-height:2rem;
-}
-
 label[for="email_push"] {
 	margin-bottom: 3rem;
 }
