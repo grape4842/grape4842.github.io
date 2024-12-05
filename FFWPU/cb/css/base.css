@@ -540,9 +540,10 @@ article {padding:1rem 0rem;}
 		max-height: auto;
 		padding:2rem;
 		border-radius: 3rem;
+		margin:auto;
 	}
 	#gnb_menu nav {
-		
+
 	}
 
 }
