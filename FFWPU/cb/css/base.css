@@ -582,7 +582,7 @@ article {padding:1rem 0rem;}
 		color:rgba(255 220 255 / 0.7);
 	}
 	main::before {
-		filter: brightness(0.7);
+		filter: brightness(0.9);
 	}
 	section, .modal_popup {
 		background: rgba(10 5 15 / 0.9);
