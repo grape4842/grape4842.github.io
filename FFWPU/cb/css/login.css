@@ -27,7 +27,7 @@ h3 {text-align: center;}
 .input_box input {
 	min-height: 3.5rem;
 	transition: background 0.2s, border 0.1s;
-	padding:0.5rem;
+	padding:0.75rem;
 	padding-bottom:0.25rem;
 	padding-top:1rem;
 	border-radius: 0.5rem;
@@ -36,14 +36,15 @@ h3 {text-align: center;}
 	line-height: 2rem;
 	position: absolute;
 	top:0.75rem;
-	left:0.5rem;
+	left:1rem;
 	opacity: 0.7;
-	transition: font-size 0.2s, top 0.2s, opacity 0.2s;
+	transition: font-size 0.2s, top 0.2s, left 0.2s, opacity 0.2s;
 	z-index: 2;
 }
 .input_box label:has(input:focus, input:not(:placeholder-shown), input:-webkit-autofill) .label_text {
 	opacity: 0.9;
 	top:0rem;
+	left:0.75rem;
 	font-size: 14px;
 }
 .input_box input::placeholder {
