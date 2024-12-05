@@ -505,6 +505,9 @@ article {padding:1rem 0rem;}
 	.gnb {
 		justify-content: space-between;
 	}
+	.bar_menu > div {
+		justify-content: flex-start;
+	}
 	section.content_width {
 		margin: 5rem auto;
 		border-radius: 3rem;
