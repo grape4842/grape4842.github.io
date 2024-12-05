@@ -118,7 +118,7 @@ h3 {
 	padding:0.5rem;
 	font-size:1.3rem;
 }
-dialog {
+.modal_popup {
 	min-height: 5rem;
 	padding:0rem;
 	margin:0 auto;
@@ -188,6 +188,7 @@ label[for="total_search"], label[for="total_search_m"] {
 #gnb_menu {
 	position: fixed;
 	min-width: 12rem;
+	height: 100dvh;
 	left:-100rem; top:0;
 	transition: display 0.2s;
 	background:#353539;
@@ -548,6 +549,10 @@ article {padding:1rem 0rem;}
 		background-image: url("../../img/CB_bg_sky_pc.png");
 		padding:5rem 0px;
 	}
+	.gnb {
+		justify-content: space-between;
+	}
+
 	section.content_width, .modal_popup {
 		margin: 3rem auto;
 	}
