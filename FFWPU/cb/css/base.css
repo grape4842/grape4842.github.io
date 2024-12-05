@@ -74,11 +74,14 @@ input, button {
 }
 :where(input[type="text"], input[type="password"], input[type="search"]) {
 	min-width:5rem;
-	outline-offset: 2px;
-	background-color: rgba(255 255 255 / 0.05);
-	border: none;
+	outline-offset: 0.25rem;
+	background-color:#fff;
+	border:1px solid #54a3;
 	transition: background-color 0.2s, border-bottom 0.1s;
 	padding:0.25rem 0.5rem;
+}
+:where(input[type="text"], input[type="password"], input[type="search"]):focus {
+	border:2px solid #54aa;
 }
 input[type="checkbox"] + span {
 	margin-left: 0.5rem;
@@ -285,7 +288,7 @@ ul.page_number_ui, .menu ul {
 }
 
 section, .modal_popup {
-	background: rgba(255, 255, 255, 0.66);
+	background: rgba(255, 255, 255, 0.9);
 	box-shadow: 0.5rem 0.5rem 1rem 0 rgba(10, 0, 30, 0.2);
 	backdrop-filter: blur(1rem) saturate(1.5);
 	-webkit-backdrop-filter: blur(1rem) saturate(1.5);
@@ -564,11 +567,14 @@ article {padding:1rem 0rem;}
 		color:rgba(255 220 255 / 0.7);
 	}
 	section, .modal_popup {
-		background: rgba(0 0 0 / 0.66);
+		background: rgba(0 0 0 / 0.9);
 		border: 1px solid rgba(255 255 255 / 0.2);
 	}
-	th{background: rgba( 0 0 0 / 0.7 );}
-	th{background: rgba( 0 0 0 / 0.3 );}
+	th{background: rgba( 255 255 255 / 0.2 );}
+	th{background: rgba( 255 255 255 / 0.1 );}
+	:where(input[type="text"], input[type="password"], input[type="search"]) {
+		background-color: #010003;
+	}
 	.gnb_menu .sub_menu a::before {
 		border-left-color: rgba(0 0 10 / 0.3);
 	}
