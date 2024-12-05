@@ -9,7 +9,7 @@ form h3 label {
 	font-size: 1rem;
 	display: flex;
 	justify-content: space-between;
-	background: #f1f1f1;
+	background: #dfdddf;
 	border-bottom: 1px solid #e6e6e6;
 	font-weight: 700;
 }
@@ -23,7 +23,7 @@ fieldset {
 	padding:0rem;
 }
 .policy_box {
-	background-color: rgba(255 258 255 / 0.4);
+	background-color:#fff;
 	aspect-ratio: 4/1;
 	overflow-y: scroll;
 }
