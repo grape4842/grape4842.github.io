@@ -138,7 +138,7 @@ label {display: flex;}
 }
 .gnb {
 	display: flex;
-	justify-content:space-between;
+	justify-content:center;
 	align-items: center;
 }
 label[for="total_search"], label[for="total_search_m"] {
@@ -501,6 +501,9 @@ article {padding:1rem 0rem;}
 	.content_width {
 		min-width: 980px;
 		max-width: 1200px;
+	}
+	.gnb {
+		justify-content: space-between;
 	}
 	section.content_width {
 		margin: 5rem auto;
