@@ -21,7 +21,7 @@ header, .bottom_box :where(.menu, footer) {
 footer {
 	position: absolute;
 	bottom:4rem;
-	width: 100vw;
+	width: 100%;
 	padding:1rem 0rem;
 }
 a {
@@ -409,6 +409,7 @@ article {padding:1rem 0rem;}
 	z-index: 3;
 	width: 100vw;
 	padding:0.5rem 0rem;
+	padding-bottom: 1rem;
 	color:white;
 }
 .menu li {
