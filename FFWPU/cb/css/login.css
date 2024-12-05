@@ -20,11 +20,11 @@ h3 {text-align: center;}
 	justify-content: center;
 	align-items: center;
 }
-.input_box label {
+.text_input_box label {
 	flex-direction: column;
 	border-radius: 1rem;
 }
-.input_box input {
+.text_input_box input {
 	min-height: 3.5rem;
 	transition: background 0.2s, border 0.1s;
 	padding:0.75rem;
@@ -41,13 +41,13 @@ h3 {text-align: center;}
 	transition: font-size 0.2s, top 0.2s, left 0.2s, opacity 0.2s;
 	z-index: 2;
 }
-.input_box label:has(input:focus, input:not(:placeholder-shown), input:-webkit-autofill) .label_text {
+.text_input_box label:has(input:focus, input:not(:placeholder-shown), input:-webkit-autofill) .label_text {
 	opacity: 0.9;
 	top:0rem;
 	left:0.75rem;
 	font-size: 14px;
 }
-.input_box input::placeholder {
+.text_input_box input::placeholder {
 	color:transparent;
 }
 .save_login {
@@ -120,6 +120,10 @@ h3 {text-align: center;}
 	width:1.5rem;
 }
 
+input[type="checkbox"] {
+	min-height:2rem;
+}
+
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >=1400px) {}
@@ -129,14 +133,14 @@ h3 {text-align: center;}
 
 /*Mobile*/
 @media (340px <=width < 700px) {
-	.login_controls,.input_box {
+	.login_controls, .text_input_box {
 		flex-direction: column;
 	}
-	.input_box label,.input_box:has(input:focus) label {
+	.text_input_box label, .text_input_box:has(input:focus) label {
 		background-color: transparent;
 		border:none;
 	}
-	.login_box :where(.input_box, button) {
+	.login_box :where(.text_input_box, button) {
 		width: 13rem;
 	}
 
@@ -155,7 +159,7 @@ h3 {text-align: center;}
 		flex-direction: column;
 	}
 
-	.login_box :where(.input_box, button) {
+	.login_box :where(.text_input_box, button) {
 		width: 13rem;
 	}
 

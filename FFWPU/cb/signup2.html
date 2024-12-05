@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../../root.css">
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/signup.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/login.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta property="og:description" content="">
@@ -48,33 +48,35 @@
 					<legend>
 						<h3>기본정보(필수)</h3>
 					</legend>
-					<ol>
-						<li>
+					<ol class="">
+						<li class="text_input_box">
 							<label for="user_name">
+								<input placeholder="이름" id="user_name" type="text">
 								<span class="label_text">이름</span>
-								<input id="user_name" type="text">
+							</label>
+						</li>
+						<li class="text_input_box">
+							<label for="user_email">
+								<span class="label_text">이메일</span>
+								<input placeholder="email" id="user_email" type="text">
 							</label>
 						</li>
 						<li>
-							<label for="user_email">
-								<span class="label_text">이메일</span>
-								<input id="user_email" type="text">
-							</label>
 							<label for="email_push">
 								<input type="checkbox" id="email_push">
 								<span>이메일을 수신하겠습니다.</span>
 							</label>
 						</li>
-						<li>
+						<li class="text_input_box">
 							<label for="user_pw">
+								<input placeholder="password" id="user_pw" type="password">
 								<span class="label_text">비밀번호</span>
-								<input id="user_pw" type="password">
 							</label>
 						</li>
-						<li>
+						<li class="text_input_box">
 							<label for="user_pw_re">
+								<input placeholder="password" id="user_pw_re" type="password">
 								<span class="label_text">비밀번호 확인</span>
-								<input id="user_pw_re" type="password">
 							</label>
 						</li>
 					</ol>
@@ -82,17 +84,17 @@
 				<fieldset class="signup2">
 					<legend>
 						<h3>추가정보(선택)</h3>
-						<ol>
-							<li>
+						<ol class="">
+							<li class="text_input_box">
 								<label for="user_phone_number">
+									<input placeholder="전화번호" id="user_phone_number" type="text" inputmode="numeric">
 									<span class="label_text">연락처</span>
-									<input id="user_phone_number" type="text" inputmode="numeric">
 								</label>
 							</li>
-							<li>
+							<li class="text_input_box">
 								<label for="user_church">
+									<input placeholder="your church" id="user_church" type="text">
 									<span class="label_text">소속교회</span>
-									<input id="user_church" type="text">
 								</label>
 							</li>
 						</ol>

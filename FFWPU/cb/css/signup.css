@@ -90,11 +90,7 @@ fieldset {
 .signup2 label:has(input[type="text"], input[type="password"]) {
 	display: flex;
 	flex-direction: column;
-	padding:1rem 0rem;
 	max-width:21rem;
-}
-.label_text {
-	padding:0.5rem 0rem;
 }
 
 form#signup1_form {
