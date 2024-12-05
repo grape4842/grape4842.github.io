@@ -8,8 +8,9 @@
 	width:90vw;
 	margin: 0px auto;
 }
-header, .bottom_box :where(.menu, footer) {
+header, .bottom_box {
 	background-image: url("../../img/head_bg.jpg");
+	width: 100vw;
 	background-size: 100%;
 	min-height: 3rem;
 	z-index: 2;
@@ -17,6 +18,10 @@ header, .bottom_box :where(.menu, footer) {
 }
 :where(.bar_menu a, #gnb_open, #gnb_menu) {
 	color:#fff;
+}
+.bottom_box {
+	position: fixed;
+	bottom: 0;
 }
 footer {
 	width: 100%;
@@ -410,7 +415,6 @@ article {padding:1rem 0rem;}
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
-	position: fixed;
 	bottom: 0px;
 	z-index: 3;
 	width: 100vw;
