@@ -507,6 +507,7 @@ article {padding:1rem 0rem;}
 	}
 	.bar_menu > div {
 		justify-content: flex-start;
+		gap:1rem;
 	}
 	section.content_width {
 		margin: 5rem auto;
