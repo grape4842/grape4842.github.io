@@ -15,10 +15,12 @@ h3 {text-align: center;}
 .login_input_box {
 	display: flex;
 	flex-direction: column;
-	gap:1rem;	
 	width: 100%;
 	justify-content: center;
 	align-items: center;
+}
+.text_input_box {
+	margin:1rem auto;
 }
 .text_input_box label {
 	flex-direction: column;
@@ -122,6 +124,10 @@ h3 {text-align: center;}
 
 input[type="checkbox"] {
 	min-height:2rem;
+}
+
+label[for="email_push"] {
+	margin-bottom: 3rem;
 }
 
 /*기기별 CSS*/

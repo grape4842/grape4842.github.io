@@ -124,6 +124,7 @@ form#signup1_form {
 	}
 	form#signup1_form {
 		flex-direction: row;
+		align-items: flex-start;
 	}
 }
 
