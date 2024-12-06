@@ -10,7 +10,7 @@
 }
 header, .bottom_box {
 	background-image: url("../../img/head_bg.jpg");
-	width: 100vw;
+	width: 100%;
 	background-size: 100%;
 	min-height: 3rem;
 	z-index: 2;
