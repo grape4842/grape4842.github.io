@@ -38,11 +38,21 @@
 	article {padding:2rem;}
 	textarea {font-size:2rem; line-height:2.5rem;}
 }
-
-@media screen and (350px > width) {
+/*Mobile*/
+@media (340px <= width < 700px ) {
 	body {font-size:1rem;}
 	main, header > *, footer > div {width:95vw;}
 	article {padding:1rem;}
 	th, td {padding:0.5rem;}
 	#logo {width:2rem; height:2rem;}
+	svg {display: flex;}
+}
+
+/*watch*/
+@media screen and (330px > width) {
+
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
 }

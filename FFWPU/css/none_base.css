@@ -121,7 +121,6 @@ table {
 	border-collapse:collapse;
 	width: 100%;
 }
-
 th, td {
 	word-break: keep-all; line-break:normal;
 	border:1px solid #baf;
@@ -133,14 +132,15 @@ th, .bus_table tr > *:first-child {
 	background-color:#54a;
 	color: #fff;
 	font-weight:700;
-	font-size:1.3rem;
 	text-align: center;
 }
 td {font-weight:400;}
 th svg, td svg {
+	margin:0 auto;
 	width: 2rem;
 	height: 2rem;
 }
+th {line-height: 1.3rem;}
 
 p {margin:0px; padding:0.3rem 0px;}
 h1, h2, h3, h4, h5, h6 {
@@ -153,11 +153,6 @@ h1 {
 h2 {font-weight:900;
 	font-size:1.2rem;
 	color:#850;
-}
-svg {
-	vertical-align:middle;
-	display:inline-flex;
-	align-items:center;
 }
 .VPC {display:none;}
 
