@@ -2,11 +2,6 @@
 header, footer {
 	backdrop-filter: blur(20px);
 }
-header {
-	position:sticky;
-	z-index: 5;
-	top:0px;
-}
 nav {
 	display:flex;
 	align-items:center;
