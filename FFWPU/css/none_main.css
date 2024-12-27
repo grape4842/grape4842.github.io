@@ -23,14 +23,16 @@
 	height:100%;
 	padding:1rem 0.5rem;
 	justify-content:center;
+	vertical-align: middle;
 	position:relative;
 	text-decoration:none;
 	flex-direction:column;}
 .site-list img, .yvl a .ylogo {
 	box-sizing: content-box;
-	width:2rem;
 	height:2rem;
-	vertical-align:middle;}
+	width: 2rem;
+	vertical-align:middle;
+}
 .yvl a	{
 	padding-left: 0px;
 	flex-direction: row;
@@ -75,7 +77,10 @@
 	.site-list {grid-template-columns: 1fr 1fr 1fr;}
 	.site-list li {
 				margin:1rem 0px;}
-	.site-list img {width:4rem; height:4rem;}
+	.site-list img {
+		width:3.5rem;
+		height:3.5rem;
+	}
 	.entry {
 		width:50%;
 		padding:2rem;
