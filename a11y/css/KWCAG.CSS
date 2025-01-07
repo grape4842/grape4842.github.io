@@ -44,7 +44,8 @@ body {
 }
 .darkV {display:none;}
 .content_width {
-	margin:0px auto; width:90vw;
+	width:90vw;
+	margin:0px auto; 
 }
 
 footer {
@@ -190,10 +191,12 @@ h2 {
 	color:#fcf;
 }
 
-/*PC*/
-@media screen and (min-width:1000px) {
+/*너비가 1200이상일때 (PC)*/
+@media screen and (width >= 1400px) {
+	.content_width {
+		width:60vw;
+	}
 	body {background-size:50%;}
-	main {width:60vw;}
 	#quick_link {
 		display:flex;
 		z-index:2;
@@ -218,11 +221,20 @@ h2 {
 	h1 {font-size:2rem;}
 }
 
+/*700px〜1200px iPad*/
+@media (700px <= width < 1400px )  {
+	.content_width {
+		width:80vw;
+	}
+}
 /*folded, watch*/
-@media screen and (max-width:320px) {
+/*watch*/
+@media screen and (330px > width) {
+	.content_width {
+		width:95vw;
+	}
 	body {font-size:14px;}
 	.link {font-size:1rem;}
-	section {width:95vw;}
 	h1 {font-size:1.5rem;}
 	h1,h2 {
 		display:flex;
