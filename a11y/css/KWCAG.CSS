@@ -78,13 +78,13 @@ footer details a {
 
 
 ::-webkit-scrollbar-thumb {
-    background:rgba(0 0 0 / 0.1); /* 스크롤바의 색상 */
-    border:solid 1px #326;
-    border-radius: 1rem;
+	background:rgba(0 0 0 / 0.1); /* 스크롤바의 색상 */
+	border:solid 1px #326;
+	border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-track {
-    background:rgba(0 0 0 / 0.1);  /*스크롤바 뒷 배경 색상*/
+	background:rgba(0 0 0 / 0.1);  /*스크롤바 뒷 배경 색상*/
 }
 
 /*클릭가능한 요소 스타일*/
@@ -105,17 +105,13 @@ a {
 	transition:text-decoration 0.2s, outline 0.2s;
 }
 
-:focus, a:hover, summary:hover
-	{cursor:pointer;}
 a:focus, a:hover {
 	text-decoration:underline wavy #eef;
-	text-underline-offset:4px;}
+	text-underline-offset:4px;
+}
 a:active, summary:active {
 	transition:0.2s filter, 0.4s transform;
 	filter:brightness(0.8), saturation(1.2);
-}
-summary:active {
-	transform:rotateX(360deg);
 }
 #jump-head:focus {
 	position:fixed; 
@@ -164,11 +160,9 @@ details textarea {
 
 /*표 관련 선언*/
 article {margin:3rem auto;}
-article:first-child {margin-top:1rem;}
-article:last-child {margin-bottom:5rem;}
-table {
-	margin-bottom:3rem;
-	margin-top:0px;}
+:where(table, article) {margin:2rem auto;}
+:where(table, article):last-child {margin-bottom:5rem;}
+:where(table, article):first-child {margin-top:0.5rem;}
 th, td, .number_title + ol > li, .number_title {
 	background-color: white; 
 	vertical-align:middle; 
@@ -177,7 +171,8 @@ th, td, .number_title + ol > li, .number_title {
 	padding:2%; 
 	font-size:1.2rem;
 }
-th, .number_title {background-color:#aaa0ff; 
+th, .number_title {
+	background-color:#aaa0ff; 
 	font-weight:700;
 	text-align:left;
 }
@@ -195,37 +190,35 @@ h2 {
 	color:#fcf;
 }
 
+/*PC*/
 @media screen and (min-width:1000px) {
 	body {background-size:50%;}
-	main {
-		width:60vw;
-	}
-	header {
-		top:0px;
-		position:sticky;
+	main {width:60vw;}
+	#quick_link {
 		display:flex;
 		z-index:2;
-	}
-	#quick_link {
 		width: 60%;
 		top:0px;
 	}
 	#quick_link a {
 		padding:2rem;
 	}
-	table {margin-bottom:5rem;}
-	td,th, .number_title {font-size:1.5rem;}
+	table, article {
+		margin:3rem auto;
+	}
+	th, td, .number_title + ol > li, .number_title {
+		font-size:1.5rem;
+	}
 	.link {
 		width:50vw;
 		font-size:1.5rem;
 		text-align:center;
 	}
 	h2 {font-size:1.7rem;}
-	h1 {
-		font-size:2rem;`
-	}
+	h1 {font-size:2rem;}
 }
 
+/*folded, watch*/
 @media screen and (max-width:320px) {
 	body {font-size:14px;}
 	.link {font-size:1rem;}
@@ -243,26 +236,48 @@ h2 {
 		background-color:black !important;
 		color:white;
 	}
-	
-	th, td, .number_title + ol > li, .number_title {border:3px solid #76f;}
-	th, .number_title {background-color:#eef; color:black;}
-	td, .number_title + ol > li {background-color:#103;}
-	.jump_category {background-color:#130;
-		border:solid 1px #0c0;}
-	::selection {background:#fff; color:black;}
+	th, td, .number_title + ol > li, .number_title {
+		border:3px solid #76f;
+	}
+	th, .number_title {
+		background-color:#eef;
+		color:black;
+	}
+	td, .number_title + ol > li {
+		background-color:#103;
+	}
+	.jump_category {
+		background-color:#130;
+		border:solid 1px #0c0;
+	}
+	::selection {
+		background:#fff; 
+		color:black;
+	}
 }
 
 @media (forced-colors: active) {
 	body {
 		background-color:black !important;
-		color:white;}
-	
-	th, td, .number_title + ol > li, .number_title {border:3px solid #76f;}
-	th, .number_title {background-color:#eef; color:black;}
+		color:white;
+	}
+
+	th, td, .number_title + ol > li, .number_title {
+		border:3px solid #76f;
+	}
+	th, .number_title {
+		background-color:#eef; 
+		color:black;
+	}
 	td, .number_title + ol > li {background-color:#103;}
-	.jump_category {background-color:#130;
-		border:solid 1px #0c0;}
-	::selection {background:#fff; color:black;}
+	.jump_category {
+		background-color:#130;
+		border:solid 1px #0c0;
+	}
+	::selection {
+		background:#fff; 
+		color:black;
+	}
 }
 
 @media (prefers-color-scheme:dark) {
@@ -270,20 +285,28 @@ h2 {
 	.darkV {display:flex;}
 	a[href="#a11y-txt"] {
 		background:#54a;
-		border:#103 1px solid;}
+		border:#103 1px solid;
+	}
 	a:active, summary:active {
-	filter:brightness(1.2);}
+		filter:brightness(1.2);
+	}
 	details {background-color:#437;}
 	summary {background-color:#54a;}
-	th, td, .number_title + ol > li, .number_title {border:1px solid #baf;}
+	th, td, .number_title + ol > li, .number_title {
+		border:1px solid #baf;
+	}
 	th, .number_title {background-color:#215;}
-	td, .number_title + ol > li {background-color:#326;}
+	td, .number_title + ol > li {
+		background-color:#326;
+	}
 	.jump_category {
 		background:radial-gradient(#326, #103, #000 99%);
-		border:solid 1px #54a;}
+		border:solid 1px #54a;
+	}
 	.link {
 		background-color:#503;
-		border:#f7c 1px solid;}
+		border:#f7c 1px solid;
+	}
 	footer {background:linear-gradient(#000 20%, #103);}
 	#page-top {background-color:#103}
 
