@@ -10,7 +10,7 @@ body {
 	background-attachment:fixed;
 	background-size:80%;
 }
-header {
+#quick_link {
 	bottom:0px;
 	position:fixed;
 	display:flex;
@@ -20,7 +20,7 @@ header {
 	max-width: 90vw;
 	margin: 0 auto;
 }
-#QuickLink {
+#quick_link {
 	width:100vw;
 	bottom:0px;
 	display:flex;
@@ -43,7 +43,7 @@ header {
 	stroke:#aaa0ff;
 }
 .darkV {display:none;}
-main, header > *, footer > div, .content_width, .number_title {
+.content_width {
 	margin:0px auto; width:90vw;
 }
 
@@ -206,11 +206,11 @@ h2 {
 		display:flex;
 		z-index:2;
 	}
-	#QuickLink {
+	#quick_link {
 		width: 60%;
 		top:0px;
 	}
-	#QuickLink a {
+	#quick_link a {
 		padding:2rem;
 	}
 	table {margin-bottom:5rem;}
