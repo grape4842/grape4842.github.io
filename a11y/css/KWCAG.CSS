@@ -39,11 +39,11 @@ header {
 	width:2rem;
 	transform: scaleX(1.2);
 }
-.jump_category .lightV path {
+.jump_category .lightV path, .number_title {
 	stroke:#aaa0ff;
 }
 .darkV {display:none;}
-main, header > *, footer > div, .content_width {
+main, header > *, footer > div, .content_width, .number_title {
 	margin:0px auto; width:90vw;
 }
 
@@ -163,19 +163,21 @@ details textarea {
 }
 
 /*표 관련 선언*/
+article {margin:3rem auto;}
+article:first-child {margin-top:1rem;}
+article:last-child {margin-bottom:5rem;}
 table {
 	margin-bottom:3rem;
 	margin-top:0px;}
-td,th {
+th, td, .number_title + ol > li, .number_title {
 	background-color: white; 
 	vertical-align:middle; 
 	border:1px solid #235; 
-	width:30%; 
 	line-height:2rem;
 	padding:2%; 
 	font-size:1.2rem;
 }
-th {background-color:#aaa0ff; 
+th, .number_title {background-color:#aaa0ff; 
 	font-weight:700;
 	text-align:left;
 }
@@ -212,7 +214,7 @@ h2 {
 		padding:2rem;
 	}
 	table {margin-bottom:5rem;}
-	td,th {font-size:1.5rem;}
+	td,th, .number_title {font-size:1.5rem;}
 	.link {
 		width:50vw;
 		font-size:1.5rem;
@@ -242,9 +244,9 @@ h2 {
 		color:white;
 	}
 	
-	th,td {border:3px solid #76f;}
-	th {background-color:#eef; color:black;}
-	td {background-color:#103;}
+	th, td, .number_title + ol > li, .number_title {border:3px solid #76f;}
+	th, .number_title {background-color:#eef; color:black;}
+	td, .number_title + ol > li {background-color:#103;}
 	.jump_category {background-color:#130;
 		border:solid 1px #0c0;}
 	::selection {background:#fff; color:black;}
@@ -255,9 +257,9 @@ h2 {
 		background-color:black !important;
 		color:white;}
 	
-	th,td {border:3px solid #76f;}
-	th {background-color:#eef; color:black;}
-	td {background-color:#103;}
+	th, td, .number_title + ol > li, .number_title {border:3px solid #76f;}
+	th, .number_title {background-color:#eef; color:black;}
+	td, .number_title + ol > li {background-color:#103;}
 	.jump_category {background-color:#130;
 		border:solid 1px #0c0;}
 	::selection {background:#fff; color:black;}
@@ -273,9 +275,9 @@ h2 {
 	filter:brightness(1.2);}
 	details {background-color:#437;}
 	summary {background-color:#54a;}
-	th,td {border:1px solid #baf;}
-	th {background-color:#215;}
-	td {background-color:#326;}
+	th, td, .number_title + ol > li, .number_title {border:1px solid #baf;}
+	th, .number_title {background-color:#215;}
+	td, .number_title + ol > li {background-color:#326;}
 	.jump_category {
 		background:radial-gradient(#326, #103, #000 99%);
 		border:solid 1px #54a;}
