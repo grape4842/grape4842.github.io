@@ -221,8 +221,9 @@ fieldset {
   transition:height 0.2s ease, width 0.2s ease, content-visibility 0.2s ease allow-discrete, display 0.2s ease;
 
 }
+
 dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) {
-    position: fixed;
+    position: absolute;
     right:0;
     top:0;
     display: flex;
@@ -237,10 +238,12 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
     left:0;
     top:0;
 }
-dialog[open] {
-    position: relative;
-    display: flex;
+dialog {
+    position: fixed;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
 }
+ 
 :where(#skipnav, #jumpnav, #skip_nav) {
     position: fixed;
     display: block;
