@@ -299,6 +299,7 @@ tr:has(.auction_item_value:checked) .value_number::after {
 .value_text {
 	font-size: 1.1rem;
 	text-align: center;
+	display: inline-block;
 }
 .value_name {
 	font-weight: 900;

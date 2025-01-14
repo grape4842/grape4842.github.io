@@ -217,10 +217,30 @@ fieldset {
     border: none; /* 필드셋의 기본 테두리 제거 */
 }
 
-::details-content {
-  transition:height 0.2s ease, width 0.2s ease, content-visibility 0.2s ease allow-discrete;
-}
+::details-content, dialog {
+  transition:height 0.2s ease, width 0.2s ease, content-visibility 0.2s ease allow-discrete, display 0.2s ease;
 
+}
+dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) {
+    position: fixed;
+    right:0;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    padding:1;
+    min-height: 3rem;
+}
+dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
+    position: sticky;
+    left:0;
+    top:0;
+}
+dialog[open] {
+    position: relative;
+    display: flex;
+}
 :where(#skipnav, #jumpnav, #skip_nav) {
     position: fixed;
     display: block;

@@ -86,7 +86,9 @@ footer details a {
 ::-webkit-scrollbar-track {
 	background:rgba(0 0 0 / 0.1);  /*스크롤바 뒷 배경 색상*/
 }
+#plus_data_open img {
 
+}
 /*클릭가능한 요소 스타일*/
 .link {
 	background-color:#fbf;
@@ -323,6 +325,9 @@ h3 {
 	a[href="#a11y-txt"] {
 		background:#54a;
 		border:#103 1px solid;
+	}
+	#plus_data_open img, .popover_close img {
+		filter: invert(1);
 	}
 	a:active, summary:active {
 		filter:brightness(1.2);
