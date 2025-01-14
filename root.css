@@ -212,7 +212,7 @@ table {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10rem; /* 스크롤바 트랙의 스타일 */
 }
-
+address {text-align: center;}
 fieldset {
     border: none; /* 필드셋의 기본 테두리 제거 */
 }

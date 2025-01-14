@@ -23,7 +23,8 @@
 </head>
 
 <body>
-	<script type="text/javascript" src="../include_script.js"></script> <a id="jump-head" href="#content-start">본문 바로가기</a>
+	<script type="text/javascript" src="../include_script.js"></script>
+	<a id="jump_head" href="#content_start">본문 바로가기</a>
 	<header>
 		<div class="content_width">
 			<h1>한국형 웹 콘텐츠 접근성지침 2.2</h1>
@@ -90,9 +91,14 @@
 			</li>
 		</ul>
 	</nav>
-
+	<button popovertarget="plus_data" class="popover_open" type="button" id="">
+		<span class="a11y_txt">접근성 관련 사이트 목록</span>
+	</button>
+	<dialog id="plus_data" class="popover" w3-include-html="KWCAG_footer.html" popover>
+		
+	</dialog>
 	<main>
-		<h2 class="content_width " id="content-start">한국형 웹 콘텐츠 접근성지침 2.2 검사항목과 오류 유형</h2>
+		<h2 class="content_width " id="content_start">한국형 웹 콘텐츠 접근성지침 2.2 검사항목과 오류 유형</h2>
 		<ol>
 			<li id="CT1" class="content_width">
 				<h3>인식의 용이성 (Perceivable) : 모든 콘텐츠는 사용자가 인식할 수 있어야 한다.</h3>
@@ -486,5 +492,14 @@
 			</li>
 		</ol>
 	</main>
+	<footer>
+		<div class="content_width">
+			<address>© 2025 @purplemiyazawa</address>
+			<a href="jump_head" id="page_top" aria-label="페이지 최상단으로 이동">
+				<svg class="lightV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(85,68,170,1)"/></svg>
+				<svg class="darkV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(255,255,255,1)"/></svg>
+			</a>
+		</div>
+	</footer>
 </body>
 </html>
