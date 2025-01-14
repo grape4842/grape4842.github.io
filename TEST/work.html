@@ -1,52 +1,17 @@
-<style type="text/css">
-	input{accent-color: pink;}
-/* 신체적 장애가 선택되었을 때 정신적 장애 리스트 숨김 */
-#physical_disability:checked ~ .detail_type #physical_list {
-	display: block;
-}
-
-#physical_disability:checked ~ .detail_type #mental_list {
-	display: none;
-}
-
-/* 정신적 장애가 선택되었을 때 신체적 장애 리스트 숨김 */
-#mental_disability:checked ~ .detail_type #physical_list {
-	display: none;
-}
-
-#mental_disability:checked ~ .detail_type #mental_list {
-	display: block;
-}
-</style>
-<section class="disability_type">
-	<div class="main_type">
-		<input checked id="physical_disability" type="radio" name="disability_category">
-		<label for="physical_disability">신체적 장애</label>
-		<input id="mental_disability" type="radio" name="disability_category">
-		<label for="mental_disability">정신적 장애</label>
-		<div class="detail_type">
-			<label for="physical_list">
-				<label for="mental_list">상세 유형 선택</label>
-			</label>
-			<select name="" id="physical_list">
-				<option value="physical-disability">지체장애</option>
-				<option value="brain-lesion-disability">뇌병변장애</option>
-				<option value="visual-disability">시각장애</option>
-				<option value="hearing-disability">청각장애</option>
-				<option value="speech-disability">언어장애</option>
-				<option value="facial-disability">안면장애</option>
-				<option value="kidney-disability">신장장애</option>
-				<option value="heart-disability">심장장애</option>
-				<option value="liver-disability">간장애</option>
-				<option value="respiratory-disability">호흡기장애</option>
-				<option value="stoma-disability">장루·요루장애</option>
-				<option value="epilepsy-disability">뇌전증장애</option>
-			</select>
-			<select name="" id="mental_list">
-				<option value="intellectual-disability">지적장애</option>
-				<option value="autism-disability">자폐성장애</option>
-				<option value="mental-disability">정신장애</option>
-			</select>
-		</div>
-	</div>
-</section>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link rel="stylesheet" type="text/css" href="../../root.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta property="og:description" content="">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<title>Screen Reader Test</title>
+</head>
+<body>
+	<span>span normal text</span>
+	<strong>strong text</strong>
+	<em>em text</em>
+</body>
+</html>
