@@ -118,6 +118,9 @@ table {overflow-x: scroll;}
 	justify-content: center;
 	align-items: center;
 }
+.board_contents .popup_close {
+	position: fixed;
+}
 .popup_close .ani::after {
 	content: '';
 	display: block;
