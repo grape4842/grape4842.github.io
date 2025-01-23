@@ -119,7 +119,11 @@ footer {
 	display: flex;
 	flex-direction: column;
 	margin-top: 4rem;
-
+}
+.link_desc {
+	font-size: 14px;
+	opacity: 0.8;
+	line-height: 1.2;
 }
 /*클릭가능한 요소 스타일*/
 .link {
@@ -212,7 +216,6 @@ th, .number_title {
 	text-align:left;
 }
 
-p {padding:0.3rem 0px;}
 h1 {
 	color:#ffa; 
 }
