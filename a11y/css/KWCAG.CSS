@@ -131,6 +131,7 @@ footer {
 }
 a {
 	display:flex;
+	flex-direction: column;
 	text-align:center;
 	justify-content:center;
 	padding:1rem 0px;
