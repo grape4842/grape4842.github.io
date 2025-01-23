@@ -29,44 +29,55 @@
 		<div class="content_width">
 			<h1 class="page_title">한국형 웹 콘텐츠 접근성지침 2.2</h1>
 			<nav>
-				<button popovertarget="plus_data" class="popover_open" type="button" id="plus_data_open">
+				<button aria-haspopup="dialog" class="popover_open" type="button" id="plus_data_open" onclick='document.getElementById("plus_data").showModal();'>
 					<img class="icon_img" src="../icon/favorite_FILL1_wght400_GRAD200_opsz48.svg" alt="">
 					<span class="a11y_txt">접근성 관련 사이트 목록 열기</span>
 				</button>
-				<dialog id="plus_data" class="popover" popover>
-					<div class="popover_head">
-						<h2>접근성 관련 사이트 목록</h2>
-					</div>
-					<section class="popover_content">
-						<h3>KWCAG 관련 페이지</h3>
-						<ul>
-							<li>
-								<a href="https://docs.google.com/spreadsheets/d/11Nn9etb1ehpELoQtze-mcNQzNA2qFTVvcvVzblsKghk/edit?usp=sharing" title="새 창 열기" class="link" target="_blank">KWCAG2.1 접근성 진단 오류 해설 문구</a>
-							</li>
-							<li>
-								<a href="MACAG.html" title="새 창 열기" class="link" id="MACAG">모바일 애플리케이션 콘텐츠 접근성지침(MACAG) 2.0</a>
-							</li>
-							<li>
-								<a href="KWCAG2.1_error_list.html" title="새 창 열기" class="link" target="_blank">한국형 웹 콘텐츠 접근성지침 2.1 목록</a>
-							</li>
-						</ul>
-						<h3>접근성 관련 페이지</h3>
-						<ul>
-							<li>
-								<a href="https://mulder21c.github.io/2019/03/22/screen-hide-text/" target="_blank">접근 가능한 숨김 텍스트</a>
-							</li>
-							<li>
-								<a href="https://www.koddi.or.kr/ud/sub1_2" target="_blank">Koddi UD 폰트 다운로드</a>
-							</li>
-							<li>
-								<a href="https://youtube.com/c/AOA11Y" target="_blank">접근성 유튜브 채널 AOA11Y</a>
-							</li>
-						</ul>
-					</section>
-					<button popovertarget="plus_data" class="popover_close" type="button" id="plus_data_close">
-						<img class="icon_img" src="../icon/Xclose.svg" alt="">
-						<span class="a11y_txt">접근성 관련 사이트 목록 열기</span>
-					</button>
+				<dialog id="plus_data" class="popover">
+					<form method="dialog">
+						<div class="popover_head">
+							<h2>접근성 관련 사이트 목록</h2>
+						</div>
+						<section class="popover_content">
+							<h3>KWCAG 관련 페이지</h3>
+							<ul>
+								<li>
+									<a href="https://docs.google.com/spreadsheets/d/11Nn9etb1ehpELoQtze-mcNQzNA2qFTVvcvVzblsKghk/edit?usp=sharing" title="새 창 열기" class="link" target="_blank">KWCAG2.1 접근성 진단 오류 해설 문구</a>
+								</li>
+								<li>
+									<a href="MACAG.html" title="새 창 열기" class="link" id="MACAG">모바일 애플리케이션 콘텐츠 접근성지침(MACAG) 2.0</a>
+								</li>
+								<li>
+									<a href="KWCAG2.1_error_list.html" title="새 창 열기" class="link" target="_blank">한국형 웹 콘텐츠 접근성지침 2.1 목록</a>
+								</li>
+							</ul>
+							<h3>접근성 관련 페이지</h3>
+							<ul>
+								<li>
+									<a href="https://www.krds.go.kr/html/site/outline/outline_01.html" target="_blank">
+										<p>KRDS 시작하기 | 시작하기 - KRDS</p>
+										<p>(KRDS - 디지털 정부서비스 UI/UX 가이드라인)</p>
+									</a>
+								</li>
+								<li>
+									<a href="https://a11y.co.kr/resource" target="_blank">웹 접근성 리소스 - A11Y 앨리</a>
+								</li>
+								<li>
+									<a href="https://mulder21c.github.io/2019/03/22/screen-hide-text/" target="_blank">접근 가능한 숨김 텍스트</a>
+								</li>
+								<li>
+									<a href="https://www.koddi.or.kr/ud/sub1_2" target="_blank">Koddi UD 폰트 다운로드</a>
+								</li>
+								<li>
+									<a href="https://youtube.com/c/AOA11Y" target="_blank">접근성 유튜브 채널 AOA11Y</a>
+								</li>
+							</ul>
+						</section>
+						<button type="submit" class="popover_close" type="button">
+							<img class="icon_img" src="../icon/Xclose.svg" alt="">
+							<span class="a11y_txt">접근성 관련 사이트 목록 열기</span>
+						</button>
+					</form>
 				</dialog>
 			</nav>
 		</div>
@@ -530,13 +541,13 @@
 	<footer>
 		<div class="content_width">
 			<address>© 2025 @purplemiyazawa</address>
-			<a href="jump_head" id="page_top" aria-label="페이지 최상단으로 이동">
+			<a href="#jump_head" id="page_top" aria-label="페이지 최상단으로 이동">
 				<svg class="icon_img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(0,0,0,0.5)">
 				</svg>
 				<!-- <svg class="darkV icon_img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(255,255,255,1)"> -->
-				<!-- </svg> -->
-			</a>
-		</div>
-	</footer>
-</body>
-</html>
+					<!-- </svg> -->
+				</a>
+			</div>
+		</footer>
+	</body>
+	</html>
