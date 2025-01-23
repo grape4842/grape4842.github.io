@@ -52,9 +52,11 @@ footer {
 	color:white;
 	padding:2rem 0px;
 	margin:0px;
+	margin-bottom: 5rem;
 }
 #quick_link_area {
 	min-height: 3rem;
+	max-height: 5rem;
 	position: fixed;
 	bottom: 0;
 	width:100%;
@@ -76,6 +78,7 @@ footer {
 }
 .jump_category a {
 	height: 100%;
+	padding:0.5rem 0;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
@@ -88,6 +91,7 @@ footer {
 }
 .jump_category span {
 	margin-top: 0.5rem;
+	letter-spacing: -1px;
 }
 
 #page_top {
@@ -268,6 +272,7 @@ h3:not(dialog h3) {
 		font-size:1.5rem;
 	}
 	h2:not(dialog h2) {font-size:1.7rem;}
+	footer {margin: 0;}
 }
 
 /*700px〜1200px iPad*/
@@ -375,5 +380,5 @@ h3:not(dialog h3) {
 	.link {
 		background-color:#503;
 	}
-	footer {background:linear-gradient(rgba(15 7 43 / 1) 20%, rgba(32 10 70 / 1));}
+	footer {background:linear-gradient(rgba(10 0 40 / 1) 20%, rgba(40 10 70 / 1));}
 }

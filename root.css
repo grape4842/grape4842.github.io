@@ -221,6 +221,7 @@ fieldset {
 }
 dialog {
     position: fixed;
+    border-radius: 0.5rem;
     border-color: rgba(0 0 0 / 0.3);
     top:50%; left:50%;
     transform: translate(-50%, -50%);
@@ -253,7 +254,8 @@ dialog::backdrop {
 }
 dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) {
     position: absolute;
-    right:0;
+    border-radius: 0.5rem;
+    right:0rem;
     top:0;
     display: flex;
     aspect-ratio: 1/1;
