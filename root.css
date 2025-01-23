@@ -3,6 +3,34 @@
 :lang(ja) {word-break: auto-phrase; font-feature-settings: "palt";}
 ::selection {background:#51a; color:white;}
 /*폰트 설성*/
+
+/*한국어*/
+@font-face { 
+    font-family:"KoddiUDOnGothic";
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
+    font-weight:400;
+    font-display : swap;
+} 
+@font-face { 
+    font-family:"KoddiUDOnGothic";
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
+    font-weight:700;
+    font-display : swap;
+} 
+@font-face { 
+    font-family:"KoddiUDOnGothic";
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+    font-weight:900;
+    font-display : swap;
+}
+
+/*일본어 日本語*/
 @font-face { 
 	font-family:"BIZ-UDPGothic";
 	src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
@@ -17,30 +45,6 @@
 	font-display : swap;
 } 
 
-@font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
-	font-weight:400;
-	font-display : swap;
-} 
-@font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
-	font-weight:700;
-	font-display : swap;
-} 
-@font-face { 
-	font-family:"KoddiUDOnGothic";
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
-	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
-	font-weight:900;
-	font-display : swap;
-}
 @font-face { 
 	font-family:"BIZ-UDMincho";
 	src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
@@ -80,12 +84,15 @@
   clip-path: inset(50%);
 }
 
-:root {
-    font-size: 1rem;
-    margin: 0;
-    padding: 0;
-    ruby-align: space-between;
-    scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
+@layer reset css {
+    :root {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        ruby-align: space-between;
+        scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
+    }
 }
 @supports not (min-block-size: 100dvb) {
     :where(html) {
@@ -93,15 +100,10 @@
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    :where(html:focus-within) {
-        scroll-behavior: smooth; /* 포커스된 요소로 부드럽게 스크롤 */
-    }
-}
-
 :where(input, button, textarea, select, a) {
     font: inherit; /* 입력 요소는 부모의 폰트 속성 계승 */
     box-sizing: border-box;
+    padding:0.5rem;
 }
 
 *, :where(body):not(img), body {
@@ -135,11 +137,7 @@ summary {
     list-style-type: none; /* 그 외의 브라우저용 사용자 정의 스타일 */
 }
 
-:where(:disabled) {
-    cursor: not-allowed; /* 비활성화된 요소의 커서 변경 */
-}
-
-:where(label:has(> input:disabled), label:has(+ input:disabled), input[type="radio"]:disabled + label, input[type="checkbox"]:disabled + label) {
+:where(:disabled, label:has(> input:disabled), label:has(+ input:disabled), input:disabled + label) {
     cursor: not-allowed; /* 비활성화된 입력 요소의 라벨 커서 변경 */
 }
 
@@ -217,33 +215,53 @@ fieldset {
     border: none; /* 필드셋의 기본 테두리 제거 */
 }
 
-::details-content, dialog {
-  transition:height 0.2s ease, width 0.2s ease, content-visibility 0.2s ease allow-discrete, display 0.2s ease;
-
+::details-content, dialog,dialog::backdrop {
+    transition:height 0.2s ease, width 0.2s ease, content-visibility 0.2s ease allow-discrete, display 0.2s ease, scale 0.2s ease, visibility 0.2s ease, backdrop-filter 0.2s ease;
 }
-
+dialog {
+    position: fixed;
+    border-color: rgba(0 0 0 / 0.3);
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 90dvh;
+    border:none;
+}
+dialog::backdrop {
+    transition: filter 0.2s, background 0.2s,display 0.2s;
+    backdrop-filter: blur(5px) brightness(0.7);
+}
 dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) {
     position: absolute;
     right:0;
     top:0;
     display: flex;
-    align-items: center;
-    justify-content: center;
     aspect-ratio: 1/1;
-    padding:1;
-    min-height: 3rem;
+    align-items: center;
+    height: 3rem;
+    background: transparent;
+}
+dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
+    max-height: 2rem;
+    aspect-ratio: 1/1;
+}
+dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+dialog :where(.popover_content,.popover_body,.popup_content,.popup_main,.modal_content) {
+    min-width:min-content;
+    max-width: 90vw;
+    padding:1rem 1.5rem;    
 }
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
+    display: flex;
+    align-items: center;
     position: sticky;
+    font-size: 1.2rem!important;
     left:0;
     top:0;
+    height: 3rem;
+
 }
-dialog {
-    position: fixed;
-    top:50%; left:50%;
-    transform: translate(-50%, -50%);
-}
- 
+
 :where(#skipnav, #jumpnav, #skip_nav) {
     position: fixed;
     display: block;
@@ -265,4 +283,53 @@ dialog {
     top: 0rem;
     text-decoration: #fff underline wavy 2px;
     text-underline-offset: 0.4rem;
+}
+
+
+
+/*많은 파일에서 공통으로 사용하는 고유 내용*/
+.lightV: {display: unset;}
+.darkV {display: none;}
+.content_width {width: 90vw;}
+/*고대비 모드*/
+@media (prefers-contrast:more) {
+    body {
+        background-color:black !important;
+        color:white;
+    }
+    ::selection {
+        background:#fff; 
+        color:black;
+    }
+
+}
+
+/*다크 모드*/
+@media (prefers-color-scheme: dark) {
+    .lightV {display: none;}
+    .darkV {display: unset;}
+}
+
+/*기기별 CSS*/
+
+/*PC*/
+@media screen and (width >= 1400px) {
+    .content_width {width: 60vw;}
+}
+/*700px〜1200px iPad*/
+@media screen and (700px <= width < 1400px )  {
+    .content_width {width: 70vw;}
+}
+/*Mobile*/
+@media screen and (340px <= width < 700px ) {
+    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+    dialog :where(.popover_content,.popover_body,.popup_content,.popup_main,.modal_content) {
+        width:80vw;
+    }
+
+}
+/*folded, watch*/
+/*watch*/
+@media screen and (330px > width) {
+    .content_width {width: 95vw;}
 }
