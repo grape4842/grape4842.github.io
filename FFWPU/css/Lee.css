@@ -143,9 +143,7 @@ details {position: relative;}
 	font-size: 1rem;
 	line-height: 1.5rem;
 }
-.font_size form {
-	display: flex;
-}
+
 .font_size form > div {
 	display: flex;
 	justify-content: center;
@@ -155,7 +153,6 @@ details {position: relative;}
 	margin:1rem;
 }
 #font_size_display {
-	display: none;
 	text-align: center;
 	max-width: 5rem;
 	line-height: 2rem;
@@ -183,6 +180,11 @@ details {position: relative;}
 	left:0px;
 	padding:0rem 0.25rem;
 	z-index: 2;
+	color:rgba(255 220 220 / 0.9);
+	background: rgba(50, 30, 20, 1.0);
+}
+.min_fonted#font_size_min_alert {
+	display: inline-block;
 }
 .radio_buttons {
 	display: flex;
