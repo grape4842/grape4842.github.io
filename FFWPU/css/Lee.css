@@ -5,6 +5,23 @@
 .light_view {}
 
 body {background: rgba(255, 250, 230);}
+
+.content_text.biz-udpgothic {
+  font-family: "BIZ-UDPGothic", sans-serif;
+}
+
+.content_text.biz-udpmincho {
+  font-family: "BIZ-UDPMincho", serif;
+}
+
+/*
+:where(*, :where(body):not(img), body):has(#udp_gothic:checked) {
+	font-family:"BIZ-UDPGothic";
+}
+:where(*, :where(body):not(img), body):has(#ud_mincho:checked) {
+	font-family:"BIZ-UDMincho";
+}
+*/
 h1 {font-size: 1.2rem;}
 .video_box iframe {
 	padding:1rem 0rem;
