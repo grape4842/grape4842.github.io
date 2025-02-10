@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const decreaseFontButton = document.getElementById("decrease_font_button");
     const increaseFontButton = document.getElementById("increase_font_button");
     const resetFontButton = document.getElementById("reset_font_button");
+    const setFont1remButton = document.getElementById("set_font_1rem_button"); // 1rem 버튼 추가
     const fontSizeDisplay = document.getElementById("font_size_display");
     const fontSizeMinAlert = document.getElementById("font_size_min_alert");
     const minFontSize = 0.5; // 최소 폰트 크기
@@ -36,10 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentSize > minFontSize) {
             setFontSize(currentSize - 0.1);
             fontSizeMinAlert.classList.remove("min_fonted");
-            decreaseFontButton.removeAttribute("aria-disabled");
         }
         if (currentSize - 0.1 <= minFontSize) {
-            decreaseFontButton.setAttribute("aria-disabled", "true");
             fontSizeMinAlert.classList.add("min_fonted");
         }
     });
@@ -47,15 +46,20 @@ document.addEventListener("DOMContentLoaded", function () {
     increaseFontButton.addEventListener("click", function () {
         let currentSize = getFontSize();
         setFontSize(currentSize + 0.1);
-        decreaseFontButton.removeAttribute("aria-disabled");
         fontSizeMinAlert.classList.remove("min_fonted");
     });
 
     resetFontButton.addEventListener("click", function () {
         setFontSize(defaultFontSize);
-        decreaseFontButton.removeAttribute("aria-disabled");
         fontSizeMinAlert.classList.remove("min_fonted");
     });
+
+    // 1rem 버튼 클릭 이벤트
+    setFont1remButton.addEventListener("click", function() {
+        setFontSize(1); // 1rem으로 설정
+        fontSizeMinAlert.classList.remove("min_fonted");
+    });
+
 
     // 초기 설정
     setFontSize(defaultFontSize);
