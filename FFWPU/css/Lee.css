@@ -4,18 +4,18 @@
 .dark_view {display: none;}
 .light_view {}
 
-body {
-	background: rgba(255, 250, 230);
-	letter-spacing:3px;
-	font-size:1.2rem;
-	line-height: 2.5rem;
+body {background: rgba(255, 250, 230);}
+h1 {font-size: 1.2rem;}
+.video_box iframe {
+	padding:1rem 0rem;
+	aspect-ratio: 16/9;
 }
-h1 {font-size: 1.5rem;}
 main {
+	font-size:1.2rem;
 	background: #feb;
 	padding:1rem 2rem;
 	border-radius: 2vmax;
-	margin:3rem auto!important;
+	margin:1rem auto!important;
 	border: 2px solid rgba(200, 170, 150, 0.5);
 }
 .center {
@@ -28,9 +28,16 @@ header, footer {
 	background: #333;
 	color:white;
 }
+footer {
+	margin-top:5rem ;
+}
 .copyright {text-align: center;}
-main > p {
+.content_text > p {
+	line-height: 1.8;
 	padding:1rem 0px;
+}
+.content_text > p {
+	text-indent: 1em;
 }
 a {vertical-align: middle;}
 details {position: relative;}
@@ -98,6 +105,10 @@ details {position: relative;}
 	justify-content: flex-end;
 	align-items: center;
 	width: 3rem;
+}
+.font_setting_box .font_control {
+	background:rgba(40, 30, 20, 1.0);
+	border:1px solid rgba(200, 170, 150, 0.5);
 
 }
 .font_setting_box :where(button, summary) {
@@ -148,7 +159,7 @@ details {position: relative;}
 	text-align: center;
 	max-width: 5rem;
 	line-height: 2rem;
-	max-height: 3rem!important;
+	max-height: 3rem;
 }
 #font_size_display, .font_size button {
 	border: 1px solid #777;
@@ -158,20 +169,37 @@ details {position: relative;}
 .font_size_adjust button {
 	aspect-ratio: 1/1;
 }
-.font_family form {
+.font_size_direct button {
+	padding:0rem 0.5rem;
+	text-align: center;
+}
+#font_size_min_alert {
+	display: none;
+	transition: display 0.2s;
+	border:1px solid;
+	text-align: center;
+	position: absolute;
+	top:-1rem;
+	left:0px;
+	padding:0rem 0.25rem;
+	z-index: 2;
+}
+.radio_buttons {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width:100%;
 }
 .font_family label[for="ud_mincho"] {
 	margin:1rem;
 }
-.font_family label {
-	max-height: 3rem;
+label:has(input[type="radio"]) {
+	height: 100%;
+	width: max-content;
 	display: flex;
 	align-items: center;
 	box-sizing: border-box;
-	padding: 0 0.5rem;
+	padding: 0.25rem 0.5rem;
 	margin: 0 0.5rem;
 	border: 1px solid rgba(200, 170, 150, 0.5);
 	background: #feb;
@@ -184,15 +212,14 @@ input[type="radio"] {
 label:has(input[type="radio"]:checked)::after {
 	content: '';
 	position: absolute;
-	height: 10px;
-	width: 4px;
-	rotate:45deg;
+	height: 12px;
+	aspect-ratio: 1/1;
+	border-radius: 1rem;
 	display: block;
 	background: transparent;
-	border-right: 4px solid rgba(40, 30, 20, 1.0);
-	border-bottom: 4px solid rgba(40, 30, 20, 1.0);
-	left: 6px;
-	top: -2px;
+	border: 4px solid rgba(40, 30, 20, 1.0);
+	left: -0.5rem;
+	top: -0.5rem;
 }
 label input[type="radio"] {
 	position: absolute;
@@ -203,7 +230,40 @@ label input[type="radio"] {
 	width: 100%;
 	height: 100%;
 }
+label:has(input[name="main_view_type"]) {
+	border-radius: 0.5rem;
+	padding:0.75rem 1rem;
+}
 
+.view_type_select_area:has(input[id="view_all"]:checked) ~ main .content_text{
+	max-height: 100%;
+}
+.view_type_select_area:has(input[id="view_scroll"]:checked) ~ main .content_text {
+	min-height: 5lh;
+	max-height: 7lh;
+	overflow-y:scroll;
+}
+.view_type_select {
+	padding-bottom: 1rem;
+}
+.view_type_select h3 {
+	padding:1rem 0rem;
+}
+
+
+
+#go_top {
+	display: none;
+	aspect-ratio: 1/1;
+	border-radius: 10rem;
+	position: fixed;
+	bottom:1rem;
+	right:1rem;
+	width: 2.5rem;
+	border:1px solid rgba(255 255 255 / 0.3);
+	background: rgba(0, 0, 0, 0.3);
+	transition: display 0.2s, opacity 0.2s;
+}
 
 
 /*기기별 CSS*/
@@ -211,25 +271,22 @@ label input[type="radio"] {
 /*PC*/
 @media screen and (min-width: 1400px) {
 	.pc_view {display: block;}
-	body {
-		font-size: 1.7rem;
-		line-height: 4rem;
-		letter-spacing: 3px;
+	main * {
+		font-size: 1.4rem;
 	}
 	.center {
 		width: 55vw;
 	}
+	h1 {font-size: 1.5rem;}
 }
 
 /*700px〜1200px iPad*/
 @media (min-width: 700px) and (max-width: 1399px) {
-	body {
-		font-size: 1.5rem;
-		line-height: 3rem;
-		letter-spacing: 3px;
-	}
 	main {
 		padding: 1.5rem 3rem;
+	}
+	main * {
+		font-size: 1.3rem;
 	}
 
 	.center {
@@ -271,11 +328,10 @@ label input[type="radio"] {
 	.font_setting {
 		background: #222;
 	}
-	.font_family label {
+	label:has(input[type="radio"]) {
 		background: rgba(40, 30, 20, 1.0);
 	}
 	label:has(input[type="radio"]:checked)::after {
-		border-right: 4px solid #feb;
-		border-bottom: 4px solid #feb;
+		border: 4px solid #feb;
 	}
 }

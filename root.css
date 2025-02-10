@@ -310,7 +310,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 
 /*많은 파일에서 공통으로 사용하는 고유 내용*/
-.lightV: {display: unset;}
+.lightV {display: unset;}
 .darkV {display: none;}
 .content_width {width: 90vw;}
 /*고대비 모드*/
