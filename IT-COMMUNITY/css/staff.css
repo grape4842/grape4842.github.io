@@ -1,25 +1,22 @@
 /*관리자 소개 페이지 CSS*/
-#robin {
-	justify-content:center;
+.STF {
+	width: 100%;
+	margin:4rem auto;
+	animation-name:stafflist;
+	animation-fill-mode:forwards;
+	animation-duration:0.5s;
 	position:relative;
-	top:-100rem;
-	animation-name:robin;
-	animation-duration:0.3s;
-	animation-fill-mode:forwards;}
-@keyframes robin {
-	0% {top:-100rem;}
-	100% {top:0em;}
+	left:100rem;
 }
-#robin dt {
-	background: linear-gradient(135deg, #432000 20%, #775533, #432000 80%);
-	color:#ced;
-	font-weight:900;
+@keyframes stafflist {
+	0% {left:100rem;}
+	40% {left:-2%}
+	60% {left:0.5rem;}
+	75% {left:-1%;}
+	100% {left:0rem;}
 }
-#robin dd{
-	text-align:center;
-	border:solid #432000 5px;}
 
-#robin dt, .STF dt {
+.STF dt {
 	display:inline-block;
 	border-top-left-radius:2rem;
 	border-top-right-radius:2rem;
@@ -28,57 +25,57 @@
 	z-index: 2;
 }
 dt a {font-size:1rem;}
-#robin dd, .STF dd {
+.STF dd {
 	background-color:black;
 	padding:1rem;
 	border-radius: 2rem;
 	border-top-left-radius: 0px;
 }
-:where(#robin dd, .STF dd) img {
+.STF dd img {
 	border-radius: 1rem;
 	display: flex;
 }
-.STF, #robin {
-	width: 100%;
-	margin:4rem auto;
-}
-.STF {
-	animation-name:stafflist;
-	animation-fill-mode:forwards;
-	animation-duration:0.5s;
-	position:relative;
-	left:100rem;
-}
 dd article {padding-top:1rem;}
-@keyframes stafflist {
-	0% {left:10000px;}
-	40% {left:-2%}
-	60% {left:0.5rem;}
-	75% {left:-1%;}
-	100% {left:0rem;}
-}
 .STF dt {
 	font-size:1.2rem;
-	font-weight:800;}
+	font-weight:800;
+}
 .STF dd {
 	font-size:1.0rem;
-	font-weight:700;}
+	font-weight:700;
+}
 .staffs {
 	width:100%; 
-	height:100%;}
-#aorus {animation-delay:0.2s}
-#aorus dt,#aorus a {background-color:#226; color:#def;}
+	height:100%;
+}
+
+#master {animation-delay:0.1s}
+#master dt {
+	background-color:#335;
+	color:#ff3;
+}
+#master dd {border:solid 5px #335;}
+
+#maker {animation-delay: 0.3s}
+#maker dt {
+	background:#432000;
+	color:#ced;
+	font-weight:900;
+}
+#maker dd{
+	text-align:center;
+	border:solid #432000 5px;
+}
+
+#aorus {animation-delay:0.5s}
+#aorus dt {
+	background-color:#226; 
+	color:#def;
+}
 #aorus dd {border:solid #236 5px;}
 
-#kejang {animation-delay:0.3s}
-#kejang dt {background-color:#333;}
-#kejang dd {border:solid 5px #333;}
 
-#psps {animation-delay:0.4s}
-#psps dt,#psps a {background-color:#080;}
-#psps dd {border:#080 solid 5px;}
-
-#purple {animation-delay:0.5s}
+#purple {animation-delay:0.7s}
 #purple dt {background-color:#439;}
 #purple dd {border:#439 solid 5px;}
 
@@ -94,13 +91,13 @@ dd article {padding-top:1rem;}
 		grid-gap:2rem 4rem;
 		grid-template-columns: 1fr 1fr;
 	}
-	.STF, #robin {
+	.STF {
 		margin:1rem;
 	}
 
 }
 @media (prefers-color-scheme:light) {
-	#robin dd,.STF dd {
+	.STF dd {
 		background-color:white;
 		color:black;
 		width:100%;
@@ -109,8 +106,6 @@ dd article {padding-top:1rem;}
 	#purple dt,#purple a {background-color:#baf; color:#307;}
 	#purple dd {border:#baf solid 5px;}
 
-	#kejang dt,#kejang a {background-color:#ccc; color:black;}
-	#kejang dd {border:solid 5px #ccc;}
-
-	#psps dt,#psps a {background-color:#fce; color:#540;}
-	#psps dd {border:#fce solid 5px;}
+	#master dt,#master a {background-color:#ffa; color:#111;}
+	#master dd {border:solid 5px #ccc;}
+}

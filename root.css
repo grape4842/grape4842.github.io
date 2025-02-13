@@ -280,7 +280,7 @@ dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popo
     aspect-ratio: 1/1;
 }
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-dialog :where(.popover_content,.popover_body,.popup_content,.popup_main,.modal_content) {
+dialog :where(.popover_content,.popover_body,.popup_content,popup_body,.popup_main,.modal_content) {
     min-width:min-content;
     max-width: 90vw;
     padding:1rem 1.5rem;    
@@ -370,7 +370,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 /*Mobile*/
 @media screen and (340px <= width < 700px ) {
     dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-    dialog :where(.popover_content,.popover_body,.popup_content,.popup_main,.modal_content) {
+    dialog :where(.popover_content,.popover_body,.popup_content,popup_body,.popup_main,.modal_content) {
         width:80vw;
     }
 

@@ -348,13 +348,9 @@ summary::-webkit-details-marker {
 	display: none;
 }
 #sellform {
-	position: fixed;
 	z-index: 9;
-	margin:auto auto;
 	border: #63c 0.5rem solid;
 	padding:1rem;
-	max-width: 90vw;
-	max-height: 90vh;
 	background-color: #103;
 	border-radius: 2rem;
 }
