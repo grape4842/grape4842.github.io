@@ -27,14 +27,21 @@ h1 {font-size: 1.2rem;}
 	padding:1rem 0rem;
 	aspect-ratio: 16/9;
 }
-main {
+.content_text {
 	font-size:1.2rem;
 	background: #feb;
 	padding:1rem 2rem;
 	border-radius: 2vmax;
 	margin:1rem auto!important;
+	transition: height 0.2s;
 	border: 2px solid rgba(200, 170, 150, 0.5);
 }
+:where(.mother_speek, .content_text) > p {
+	text-indent: 1em;	
+	line-height: 1.8;
+	padding:1rem 0px;
+}
+
 .center {
 	width:90vw;
 	margin: 0px auto;
@@ -49,13 +56,6 @@ footer {
 	margin-top:5rem ;
 }
 .copyright {text-align: center;}
-.content_text > p {
-	line-height: 1.8;
-	padding:1rem 0px;
-}
-.content_text > p {
-	text-indent: 1em;
-}
 a {vertical-align: middle;}
 details {position: relative;}
 .original_video {
@@ -259,8 +259,7 @@ label:has(input[name="main_view_type"]) {
 	max-height: 100%;
 }
 .view_type_select_area:has(input[id="view_scroll"]:checked) ~ main .content_text {
-	min-height: 5lh;
-	max-height: 7lh;
+	height: 7lh;
 	overflow-y:scroll;
 }
 .view_type_select {
@@ -302,10 +301,10 @@ label:has(input[name="main_view_type"]) {
 
 /*700px〜1200px iPad*/
 @media (min-width: 700px) and (max-width: 1399px) {
-	main {
+	.content_text {
 		padding: 1.5rem 3rem;
 	}
-	main * {
+	.content_text * {
 		font-size: 1.3rem;
 	}
 
@@ -316,7 +315,7 @@ label:has(input[name="main_view_type"]) {
 
 /*Mobile*/
 @media (min-width: 340px) and (max-width: 699px) {
-	main {
+	.content_text {
 		padding: 0rem 1rem;
 	}
 	.font_setting {
@@ -337,7 +336,7 @@ label:has(input[name="main_view_type"]) {
 	.light_view {display: none;}
 	.dark_view {display: unset;}
 	body {background:rgba(20, 10, 0, 1.0);}
-	main {background:rgba(40, 30, 20, 1.0);}
+	.content_text {background:rgba(40, 30, 20, 1.0);}
 	.mother_speek {
 		background:#312;
 		box-shadow:0 0 0 1rem #312;
