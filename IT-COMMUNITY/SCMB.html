@@ -12,7 +12,7 @@
 	</svg>
 플러스 친구</a>
 <a class="menu" href="link.html" target="_blank">사이트 목록</a>
-<button popovertarget="sellform" type="button" class="menu" id="sellform_button">
+<button onclick="document.getElementById("sellform").showModal();" aria-haspopup="dialog" type="button" class="menu" id="sellform_button">
 	<span>판매글 양식</span>
 </button>
 <dialog id="sellform" popover>
@@ -39,10 +39,12 @@
 		<p>❗ 중고거래 피해에 대한 책임은 거래자간에 있으며 방에서는 책임지지 않습니다.</p>
 	</div>
 	<button id="copy_product_profile" onclick="copyListContent()">판매글 양식 복사</button>
-	<button id="close_sellform" class="popup_close" type="button" popovertarget="sellform">
-		<span class="close_x"></span>
-		<span class="hidden">판매글 양식 팝업 닫기</span>
-	</button>
+	<form method="dialog">
+		<button id="close_sellform" class="popup_close" type="button">
+			<span class="close_x"></span>
+			<span class="hidden">판매글 양식 팝업 닫기</span>
+		</button>
+	</form>
 </dialog>
 <script>
 	function copyListContent() {
@@ -65,5 +67,5 @@
 
             // 선택 영역 제거
             window.getSelection().removeAllRanges();
-        }
-    </script>
+         }
+      </script>
