@@ -270,9 +270,9 @@ dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popo
 dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) button {
     border-radius: 0.5rem;
     display: flex;
-    aspect-ratio: 1/1;
     align-items: center;
     height: 3rem;
+    width: 3rem;
     background: transparent;
 }
 dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
