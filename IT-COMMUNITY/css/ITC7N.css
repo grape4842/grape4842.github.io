@@ -5,8 +5,6 @@ body {
 	url("../img/purplestar.jpg");
 	background-attachment:fixed;
 }
-.light {display:none;}
-.w90 {width:90vw; margin:auto;}
 
 #mainjump {
 	text-align:center;
@@ -174,7 +172,7 @@ header::before {
 .HELLO video {
 	position: relative;
 	z-index: 2;
-	max-height:95dvh;
+	max-height: 95dvh;
 	margin:0 auto;
 	padding-top:1rem;
 }

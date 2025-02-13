@@ -37,16 +37,12 @@ h1 {font-size: 1.2rem;}
 	border: 2px solid rgba(200, 170, 150, 0.5);
 }
 :where(.mother_speek, .content_text) > p {
+	cursor: text;
 	text-indent: 1em;	
 	line-height: 1.8;
 	padding:1rem 0px;
 }
 
-.center {
-	width:90vw;
-	margin: 0px auto;
-	box-sizing: border-box;
-}
 header, footer {
 	padding:1rem 0;
 	background: #333;
@@ -113,7 +109,7 @@ details {position: relative;}
 	z-index: 10000;
 	top: 0;
 }
-.menu > .center {
+.menu > .content_width {
 	display: flex;
 	justify-content: flex-end;
 }
@@ -138,10 +134,10 @@ details {position: relative;}
 }
 .font_control {
 	height: 3rem;
+	width: 3rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	aspect-ratio: 1/1;
 }
 .font_setting {
 	position: absolute;
@@ -209,19 +205,20 @@ details {position: relative;}
 	align-items: center;
 	width:100%;
 }
-.font_family label[for="ud_mincho"] {
+label:has(input[type="radio"]) {
 	margin:1rem;
 }
-label:has(input[type="radio"]) {
-	height: 100%;
+label:has(input[type="radio"]) span{
+	max-height: 3rem;
 	width: max-content;
 	display: flex;
 	align-items: center;
 	box-sizing: border-box;
 	padding: 0.25rem 0.5rem;
-	margin: 0 0.5rem;
 	border: 1px solid rgba(200, 170, 150, 0.5);
 	background: #feb;
+	padding:0.75rem 1rem;
+	border-radius: 0.5rem;
 }
 input[type="radio"] {
 	appearance: none;
@@ -232,14 +229,14 @@ input[type="radio"] {
 label:has(input[type="radio"]:checked)::after {
 	content: '';
 	position: absolute;
-	height: 12px;
-	aspect-ratio: 1/1;
+	height: 0.5rem;
+	width: 0.5rem;
 	border-radius: 1rem;
 	display: block;
 	background: transparent;
-	border: 4px solid rgba(40, 30, 20, 1.0);
-	left: -0.5rem;
-	top: -0.5rem;
+	border: 0.25rem solid rgba(40, 30, 20, 1.0);
+	left: 0.25rem;
+	top: 0.1rem;
 }
 label input[type="radio"] {
 	position: absolute;
@@ -250,10 +247,6 @@ label input[type="radio"] {
 	width: 100%;
 	height: 100%;
 }
-label:has(input[name="main_view_type"]) {
-	border-radius: 0.5rem;
-	padding:0.75rem 1rem;
-}
 
 .view_type_select_area:has(input[id="view_all"]:checked) ~ main .content_text{
 	max-height: 100%;
@@ -261,9 +254,6 @@ label:has(input[name="main_view_type"]) {
 .view_type_select_area:has(input[id="view_scroll"]:checked) ~ main .content_text {
 	height: 7lh;
 	overflow-y:scroll;
-}
-.view_type_select {
-	padding-bottom: 1rem;
 }
 .view_type_select h3 {
 	padding:1rem 0rem;
@@ -293,9 +283,6 @@ label:has(input[name="main_view_type"]) {
 	main * {
 		font-size: 1.4rem;
 	}
-	.center {
-		width: 55vw;
-	}
 	h1 {font-size: 1.5rem;}
 }
 
@@ -308,9 +295,6 @@ label:has(input[name="main_view_type"]) {
 		font-size: 1.3rem;
 	}
 
-	.center {
-		width: 75vw;
-	}
 }
 
 /*Mobile*/
@@ -347,7 +331,7 @@ label:has(input[name="main_view_type"]) {
 	.font_setting {
 		background: #222;
 	}
-	label:has(input[type="radio"]) {
+	label:has(input[type="radio"]) span{
 		background: rgba(40, 30, 20, 1.0);
 	}
 	label:has(input[type="radio"]:checked)::after {
