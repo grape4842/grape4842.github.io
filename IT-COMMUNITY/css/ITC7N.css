@@ -27,7 +27,9 @@ body {
 #mainjump:focus {top:0;}
 
 
-a {display:inline-flex;
+a {
+	font-weight: 600;
+	display:inline-flex;
 	text-decoration:none;
 	justify-content:center;
 	vertical-align:baseline;
@@ -637,58 +639,59 @@ footer {
 	.ribbon-tale:before{
 		content: ''; 
 		display:none;
-		background:transparent;}
+		background:transparent;
+	}
+}
+
+
+@media (prefers-color-scheme:light) {
+	.light,.Gram {display:flex;}
+	.dark, .note20 {display:none;}
+	body {
+		background-image:url("../img/mintback.png"); 
+		background-attachment:fixed;
+	}
+	:is(header, .visual_title, .visual_title section)::before {
+		background-color: white;
+	}
+	header::before {
+		background-color: white!important;
+		box-shadow: 0px 0px 1rem 1rem #fff;
+	}
+	.visual_title::after {
+		background:linear-gradient(to bottom, rgba(255 255 255 / 1)30%, rgba(255 255 255 / 0)100%);
+	}
+	#apple {background-color: transparent;}
+	#notice::after {background-color:rgba(0,0,0,0.16);}
+	#sellform {
+		border-color: #ffc222;
+		background-color: #FFeeaa;
+	}
+	.close_x::before,
+	.close_x::after {
+		background-color: #111;
 	}
 
+	.menu, summary, #copy_product_profile {
+		filter: hue-rotate(130deg);
+	}
+	.ribbon-text, .ribbon-tale, .ribbon:after, .ribbon-text:before {
+		filter: hue-rotate(60deg) brightness(2) saturate(0.7);
 
-	@media (prefers-color-scheme:light) {
-		.light,.Gram {display:flex;}
-		.dark, .note20 {display:none;}
-		body {background-image:url("../img/mintback.png"); 
-			background-attachment:fixed;}
-			:is(header, .visual_title, .visual_title section)::before {
-				background-color: white;
-			}
-			header::before {
-				background-color: white!important;
-				box-shadow: 0px 0px 1rem 1rem #fff;
-			}
-			.visual_title::after {
-				background:linear-gradient(to bottom, rgba(255 255 255 / 1)30%, rgba(255 255 255 / 0)100%);
-			}
-			#apple {background-color: transparent;}
-			#notice::after {background-color:rgba(0,0,0,0.16);}
-			#sellform {
-				border-color: #ffc222;
-				background-color: #FFeeaa;
-			}
-			.close_x::before,
-			.close_x::after {
-				background-color: #111;
-			}
-
-			.menu, summary, #copy_product_profile {
-				filter: hue-rotate(130deg);
-			}
-			.ribbon-text, .ribbon-tale, .ribbon:after, .ribbon-text:before {
-				filter: hue-rotate(60deg) brightness(2) saturate(0.7);
-
-			}
-			section > ul {
-				background:linear-gradient(160deg, rgba(50,10,0,0.8), rgba(70,40,0,0.8));
-				border:#850 2px solid;
-				color:white;
-			}
-			section > ul > li {
-				backdrop-filter: blur(5px);
-				-webkit-backdrop-filter: blur(5px);
-				background:linear-gradient(160deg, rgba(40 10 0 / 0.7), rgba(60 40 0 / 0.7));
-			}
-			h2 {color:#50a;}
-			footer{
-				color:#fff;
-				background:linear-gradient(rgb(60 60 70) 10%, rgb(10 10 20)90%);
-			}
-
-
-		}
+	}
+	section > ul {
+		background:linear-gradient(160deg, rgba(50,10,0,0.8), rgba(70,40,0,0.8));
+		border:#850 2px solid;
+		color:white;
+	}
+	section > ul > li {
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		background:linear-gradient(160deg, rgba(40 10 0 / 0.7), rgba(60 40 0 / 0.7));
+	}
+	h2 {color:#50a;}
+	footer{
+		color:#fff;
+		background:linear-gradient(rgb(60 60 80) 10%, rgb(10 10 30)90%);
+	}
+}
