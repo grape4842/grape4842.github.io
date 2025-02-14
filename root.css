@@ -271,6 +271,7 @@ dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popo
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 3rem;
     width: 3rem;
     background: transparent;
