@@ -2,7 +2,6 @@
 *, :where(body):not(img), body {
 	font-family: "Pretendard Variable"!important;
 }
-:where(body):not(img) {line-height: 2rem!important;}
 body {
 	background-image:linear-gradient(to left, rgba(10 0 255 / 0.1), rgba(10 0 255 / 0.1), rgba(10 0 255 / 0.1)), 
 	url("../img/purplestar.jpg");
