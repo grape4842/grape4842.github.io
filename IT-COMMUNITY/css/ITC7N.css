@@ -205,14 +205,13 @@ header::before {
 	line-height: 4rem;
 }
 
-main.w90 {padding:1rem 0px;}
 h1,h2 {font-weight:900;}
 h3,h4 {font-weight:800;}
 .ribbon {
 	margin:3rem 0;
 }
 .ribbon-text {
-	font-size:1.7rem;
+	font-size:1.5rem;
 	background: linear-gradient(to left, rgba(140,100,255,1), rgba(120,50,220,1), rgba(70,0,150,1), rgba(50,0,100,1));
 	color:white;
 	z-index: 2;
@@ -458,10 +457,7 @@ section > ul > li {
 	border-radius:1rem;
 }
 section > ul > li:first-child {
-	margin-top:0px;
-}
-section > ul > li:last-child {
-	margin-bottom: 0px;
+	margin:0 auto;
 }
 li li,li li strong,li dl strong {
 	background-color:transparent;
@@ -480,21 +476,6 @@ li,strong,li a {
 	font-weight:900;
 	padding:0px 0.5rem;
 }
-
-::-webkit-scrollbar {
-	width: 20px;  /* 스크롤바의 너비 */
-}
-
-::-webkit-scrollbar-thumb {
-	background:rgba(0 0 0 / 0.5); /* 스크롤바의 색상 */
-	border:solid 1px #326;
-	border-radius: 20px;
-}
-
-::-webkit-scrollbar-track {
-	background:rgba(0 0 0 / 0.1);  /*스크롤바 뒷 배경 색상*/
-}
-
 
 footer {
 	font-size: 0.8rem;
@@ -520,8 +501,6 @@ footer {
 
 /*PC*/
 @media screen and (1100px < width) {
-	.wsmall {display:none;}
-	.wbig {display:block;}
 	#apple {height: 44px;}
 	#apple svg {height: 44px;}
 	#LOGO {
@@ -541,10 +520,6 @@ footer {
 	#gochatbox {padding-top:34px;}
 	.HELLO {
 
-	}
-	.w90 {
-		width:52vw;
-		padding:0px 16px;
 	}
 	.menu, #copy_product_profile {
 		margin:4rem 2.5rem;
@@ -604,7 +579,6 @@ footer {
 		.wsmall {display:block;}
 		.wbig {display:none;}
 		body {background-size:80%;}
-		.w90 {width:90%;}
 		section > ul {
 			padding:1rem;
 		}
@@ -622,7 +596,6 @@ footer {
 	li,li li,dt,dd,p,.HELLO div {font-size:17px !important;}
 	#gochat {z-index:10;}
 	body {background-size:100%;}
-	.w90 {width:95%;}
 	section > ul {
 		padding:0.5rem;
 	}
