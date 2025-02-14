@@ -1,6 +1,6 @@
 @charset "utf-8";
 *, :where(body):not(img), body {
-	font-family: "Pretendard"!important;
+	font-family: "Pretendard Variable"!important;
 }
 :where(body):not(img) {line-height: 2rem!important;}
 body {
