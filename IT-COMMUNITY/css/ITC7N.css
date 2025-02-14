@@ -34,10 +34,6 @@ a {
 	vertical-align:baseline;
 }
 
-/*큰 기기PC등에서만 보이는 부분*/
-.wbig {display:block;}
-/*스마트폰 등에서만 보이는 부분*/
-.wsmall {display:none;}
 
 header {
 	z-index: 2;
@@ -458,6 +454,7 @@ section > ul > li {
 	background-color:rgba(10 0 30 / 0.7);
 	padding:1rem;
 	margin:2rem 0;
+	font-weight: 500;
 	border-radius:1rem;
 }
 section > ul > li:first-child {
@@ -473,7 +470,6 @@ li li,li dl {
 	margin:0.5rem 0rem 0.5rem 1rem;
 }
 li,strong,li a {
-	font-weight:500; 
 	font-size:1.2rem;
 }
 
