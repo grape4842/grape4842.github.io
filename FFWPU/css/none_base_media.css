@@ -1,11 +1,4 @@
 @media screen and (width >= 1400px) {
-	.VPC {display:unset;}
-	.VM {display:none;}
-	main, header > *, footer > div {
-		margin:0px auto; 
-		width:60vw;
-		padding:1rem 0px;
-	}
 	header {
 			top:0px;
 			display:flex;
@@ -37,14 +30,12 @@
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
-	main, header > *, footer > div {width:80vw;}
 	article {padding:2rem;}
 	textarea {font-size:2rem; line-height:2.5rem;}
 }
 /*Mobile*/
 @media (340px <= width < 700px ) {
 	body {font-size:1rem;}
-	main, header > *, footer > div {width:95vw;}
 	article {padding:1rem;}
 	th, td {padding:0.5rem;}
 	#logo {width:2rem; height:2rem;}
