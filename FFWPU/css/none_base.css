@@ -57,7 +57,7 @@ a {
 	display:inline-flex;
 	scroll-behavior:smooth;
 	padding:0.5rem 0.25rem;
-	
+	border-radius: 0.5rem;
 	text-decoration:transparent; 
 	transition:text-decoration 0.2s, outline 0.2s;}
 
