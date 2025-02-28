@@ -53,9 +53,10 @@ address svg {
 }
 
 /*클릭가능한 요소 스타일*/
-a {	display:inline-flex;
+a {
+	display:inline-flex;
 	scroll-behavior:smooth;
-	padding:1rem 0px;
+	padding:0.5rem 0.25rem;
 	
 	text-decoration:transparent; 
 	transition:text-decoration 0.2s, outline 0.2s;}
