@@ -216,7 +216,6 @@ address {text-align: center;}
 fieldset {
     border: none; /* 필드셋의 기본 테두리 제거 */
 }
-
 ::details-content, dialog, dialog::backdrop {
     transition:
     height 0.2s ease, 
@@ -248,12 +247,8 @@ dialog {
 }
 
 @keyframes dialog_close {
-  from {
-    opacity: 1;
-}
-to {
-    opacity: 0;
-}
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 dialog[open] {
     animation: dialog_open 0.2s forwards;
@@ -285,8 +280,8 @@ dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_po
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
     min-width:min-content;
-    max-width: 90vw;
-    padding:1rem 1.5rem;    
+    margin:0;
+    padding:0.75rem 1.25rem;    
 }
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
     display: flex;
@@ -296,7 +291,12 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
     left:0;
     top:0;
     height: 3rem;
-
+}
+@media screen and (width >= 1400px) {
+    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+        padding:1rem 1.5rem;
+    }
 }
 
 :where(#skipnav, #jumpnav, #skip_nav) {
@@ -358,7 +358,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
     .darkV {display: unset;}
     dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
         filter: invert(1);
-}
+    }
 }
 
 /*기기별 CSS*/
@@ -367,24 +367,28 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 @media screen and (width >= 1400px) {
     .View_PC, .PCV, .PC_View {display: unset;}
     .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display: none;}
-    .content_width {width: 60vw;}
+    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) .content_width {width: 60vw;}
 }
 
 /*1000px〜1400px iPad Pro*/
 @media screen and (1000px <= width < 1400px )  {
-    .content_width {width: 80vw;}
+    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content), .content_width {width: 80vw;}
 }
 
 /*700px〜1200px iPad*/
 @media screen and (700px <= width < 1000px )  {
-    .content_width {width: 70vw;}
+
+    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content), .content_width {
+        width: 70vw;
+    }
+}
+
 }
 /*Mobile*/
 @media screen and (340px <= width < 700px ) {
-    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-    dialog :where(.popover_content,.popover_body,.popup_content,popup_body,.popup_main,.modal_content) {
-        width:80vw;
-    }
 
 }
 /*folded, watch*/
