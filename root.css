@@ -327,11 +327,17 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 /*많은 파일에서 공통으로 사용하는 고유 내용*/
 .lightV {display: unset;}
 .darkV {display: none;}
-.PCV, .PC_View {display: none;}
-.mobileV,.mobile_View, .Mobile_View, .MobileV {display: unset;}
+.View_PC, .PCV, .PC_View {display: none;}
+.View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
+    display: unset;
+}
 .content_width {
     width: 90vw;
     margin: 0rem auto;
+}
+.youtube_video_frame {
+    aspect-ratio: 16/9;
+    margin:1rem auto;
 }
 /*고대비 모드*/
 @media (prefers-contrast:more) {
@@ -359,8 +365,8 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 /*PC*/
 @media screen and (width >= 1400px) {
-    .PCV, .PC_View {display: unset;}
-    .mobileV,.mobile_View, .Mobile_View, .MobileV {display: none;}
+    .View_PC, .PCV, .PC_View {display: unset;}
+    .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display: none;}
     .content_width {width: 60vw;}
 }
 

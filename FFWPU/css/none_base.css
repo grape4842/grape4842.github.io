@@ -110,10 +110,16 @@ svg {
 /*버스 시간표 관련*/
 #bus_popup {
 	position: sticky;
-	padding:1rem;
+	padding:0.5rem;
+	border-radius: 0.5rem;
+	aspect-ratio: 1/1;
+	width: 3rem;
+	height: 3rem;
 	background: transparent;
 }
-#bus_popup img {}
+#bus_popup img {
+
+}
 /*표 관련 선언*/
 table {
 	margin:0 auto;
@@ -142,14 +148,12 @@ th svg, td svg {
 }
 
 p {margin:0px; padding:0.3rem 0px;}
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	padding:0.5rem;
 	margin-bottom: 1rem;
 }
-h1 {
-	font-size:1.4rem;
-	font-weight:900;}
-h2 {font-weight:900;
+h2 {
+	font-weight:900;
 	font-size:1.2rem;
 	color:#850;
 }
