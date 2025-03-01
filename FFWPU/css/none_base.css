@@ -5,7 +5,7 @@ header, footer {
 nav {
 	display:flex;
 	align-items:center;
-	justify-content:center;
+	justify-content:space-between;
 	flex-wrap:wrap;
 	}
 img, video {
@@ -14,7 +14,9 @@ img, video {
 	width:100%;
 	height:auto;
 }
-section {margin:3rem auto;}
+section {
+	margin:3rem auto;
+}
 article {
 	margin:3rem auto;
 	padding:1.5rem;
@@ -105,6 +107,13 @@ svg {
 	max-width: 2rem ;
 }
 
+/*버스 시간표 관련*/
+#bus_popup {
+	position: sticky;
+	padding:1rem;
+	background: transparent;
+}
+#bus_popup img {}
 /*표 관련 선언*/
 table {
 	margin:0 auto;
@@ -144,9 +153,7 @@ h2 {font-weight:900;
 	font-size:1.2rem;
 	color:#850;
 }
-.VPC {display:none;}
-
-.metro-line {
+.metro_line {
 	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
 	display:inline-flex;
 	font-size: 1rem;
@@ -172,7 +179,7 @@ h2 {font-weight:900;
 .line9 {background:#B58600;}
 .gyline {background-color:#5F9C82; padding:0px 10px;}
 
-.bus-line {
+.bus_line {
 	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
 	display:inline-flex;
 	font-size:1rem;
@@ -204,8 +211,16 @@ h2 {font-weight:900;
 	height:100%;
 }
 
-.news_and_notice {
+.news_and_notice article {
 	max-width: 30rem;
+}
+.news_and_notice h3 {
+	justify-content: center;
+	display: flex;
+}
+.news_and_notice h3 img {
+	border-radius: 10rem;
+	margin-right: 1rem;
 }
 .news_and_notice li {
 	padding:0.5rem 0rem;
@@ -216,11 +231,12 @@ h2 {font-weight:900;
 .news_and_notice img {
 	max-width: 3rem;
 }
-.news_and_notice span {
+.news_and_notice a span {
 	padding-left:0.5rem;
 	width: 100%;
 	justify-content: center;
 }
+.popup_header {position: relative;}
 @media (prefers-color-scheme: dark) {
 	.meter {color:#fcb;}
 	h2 {color:#ffa;}

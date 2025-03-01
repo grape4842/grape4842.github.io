@@ -236,7 +236,7 @@ dialog {
     border-color: rgba(0 0 0 / 0.3);
     top:50%; left:50%;
     transform: translate(-50%, -50%);
-    max-width: 100%;
+    max-width: 90dvw;
     max-height: 90dvh;
     border:none;
     transition: display 0.2s allow-discrete, overlay 1s allow-discrete;
@@ -263,26 +263,27 @@ dialog::backdrop {
     transition: filter 0.2s, background 0.2s,display 0.2s;
     backdrop-filter: blur(0.5rem) brightness(0.7) grayscale(0.7);
 }
-dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) {
-    position: absolute;
+dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+    position: fixed;
     right:0rem;
     top:0;
 }
-dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) button {
+dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 3rem;
     width: 3rem;
+    z-index: 2;
     background: transparent;
 }
-dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
+dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_popover, .close_ctrl) img {
     max-height: 2rem;
     max-width: 2rem;
 }
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-dialog :where(.popover_content,.popover_body,.popup_content,popup_body,.popup_main,.modal_content) {
+dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
     min-width:min-content;
     max-width: 90vw;
     padding:1rem 1.5rem;    
@@ -349,7 +350,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 @media (prefers-color-scheme: dark) {
     .lightV {display: none;}
     .darkV {display: unset;}
-    dialog :where(.pupup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
+    dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
         filter: invert(1);
 }
 }

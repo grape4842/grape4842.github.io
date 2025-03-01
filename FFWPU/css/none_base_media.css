@@ -5,17 +5,11 @@
 			z-index:2;
 		}
 	article {padding:3rem;}
-	table {margin-bottom:5rem;}
 	td,th {
 		padding:1rem;
 		}
 	th {
 		font-size:1.2rem;
-		max-width:4rem;
-	}
-	h1,h1 * {
-		font-size:2.5rem;
-		padding:1rem 0px;
 	}
 	h2 {font-size:2rem;}
 	h3 {font-size: 1.5rem;}
