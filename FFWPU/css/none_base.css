@@ -203,15 +203,21 @@ h2 {font-weight:900;
 	width:100%;
 	height:100%;
 }
+
+.news_and_notice {
+	max-width: 30rem;
+}
+.news_and_notice li {
+	padding:0.5rem 0rem;
+}
 .news_and_notice a {
-	display: flex;
-	flex-direction: row;
+	width: 100%;
 }
 .news_and_notice img {
 	max-width: 3rem;
-	padding-right: 0.5rem;
 }
 .news_and_notice span {
+	padding-left:0.5rem;
 	width: 100%;
 	justify-content: center;
 }
