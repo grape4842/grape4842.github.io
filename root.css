@@ -368,7 +368,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
     .View_PC, .PCV, .PC_View {display: unset;}
     .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display: none;}
     dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) .content_width {width: 60vw;}
+    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content), .content_width {width: 60vw;}
 }
 
 /*1000px〜1400px iPad Pro*/
