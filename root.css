@@ -160,7 +160,7 @@ summary {
     list-style: none; /* 목록의 기본 스타일 제거 */
 }
 
-:where(span) {
+:where(span, label) {
     vertical-align: middle;
     display: inline-flex;
     align-items: center;
@@ -235,6 +235,7 @@ dialog {
     border-color: rgba(0 0 0 / 0.3);
     top:50%; left:50%;
     transform: translate(-50%, -50%);
+    min-width: min-content;
     max-width: 90dvw;
     max-height: 90dvh;
     border:none;
@@ -369,6 +370,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
     .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display: none;}
     dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
     dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content), .content_width {width: 60vw;}
+    dialog {max-width: 50dvw;}
 }
 
 /*1000px〜1400px iPad Pro*/
@@ -389,10 +391,15 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 }
 /*Mobile*/
 @media screen and (340px <= width < 700px ) {
+    dialog {min-width: 80dvw;}
 
 }
 /*folded, watch*/
 /*watch*/
 @media screen and (330px > width) {
     .content_width {width: 95vw;}
+    dialog {
+        min-width: 90dvw;
+        max-width: 95dvw;
+    }
 }
