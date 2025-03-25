@@ -402,6 +402,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 }
 /*iPhone SE, Galaxy Fold3, watch*/
 @media screen and (330px > width) {
+	.novel_nav {flex-direction: column;}
 }
 
 /*Dark Mode Layout*/
