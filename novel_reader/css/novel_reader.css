@@ -26,6 +26,9 @@ footer .content_width {
 	display: flex;
 	justify-content: center;
 }
+.ad_area > *{
+	background: var(--novel_theme_color);
+}
 h3 {
 	text-align: center;
 	font-size: 1.2rem;
@@ -106,8 +109,18 @@ li:has(#favorite_episode) {
 }
 #favorite_episode::after {
 	content: '☆';
+	font-weight: 900;
+	font-size: 1.25rem;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0; left:0;
+	color:#fa0;
+	transition: 0.2s;
 	text-align: center;
-	text-stroke: #fe0 4px;
 }
 #favorite_episode:checked::after {
 	content: '★';
@@ -118,6 +131,15 @@ li:has(#favorite_episode) {
 	margin:1rem auto;
 	background: rgba(255 255 255 / 0.1);
 }
+.view_setting_control {
+	z-index: 3;
+	display: flex;
+}
+.view_type_list {
+	display: flex;
+	flex-direction: column;
+}
+label:has(input[name="view_type"]) {gap:0.5rem;}
 .novel_profile_data > li {
 	display:inline-flex;
 }
@@ -126,7 +148,7 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	margin:0.25rem;
 }
 .novel_nav_item {padding:0rem 0.5rem;}
-.top_bar_ad {
+.top_ad {
 	border:1px solid #fffa;
 	min-height: 4rem;
 	max-height: 6rem;
@@ -202,15 +224,6 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	top:50%; left:50%;
 	translate:-50% -50%;
 }
-.rating_tooltip {
-	position: absolute;
-	background: var(--novel_theme_color);
-	display: flex;
-	padding:0rem 0.5rem;
-	width: max-content;
-	top:-2.5rem;
-	z-index: 2;
-}
 .novel_star {
 	appearance: none;
 	-webkit-appearance: none;
@@ -221,15 +234,15 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 }
 .novel_star:hover::after,
 .novel_star:focus::after {
-  content: '★';
+	content: '★';
 }
 .novel_star:has(~ .novel_star:hover)::after,
 .novel_star:has(~ .novel_star:focus)::after {
-  content: '★';
+	content: '★';
 }
 .novel_star:checked::after,
 .novel_star:has(~ .novel_star:checked)::after {
-  content: '★';
+	content: '★';
 }
 .novel_star::after {
 	content: '☆';
@@ -303,8 +316,20 @@ a:has(.episode_share_sns_icon) {
 	padding:1rem;
 	margin:1rem auto;
 }
+.bottom_box_ad {
+	justify-content: space-around;
+}
+.bottom_ad {
+	margin:1rem;
+	min-width:10rem;
+	min-height:10rem;
+}
 .episode_option_list {
+	border-top:1px solid;
+	border-bottom:1px solid;
+	padding:0.25rem 0rem;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }
 .novel_caution {
@@ -358,11 +383,17 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		font-size: 2rem;
 		padding: 2rem;
 	}
+	.bottom_box_ad {
+		display: flex;
+	}
 	.novel_caution {padding:2rem;}
 }
 
 /*700px〜1200px iPad*/
 @media (800px <= width < 1400px )  {
+	.bottom_box_ad {
+		display: flex;
+	}
 }
 
 /*iPad vertical, Mobile*/

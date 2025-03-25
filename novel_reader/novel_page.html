@@ -125,7 +125,7 @@
 						<input class="novel_nav_item" id="favorite_episode" type="checkbox" name="">
 					</li>
 				</ol>
-				<button onclick="document.getElementById('novel_view_setting_popup').showModal();" aria-haspopup="dialog" class="popover_open novel_nav_item">表示設定</button>
+				<button onclick="document.getElementById('novel_view_setting_popup').showModal();" aria-haspopup="dialog" class="popover_open novel_nav_item view_setting_control">表示設定</button>
 				<dialog class="popover content_width" id="novel_view_setting_popup">
 					<div class="popup_header">
 						<h2>表示設定</h2>
@@ -170,25 +170,24 @@
 						</fieldset>
 						<fieldset>
 							<legend class="view_setting_title">
-								<label for="">
-									<span class="a11y_txt">行間</span>
-								</label>
+								<label for="episode_line_height">行間</label>
 							</legend>
-							<select id="">
+							<select id="episode_line_height">
 
 							</select>
 						</fieldset>
 						<fieldset>
 							<legend class="view_setting_title">
-								<label for="font_size">文字サイズ</label>
+								<label for="episode_font_size">文字サイズ</label>
 							</legend>
-							<button class="" type="button">
-								<span class="a11y_txt">文字サイズ</span>
+							<button class="episode_font_size_ctrl" type="button">
+								-
+								<span class="a11y_txt">文字サイズ縮小</span>
 							</button>
-
-							<input type="text" readonly id="font_size">
-							<button class="" type="button">
-								<span class="a11y_txt">文字サイズ</span>
+							<input type="text" readonly id="episode_font_size">
+							<button class="episode_font_size_ctrl" type="button">
+								+
+								<span class="a11y_txt">文字サイズ拡大</span>
 							</button>
 						</fieldset>
 					</form>
@@ -202,7 +201,9 @@
 			</nav>
 		</div>
 	</header>
-	<section class="ad_area top_bar_ad content_width"></section>
+	<section class="ad_area top_bar_ad content_width">
+		<div class="top_ad"></div>
+	</section>
 	<section class="novel_profile content_width">
 		<ol class="novel_profile_data">
 			<li><a href="https://ncode.syosetu.com/n4830bu/" title="" target="_blank">本好きの下剋上　～司書になるためには手段を選んでいられません～</a></li>
@@ -411,7 +412,7 @@
 			<p>
 				<span>ポイントを入れて作者を応援しよう！</span>
 				<a class="star_rating_info" target="_blank" href="https://syosetu.com/helpcenter/helppage/helppageid/122">
-					<span class="rating_tooltip">評価の仕様</span>
+					<span class="rating_tooltip a11y_txt">評価の仕様</span>
 				</a>
 			</p>
 			
@@ -530,7 +531,10 @@
 					</fieldset>
 				</form>
 			</section>
-			<section class="ad_area content_width"></section>
+			<section class="ad_area bottom_box_ad content_width">
+				<div class="bottom_ad"></div>
+				<div class="bottom_ad"></div>
+			</section>
 			<section class="episode_option content_width">
 				<ul class="episode_option_list">
 					<li>
@@ -552,8 +556,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="ad_area bottom_box_ad"></section>
-				<section class="site_info content_width"></section>
 				<section class="novel_caution content_width">
 					<h3>+注意+</h3>
 					<article class="novel_caution_text">
