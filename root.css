@@ -33,43 +33,43 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 /*일본어 日本語*/
 @font-face { 
-	font-family:"BIZ-UDPGothic";
-	src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
+    font-family:"BIZ-UDPGothic";
+    src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
+    font-weight:400;
+    font-display : swap;
 } 
 
 @font-face { 
-	font-family:"BIZ-UDPGothic";
-	src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
-	font-weight:700;
-	font-display : swap;
+    font-family:"BIZ-UDPGothic";
+    src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
+    font-weight:700;
+    font-display : swap;
 } 
 
 @font-face { 
-	font-family:"BIZ-UDMincho";
-	src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
+    font-family:"BIZ-UDMincho";
+    src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-display : swap;
 } 
 @font-face { 
-	font-family:"BIZ-UDPMincho";
-	src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
+    font-family:"BIZ-UDPMincho";
+    src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-display : swap;
 } 
 @font-face { 
-	font-family:"BIZ-UDGothic";
-	src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
-	font-weight:400;
-	font-display : swap;
+    font-family:"BIZ-UDGothic";
+    src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
+    font-weight:400;
+    font-display : swap;
 } 
 
 @font-face { 
-	font-family:"BIZ-UDGothic";
-	src: url("font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
-	font-weight:700;
-	font-display : swap;
+    font-family:"BIZ-UDGothic";
+    src: url("font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
+    font-weight:700;
+    font-display : swap;
 } 
 
 /*숨김텍스트 설정*/
@@ -121,10 +121,12 @@
     font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
     scroll-behavior: smooth; /* 부드러운 스크롤 */
 }
-
+:where(input[type="text"], input[type="password"], input[type="search"]) {
+    padding-left:0.5rem;
+}
 :where(textarea) {
     resize: vertical; /* 텍스트 영역의 가로 크기 조정 비활성화 */
-    padding: 1rem; /* 텍스트 영역의 내부 여백 */
+    padding: 0.5rem; /* 텍스트 영역의 내부 여백 */
 }
 
 :where(:focus, button, label, select, summary, [role='button'], [role='option'], [type="file"], [type="file"]::file-selector-button) {
