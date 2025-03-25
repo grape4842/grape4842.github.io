@@ -137,6 +137,40 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	align-items: center;
 	flex-direction: column;
 }
+.star_rating p {
+	display: flex;
+	align-items: center;
+}
+.star_rating fieldset {
+	margin-top:0.25rem;
+	display: flex;
+	align-items: center;
+	gap:0.25rem;
+}
+.star_point_submit {
+	margin-left: 0.5rem;
+	padding:0rem 0.5rem;
+	border-radius:0.5rem;
+}
+.star_rating_info {
+	height: 2rem;
+	width: 2rem;
+	border-radius: 10rem;
+}
+.star_rating_info::after {
+	content: '?';
+	border-radius: 10rem;
+	border:1px solid;
+	display: flex;
+	font-size: 12px;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	height: 60%;
+	position: absolute;
+	top:50%; left:50%;
+	translate:-50% -50%;
+}
 .novel_star {
 	appearance: none;
 	-webkit-appearance: none;
@@ -186,13 +220,41 @@ a:has(.episode_share_sns_icon) {
 	margin:0.25rem;
 	outline-offset: 0.25rem;
 }
+.episode_review {
+	padding:1rem;
+}
+.write_reviewer_form {
+	display: flex;
+	flex-direction: column;
+}
+.write_reviewer_form fieldset {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.write_reviewer_form textarea {
+	min-height: 12rem;
+}
+.write_reviewer_form input {
+	margin-right: 0.5rem;
+}
+.write_review_info {
+	padding:1rem;
+	margin:1rem auto;
+}
+.episode_option_list {
+	display: flex;
+	justify-content: space-around;
+}
+.novel_caution {}
+.novel_caution_text {color: #e20;}
 #novel_top {
 	position: fixed;
-	bottom:2rem;
-	right:2rem;
+	bottom:2vmax;
+	right:2vmax;
 	padding:1rem;
-	min-width: 3rem;
-	min-height: 3rem;
+	max-width: 4rem;
+	max-height: 4rem;
 	aspect-ratio: 1/1;
 	border-radius: 4rem;
 	background: var(--novel_theme_color);
@@ -200,8 +262,8 @@ a:has(.episode_share_sns_icon) {
 #novel_top:after {
 	content: '';
 	display: block;
-	width:1.5rem;
-	height:1.5rem;
+	width:1rem;
+	height:1rem;
 	position: relative;
 	top:0.25rem;
 	aspect-ratio: 1/1;
@@ -216,7 +278,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 /*기기별 CSS*/
 /*PC*/
 @media screen and (width >= 1400px) {
-	.content_width {width:50vw;}
+	.content_width {width:40vw;}
 	#episode_title {
 		font-size: 2rem;
 		padding: 2rem;
