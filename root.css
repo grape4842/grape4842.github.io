@@ -1,7 +1,8 @@
 @charset "utf-8";
 :lang(ko) {word-break: keep-all; line-break:normal;}
 :lang(ja) {word-break: auto-phrase; font-feature-settings: "palt";}
-::selection {background:#51a; color:white;}
+::selection {background:#baf; color:#000;}
+::placeholder{color:#555;}
 /*폰트 설성*/
 
 /*한국어*/
@@ -129,7 +130,7 @@
     padding: 0.5rem; /* 텍스트 영역의 내부 여백 */
 }
 
-:where(:focus, button, label, select, summary, [role='button'], [role='option'], [type="file"], [type="file"]::file-selector-button) {
+:where(:focus, button, label, select, summary, [role='button'], [role='option'], input, [type="file"]::file-selector-button) {
     cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 변경 */
     position: relative;
     transition-duration: 0.2s;
@@ -355,8 +356,10 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 }
 
-/*다크 모드*/
+/*Dark Mode*/
 @media (prefers-color-scheme: dark) {
+    ::selection {background:#51a; color:white;}
+    ::placeholder{color:#aaa;}
     .lightV {display: none;}
     .darkV {display: unset;}
     dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {

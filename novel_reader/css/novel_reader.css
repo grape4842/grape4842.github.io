@@ -1,11 +1,12 @@
 :root {
 	--novel_theme_color:#18B7CD;
-	--novel_theme_color_low_light:#107A89;
+	--novel_theme_color_dark:#1f4247;
 	--yellow_color:#ff7;
 	--white_color:#fff;
 	--c_white_color:#ccc;
 	--black_color:#000;
 	--gray6_color:#666;
+	--caution_color:#c10;
 }
 *, :where(body):not(img), body {
 	font-family: "BIZ-UDPGothic", "KoddiUDOnGothic", sans-serif, serif;
@@ -16,6 +17,14 @@
 	accent-color: var(--novel_theme_color);
 	min-width: 1.5rem;
 	min-height: 1.5rem;
+}
+footer {
+	padding:1rem;
+	background-color: var(--novel_theme_color);
+}
+footer .content_width {
+	display: flex;
+	justify-content: center;
 }
 h3 {
 	text-align: center;
@@ -81,6 +90,28 @@ a {border-radius: 0.25rem;}
 	border-radius: 0.5rem;
 	margin: 0 auto;
 }
+li:has(#favorite_episode) {
+	display: flex;
+	align-items: center;
+	margin:0rem 0.5rem;
+
+}
+#favorite_episode {
+	appearance: none;
+	-webkit-appearance: none;
+	border:var(--gray6_color) 1px solid;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 10rem;
+}
+#favorite_episode::after {
+	content: '☆';
+	text-align: center;
+	text-stroke: #fe0 4px;
+}
+#favorite_episode:checked::after {
+	content: '★';
+}
 
 .novel_profile {
 	padding:1.5rem;
@@ -94,7 +125,7 @@ a {border-radius: 0.25rem;}
 li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	margin:0.25rem;
 }
-.novel_nav_item {padding:0.5rem;}
+.novel_nav_item {padding:0rem 0.5rem;}
 .top_bar_ad {
 	border:1px solid #fffa;
 	min-height: 4rem;
@@ -115,7 +146,7 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	font-weight: bold;
 }
 .episode_control_link:visited {
-	color:var(--novel_theme_color_low_light);
+	color:var(--novel_theme_color_dark);
 }
 #episode_title {
 	text-align: center;
@@ -171,6 +202,15 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	top:50%; left:50%;
 	translate:-50% -50%;
 }
+.rating_tooltip {
+	position: absolute;
+	background: var(--novel_theme_color);
+	display: flex;
+	padding:0rem 0.5rem;
+	width: max-content;
+	top:-2.5rem;
+	z-index: 2;
+}
 .novel_star {
 	appearance: none;
 	-webkit-appearance: none;
@@ -220,22 +260,43 @@ a:has(.episode_share_sns_icon) {
 	margin:0.25rem;
 	outline-offset: 0.25rem;
 }
+.comment_footer	{
+	display: flex;
+	justify-content: space-between;
+}
+.comment_menu_list {
+	display: none;
+	position: absolute;	
+}
+.comment_menu_list li {
+	border:solid 1px var(--gray6_color);
+	padding:0.25rem;
+}
+.comment_menu_list a {
+	display: block;
+	padding:0rem 0.25rem;
+}
+.comment_menu:where(:focus-within, :hover) .comment_menu_list {
+	display: block;
+}
+
 .episode_review {
 	padding:1rem;
 }
-.write_reviewer_form {
+.write_reviewer_data {
 	display: flex;
 	flex-direction: column;
 }
-.write_reviewer_form fieldset {
-	display: flex;
+
+.write_review_form fieldset {
 	justify-content: center;
-	flex-direction: column;
 }
-.write_reviewer_form textarea {
-	min-height: 12rem;
+#review_text_write {
+	width: 100%;
+	min-height: 12lh;
+	margin:1rem auto;
 }
-.write_reviewer_form input {
+.write_review_form input {
 	margin-right: 0.5rem;
 }
 .write_review_info {
@@ -246,8 +307,14 @@ a:has(.episode_share_sns_icon) {
 	display: flex;
 	justify-content: space-around;
 }
-.novel_caution {}
-.novel_caution_text {color: #e20;}
+.novel_caution {
+	padding:1rem;
+	margin:2rem auto;
+}
+.novel_caution_text {
+	color:var(--caution_color);
+	margin-bottom: 2rem;
+}
 #novel_top {
 	position: fixed;
 	bottom:2vmax;
@@ -257,6 +324,9 @@ a:has(.episode_share_sns_icon) {
 	max-height: 4rem;
 	aspect-ratio: 1/1;
 	border-radius: 4rem;
+	z-index: 3;
+	outline-offset: 4px;
+	border: var(--novel_theme_color_dark) 2px solid;
 	background: var(--novel_theme_color);
 }
 #novel_top:after {
@@ -272,6 +342,11 @@ a:has(.episode_share_sns_icon) {
 	border-left: 0.25rem solid;
 	border-top: 0.25rem solid;
 }
+.novel_site_copyright {
+	opacity: 0.8;
+	text-align: center;
+}
+
 dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
 	filter: invert(0)!important;
 }
@@ -283,6 +358,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		font-size: 2rem;
 		padding: 2rem;
 	}
+	.novel_caution {padding:2rem;}
 }
 
 /*700px〜1200px iPad*/
@@ -299,6 +375,10 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
+	:root {
+		--caution_color:#f87;
+	}
+	footer {background-color: var(--novel_theme_color_dark);}
 	.episode_control_link {
 		color:var(--yellow_color);
 	}
@@ -306,7 +386,8 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		color:var(--novel_theme_color);
 	}
 	#novel_top {
-		background-color:var(--novel_theme_color_low_light);
+		border-color: var(--novel_theme_color);
+		background-color:var(--novel_theme_color_dark);
 	}
 
 }

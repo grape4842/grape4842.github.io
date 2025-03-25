@@ -125,7 +125,7 @@
 						<input class="novel_nav_item" id="favorite_episode" type="checkbox" name="">
 					</li>
 				</ol>
-				<button onclick="document.getElementById('novel_view_setting_popup').showModal();" aria-haspopup="dialog" class="popover_open">表示設定</button>
+				<button onclick="document.getElementById('novel_view_setting_popup').showModal();" aria-haspopup="dialog" class="popover_open novel_nav_item">表示設定</button>
 				<dialog class="popover content_width" id="novel_view_setting_popup">
 					<div class="popup_header">
 						<h2>表示設定</h2>
@@ -411,7 +411,7 @@
 			<p>
 				<span>ポイントを入れて作者を応援しよう！</span>
 				<a class="star_rating_info" target="_blank" href="https://syosetu.com/helpcenter/helppage/helppageid/122">
-					<span class="a11y_txt">評価の仕様</span>
+					<span class="rating_tooltip">評価の仕様</span>
 				</a>
 			</p>
 			
@@ -442,82 +442,140 @@
 		</section>
 		<section class="episode_review content_width">
 			<h3>―　新着の感想　―</h3>
-			<div class="review_comment">
-			</div>
-		</section>
-		<section class="write_review content_width">
-			<form class="write_review_form">
-				<legend>
-					<h3>―　感想を書く　―</h3>
-				</legend>
-				<fieldset>
-					<label class="none_login_user_view" for="review_writer_name">
-						<span class="">名前 : </span>
-						<input placeholder="投稿者の名前" type="text" name="review_writer_name" id="review_writer_name">
-					</label>
-					<div class="">
-						<span class="">名前 : </span>
-						<a href="https://syosetu.com/user/top/">青紫の宮澤</a>
-					</div>
-					<label class="a11y_txt" for="review_text_write">感想本文</label>
-					<textarea id="review_text_write" placeholder="感想本文"></textarea>
-					<div class="write_reviewer_form">
-						<label for="this_episode_review">
-							<input id="this_episode_review" type="checkbox">
-							<span>エピソード676の感想として書く</span>
-						</label>
-						<label for="reviewer_age">
-							<input id="reviewer_age" type="checkbox">
-							<span>年代情報を公開する(23歳～29歳)</span>
-						</label>
-						<label for="reviewer_gender">
-							<input id="reviewer_gender" type="checkbox">
-							<span>性別情報を公開する(男性)</span>
-						</label>
-					</div>
-					<div class="write_review_info">
-						<p>感想を書く際の禁止事項はこちらの<a target="_blank" href="https://syosetu.com/helpcenter/helppage/helppageid/106">感想について</a>をご確認ください。</p>
-						<p>誤字脱字の報告は<a target="_blank" href="https://novelcom.syosetu.com/novelreport/input/ncode/464784/no/676/">誤字報告機能</a>をご利用ください。</p>
-					</div>
-					<input type="submit" class="writed_review_submit" value="送信[確認]">
-				</fieldset>
-			</form>
-		</section>
-		<section class="ad_area content_width"></section>
-		<section class="episode_option content_width">
-			<ul class="episode_option_list">
-				<li><a class="site_info_link" href="https://mypage.syosetu.com/372556/">作者マイページ</a></li>
-				<li><form class="site_info_link" action="https://ncode.syosetu.com/novelpdf/creatingpdf/ncode/n4830bu/" method="post">
-					<input type="submit" value="縦書きPDF" class="c-under-nav__pdflink" data-nolock="true">
-					<input type="hidden" name="token" value="6b44204dd407d786844d88141afca181">
-				</form></li>
-				<li><a class="site_info_link" href="https://ncode.syosetu.com/txtdownload/top/ncode/464784/" onclick="javascript:window.open('https://ncode.syosetu.com/txtdownload/top/ncode/464784/','a','width=600,height=450'); return false;">TXTダウンロード</a></li>
-				<li><a class="site_info_link" href="https://novelcom.syosetu.com/novelreport/input/ncode/464784/no/676/">誤字報告</a></li>
-				<li><a class="site_info_link" href="https://syosetu.com/ihantsuhou/input/ncode/464784/">情報提供</a></li>
-			</ul>
-		</section>
-		<section class="ad_area bottom_box_ad"></section>
-		<section class="site_info content_width"></section>
-		<section class="novel_caution content_width">
-			<h3>+注意+</h3>
-			<article class="novel_caution_text">
-				<p>特に記載なき場合、掲載されている作品はすべてフィクションであり実在の人物・団体等とは一切関係ありません。</p>
-				<p>特に記載なき場合、掲載されている作品の著作権は作者にあります(一部作品除く)。</p>
-				<p>作者以外の方による作品の引用を超える無断転載は禁止しており、行った場合、著作権法の違反となります。</p>
-			</article>
-			<article>
-				<p>この作品はリンクフリーです。ご自由にリンク(紹介)してください。</p>
-				<p>この作品はスマートフォン対応です。スマートフォンかパソコンかを自動で判別し、適切なページを表示します。</p>
-			</article>
-		</section>
-		<div class="content_width">
-			<a id="novel_top" href="#jump_nav">
-				<span class="a11y_txt">ページトップへ</span>
-			</a>
-		</div>
-	</main>
-	<footer>
-		<div class="content_width"></div>
-	</footer>
-</body>
-</html>
+			<ol class="review_comment">
+				<li>
+					<a class="commenter_name" href="https://mypage.syosetu.com/2229916/">ししゃも(カペリン)</a>
+					<p class="comment_text">やっとロゼマが何も気にせずにのびのびと生きれる環境になったね、良かったね。。。 と思ったら、フェル様にとっても最高の環境なことに気づいてやっぱ2人最高で最強じゃん！！ってなった。 幸せしか見えん！！！…</p>
+					<div class="comment_footer">
+						<span class="comment_date">2024/11/18 23:16</span>
+						<div class="comment_menu">
+							<a href="">管理</a>
+							<ul class="comment_menu_list">
+								<li><a href="https://syosetu.com/userblock/confirm/?blockuserid=2229916">ブロックする</a></li>
+								<li><a href="https://syosetu.com/mute/input/?muteuserid=2229916">ミュートする</a></li>
+								<li><a href="https://syosetu.com/infomationinquire/input/?kanrino=12266751#inputFormType4">通報する</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="" class="commenter_name"></a>
+						<p class="comment_text"></p>
+						<div class="comment_footer">
+							<span class="comment_date"></span>
+							<div class="comment_menu">
+								<a href="">管理</a>
+								<ul class="comment_menu_list">
+									<li><a href=""></a></li>
+									<li><a href=""></a></li>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="" class="commenter_name"></a>
+						<p class="comment_text"></p>
+						<div class="comment_footer">
+							<span class="comment_date"></span>
+							<div class="comment_menu">
+								<a href="">管理</a>
+								<ul class="comment_menu_list">
+									<li><a href=""></a></li>
+									<li><a href=""></a></li>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ol>
+				<a class="review_comment_more" href="https://novelcom.syosetu.com/impression/list/ncode/464784/no/676/" target="_blank">感想一覧</a>
+			</section>
+			<section class="write_review content_width">
+				<form class="write_review_form">
+					<legend>
+						<h3>―　感想を書く　―</h3>
+					</legend>
+					<fieldset>
+						<div class="review_writer_name_box">
+							<label class="none_login_user_view" for="review_writer_name">
+								<span class="">名前 : </span>
+								<input placeholder="投稿者の名前" type="text" name="review_writer_name" id="review_writer_name">
+							</label>
+							<div class="logined_user_view">
+								<span class="">名前 : </span>
+								<a href="https://syosetu.com/user/top/">青紫の宮澤</a>
+							</div>
+						</div>
+						<label class="a11y_txt" for="review_text_write">感想本文</label>
+						<textarea id="review_text_write" placeholder="感想本文"></textarea>
+						<div class="write_reviewer_data">
+							<label for="this_episode_review">
+								<input id="this_episode_review" type="checkbox">
+								<span>エピソード676の感想として書く</span>
+							</label>
+							<label for="reviewer_age">
+								<input id="reviewer_age" type="checkbox">
+								<span>年代情報を公開する(23歳～29歳)</span>
+							</label>
+							<label for="reviewer_gender">
+								<input id="reviewer_gender" type="checkbox">
+								<span>性別情報を公開する(男性)</span>
+							</label>
+						</div>
+						<div class="write_review_info">
+							<p>感想を書く際の禁止事項はこちらの<a target="_blank" href="https://syosetu.com/helpcenter/helppage/helppageid/106">感想について</a>をご確認ください。</p>
+							<p>誤字脱字の報告は<a target="_blank" href="https://novelcom.syosetu.com/novelreport/input/ncode/464784/no/676/">誤字報告機能</a>をご利用ください。</p>
+						</div>
+						<input type="submit" class="writed_review_submit" value="送信[確認]">
+					</fieldset>
+				</form>
+			</section>
+			<section class="ad_area content_width"></section>
+			<section class="episode_option content_width">
+				<ul class="episode_option_list">
+					<li>
+						<a class="site_info_link" href="https://mypage.syosetu.com/372556/">作者マイページ</a></li>
+						<li>
+							<form class="site_info_link" action="https://ncode.syosetu.com/novelpdf/creatingpdf/ncode/n4830bu/" method="post">
+								<input type="submit" value="縦書きPDF" class="c-under-nav__pdflink" data-nolock="true">
+								<input type="hidden" name="token" value="6b44204dd407d786844d88141afca181">
+							</form>
+						</li>
+						<li>
+							<a class="site_info_link" href="https://ncode.syosetu.com/txtdownload/top/ncode/464784/" onclick="javascript:window.open('https://ncode.syosetu.com/txtdownload/top/ncode/464784/','a','width=600,height=450'); return false;">TXTダウンロード</a>
+						</li>
+						<li>
+							<a class="site_info_link" href="https://novelcom.syosetu.com/novelreport/input/ncode/464784/no/676/">誤字報告</a>
+						</li>
+						<li>
+							<a class="site_info_link" href="https://syosetu.com/ihantsuhou/input/ncode/464784/">情報提供</a>
+						</li>
+					</ul>
+				</section>
+				<section class="ad_area bottom_box_ad"></section>
+				<section class="site_info content_width"></section>
+				<section class="novel_caution content_width">
+					<h3>+注意+</h3>
+					<article class="novel_caution_text">
+						<p>特に記載なき場合、掲載されている作品はすべてフィクションであり実在の人物・団体等とは一切関係ありません。</p>
+						<p>特に記載なき場合、掲載されている作品の著作権は作者にあります(一部作品除く)。</p>
+						<p>作者以外の方による作品の引用を超える無断転載は禁止しており、行った場合、著作権法の違反となります。</p>
+					</article>
+					<article>
+						<p>この作品はリンクフリーです。ご自由にリンク(紹介)してください。</p>
+						<p>この作品はスマートフォン対応です。スマートフォンかパソコンかを自動で判別し、適切なページを表示します。</p>
+					</article>
+				</section>
+				<div class="content_width">
+					<a id="novel_top" href="#jump_nav">
+						<span class="a11y_txt">ページトップへ</span>
+					</a>
+				</div>
+			</main>
+			<footer>
+				<div class="content_width">
+					<a class="novel_site_copyright" href="https://hinaproject.co.jp/">HinaProject Inc.</a>
+				</div>
+			</footer>
+		</body>
+		</html>
