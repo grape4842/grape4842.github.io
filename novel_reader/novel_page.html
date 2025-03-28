@@ -8,7 +8,7 @@
 	<meta property="og:site_name" content="小説家になろう">
 	<meta property="og:locate" content="ja-jp">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="img/ITCT.jpg">
+	<meta property="og:image" content="https://sbo.syosetu.com/n4830bu/twitter.png">
 	<meta property="og:title" content="家族に繋がる道 - 本好きの下剋上">
 	<meta property="og:description" content="家族に繋がる道 | 第五部　女神の化身 | 本好きの下剋上　～司書になるためには手段を選んでいられません～ 香月　美夜">
 	<title>家族に繋がる道 | 第五部　女神の化身 | 本好きの下剋上　～司書になるためには手段を選んでいられません～</title>
@@ -54,8 +54,10 @@
 				</li>
 			</ul>
 		</div>
-		<div class="novel_navi_bar">
-			<nav class="novel_nav content_width">
+	</header>
+	<div class="novel_navi_bar">
+		<nav class="novel_nav content_width">
+			<div class="novel_nav_menu">
 				<ol>
 					<li>
 						<a class="novel_nav_item" href="https://ncode.syosetu.com/novelview/infotop/ncode/n4830bu/">作品情報</a>
@@ -66,11 +68,13 @@
 					<li>
 						<a class="novel_nav_item" href="https://novelcom.syosetu.com/novelreview/list/ncode/464784/">レビュー</a>
 					</li>
-					<li>
+				</ol>
+				<ol>
+					<li class="pc_view">
 						<a href="" class="novel_nav_item">お気に入りep</a>
 					</li>
 					<li>
-						<button aria-haspopup="dialog" class="popover_open novel_nav_item" type="button" id="plus_data_open" onclick="document.getElementById('bookmark_setting').showModal();">ブックマーク設定変更</button>
+						<button aria-haspopup="dialog" class="popover_open novel_nav_item" type="button" id="bookmark_setting_open" onclick="document.getElementById('bookmark_setting').showModal();">ブックマーク設定変更</button>
 						<dialog class="popover content_width" id="bookmark_setting">
 							<div class="popup_header">
 								<h2>ブックマーク設定</h2>
@@ -87,22 +91,33 @@
 										</li>
 										<li class="bookmark_setting_item">
 											<div class="radio_input_box">
-												<input id="" name="" type="radio">
-												<label for="">公開</label>
+												<input id="bookmark_disclosure" name="bookmark_disclosure_type" type="radio">
+												<label for="bookmark_disclosure">公開</label>
 											</div>
 											<div class="radio_input_box">
-												<input id="" name="" type="radio">
-												<label for="">非公開</label>
+												<input id="bookmark_nondisclosure" name="bookmark_disclosure_type" type="radio">
+												<label for="bookmark_nondisclosure">非公開</label>
 											</div>
 										</li>
-										<li class="bookmark_setting_item">
+										<li class="bookmark_setting_item bookmark_category_item">
 											<label for="bookmark_category_combobox">カテゴリー</label>
-											<select name="" id="bookmark_category_combobox"></select>
+											<select name="" id="bookmark_category_combobox">
+												<option value="bookmark_category1">カテゴリー1</option>
+												<option value="bookmark_category2">カテゴリー2</option>
+												<option value="bookmark_category3">カテゴリー3</option>
+												<option value="bookmark_category4">カテゴリー4</option>
+												<option value="bookmark_category5">カテゴリー5</option>
+												<option value="bookmark_category6">カテゴリー6</option>
+												<option value="bookmark_category7">カテゴリー7</option>
+												<option value="bookmark_category8">カテゴリー8</option>
+												<option value="bookmark_category9">カテゴリー9</option>
+												<option value="bookmark_category10">カテゴリー10</option>
+											</select>
 										</li>
-										<li class="bookmark_setting_item bookmark_memo_list_item">
+										<li class="bookmark_setting_item bookmark_memo_item">
 											<div>
 												<label for="bookmark_memo">メモ</label>
-												<input type="text" id="bookmark_memo">
+												<input maxlength="50" type="text" id="bookmark_memo">
 											</div>
 											<p>
 												<label for="">※50文字以内</label>
@@ -121,86 +136,94 @@
 						</dialog>
 					</li>
 					<li>
-						<label for="favorite_episode" class="a11y_txt">お気に入りエピソード</label>
-						<input class="novel_nav_item" id="favorite_episode" type="checkbox" name="">
+						<label for="favorite_episode" class="favorite_episode_label">
+							<input class="novel_nav_item" id="favorite_episode" type="checkbox" name="">
+							<span class="a11y_txt">お気に入りエピソード</span>
+						</label>
+						
 					</li>
 				</ol>
-				<button onclick="document.getElementById('novel_view_setting_popup').showModal();" aria-haspopup="dialog" class="popover_open novel_nav_item view_setting_control">表示設定</button>
-				<dialog class="popover content_width" id="novel_view_setting_popup">
-					<div class="popup_header">
-						<h2>表示設定</h2>
-					</div>
-					<form class="novel_view_setting popover_content">
-						<fieldset>
-							<legend class="view_setting_title">配色</legend>
-							<div class="view_type_list">
-								<label for="view_type1">
-									<input id="view_type1" type="radio" name="view_type">
-									<span>標準設定</span>
-								</label>
-								<label for="view_type2">
-									<input id="view_type2" type="radio" name="view_type">
-									<span>ブラックモード1</span>
-								</label>
-								<label for="view_type3">
-									<input id="view_type3" type="radio" name="view_type">
-									<span>ブラックモード2</span>
-								</label>
-								<label for="view_type4">
-									<input id="view_type4" type="radio" name="view_type">
-									<span>クリーム</span>
-								</label>
-								<label for="view_type5">
-									<input id="view_type5" type="radio" name="view_type">
-									<span>ラベンダー</span>
-								</label>
-								<label for="view_type6">
-									<input id="view_type6" type="radio" name="view_type">
-									<span>グリーン</span>
-								</label>
-								<label for="view_type7">
-									<input id="view_type7" type="radio" name="view_type">
-									<span>ライトグレー</span>
-								</label>
-								<label for="view_type8">
-									<input id="view_type8" type="radio" name="view_type">
-									<span>作者のおすすめ</span>
-								</label>
-							</div>
-						</fieldset>
-						<fieldset>
-							<legend class="view_setting_title">
-								<label for="episode_line_height">行間</label>
-							</legend>
-							<select id="episode_line_height">
-
-							</select>
-						</fieldset>
-						<fieldset>
-							<legend class="view_setting_title">
-								<label for="episode_font_size">文字サイズ</label>
-							</legend>
+			</div>
+			<button onclick="document.getElementById('novel_view_setting_popup').showModal();" aria-haspopup="dialog" class="popover_open novel_nav_item view_setting_control">表示設定</button>
+			<dialog class="popover content_width" id="novel_view_setting_popup">
+				<div class="popup_header">
+					<h2>表示設定</h2>
+				</div>
+				<form class="novel_view_setting popover_content">
+					<fieldset>
+						<legend class="view_setting_title">配色</legend>
+						<div class="view_type_list">
+							<label for="view_type1">
+								<input id="view_type1" type="radio" name="view_type">
+								<span>標準設定</span>
+							</label>
+							<label for="view_type2">
+								<input id="view_type2" type="radio" name="view_type">
+								<span>ブラックモード1</span>
+							</label>
+							<label for="view_type3">
+								<input id="view_type3" type="radio" name="view_type">
+								<span>ブラックモード2</span>
+							</label>
+							<label for="view_type4">
+								<input id="view_type4" type="radio" name="view_type">
+								<span>クリーム</span>
+							</label>
+							<label for="view_type5">
+								<input id="view_type5" type="radio" name="view_type">
+								<span>ラベンダー</span>
+							</label>
+							<label for="view_type6">
+								<input id="view_type6" type="radio" name="view_type">
+								<span>グリーン</span>
+							</label>
+							<label for="view_type7">
+								<input id="view_type7" type="radio" name="view_type">
+								<span>ライトグレー</span>
+							</label>
+							<label for="view_type8">
+								<input id="view_type8" type="radio" name="view_type">
+								<span>作者のおすすめ</span>
+							</label>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend class="view_setting_title">
+							<label for="episode_line_height">行間</label>
+						</legend>
+						<input type="text" inputmode="nurmeric" id="episode_line_height">
+					</fieldset>
+					<fieldset>
+						<legend class="view_setting_title">
+							<label for="episode_font_size">文字サイズ</label>
+						</legend>
+						<div class="episode_font_size_ctrl_line">
 							<button class="episode_font_size_ctrl" type="button">
-								-
+								<span aria-hidden="true" class="">-</span>
 								<span class="a11y_txt">文字サイズ縮小</span>
 							</button>
-							<input type="text" readonly id="episode_font_size">
+							<input type="text" inputmode="nurmeric" id="episode_font_size">
 							<button class="episode_font_size_ctrl" type="button">
-								+
+								<span aria-hidden="true" class="">+</span>
 								<span class="a11y_txt">文字サイズ拡大</span>
 							</button>
-						</fieldset>
-					</form>
-					<form method="dialog" class="popover_close">
-						<button type="submit">
-							<img class="icon_img" src="img/modal_close.png" alt="">
-							<span class="a11y_txt">表示設定を閉じる</span>
-						</button>
-					</form>
-				</dialog>
-			</nav>
-		</div>
-	</header>
+						</div>
+					</fieldset>
+					<label class="pc_view" for="novel_navi_bar_sticky">
+						<input type="checkbox" id="novel_navi_bar_sticky" name="">
+						<span>メニューバーを最上段に固定</span>
+					</label>
+				</form>
+				<form method="dialog" class="popover_close">
+					<button type="submit">
+						<img class="icon_img" src="img/modal_close.png" alt="">
+						<span class="a11y_txt">表示設定を閉じる</span>
+					</button>
+				</form>
+			</dialog>
+		</nav>
+	</div>
+
 	<section class="ad_area top_bar_ad content_width">
 		<div class="top_ad"></div>
 	</section>
@@ -208,12 +231,12 @@
 		<ol class="novel_profile_data">
 			<li><a href="https://ncode.syosetu.com/n4830bu/" title="" target="_blank">本好きの下剋上　～司書になるためには手段を選んでいられません～</a></li>
 			<li><a target="_blank" title="" href="https://mypage.syosetu.com/372556/">作者：香月　美夜</a></li>
-			<li>第五部　女神の化身</li>
-			<li>家族に繋がる道</li>
+			<li class="pc_view">第五部　女神の化身</li>
+			<li class="pc_view">家族に繋がる道</li>
 		</ol>
 	</section>
 	<nav class="episode_control content_width">
-		<ol>
+		<ol class="episode_control_list">
 			<li><a href="" class="episode_control_link">前へ</a></li>
 			<li><a href="" class="episode_control_link">目次</a></li>
 			<li><a href="" class="episode_control_link">次へ</a></li>
@@ -228,6 +251,7 @@
 	</nav>
 	<main>
 		<section class="content_width episode_content">
+			<p class="chapter_title mobile_view">第五部　女神の化身</p>
 			<h2 id="episode_title">家族に繋がる道</h2>
 			<div class="writer_talk pre_talk"></div>
 			<article class="novel_episode">
@@ -402,7 +426,7 @@
 			<div class="writer_talk after_talk"></div>
 		</section>
 		<nav class="episode_control content_width">
-			<ol>
+			<ol class="episode_control_list">
 				<li><a href="" class="episode_control_link">前へ</a></li>
 				<li><a href="" class="episode_control_link">目次</a></li>
 				<li><a href="" class="episode_control_link">次へ</a></li>
@@ -540,12 +564,12 @@
 					<li>
 						<a class="site_info_link" href="https://mypage.syosetu.com/372556/">作者マイページ</a></li>
 						<li>
-							<form class="site_info_link" action="https://ncode.syosetu.com/novelpdf/creatingpdf/ncode/n4830bu/" method="post">
-								<input type="submit" value="縦書きPDF" class="c-under-nav__pdflink" data-nolock="true">
+							<form class="" action="https://ncode.syosetu.com/novelpdf/creatingpdf/ncode/n4830bu/" method="post">
+								<input type="submit" value="縦書きPDF" class="site_info_link pdf_link" data-nolock="true">
 								<input type="hidden" name="token" value="6b44204dd407d786844d88141afca181">
 							</form>
 						</li>
-						<li>
+						<li class="pc_view">
 							<a class="site_info_link" href="https://ncode.syosetu.com/txtdownload/top/ncode/464784/" onclick="javascript:window.open('https://ncode.syosetu.com/txtdownload/top/ncode/464784/','a','width=600,height=450'); return false;">TXTダウンロード</a>
 						</li>
 						<li>
@@ -568,6 +592,19 @@
 						<p>この作品はスマートフォン対応です。スマートフォンかパソコンかを自動で判別し、適切なページを表示します。</p>
 					</article>
 				</section>
+				<nav class="site_bottom">
+					<ul>
+						<li>
+							<a class="site_bottom_link" href="https://syosetu.com">小説家になろう</a>
+						</li>
+						<li>
+							<a class="site_bottom_link" href="https://yomou.syosetu.com">小説を読もう！</a>
+						</li>
+						<li>
+							<a class="site_bottom_link" href="https://yomou.syosetu.com/search.php">作品検索</a>
+						</li>
+					</ul>
+				</nav>
 				<div class="content_width">
 					<a id="novel_top" href="#jump_nav">
 						<span class="a11y_txt">ページトップへ</span>

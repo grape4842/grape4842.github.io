@@ -122,7 +122,7 @@
     font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
     scroll-behavior: smooth; /* 부드러운 스크롤 */
 }
-:where(input[type="text"], input[type="password"], input[type="search"]) {
+:where(input[type="text"], input[type="password"], input[type="search"], select) {
     padding-left:0.5rem;
 }
 :where(textarea) {
@@ -234,14 +234,15 @@ fieldset {
 }
 dialog {
     position: fixed;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     border-color: rgba(0 0 0 / 0.3);
     top:50%; left:50%;
     transform: translate(-50%, -50%);
-    min-width: min-content;
     max-width: 90dvw;
     max-height: 90dvh;
     border:none;
+    padding:0.25rem;
+    margin:0rem !important;
     transition: display 0.2s allow-discrete, overlay 1s allow-discrete;
     animation: dialog_close 0.2s forwards;
 }
@@ -267,6 +268,9 @@ dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close
     right:0rem;
     top:0;
 }
+dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+    margin: 0 auto;
+}
 dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
     border-radius: 0.5rem;
     display: flex;
@@ -283,7 +287,6 @@ dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_po
 }
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
-    min-width:min-content;
     margin:0;
     padding:0.75rem 1.25rem;    
 }
@@ -331,7 +334,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 /*많은 파일에서 공통으로 사용하는 고유 내용*/
 .lightV {display: unset;}
 .darkV {display: none;}
-.View_PC, .PCV, .PC_View {display: none;}
+.View_PC, .PCV, .PC_View, .pc_view {display: none !important;}
 .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
     display: unset;
 }
@@ -371,24 +374,20 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 /*PC*/
 @media screen and (width >= 1400px) {
-    .View_PC, .PCV, .PC_View {display: unset;}
-    .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display: none;}
-    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content), .content_width {width: 60vw;}
-    dialog {max-width: 50dvw;}
+    .View_PC, .PCV, .PC_View, .pc_view {display: unset;}
+    .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display: none !important;}
+    dialog, .content_width {width: 60vw;}
 }
 
 /*1000px〜1400px iPad Pro*/
 @media screen and (1000px <= width < 1400px )  {
-    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content), .content_width {width: 80vw;}
+    dialog, .content_width {width: 80vw;}
 }
 
 /*700px〜1200px iPad*/
 @media screen and (700px <= width < 1000px )  {
 
-    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content), .content_width {
+    dialog, .content_width {
         width: 70vw;
     }
 }
@@ -396,7 +395,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 }
 /*Mobile*/
 @media screen and (340px <= width < 700px ) {
-    dialog {min-width: 80dvw;}
+    .content_width, dialog {min-width: 80dvw;}
 
 }
 /*folded, watch*/
