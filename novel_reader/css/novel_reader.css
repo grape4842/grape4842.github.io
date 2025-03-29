@@ -5,8 +5,7 @@
 	--white_color:#fff;
 	--c_white_color:#ccc;
 	--black_color:#000;
-	--gray6_color:#666;
-	--gray6_color:#999;
+	--gray_color:#777;
 	--caution_color:#c10;
 	--blue_color:#6a80ef;
 	--blue_color_hover:#1236e5;
@@ -16,6 +15,7 @@
 	--blue_color_bg_hover:#edf0ff;
 	--defalut_bg_color:#fff;
 }
+.episode_content {padding:0rem;}
 .pc_view {display: none !important;}
 :where(main:not(.episode_content), footer) :where(a, button):where(:focus, :hover) {
 	text-decoration: underline solid;
@@ -33,6 +33,10 @@
 	min-width: 1.5rem;
 	min-height: 1.5rem;
 	line-height: 2;
+}
+section {
+	padding:1rem;
+	margin:1rem auto;
 }
 footer {
 	padding:1rem;
@@ -152,7 +156,7 @@ li:has(.favorite_episode) {
 .favorite_episode {
 	appearance: none;
 	-webkit-appearance: none;
-	border:var(--gray6_color) 1px solid;
+	border:var(--gray_color) 1px solid;
 	width: 2rem;
 	height: 2rem;
 	border-radius: 10rem;
@@ -182,7 +186,7 @@ li:has(.favorite_episode) {
 }
 .view_setting_control {
 	background: transparent;
-	border:1px solid var(--gray6_color);
+	border:1px solid var(--gray_color);
 	z-index: 3;
 	display: flex;
 }
@@ -330,10 +334,20 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	line-height: 1;
 	cursor: pointer;
 }
+.episode_share_box {
+	border-bottom: 1px solid var(--gray_color);
+	border-top: 1px solid var(--gray_color);
+}
 .episode_share {
+	justify-content: space-between;
 	display:flex;
+	padding:0rem;
+}
+.episode_share > div {
+	display: flex;
 	align-items: center;
 }
+.episode_share ul {display: flex;}
 .episode_share h3 {
 	display: inline-flex;
 }
@@ -345,7 +359,7 @@ a:has(.episode_share_sns_icon) {
 	outline-offset: 0.25rem;
 }
 .review_comment > li {
-	border-bottom: 1px solid var(--gray6_color);
+	border-bottom: 1px solid var(--gray_color);
 	margin:1rem;
 	padding-bottom:1rem;
 }
@@ -384,13 +398,13 @@ a:has(.episode_share_sns_icon) {
 	right: 0;
 }
 .comment_menu_list li {
-	border:solid 1px var(--gray6_color);
+	border:solid 1px var(--gray_color);
 	border-bottom:none;
 	padding:0.25rem;
 	display: flex;
 }
 .comment_menu_list li:last-child {
-	border:solid 1px var(--gray6_color);
+	border:solid 1px var(--gray_color);
 }
 .comment_menu_list a {
 	padding:0rem 0.5rem;
@@ -398,8 +412,9 @@ a:has(.episode_share_sns_icon) {
 	flex-grow:1;
 }
 .episode_review, .write_review, .novel_caution {
-	border:var(--gray6_color) 1px solid;
+	border:var(--gray_color) 1px solid;
 }
+.episode_review, .write_review {}
 .write_reviewer_data {
 	display: flex;
 	flex-direction: column;
@@ -424,13 +439,17 @@ a:has(.episode_share_sns_icon) {
 	padding:1rem;
 }
 .bottom_box_ad {
+	padding:0rem;
+	gap:1rem;
+	display: flex;
 	justify-content: space-around;
 }
 .bottom_ad {
-	margin:1rem;
+	aspect-ratio: 6/5;
 	min-width:15rem;
 	min-height:15rem;
 }
+.episode_option {padding:0rem;}
 .episode_option_list {
 	border-top:1px solid;
 	border-bottom:1px solid;
@@ -454,16 +473,12 @@ a:has(.episode_share_sns_icon) {
 	border:none;
 	background: transparent;
 }
-.novel_caution {
-	padding:1rem;
-	margin:2rem auto;
-}
 .novel_caution_text {
 	color:var(--caution_color);
 	margin-bottom: 2rem;
 }
 .site_bottom {
-	border-top:var(--gray6_color) 1px solid;
+	border-top:var(--gray_color) 1px solid;
 }
 .site_bottom > ul {
 	display: flex;
@@ -474,8 +489,8 @@ a:has(.episode_share_sns_icon) {
 	margin:0.5rem 0rem;
 }
 .site_bottom > ul > li:not(:first-child):not(:last-child) > a.site_bottom_link {
-	border-left:var(--gray6_color) 1px solid;
-	border-right:var(--gray6_color) 1px solid;
+	border-left:var(--gray_color) 1px solid;
+	border-right:var(--gray_color) 1px solid;
 	border-radius: 0rem;
 }
 .site_bottom_link {
@@ -529,28 +544,27 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 @media screen and (width >= 1400px) {
 	.pc_view {display: flex !important;}
 	.mobile_view {display: none !important;}
+	.novel_nav_menu > ol:first-child > li {border-left:var(--gray_color) 1px solid;}
 	.novel_nav_menu .pc_view {margin:0.5rem 0rem;}
 	.content_width, dialog {width:40vw;}
 	#bookmark_setting form:not(.popover_close) {padding:3rem;}
 	#episode_title {
 		font-size: 2rem;
 	}
-	.bottom_box_ad {
-		display: flex;
-	}
-	.novel_profile, .write_review, .novel_caution, .novel_caution {
+	section {
 		padding:3rem;
-		padding-top:1rem;
+	}
+	section:has(h3) {
+		padding-top: 1rem;
 	}
 }
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
-	.bottom_box_ad {
-		display: flex;
-	}
-	.novel_profile, .write_review, .novel_caution, .novel_caution {
+	section {
 		padding:2rem;
+	}
+	section:has(h3) {
 		padding-top: 1rem;
 	}
 
@@ -558,6 +572,12 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 
 /*Mobile*/
 @media screen and (700px > width) {
+	section {
+		padding:1.5rem;
+	}
+	section:has(h3) {
+		padding-top: 1rem;
+	}
 	.novel_nav, .novel_nav_menu {
 		flex-direction: column;
 		width: 100%;
@@ -566,8 +586,8 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	.novel_nav_menu > ol:first-child {
 		width: 99vw;
 		margin: 0rem auto;
-		border-top:1px solid var(--gray6_color);
-		border-bottom:1px solid var(--gray6_color);
+		border-top:1px solid var(--gray_color);
+		border-bottom:1px solid var(--gray_color);
 	}
 	.novel_nav_menu > ol.mobile_view:last-child {
 		margin:0.5rem auto;
@@ -591,22 +611,23 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	}
 
 	.novel_nav_menu > ol:first-child > li:not(:first-child):not(:last-child) > .novel_nav_item {
-		border-left:var(--gray6_color) 1px solid;
-		border-right:var(--gray6_color) 1px solid;
+		border-left:var(--gray_color) 1px solid;
+		border-right:var(--gray_color) 1px solid;
 	}
 	.novel_nav_menu a {flex-grow: 1;}
 	.bookmark_setting_open {font-size: 14px;}
 	.episode_control_list {
 		justify-content: space-between;
-		border-top:1px solid var(--gray6_color);
-		border-bottom:1px solid var(--gray6_color);
+		border-top:1px solid var(--gray_color);
+		border-bottom:1px solid var(--gray_color);
+		margin-bottom: 1rem;
 	}
 	.episode_control_list li {
 		flex:1;
 	}
 	.episode_control_list li:not(:first-child):not(:last-child) {
-		border-left:1px solid var(--gray6_color);
-		border-right:1px solid var(--gray6_color);
+		border-left:1px solid var(--gray_color);
+		border-right:1px solid var(--gray_color);
 	}
 
 	.episode_option_list {
@@ -617,18 +638,24 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		grid-template-columns: 1fr 1fr;
 	}
 	.episode_option_list li {
-		border:1px solid;
+		border:1px solid var(--gray_color);
 		margin: 0rem;
 	}
+	.episode_option_list li:where(:nth-child(2), :nth-child(5)) {
+		border-left:none;
+	}
+	.episode_option_list li:where(:nth-child(2), :nth-child(1)) {
+		border-bottom: none;
+	}
+	.bottom_box_ad {
+		flex-direction: column;
+		gap:3rem;
+	}
 	.site_info_link {
-		padding:0.25rem 0.75rem;
+		padding:0.25rem 0.5rem;
 		margin:0.25rem;
 		text-align: left;
-		justify-content: flex-start;
-	}
-	.novel_profile, .write_review, .novel_caution, .novel_caution {
-		padding:1.5rem;
-		padding-top: 1rem;
+		justify-content: space-between;
 	}
 
 }
