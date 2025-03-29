@@ -31,8 +31,9 @@
     font-weight:900;
     font-display : swap;
 }
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
 /*일본어 日本語*/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @font-face { 
     font-family:"BIZ-UDPGothic";
     src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");

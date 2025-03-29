@@ -6,6 +6,7 @@
 	--c_white_color:#ccc;
 	--black_color:#000;
 	--gray6_color:#666;
+	--gray6_color:#999;
 	--caution_color:#c10;
 	--blue_color:#6a80ef;
 	--blue_color_hover:#1236e5;
@@ -21,7 +22,7 @@
 	text-underline-offset: 0.25rem;
 }
 *, :where(body):not(img), body {
-	font-family: "BIZ-UDPGothic", "KoddiUDOnGothic", sans-serif, serif;
+	font-family: "Pretendard Variable", "BIZ-UDPGothic", "KoddiUDOnGothic", sans-serif, serif;
 	line-height: 2;
 }
 :where(a, button) {
@@ -221,7 +222,6 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	margin:1rem auto;
 }
 .episode_control_list {
-	flex: 1;
 	width: 100%;
 	align-items: center;
 	display: flex;
@@ -232,12 +232,14 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	justify-content: center;
 	padding:0.5rem 1rem;
 	width: 100%;
+	gap:0.5rem;
 }
 .episode_control_link:link {
 	font-weight: bold;
 }
 .episode_control_link:visited {
 	color:var(--novel_theme_color_dark);
+	font-weight: 100;
 }
 .chapter_title {text-align: center;}
 #episode_title {
@@ -594,11 +596,19 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	}
 	.novel_nav_menu a {flex-grow: 1;}
 	.bookmark_setting_open {font-size: 14px;}
-	.episode_control {justify-content: space-between;}
-	.episode_control li {
-		flex:1;
-		margin:0rem 0.5rem;
+	.episode_control_list {
+		justify-content: space-between;
+		border-top:1px solid var(--gray6_color);
+		border-bottom:1px solid var(--gray6_color);
 	}
+	.episode_control_list li {
+		flex:1;
+	}
+	.episode_control_list li:not(:first-child):not(:last-child) {
+		border-left:1px solid var(--gray6_color);
+		border-right:1px solid var(--gray6_color);
+	}
+
 	.episode_option_list {
 		display: grid;
 		justify-items: stretch;
@@ -626,10 +636,6 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 @media screen and (330px > width) {
 	.site_name img {max-width: 8rem;}
 	.novel_nav_menu * {font-size: 14px;}
-	.episode_control li {
-		flex:1;
-		margin:0rem 0.5rem;
-	}
 	.novel_profile, .write_review, .novel_caution, .novel_caution {
 		padding:1rem;
 	}

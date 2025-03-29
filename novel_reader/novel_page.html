@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="css/novel_reader.css">
 	<link rel="preload" href="../font/BIZ-UD/BIZ-UDPGothic.ttf" as="font">
 	<link rel="preload" href="../font/BIZ-UD/BIZ-UDPGothic-Bold.ttf" as="font">
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 	
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
@@ -250,13 +251,23 @@
 			<li class="pc_view">家族に繋がる道</li>
 		</ol>
 	</section>
-	<nav class="episode_control content_width">
+	<nav class="episode_control">
 		<ol class="episode_control_list">
-			<li><a href="" class="episode_control_link">前へ</a></li>
+			<li>
+				<a href="" class="episode_control_link">
+					<span aria-hidden="true">< </span>
+					<span> 前へ</span>
+				</a>
+			</li>
 			<li><a href="" class="episode_control_link">目次</a></li>
-			<li><a href="" class="episode_control_link">次へ</a></li>
+			<li>
+				<a href="" class="episode_control_link">
+					<span>次へ </span>
+					<span aria-hidden="true"> ></span>
+				</a>
+			</li>
 		</ol>
-		<p class="episode_current">
+		<p class="episode_current content_width">
 			<span class="a11y_txt">現在エピソード</span>
 			<span>676</span>
 			<span>/</span>
@@ -442,9 +453,19 @@
 		</section>
 		<nav class="episode_control content_width">
 			<ol class="episode_control_list">
-				<li><a href="" class="episode_control_link">前へ</a></li>
+				<li>
+					<a href="" class="episode_control_link">
+						<span aria-hidden="true">< </span>
+						<span> 前へ</span>
+					</a>
+				</li>
 				<li><a href="" class="episode_control_link">目次</a></li>
-				<li><a href="" class="episode_control_link">次へ</a></li>
+				<li>
+					<a href="" class="episode_control_link">
+						<span>次へ </span>
+						<span aria-hidden="true"> ></span>
+					</a>
+				</li>
 			</ol>
 		</nav>
 		<section class="star_rating content_width">
