@@ -3,26 +3,22 @@
 	--novel_theme_color_dark:#1f4247;
 	--yellow_color:#ff7;
 	--white_color:#fff;
-	--c_white_color:#ccc;
+	--light_monotone_color:#ccc;
 	--black_color:#000;
 	--gray_color:#777;
 	--caution_color:#c10;
-	--blue_color:#6a80ef;
-	--blue_color_hover:#1236e5;
+	--blue_color:#45f;
+	--blue_color_hover:#34e;
 	--blue_color_border:#8e9ff5;
 	--blue_color_border_hover:#4a65ed;
 	--blue_color_bg:#f5f7ff;
 	--blue_color_bg_hover:#edf0ff;
-	--defalut_bg_color:#fff;
+	--default_bg_color:#fff;
+	--overlay_color:rgba(0, 0, 0, 0.1);
 }
 .episode_content {padding:0rem;}
 .pc_view {display: none !important;}
-:where(main:not(.episode_content), footer) :where(a, button):where(:focus, :hover) {
-	text-decoration: underline solid;
-	text-underline-offset: 0.25rem;
-}
 *, :where(body):not(img), body {
-	font-family: "Pretendard Variable", "BIZ-UDPGothic", "KoddiUDOnGothic", sans-serif, serif;
 	line-height: 2;
 }
 :where(a, button) {
@@ -34,9 +30,10 @@
 	min-height: 1.5rem;
 	line-height: 2;
 }
-section {
+.default_input {margin-right:0.5rem;}
+section:not(dialog section) {
 	padding:1rem;
-	margin:1rem auto;
+	margin:3rem auto !important;
 }
 footer {
 	padding:1rem;
@@ -45,6 +42,9 @@ footer {
 footer .content_width {
 	display: flex;
 	justify-content: center;
+}
+.ad_area {
+	padding:0rem;
 }
 .ad_area > *{
 	background: var(--novel_theme_color);
@@ -78,6 +78,7 @@ label {display: flex;}
 	margin:0.5rem auto;
 }
 .novel_navi_bar {
+	background: var(--default_bg_color);
 	top:0;
 	z-index: 5;
 	width:100%;
@@ -133,6 +134,7 @@ label {display: flex;}
 .bookmark_setting_item, .radio_input_box {
 	display: flex;
 }
+.radio_input_box:first-child {margin-right: 1rem;}
 .bookmark_category_item, .bookmark_memo_item {
 	flex-direction: column;
 	width: 100%;
@@ -179,10 +181,22 @@ li:has(.favorite_episode) {
 .favorite_episode:checked::after {
 	content: '★';
 }
+.favorite_episode:where(:hover, :focus)::after {
+	filter: brightness(1.2);
+}
 
 .novel_profile {
 	margin:1rem auto;
-	background: rgba(255 255 255 / 0.1);
+	background:var(--overlay_color);
+}
+.novel_view_setting > fieldset:not(:first-child):not(:last-child) {
+	margin:3rem auto;
+}
+.view_setting_title {
+	width: 100%;
+	background: var(--blue_color_bg_hover);
+	padding:0rem 0.5rem;
+	margin-bottom: 1rem;
 }
 .view_setting_control {
 	background: transparent;
@@ -192,21 +206,64 @@ li:has(.favorite_episode) {
 }
 .novel_view_setting input[type="text"] {
 	max-width: 4rem;
+	border:1px solid var(--gray_color);
+	border-left:none;
+	border-right:none;
+	padding:0rem 0.25rem;
 }
 .view_type_list {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	gap:0.5rem;
+	justify-content: center;
+	justify-items: stretch;
+	align-items: stretch;
+	grid-template-columns: repeat(2, 1fr);
+}
+.view_type_list label {
+	flex:1;
+	padding:0rem 0.5rem;
+	aspect-ratio: 16/9;
+	justify-content: center;
+	align-items: center;
+}
+.view_type_list input {
+	border-radius: 0.5rem;
+	border:1px solid var(--gray_color);
+	position: absolute;
+	width: 100%;
+	inset:0;
+	height: 100%;
+	appearance: none;
+	-webkit-appearance: none;
+	outline-offset: 4px;
+}
+.view_type_list input:checked {
+	border:4px solid var(--novel_theme_color_dark);
+}
+.view_type_list input:checked + span {
+	font-weight: 500;
+	color:var(--novel_theme_color_dark);	
+}
+.view_type_list span {
+	width:80%;
+	aspect-ratio: 16/9;
+	text-align:center;
+	justify-content: center;
 }
 .novel_navi_bar:has(#novel_navi_bar_sticky:checked) {
 	position: sticky !important;
 }
-.episode_font_size_ctrl_line {display: inline-flex;}
+.episode_font_size_ctrl_line {
+	display: inline-flex;
+}
 .episode_font_size_ctrl {
 	display: flex;
+	border-radius: 0rem;
 	justify-content: center;
 	align-items: center;
-	min-height: 2rem;
-	min-width: 2rem;
+	height: 2.5rem;
+	width: 2.5rem;
+	border:1px solid var(--gray_color);
 	aspect-ratio: 1/1;
 }
 .novel_profile_data > li {
@@ -220,10 +277,10 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	padding:0rem 0.5rem;
 }
 .top_ad {
+	width: 100%;
 	border:1px solid #fffa;
-	min-height: 4rem;
 	max-height: 6rem;
-	margin:1rem auto;
+	aspect-ratio: 364/45;
 }
 .episode_control_list {
 	width: 100%;
@@ -238,12 +295,12 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	width: 100%;
 	gap:0.5rem;
 }
-.episode_control_link:link {
+.episode_control_link:link span {
 	font-weight: bold;
 }
-.episode_control_link:visited {
+.episode_control_link:visited span {
 	color:var(--novel_theme_color_dark);
-	font-weight: 100;
+	font-weight: lighter;
 }
 .chapter_title {text-align: center;}
 #episode_title {
@@ -255,7 +312,6 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	padding:0.25rem 0px;
 }
 .episode_current {
-	opacity: 0.6;
 	font-weight: lighter;
 	text-align: right;
 }
@@ -342,6 +398,7 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	justify-content: space-between;
 	display:flex;
 	padding:0rem;
+	margin:0rem auto !important;
 }
 .episode_share > div {
 	display: flex;
@@ -386,16 +443,17 @@ a:has(.episode_share_sns_icon) {
 	display: flex;
 	justify-content: flex-end;
 }
-.comment_menu:where(:focus-within, :hover) .comment_menu_list {
-	display: block;
-}
 
 .comment_menu_list {
 	z-index: 2;
-	background: var(--defalut_bg_color);
+	background: var(--default_bg_color);
 	display: none;
+	transition: display 0.2s;
 	position: absolute;	
 	right: 0;
+}
+.comment_menu:where(:focus-within, :hover) .comment_menu_list {
+	display: block;
 }
 .comment_menu_list li {
 	border:solid 1px var(--gray_color);
@@ -544,6 +602,14 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 @media screen and (width >= 1400px) {
 	.pc_view {display: flex !important;}
 	.mobile_view {display: none !important;}
+	dialog {padding:2rem;}
+	dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+		top:2rem;
+		right: 2rem;
+	}
+	dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
+		width: 4rem; height: 4rem;
+	}
 	.novel_nav_menu > ol:first-child > li {border-left:var(--gray_color) 1px solid;}
 	.novel_nav_menu .pc_view {margin:0.5rem 0rem;}
 	.content_width, dialog {width:40vw;}
@@ -551,7 +617,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	#episode_title {
 		font-size: 2rem;
 	}
-	section {
+	section:not(dialog section) {
 		padding:3rem;
 	}
 	section:has(h3) {
@@ -561,7 +627,10 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
-	section {
+	.content_width {width: 80vw;}
+	.pc_view {display: flex !important;}
+	.mobile_view {display: none !important;}
+	section:not(dialog section) {
 		padding:2rem;
 	}
 	section:has(h3) {
@@ -572,7 +641,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 
 /*Mobile*/
 @media screen and (700px > width) {
-	section {
+	section:not(dialog section) {
 		padding:1.5rem;
 	}
 	section:has(h3) {
@@ -607,7 +676,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	.novel_nav_menu > ol > li {
 		flex-grow: 1;
 		text-align: center;
-		display: flex;
+		display: inline-flex;
 	}
 
 	.novel_nav_menu > ol:first-child > li:not(:first-child):not(:last-child) > .novel_nav_item {
@@ -616,6 +685,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	}
 	.novel_nav_menu a {flex-grow: 1;}
 	.bookmark_setting_open {font-size: 14px;}
+	.top_ad {aspect-ratio: 16/5;}
 	.episode_control_list {
 		justify-content: space-between;
 		border-top:1px solid var(--gray_color);
@@ -673,13 +743,28 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 @media (prefers-color-scheme:dark) {
 	:root {
 		--caution_color:#f87;
-		--defalut_bg_color:#121212;
+		--default_bg_color:#121212;
+		--overlay_color:rgba(255 255 255 / 0.1);
+	}
+	.bookmark_setting_open {
+		filter: invert(1) hue-rotate(-200deg);
+	}
+	.view_setting_title {
+		background: var(--novel_theme_color_dark);
+	}
+	.view_type_list input:checked {
+		background: var(--novel_theme_color_dark);
+		border-color:var(--novel_theme_color);
+		box-shadow: 0px 0px 1px 0px var(--white_color), 0px 0px 1px 0px var(--white_color) inset;
+	}
+	.view_type_list input:checked + span {
+		color:var(--white_color);
 	}
 	footer {background-color: var(--novel_theme_color_dark);}
-	.episode_control_link {
+	.episode_control_link span {
 		color:var(--yellow_color);
 	}
-	.episode_control_link:visited {
+	.episode_control_link:visited span {
 		color:var(--novel_theme_color);
 	}
 	.comment_menu_button img {filter: invert(1);}

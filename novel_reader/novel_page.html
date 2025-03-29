@@ -75,7 +75,7 @@
 						<a href="" class="novel_nav_item">お気に入りep</a>
 					</li>
 					<li>
-						<button aria-haspopup="dialog" class="bookmark_setting_open popover_open novel_nav_item" type="button" id="" onclick="document.getElementById('bookmark_setting').showModal();">ブックマーク設定変更</button>
+						<button aria-haspopup="dialog" class="bookmark_setting_open popover_open novel_nav_item" type="button" onclick="document.getElementById('bookmark_setting').showModal();">ブックマーク設定変更</button>
 						<dialog class="popover content_width" id="bookmark_setting">
 							<div class="popup_header">
 								<h2>ブックマーク設定</h2>
@@ -86,17 +86,17 @@
 								<form>
 									<ol>
 										<li class="bookmark_setting_item">
-											<input id="update_push" type="checkbox">
+											<input class="default_input" id="update_push" type="checkbox">
 											<label for="update_push">更新通知 </label>
 											<label for="update_push"> 0件登録中（上限400件）</label>
 										</li>
 										<li class="bookmark_setting_item">
 											<div class="radio_input_box">
-												<input id="bookmark_disclosure" name="bookmark_disclosure_type" type="radio">
+												<input class="default_input" id="bookmark_disclosure" name="bookmark_disclosure_type" type="radio">
 												<label for="bookmark_disclosure">公開</label>
 											</div>
 											<div class="radio_input_box">
-												<input id="bookmark_nondisclosure" name="bookmark_disclosure_type" type="radio">
+												<input class="default_input" id="bookmark_nondisclosure" name="bookmark_disclosure_type" type="radio">
 												<label for="bookmark_nondisclosure">非公開</label>
 											</div>
 										</li>
@@ -121,7 +121,7 @@
 												<input maxlength="50" type="text" id="bookmark_memo">
 											</div>
 											<p>
-												<label for="">※50文字以内</label>
+												<label for="bookmark_memo">※50文字以内</label>
 											</p>
 										</li>
 									</ol>
@@ -146,7 +146,7 @@
 				</ol>
 				<ol class="mobile_view content_width">
 					<li>
-						<button aria-haspopup="dialog" class="bookmark_setting_open popover_open novel_nav_item" type="button" id="" onclick="document.getElementById('bookmark_setting').showModal();">ブックマーク設定変更</button>
+						<button aria-haspopup="dialog" class="bookmark_setting_open popover_open novel_nav_item" type="button" popovertarget="bookmark_setting">ブックマーク設定変更</button>
 					</li>
 					<li>
 						<label for="favorite_episode_pc" class="">
@@ -175,11 +175,11 @@
 							</label>
 							<label for="view_type2">
 								<input id="view_type2" type="radio" name="view_type">
-								<span>ブラックモード1</span>
+								<span>ブラックモード</span>
 							</label>
 							<label for="view_type3">
 								<input id="view_type3" type="radio" name="view_type">
-								<span>ブラックモード2</span>
+								<span>ライトモード</span>
 							</label>
 							<label for="view_type4">
 								<input id="view_type4" type="radio" name="view_type">
@@ -226,7 +226,7 @@
 						</div>
 					</fieldset>
 					<label class="pc_view" for="novel_navi_bar_sticky">
-						<input type="checkbox" id="novel_navi_bar_sticky" name="">
+						<input class="default_input" type="checkbox" id="novel_navi_bar_sticky" name="">
 						<span>メニューバーを最上段に固定</span>
 					</label>
 				</form>
@@ -247,9 +247,10 @@
 			<li class="pc_view">第五部　女神の化身</li>
 		</ol>
 	</section>
-	<section class="ad_area top_bar_ad content_width">
-		<span class="a11y_txt">ページ上段広告</span>
-		<div class="top_ad"></div>
+	<section class="ad_area top_bar_ad">
+		<h3 class="a11y_txt">ページ上段広告</h3>
+		<div class="top_ad mobile_view"></div>
+		<div class="content_width pc_view top_ad"></div>
 	</section>
 
 	<nav class="episode_control">
@@ -260,7 +261,11 @@
 					<span> 前へ</span>
 				</a>
 			</li>
-			<li><a href="" class="episode_control_link">目次</a></li>
+			<li>
+				<a href="" class="episode_control_link">
+					<span>目次</span>
+				</a>
+			</li>
 			<li>
 				<a href="" class="episode_control_link">
 					<span>次へ </span>
@@ -460,7 +465,11 @@
 						<span> 前へ</span>
 					</a>
 				</li>
-				<li><a href="" class="episode_control_link">目次</a></li>
+				<li>
+					<a href="" class="episode_control_link">
+						<span>目次</span>
+					</a>
+				</li>
 				<li>
 					<a href="" class="episode_control_link">
 						<span>次へ </span>
@@ -516,7 +525,7 @@
 				<div class="pc_view">
 					<ul>
 						<li>
-							<button aria-haspopup="dialog" class="bookmark_setting_open popover_open novel_nav_item" type="button" id="" onclick="document.getElementById('bookmark_setting').showModal();">ブックマーク設定変更</button>
+							<button aria-haspopup="dialog" class="bookmark_setting_open popover_open novel_nav_item" type="button" onclick="document.getElementById('bookmark_setting').showModal();">ブックマーク設定変更</button>
 						</li>
 						<li>
 							<label for="favorite_episode_bottom" class="favorite_episode_label">
@@ -615,15 +624,15 @@
 					<textarea id="review_text_write" placeholder="感想本文"></textarea>
 					<div class="write_reviewer_data">
 						<label for="this_episode_review">
-							<input id="this_episode_review" type="checkbox">
+							<input class="default_input" id="this_episode_review" type="checkbox">
 							<span>エピソード676の感想として書く</span>
 						</label>
 						<label for="reviewer_age">
-							<input id="reviewer_age" type="checkbox">
+							<input class="default_input" id="reviewer_age" type="checkbox">
 							<span>年代情報を公開する(23歳～29歳)</span>
 						</label>
 						<label for="reviewer_gender">
-							<input id="reviewer_gender" type="checkbox">
+							<input class="default_input" id="reviewer_gender" type="checkbox">
 							<span>性別情報を公開する(男性)</span>
 						</label>
 					</div>
@@ -631,7 +640,7 @@
 						<p>感想を書く際の禁止事項はこちらの<a target="_blank" href="https://syosetu.com/helpcenter/helppage/helppageid/106">感想について</a>をご確認ください。</p>
 						<p>誤字脱字の報告は<a target="_blank" href="https://novelcom.syosetu.com/novelreport/input/ncode/464784/no/676/">誤字報告機能</a>をご利用ください。</p>
 					</div>
-					<input type="submit" class="writed_review_submit" value="送信[確認]">
+					<button type="submit" class="writed_review_submit">送信[確認]</button>
 				</fieldset>
 			</form>
 		</section>

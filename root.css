@@ -1,6 +1,13 @@
 @charset "utf-8";
-:lang(ko) {word-break: keep-all; line-break:normal;}
-:lang(ja) {word-break: auto-phrase; font-feature-settings: "palt";}
+:lang(ko) {
+    word-break: keep-all;
+    line-break:normal;
+}
+:lang(ja) {
+    font-family:"Pretendard Variable";
+    word-break: auto-phrase;
+    font-feature-settings: "palt";
+}
 ::selection {background:#baf; color:#000;}
 ::placeholder{color:#555;}
 /*폰트 설성*/
@@ -120,11 +127,13 @@
     box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
     -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
     color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
-    font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", sans-serif, serif;
+    font-family: "KoddiUDOnGothic", "BIZ-UDPGothic","Pretendard Variable", sans-serif, serif;
     scroll-behavior: smooth; /* 부드러운 스크롤 */
 }
 :where(input[type="text"], input[type="password"], input[type="search"], select) {
     padding-left:0.5rem;
+}
+:where(input[type="text"], input[type="password"], input[type="search"]) {
     cursor: text !important;
 }
 :where(textarea) {
@@ -290,7 +299,7 @@ dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_po
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
     margin:0;
-    padding:0.75rem 1.25rem;    
+    padding:1rem 1.25rem;    
 }
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
     display: flex;
@@ -388,7 +397,6 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 /*700px〜1200px iPad*/
 @media screen and (700px <= width < 1000px )  {
-
     dialog, .content_width {
         width: 70vw;
     }
