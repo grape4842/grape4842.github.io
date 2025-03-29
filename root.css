@@ -124,6 +124,7 @@
 }
 :where(input[type="text"], input[type="password"], input[type="search"], select) {
     padding-left:0.5rem;
+    cursor: text !important;
 }
 :where(textarea) {
     resize: vertical; /* 텍스트 영역의 가로 크기 조정 비활성화 */
@@ -334,9 +335,9 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 /*많은 파일에서 공통으로 사용하는 고유 내용*/
 .lightV {display: unset;}
 .darkV {display: none;}
-.View_PC, .PCV, .PC_View, .pc_view {display: none !important;}
+.View_PC, .PCV, .PC_View, .pc_view {display:none;}
 .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
-    display: unset;
+    display:unset;
 }
 .content_width {
     width: 90vw;
@@ -374,8 +375,8 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 /*PC*/
 @media screen and (width >= 1400px) {
-    .View_PC, .PCV, .PC_View, .pc_view {display: unset;}
-    .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display: none !important;}
+    .View_PC, .PCV, .PC_View, .pc_view {display:unset;}
+    .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display:none;}
     dialog, .content_width {width: 60vw;}
 }
 
