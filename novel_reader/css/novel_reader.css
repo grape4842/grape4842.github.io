@@ -720,6 +720,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		border-left:1px solid var(--gray_color);
 		border-right:1px solid var(--gray_color);
 	}
+	.episode_share {justify-content: center;}
 	.episode_review {
 		padding:0rem;
 		padding-top: 1rem;
