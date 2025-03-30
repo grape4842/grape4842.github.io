@@ -618,7 +618,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		font-size: 2rem;
 	}
 	section:not(dialog section) {
-		padding:3rem;
+		padding:2rem 2.5rem;
 	}
 	section:has(h3) {
 		padding-top: 1rem;
@@ -631,7 +631,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	.pc_view {display: flex !important;}
 	.mobile_view {display: none !important;}
 	section:not(dialog section) {
-		padding:2rem;
+		padding:1.5rem 2rem;
 	}
 	section:has(h3) {
 		padding-top: 1rem;
@@ -642,7 +642,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 /*Mobile*/
 @media screen and (700px > width) {
 	section:not(dialog section) {
-		padding:1.5rem;
+		padding:1rem 1.5rem;
 	}
 	section:has(h3) {
 		padding-top: 1rem;
