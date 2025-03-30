@@ -32,7 +32,7 @@
 }
 .default_input {margin-right:0.5rem;}
 section:not(dialog section) {
-	padding:1rem;
+	padding:0.5rem 1rem;
 	margin:3rem auto !important;
 }
 footer {
@@ -99,10 +99,13 @@ label {display: flex;}
 	flex-wrap: wrap;
 	flex-grow: 1;
 }
-.novel_nav_menu, .novel_nav ol {
+.novel_nav_menu ol {
 	display: flex;
+	align-items: center;
 }
-.novel_nav ol {align-items: center;}
+.novel_nav_menu > ol.mobile_view {
+	margin:0.5rem auto;
+}
 .site_name {display: inline-flex;}
 .site_name a {
 	max-height: 2rem;
@@ -384,7 +387,7 @@ li:has(.novel_nav_item):not(:first-child):not(:last-child) {
 	height: 2rem;
 	width: 2rem;
 	font-size: 2rem;
-	font-weight: 900;
+	font-weight: 100;
 	color: var(--novel_theme_color);
 	transition: color 0.2s, content 0.2s;
 	line-height: 1;
@@ -418,7 +421,7 @@ a:has(.episode_share_sns_icon) {
 .review_comment > li {
 	border-bottom: 1px solid var(--gray_color);
 	margin:1rem;
-	padding-bottom:1rem;
+	padding-bottom:0.25rem;
 }
 .commenter_name {
 	padding:0rem 0.5rem;
@@ -447,13 +450,9 @@ a:has(.episode_share_sns_icon) {
 .comment_menu_list {
 	z-index: 2;
 	background: var(--default_bg_color);
-	display: none;
 	transition: display 0.2s;
 	position: absolute;	
 	right: 0;
-}
-.comment_menu:where(:focus-within, :hover) .comment_menu_list {
-	display: block;
 }
 .comment_menu_list li {
 	border:solid 1px var(--gray_color);
@@ -483,6 +482,16 @@ a:has(.episode_share_sns_icon) {
 	flex-direction: column;
 	justify-content: center;
 }
+#review_writer_name {
+	background: transparent;
+	border:none;
+	transition: border 0.2s;
+	outline-offset: 0.25rem;
+	border-bottom: var(--gray_color) 1px solid;
+}
+#review_writer_name:focus {
+	border-width: 2px;
+}
 #review_text_write {
 	width: 100%;
 	min-height: 12lh;
@@ -506,6 +515,7 @@ a:has(.episode_share_sns_icon) {
 	aspect-ratio: 6/5;
 	min-width:15rem;
 	min-height:15rem;
+	max-height: 16rem;
 }
 .episode_option {padding:0rem;}
 .episode_option_list {
@@ -618,7 +628,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		font-size: 2rem;
 	}
 	section:not(dialog section) {
-		padding:2rem 2.5rem;
+		padding:1.5rem 2rem;
 	}
 	section:has(h3) {
 		padding-top: 1rem;
@@ -631,7 +641,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	.pc_view {display: flex !important;}
 	.mobile_view {display: none !important;}
 	section:not(dialog section) {
-		padding:1.5rem 2rem;
+		padding:1rem 1.5rem;
 	}
 	section:has(h3) {
 		padding-top: 1rem;
@@ -641,9 +651,6 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 
 /*Mobile*/
 @media screen and (700px > width) {
-	section:not(dialog section) {
-		padding:1rem 1.5rem;
-	}
 	section:has(h3) {
 		padding-top: 1rem;
 	}
@@ -653,7 +660,8 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		justify-content: center;
 	}
 	.novel_nav_menu > ol:first-child {
-		width: 99vw;
+		padding:0rem 0.25rem;
+		background: var(--overlay_color);
 		margin: 0rem auto;
 		border-top:1px solid var(--gray_color);
 		border-bottom:1px solid var(--gray_color);
@@ -699,7 +707,10 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		border-left:1px solid var(--gray_color);
 		border-right:1px solid var(--gray_color);
 	}
-
+	.episode_review {
+		padding:0rem;
+		padding-top: 1rem;
+	}
 	.episode_option_list {
 		display: grid;
 		justify-items: stretch;
@@ -731,6 +742,9 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 }
 /*iPhone SE, Galaxy Fold3, watch*/
 @media screen and (330px > width) {
+	section:not(dialog section) {
+		padding:0.25rem 0.5rem;
+	}
 	.site_name img {max-width: 8rem;}
 	.novel_nav_menu * {font-size: 14px;}
 	.novel_profile, .write_review, .novel_caution, .novel_caution {

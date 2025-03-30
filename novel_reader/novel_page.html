@@ -76,77 +76,17 @@
 					</li>
 					<li>
 						<button aria-haspopup="dialog" class="bookmark_setting_open popover_open novel_nav_item" type="button" onclick="document.getElementById('bookmark_setting').showModal();">ブックマーク設定変更</button>
-						<dialog class="popover content_width" id="bookmark_setting">
-							<div class="popup_header">
-								<h2>ブックマーク設定</h2>
-							</div>
-							<section class="popover_content">
-								<p>本好きの下剋上　～司書になるためには手段を選んでいられません～</p>
-								<p>ブックマークの設定を変更します</p>
-								<form>
-									<ol>
-										<li class="bookmark_setting_item">
-											<input class="default_input" id="update_push" type="checkbox">
-											<label for="update_push">更新通知 </label>
-											<label for="update_push"> 0件登録中（上限400件）</label>
-										</li>
-										<li class="bookmark_setting_item">
-											<div class="radio_input_box">
-												<input class="default_input" id="bookmark_disclosure" name="bookmark_disclosure_type" type="radio">
-												<label for="bookmark_disclosure">公開</label>
-											</div>
-											<div class="radio_input_box">
-												<input class="default_input" id="bookmark_nondisclosure" name="bookmark_disclosure_type" type="radio">
-												<label for="bookmark_nondisclosure">非公開</label>
-											</div>
-										</li>
-										<li class="bookmark_setting_item bookmark_category_item">
-											<label for="bookmark_category_combobox">カテゴリー</label>
-											<select name="" id="bookmark_category_combobox">
-												<option value="bookmark_category1">カテゴリー1</option>
-												<option value="bookmark_category2">カテゴリー2</option>
-												<option value="bookmark_category3">カテゴリー3</option>
-												<option value="bookmark_category4">カテゴリー4</option>
-												<option value="bookmark_category5">カテゴリー5</option>
-												<option value="bookmark_category6">カテゴリー6</option>
-												<option value="bookmark_category7">カテゴリー7</option>
-												<option value="bookmark_category8">カテゴリー8</option>
-												<option value="bookmark_category9">カテゴリー9</option>
-												<option value="bookmark_category10">カテゴリー10</option>
-											</select>
-										</li>
-										<li class="bookmark_setting_item bookmark_memo_item">
-											<div>
-												<label for="bookmark_memo">メモ</label>
-												<input maxlength="50" type="text" id="bookmark_memo">
-											</div>
-											<p>
-												<label for="bookmark_memo">※50文字以内</label>
-											</p>
-										</li>
-									</ol>
-									<button class="bookmark_setting_save" type="submit">設定を保存</button>
-								</form>
-							</section>
-							<form method="dialog" class="popover_close">
-								<button type="submit">
-									<img class="icon_img" src="img/modal_close.png" alt="">
-									<span class="a11y_txt">ブックマーク設定を閉じる</span>
-								</button>
-							</form>
-						</dialog>
 					</li>
 					<li>
-						<label for="favorite_episode_pc" class="favorite_episode_label">
-							<input class="favorite_episode novel_nav_item" id="favorite_episode_pc" type="checkbox" name="">
+						<label for="favorite_episode_mobile" class="favorite_episode_label">
+							<input class="favorite_episode novel_nav_item" id="favorite_episode_mobile" type="checkbox" name="">
 							<span class="a11y_txt">お気に入りエピソード</span>
 						</label>
-						
 					</li>
 				</ol>
 				<ol class="mobile_view content_width">
 					<li>
-						<button aria-haspopup="dialog" class="bookmark_setting_open popover_open novel_nav_item" type="button" popovertarget="bookmark_setting">ブックマーク設定変更</button>
+						<button aria-haspopup="dialog" class="bookmark_setting_open popover_open novel_nav_item" type="button" onclick="document.getElementById('bookmark_setting').showModal();">ブックマーク設定変更</button>
 					</li>
 					<li>
 						<label for="favorite_episode_pc" class="">
@@ -159,6 +99,66 @@
 
 					</li>
 				</ol>
+				<dialog class="popover content_width" id="bookmark_setting">
+					<div class="popup_header">
+						<h2>ブックマーク設定</h2>
+					</div>
+					<section class="popover_content">
+						<p class="novel_title">小説の名前(作品名)</p>
+						<p>ブックマークの設定を変更します</p>
+						<form>
+							<ol>
+								<li class="bookmark_setting_item">
+									<input class="default_input" id="update_push" type="checkbox">
+									<label for="update_push">更新通知 </label>
+									<label for="update_push"> 0件登録中（上限400件）</label>
+								</li>
+								<li class="bookmark_setting_item">
+									<div class="radio_input_box">
+										<input class="default_input" id="bookmark_disclosure" name="bookmark_disclosure_type" type="radio">
+										<label for="bookmark_disclosure">公開</label>
+									</div>
+									<div class="radio_input_box">
+										<input class="default_input" id="bookmark_nondisclosure" name="bookmark_disclosure_type" type="radio">
+										<label for="bookmark_nondisclosure">非公開</label>
+									</div>
+								</li>
+								<li class="bookmark_setting_item bookmark_category_item">
+									<label for="bookmark_category_combobox">カテゴリー</label>
+									<select name="" id="bookmark_category_combobox">
+										<option value="bookmark_category1">カテゴリー1</option>
+										<option value="bookmark_category2">カテゴリー2</option>
+										<option value="bookmark_category3">カテゴリー3</option>
+										<option value="bookmark_category4">カテゴリー4</option>
+										<option value="bookmark_category5">カテゴリー5</option>
+										<option value="bookmark_category6">カテゴリー6</option>
+										<option value="bookmark_category7">カテゴリー7</option>
+										<option value="bookmark_category8">カテゴリー8</option>
+										<option value="bookmark_category9">カテゴリー9</option>
+										<option value="bookmark_category10">カテゴリー10</option>
+									</select>
+								</li>
+								<li class="bookmark_setting_item bookmark_memo_item">
+									<div>
+										<label for="bookmark_memo">メモ</label>
+										<input maxlength="50" type="text" id="bookmark_memo">
+									</div>
+									<p>
+										<label for="bookmark_memo">※50文字以内</label>
+									</p>
+								</li>
+							</ol>
+							<button class="bookmark_setting_save" type="submit">設定を保存</button>
+						</form>
+					</section>
+					<form method="dialog" class="popover_close">
+						<button type="submit">
+							<img class="icon_img" src="img/modal_close.png" alt="">
+							<span class="a11y_txt">ブックマーク設定を閉じる</span>
+						</button>
+					</form>
+				</dialog>
+
 			</div>
 			<button onclick="document.getElementById('novel_view_setting_popup').showModal();" aria-haspopup="dialog" class="popover_open novel_nav_item view_setting_control pc_view">表示設定</button>
 			<dialog class="popover content_width" id="novel_view_setting_popup">
@@ -242,9 +242,9 @@
 
 	<section class="novel_profile content_width">
 		<ol class="novel_profile_data">
-			<li><a href="https://ncode.syosetu.com/n4830bu/" title="" target="_blank">本好きの下剋上　～司書になるためには手段を選んでいられません～</a></li>
-			<li><a target="_blank" title="" href="https://mypage.syosetu.com/372556/">作者：香月　美夜</a></li>
-			<li class="pc_view">第五部　女神の化身</li>
+			<li><a href="https://ncode.syosetu.com/n4830bu/" title="" target="_blank">小説の名前(作品名)</a></li>
+			<li><a target="_blank" title="" href="https://mypage.syosetu.com/372556/">作者：作者名</a></li>
+			<li class="pc_view">小説の章、または部</li>
 		</ol>
 	</section>
 	<section class="ad_area top_bar_ad">
@@ -283,12 +283,12 @@
 	</nav>
 	<main>
 		<section class="content_width episode_content">
-			<p class="chapter_title mobile_view">第五部　女神の化身</p>
-			<h2 id="episode_title">家族</h2>
+			<p class="chapter_title mobile_view">小説の章</p>
+			<h2 id="episode_title">エピソードのタイトル</h2>
 			<div class="writer_talk pre_talk"></div>
 			<article class="novel_episode">
-				<p class="novel_sentence" id="L1">「やりすぎだ、馬鹿者。ギーベ達の大半が置き去りにされていたぞ」</p>
-				<p class="novel_sentence" id="L2">...</p>
+				<p class="novel_sentence" id="L1">小説の本文</p>
+				<p class="novel_sentence" id="L2">行が増えるごとに</p>
 			</article>
 			<div class="writer_talk after_talk"></div>
 		</section>
@@ -379,61 +379,62 @@
 			<h3>―　新着の感想　―</h3>
 			<ol class="review_comment">
 				<li>
-					<a class="commenter_name" href="https://mypage.syosetu.com/2229916/">ししゃも(カペリン)</a>
-					<p class="comment_text">やっとロゼマが何も気にせずにのびのびと生きれる環境になったね、良かったね。。。 と思ったら、フェル様にとっても最高の環境なことに気づいてやっぱ2人最高で最強じゃん！！ってなった。 幸せしか見えん！！！…</p>
+					<a class="commenter_name" href="https://mypage.syosetu.com/2229916/">ユーザー0</a>
+					<p class="comment_text">一番新しいほど上にくる新着の感想</p>
 					<div class="comment_footer">
 						<span class="comment_date">2024/11/18 23:16</span>
-						<div class="comment_menu">
-							<button class="comment_menu_button" type="button">
+						<details class="comment_menu">
+							<summary class="comment_menu_button" type="button">
 								<img src="../icon/more_vert_24dp_000_FILL0_wght700_GRAD200_opsz24.svg" alt="">
+								<span class="a11y_txt">ユーザー0</span>
+								<span class="a11y_txt">感想文</span>
 								<span class="">管理</span>
-							</button>						
+							</summary>						
 							<ul class="comment_menu_list">
 								<li><a href="https://syosetu.com/userblock/confirm/?blockuserid=2229916">ブロックする</a></li>
 								<li><a href="https://syosetu.com/mute/input/?muteuserid=2229916">ミュートする</a></li>
 								<li><a href="https://syosetu.com/infomationinquire/input/?kanrino=12266751#inputFormType4">通報する</a></li>
 							</ul>
-						</div>
+						</details>
 					</div>
 				</li>
 				<li>
-					<a class="commenter_name" href="https://mypage.syosetu.com/1493538/">かいっちぇん</a>
-					<p class="comment_text">そういえばディートリンデってどうなったんでしたっけ？
-						牢に入れられて魔力電池コースかな？
-					ずーっと腹立ってたんで、彼女はみすぼらしい罪人の服を着て量が少なく不味い罪人用のご飯を食べて魔力電池になってて…</p>
+					<a class="commenter_name" href="https://mypage.syosetu.com/1493538/">Tester1</a>
+					<p class="comment_text">50文字ぐらいで省略する ログインしてればプロフィールに飛ぶリンクにする</p>
 					<div class="comment_footer">
-						<span class="comment_date"></span>
-						<div class="comment_menu">
-							<button class="comment_menu_button" type="button">
+						<span class="comment_date">2025/03/30 23:16</span>
+						<details class="comment_menu">
+							<summary class="comment_menu_button" type="button">
 								<img src="../icon/more_vert_24dp_000_FILL0_wght700_GRAD200_opsz24.svg" alt="">
+								<span class="a11y_txt">Tester1</span>
+								<span class="a11y_txt">感想文</span>
 								<span class="">管理</span>
-							</button>						
+							</summary>						
 							<ul class="comment_menu_list">
 								<li><a href="https://syosetu.com/userblock/confirm/?blockuserid=2229916">ブロックする</a></li>
 								<li><a href="https://syosetu.com/mute/input/?muteuserid=2229916">ミュートする</a></li>
 								<li><a href="https://syosetu.com/infomationinquire/input/?kanrino=12266751#inputFormType4">通報する</a></li>
 							</ul>
-						</div>
+						</details>
 					</div>
 				</li>
 				<li>
-					<p href="" class="commenter_name unlogin_commenter">? ?</p>
-					<p class="comment_text">[一言]
-						こうして、平穏な日常を読めるようになると〜ロゼマが正式にアウブに任命されるまで、どれだけの暗躍がなされたんやろ？と、思わず想像してまうよなぁ。えっ？しやん？www
-
-					フェルがマインの為？に、…</p>
+					<p class="commenter_name unlogin_commenter">? ?</p>
+					<p class="comment_text">ログインしてなければ名前はリンクにはならないようにする</p>
 					<div class="comment_footer">
 						<span class="comment_date"></span>
-						<div class="comment_menu">
-							<button class="comment_menu_button" type="button">
+						<details class="comment_menu">
+							<summary class="comment_menu_button" type="button">
 								<img src="../icon/more_vert_24dp_000_FILL0_wght700_GRAD200_opsz24.svg" alt="">
+								<span class="a11y_txt">? ?</span>
+								<span class="a11y_txt">感想文</span>
 								<span class="">管理</span>
-							</button>						
+							</summary>						
 							<ul class="comment_menu_list">
 								<li><a href="https://syosetu.com/mute/unloggedin/?tplpagename=imp&amp;tplncode=464784&amp;tplsubdomain=ncode&amp;tplnovelno=676">非ログインユーザの感想ミュート設定</a></li>
 								<li><a href="https://syosetu.com/infomationinquire/input/?kanrino=11568282#inputFormType4">通報する</a></li>
 							</ul>
-						</div>
+						</details>
 					</div>
 				</li>
 			</ol>
