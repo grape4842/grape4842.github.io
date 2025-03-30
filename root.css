@@ -392,13 +392,13 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 /*1000px〜1400px iPad Pro*/
 @media screen and (1000px <= width < 1400px )  {
-    dialog, .content_width {width: 80vw;}
+    dialog, .content_width {width: 70vw;}
 }
 
 /*700px〜1200px iPad*/
 @media screen and (700px <= width < 1000px )  {
     dialog, .content_width {
-        width: 70vw;
+        width: 80vw;
     }
 }
 
