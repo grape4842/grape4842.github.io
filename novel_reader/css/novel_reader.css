@@ -398,6 +398,12 @@ li:has(.favorite_episode) {
 	line-height: 1;
 	cursor: pointer;
 }
+.episode_review_emoji_list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap:1rem;
+}
 .episode_share_box {
 	background: var(--overlay_color);
 	border-bottom: 1px solid var(--gray_color);
