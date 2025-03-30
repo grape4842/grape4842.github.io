@@ -1,7 +1,8 @@
 :root {
 	--novel_theme_color:#18B7CD;
 	--novel_theme_color_dark:#1f4247;
-	--yellow_color:#ff7;
+	--yellow_bg_color:#FEF9DD;
+	--yellow_border_color:#fcd27e;
 	--white_color:#fff;
 	--light_monotone_color:#ccc;
 	--black_color:#000;
@@ -51,8 +52,7 @@ footer .content_width {
 }
 h3 {
 	text-align: center;
-	font-size: 1.2rem;
-	padding:1rem;
+	font-size: 1.25rem;
 }
 a {border-radius: 0.25rem;}
 label {display: flex;}
@@ -96,12 +96,16 @@ label {display: flex;}
 	justify-content: space-between;
 }
 .novel_nav_menu {
+	display: flex;
 	flex-wrap: wrap;
 	flex-grow: 1;
 }
 .novel_nav_menu ol {
 	display: flex;
 	align-items: center;
+}
+.novel_nav_menu .pc_view {
+	margin:0.5rem 0rem;
 }
 .novel_nav_menu > ol.mobile_view {
 	margin:0.5rem auto;
@@ -168,7 +172,7 @@ li:has(.favorite_episode) {
 }
 .favorite_episode::after {
 	content: '☆';
-	font-weight: 900;
+	font-weight: 100;
 	font-size: 1.25rem;
 	display:flex;
 	justify-content: center;
@@ -178,14 +182,15 @@ li:has(.favorite_episode) {
 	position: absolute;
 	top:0; left:0;
 	color:#fa0;
-	transition: 0.2s;
+	transition:all 0.2s;
 	text-align: center;
 }
 .favorite_episode:checked::after {
 	content: '★';
 }
 .favorite_episode:where(:hover, :focus)::after {
-	filter: brightness(1.2);
+	filter: brightness(1.2) saturate(1.2);
+	scale: 1.3;
 }
 
 .novel_profile {
@@ -424,14 +429,16 @@ a:has(.episode_share_sns_icon) {
 	padding-bottom:0.25rem;
 }
 .commenter_name {
-	padding:0rem 0.5rem;
+	font-weight: 500;
 	margin-bottom: 0.5rem;
 }
 .comment_footer	{
 	display: flex;
 	justify-content: space-between;
 }
+.comment_date {font-weight: 100;}
 .comment_menu_button {
+	opacity: 0.8;
 	display: flex;
 	background: transparent;
 	padding:0rem 0.25rem;
@@ -485,8 +492,8 @@ a:has(.episode_share_sns_icon) {
 #review_writer_name {
 	background: transparent;
 	border:none;
+	margin-left: 0.25rem;
 	transition: border 0.2s;
-	outline-offset: 0.25rem;
 	border-bottom: var(--gray_color) 1px solid;
 }
 #review_writer_name:focus {
@@ -498,12 +505,16 @@ a:has(.episode_share_sns_icon) {
 	margin:1rem auto;
 }
 .write_review_info {
+	background: var(--yellow_bg_color);
 	padding:1rem;
 	margin:1rem auto;
 }
 .writed_review_submit {
+	background: var(--yellow_bg_color);
+	border:var(--yellow_border_color) 2px solid;
 	margin: 0rem auto !important;
-	padding:1rem;
+	border-radius: 0;
+	padding:0.25rem 0.5rem;
 }
 .bottom_box_ad {
 	padding:0rem;
@@ -621,9 +632,12 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		width: 4rem; height: 4rem;
 	}
 	.novel_nav_menu > ol:first-child > li {border-left:var(--gray_color) 1px solid;}
-	.novel_nav_menu .pc_view {margin:0.5rem 0rem;}
 	.content_width, dialog {width:40vw;}
 	#bookmark_setting form:not(.popover_close) {padding:3rem;}
+	.view_type_list {
+		gap:1rem;
+		grid-template-columns: repeat(4, 1fr);
+	}
 	#episode_title {
 		font-size: 2rem;
 	}
@@ -662,7 +676,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	.novel_nav_menu > ol:first-child {
 		padding:0rem 0.25rem;
 		background: var(--overlay_color);
-		margin: 0rem auto;
+		margin: 0rem;
 		border-top:1px solid var(--gray_color);
 		border-bottom:1px solid var(--gray_color);
 	}
@@ -682,7 +696,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		padding:0rem 1rem;
 	}
 	.novel_nav_menu > ol > li {
-		flex-grow: 1;
+		flex: 1;
 		text-align: center;
 		display: inline-flex;
 	}
@@ -756,6 +770,8 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
 	:root {
+		--yellow_bg_color:#320;
+		--yellow_border_color:#960;
 		--caution_color:#f87;
 		--default_bg_color:#121212;
 		--overlay_color:rgba(255 255 255 / 0.1);
