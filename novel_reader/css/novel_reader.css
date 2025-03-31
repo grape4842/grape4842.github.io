@@ -118,6 +118,12 @@ label {display: flex;}
 .site_name img {
 	max-width: 10rem;
 }
+.site_right_menu {
+	display: flex;
+	gap:0.5rem;
+	text-align: right;
+}
+.site_right_menu a {padding:0rem 0.25rem;}
 .bookmark_setting_open {
 	color:var(--blue_color);
 	background: var(--blue_color_bg);
@@ -357,8 +363,8 @@ li:has(.favorite_episode) {
 	font-size: 12px;
 	justify-content: center;
 	align-items: center;
-	width: 60%;
-	height: 60%;
+	width: 1.25rem;
+	height: 1.25rem;
 	position: absolute;
 	top:50%; left:50%;
 	translate:-50% -50%;
@@ -398,12 +404,45 @@ li:has(.favorite_episode) {
 	line-height: 1;
 	cursor: pointer;
 }
+.episode_review_emoji {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	flex-direction: column;
+}
 .episode_review_emoji_list {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	gap:1rem;
 }
+.review_emoji_label {
+	border-radius: 0.5rem;
+	border:1px solid var(--gray_color);
+	gap:0.25rem;
+	padding:0rem 0.5rem;
+	transition: 0.2s;
+}
+input[name="review_emoji_radio"] {
+	position: absolute;
+	appearance: none;
+	-webkit-appearance:none;
+	width:100%;
+	height: 100%;
+}
+.review_emoji_label:has(input:checked) {
+	border:2px solid var(--blue_color);
+	background: var(--blue_color_bg);
+}
+input[name="review_emoji_radio"]:checked ~ .emoji_point_number {
+	font-weight: 900;
+	color:var(--blue_color);
+}
+.review_emoji_label img {
+	height: 1.5rem;
+}
+.emoji_point_number {}
 .episode_share_box {
 	background: var(--overlay_color);
 	border-bottom: 1px solid var(--gray_color);
@@ -517,6 +556,7 @@ a:has(.episode_share_sns_icon) {
 	width: 100%;
 	min-height: 12lh;
 	margin:1rem auto;
+	background: var(--overlay_color);
 }
 .write_review_info {
 	background: var(--yellow_bg_color);
@@ -650,6 +690,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
+	.content_width {width:85vw;}
 	.pc_view {display: flex !important;}
 	.mobile_view {display: none !important;}
 	section:not(dialog section) {
@@ -658,9 +699,13 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	section:has(h3) {
 		padding-top: 1rem;
 	}
+	.view_type_list {
+		gap:1rem;
+		grid-template-columns: repeat(4, 1fr);
+	}
 	.top_ad {
 		aspect-ratio: 16/5;
-		max-width: 80vw;
+		max-width: 85vw;
 	}
 }
 

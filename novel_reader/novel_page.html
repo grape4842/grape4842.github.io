@@ -46,11 +46,17 @@
 					<img src="img/logo.png" alt="小説家になろう">
 				</a>
 			</h1>
-			<ul>
+			<ul class="site_right_menu">
 				<li>
 					<a class="" href="https://syosetu.com/user/top/">
 						<span>青紫の宮澤</span>
 						<span class="a11y_txt">ユーザーホーム</span>
+					</a>
+				</li>
+				<li>
+					<a href="#novel_top">
+						<span class="a11y_txt">ページ一番</span>
+						<span>下へ</span>
 					</a>
 				</li>
 			</ul>
@@ -338,34 +344,42 @@
 		<section class="content_width episode_review_emoji">
 			<ol class="episode_review_emoji_list">
 				<li>
-					<label for="review_emoji1">
-						<input type="checkbox" id="review_emoji1">
-						<img src="img/" alt="">
-						<span class="emoji_point_number"></span>
+					<label class="review_emoji_label" for="review_emoji1">
+						<input type="radio" name="review_emoji_radio" id="review_emoji1">
+						<img src="img/good.png" alt="">
+						<span class="emoji_point_number">2025</span>
 					</label>
 				</li>
 				<li>
-					<label for="review_emoji2">
-						<input type="checkbox" id="review_emoji2">
-						<img src="img/" alt="">
-						<span class="emoji_point_number"></span>
+					<label class="review_emoji_label" for="review_emoji2">
+						<input type="radio" name="review_emoji_radio" id="review_emoji2">
+						<img src="img/sad.png" alt="">
+						<span class="emoji_point_number">3</span>
 					</label>
 				</li>
 				<li>
-					<label for="review_emoji3">
-						<input type="checkbox" id="review_emoji3">
-						<img src="img/" alt="">
-						<span class="emoji_point_number"></span>
+					<label class="review_emoji_label" for="review_emoji3">
+						<input type="radio" name="review_emoji_radio" id="review_emoji3">
+						<img src="img/smile.png" alt="">
+						<span class="emoji_point_number">31</span>
 					</label>
 				</li>
 				<li>
-					<label for="review_emoji4">
-						<input type="checkbox" id="review_emoji4">
-						<img src="img/" alt="">
-						<span class="emoji_point_number"></span>
+					<label class="review_emoji_label" for="review_emoji4">
+						<input type="radio" name="review_emoji_radio" id="review_emoji4">
+						<img src="img/funny.png" alt="">
+						<span class="emoji_point_number">1</span>
+					</label>
+				</li>
+				<li>
+					<label class="review_emoji_label" for="review_emoji5">
+						<input type="radio" name="review_emoji_radio" id="review_emoji5">
+						<img src="img/what.png" alt="">
+						<span class="emoji_point_number">1</span>
 					</label>
 				</li>
 			</ol>
+		<a href="#write_review_title">感想を書く</a>
 		</section>
 		<section class="ad_area content_width">
 			<h3 class="a11y_txt">ページ中間広告</h3>
@@ -474,7 +488,7 @@
 		<section class="write_review content_width">
 			<form class="write_review_form">
 				<legend>
-					<h3>―　感想を書く　―</h3>
+					<h3 id="write_review_title">―　感想を書く　―</h3>
 				</legend>
 				<fieldset>
 					<div class="review_writer_name_box">
