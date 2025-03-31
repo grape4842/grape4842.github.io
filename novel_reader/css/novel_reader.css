@@ -313,7 +313,6 @@ li:has(.favorite_episode) {
 	align-items: stretch;
 	padding:0.5rem 1rem;
 	width: 100%;
-	aspect-ratio: 2/1;
 	gap:0.5rem;
 }
 .episode_control_link:link span {
@@ -839,7 +838,7 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		--overlay_color:rgba(255 255 255 / 0.1);
 	}
 	.bookmark_setting_open {
-		filter: invert(1) hue-rotate(-200deg);
+		filter: invert(1) hue-rotate(-190deg);
 	}
 	.view_setting_title {
 		background: var(--novel_theme_color_dark);
