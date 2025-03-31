@@ -354,8 +354,8 @@ li:has(.favorite_episode) {
 	border-radius:0.5rem;
 }
 .star_rating_info {
-	height: 2rem;
-	width: 2rem;
+	height: 1.5rem;
+	width: 1.5rem;
 	border-radius: 10rem;
 }
 .star_rating_info::after {
@@ -428,7 +428,10 @@ li:has(.favorite_episode) {
 	transition: 0.2s;
 }
 input[name="review_emoji_radio"] {
+	outline-offset: 0.25rem;
+	border-radius: 0.5rem;
 	position: absolute;
+	top:0; left:0;
 	appearance: none;
 	-webkit-appearance:none;
 	width:100%;
@@ -851,6 +854,14 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	.episode_control_link:visited span {
 		color:var(--novel_theme_color);
 	}
+	.review_emoji_label:has(input:checked) {
+	border:2px solid var(--blue_color_border);
+	background: var(--black_color);
+}
+input[name="review_emoji_radio"]:checked ~ .emoji_point_number {
+	color:var(--blue_color_border);
+}
+
 	.comment_menu_button img {filter: invert(1);}
 	#novel_top {
 		border-color: var(--novel_theme_color);
