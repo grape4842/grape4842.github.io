@@ -231,7 +231,7 @@ li:has(.favorite_episode) {
 }
 .view_type_list {
 	display: grid;
-	gap:0.5rem;
+	gap:1rem;
 	justify-content: center;
 	justify-items: stretch;
 	align-items: stretch;
@@ -687,7 +687,6 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 	.content_width, dialog, .episode_control_list {width:40vw;}
 	#bookmark_setting form:not(.popover_close) {padding:3rem;}
 	.view_type_list {
-		gap:1rem;
 		grid-template-columns: repeat(4, 1fr);
 	}
 	#episode_title {
@@ -713,7 +712,6 @@ dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popo
 		padding-top: 1rem;
 	}
 	.view_type_list {
-		gap:1rem;
 		grid-template-columns: repeat(4, 1fr);
 	}
 	.top_ad {
