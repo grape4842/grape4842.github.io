@@ -301,6 +301,9 @@ li:has(.favorite_episode) {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+.episode_control_list li {
+	display: flex;
+}
 .episode_control_link {
 	justify-content: center;
 	align-items: stretch;
