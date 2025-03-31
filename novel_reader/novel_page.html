@@ -9,9 +9,9 @@
 	<meta property="og:locate" content="ja-jp">
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="https://sbo.syosetu.com/n4830bu/twitter.png">
-	<meta property="og:title" content="家族に繋がる道 - 本好きの下剋上">
-	<meta property="og:description" content="家族に繋がる道 | 第五部　女神の化身 | 本好きの下剋上　～司書になるためには手段を選んでいられません～ 香月　美夜">
-	<title>家族に繋がる道 | 第五部　女神の化身 | 本好きの下剋上　～司書になるためには手段を選んでいられません～</title>
+	<meta property="og:title" content="エピソードを：作品名">
+	<meta property="og:description" content="エピソード名 | 小説の章 | 作品名 ❘ 作者名">
+	<title>エピソード名 | 小説の章 | 作品名</title>
 	<link rel="shortcut icon" href="">
 	<link rel="stylesheet" type="text/css" href="../root.css">
 	<link rel="stylesheet" type="text/css" href="css/novel_reader.css">
@@ -38,6 +38,29 @@
 	<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 </head>
 <body>
+	<button style="position: absolute; z-index: 3; background: transparent;" aria-haspopup="dialog" class="" type="button" onclick="document.getElementById('dev').showModal();">開発設定</button>
+	<dialog class="popover content_width" id="dev">
+		<div class="popup_header">
+			<h2>開発設定</h2>
+		</div>
+		<section class="popover_content">
+			<form>
+				<fieldset>
+					<legend></legend>
+					<label for="dev_setting1"><input type="checkbox" id="dev_setting1"><span>logined/ unlogined</span></label>
+					<label for="dev_setting2"><input type="checkbox" id="dev_setting2">dark light<span></span></label>
+					<label for="dev_setting3"><input type="checkbox" id="dev_setting3"><span></span></label>
+				</fieldset>
+			</form>
+		</section>
+		<form method="dialog" class="popover_close">
+			<button type="submit">
+				<img class="icon_img" src="img/modal_close.png" alt="">
+				<span class="a11y_txt">設定を閉じる</span>
+			</button>
+		</form>
+
+	</dialog>
 	<a href="#episode_title" id="jump_nav">小説本文へ移動する</a>
 	<header>
 		<div class="content_width header_line">
@@ -329,7 +352,7 @@
 					<span class="rating_tooltip a11y_txt">評価の仕様</span>
 				</a>
 			</p>
-			
+
 			<form>
 				<legend class="a11y_txt">
 					<h3>作品の評価を星の数で評価します。</h3>
@@ -382,7 +405,7 @@
 					</label>
 				</li>
 			</ol>
-		<a href="#write_review_title">感想を書く</a>
+			<a href="#write_review_title">感想を書く</a>
 		</section>
 		<section class="ad_area content_width">
 			<h3 class="a11y_txt">ページ中間広告</h3>
