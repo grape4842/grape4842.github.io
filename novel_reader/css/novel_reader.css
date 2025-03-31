@@ -110,6 +110,10 @@ label {display: flex;}
 .novel_nav_menu > ol.mobile_view {
 	margin:0.5rem auto;
 }
+.login_link {
+	color:var(--caution_color);
+	font-weight: 600;
+}
 .site_name {display: inline-flex;}
 .site_name a {
 	max-height: 2rem;
