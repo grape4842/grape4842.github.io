@@ -93,16 +93,14 @@ input:where(:focus, :not(:placeholder-shown))+label[for="custom_text"] {
 }
 
 label:hover+.custom_input :where(input[type="radio"], input[name="custom_checkbox"]),
-.custom_input :where(input[type="radio"], input[name="custom_checkbox"]):hover,
-.custom_input :where(input[type="radio"], input[name="custom_checkbox"]):focus {
+.custom_input :where(input[type="radio"], input[name="custom_checkbox"]):where(:hover,:focus) {
     scale: 1.2;
 }
 
 .custom_input :where(input[type="checkbox"]:checked) {
     background: radial-gradient(circle, rgba(70 40 150 / 1)30%, rgba(120 100 255 / 1) 70%);
 }
-
-.custom_input :where(input[type="checkbox"]:checked)::after {
+.custom_input :where(input[type="checkbox"]:checked)::before {
     content: '';
     width: 4px;
     height: 8px;
@@ -191,22 +189,8 @@ label[for="switch_checkbox"]+div:has(input:checked) {
     scale: 1;
 }
 
-.custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):before {
-    content: '';
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border: 2px solid;
-    border-color:var(--main_color);
-    border-radius: 12rem;
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    transform: translate(0%, 0%);
-    filter: brightness(0.75);
-}
 
-.custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):after {
+.custom_input :where(input[type="radio"], input[type="checkbox"]):disabled::after {
     content: '';
     position: absolute;
     inset:0;
@@ -215,7 +199,6 @@ label[for="switch_checkbox"]+div:has(input:checked) {
     height: 100%;
     rotate: 45deg;
     background:var(--main_color);
-    filter: brightness(0.75);
 }
 
 /*별점 라디오 버튼*/
@@ -574,6 +557,12 @@ span:has(#custom_design_file:focus) {
 
 /*700px〜1200px iPad*/
 @media (700px <=width < 1400px) {
+    tr {
+        border:none;
+        display: flex;
+        flex-direction: column;
+    }
+    th, td {border:1px solid;}
 
 }
 

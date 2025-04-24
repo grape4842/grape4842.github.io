@@ -8,11 +8,7 @@
 /*Mobile First*/
 .pc_view {display: none;}
 .dark_view {display: none;}
-.center {
-	width:90vw;
-	padding:2rem 0px;
-	margin:0px auto;
-}
+.content_width {padding:1rem;}
 fieldset {border:none;}
 h2 {padding:1rem;}
 address {
@@ -91,20 +87,12 @@ svg {
 
 /*Desktop*/
 @media screen and (1100px < width) {
-	.center {
-		width:55vw;
-		margin:0px auto;
-	}
 	.pc_view {display:block;}
 	th,td {padding:1rem;}
 }
 
 /*Tablet*/
 @media screen and (760px < width < 1100px) {
-	.center {
-		width:70vw;
-		margin:0px auto;
-	}
 
 }
 
@@ -115,10 +103,6 @@ svg {
 
 /*Watch*/
 @media screen and (width < 320px) {
-	.center {
-		width:95vw;
-		margin:0px auto;
-	}
 
 }
 /*Dark Mode Layout*/
