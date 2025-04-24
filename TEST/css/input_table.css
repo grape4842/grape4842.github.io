@@ -1,6 +1,8 @@
 @charset "utf-8";
 :root {
-    --main_color:#64a;
+    --main_color:#baf;
+    --main_color_alpha:#bafa;
+    --gray_line_color:rgba(0, 0, 0, 0.3);
 }
 table {
     margin: 0px auto;
@@ -11,7 +13,7 @@ tr {
 }
 
 th {
-    background: #ddd;
+    background: var(--gray_line_color);
 }
 
 form th[scope="row"] {
@@ -119,7 +121,7 @@ label[for="switch_checkbox"]+div {
     vertical-align: middle;
     height: 1.5rem;
     border-radius: 10rem;
-    background: rgba(0 0 0 / 0.5);
+    background: var(--gray_line_color);
     border: rgba(200 200 200 / 0.5) 1px solid;
     aspect-ratio: 2/1;
     transition: 0.2s background, 0.2s left;
@@ -248,7 +250,7 @@ input[name="star_radio"]:where(:focus, :hover) {
 }
 
 .custom_input label:has(input[name="star_radio"]:checked) {
-    box-shadow: 0px 0px 0px 3px #64a inset;
+    box-shadow: 0px 0px 0px 3px var(--main_color); inset;
 }
 
 label:has(input[name="star_radio"]) span {
@@ -265,8 +267,8 @@ label:has(svg) {
 .custom_input>p:has(input[name="tab_radio"])+p {
     width: 80%;
     padding: 1rem;
+    margin-top:-5px;
     border: 5px solid var(--main_color);
-    top: -1rem;
     border-radius: 1rem;
     border-top-left-radius: 0px;
 }
@@ -275,8 +277,9 @@ label:has(svg) {
     background: transparent;
     color: white;
     display: inline-flex;
-    padding: 1rem;
-    border-radius: 1rem;
+    padding:0.5rem 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
     text-align: center;
     border: 5px solid var(--main_color);
     z-index: 2;
@@ -393,6 +396,7 @@ label:has(svg) {
     cursor: pointer;
     aspect-ratio: 1 / 1;
     text-align: center;
+    border-radius: 1rem;
 }
 
 .custom_input input[type="color"]::-webkit-color-swatch {
@@ -404,7 +408,13 @@ label:has(svg) {
 }
 
 label[for="custom_color"] {
-    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    text-align: center;
     border: #eee 1px solid;
     max-width: 8rem;
     background: rgba(255 255 255 / 0.1);
@@ -415,21 +425,64 @@ label[for="custom_color"] div {
 	display: flex;
 	justify-content: center;
 }
-
-.custom_input select,
-.custom_input select option {
-    background-color: var(--main_color);
-    color:#fff;
-    border: 1px solid #64aa;
-    padding: 0.5rem;
-    transition:filter 0.2s;
+label[for="custom_color"] p {
+    width:100%;
+    line-height: 2;
+}
+/*select*/
+.custom_input {
+    select, option {
+        min-width: 10rem;
+        background-color: var(--main_color);
+        color:#fff;
+        padding: 0.5rem;
+        border:none;
+        transition:0.2s;
+        align-items: center;
+    }
+    select, ::picker(select) {
+      appearance: base-select;
+      border:none;
+  }
+  ::picker(select) {
+      opacity: 0;
+      transition: all 0.4s allow-discrete;
+  }
+  ::picker(select):popover-open {
+      opacity: 1;
+  }
+  option:where(:hover, :focus) {
+    filter: brightness(0.9) saturate(1.2) contrast(1.2);
+    font-weight: 500;
+}
+select::picker-icon {
+    color:rgba(0, 0, 0, 0.3);
+    transition: 0.4s rotate;
+    scale: 1.5;
+}
+select:open::picker-icon {
+  rotate: 180deg;
+}
+option:first-of-type {
+  border-radius: 8px 8px 0 0;
 }
 
-.custom_input select:hover,
-.custom_input select option:hover {
-    filter: brightness(1.2) saturate(1.2);
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+option {border:rgba(255 255 255 / 0.3) 1px solid;}
+
+option:not(option:last-of-type) {
+  border-bottom: none;
+}
+select:where(:hover, :focus), option:checked {
+    filter: brightness(1.1) saturate(1.2);
+}
+option:checked {
+    font-weight: 900;
 }
 
+}
 /*파일*/
 label:has(#file_text) {
     padding: 1rem;
@@ -444,7 +497,7 @@ label:has(#file_text):where(:hover, :focus) input {
 	min-height: 3rem;
 }
 .custom_input input[type="file"]::file-selector-button {
-    border: #64aa solid 2px;
+    border: var(--main_color_alpha) solid 2px;
     background-color: var(--main_color);
     padding: 0.5rem;
     color: white;
@@ -466,103 +519,50 @@ span:has(#custom_design_file:focus) {
 }
 
 .custom_input label[for="custom_design_file"] span {
-    border: #64aa solid 2px;
+    border: var(--main_color_alpha) solid 2px;
     background-color: var(--main_color);
     padding: 0.5rem;
     color: white;
     margin-left: 0.5rem;
 }
+#custom_date {
+    background: var(--main_color);
+    border:none;
+    padding:0.5rem;
+}
+::-webkit-calendar-picker-indicator {
+    border-radius: 2rem;
+    padding:0.5rem;
+    margin:0rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
 
+#custom_date:where(:hover, :focus)::-webkit-calendar-picker-indicator {
+    box-shadow:0px 0px 2rem rgba(0, 0, 0, 0.3) inset;
+}
 
-
-
+::-webkit-inner-spin-button, ::-webkit-clear-button {
+    background: var(--main_color);
+    font-weight: 900;
+}
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
     :root {
-        --main_color:#baf;
+        --main_color:#64a;
+        --main_color_alpha:#64aa;
+        --gray_line_color:rgba(255 255 255 / 0.1);
     }
     th {
-        background: #333;
+        background: var(--gray_line_color);
     }
-
-    .custom_input select,
-    .custom_input select option {
-        background-color: var(--main_color);
-        border: 1px solid #baf9;
-        color:black;
-    }
-
-    .custom_input :where(input[type="text"], [type="password"]) {
-        border-bottom: solid #baf 3px;
-    }
-
-    .custom_input :where(input[type="radio"], input[type="checkbox"]) {
-        border: 2px solid var(--main_color);
-
-    }
-
-    .custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):before {
-        border: 2px solid var(--main_color);
-
-        border-color:var(--main_color);
-    }
-
-    .custom_input :where(input[type="radio"]:disabled, input[type="checkbox"]:disabled):after {
-        background-color: var(--main_color);
-    }
-
-    .custom_input label:has(input[name="tab_radio"]) {
-        background: transparent;
-        border: 5px solid var(--main_color);
-    }
-
-    .custom_input label:has(input[name="tab_radio"]:checked) {
-        color: var(--main_color);
-        color: black;
-    }
-
-    .custom_input>p:has(input[name="tab_radio"])+p {
-        border: 5px solid var(--main_color);
-    }
-
-    .custom_input label:has(input[name="tab_radio"]:checked) {
-        color: var(--main_color);
-    }
-
-    .custom_input label:has(input[name="star_radio"]:checked) {
-        box-shadow: 0px 0px 0px 3px #baf inset;
-    }
-
-    .custom_input label:has(input[name="star_radio"]):hover {
-        filter: saturate(8) hue-rotate(-30deg);
-    }
-
-    label[for="custom_color"] {
-        border: #555 1px solid;
-    }
-
-    .custom_input input[type="range"]::-webkit-slider-runnable-track {
-        border: 1px solid var(--main_color);
-    }
-
-    .custom_input input[type="range"]::-webkit-scrollbar {
-        background-color: var(--main_color);
-    }
-
-    .custom_input input[type="range"]::-moz-range-track {
-        background-color: var(--main_color);
-    }
-
-    .custom_input input[type="file"]::file-selector-button {
-        border: #bafa solid 2px;
-        background-color: var(--main_color);
-        color: #000;
-    }
-
-    .custom_input label[for="custom_design_file"] span {
-        border: #bafa solid 2px;
-        background-color: var(--main_color);
-        color: black;
+    .custom_input {
+        label:has(input[name="star_radio"]):hover {
+            filter: saturate(8) hue-rotate(-30deg);
+        }
+        label[for="custom_color"] {
+            border: var(--gray_line_color); 1px solid;
+        }
     }
 
 }

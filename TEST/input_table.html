@@ -156,14 +156,19 @@
 							<tr>
 								<td class="custom_input tab_radio_cell">
 									<p>
-										<label for="tab_radio_on" class="">
-											<input id="tab_radio_on" type="radio" class="" name="tab_radio" checked="">
-											보라색
+										<label for="tab_radio_1" class="">
+											<input id="tab_radio_1" type="radio" class="" name="tab_radio" checked="">
+											청보라색
 											<span class="a11y_txt">탭</span>
 										</label>
-										<label for="tab_radio_off" class="">
-											<input id="tab_radio_off" type="radio" class="" name="tab_radio">
+										<label for="tab_radio_2" class="">
+											<input id="tab_radio_2" type="radio" class="" name="tab_radio">
 											초록색
+											<span class="a11y_txt">탭</span>
+										</label>
+										<label for="tab_radio_3" class="">
+											<input id="tab_radio_3" type="radio" class="" name="tab_radio">
+											분홍색
 											<span class="a11y_txt">탭</span>
 										</label>
 									</p>
@@ -411,6 +416,12 @@
 			<address>@purplemiyazawa</address>
 		</div>
 	</footer>
+	<script type="text/javascript">
+		document.getElementById("custom_design_file").addEventListener("change", function () {
+			const fileName = this.files[0].name;
+			document.getElementById("file_text").value = fileName;
+		});
+	</script>
 </body>
 
 </html>
