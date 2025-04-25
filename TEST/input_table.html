@@ -17,6 +17,24 @@
 	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
 	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
 	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="../ffwp-logo-transparent-purple-gradient/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../ffwp-logo-transparent-purple-gradient/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../ffwp-logo-transparent-purple-gradient/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../ffwp-logo-transparent-purple-gradient/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../ffwp-logo-transparent-purple-gradient/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../ffwp-logo-transparent-purple-gradient/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../ffwp-logo-transparent-purple-gradient/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../ffwp-logo-transparent-purple-gradient/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../ffwp-logo-transparent-purple-gradient/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../ffwp-logo-transparent-purple-gradient/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../ffwp-logo-transparent-purple-gradient/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../ffwp-logo-transparent-purple-gradient/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../ffwp-logo-transparent-purple-gradient/favicon-16x16.png">
+	<link rel="manifest" href="../ffwp-logo-transparent-purple-gradient/manifest.json">
+	<meta name="msapplication-TileColor" content="#ccffdd">
+	<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+
 </head>
 
 <body>
@@ -57,7 +75,7 @@
 							<tr>
 								<td>
 									<label for="original_password">비밀번호</label>
-									<input id="original_password" type="password" name="">
+									<input id="original_password" type="password" name="" autocomplete="current-password" >
 								</td>
 								<td class="custom_input">
 									<label for="custom_password">비밀번호</label>
@@ -155,24 +173,32 @@
 							</tr>
 							<tr>
 								<td class="custom_input tab_radio_cell">
-									<p>
-										<label for="tab_radio_1" class="">
-											<input id="tab_radio_1" type="radio" class="" name="tab_radio" checked="">
-											청보라색
-											<span class="a11y_txt">탭</span>
-										</label>
-										<label for="tab_radio_2" class="">
-											<input id="tab_radio_2" type="radio" class="" name="tab_radio">
-											초록색
-											<span class="a11y_txt">탭</span>
-										</label>
-										<label for="tab_radio_3" class="">
-											<input id="tab_radio_3" type="radio" class="" name="tab_radio">
-											분홍색
-											<span class="a11y_txt">탭</span>
-										</label>
-									</p>
-									<p>청보라색</p>
+									<ol>
+										<li class="tab_li">
+											<label for="tab_radio_1">
+												<input id="tab_radio_1" type="radio" class="" name="tab_radio" checked="">
+												청보라색
+												<span class="a11y_txt">탭</span>
+											</label>
+										</li>
+										<li class="tab_li">
+											<label for="tab_radio_2">
+												<input id="tab_radio_2" type="radio" class="" name="tab_radio">
+												초록색
+												<span class="a11y_txt">탭</span>
+											</label>
+										</li>
+										<li class="tab_li">
+											<label for="tab_radio_3">
+												<input id="tab_radio_3" type="radio" class="" name="tab_radio">
+												분홍색
+												<span class="a11y_txt">탭</span>
+											</label>
+										</li>
+									</ol>
+									<div class="tab_panel">
+										<p>청보라색</p>
+									</div>
 								</td>
 								<td class="custom_input star_radio_cell">
 									<p>

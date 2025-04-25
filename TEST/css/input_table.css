@@ -56,7 +56,7 @@ input:where(:focus, :not(:placeholder-shown))+label[for="custom_text"] {
 
 .custom_input :where(input[type="text"], [type="password"]) {
     background: transparent;
-    border: none;
+    border: var(--gray_line_color) 1px solid;
     border-bottom: solid var(--main_color) 3px;
     padding: 5px;
     transition: opacity 0.2s;
@@ -81,8 +81,8 @@ input:where(:focus, :not(:placeholder-shown))+label[for="custom_text"] {
 .custom_input [type="password"] {
     margin-top: 0px;
     webkit-text-security: disc;
-    -moz-text-security: circle;
-    text-security: circle;
+    -moz-text-security: disc;
+    text-security: disc;
 }
 
 .custom_input :where(input[type="radio"], input[type="checkbox"]) {
@@ -247,19 +247,11 @@ label:has(svg) {
 }
 
 /*탭 라디오*/
-.custom_input>p:has(input[name="tab_radio"])+p {
-    width: 80%;
-    padding: 1rem;
-    margin-top:-5px;
-    border: 5px solid var(--main_color);
-    border-radius: 1rem;
-    border-top-left-radius: 0px;
+.custom_input .tab_li {
+display: inline-flex;
 }
-
 .custom_input label:has(input[name="tab_radio"]) {
     background: transparent;
-    color: white;
-    display: inline-flex;
     padding:0.5rem 1rem;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
@@ -271,20 +263,30 @@ label:has(svg) {
 
 .custom_input :where(input[name="tab_radio"]) {
     border: none !important;
-    scale: 1 !important;
     background: transparent;
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 1rem;
+    scale: 1;
+    padding: 0;
+    border-radius: 0;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
     width: 100%;
     height: 100%;
 }
-
 .custom_input label:has(input[name="tab_radio"]:checked) {
     background: var(--main_color);
     font-weight: 900;
     color: ;
+}
+.custom_input .tab_panel {
+    width: 80%;
+    padding: 1rem;
+    margin-top:-5px;
+    border: 5px solid var(--main_color);
+    border-radius: 1rem;
+    border-top-left-radius: 0px;
 }
 
 /*슬라이더*/
