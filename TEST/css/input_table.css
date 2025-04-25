@@ -28,7 +28,7 @@ form th[scope="row"] {
     ime-mode: active;
 }
 
-label[for="custom_text"] {
+.move_label {
     position: absolute;
     top: calc(2rem + 5px);
     left: calc(1rem + 5px);
@@ -37,7 +37,7 @@ label[for="custom_text"] {
     scale: 1;
 }
 
-input:where(:focus, :not(:placeholder-shown))+label[for="custom_text"] {
+input:where(:focus, :not(:placeholder-shown))+.move_label {
     scale: 0.8;
     top: 5px;
     left: 5px;
@@ -68,18 +68,17 @@ input:where(:focus, :not(:placeholder-shown))+label[for="custom_text"] {
     opacity: 1;
 }
 
-.custom_input input[type="text"]::placeholder {
+.custom_input :where(input[type="text"], [type="password"])::placeholder {
     color: transparent;
     transition: color 0.2s;
 }
 
-.custom_input input[type="text"]:where(:focus)::placeholder {
+.custom_input :where(input[type="text"], [type="password"]):where(:focus)::placeholder {
     color: #768;
 }
 
 /*암호 편집 창*/
 .custom_input [type="password"] {
-    margin-top: 0px;
     webkit-text-security: disc;
     -moz-text-security: disc;
     text-security: disc;
@@ -112,6 +111,10 @@ label:hover+.custom_input :where(input[type="radio"], input[name="custom_checkbo
     border-right: 2px solid white;
 }
 
+label[for="password_view"] {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
 /*스위치 체크박스*/
 label[for="switch_checkbox"]+div {
     display: inline-flex;

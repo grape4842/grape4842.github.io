@@ -66,7 +66,7 @@
 								</td>
 								<td class="custom_input">
 									<input placeholder="토끼 만세" id="custom_text" type="text" class="" name="">
-									<label for="custom_text" class="">커스텀 편집창</label>
+									<label for="custom_text" class="move_label">커스텀 편집창</label>
 								</td>
 							</tr>
 							<tr>
@@ -78,8 +78,15 @@
 									<input id="original_password" type="password" name="" autocomplete="current-password" >
 								</td>
 								<td class="custom_input">
-									<label for="custom_password">비밀번호</label>
-									<input id="custom_password" type="password" name="">
+									<input maxlength="24" minlength="8" placeholder="비밀번호" id="custom_password" type="password" name="">
+									<label class="move_label" for="custom_password">비밀번호</label>
+									<label for="password_view">
+										<span class="a11y_txt">입력한 비밀번호 표시</span>
+										<input id="password_view" type="checkbox" name="">
+									</label>
+									<p>
+										<label for="custom_password">8에서 24자</label>
+									</p>
 								</td>
 							</tr>
 							<tr>
@@ -443,9 +450,21 @@
 		</div>
 	</footer>
 	<script type="text/javascript">
+		// 파일 첨부 
 		document.getElementById("custom_design_file").addEventListener("change", function () {
 			const fileName = this.files[0].name;
 			document.getElementById("file_text").value = fileName;
+		});
+
+// 비밀번호 표시 스크립트
+		document.addEventListener('DOMContentLoaded', function() {
+			const passwordInput = document.getElementById('custom_password');
+			const togglePasswordCheckbox = document.getElementById('password_view');
+
+			togglePasswordCheckbox.addEventListener('change', function() {
+				const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+				passwordInput.setAttribute('type', type);
+			});
 		});
 	</script>
 </body>
