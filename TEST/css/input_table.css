@@ -115,6 +115,9 @@ label[for="password_view"] {
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
+label[for="password_view"]::after {
+    display: none;
+}
 /*스위치 체크박스*/
 label[for="switch_checkbox"]+div {
     display: inline-flex;
