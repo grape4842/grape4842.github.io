@@ -14,76 +14,76 @@
 	<link rel="preload" href="../../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
 	<link rel="preload" href="../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
 
-	<title>¾ÆÄÚµð¾ð UI ±¸Çö ¿¹½Ã STEP 3: ¾Ö´Ï¸ÞÀÌ¼Ç ÁÖ±â</title>
+	<title>ì•„ì½”ë””ì–¸ UI êµ¬í˜„ ì˜ˆì‹œ STEP 3: ì• ë‹ˆë©”ì´ì…˜ ì£¼ê¸°</title>
 	<link rel="stylesheet" type="text/css" href="../root.css">
 </head>
 <body>
 	<header class="content_width">
-		<h1>¾ÆÄÚµð¾ð UI ±¸Çö ¿¹½Ã STEP 3: ¾Ö´Ï¸ÞÀÌ¼Ç ÁÖ±â</h1>
+		<h1>ì•„ì½”ë””ì–¸ UI êµ¬í˜„ ì˜ˆì‹œ STEP 3: ì• ë‹ˆë©”ì´ì…˜ ì£¼ê¸°</h1>
 	</header>
 	<main class="content_width">
 		<section class="acc1">
-			<h2>¾ÆÀÌÄÜ Àü¿ë ÅÂ±×¸¦ »ç¿ëÇÑ ¿¹½Ã</h2>
+			<h2>ì•„ì´ì½˜ ì „ìš© íƒœê·¸ë¥¼ ì‚¬ìš©í•œ ì˜ˆì‹œ</h2>
 			<details>
-				<summary>°³¿ä<span class="icon"></span></summary>
-				<div class="content">ÄÜÅÙÃ÷ ºÎºÐÀÔ´Ï´Ù.</div>
+				<summary>ê°œìš”<span class="icon"></span></summary>
+				<div class="content">ì½˜í…ì¸  ë¶€ë¶„ìž…ë‹ˆë‹¤.</div>
 			</details>
 			<details>
-				<summary>Q. &lt;button&gt;, &lt;input&gt;·Îµµ ¾ÆÄÚµð¾ðÀº ¸¸µé ¼ö ÀÖÀÝ¾Æ¿ä<span class="icon"></span></summary>
-				<div class="content">A. &lt;details&gt;¿Í &lt;summary&gt;·Î ¸¸µå´Â °ÍÀ» ÃßÃµÇÕ´Ï´Ù.</div>
+				<summary>Q. &lt;button&gt;, &lt;input&gt;ë¡œë„ ì•„ì½”ë””ì–¸ì€ ë§Œë“¤ ìˆ˜ ìžˆìž–ì•„ìš”<span class="icon"></span></summary>
+				<div class="content">A. &lt;details&gt;ì™€ &lt;summary&gt;ë¡œ ë§Œë“œëŠ” ê²ƒì„ ì¶”ì²œí•©ë‹ˆë‹¤.</div>
 			</details>
 			<details>
-				<summary>Q. ¾ÆÄÚµð¾ðÀÇ ¾Ö´Ï¸ÞÀÌ¼ÇÀÌ ÀÌ»óÇÕ´Ï´Ù. ¿øÇÏ´Â´ë·Î µ¿ÀÛÇÏÁö ¾Ê´Âµ¥ ±»ÀÌ &lt;details&gt;·Î ¸¸µé¾î¾ß ÇÏ³ª¿ä?<span class="icon"></span></summary>
+				<summary>Q. ì•„ì½”ë””ì–¸ì˜ ì• ë‹ˆë©”ì´ì…˜ì´ ì´ìƒí•©ë‹ˆë‹¤. ì›í•˜ëŠ”ëŒ€ë¡œ ë™ìž‘í•˜ì§€ ì•ŠëŠ”ë° êµ³ì´ &lt;details&gt;ë¡œ ë§Œë“¤ì–´ì•¼ í•˜ë‚˜ìš”?<span class="icon"></span></summary>
 				<div class="content">
-					<p>A. ÀÌÇÏÀÇ Æ÷ÀÎÆ®¸¦ Àç°ËÅäÇØ º¾½Ã´Ù.</p>
+					<p>A. ì´í•˜ì˜ í¬ì¸íŠ¸ë¥¼ ìž¬ê²€í† í•´ ë´…ì‹œë‹¤.</p>
 					<ol>
-						<li>¾ÆÄÚµð¾ðÀÇ ³»¿ë¹°(summary tag ¹Ù·Î ¾Æ·¡)À» div ÅÂ±× µîÀ¸·Î µÑ·¯½Ñ ºÎºÐ¿¡´Â »óÇÏ paddingÀ» °¡ÁöÁö ¸» °Í.</li>
-						<li>±âº» µ¿ÀÛÀ» ¹«È¿È­"prevent Default()"ÇÏ¿© ¼öµ¿À¸·Î open ¼Ó¼ºÀ» °ü¸®ÇÒ ¼ö ÀÖ´Â°¡.</li>
-						<li>¾ÆÄÚµð¾ðÀ» ´ÝÀ» ¶§(details ÅÂ±×ÀÇ open ¼Ó¼ºÀÌ Á¦°ÅµÉ ¶§)´Â ÇÑ¼ø°£¿¡ ¼û°ÜÁö¹Ç·Î ¾Ö´Ï¸ÞÀÌ¼Ç ¿Ï·á¸¦ ±â´Ù¸° ÈÄ open ¼Ó¼ºÀ» ¼öµ¿À¸·Î Á¦°ÅÇÒ °Í.</li>
+						<li>ì•„ì½”ë””ì–¸ì˜ ë‚´ìš©ë¬¼(summary tag ë°”ë¡œ ì•„ëž˜)ì„ div íƒœê·¸ ë“±ìœ¼ë¡œ ë‘˜ëŸ¬ì‹¼ ë¶€ë¶„ì—ëŠ” ìƒí•˜ paddingì„ ê°€ì§€ì§€ ë§ ê²ƒ.</li>
+						<li>ê¸°ë³¸ ë™ìž‘ì„ ë¬´íš¨í™”"prevent Default()"í•˜ì—¬ ìˆ˜ë™ìœ¼ë¡œ open ì†ì„±ì„ ê´€ë¦¬í•  ìˆ˜ ìžˆëŠ”ê°€.</li>
+						<li>ì•„ì½”ë””ì–¸ì„ ë‹«ì„ ë•Œ(details íƒœê·¸ì˜ open ì†ì„±ì´ ì œê±°ë  ë•Œ)ëŠ” í•œìˆœê°„ì— ìˆ¨ê²¨ì§€ë¯€ë¡œ ì• ë‹ˆë©”ì´ì…˜ ì™„ë£Œë¥¼ ê¸°ë‹¤ë¦° í›„ open ì†ì„±ì„ ìˆ˜ë™ìœ¼ë¡œ ì œê±°í•  ê²ƒ.</li>
 					</ol>
 				</div>
 			</details>
 			<details>
-				<summary>Q. ¸ñÂ÷¸¦ º¸¿©ÁÖ¼¼¿ä<span class="icon"></span></summary>
+				<summary>Q. ëª©ì°¨ë¥¼ ë³´ì—¬ì£¼ì„¸ìš”<span class="icon"></span></summary>
 				<ol class="content">
-					<li><a href="grape4842.github.io/SNCLab/details_demo_1.html">STEP 1: HTML·Î ¸¶Å©¾÷ ÇÏ±â</a></li>
-					<li><a href="grape4842.github.io/SNCLab/details_demo_2.html">STEP 2: CSS·Î ½ºÅ¸ÀÏ¸µ ÇÏ±â</a></li>
-					<li><a href="grape4842.github.io/SNCLab/details_demo_3.html">STEP 3-0: CSS¸¸À¸·Î ¾Ö´Ï¸ÞÀÌ¼Ç ÁÖ±â</a></li>
-					<li><a href="">STEP 3-1 : ÀÚ¹Ù½ºÅ©¸³Æ®·Î ¾Ö´Ï¸ÞÀÌ¼Ç Á¦¾îÇÏ±â[ºê¶ó¿ìÀú Ç¥ÁØ ±â´É]</a></li>
-					<li><a href="">STEP 3-2: ÀÚ¹Ù½ºÅ©¸³Æ®·Î ¾Ö´Ï¸ÞÀÌ¼Ç Á¦¾îÇÏ±â[GSAP ¹öÀü]</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_1.html">STEP 1: HTMLë¡œ ë§ˆí¬ì—… í•˜ê¸°</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_2.html">STEP 2: CSSë¡œ ìŠ¤íƒ€ì¼ë§ í•˜ê¸°</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_3.html">STEP 3-0: CSSë§Œìœ¼ë¡œ ì• ë‹ˆë©”ì´ì…˜ ì£¼ê¸°</a></li>
+					<li><a href="">STEP 3-1 : ìžë°”ìŠ¤í¬ë¦½íŠ¸ë¡œ ì• ë‹ˆë©”ì´ì…˜ ì œì–´í•˜ê¸°[ë¸Œë¼ìš°ì € í‘œì¤€ ê¸°ëŠ¥]</a></li>
+					<li><a href="">STEP 3-2: ìžë°”ìŠ¤í¬ë¦½íŠ¸ë¡œ ì• ë‹ˆë©”ì´ì…˜ ì œì–´í•˜ê¸°[GSAP ë²„ì „]</a></li>
 				</ol>
 			</details>
 		</section>
 
 		<section class="acc2">
-			<h2>&lt;summary&gt;ÀÇ °¡»ó ¼±ÅÃÀÚ·Î ±¸ÇöÇÑ ¿¹½Ã</h2>
+			<h2>&lt;summary&gt;ì˜ ê°€ìƒ ì„ íƒìžë¡œ êµ¬í˜„í•œ ì˜ˆì‹œ</h2>
 			<details name="group_expand">
-				<summary>°³¿ä</summary>
-				<div class="content">ÄÜÅÙÃ÷ ºÎºÐÀÔ´Ï´Ù.</div>
+				<summary>ê°œìš”</summary>
+				<div class="content">ì½˜í…ì¸  ë¶€ë¶„ìž…ë‹ˆë‹¤.</div>
 			</details>
 			<details name="group_expand">
-				<summary>Q. &lt;button&gt;, &lt;input&gt;·Îµµ ¾ÆÄÚµð¾ðÀº ¸¸µé ¼ö ÀÖÀÝ¾Æ¿ä</summary>
-				<div class="content">A. &lt;details&gt;¿Í &lt;summary&gt;·Î ¸¸µå´Â °ÍÀ» ÃßÃµÇÕ´Ï´Ù.</div>
+				<summary>Q. &lt;button&gt;, &lt;input&gt;ë¡œë„ ì•„ì½”ë””ì–¸ì€ ë§Œë“¤ ìˆ˜ ìžˆìž–ì•„ìš”</summary>
+				<div class="content">A. &lt;details&gt;ì™€ &lt;summary&gt;ë¡œ ë§Œë“œëŠ” ê²ƒì„ ì¶”ì²œí•©ë‹ˆë‹¤.</div>
 			</details>
 			<details name="group_expand">
-				<summary>Q. ¾ÆÄÚµð¾ðÀÇ ¾Ö´Ï¸ÞÀÌ¼ÇÀÌ ÀÌ»óÇÕ´Ï´Ù. ¿øÇÏ´Â´ë·Î µ¿ÀÛÇÏÁö ¾Ê´Âµ¥ ±»ÀÌ &lt;details&gt;·Î ¸¸µé¾î¾ß ÇÏ³ª¿ä?</summary>
+				<summary>Q. ì•„ì½”ë””ì–¸ì˜ ì• ë‹ˆë©”ì´ì…˜ì´ ì´ìƒí•©ë‹ˆë‹¤. ì›í•˜ëŠ”ëŒ€ë¡œ ë™ìž‘í•˜ì§€ ì•ŠëŠ”ë° êµ³ì´ &lt;details&gt;ë¡œ ë§Œë“¤ì–´ì•¼ í•˜ë‚˜ìš”?</summary>
 				<div class="content">
-					<p>A. ÀÌÇÏÀÇ Æ÷ÀÎÆ®¸¦ Àç°ËÅäÇØ º¾½Ã´Ù.</p>
+					<p>A. ì´í•˜ì˜ í¬ì¸íŠ¸ë¥¼ ìž¬ê²€í† í•´ ë´…ì‹œë‹¤.</p>
 					<ol>
-						<li>¾ÆÄÚµð¾ðÀÇ ³»¿ë¹°(summary tag ¹Ù·Î ¾Æ·¡)À» div ÅÂ±× µîÀ¸·Î µÑ·¯½Ñ ºÎºÐ¿¡´Â »óÇÏ paddingÀ» °¡ÁöÁö ¸» °Í.</li>
-						<li>±âº» µ¿ÀÛÀ» ¹«È¿È­"prevent Default()"ÇÏ¿© ¼öµ¿À¸·Î open ¼Ó¼ºÀ» °ü¸®ÇÒ ¼ö ÀÖ´Â°¡.</li>
-						<li>¾ÆÄÚµð¾ðÀ» ´ÝÀ» ¶§(details ÅÂ±×ÀÇ open ¼Ó¼ºÀÌ Á¦°ÅµÉ ¶§)´Â ÇÑ¼ø°£¿¡ ¼û°ÜÁö¹Ç·Î ¾Ö´Ï¸ÞÀÌ¼Ç ¿Ï·á¸¦ ±â´Ù¸° ÈÄ open ¼Ó¼ºÀ» ¼öµ¿À¸·Î Á¦°ÅÇÒ °Í.</li>
+						<li>ì•„ì½”ë””ì–¸ì˜ ë‚´ìš©ë¬¼(summary tag ë°”ë¡œ ì•„ëž˜)ì„ div íƒœê·¸ ë“±ìœ¼ë¡œ ë‘˜ëŸ¬ì‹¼ ë¶€ë¶„ì—ëŠ” ìƒí•˜ paddingì„ ê°€ì§€ì§€ ë§ ê²ƒ.</li>
+						<li>ê¸°ë³¸ ë™ìž‘ì„ ë¬´íš¨í™”"prevent Default()"í•˜ì—¬ ìˆ˜ë™ìœ¼ë¡œ open ì†ì„±ì„ ê´€ë¦¬í•  ìˆ˜ ìžˆëŠ”ê°€.</li>
+						<li>ì•„ì½”ë””ì–¸ì„ ë‹«ì„ ë•Œ(details íƒœê·¸ì˜ open ì†ì„±ì´ ì œê±°ë  ë•Œ)ëŠ” í•œìˆœê°„ì— ìˆ¨ê²¨ì§€ë¯€ë¡œ ì• ë‹ˆë©”ì´ì…˜ ì™„ë£Œë¥¼ ê¸°ë‹¤ë¦° í›„ open ì†ì„±ì„ ìˆ˜ë™ìœ¼ë¡œ ì œê±°í•  ê²ƒ.</li>
 					</ol>
 				</div>
 			</details>
 			<details name="group_expand">
-				<summary>Q. ¸ñÂ÷¸¦ º¸¿©ÁÖ¼¼¿ä</summary>
+				<summary>Q. ëª©ì°¨ë¥¼ ë³´ì—¬ì£¼ì„¸ìš”</summary>
 				<ol class="content">
-					<li><a href="grape4842.github.io/SNCLab/details_demo_.html">STEP 1: HTML·Î ¸¶Å©¾÷ ÇÏ±â</a></li>
-					<li><a href="grape4842.github.io/SNCLab/details_demo_2.html">STEP 2: CSS·Î ½ºÅ¸ÀÏ¸µ ÇÏ±â</a></li>
-					<li><a href="grape4842.github.io/SNCLab/details_demo_3.html">STEP 3-0: CSS¸¸À¸·Î ¾Ö´Ï¸ÞÀÌ¼Ç ÁÖ±â</a></li>
-					<li><a href="">STEP 3-1 : ÀÚ¹Ù½ºÅ©¸³Æ®·Î ¾Ö´Ï¸ÞÀÌ¼Ç Á¦¾îÇÏ±â[ºê¶ó¿ìÀú Ç¥ÁØ ±â´É]</a></li>
-					<li><a href="">STEP 3-2: ÀÚ¹Ù½ºÅ©¸³Æ®·Î ¾Ö´Ï¸ÞÀÌ¼Ç Á¦¾îÇÏ±â[GSAP ¹öÀü]</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_.html">STEP 1: HTMLë¡œ ë§ˆí¬ì—… í•˜ê¸°</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_2.html">STEP 2: CSSë¡œ ìŠ¤íƒ€ì¼ë§ í•˜ê¸°</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_3.html">STEP 3-0: CSSë§Œìœ¼ë¡œ ì• ë‹ˆë©”ì´ì…˜ ì£¼ê¸°</a></li>
+					<li><a href="">STEP 3-1 : ìžë°”ìŠ¤í¬ë¦½íŠ¸ë¡œ ì• ë‹ˆë©”ì´ì…˜ ì œì–´í•˜ê¸°[ë¸Œë¼ìš°ì € í‘œì¤€ ê¸°ëŠ¥]</a></li>
+					<li><a href="">STEP 3-2: ìžë°”ìŠ¤í¬ë¦½íŠ¸ë¡œ ì• ë‹ˆë©”ì´ì…˜ ì œì–´í•˜ê¸°[GSAP ë²„ì „]</a></li>
 				</ol>
 			</details>
 		</section>
