@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8"> 
+	<link rel="stylesheet" type="text/css" href="../root.css">
+	<link rel="stylesheet" type="text/css" href="css/details_demo.css">
+	<link rel="stylesheet" type="text/css" href="css/details_animation.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta name="theme-color=" content="#855AB6">
+	<link rel="preload" href="../../font/Koddi/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+
+	<title>아코디언 UI 구현 예시 STEP 3: 애니메이션 주기</title>
+	<link rel="stylesheet" type="text/css" href="../root.css">
+</head>
+<body>
+	<header class="content_width">
+		<h1>아코디언 UI 구현 예시 STEP 3: 애니메이션 주기</h1>
+	</header>
+	<main class="content_width">
+		<section class="acc1">
+			<h2>아이콘 전용 태그를 사용한 예시</h2>
+			<details>
+				<summary>개요<span class="icon"></span></summary>
+				<div class="content">콘텐츠 부분입니다.</div>
+			</details>
+			<details>
+				<summary>Q. &lt;button&gt;, &lt;input&gt;로도 아코디언은 만들 수 있잖아요<span class="icon"></span></summary>
+				<div class="content">A. &lt;details&gt;와 &lt;summary&gt;로 만드는 것을 추천합니다.</div>
+			</details>
+			<details>
+				<summary>Q. 아코디언의 애니메이션이 이상합니다. 원하는대로 동작하지 않는데 굳이 &lt;details&gt;로 만들어야 하나요?<span class="icon"></span></summary>
+				<div class="content">
+					<p>A. 이하의 포인트를 재검토해 봅시다.</p>
+					<ol>
+						<li>아코디언의 내용물(summary tag 바로 아래)을 div 태그 등으로 둘러싼 부분에는 상하 padding을 가지지 말 것.</li>
+						<li>기본 동작을 무효화"prevent Default()"하여 수동으로 open 속성을 관리할 수 있는가.</li>
+						<li>아코디언을 닫을 때(details 태그의 open 속성이 제거될 때)는 한순간에 숨겨지므로 애니메이션 완료를 기다린 후 open 속성을 수동으로 제거할 것.</li>
+					</ol>
+				</div>
+			</details>
+			<details>
+				<summary>Q. 목차를 보여주세요<span class="icon"></span></summary>
+				<ol class="content">
+					<li><a href="grape4842.github.io/SNCLab/details_demo_1.html">STEP 1: HTML로 마크업 하기</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_2.html">STEP 2: CSS로 스타일링 하기</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_3.html">STEP 3-0: CSS만으로 애니메이션 주기</a></li>
+					<li><a href="">STEP 3-1 : 자바스크립트로 애니메이션 제어하기[브라우저 표준 기능]</a></li>
+					<li><a href="">STEP 3-2: 자바스크립트로 애니메이션 제어하기[GSAP 버전]</a></li>
+				</ol>
+			</details>
+		</section>
+
+		<section class="acc2">
+			<h2>&lt;summary&gt;의 가상 선택자로 구현한 예시</h2>
+			<details name="group_expand">
+				<summary>개요</summary>
+				<div class="content">콘텐츠 부분입니다.</div>
+			</details>
+			<details name="group_expand">
+				<summary>Q. &lt;button&gt;, &lt;input&gt;로도 아코디언은 만들 수 있잖아요</summary>
+				<div class="content">A. &lt;details&gt;와 &lt;summary&gt;로 만드는 것을 추천합니다.</div>
+			</details>
+			<details name="group_expand">
+				<summary>Q. 아코디언의 애니메이션이 이상합니다. 원하는대로 동작하지 않는데 굳이 &lt;details&gt;로 만들어야 하나요?</summary>
+				<div class="content">
+					<p>A. 이하의 포인트를 재검토해 봅시다.</p>
+					<ol>
+						<li>아코디언의 내용물(summary tag 바로 아래)을 div 태그 등으로 둘러싼 부분에는 상하 padding을 가지지 말 것.</li>
+						<li>기본 동작을 무효화"prevent Default()"하여 수동으로 open 속성을 관리할 수 있는가.</li>
+						<li>아코디언을 닫을 때(details 태그의 open 속성이 제거될 때)는 한순간에 숨겨지므로 애니메이션 완료를 기다린 후 open 속성을 수동으로 제거할 것.</li>
+					</ol>
+				</div>
+			</details>
+			<details name="group_expand">
+				<summary>Q. 목차를 보여주세요</summary>
+				<ol class="content">
+					<li><a href="grape4842.github.io/SNCLab/details_demo_.html">STEP 1: HTML로 마크업 하기</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_2.html">STEP 2: CSS로 스타일링 하기</a></li>
+					<li><a href="grape4842.github.io/SNCLab/details_demo_3.html">STEP 3-0: CSS만으로 애니메이션 주기</a></li>
+					<li><a href="">STEP 3-1 : 자바스크립트로 애니메이션 제어하기[브라우저 표준 기능]</a></li>
+					<li><a href="">STEP 3-2: 자바스크립트로 애니메이션 제어하기[GSAP 버전]</a></li>
+				</ol>
+			</details>
+		</section>
+	</main>
+	<footer class="content_width">
+		<address></address>
+	</footer>
+</body>
+</html>
