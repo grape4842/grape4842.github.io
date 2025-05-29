@@ -4,7 +4,6 @@
 <head>
 	<meta charset="utf-8"> 
 	<link rel="stylesheet" type="text/css" href="../root.css">
-	<link rel="stylesheet" type="text/css" href="css/details_demo.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta property="og:locate" content="ko-kr">
 	<meta property="og:type" content="website">
@@ -13,16 +12,16 @@
 	<link rel="preload" href="../../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
 	<link rel="preload" href="../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
 
-	<title>아코디언 UI 구현 예시 STEP 2: CSS로 스타일링 하기</title>
+	<title>아코디언 UI 구현 예시 STEP 1: HTML로 마크업 하기</title>
 	<link rel="stylesheet" type="text/css" href="../root.css">
 </head>
 <body>
 	<header class="content_width">
-		<h1>아코디언 UI 구현 예시 STEP 2: CSS로 스타일링 하기</h1>
+		<h1>아코디언 UI 구현 예시 STEP 1: HTML로 마크업 하기</h1>
 	</header>
 	<main class="content_width">
 		<section class="acc1">
-			<h2>아이콘 전용 태그를 사용한 예시</h2>
+			<h2>일반적인 아코디언(name 속성 없음)</h2>
 			<details>
 				<summary>개요<span class="icon"></span></summary>
 				<div class="content">콘텐츠 부분입니다.</div>
@@ -55,7 +54,7 @@
 		</section>
 
 		<section class="acc2">
-			<h2>&lt;summary&gt;의 가상 선택자로 구현한 예시</h2>
+			<h2>한정적인 아코디언(name 속성을 통해 그룹화)</h2>
 			<details name="group_expand">
 				<summary>개요</summary>
 				<div class="content">콘텐츠 부분입니다.</div>
