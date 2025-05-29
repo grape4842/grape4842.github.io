@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8"> 
-	<link rel="stylesheet" type="text/css" href="../root.css">
+	<meta content="dark light" name="color-scheme">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta property="og:locate" content="ko-kr">
 	<meta property="og:type" content="website">
@@ -13,7 +13,45 @@
 	<link rel="preload" href="../../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
 
 	<title>아코디언 UI 구현 예시 STEP 1: HTML로 마크업 하기</title>
-	<link rel="stylesheet" type="text/css" href="../root.css">
+	<style type="text/css">
+		@charset "utf-8";
+		:lang(ko) {
+			word-break: keep-all;
+			line-break:normal;
+		}
+		.content_width {
+			max-width: 90vw;
+			margin:0 auto;
+		}
+		main {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+			gap: 1rem;
+		}
+		section {
+			display: grid;
+			grid-auto-rows: min-content;
+			row-gap: 1rem;
+			justify-content: center;
+		}
+		h1 {
+			text-align: center;
+			font-weight:bolder;
+			font-size:2rem;
+			padding:1rem;
+		}
+		h2 {
+			color:#fff;
+			text-align: center;
+			border-radius: 1rem;
+			margin:1rem auto;
+			font-size: 1.25rem;
+			display: inline-flex;
+			padding:1rem 1.25rem;
+			background-color: #65d;
+		}
+
+	</style>
 </head>
 <body>
 	<header class="content_width">
