@@ -8,7 +8,10 @@
     word-break: auto-phrase;
     font-feature-settings: "palt";
 }
-::selection {background:#baf; color:#000;}
+::selection {
+    background:#baf; 
+    color:#000;
+}
 ::placeholder{color:#555;}
 /*폰트 설성*/
 
@@ -146,32 +149,41 @@
     position: relative;
     transition-duration: 0.2s;
 }
-summary::-webkit-details-marker { /* Safari 브라우저용 사용자 정의 스타일 */
-    display: none;
+
+summary::-webkit-details-marker {
+/* Safari 브라우저용 사용자 정의 스타일 */
+display: none;
 }
 summary {
-    list-style-type: none; /* 그 외의 브라우저용 사용자 정의 스타일 */
+    list-style-type: none;
+    /* 그 외의 브라우저용 사용자 정의 스타일 */
 }
 
 :where(:disabled, label:has(> input:disabled), label:has(+ input:disabled), input:disabled + label) {
-    cursor: not-allowed; /* 비활성화된 입력 요소의 라벨 커서 변경 */
+    cursor: not-allowed; 
+    /* 비활성화된 입력 요소의 라벨 커서 변경 */
 }
 
 :where(button) {
-    border-style: none; /* 버튼의 기본 테두리 제거 */
+    border-style: none; 
+    /* 버튼의 기본 테두리 제거 */
 }
 
 :where(a) {
     position: relative;
-    color: inherit; /* 링크의 색상을 부모 요소와 동일하게 설정 */
+    color: inherit; 
+    /* 링크의 색상을 부모 요소와 동일하게 설정 */
     display: inline-flex;
     text-decoration: transparent underline wavy; /* 링크의 밑줄 스타일 설정 */
-    transition: text-decoration 0.2s; /* 밑줄 스타일 변경 시 애니메이션 적용 */
-    text-underline-offset: 4px; /* 링크 텍스트와 밑줄 사이의 간격 설정 */
+    transition: text-decoration 0.2s; 
+    /* 밑줄 스타일 변경 시 애니메이션 적용 */
+    text-underline-offset: 4px;
+    /* 링크 텍스트와 밑줄 사이의 간격 설정 */
 }
 
 :where(ul, ol, li) {
-    list-style: none; /* 목록의 기본 스타일 제거 */
+    list-style: none; 
+    /* 목록의 기본 스타일 제거 */
 }
 
 :where(span, label) {
@@ -197,39 +209,47 @@ summary {
 :where(p, h1, h2, h3, h4, h5, h6) {
     margin-block-start: 0;
     margin-block-end: 0;
-    overflow-wrap: break-word; /* 긴 단어가 넘칠 경우 줄바꿈 */
+    overflow-wrap: break-word; 
+    /* 긴 단어가 넘칠 경우 줄바꿈 */
 }
 
 :where(h1, h2, h3, h4, h5, h6) * {
-    font: inherit; /* 헤딩의 자식 요소는 부모의 폰트 속성 계승 */
+    font: inherit; 
+    /* 헤딩의 자식 요소는 부모의 폰트 속성 계승 */
 }
 
-:where(hr) { /* 일관성 있는 스타일의 수평선 */
-    border: none;
-    border-block-start: 1px solid;
-    color: inherit;
-    block-size: 0;
-    overflow: visible;
+:where(hr) { 
+/* 일관성 있는 스타일의 수평선 */
+border: none;
+border-block-start: 1px solid;
+color: inherit;
+block-size: 0;
+overflow: visible;
 }
 
 table {
-    border-collapse: collapse; /* 테이블 셀의 경계선 결합 */
+    border-collapse: collapse;
+    /* 테이블 셀의 경계선 결합 */
 }
 
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10rem; /* 스크롤바의 스타일 */
+    border-radius: 10rem; 
+    /* 스크롤바의 스타일 */
     cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 10rem; /* 스크롤바 트랙의 스타일 */
+    border-radius: 10rem; 
+    /* 스크롤바 트랙의 스타일 */
 }
 address {text-align: center;}
 fieldset {
-    border: none; /* 필드셋의 기본 테두리 제거 */
+    border: none; 
+    /* 필드셋의 기본 테두리 제거 */
 }
+
 ::details-content, dialog, dialog::backdrop {
     transition:
     height 0.2s ease, 
@@ -243,6 +263,25 @@ fieldset {
     transform 0.2s ease, 
     background 0.2s ease;
 }
+/*
+details::details-content {
+  height: 0;
+  opacity: 0;
+  overflow: clip;
+}
+details[open]::details-content {
+  opacity: 1;
+}
+*/
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+    /* height : 0 (수치형) → auto(문자형) 의 애니메이션을 가능하게 하기 위한 지정*/
+}
+details[open]::details-content {
+    height: auto;
+}
+
 dialog {
     position: fixed;
     border-radius: 1rem;

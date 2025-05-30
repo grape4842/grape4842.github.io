@@ -89,6 +89,7 @@ details[open] summary::after {
 }
 .content {
 	background-color: #eef;
+	padding: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	border-radius: 0.25rem;

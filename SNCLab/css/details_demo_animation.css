@@ -1,0 +1,29 @@
+/*  -------- 아코디언 콘텐츠 스타일 -------- */
+.acc1 details::details-content {
+  transition: height 0.4s, opacity 0.4s, content-visibility 0.4s allow-discrete;
+  height: 0;
+  opacity: 0;
+  overflow: clip;
+}
+/*  -------- 아코디언 콘텐츠 스타일 (열려있을때) -------- */
+.acc1 details[open]::details-content {
+  opacity: 1;
+}
+
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+    /* height : 0 (수치형) → auto(문자형) 의 애니메이션을 가능하게 하기 위한 지정*/
+  }
+  .acc1 details[open]::details-content {
+    height: auto;
+  }
+}
+
+/* height: 0 → auto 애니메이션이 지원되지 않는 경우 고정 값으로 애니메이션 시킨다 */
+@supports not (interpolate-size: allow-keywords) {
+  details[open]::details-content {
+    height: 12rem;
+    overflow-y: scroll;
+  }
+}
