@@ -337,7 +337,9 @@ dialog h2 {
     line-height: 3rem;
     background: inherit;
 }
-
+dialog .popover_close {
+	padding:1rem;
+}
 ol,ul,dl {
 	margin:0px; 
 	padding:0px;

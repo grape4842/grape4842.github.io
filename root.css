@@ -316,7 +316,7 @@ dialog::backdrop {
 }
 dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
     position: fixed;
-    right:0rem;
+    right:0;
     top:0;
     z-index: 5;
 }
