@@ -318,6 +318,7 @@ dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close
     position: fixed;
     right:0rem;
     top:0;
+    z-index: 5;
 }
 dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
     margin: 0 auto;
@@ -329,7 +330,6 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
     justify-content: center;
     height: 3rem;
     width: 3rem;
-    z-index: 5;
     background: transparent;
 }
 dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_popover, .close_ctrl) img {
