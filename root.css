@@ -305,6 +305,7 @@ dialog {
     from {opacity: 1;}
     to {opacity: 0;}
 }
+body:has(dialog[open]) {overflow: hidden;}
 dialog[open] {
     animation: dialog_open 0.2s forwards;
     opacity: 1;
