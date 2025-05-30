@@ -329,7 +329,7 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
     justify-content: center;
     height: 3rem;
     width: 3rem;
-    z-index: 2;
+    z-index: 3;
     background: transparent;
 }
 dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_popover, .close_ctrl) img {
