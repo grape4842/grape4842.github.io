@@ -406,7 +406,7 @@ dd {margin:0px; font-weight:300;}
 }
 
 
-section > ul {
+section > ul, .site_list {
 	background-color:rgba(40,0,100,0.7);
 	border:5px solid #85f;
 	backdrop-filter: blur(5px);
@@ -515,8 +515,8 @@ footer {
 		top:0px;
 		margin-top:3rem;		
 	}
-	section > ul {
-		padding:1.5;
+	section > ul, .site_list {
+		padding:1.5rem;
 	}
 	body {background-size:30%;}
 
@@ -545,7 +545,7 @@ footer {
 		.wsmall {display:block;}
 		.wbig {display:none;}
 		body {background-size:80%;}
-		section > ul {
+		section > ul, .site_list {
 			padding:1rem;
 		}
 		.ribbon:after,.ribbon:before,
@@ -562,7 +562,7 @@ footer {
 	li,li li,dt,dd,p,.HELLO div {font-size:17px !important;}
 	#gochat {z-index:10;}
 	body {background-size:100%;}
-	section > ul {
+	section > ul, .site_list {
 		padding:0.5rem;
 	}
 	section > ul > li {
@@ -613,7 +613,7 @@ footer {
 		filter: hue-rotate(60deg) brightness(2) saturate(0.7);
 
 	}
-	section > ul {
+	section > ul, .site_list {
 		background:linear-gradient(160deg, rgba(50,10,0,0.8), rgba(70,40,0,0.8));
 		border:#850 2px solid;
 		color:white;
