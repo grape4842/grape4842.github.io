@@ -334,7 +334,8 @@ summary::-webkit-details-marker {
 }
 
 dialog h2 {
-	line-height:3rem;
+    line-height: 3rem;
+    background: inherit;
 }
 
 ol,ul,dl {
