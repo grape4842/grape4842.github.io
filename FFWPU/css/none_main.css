@@ -21,12 +21,14 @@
 .site-list a {
 	box-sizing:border-box;
 	height:100%;
-	padding:0.75rem 0.5rem;
+	padding:0.5rem;
 	justify-content:center;
+	align-items: center;
 	vertical-align: middle;
 	position:relative;
 	text-decoration:none;
-	flex-direction:column;}
+	flex-direction:column;
+}
 .site-list img, .yvl a .ylogo {
 	box-sizing: content-box;
 	height:2rem;
@@ -34,7 +36,6 @@
 	vertical-align:middle;
 }
 .yvl a	{
-	padding-left: 0px;
 	flex-direction: row;
 }
  .yvl a .ylogo {
