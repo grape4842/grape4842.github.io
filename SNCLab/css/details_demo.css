@@ -87,7 +87,7 @@ details[open] .icon::after {
 details[open] summary::after {
 	transform: rotate(180deg);
 }
-.content {
+.content, .content_inner {
 	background-color: #eef;
 	padding: 1.5rem;
 	display: flex;
@@ -99,5 +99,6 @@ footer {
 }
 @media (prefers-color-scheme: dark) {
 	summary {color:#eef;}
-	.content {background-color: #317;}
+	.content, .content_inner {background-color: #317;}
 }
+

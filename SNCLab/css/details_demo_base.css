@@ -1,0 +1,266 @@
+@charset "utf-8";
+:lang(ko) {
+    word-break: keep-all;
+    line-break:normal;
+}
+::selection {
+    background:#baf; 
+    color:#000;
+}
+::placeholder{color:#555;}
+/*폰트 설성*/
+
+/*한국어*/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+@font-face { 
+    font-family:"KoddiUDOnGothic";
+    src: url("../../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
+    src: url("../../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
+    src: url("../../font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
+    font-weight:400;
+    font-display : swap;
+} 
+@font-face { 
+    font-family:"KoddiUDOnGothic";
+    src: url("../../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
+    src: url("../../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
+    src: url("../../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
+    font-weight:700;
+    font-display : swap;
+} 
+@font-face { 
+    font-family:"KoddiUDOnGothic";
+    src: url("../../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+    src: url("../../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+    src: url("../../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+    font-weight:900;
+    font-display : swap;
+}
+
+/*숨김텍스트 설정*/
+.hidden, .blind, .a11y-txt, .sr-only, .sr_only, .a11y_txt {
+  overflow: hidden;
+  border: 0;
+  position: absolute;
+  /* relative를 사용해도 무관할 듯 하다 */
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+@layer reset css {
+    :root {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        ruby-align: space-between;
+        scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
+    }
+}
+@supports not (min-block-size: 100dvb) {
+    :where(html) {
+        block-size: 100%; /* 브라우저 호환성을 위한 설정 */
+    }
+}
+
+:where(input, button, textarea, select, a) {
+    font: inherit; /* 입력 요소는 부모의 폰트 속성 계승 */
+    box-sizing: border-box;
+    padding:0.5rem;
+    transition: filter 0.2s;
+}
+boxy {overflow-y:scroll;}
+*, :where(body):not(img), body {
+    font-size: 1rem;
+    line-height: 1.6; /* 가독성을 위한 행 높이 */
+    -webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
+    padding:0;
+    margin:0;
+    position: relative;
+    box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
+    -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
+    color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
+    font-family: "KoddiUDOnGothic", sans-serif, serif;
+    scroll-behavior: smooth; /* 부드러운 스크롤 */
+}
+:where(input[type="text"], input[type="password"], input[type="search"], select) {
+    padding-left:0.5rem;
+}
+:where(input[type="text"], input[type="password"], input[type="search"]) {
+    cursor: text !important;
+}
+:where(textarea) {
+    resize: vertical; /* 텍스트 영역의 가로 크기 조정 비활성화 */
+    padding: 0.5rem; /* 텍스트 영역의 내부 여백 */
+}
+
+:where(:focus, button, label, select, summary, [role='button'], [role='option'], input, [type="file"]::file-selector-button) {
+    cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 변경 */
+    position: relative;
+    transition-duration: 0.2s;
+}
+
+
+:where(:disabled, label:has(> input:disabled), label:has(+ input:disabled), input:disabled + label) {
+    cursor: not-allowed; 
+    /* 비활성화된 입력 요소의 라벨 커서 변경 */
+}
+
+:where(button) {
+    border-style: none; 
+    /* 버튼의 기본 테두리 제거 */
+}
+
+
+
+:where(span, label) {
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+    display: inline-flex; /* 멀티미디어 요소의 예측 가능한 디스플레이 설정 */
+    aspect-ratio: auto; /* 콘텐츠의 종횡비 유지 */
+    object-fit: contain; /* 콘텐츠가 부모 요소를 벗어나지 않도록 설정 */
+    width: 100%; /* 부모 요소에 꽉 차게 설정 */
+    position: relative;
+    vertical-align: middle;
+}
+
+:where(img, picture, svg) {
+    max-inline-size: 100%; /* 이미지가 가용 공간을 넘지 않도록 설정 */
+    block-size: auto; /* 콘텐츠 종횡비 유지 */
+}
+
+:where(p, h1, h2, h3, h4, h5, h6) {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    overflow-wrap: break-word; 
+    /* 긴 단어가 넘칠 경우 줄바꿈 */
+}
+
+:where(h1, h2, h3, h4, h5, h6) * {
+    font: inherit; 
+    /* 헤딩의 자식 요소는 부모의 폰트 속성 계승 */
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10rem; 
+    /* 스크롤바의 스타일 */
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10rem; 
+    /* 스크롤바 트랙의 스타일 */
+}
+
+/*많은 파일에서 공통으로 사용하는 고유 내용*/
+.lightV {display: unset;}
+.darkV {display: none;}
+.View_PC, .PCV, .PC_View, .pc_view {display:none;}
+.View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
+    display:unset;
+}
+.content_width {
+    width: 90vw;
+    margin: 0rem auto;
+}
+.youtube_video_frame {
+    aspect-ratio: 16/9;
+    margin:1rem auto;
+}
+
+main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1rem;
+}
+section {
+        display: grid;
+        grid-auto-rows: min-content;
+        row-gap: 1rem;
+        justify-content: center;
+}
+h1 {
+    text-align: center;
+    font-weight:bolder;
+    font-size:2rem;
+    padding:1rem;
+}
+h2 {
+    color:#fff;
+    text-align: center;
+    border-radius: 1rem;
+    margin:1rem auto;
+    font-size: 1.25rem;
+    display: inline-flex;
+    padding:1rem 1.25rem;
+    background-color: #65d;
+}
+
+/*고대비 모드*/
+@media (prefers-contrast:more) {
+    body {
+        background-color:black !important;
+        color:white;
+    }
+    ::selection {
+        background:#fff; 
+        color:black;
+    }
+
+}
+
+/*Dark Mode*/
+@media (prefers-color-scheme: dark) {
+    ::selection {background:#51a; color:white;}
+    ::placeholder{color:#aaa;}
+    .lightV {display: none;}
+    .darkV {display: unset;}
+    dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
+        filter: invert(1);
+    }
+}
+
+/*기기별 CSS*/
+
+/*PC*/
+@media screen and (width >= 1400px) {
+    .View_PC, .PCV, .PC_View, .pc_view {display:unset;}
+    .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display:none;}
+    dialog, .content_width {width: 60vw;}
+}
+
+/*1000px〜1400px iPad Pro*/
+@media screen and (1000px <= width < 1400px )  {
+    dialog, .content_width {width: 70vw;}
+}
+
+/*700px〜1200px iPad*/
+@media screen and (700px <= width < 1000px )  {
+    dialog, .content_width {
+        width: 80vw;
+    }
+}
+
+}
+/*Mobile*/
+@media screen and (340px <= width < 700px ) {
+    .content_width, dialog {min-width: 80dvw;}
+
+}
+/*folded, watch*/
+/*watch*/
+@media screen and (330px > width) {
+    .content_width {width: 95vw;}
+    dialog {
+        min-width: 90dvw;
+        max-width: 95dvw;
+    }
+}
