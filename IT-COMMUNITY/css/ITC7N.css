@@ -332,7 +332,7 @@ summary::-webkit-details-marker {
 	font-size: 1rem;
 	font-weight: 600;
 }
-
+dialog {padding:0;}
 dialog h2 {
     line-height: 3rem;
     background: inherit;
