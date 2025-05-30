@@ -21,7 +21,7 @@
 .site-list a {
 	box-sizing:border-box;
 	height:100%;
-	padding:1rem 0.5rem;
+	padding:0.75rem 0.5rem;
 	justify-content:center;
 	vertical-align: middle;
 	position:relative;

@@ -360,8 +360,10 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 :where(#skipnav, #jumpnav, #skip_nav) {
     position: fixed;
-    display: block;
-    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
     top: -10rem;
     width: 100vw;
     line-height: 3rem;
