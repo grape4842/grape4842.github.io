@@ -7,8 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
  */
 const setUpAccordion = () => {
   const details = document.querySelectorAll(".js_details");
-    const RUNNING_VALUE = "running"; // 애니메이션 실행 중일 때 부여할 예정인 커스텀 데이터 속성의 값
-    const IS_OPENED_CLASS = "is-opened"; // 아이콘 조작용 클래스 이름
+    const RUNNING_VALUE = "running"; 
+    // 애니메이션 실행 중일 때 부여할 예정인 커스텀 데이터 속성의 값
+    const IS_OPENED_CLASS = "is-opened"; 
+    // 아이콘 조작용 클래스 이름
 
     details.forEach((element) => {
       const summary = element.querySelector(".js_summary");

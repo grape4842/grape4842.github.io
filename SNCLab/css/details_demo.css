@@ -1,30 +1,3 @@
-main {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-		gap: 1rem;
-}
-section {
-		display: grid;
-		grid-auto-rows: min-content;
-		row-gap: 1rem;
-		justify-content: center;
-}
-h1 {
-	text-align: center;
-	font-weight:bolder;
-	font-size:2rem;
-	padding:1rem;
-}
-h2 {
-	color:#fff;
-	text-align: center;
-	border-radius: 1rem;
-	margin:1rem auto;
-	font-size: 1.25rem;
-	display: inline-flex;
-	padding:1rem 1.25rem;
-	background-color: #65d;
-}
 li {padding:0.25rem;}
 ol li {
 	list-style: amharic-abegede inside;

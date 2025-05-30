@@ -315,7 +315,6 @@ summary::-webkit-details-marker {
 #sellform {
 	z-index: 9;
 	border: #63c 0.5rem solid;
-	padding:1rem;
 	background-color: #103;
 	border-radius: 2rem;
 }
@@ -496,7 +495,6 @@ footer {
 	#sellform {
 		width:55vw;
 		border-radius: 3rem;
-		padding: 2rem;
 	}
 	#sellform :where(li, p) {
 		font-size: 1.2rem;
