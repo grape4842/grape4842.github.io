@@ -349,6 +349,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
     left:0;
     top:0;
     height: 3rem;
+    z-index: 2;
 }
 @media screen and (width >= 1400px) {
     dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
