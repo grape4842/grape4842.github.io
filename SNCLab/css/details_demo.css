@@ -63,8 +63,6 @@ details[open] summary::after {
 .content, .content_inner {
 	background-color: #edf;
 	padding: 1.5rem;
-	display: flex;
-	flex-direction: column;
 	border-radius: 0.25rem;
 }
 footer {
