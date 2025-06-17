@@ -18,7 +18,7 @@ summary {
 	color:#207;
 	font-weight:bolder;
 	cursor:pointer;
-	border:1px solid #76f;
+	border:1px solid #74c;
 	list-style-type:none;
 	padding: 1rem;
 	outline-offset: -0.25rem;
@@ -34,7 +34,7 @@ summary {
 	width:0.75rem;
 	height: 0.75rem;
 	aspect-ratio: 1/1;
-	border:3px solid #98f;
+	border:3px solid #97f;
 	border-left:none;
 	border-bottom:none;
 	rotate:135deg;
@@ -61,7 +61,7 @@ details[open] summary::after {
 	transform: rotate(180deg);
 }
 .content, .content_inner {
-	background-color: #eef;
+	background-color: #edf;
 	padding: 1.5rem;
 	display: flex;
 	flex-direction: column;
@@ -71,7 +71,7 @@ footer {
 	padding: 3rem 0rem;
 }
 @media (prefers-color-scheme: dark) {
-	summary {color:#eef;}
-	.content, .content_inner {background-color: #317;}
+	summary {color:#edf;}
+	.content, .content_inner {background-color: #416;}
 }
 

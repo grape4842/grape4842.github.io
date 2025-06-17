@@ -2,97 +2,77 @@ document.addEventListener("DOMContentLoaded", () => {
   setUpAccordion();
 });
 
-/**
- * 브라우저 표준 기능(Web Animations API)을 사용하여 아코디언 애니메이션을 제어합니다
- */
 const setUpAccordion = () => {
   const details = document.querySelectorAll(".js_details");
-    const RUNNING_VALUE = "running"; 
-    // 애니메이션 실행 중일 때 부여할 예정인 커스텀 데이터 속성의 값
-    const IS_OPENED_CLASS = "is-opened"; 
-    // 아이콘 조작용 클래스 이름
+  const RUNNING_VALUE = "running";
+  const IS_OPENED_CLASS = "is-opened";
 
-    details.forEach((element) => {
-      const summary = element.querySelector(".js_summary");
-      const content = element.querySelector(".js_content");
+  details.forEach((element) => {
+    const summary = element.querySelector(".js_summary");
+    const content = element.querySelector(".js_content");
 
-      summary.addEventListener("click", (event) => {
-            // 디폴트 거동 무효화
-        event.preventDefault();
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
 
-            // 연타 방지용. 애니메이션 중이라면 클릭 이벤트를 받지 않고 리턴한다
-        if (element.dataset.animStatus === RUNNING_VALUE) {
-          return;
-        }
+      if (element.dataset.animStatus === RUNNING_VALUE) {
+        return;
+      }
 
-            // details의 open 속성 판정
-        if (element.open) {
-                // 아코디언을 닫을 때의 처리
-                // 아이콘 조작용 클래스를 전환(클래스 제거)
-          element.classList.toggle(IS_OPENED_CLASS);
+      if (element.open) {
+        // 아코디언을 닫을 때의 처리
+        // 아이콘 조작용 클래스 전환 (클래스 제거)
+        element.classList.toggle(IS_OPENED_CLASS);
 
-                // 애니메이션 실행
-          const closingAnim = content.animate(closingAnimKeyframes(content), animTiming);
-                // 애니메이션 실행 중용 값 부여
-          element.dataset.animStatus = RUNNING_VALUE;
+        // 핵심 변경: 애니메이션 시작 전에 open 속성을 제거하여 details의 기본 동작을 먼저 막는다.
+        // 이렇게 하면 애니메이션이 height:0으로 진행되는 동안 콘텐츠가 다시 튀어나오지 않는다.
+        element.removeAttribute("open");
 
-                // 애니메이션 완료 후에
-          closingAnim.onfinish = () => {
-                    // open 속성을 제거하다
-            element.removeAttribute("open");
-                    // 애니메이션 실행 중용 값을 제거하다
-            element.dataset.animStatus = "";
-          };
-        } else {
-                // 아코디언을 열 때의 처리
-                // open 속성 부여
-          element.setAttribute("open", "true");
+        // 애니메이션 실행
+        const closingAnim = content.animate(closingAnimKeyframes(content), animTiming);
+        element.dataset.animStatus = RUNNING_VALUE;
 
-                // 아이콘 조작용 클래스를 전환(클래스를 부여)
-          element.classList.toggle(IS_OPENED_CLASS);
+        closingAnim.onfinish = () => {
+          // 애니메이션 완료 후에는 dataset 상태만 초기화한다.
+          // open 속성은 이미 제거되었으므로 다시 제거할 필요 없다.
+          element.dataset.animStatus = "";
+        };
+      } else {
+        // 아코디언을 열 때의 처리
+        // open 속성 부여
+        element.setAttribute("open", "true");
 
-                // 애니메이션 실행
-          const openingAnim = content.animate(openingAnimKeyframes(content), animTiming);
-                // 애니메이션 실행 중용 값을 넣다
-          element.dataset.animStatus = RUNNING_VALUE;
+        // 아이콘 조작용 클래스를 전환 (클래스를 부여)
+        element.classList.toggle(IS_OPENED_CLASS);
 
-                // 애니메이션 완료 후 애니메이션 실행 중용 값 제거
-          openingAnim.onfinish = () => {
-            element.dataset.animStatus = "";
-          };
-        }
-      });
+        // 애니메이션 실행
+        const openingAnim = content.animate(openingAnimKeyframes(content), animTiming);
+        element.dataset.animStatus = RUNNING_VALUE;
+
+        openingAnim.onfinish = () => {
+          element.dataset.animStatus = "";
+        };
+      }
     });
-  }
+  });
+}
 
-/**
- * 애니메이션 시간과 글쓰기
- */
-  const animTiming = {
-    duration: 400,
-    easing: "ease-out"
-  };
+const animTiming = {
+  duration: 400,
+  easing: "ease" // 또는 "ease-in-out"으로 변경하여 더 부드러운 느낌을 시도해 볼 수 있습니다.
+};
 
-/**
- * 아코디언을 닫을 때의 키 프레임을 작성합니다.
- * @param content {HTMLElement}
- */
-  const closingAnimKeyframes = (content) => [{
-    height: content.offsetHeight + 'px', // height: "auto"라고 하면 잘 계산되지 않기 때문에 요소의 높이를 지정한다
-    opacity: 1,
-  }, {
-    height: 0,
-    opacity: 0,
-  }];
+const closingAnimKeyframes = (content) => [{
+  height: content.offsetHeight + 'px',
+  opacity: 1,
+}, {
+  height: 0,
+  opacity: 0,
+}];
 
-/**
- * 아코디언을 열 때의 키 프레임을 작성합니다.
- * @param content {HTMLElement}
- */
-  const openingAnimKeyframes = (content) => [{
-    height: 0,
-    opacity: 0,
-  }, {
-    height: content.offsetHeight + 'px',
-    opacity: 1,
-  }];
+const openingAnimKeyframes = (content) => [{
+  height: 0,
+  opacity: 0,
+}, {
+  height: content.offsetHeight + 'px',
+  opacity: 1,
+}];
