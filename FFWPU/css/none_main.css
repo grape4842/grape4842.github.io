@@ -16,6 +16,7 @@
 	display:grid;}
 .site-list li {
 	display:flex;
+	margin:0.25rem 0rem;
 	align-items:center;
 }
 .site-list a {
