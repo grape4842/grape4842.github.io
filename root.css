@@ -105,6 +105,8 @@
 		--pure_yellow : #ff0;
 		--pure_green : #0f0;
 		--pure_blue : #00f;
+		--kakao_yellow : #FEE500;
+		--naver_green:#2DB400;
 		font-size: 1rem;
 		font: inherit;
 		vertical-align: baseline;		line-height: 1.6; /* 가독성을 위한 행 높이 */
