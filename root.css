@@ -106,7 +106,8 @@
 		--pure_green : #0f0;
 		--pure_blue : #00f;
 		font-size: 1rem;
-		line-height: 1.6; /* 가독성을 위한 행 높이 */
+		font: inherit;
+		vertical-align: baseline;		line-height: 1.6; /* 가독성을 위한 행 높이 */
 		-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
 		margin: 0;
 		padding: 0;
@@ -118,6 +119,11 @@
 		scroll-behavior: smooth; /* 부드러운 스크롤 */
 		ruby-align: space-between;
 		scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
+		-webkit-text-size-adjust: none;
+		-moz-text-size-adjust: none;
+		-ms-text-size-adjust: none;
+		-o-text-size-adjust: none;
+		/* text크기를 자동으로 조절하지 말아라 */		
 	}
 }
 @supports not (min-block-size: 100dvb) {
@@ -126,6 +132,10 @@
 	}
 }
 body {overflow-y:scroll;}
+*::before,
+*::after {
+	box-sizing: inherit;
+}
 *, :where(body):not(img), body {
 	font-size: 1rem;
 	line-height: 1.6; /* 가독성을 위한 행 높이 */
@@ -142,6 +152,7 @@ body {overflow-y:scroll;}
 }
 
 :where(input, button, textarea, select, a) {
+	display: inline-flex;
 	font: inherit; /* 입력 요소는 부모의 폰트 속성 계승 */
 	box-sizing: border-box;
 	padding:0.5rem;
@@ -187,7 +198,6 @@ summary {
 	position: relative;
 	color: inherit; 
 	/* 링크의 색상을 부모 요소와 동일하게 설정 */
-	display: inline-flex;
 	text-decoration: transparent underline wavy; /* 링크의 밑줄 스타일 설정 */
 	transition: text-decoration 0.2s; 
 	/* 밑줄 스타일 변경 시 애니메이션 적용 */
@@ -205,12 +215,12 @@ summary {
 	display: inline-flex;
 	align-items: center;
 }
-
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
 	display: inline-flex; /* 멀티미디어 요소의 예측 가능한 디스플레이 설정 */
 	aspect-ratio: auto; /* 콘텐츠의 종횡비 유지 */
 	object-fit: contain; /* 콘텐츠가 부모 요소를 벗어나지 않도록 설정 */
 	width: 100%; /* 부모 요소에 꽉 차게 설정 */
+	height: auto;
 	position: relative;
 	vertical-align: middle;
 	border:none;
@@ -225,6 +235,7 @@ summary {
 :where(p, h1, h2, h3, h4, h5, h6) {
 	margin-block-start: 0;
 	margin-block-end: 0;
+	line-height: 1.3;
 	overflow-wrap: break-word; 
 }
 
@@ -241,12 +252,22 @@ summary {
 	block-size: 0;
 	overflow: visible;
 }
-
-table {
-	border-collapse: collapse;
-	/* 테이블 셀의 경계선 결합 */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 
+/*표 관련 속성*/
+/* 테이블 셀의 경계선 결합 */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th, td {padding:0.25rem;}
 
 /* 스크롤바의 스타일 */
 ::-webkit-scrollbar-thumb {
