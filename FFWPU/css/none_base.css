@@ -1,5 +1,8 @@
 :root {
+	--variable_purple:#dcf;
+	--variable_invert_purple:#63b;
 	--default_purple:#63b;
+	--transparent_purple:#63b5;
 	--border_purple:#a7f;
 	--light_purple:#baf;
 	--dark_purple:#315;
@@ -7,6 +10,8 @@
 }
 @media (prefers-color-scheme: dark) {
 	:root{
+		--variable_purple:#213;
+		--variable_invert_purple:#baf;
 		--yellow:#ffa;
 	}
 }
@@ -19,7 +24,7 @@ nav {
 	align-items:center;
 	justify-content:space-between;
 	flex-wrap:wrap;
-	}
+}
 img, video {
 	box-sizing:border-box;
 	display:inline-flex;
@@ -40,31 +45,31 @@ footer {
 	margin-top:2rem;
 }
 footer > div {
-		padding:2rem;
-		margin:0px auto}
-address {
-	width: 100%;
-	line-height: 3rem;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-}
-address svg {
-	height: 2rem;
-	width: 2rem;
-}
+	padding:2rem;
+	margin:0px auto}
+	address {
+		width: 100%;
+		line-height: 3rem;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	address svg {
+		height: 2rem;
+		width: 2rem;
+	}
 
-::-webkit-scrollbar-thumb {
-    background:rgba(55 0 200 / 0.3); /* 스크롤바의 색상 */
-    border:solid 1px var(--dark_purple);
-    border-radius: 10rem;
-}
+	::-webkit-scrollbar-thumb {
+		background:rgba(55 0 200 / 0.3); /* 스크롤바의 색상 */
+		border:solid 1px var(--dark_purple);
+		border-radius: 10rem;
+	}
 
-::-webkit-scrollbar-track {
-	border-radius: 10rem;
-	border:solid 1px var(--dark_purple);
-    background:rgba(0 0 0 / 0.1);  /*스크롤바 뒷 배경 색상*/
-}
+	::-webkit-scrollbar-track {
+		border-radius: 10rem;
+		border:solid 1px var(--dark_purple);
+		background:rgba(0 0 0 / 0.1);  /*스크롤바 뒷 배경 색상*/
+	}
 
 /*클릭가능한 요소 스타일*/
 a {
@@ -75,49 +80,49 @@ a {
 	text-decoration:transparent; 
 	transition:text-decoration 0.2s, outline 0.2s;}
 
-a:focus, a:hover {
-	text-decoration:underline wavy #eef;
-	text-underline-offset:4px;}
-a:active, summary:active {
-	transition:0.2s filter, 0.4s transform;
-	filter:brightness(1.2) saturate(120%);
-}
-summary {
-	padding:1rem;
-	transition:list-style 0.2s;
-	background-color:var(--default_purple);
-	color:#fff;
-}
+	a:focus, a:hover {
+		text-decoration:underline wavy #eef;
+		text-underline-offset:4px;}
+		a:active, summary:active {
+			transition:0.2s filter, 0.4s transform;
+			filter:brightness(1.2) saturate(120%);
+		}
+		summary {
+			padding:1rem;
+			transition:list-style 0.2s;
+			background-color:var(--default_purple);
+			color:#fff;
+		}
 
-details {
-	transition:height 3s ease-in;
-	margin:1rem auto;
-	border:1px solid var(--dark_purple);
-	box-sizing:border-box;
-}
+		details {
+			transition:height 3s ease-in;
+			margin:1rem auto;
+			border:1px solid var(--dark_purple);
+			box-sizing:border-box;
+		}
 
-textarea {
-	line-height:1.5rem;
-	resize:none;
-	font-family:"BIZ-UDGothic";
-	font-size:1.2rem;
-	width:100%;
-	box-sizing:border-box;
-	padding:1rem;
-	margin:0px auto;
-	margin-top:1rem;
-	border:var(--default_purple); 1px solid;}
+		textarea {
+			line-height:1.5rem;
+			resize:none;
+			font-family:"BIZ-UDGothic";
+			font-size:1.2rem;
+			width:100%;
+			box-sizing:border-box;
+			padding:1rem;
+			margin:0px auto;
+			margin-top:1rem;
+			border:var(--default_purple); 1px solid;}
 
 
-.overX {
-	overflow-x: scroll;
-}
+			.overX {
+				overflow-x: scroll;
+			}
 
-svg {
-	aspect-ratio: auto;
-	max-height: 2rem;
-	max-width: 2rem ;
-}
+			svg {
+				aspect-ratio: auto;
+				max-height: 2rem;
+				max-width: 2rem ;
+			}
 
 /*버스 시간표 관련*/
 #bus_popup {
@@ -141,11 +146,11 @@ table {
 }
 th, td {
 	word-break: keep-all; line-break:normal;
-	border:1px solid var(--light_purple);
+	border:1px solid var(--transparent_purple);
 	vertical-align:middle; 
-	border:1px solid var(--dark_purple);
 	line-height: 2rem; 
-	padding:0.7rem;}
+	padding:0.7rem;
+}
 th, .`_table tr > *:first-child {
 	background-color:var(--default_purple);
 	color: var(--pure_white);
@@ -154,8 +159,7 @@ th, .`_table tr > *:first-child {
 }
 th {
 	line-height: 1.3rem;
-	background: var(--default_purple);
-	color:var(--pure_white);
+	background: var(--variable_purple);
 }
 td {font-weight:400;}
 th svg, td svg {
@@ -163,7 +167,9 @@ th svg, td svg {
 	width: 2rem;
 	height: 2rem;
 }
-
+.map_table svg {
+	fill:var(--variable_invert_purple);
+}
 p {margin:0px; padding:0.3rem 0px;}
 h2, h3, h4, h5, h6 {
 	padding:0.5rem;
@@ -184,7 +190,7 @@ h2 {
 	margin-right:10px;
 	min-width:2rem;
 	min-height:2rem;
- 	color:white;
+	color:white;
 }
 
 #logo {
@@ -204,48 +210,48 @@ h2 {
 	border-radius:5px;
 	color:#fff;
 	padding:0px 5px;}
-#page-top {
-	width:2.5rem;
-	height:2.5rem;
-	padding:0px;
-	position:fixed;
-	bottom:5rem;
-	right:1rem;
-	justify-content: center;
-	border-radius:100%;
-	z-index:3;
-	background:var(--dark_purple);
-	border:2px solid var(--default_purple);
-	opacity:0.7;
-}
-#page-top svg {
-	width:100%;
-	height:100%;
-}
+	#page-top {
+		width:2.5rem;
+		height:2.5rem;
+		padding:0px;
+		position:fixed;
+		bottom:5rem;
+		right:1rem;
+		justify-content: center;
+		border-radius:100%;
+		z-index:3;
+		background:var(--dark_purple);
+		border:2px solid var(--default_purple);
+		opacity:0.7;
+	}
+	#page-top svg {
+		width:100%;
+		height:100%;
+	}
 
-.news_and_notice article {
-	max-width: 30rem;
-}
-.news_and_notice h3 {
-	justify-content: center;
-	display: flex;
-}
-.news_and_notice h3 img {
-	border-radius: 10rem;
-	margin-right: 1rem;
-}
-.news_and_notice li {
-	padding:0.5rem 0rem;
-}
-.news_and_notice a {
-	width: 100%;
-}
-.news_and_notice img {
-	max-width: 3rem;
-}
-.news_and_notice a span {
-	padding-left:0.5rem;
-	width: 100%;
-	justify-content: center;
-}
-.popup_header {position: relative;}
+	.news_and_notice article {
+		max-width: 30rem;
+	}
+	.news_and_notice h3 {
+		justify-content: center;
+		display: flex;
+	}
+	.news_and_notice h3 img {
+		border-radius: 10rem;
+		margin-right: 1rem;
+	}
+	.news_and_notice li {
+		padding:0.5rem 0rem;
+	}
+	.news_and_notice a {
+		width: 100%;
+	}
+	.news_and_notice img {
+		max-width: 3rem;
+	}
+	.news_and_notice a span {
+		padding-left:0.5rem;
+		width: 100%;
+		justify-content: center;
+	}
+	.popup_header {position: relative;}
