@@ -30,6 +30,9 @@
 	text-decoration:none;
 	flex-direction:column;
 }
+.site-list span {
+	width: 100%;
+}
 .site-list img, .yvl a .ylogo {
 	box-sizing: content-box;
 	height:2rem;
