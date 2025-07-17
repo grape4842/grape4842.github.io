@@ -101,6 +101,10 @@
     :root {
         --pure_white : #fff;
         --pure_black : #000;
+        --pure_red : #f00;
+        --pure_yellow : #ff0;
+        --pure_green : #0f0;
+        --pure_blue : #00f;
         font-size: 1rem;
         line-height: 1.6; /* 가독성을 위한 행 높이 */
         -webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
@@ -415,12 +419,12 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 /*고대비 모드*/
 @media (prefers-contrast:more) {
     body {
-        background-color:black !important;
-        color:white;
+        background-color:var(--pure_black) !important;
+        color:var(--pure_white);
     }
     ::selection {
-        background:#fff; 
-        color:black;
+        background:var(--pure_white); 
+        color:var(--pure_black);
     }
 
 }

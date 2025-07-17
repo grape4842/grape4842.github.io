@@ -71,7 +71,7 @@ a:focus, a:hover {
 	text-underline-offset:4px;}
 a:active, summary:active {
 	transition:0.2s filter, 0.4s transform;
-	filter:brightness(1.2) saturation(120%);
+	filter:brightness(1.2) saturate(120%);
 }
 summary {
 	padding:1rem;
