@@ -1,3 +1,5 @@
+@import url("../../root.css")
+@charset "utf-8";
 :root {
 	--variable_purple:#dcf;
 	--variable_invert_purple:#63b;
@@ -17,7 +19,7 @@
 }
 /*큰 영역*/
 header, footer {
-	backdrop-filter: blur(20px);
+	backdrop-filter: blur(1.25rem);
 }
 nav {
 	display:flex;
@@ -46,7 +48,8 @@ footer {
 }
 footer > div {
 	padding:2rem;
-	margin:0px auto}
+	margin:0px auto;
+}
 	address {
 		width: 100%;
 		line-height: 3rem;
@@ -78,51 +81,54 @@ a {
 	padding:0.5rem 0.25rem;
 	border-radius: 0.5rem;
 	text-decoration:transparent; 
-	transition:text-decoration 0.2s, outline 0.2s;}
+	transition:text-decoration 0.2s, outline 0.2s;
+}
 
-	a:focus, a:hover {
-		text-decoration:underline wavy #eef;
-		text-underline-offset:4px;}
-		a:active, summary:active {
-			transition:0.2s filter, 0.4s transform;
-			filter:brightness(1.2) saturate(120%);
-		}
-		summary {
-			padding:1rem;
-			transition:list-style 0.2s;
-			background-color:var(--default_purple);
-			color:#fff;
-		}
+a:focus, a:hover {
+	text-decoration:underline wavy #eef;
+	text-underline-offset:4px;
+}
+a:active, summary:active {
+	transition:0.2s filter, 0.4s transform;
+	filter:brightness(1.2) saturate(120%);
+}
+summary {
+	padding:1rem;
+	transition:list-style 0.2s;
+	background-color:var(--default_purple);
+	color:#fff;
+}
 
-		details {
-			transition:height 3s ease-in;
-			margin:1rem auto;
-			border:1px solid var(--dark_purple);
-			box-sizing:border-box;
-		}
+details {
+	transition:height 3s ease-in;
+	margin:1rem auto;
+	border:1px solid var(--dark_purple);
+	box-sizing:border-box;
+}
 
-		textarea {
-			line-height:1.5rem;
-			resize:none;
-			font-family:"BIZ-UDGothic";
-			font-size:1.2rem;
-			width:100%;
-			box-sizing:border-box;
-			padding:1rem;
-			margin:0px auto;
-			margin-top:1rem;
-			border:var(--default_purple); 1px solid;}
+textarea {
+	line-height:1.5rem;
+	resize:none;
+	font-family:"BIZ-UDGothic";
+	font-size:1.2rem;
+	width:100%;
+	box-sizing:border-box;
+	padding:1rem;
+	margin:0px auto;
+	margin-top:1rem;
+	border:var(--default_purple); 1px solid;
+}
 
 
-			.overX {
-				overflow-x: scroll;
-			}
+.overX {
+	overflow-x: scroll;
+}
 
-			svg {
-				aspect-ratio: auto;
-				max-height: 2rem;
-				max-width: 2rem ;
-			}
+svg {
+	aspect-ratio: auto;
+	max-height: 2rem;
+	max-width: 2rem ;
+}
 
 /*버스 시간표 관련*/
 #bus_popup {
@@ -134,10 +140,12 @@ a {
 	height: 3rem;
 	background: transparent;
 }
-#bus_popup img {
+#bus_popup svg {
+	fill: var(--variable_invert_purple);
 
 }
 #bus_time {padding:0;}
+#bus_time h2 {font-size:1rem!important;}
 /*표 관련 선언*/
 table {
 	margin:0 auto;
@@ -209,49 +217,52 @@ h2 {
 	margin-right:10px;
 	border-radius:5px;
 	color:#fff;
-	padding:0px 5px;}
-	#page-top {
-		width:2.5rem;
-		height:2.5rem;
-		padding:0px;
-		position:fixed;
-		bottom:5rem;
-		right:1rem;
-		justify-content: center;
-		border-radius:100%;
-		z-index:3;
-		background:var(--dark_purple);
-		border:2px solid var(--default_purple);
-		opacity:0.7;
-	}
-	#page-top svg {
-		width:100%;
-		height:100%;
-	}
+	padding:0px 5px;
+}
+#page_top {
+	width:2.5rem;
+	height:2.5rem;
+	aspect-ratio: 1/1;
+	padding:0px;
+	position:fixed;
+	bottom:5vh;
+	right:5vw;
+	justify-content: center;
+	border-radius:100%;
+	z-index:3;
+	background:var(--dark_purple);
+	border:2px solid var(--default_purple);
+	opacity:0.7;
+	backdrop-filter: blur(1.25rem);
+}
+#page-top svg {
+	width:100%;
+	height:100%;
+}
 
-	.news_and_notice article {
-		max-width: 30rem;
-	}
-	.news_and_notice h3 {
-		justify-content: center;
-		display: flex;
-	}
-	.news_and_notice h3 img {
-		border-radius: 10rem;
-		margin-right: 1rem;
-	}
-	.news_and_notice li {
-		padding:0.5rem 0rem;
-	}
-	.news_and_notice a {
-		width: 100%;
-	}
-	.news_and_notice img {
-		max-width: 3rem;
-	}
-	.news_and_notice a span {
-		padding-left:0.5rem;
-		width: 100%;
-		justify-content: center;
-	}
-	.popup_header {position: relative;}
+.news_and_notice article {
+	max-width: 30rem;
+}
+.news_and_notice h3 {
+	justify-content: center;
+	display: flex;
+}
+.news_and_notice h3 img {
+	border-radius: 10rem;
+	margin-right: 1rem;
+}
+.news_and_notice li {
+	padding:0.5rem 0rem;
+}
+.news_and_notice a {
+	width: 100%;
+}
+.news_and_notice img {
+	max-width: 3rem;
+}
+.news_and_notice a span {
+	padding-left:0.5rem;
+	width: 100%;
+	justify-content: center;
+}
+.popup_header {position: relative;}

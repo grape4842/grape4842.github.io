@@ -59,7 +59,9 @@
             </h1>
             <div class="bus_popup_area">
                 <button id="bus_popup" type="button" aria-haspopup="dialog" onclick="document.getElementById('bus_time').showModal();" class="hj_bus_time">
-                    <img src="../icon/departure_board_40dp_FFF_FILL1_wght400_GRAD200_opsz48.svg" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
+                        <path d="m775-606 26-26-76-77v-134h-38v144l88 93Zm-69.81 92Q626-514 570-570.01t-56-135.48q0-79.51 56-135.01Q626-896 705-896q80 0 135.5 55.5T896-705q0 80-55.81 135.5-55.82 55.5-135 55.5ZM236.24-260q24.26 0 41.01-16.93Q294-293.87 294-318.06q0-23.44-16.99-40.69Q260.03-376 235.76-376q-24.26 0-41.01 17.31Q178-341.38 178-317.44t16.99 40.69Q211.97-260 236.24-260Zm310 0q24.26 0 41.01-16.93Q604-293.87 604-318.06q0-23.44-16.99-40.69Q570.03-376 545.76-376q-24.26 0-41.01 17.31Q488-341.38 488-317.44t16.99 40.69Q521.97-260 546.24-260ZM152.51-64q-13.53 0-24.02-8.26Q118-80.53 118-92.34V-178q-26-16-40-45t-14-65.84v-402.8q0-78.12 90.5-111.24Q245-836 469-836q-10 22-22 58.46-12 36.47-12 72.54 0 13 1.5 25.5T442-655H129v162h404q36 28 80 43t92.18 15q3.05 0 6.47.17 3.42.16 6.35-.17v146q0 37-14 66t-40 45v85.66q0 11.81-10.41 20.08Q643.18-64 629-64h-23q-15.45 0-25.72-8.26Q570-80.53 570-93v-53H212v53q0 12.47-10.27 20.74Q191.45-64 176-64h-23.49Z"/>
+                    </svg>
                     <span class="hidden">잠실역 출발 HJ매그놀리아 국제병원행 버스 7001번 버스 시간표</span>
                 </button>
                 <dialog id="bus_time">
@@ -752,13 +754,13 @@
     <footer>
         <div class="content_width">
             <address>© Copyright @purplemiyazawa 2025</address>
-            <a href="" id="page-top" aria-label="페이지 최상단으로 이동">
-                <svg class="darkV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(255,255,255,1)" />
-                </svg>
-            </a>
         </div>
     </footer>
+    <a href="" id="page_top" aria-label="페이지 최상단으로 이동">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(255,255,255,1)" />
+        </svg>
+    </a>
 </body>
 </html>

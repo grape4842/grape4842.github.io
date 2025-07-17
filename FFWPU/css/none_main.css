@@ -1,3 +1,4 @@
+@import url("../../root.css")
 @charset "utf-8";
 
 /*모바일 기준*/
@@ -60,10 +61,14 @@
 	font-weight: 900;
 	border: 2px solid rgba(255, 255, 255, 0.3);
 	border-radius: 1rem;
+	color:var(--pure_white);
 }
 .entry svg {
 	padding:0px;
 	padding-right: 0.5rem;
+}
+.entry span {
+	color:var(--pure_white);
 }
 .map-icon {
 	width: 3rem;	

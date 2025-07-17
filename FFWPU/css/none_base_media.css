@@ -1,3 +1,5 @@
+@import url("../../root.css")
+@charset "utf-8";
 @media screen and (width >= 1400px) {
 	header {
 		top:0px;
