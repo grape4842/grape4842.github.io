@@ -136,7 +136,7 @@ th, td {
 	border:1px solid #325;
 	line-height: 2rem; 
 	padding:0.7rem;}
-th, .bus_table tr > *:first-child {
+th, .`_table tr > *:first-child {
 	background-color:var(--default_purple);
 	color: #fff;
 	font-weight:700;
@@ -179,17 +179,6 @@ h2 {
 	padding: 0.5rem 0rem;
 	padding-right: 0.5rem;
 }
-.numline {aspet-ratio:1/1;}
-.line1 {background:#052F93;}
-.line2 {background:#10A643;}
-.line3 {background:#DE6D00;}
-.line4 {background:#0099d1;}
-.line5 {background:#A95094;}
-.line6 {background:#D08D1A;}
-.line7 {background:#657931;}
-.line8 {background:#E74E6D;}
-.line9 {background:#B58600;}
-.gyline {background-color:#5F9C82; padding:0px 10px;}
 
 .bus_line {
 	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
@@ -201,10 +190,6 @@ h2 {
 	border-radius:5px;
 	color:#fff;
 	padding:0px 5px;}
-.g-bus {background-color:#5BB025;}
-.b-bus {background-color:#3D5BAB;}
-.r-bus {background-color:#F73711;}
-.meter {color:#C30; padding:0px 10px;}
 #page-top {
 	width:2.5rem;
 	height:2.5rem;

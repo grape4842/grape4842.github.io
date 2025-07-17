@@ -485,12 +485,12 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 }
 
 /*1000px〜1400px iPad Pro*/
-@media screen and (1000px <= width < 1400px )  {
+@media screen and (1000px <= width) and (width < 1400px)  {
     dialog, .content_width {width: 70vw;}
 }
 
 /*700px〜1200px iPad*/
-@media screen and (700px <= width < 1000px )  {
+@media screen and (700px <= width) and (width < 1000px )  {
     dialog, .content_width {
         width: 80vw;
     }
@@ -498,16 +498,15 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 }
 /*Mobile*/
-@media screen and (340px <= width < 700px ) {
-    .content_width, dialog {min-width: 80dvw;}
+@media screen and (340px <= width) and (width < 700px ) {
+    .content_width, dialog {min-width: 80vw;}
 
 }
 /*folded, watch*/
-/*watch*/
-@media screen and (330px > width) {
+@media screen (330px > width) {
     .content_width {width: 95vw;}
     dialog {
-        min-width: 90dvw;
-        max-width: 95dvw;
+        min-width: 90vw;
+        max-width: 95vw;
     }
 }

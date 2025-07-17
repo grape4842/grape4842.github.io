@@ -73,8 +73,8 @@
 	border-radius: 3px;
 }
 
-/*너비가 1200이상일때 (PC)*/
-@media screen and (width >= 1400px) {
+/*너비가 1400이상일때 (PC)*/
+@media screen and (min-width:1400px) {
 	article {padding:3rem;}
 	.site-list {grid-template-columns: 1fr 1fr 1fr;}
 	.site-list li {
