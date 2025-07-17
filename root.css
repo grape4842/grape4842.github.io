@@ -109,7 +109,8 @@
 		--naver_green:#2DB400;
 		font-size: 1rem;
 		font: inherit;
-		vertical-align: baseline;		line-height: 1.6; /* 가독성을 위한 행 높이 */
+		vertical-align: baseline;
+		line-height: 1.6; /* 가독성을 위한 행 높이 */
 		-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
 		margin: 0;
 		padding: 0;
