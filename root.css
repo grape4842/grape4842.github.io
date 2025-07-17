@@ -99,10 +99,19 @@
 
 @layer reset css {
     :root {
+        --pure_white : #fff;
+        --pure_black : #000;
         font-size: 1rem;
+        line-height: 1.6; /* 가독성을 위한 행 높이 */
+        -webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        position: relative;
+        box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
+        -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
+        color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
+        font-family: "KoddiUDOnGothic", "BIZ-UDPGothic","Pretendard Variable", sans-serif, serif;
+        scroll-behavior: smooth; /* 부드러운 스크롤 */
         ruby-align: space-between;
         scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
     }
@@ -112,26 +121,28 @@
         block-size: 100%; /* 브라우저 호환성을 위한 설정 */
     }
 }
-
-:where(input, button, textarea, select, a) {
-    font: inherit; /* 입력 요소는 부모의 폰트 속성 계승 */
-    box-sizing: border-box;
-    padding:0.5rem;
-    transition: filter 0.2s;
-}
-boxy {overflow-y:scroll;}
+body {overflow-y:scroll;}
 *, :where(body):not(img), body {
     font-size: 1rem;
     line-height: 1.6; /* 가독성을 위한 행 높이 */
     -webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
-    padding:0;
-    margin:0;
+    margin: 0;
+    padding: 0;
     position: relative;
     box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
     -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
     color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
     font-family: "KoddiUDOnGothic", "BIZ-UDPGothic","Pretendard Variable", sans-serif, serif;
     scroll-behavior: smooth; /* 부드러운 스크롤 */
+    ruby-align: space-between;
+    scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
+}
+
+:where(input, button, textarea, select, a) {
+    font: inherit; /* 입력 요소는 부모의 폰트 속성 계승 */
+    box-sizing: border-box;
+    padding:0.5rem;
+    transition: filter 0.2s;
 }
 :where(input[type="text"], input[type="password"], input[type="search"], select) {
     padding-left:0.5rem;
@@ -413,6 +424,45 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
     }
 
 }
+
+/*서울의 버스와 지하철*/
+.metro_line {
+    text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
+    display:inline-flex;
+    font-size: 1rem;
+    border-radius:100px;
+    justify-content:center;
+    align-items:center;
+    margin-right:10px;
+    min-width:2rem;
+    min-height:2rem;
+    color:var(--pure_white);
+}
+.numline {aspet-ratio:1/1;}
+.line1 {background:#052F93;}
+.line2 {background:#10A643;}
+.line3 {background:#DE6D00;}
+.line4 {background:#0099d1;}
+.line5 {background:#A95094;}
+.line6 {background:#D08D1A;}
+.line7 {background:#657931;}
+.line8 {background:#E74E6D;}
+.line9 {background:#B58600;}
+.gyline {background-color:#5F9C82; padding:0px 10px;}
+
+.bus_line {
+    text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
+    display:inline-flex;
+    font-size:1rem;
+    justify-content:center;
+    align-items:center;
+    border-radius:1rem;
+    color:#fff;
+    padding:0px 5px;}
+    .g-bus {background-color:#5BB025;}
+    .b-bus {background-color:#3D5BAB;}
+    .r-bus {background-color:#F73711;}
+    .meter {color:#C30; padding:0px 10px;}
 
 /*Dark Mode*/
 @media (prefers-color-scheme: dark) {

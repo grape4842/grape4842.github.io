@@ -8,10 +8,6 @@
 		transition: 0.3s ease;
 		}
 
-.hello p {
-	display:inline;
-	padding-right:1rem;
-	line-height: 2rem;}
 .site-list {
 	display:grid;}
 .site-list li {
