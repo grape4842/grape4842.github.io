@@ -507,7 +507,6 @@ details[open]::details-content {
 	}
 }
 
-}
 /*Mobile*/
 @media screen and (340px <= width) and (width < 700px ) {
 	.content_width, dialog {min-width: 80vw;}
