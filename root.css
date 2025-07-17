@@ -407,7 +407,8 @@ details[open]::details-content {
 .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
 	display:unset;
 }
-.content_width {
+.content_width, dialog {
+	min-width: 80vw;
 	width: 90vw;
 	margin: 0rem auto;
 }
@@ -490,14 +491,22 @@ details[open]::details-content {
 
 /*PC*/
 @media screen and (width >= 1400px) {
-	.View_PC, .PCV, .PC_View, .pc_view {display:unset;}
-	.View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display:none;}
-	dialog, .content_width {width: 60vw;}
+	.View_PC, .PCV, .PC_View, .pc_view {
+		display:unset;
+	}
+	.View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
+		display:none;
+	}
+	dialog, .content_width {
+		width: 60vw;
+	}
 }
 
 /*1000px〜1400px iPad Pro*/
 @media screen and (1000px <= width) and (width < 1400px)  {
-	dialog, .content_width {width: 70vw;}
+	dialog, .content_width {
+		width: 70vw;
+	}
 }
 
 /*700px〜1200px iPad*/
@@ -509,14 +518,12 @@ details[open]::details-content {
 
 /*Mobile*/
 @media screen and (340px <= width) and (width < 700px ) {
-	.content_width, dialog {min-width: 80vw;}
 
 }
 /*folded, watch*/
 @media screen (330px > width) {
-	.content_width {width: 95vw;}
-	dialog {
+	.content_width, dialog {
+		width: 95vw;
 		min-width: 90vw;
-		max-width: 95vw;
 	}
 }
