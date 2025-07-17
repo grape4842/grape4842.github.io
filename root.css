@@ -527,6 +527,7 @@ details[open]::details-content {
 	dialog, .content_width {
 		width: 60vw;
 	}
+	th, td {padding:1rem;}
 }
 
 /*1000px〜1400px iPad Pro*/
@@ -553,4 +554,5 @@ details[open]::details-content {
 		width: 95vw;
 		min-width: 90vw;
 	}
+	th, td {padding:0.25rem;}
 }
