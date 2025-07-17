@@ -1,16 +1,16 @@
 @charset "utf-8";
 :lang(ko) {
-    word-break: keep-all;
-    line-break:normal;
+	word-break: keep-all;
+	line-break:normal;
 }
 :lang(ja) {
-    font-family:"Pretendard Variable";
-    word-break: auto-phrase;
-    font-feature-settings: "palt";
+	font-family:"Pretendard Variable";
+	word-break: auto-phrase;
+	font-feature-settings: "palt";
 }
 ::selection {
-    background:#baf; 
-    color:#000;
+	background:#baf; 
+	color:#000;
 }
 ::placeholder{color:#555;}
 /*폰트 설성*/
@@ -18,151 +18,150 @@
 /*한국어*/
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 @font-face { 
-    font-family:"KoddiUDOnGothic";
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
-    font-weight:400;
-    font-display : swap;
+	font-family:"KoddiUDOnGothic";
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff") format("woff");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.otf") format("opentype");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Regular.woff2") format("woff2");
+	font-weight:400;
+	font-display : swap;
 } 
 @font-face { 
-    font-family:"KoddiUDOnGothic";
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
-    font-weight:700;
-    font-display : swap;
+	font-family:"KoddiUDOnGothic";
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2") format("woff2");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff") format("woff");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.otf") format("opentype");
+	font-weight:700;
+	font-display : swap;
 } 
 @font-face { 
-    font-family:"KoddiUDOnGothic";
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
-    src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
-    font-weight:900;
-    font-display : swap;
+	font-family:"KoddiUDOnGothic";
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2") format("woff2");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff") format("woff");
+	src: url("font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.otf") format("opentype");
+	font-weight:900;
+	font-display : swap;
 }
 
 /*일본어 日本語*/
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @font-face { 
-    font-family:"BIZ-UDPGothic";
-    src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
-    font-weight:400;
-    font-display : swap;
+	font-family:"BIZ-UDPGothic";
+	src: url("font/BIZ-UD/BIZ-UDPGothic.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
 } 
 
 @font-face { 
-    font-family:"BIZ-UDPGothic";
-    src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
-    font-weight:700;
-    font-display : swap;
+	font-family:"BIZ-UDPGothic";
+	src: url("font/BIZ-UD/BIZ-UDPGothic-Bold.ttf") format("truetype");
+	font-weight:700;
+	font-display : swap;
 } 
 
 @font-face { 
-    font-family:"BIZ-UDMincho";
-    src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
-    font-weight:400;
-    font-display : swap;
+	font-family:"BIZ-UDMincho";
+	src: url("font/BIZ-UD/BIZ-UDMincho-Regular.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
 } 
 @font-face { 
-    font-family:"BIZ-UDPMincho";
-    src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
-    font-weight:400;
-    font-display : swap;
+	font-family:"BIZ-UDPMincho";
+	src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
 } 
 @font-face { 
-    font-family:"BIZ-UDGothic";
-    src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
-    font-weight:400;
-    font-display : swap;
+	font-family:"BIZ-UDGothic";
+	src: url("font/BIZ-UD/BIZ-UDGothic.ttf") format("truetype");
+	font-weight:400;
+	font-display : swap;
 } 
 
 @font-face { 
-    font-family:"BIZ-UDGothic";
-    src: url("font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
-    font-weight:700;
-    font-display : swap;
+	font-family:"BIZ-UDGothic";
+	src: url("font/BIZ-UD/BIZ-UDGothic-Bold.ttf") format("truetype");
+	font-weight:700;
+	font-display : swap;
 } 
 
 /*숨김텍스트 설정*/
 .hidden, .blind, .a11y-txt, .sr-only, .sr_only, .a11y_txt {
-  overflow: hidden;
-  border: 0;
-  position: absolute;
-  /* relative를 사용해도 무관할 듯 하다 */
-  z-index: -1;
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
+	overflow: hidden;
+	border: 0;
+	position: absolute;
+	/* relative를 사용해도 무관할 듯 하다 */
+	z-index: -1;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
 }
 
 @layer reset css {
-    :root {
-        --pure_white : #fff;
-        --pure_black : #000;
-        --pure_red : #f00;
-        --pure_yellow : #ff0;
-        --pure_green : #0f0;
-        --pure_blue : #00f;
-        font-size: 1rem;
-        line-height: 1.6; /* 가독성을 위한 행 높이 */
-        -webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
-        margin: 0;
-        padding: 0;
-        position: relative;
-        box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
-        -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
-        color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
-        font-family: "KoddiUDOnGothic", "BIZ-UDPGothic","Pretendard Variable", sans-serif, serif;
-        scroll-behavior: smooth; /* 부드러운 스크롤 */
-        ruby-align: space-between;
-        scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
-    }
+	:root {
+		--pure_white : #fff;
+		--pure_black : #000;
+		--pure_red : #f00;
+		--pure_yellow : #ff0;
+		--pure_green : #0f0;
+		--pure_blue : #00f;
+		font-size: 1rem;
+		line-height: 1.6; /* 가독성을 위한 행 높이 */
+		-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
+		margin: 0;
+		padding: 0;
+		position: relative;
+		box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
+		-webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
+		color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
+		font-family: "KoddiUDOnGothic", "BIZ-UDPGothic","Pretendard Variable", sans-serif, serif;
+		scroll-behavior: smooth; /* 부드러운 스크롤 */
+		ruby-align: space-between;
+		scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
+	}
 }
 @supports not (min-block-size: 100dvb) {
-    :where(html) {
-        block-size: 100%; /* 브라우저 호환성을 위한 설정 */
-    }
+	:where(html) {
+		block-size: 100%; /* 브라우저 호환성을 위한 설정 */
+	}
 }
 body {overflow-y:scroll;}
 *, :where(body):not(img), body {
-    font-size: 1rem;
-    line-height: 1.6; /* 가독성을 위한 행 높이 */
-    -webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
-    margin: 0;
-    padding: 0;
-    position: relative;
-    box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
-    -webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
-    color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
-    font-family: "KoddiUDOnGothic", "BIZ-UDPGothic","Pretendard Variable", sans-serif, serif;
-    scroll-behavior: smooth; /* 부드러운 스크롤 */
-    ruby-align: space-between;
-    scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
+	font-size: 1rem;
+	line-height: 1.6; /* 가독성을 위한 행 높이 */
+	-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
+	margin: 0;
+	padding: 0;
+	position: relative;
+	box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
+	-webkit-text-size-adjust: none; /* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
+	color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
+	font-family: "KoddiUDOnGothic", "BIZ-UDPGothic","Pretendard Variable", sans-serif, serif;
+	scroll-behavior: smooth; /* 부드러운 스크롤 */
+	ruby-align: space-between;
 }
 
 :where(input, button, textarea, select, a) {
-    font: inherit; /* 입력 요소는 부모의 폰트 속성 계승 */
-    box-sizing: border-box;
-    padding:0.5rem;
-    transition: filter 0.2s;
+	font: inherit; /* 입력 요소는 부모의 폰트 속성 계승 */
+	box-sizing: border-box;
+	padding:0.5rem;
+	transition: filter 0.2s;
 }
 :where(input[type="text"], input[type="password"], input[type="search"], select) {
-    padding-left:0.5rem;
+	padding-left:0.5rem;
 }
 :where(input[type="text"], input[type="password"], input[type="search"]) {
-    cursor: text !important;
+	cursor: text !important;
 }
 :where(textarea) {
-    resize: vertical; /* 텍스트 영역의 가로 크기 조정 비활성화 */
-    padding: 0.5rem; /* 텍스트 영역의 내부 여백 */
+	resize: vertical; /* 텍스트 영역의 가로 크기 조정 비활성화 */
+	padding: 0.5rem; /* 텍스트 영역의 내부 여백 */
 }
 
 :where(:focus, button, label, select, summary, [role='button'], [role='option'], input, [type="file"]::file-selector-button) {
-    cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 변경 */
-    position: relative;
-    transition-duration: 0.2s;
+	cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 변경 */
+	position: relative;
+	transition-duration: 0.2s;
 }
 
 summary::-webkit-details-marker {
@@ -170,114 +169,114 @@ summary::-webkit-details-marker {
 display: none;
 }
 summary {
-    list-style-type: none;
-    /* 그 외의 브라우저용 사용자 정의 스타일 */
+	list-style-type: none;
+	/* 그 외의 브라우저용 사용자 정의 스타일 */
 }
 
 :where(:disabled, label:has(> input:disabled), label:has(+ input:disabled), input:disabled + label) {
-    cursor: not-allowed; 
-    /* 비활성화된 입력 요소의 라벨 커서 변경 */
+	cursor: not-allowed; 
+	/* 비활성화된 입력 요소의 라벨 커서 변경 */
 }
 
 :where(button) {
-    border-style: none; 
-    /* 버튼의 기본 테두리 제거 */
+	border-style: none; 
+	/* 버튼의 기본 테두리 제거 */
 }
 
 :where(a) {
-    position: relative;
-    color: inherit; 
-    /* 링크의 색상을 부모 요소와 동일하게 설정 */
-    display: inline-flex;
-    text-decoration: transparent underline wavy; /* 링크의 밑줄 스타일 설정 */
-    transition: text-decoration 0.2s; 
-    /* 밑줄 스타일 변경 시 애니메이션 적용 */
-    text-underline-offset: 4px;
-    /* 링크 텍스트와 밑줄 사이의 간격 설정 */
+	position: relative;
+	color: inherit; 
+	/* 링크의 색상을 부모 요소와 동일하게 설정 */
+	display: inline-flex;
+	text-decoration: transparent underline wavy; /* 링크의 밑줄 스타일 설정 */
+	transition: text-decoration 0.2s; 
+	/* 밑줄 스타일 변경 시 애니메이션 적용 */
+	text-underline-offset: 4px;
+	/* 링크 텍스트와 밑줄 사이의 간격 설정 */
 }
 
 :where(ul, ol, li) {
-    list-style: none; 
-    /* 목록의 기본 스타일 제거 */
+	list-style: none; 
+	/* 목록의 기본 스타일 제거 */
 }
 
 :where(span, label) {
-    vertical-align: middle;
-    display: inline-flex;
-    align-items: center;
+	vertical-align: middle;
+	display: inline-flex;
+	align-items: center;
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
-    display: inline-flex; /* 멀티미디어 요소의 예측 가능한 디스플레이 설정 */
-    aspect-ratio: auto; /* 콘텐츠의 종횡비 유지 */
-    object-fit: contain; /* 콘텐츠가 부모 요소를 벗어나지 않도록 설정 */
-    width: 100%; /* 부모 요소에 꽉 차게 설정 */
-    position: relative;
-    vertical-align: middle;
-    border:none;
+	display: inline-flex; /* 멀티미디어 요소의 예측 가능한 디스플레이 설정 */
+	aspect-ratio: auto; /* 콘텐츠의 종횡비 유지 */
+	object-fit: contain; /* 콘텐츠가 부모 요소를 벗어나지 않도록 설정 */
+	width: 100%; /* 부모 요소에 꽉 차게 설정 */
+	position: relative;
+	vertical-align: middle;
+	border:none;
 }
 
 :where(img, picture, svg) {
-    max-inline-size: 100%; /* 이미지가 가용 공간을 넘지 않도록 설정 */
-    block-size: auto; /* 콘텐츠 종횡비 유지 */
+	max-inline-size: 100%; /* 이미지가 가용 공간을 넘지 않도록 설정 */
+	block-size: auto; /* 콘텐츠 종횡비 유지 */
 }
 
+/* 긴 단어가 넘칠 경우 줄바꿈 */
 :where(p, h1, h2, h3, h4, h5, h6) {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    overflow-wrap: break-word; 
-    /* 긴 단어가 넘칠 경우 줄바꿈 */
+	margin-block-start: 0;
+	margin-block-end: 0;
+	overflow-wrap: break-word; 
 }
 
+/* 헤딩의 자식 요소는 부모의 폰트 속성 계승 */
 :where(h1, h2, h3, h4, h5, h6) * {
-    font: inherit; 
-    /* 헤딩의 자식 요소는 부모의 폰트 속성 계승 */
+	font: inherit; 
 }
 
-:where(hr) { 
 /* 일관성 있는 스타일의 수평선 */
-border: none;
-border-block-start: 1px solid;
-color: inherit;
-block-size: 0;
-overflow: visible;
+:where(hr) { 
+	border: none;
+	border-block-start: 1px solid;
+	color: inherit;
+	block-size: 0;
+	overflow: visible;
 }
 
 table {
-    border-collapse: collapse;
-    /* 테이블 셀의 경계선 결합 */
+	border-collapse: collapse;
+	/* 테이블 셀의 경계선 결합 */
 }
 
 
+/* 스크롤바의 스타일 */
 ::-webkit-scrollbar-thumb {
-    border-radius: 10rem; 
-    /* 스크롤바의 스타일 */
-    cursor: pointer;
+	border-radius: 10rem; 
+	cursor: pointer;
 }
 
+/* 스크롤바 트랙의 스타일 */
 ::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 10rem; 
-    /* 스크롤바 트랙의 스타일 */
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10rem; 
 }
+/* 필드셋의 기본 테두리 제거 */
 address {text-align: center;}
 fieldset {
-    border: none; 
-    /* 필드셋의 기본 테두리 제거 */
+	border: none; 
 }
 
 ::details-content, dialog, dialog::backdrop {
-    transition:
-    height 0.2s ease, 
-    width 0.2s ease, 
-    content-visibility 0.2s ease allow-discrete, 
-    display 0.2s ease,
-    opacity 0.2s ease, 
-    scale 0.2s ease, 
-    visibility 0.2s ease, 
-    backdrop-filter 0.2s ease, 
-    transform 0.2s ease, 
-    background 0.2s ease;
+	transition:
+	height 0.2s ease, 
+	width 0.2s ease, 
+	content-visibility 0.2s ease allow-discrete, 
+	display 0.2s ease,
+	opacity 0.2s ease, 
+	scale 0.2s ease, 
+	visibility 0.2s ease, 
+	backdrop-filter 0.2s ease, 
+	transform 0.2s ease, 
+	background 0.2s ease;
 }
 /*
 details::details-content {
@@ -290,114 +289,114 @@ details[open]::details-content {
 }
 */
 @supports (interpolate-size: allow-keywords) {
-  :root {
-    interpolate-size: allow-keywords;
-    /* height : 0 (수치형) → auto(문자형) 의 애니메이션을 가능하게 하기 위한 지정*/
-}
-details[open]::details-content {
-    height: auto;
-}
+	:root {
+		interpolate-size: allow-keywords;
+		/* height : 0 (수치형) → auto(문자형) 의 애니메이션을 가능하게 하기 위한 지정*/
+	}
+	details[open]::details-content {
+		height: auto;
+	}
 
-dialog {
-    position: fixed;
-    border-radius: 1rem;
-    border-color: rgba(0 0 0 / 0.3);
-    top:50%; left:50%;
-    transform: translate(-50%, -50%);
-    max-width: 90dvw;
-    max-height: 90dvh;
-    border:none;
-    padding:0.25rem;
-    margin:0rem !important;
-    transition: display 0.2s allow-discrete, overlay 1s allow-discrete;
-    animation: dialog_close 0.2s forwards;
-}
-@keyframes dialog_open {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+	dialog {
+		position: fixed;
+		border-radius: 1rem;
+		border-color: rgba(0 0 0 / 0.3);
+		top:50%; left:50%;
+		transform: translate(-50%, -50%);
+		max-width: 90vw;
+		max-height: 90dvh;
+		border:none;
+		padding:0.25rem;
+		margin:0rem !important;
+		transition: display 0.2s allow-discrete, overlay 1s allow-discrete;
+		animation: dialog_close 0.2s forwards;
+	}
+	@keyframes dialog_open {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
 
-@keyframes dialog_close {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-body:has(dialog[open]) {overflow: hidden;}
-dialog[open] {
-    animation: dialog_open 0.2s forwards;
-    opacity: 1;
-}
-dialog::backdrop {
-    transition: filter 0.2s, background 0.2s,display 0.2s;
-    backdrop-filter: blur(0.5rem) brightness(0.7) grayscale(0.7);
-}
-dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
-    position: fixed;
-    right:0;
-    top:0;
-    z-index: 5;
-}
-dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
-    margin: 0 auto;
-}
-dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    width: 3rem;
-    background: transparent;
-}
-dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_popover, .close_ctrl) img {
-    max-height: 2rem;
-    max-width: 2rem;
-}
-dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
-    margin:0;
-    padding:1rem 1.25rem;    
-}
-dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
-    display: flex;
-    align-items: center;
-    position: sticky;
-    font-size: 1.2rem!important;
-    left:0;
-    top:0;
-    height: 3rem;
-    z-index: 2;
-}
-@media screen and (width >= 1400px) {
-    dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-    dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
-        padding:1rem 1.5rem;
-    }
-}
+	@keyframes dialog_close {
+		from {opacity: 1;}
+		to {opacity: 0;}
+	}
+	body:has(dialog[open]) {overflow: hidden;}
+	dialog[open] {
+		animation: dialog_open 0.2s forwards;
+		opacity: 1;
+	}
+	dialog::backdrop {
+		transition: filter 0.2s, background 0.2s,display 0.2s;
+		backdrop-filter: blur(0.5rem) brightness(0.7) grayscale(0.7);
+	}
+	dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+		position: fixed;
+		right:0;
+		top:0;
+		z-index: 5;
+	}
+	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+		margin: 0 auto;
+	}
+	dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
+		border-radius: 0.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 3rem;
+		width: 3rem;
+		background: transparent;
+	}
+	dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_popover, .close_ctrl) img {
+		max-height: 2rem;
+		max-width: 2rem;
+	}
+	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+		margin:0;
+		padding:1rem 1.25rem;    
+	}
+	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
+		display: flex;
+		align-items: center;
+		position: sticky;
+		font-size: 1.2rem!important;
+		left:0;
+		top:0;
+		height: 3rem;
+		z-index: 2;
+	}
+	@media screen and (width >= 1400px) {
+		dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+		dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+			padding:1rem 1.5rem;
+		}
+	}
 
-:where(#skipnav, #jumpnav, #skip_nav) {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 40;
-    top: -10rem;
-    width: 100vw;
-    line-height: 3rem;
-    font-size: 1rem !important;
-    font-weight: 900;
-    text-align: center;
-    transition: 0.2s top;
-    border: 1px solid;
-    background: #437;
-    color: #fff;
-    backdrop-filter: blur(20px);
-}
+	:where(#skipnav, #jumpnav, #skip_nav) {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 40;
+		top: -10rem;
+		width: 100vw;
+		line-height: 3rem;
+		font-size: 1rem !important;
+		font-weight: 900;
+		text-align: center;
+		transition: 0.2s top;
+		border: 1px solid;
+		background: #437;
+		color: var(--pure_white);
+		backdrop-filter: blur(1.25rem);
+	}
 
-:where(#skipnav, #jumpnav, #skip_nav):where(:focus, :hover) {
-    top: 0rem;
-    text-decoration: #fff underline wavy 2px;
-    text-underline-offset: 0.4rem;
-}
+	:where(#skipnav, #jumpnav, #skip_nav):where(:focus, :hover) {
+		top: 0rem;
+		text-decoration: var(--pure_white) underline wavy 2px;
+		text-underline-offset: 0.4rem;
+	}
 
 
 
@@ -406,41 +405,41 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 .darkV {display: none;}
 .View_PC, .PCV, .PC_View, .pc_view {display:none;}
 .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
-    display:unset;
+	display:unset;
 }
 .content_width {
-    width: 90vw;
-    margin: 0rem auto;
+	width: 90vw;
+	margin: 0rem auto;
 }
 .youtube_video_frame {
-    aspect-ratio: 16/9;
-    margin:1rem auto;
+	aspect-ratio: 16/9;
+	margin:1rem auto;
 }
 /*고대비 모드*/
 @media (prefers-contrast:more) {
-    body {
-        background-color:var(--pure_black) !important;
-        color:var(--pure_white);
-    }
-    ::selection {
-        background:var(--pure_white); 
-        color:var(--pure_black);
-    }
+	body {
+		background-color:var(--pure_black) !important;
+		color:var(--pure_white);
+	}
+	::selection {
+		background:var(--pure_white); 
+		color:var(--pure_black);
+	}
 
 }
 
 /*서울의 버스와 지하철*/
 .metro_line {
-    text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
-    display:inline-flex;
-    font-size: 1rem;
-    border-radius:100px;
-    justify-content:center;
-    align-items:center;
-    margin-right:10px;
-    min-width:2rem;
-    min-height:2rem;
-    color:var(--pure_white);
+	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
+	display:inline-flex;
+	font-size: 1rem;
+	border-radius:100px;
+	justify-content:center;
+	align-items:center;
+	margin-right:10px;
+	min-width:2rem;
+	min-height:2rem;
+	color:var(--pure_white);
 }
 .numline {aspet-ratio:1/1;}
 .line1 {background:#052F93;}
@@ -452,65 +451,73 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 .line7 {background:#657931;}
 .line8 {background:#E74E6D;}
 .line9 {background:#B58600;}
-.gyline {background-color:#5F9C82; padding:0px 10px;}
+.gyline {
+	background-color:#5F9C82; 
+	padding:0px 0.5rem;
+}
 
 .bus_line {
-    text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
-    display:inline-flex;
-    font-size:1rem;
-    justify-content:center;
-    align-items:center;
-    border-radius:1rem;
-    color:#fff;
-    padding:0px 5px;}
-    .g-bus {background-color:#5BB025;}
-    .b-bus {background-color:#3D5BAB;}
-    .r-bus {background-color:#F73711;}
-    .meter {color:#C30; padding:0px 10px;}
+	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
+	display:inline-flex;
+	font-size:1rem;
+	justify-content:center;
+	align-items:center;
+	border-radius:1rem;
+	color:var(--pure_white);
+	padding:0px 0.25rem;
+}
+.g-bus {background-color:#5BB025;}
+.b-bus {background-color:#3D5BAB;}
+.r-bus {background-color:#F73711;}
+.meter {color:#C30; padding:0px 10px;}
 
 /*Dark Mode*/
 @media (prefers-color-scheme: dark) {
-    ::selection {background:#51a; color:white;}
-    ::placeholder{color:#aaa;}
-    .lightV {display: none;}
-    .darkV {display: unset;}
-    dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
-        filter: invert(1);
-    }
+	::selection {
+		background:#51a; 
+		color:var(--pure_white);
+	}
+	::placeholder{color:#aaa;}
+	.lightV {display: none;}
+	.darkV {display: unset;}
+	dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
+		filter: invert(1);
+	}
+	.meter {color:#fcb;}
 }
 
 /*기기별 CSS*/
 
 /*PC*/
 @media screen and (width >= 1400px) {
-    .View_PC, .PCV, .PC_View, .pc_view {display:unset;}
-    .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display:none;}
-    dialog, .content_width {width: 60vw;}
+	.View_PC, .PCV, .PC_View, .pc_view {display:unset;}
+	.View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {display:none;}
+	dialog, .content_width {width: 60vw;}
 }
 
 /*1000px〜1400px iPad Pro*/
 @media screen and (1000px <= width) and (width < 1400px)  {
-    dialog, .content_width {width: 70vw;}
+	dialog, .content_width {width: 70vw;}
 }
 
 /*700px〜1200px iPad*/
 @media screen and (700px <= width) and (width < 1000px )  {
-    dialog, .content_width {
-        width: 80vw;
-    }
+	dialog, .content_width {
+		width: 80vw;
+	}
 }
 
 }
 /*Mobile*/
 @media screen and (340px <= width) and (width < 700px ) {
-    .content_width, dialog {min-width: 80vw;}
+	.content_width, dialog {min-width: 80vw;}
 
 }
 /*folded, watch*/
 @media screen (330px > width) {
-    .content_width {width: 95vw;}
-    dialog {
-        min-width: 90vw;
-        max-width: 95vw;
-    }
+	.content_width {width: 95vw;}
+	dialog {
+		min-width: 90vw;
+		max-width: 95vw;
+	}
 }
