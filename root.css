@@ -154,9 +154,14 @@ body {overflow-y:scroll;}
 :where(input, button, textarea, select, a) {
 	display: inline-flex;
 	font: inherit; /* 입력 요소는 부모의 폰트 속성 계승 */
+	color:inherit;
 	box-sizing: border-box;
 	padding:0.5rem;
 	transition: filter 0.2s;
+}
+select::-ms-expand {
+	display: none;
+	/* 화살표없애기 for ie10, 11 */
 }
 :where(input[type="text"], input[type="password"], input[type="search"], select) {
 	padding-left:0.5rem;
@@ -429,7 +434,6 @@ details[open]::details-content {
 	display:unset;
 }
 .content_width, dialog {
-	min-width: 80vw;
 	width: 90vw;
 	margin: 0rem auto;
 }
@@ -443,6 +447,8 @@ details[open]::details-content {
 		background-color:var(--pure_black) !important;
 		color:var(--pure_white);
 	}
+	a {color:var(--pure_yellow);}
+	a:visited {color:var(--pure_green);}
 	::selection {
 		background:var(--pure_white); 
 		color:var(--pure_black);
