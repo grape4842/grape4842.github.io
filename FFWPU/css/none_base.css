@@ -50,29 +50,29 @@ footer > div {
 	padding:2rem;
 	margin:0px auto;
 }
-	address {
-		width: 100%;
-		line-height: 3rem;
-		display:flex;
-		justify-content:center;
-		align-items:center;
-	}
-	address svg {
-		height: 2rem;
-		width: 2rem;
-	}
+address {
+	width: 100%;
+	line-height: 3rem;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+address svg {
+	height: 2rem;
+	width: 2rem;
+}
 
-	::-webkit-scrollbar-thumb {
-		background:rgba(55 0 200 / 0.3); /* 스크롤바의 색상 */
-		border:solid 1px var(--dark_purple);
-		border-radius: 10rem;
-	}
+::-webkit-scrollbar-thumb {
+	background:rgba(55 0 200 / 0.3); /* 스크롤바의 색상 */
+	border:solid 1px var(--dark_purple);
+	border-radius: 10rem;
+}
 
-	::-webkit-scrollbar-track {
-		border-radius: 10rem;
-		border:solid 1px var(--dark_purple);
-		background:rgba(0 0 0 / 0.1);  /*스크롤바 뒷 배경 색상*/
-	}
+::-webkit-scrollbar-track {
+	border-radius: 10rem;
+	border:solid 1px var(--dark_purple);
+	background:rgba(0 0 0 / 0.1);  /*스크롤바 뒷 배경 색상*/
+}
 
 /*클릭가능한 요소 스타일*/
 a {
