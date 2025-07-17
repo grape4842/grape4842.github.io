@@ -199,6 +199,7 @@ summary {
     width: 100%; /* 부모 요소에 꽉 차게 설정 */
     position: relative;
     vertical-align: middle;
+    border:none;
 }
 
 :where(img, picture, svg) {
