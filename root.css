@@ -287,7 +287,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-th, td {padding:0.25rem;}
+th, td {
+	padding:0.25rem;
+}
 
 /* 스크롤바의 스타일 */
 ::-webkit-scrollbar-thumb {
@@ -301,7 +303,9 @@ th, td {padding:0.25rem;}
 	border-radius: 10rem; 
 }
 /* 필드셋의 기본 테두리 제거 */
-address {text-align: center;}
+address {
+	text-align: center;
+}
 fieldset {
 	border: none; 
 }
@@ -337,107 +341,109 @@ details[open]::details-content {
 	details[open]::details-content {
 		height: auto;
 	}
+}
 
-	dialog {
-		position: fixed;
-		border-radius: 1rem;
-		border-color: rgba(0 0 0 / 0.3);
-		top:50%; left:50%;
-		transform: translate(-50%, -50%);
-		max-width: 90vw;
-		max-height: 90dvh;
-		border:none;
-		padding:0.25rem;
-		margin:0rem !important;
-		transition: display 0.2s allow-discrete, overlay 1s allow-discrete;
-		animation: dialog_close 0.2s forwards;
-	}
-	@keyframes dialog_open {
-		from {opacity: 0;}
-		to {opacity: 1;}
-	}
+dialog {
+	position: fixed;
+	border-radius: 1rem;
+	border-color: rgba(0 0 0 / 0.3);
+	top:50%; left:50%;
+	transform: translate(-50%, -50%);
+	max-width: 90vw;
+	max-height: 90dvh;
+	border:none;
+	padding:0.25rem;
+	margin:0rem !important;
+	transition: display 0.2s allow-discrete, overlay 1s allow-discrete;
+	animation: dialog_close 0.2s forwards;
+}
 
-	@keyframes dialog_close {
-		from {opacity: 1;}
-		to {opacity: 0;}
-	}
-	body:has(dialog[open]) {overflow: hidden;}
-	dialog[open] {
-		animation: dialog_open 0.2s forwards;
-		opacity: 1;
-	}
-	dialog::backdrop {
-		transition: filter 0.2s, background 0.2s,display 0.2s;
-		backdrop-filter: blur(0.5rem) brightness(0.7) grayscale(0.7);
-	}
-	dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
-		position: fixed;
-		right:0;
-		top:0;
-		z-index: 5;
-	}
-	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
-		margin: 0 auto;
-	}
-	dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
-		border-radius: 0.5rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 3rem;
-		width: 3rem;
-		background: transparent;
-	}
-	dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_popover, .close_ctrl) img {
-		max-height: 2rem;
-		max-width: 2rem;
-	}
+@keyframes dialog_open {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes dialog_close {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+body:has(dialog[open]) {overflow: hidden;}
+dialog[open] {
+	animation: dialog_open 0.2s forwards;
+	opacity: 1;
+}
+dialog::backdrop {
+	transition: filter 0.2s, background 0.2s,display 0.2s;
+	backdrop-filter: blur(0.5rem) brightness(0.7) grayscale(0.7);
+}
+dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+	position: fixed;
+	right:0;
+	top:0;
+	z-index: 5;
+}
+dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+	margin: 0 auto;
+}
+dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3rem;
+	width: 3rem;
+	background: transparent;
+}
+dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_popover, .close_ctrl) img {
+	max-height: 2rem;
+	max-width: 2rem;
+}
+dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+	margin:0;
+	padding:1rem 1.25rem;    
+}
+dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
+	display: flex;
+	align-items: center;
+	position: sticky;
+	font-size: 1.2rem!important;
+	left:0;
+	top:0;
+	height: 3rem;
+	z-index: 2;
+}
+@media screen and (width >= 1400px) {
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
-		margin:0;
-		padding:1rem 1.25rem;    
+		padding:1rem 1.5rem;
 	}
-	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
-		display: flex;
-		align-items: center;
-		position: sticky;
-		font-size: 1.2rem!important;
-		left:0;
-		top:0;
-		height: 3rem;
-		z-index: 2;
-	}
-	@media screen and (width >= 1400px) {
-		dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-		dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
-			padding:1rem 1.5rem;
-		}
-	}
+}
 
-	:where(#skipnav, #jumpnav, #skip_nav) {
-		position: fixed;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 40;
-		top: -10rem;
-		width: 100vw;
-		line-height: 3rem;
-		font-size: 1rem !important;
-		font-weight: 900;
-		text-align: center;
-		transition: 0.2s top;
-		border: 1px solid;
-		background: #437;
-		color: var(--pure_white);
-		backdrop-filter: blur(1.25rem);
-	}
+:where(#skipnav, #jumpnav, #skip_nav) {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 40;
+	top: -10rem;
+	width: 100vw;
+	line-height: 3rem;
+	font-size: 1rem !important;
+	font-weight: 900;
+	text-align: center;
+	transition: 0.2s top;
+	border: 1px solid;
+	background: #437;
+	color: var(--pure_white);
+	backdrop-filter: blur(1.25rem);
+}
 
-	:where(#skipnav, #jumpnav, #skip_nav):where(:focus, :hover) {
-		top: 0rem;
-		text-decoration: var(--pure_white) underline wavy 2px;
-		text-underline-offset: 0.4rem;
-	}
+:where(#skipnav, #jumpnav, #skip_nav):where(:focus, :hover) {
+	top: 0rem;
+	text-decoration: var(--pure_white) underline wavy 2px;
+	text-underline-offset: 0.4rem;
+}
 
 
 
