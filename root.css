@@ -117,7 +117,7 @@
 	clip-path: inset(50%);
 }
 
-@layer reset css {
+@layer reset_css {
 	:root {
 		font-size: 1rem;
 		font: inherit;
