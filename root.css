@@ -564,7 +564,7 @@ details[open]::details-content {
 
 }
 /*folded, watch*/
-@media screen (width < 330px) {
+@media screen and (width < 330px) {
 	.content_width, dialog {
 		width: 95vw;
 		min-width: 90vw;
