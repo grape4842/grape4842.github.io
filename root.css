@@ -142,13 +142,13 @@
 }
 @supports not (min-block-size: 100dvb) {
 	:where(html) {
-		block-size: 100%; /* 브라우저 호환성을 위한 설정 */
+		block-size: 100%;
+		/* 브라우저 호환성을 위한 설정 */
 	}
 }
 
 body {overflow-y:scroll;}
-*::before,
-*::after {
+*::before, *::after {
 	box-sizing: inherit;
 }
 *, :where(body):not(img), body {
@@ -546,21 +546,21 @@ details[open]::details-content {
 }
 
 /*1000px〜1400px iPad Pro*/
-@media screen and (1000px <= width) and (width < 1400px)  {
+@media screen and (1000px <= width) and (width < 1400px) {
 	dialog, .content_width {
 		width: 70vw;
 	}
 }
 
 /*700px〜1200px iPad*/
-@media screen and (700px <= width) and (width < 1000px )  {
+@media screen and (700px <= width) and (width < 1000px) {
 	dialog, .content_width {
 		width: 80vw;
 	}
 }
 
 /*Mobile*/
-@media screen and (340px <= width) and (width < 700px ) {
+@media screen and (340px <= width) and (width < 700px) {
 
 }
 /*folded, watch*/
