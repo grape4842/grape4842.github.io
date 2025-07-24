@@ -251,11 +251,13 @@ summary {
 	block-size: auto; /* 콘텐츠 종횡비 유지 */
 }
 
+:where(h1, h2, h3, h4, h5, h6) {
+	line-height: 1.3;
+}
 /* 긴 단어가 넘칠 경우 줄바꿈 */
 :where(p, h1, h2, h3, h4, h5, h6) {
 	margin-block-start: 0;
 	margin-block-end: 0;
-	line-height: 1.3;
 	overflow-wrap: break-word; 
 }
 
