@@ -9,7 +9,7 @@
 }
 .site-list li {
 	display:flex;
-	margin:0.25rem 0rem;
+	margin:0.5rem 0rem;
 	align-items:center;
 	gap: 0.5rem;
 }
@@ -79,7 +79,7 @@
 	article {padding:3rem;}
 	.site-list {grid-template-columns: 1fr 1fr 1fr;}
 	.site-list li {
-				margin:1rem 0px;}
+				margin:0.75rem 0rem;}
 	.site-list img {
 		width:3rem;
 		height:3rem;
