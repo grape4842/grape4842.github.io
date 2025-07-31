@@ -243,6 +243,7 @@ h2 {
 	border:2px solid var(--default_purple);
 	opacity:0.7;
 	backdrop-filter: blur(1.25rem);
+	outline-offset: 0.2rem;
 }
 #page-top svg {
 	width:100%;

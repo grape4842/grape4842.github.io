@@ -5,16 +5,18 @@
 
 .d-box {overflow: hidden;}
 .site-list {
-	display:grid;}
+	display:grid;
+}
 .site-list li {
 	display:flex;
 	margin:0.25rem 0rem;
 	align-items:center;
+	gap: 0.5rem;
 }
 .site-list a {
 	box-sizing:border-box;
 	height:100%;
-	padding:0.5rem;
+	padding:0.25rem;
 	justify-content:center;
 	align-items: center;
 	vertical-align: middle;
