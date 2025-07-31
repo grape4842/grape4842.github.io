@@ -133,7 +133,6 @@ svg {
 /*버스 시간표 관련*/
 #bus_popup {
 	position: sticky;
-	padding:0.5rem;
 	border-radius: 0.5rem;
 	aspect-ratio: 1/1;
 	width: 3rem;
