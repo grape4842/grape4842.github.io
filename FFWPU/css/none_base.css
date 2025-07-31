@@ -179,10 +179,12 @@ th svg, td svg {
 .map_table svg {
 	fill:var(--variable_invert_purple);
 }
-p {margin:0px; padding:0.3rem 0px;}
+p {
+	margin:0rem; 
+	padding:0.3rem 0rem;
+}
 h2, h3, h4, h5, h6 {
 	padding:0.5rem;
-	margin-bottom: 1rem;
 }
 h2 {
 	font-weight:900;
@@ -193,13 +195,13 @@ h2 {
 	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
 	display:inline-flex;
 	font-size: 1rem;
-	border-radius:100px;
+	border-radius:10rem;
 	justify-content:center;
 	align-items:center;
-	margin-right:10px;
+	margin-right:0.5rem;
 	min-width:2rem;
 	min-height:2rem;
-	color:white;
+	color:var(--pure_white);
 }
 
 #logo {
@@ -215,10 +217,10 @@ h2 {
 	font-size:1rem;
 	justify-content:center;
 	align-items:center;
-	margin-right:10px;
-	border-radius:5px;
-	color:#fff;
-	padding:0px 5px;
+	margin-right:0.5rem;
+	border-radius:5rem;
+	color:var(--pure_white);
+	padding:0rem 0.5rem;
 }
 #page_top {
 	width:2.5rem;
