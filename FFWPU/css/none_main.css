@@ -68,7 +68,12 @@
 	color:var(--pure_white);
 }
 .map-icon {
-	width: 3rem;	
+	width: 3rem;
+	aspect-ratio: 1/1;
+	padding:0rem;
+	border-radius: 0.25rem;
+	margin:0.25rem;
+	outline-offset: 0.25rem;
 }
 .map-icon img {
 	border-radius: 3px;
