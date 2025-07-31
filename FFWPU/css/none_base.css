@@ -147,6 +147,10 @@ svg {
 }
 #bus_time {padding:0;}
 #bus_time h2 {font-size:1rem;}
+#bus_time td:first-child {
+	text-align: right;
+	background: var(--variable_purple);
+}
 /*표 관련 선언*/
 table {
 	margin:0 auto;
