@@ -4,11 +4,6 @@
 /*모바일 기준*/
 
 .d-box {overflow: hidden;}
-.accont {
-		padding:1rem;
-		transition: 0.3s ease;
-		}
-
 .site-list {
 	display:grid;}
 .site-list li {
