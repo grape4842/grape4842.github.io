@@ -82,7 +82,7 @@
 :lang(ko) {
 	word-break: keep-all;
 	line-break:normal;
-		font-family: "KoddiUDOnGothic","Pretendard Variable", sans-serif, serif;
+	font-family: "KoddiUDOnGothic","Pretendard Variable", sans-serif, serif;
 }
 :lang(ja) {
 	word-break: auto-phrase;
@@ -424,7 +424,7 @@ dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_po
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 	margin:0;
-	padding:1rem 1.25rem;    
+	padding:0.5rem 0.75rem;    
 }
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
 	display: flex;
@@ -435,12 +435,6 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 	top:0;
 	height: 3rem;
 	z-index: 2;
-}
-@media screen and (width >= 1400px) {
-	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
-	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
-		padding:1rem 1.5rem;
-	}
 }
 
 :where(#skipnav, #jumpnav, #jump_main_content, #skip_nav, #jump_nav, #nav_skip) {
@@ -580,6 +574,10 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 		width: 60dvw;
 	}
 	th, td {padding:1rem;}
+	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+		padding:1rem 1.5rem;
+	}
 }
 
 /*1000px〜1400px iPad Pro*/
@@ -588,6 +586,10 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 		width: 70dvw;
 	}
 	th, td {padding:0.75rem;}
+	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+		padding:1rem 1.25rem;
+	}
 }
 
 /*700px〜1200px iPad*/
@@ -609,4 +611,8 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 		min-width: 90dvw;
 	}
 	th, td {padding:0.25rem;}
+	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
+	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
+		padding:0.25rem 0.5rem;
+	}
 }
