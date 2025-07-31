@@ -239,7 +239,7 @@ summary {
 	color: inherit; 
 	/* 링크의 색상을 부모 요소와 동일하게 설정 */
 	text-decoration: transparent underline wavy; /* 링크의 밑줄 스타일 설정 */
-	transition: text-decoration 0.2s; 
+	transition: text-decoration 0.2s, outline 0.2s, filter 0.2s, transform 0.2s; 
 	/* 밑줄 스타일 변경 시 애니메이션 적용 */
 	text-underline-offset: 4px;
 	/* 링크 텍스트와 밑줄 사이의 간격 설정 */

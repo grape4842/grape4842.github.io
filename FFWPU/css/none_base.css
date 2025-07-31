@@ -81,16 +81,14 @@ a {
 	padding:0.5rem 0.25rem;
 	border-radius: 0.5rem;
 	text-decoration:transparent; 
-	transition:text-decoration 0.2s, outline 0.2s;
 }
 
 a:focus, a:hover {
 	text-decoration:underline wavy #eef;
 	text-underline-offset:4px;
 }
-a:active, summary:active {
-	transition:0.2s filter, 0.4s transform;
-	filter:brightness(1.2) saturate(120%);
+:where(a, summary):where(:focus, :hover, :active) {
+	filter:brightness(1.1) saturate(110%);
 }
 summary {
 	padding:1rem;
@@ -184,11 +182,6 @@ th svg, td svg {
 }
 .map_table svg {
 	fill:var(--variable_invert_purple);
-}
-.map-icon {
-	padding:0rem;
-	margin:0.5rem;
-	outline-offset: 0.5rem;
 }
 p {
 	margin:0rem; 
