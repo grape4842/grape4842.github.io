@@ -82,9 +82,11 @@
 :lang(ko) {
 	word-break: keep-all;
 	line-break:normal;
+		font-family: "KoddiUDOnGothic","Pretendard Variable", sans-serif, serif;
 }
 :lang(ja) {
 	word-break: auto-phrase;
+	font-family: "BIZ-UDPGothic", "Pretendard Variable", sans-serif, serif;
 	font-feature-settings: "palt";
 }
 ::selection {
