@@ -126,6 +126,8 @@ textarea {
 
 svg {
 	aspect-ratio: auto;
+	min-height: 1.25rem;
+	min-width: 1.25rem;
 	max-height: 2rem;
 	max-width: 2rem ;
 }
