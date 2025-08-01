@@ -174,11 +174,10 @@ a {
 
 a:focus, a:hover {
 	text-decoration:underline wavy #0007;
-	text-underline-offset:0.3rem;
 }
 a:active, summary:active {
 	transition:0.2s filter, 0.4s transform;
-	filter:brightness(0.8), saturation(1.2);
+	filter:brightness(0.8) saturation(120%);
 }
 #jump_head:focus {
 	position:fixed; 
