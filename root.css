@@ -371,9 +371,8 @@ dialog {
 	border-radius: 0.5rem;
 	inset: 50% 50%;
 	transform: translate(-50%, -50%);
-	width:max-content;
-	height: max-content;
-	min-width: 20vw;
+	min-width:min-content;
+	min-height: 20vh;
 	max-width: 90vw;
 	max-height: 90dvh;
 	border:none;
@@ -403,7 +402,6 @@ dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close
 	position: fixed;
 	right:0;
 	top:0;
-	z-index: 5;
 }
 dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 	margin: 0 auto;
@@ -415,12 +413,15 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 	justify-content: center;
 	height: 3rem;
 	width: 3rem;
+	aspect-ratio: 1/1;
 	background: transparent;
 	outline-offset: -0.25rem;
+	z-index: 12;
 }
 dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_popover, .close_ctrl) img {
 	max-height: 2rem;
 	max-width: 2rem;
+	aspect-ratio: 1/1;
 }
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
@@ -431,7 +432,8 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 	display: flex;
 	align-items: center;
 	position: sticky;
-	font-size: 1.2rem;
+	font-size: 1rem;
+	font-weight: bold;
 	left:0;
 	top:0;
 	height: 3rem;
@@ -472,7 +474,11 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 .View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
 	display:unset;
 }
-.content_width, dialog {
+dialog {
+	width: 88vw;
+	margin: 0rem auto;
+}
+.content_width {
 	width: 90vw;
 	margin: 0rem auto;
 }
@@ -573,7 +579,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 	}
 	.content_width {width:60dvw;}
 	dialog {
-		max-width: 60dvw;
+		max-width: 50dvw;
 	}
 	th, td {padding:1rem;}
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
@@ -586,7 +592,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 @media screen and (1000px <= width) and (width < 1400px) {
 	.content_width {width:70dvw;}
 	dialog {
-		max-width: 70dvw;
+		max-width: 66dvw;
 	}
 	th, td {padding:0.75rem;}
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
@@ -599,7 +605,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 @media screen and (700px <= width) and (width < 1000px) {
 	.content_width {width:80dvw;}
 	dialog {
-		max-width: 80dvw;
+		max-width: 77dvw;
 	}
 	th, td {padding:0.5rem;}
 }
@@ -615,7 +621,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 		width:95dvw;
 	}
 	dialog {
-		max-width: 95dvw;
+		max-width: 90dvw;
 	}
 	th, td {padding:0.25rem;}
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),

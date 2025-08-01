@@ -136,6 +136,9 @@ footer {
 	flex-direction: column;
 	margin-top: 4rem;
 }
+.page_list {
+	max-width: max-content;
+}
 .link_desc {
 	font-size: 14px;
 	opacity: 0.8;
@@ -148,6 +151,8 @@ footer {
 	font-weight:700;
 	margin:1rem auto;
 	padding:.5rem .75rem;
+	justify-content: center;
+	align-items: center;
 }
 a {
 	display:flex;
