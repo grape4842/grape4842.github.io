@@ -121,7 +121,10 @@ footer {
 	align-items: center;
 }
 
-
+.KWCAG_other_page {
+	width: max-content;
+	margin:0rem auto;
+}
 ::-webkit-scrollbar-thumb {
 	background:rgba(0 0 0 / 0.1); /* 스크롤바의 색상 */
 	border:solid 1px var(--border_purple);
@@ -251,15 +254,14 @@ h3:not(dialog h3) {
 :where(h1, h2, h3, h4, h5, h6) {
 	line-height: 1.5;
 }
+dialog {
+	width: max-content;
+}
 /*기기별 CSS*/
 
 /*PC*/
 @media screen and (width >= 1400px) {
 	body {background-size:50%;}
-	dialog {
-		width: max-content;
-		max-width: 60vw;
-	}
 	#plus_data_open {
 		position: sticky;
 		left:0;

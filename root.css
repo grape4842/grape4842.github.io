@@ -238,10 +238,11 @@ summary {
 	position: relative;
 	color: inherit; 
 	/* 링크의 색상을 부모 요소와 동일하게 설정 */
-	text-decoration: transparent underline wavy; /* 링크의 밑줄 스타일 설정 */
-	transition: text-decoration 0.2s, outline 0.2s, filter 0.2s, transform 0.2s; 
+	text-decoration:underline wavy; /* 링크의 밑줄 스타일 설정 */
+	text-decoration-color: transparent;
+	transition:text-decoration-color 0.2s, text-decoration 0.2s, outline 0.2s, filter 0.2s, transform 0.2s; 
 	/* 밑줄 스타일 변경 시 애니메이션 적용 */
-	text-underline-offset: 4px;
+	text-underline-offset: 0.25rem;
 	/* 링크 텍스트와 밑줄 사이의 간격 설정 */
 }
 
@@ -402,6 +403,7 @@ dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close
 	position: fixed;
 	right:0;
 	top:0;
+	z-index: 5;
 }
 dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 	margin: 0 auto;
@@ -584,8 +586,12 @@ dialog {
 	th, td {padding:1rem;}
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
-		padding:1rem 1.5rem;
+		padding:1.5rem 1.75rem;
 	}
+	dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+		right:1rem;
+	}
+
 }
 
 /*1000px〜1400px iPad Pro*/
@@ -598,6 +604,9 @@ dialog {
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 		padding:1rem 1.25rem;
+	}
+dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+		right:0.75rem;
 	}
 }
 
@@ -627,5 +636,8 @@ dialog {
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 		padding:0.25rem 0.5rem;
+	}
+dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+		right:-0.25rem;
 	}
 }
