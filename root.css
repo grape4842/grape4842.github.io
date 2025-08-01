@@ -433,7 +433,7 @@ dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_
 dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
 	display: flex;
 	align-items: center;
-	position: sticky;
+	/*position: sticky;*/
 	font-size: 1rem;
 	font-weight: bold;
 	left:0;
