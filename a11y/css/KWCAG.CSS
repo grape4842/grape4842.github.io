@@ -5,17 +5,17 @@
 /*큰 영역*/
 :root {
 	color-scheme: light dark;
-	--main_purple : light-dark(#caf, #213);
+	--main_purple : light-dark(#caf, #203);
 	--sub_purple : light-dark(#b8f, #60a);
 	--border_purple : light-dark(#74c, #102);
-	--data_cell : light-dark(#fff, #324);
+	--data_cell : light-dark(#fff, #314);
 	--icon_purple : light-dark(#60a, #fff);
 	--main_pink : light-dark(#fbf, #503);
 	--sub_pink : light-dark(#d05, #fcf);
 	--border_pink : light-dark(#c07, #301);
 	--jump_category_light : radial-gradient(var(--pure_white) 30%,var(--main_purple) 100%);
-	--jump_category_dark : radial-gradient(var(--sub_purple) 1%, var(--data_cell) 30%,var(--main_purple), var(--border_purple) 99%);
-	--right_gradient : linear-gradient(-90deg,var(--sub_purple) 10%, var(--data_cell) 50%,var(--main_purple) 90%, var(--border_purple));
+	--jump_category_dark : radial-gradient(var(--sub_purple) 1%, var(--border_purple) 99%);
+	--right_gradient : linear-gradient(-90deg,var(--sub_purple) 10%, var(--border_purple));
 	--single_pink : #fdf;
 	--single_cream_yellow : #ffd;
 }
@@ -116,14 +116,16 @@ footer {
 	right:5vw;
 	border-radius:10rem;
 	z-index:5;
-	background:#fffa;
-	border:2px solid var(--border_purple);
+	background:var(--icon_purple);
+	border:0.25rem solid var(--border_purple);
 	backdrop-filter: blur(0.5rem);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
+#page_top .icon_img {
+	fill:var(--data_cell);
+}
 .KWCAG_other_page {
 	width: max-content;
 	margin:0rem auto;
@@ -354,6 +356,7 @@ dialog {
 		filter:brightness(1.2);
 	}
 	.jump_category {
+		filter: saturate(70%) brightness(1.2);
 		background: var(--jump_category_dark);
 	}
 }
