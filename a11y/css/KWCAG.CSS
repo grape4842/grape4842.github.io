@@ -7,24 +7,25 @@
 	color-scheme: light dark;
 	--main_purple : light-dark(#caf, #213);
 	--sub_purple : light-dark(#b8f, #60a);
-	--border_purple : light-dark(#74c, #103);
-	--data_cell : light-dark(#fff, #315);
+	--border_purple : light-dark(#74c, #102);
+	--data_cell : light-dark(#fff, #324);
 	--icon_purple : light-dark(#60a, #fff);
 	--main_pink : light-dark(#fbf, #503);
 	--sub_pink : light-dark(#d05, #fcf);
 	--border_pink : light-dark(#c07, #301);
+	--jump_category_light : radial-gradient(var(--pure_white) 30%,var(--main_purple) 100%);
+	--jump_category_dark : radial-gradient(var(--sub_purple) 1%, var(--data_cell) 30%,var(--main_purple), var(--border_purple) 99%);
+	--right_gradient : linear-gradient(-90deg,var(--sub_purple) 10%, var(--data_cell) 50%,var(--main_purple) 90%, var(--border_purple));
 	--single_pink : #fdf;
 	--single_cream_yellow : #ffd;
 }
 body {
-	background-image:
-	linear-gradient(to left,rgba(0, 0, 255, 0.1), rgba(30, 30, 255, 0.1), rgba(0, 0, 255, 0.1)),
-	url(../img/purplestar.jpg); 
+	background-image:url(../img/purplestar.jpg); 
 	background-attachment:fixed;
 	background-size:80%;
 }
 header,.popover_head {
-	background:linear-gradient(90deg,rgba(30, 0, 50, 1.0), rgba(60, 0, 100, 1.0) 50%,rgba(80, 0, 150, 1.0) 90%, rgba(100, 0, 170, 1.0) 95%);
+	background:var(--right_gradient);
 	backdrop-filter: blur(5px);
 	color:var(--pure_white);
 }
@@ -69,6 +70,8 @@ footer {
 	bottom: 0;
 	width:100%;
 	z-index:2;
+	left:50%;
+	transform: translateX(-50%);
 
 }
 #quick_link {
@@ -82,7 +85,7 @@ footer {
 	height: 100%;
 	font-size: 12px;
 	border:solid 1px var(--border_purple);
-	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(200,204,255,1) 100%);
+	background: var(--jump_category_light);
 }
 .jump_category a {
 	height: 100%;
@@ -296,6 +299,9 @@ dialog {
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
+	#quick_link_area {
+		max-width:80vw;
+	}
 }
 /*Mobile*/
 @media (340px <= width < 700px ) {
@@ -347,10 +353,7 @@ dialog {
 	a:active, summary:active {
 		filter:brightness(1.2);
 	}
-	details {background-color:#437;}
-	summary {background-color:#54a;}
 	.jump_category {
-		background:radial-gradient(#326, #103, #000 99%);
+		background: var(--jump_category_dark);
 	}
-	footer {background:linear-gradient(rgba(10 0 40 / 1) 20%, rgba(40 10 70 / 1));}
 }
