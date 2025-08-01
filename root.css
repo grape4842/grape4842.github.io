@@ -369,14 +369,11 @@ details[open]::details-content {
 dialog {
 	position: fixed;
 	border-radius: 1rem;
-	border-color: rgba(0 0 0 / 0.3);
 	top:50%; left:50%;
 	transform: translate(-50%, -50%);
 	max-width: 90vw;
 	max-height: 90dvh;
 	border:none;
-	padding:0.25rem;
-	margin:0rem;
 	transition: display 0.2s allow-discrete, overlay 1s allow-discrete;
 	animation: dialog_close 0.2s forwards;
 }
