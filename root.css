@@ -368,9 +368,12 @@ details[open]::details-content {
 
 dialog {
 	position: fixed;
-	border-radius: 1rem;
-	top:50%; left:50%;
+	border-radius: 0.5rem;
+	inset: 50% 50%;
 	transform: translate(-50%, -50%);
+	width:max-content;
+	height: max-content;
+	min-width: 20vw;
 	max-width: 90vw;
 	max-height: 90dvh;
 	border:none;
@@ -413,6 +416,7 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 	height: 3rem;
 	width: 3rem;
 	background: transparent;
+	outline-offset: -0.25rem;
 }
 dialog :where(.popup_close, .popover_close, .close_button,.close_popup,.close_popover, .close_ctrl) img {
 	max-height: 2rem;
@@ -567,8 +571,9 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 	.View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
 		display:none;
 	}
-	dialog, .content_width {
-		width: 60dvw;
+	.content_width {width:60dvw;}
+	dialog {
+		max-width: 60dvw;
 	}
 	th, td {padding:1rem;}
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
@@ -579,8 +584,9 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 /*1000px〜1400px iPad Pro*/
 @media screen and (1000px <= width) and (width < 1400px) {
-	dialog, .content_width {
-		width: 70dvw;
+	.content_width {width:70dvw;}
+	dialog {
+		max-width: 70dvw;
 	}
 	th, td {padding:0.75rem;}
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
@@ -591,8 +597,9 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 
 /*700px〜1200px iPad*/
 @media screen and (700px <= width) and (width < 1000px) {
-	dialog, .content_width {
-		width: 80dvw;
+	.content_width {width:80dvw;}
+	dialog {
+		max-width: 80dvw;
 	}
 	th, td {padding:0.5rem;}
 }
@@ -603,9 +610,12 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 }
 /*folded, watch*/
 @media screen and (width < 330px) {
-	.content_width, dialog {
-		width: 95dvw;
+	.content_width {
 		min-width: 90dvw;
+		width:95dvw;
+	}
+	dialog {
+		max-width: 95dvw;
 	}
 	th, td {padding:0.25rem;}
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),

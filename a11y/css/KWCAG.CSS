@@ -251,6 +251,10 @@ h3:not(dialog h3) {
 /*PC*/
 @media screen and (width >= 1400px) {
 	body {background-size:50%;}
+	dialog {
+		width: max-content;
+		max-width: 60vw;
+	}
 	#plus_data_open {
 		position: sticky;
 		left:0;
