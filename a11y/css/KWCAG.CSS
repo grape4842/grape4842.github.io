@@ -84,8 +84,6 @@ footer {
 	flex: 1;
 	height: 100%;
 	font-size: 12px;
-	border:solid 1px var(--border_purple);
-	background: var(--jump_category_light);
 }
 .jump_category a {
 	height: 100%;
@@ -93,6 +91,9 @@ footer {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	border:solid 1px var(--border_purple);
+	background: var(--jump_category_light);
+	outline-offset: -0.25rem;
 }
 .jump_category a:where(:focus, :hover) {
 }
@@ -241,8 +242,10 @@ th, .number_title {
 	text-align:left;
 }
 th, td:not(:last-child),
-.number_title, li:not(:last-child, .jump_category)
-{border-bottom:0!important;}
+.number_title, li:not(:last-child, .jump_category a) {
+	border-bottom:0!important;
+}
+
 h1 {
 	color:var(--single_cream_yellow); 
 }
@@ -284,7 +287,7 @@ dialog {
 		height: max-content;
 		box-shadow:0px 0px 0.25rem 0.25rem var(--sub_purple);
 	}
-	.jump_category {
+	.jump_category a {
 		padding:1.5rem;
 		height: max-content;
 		width: 100%;
@@ -341,7 +344,7 @@ dialog {
 		color:var(--pure_black);
 	}
 	td, .number_title + ol > li {background-color:#203;}
-	.jump_category {
+	.jump_category a {
 		background-color:#130;
 		border:solid 1px #0c0;
 	}
@@ -355,7 +358,7 @@ dialog {
 	a:active, summary:active {
 		filter:brightness(1.2);
 	}
-	.jump_category {
+	.jump_category a {
 		filter: saturate(70%) brightness(1.2);
 		background: var(--jump_category_dark);
 	}
