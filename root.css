@@ -198,6 +198,7 @@ select::-ms-expand {
 	/* 화살표없애기 for ie10, 11 */
 }
 :where(input[type="text"], input[type="password"], input[type="search"], select) {
+	min-width: 10rem!important;
 	padding-left:0.5rem;
 }
 :where(input[type="text"], input[type="password"], input[type="search"]) {
