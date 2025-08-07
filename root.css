@@ -214,7 +214,6 @@ select::-ms-expand {
 	cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 변경 */
 	position: relative;
 	transition-duration: 0.2s;
-	min-width: 10rem!important;
 }
 
 summary::-webkit-details-marker {
