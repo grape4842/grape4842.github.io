@@ -1,6 +1,7 @@
 @charset "utf-8";
 :root {
     --main_color:light-dark(#baf, #64a);
+    --main_color_invert:light-dark(#64a, #baf);
     --main_color_alpha:light-dark(#bafa, #64aa);
     --gray_line_color:light-dark(rgba(0, 0, 0, 0.3), rgba(255 255 255 /.1));
 }
@@ -30,8 +31,8 @@ form th[scope="row"] {
 
 .move_label {
     position: absolute;
-    top: calc(2rem + 5px);
-    left: calc(1rem + 5px);
+    top: calc(2rem - 0.25rem);
+    left: calc(1rem + 0rem);
     background: inherit;
     transition: top 0.2s, left 0.2s, scale 0.2s;
     scale: 1;
@@ -39,8 +40,8 @@ form th[scope="row"] {
 
 input:where(:focus, :not(:placeholder-shown))+.move_label {
     scale: 0.8;
-    top: 5px;
-    left: 5px;
+    top: 0rem;
+    left: 0rem;
 
 }
 
@@ -58,9 +59,9 @@ input:where(:focus, :not(:placeholder-shown))+.move_label {
     background: transparent;
     border: var(--gray_line_color) 1px solid;
     border-bottom: solid var(--main_color) 0.25rem;
-    padding: 5px;
+    padding: 0.25rem;
     transition: opacity 0.2s;
-    outline-offset: 4px;
+    outline-offset: 0.25rem;
     margin-top: 1rem;
 }
 
@@ -82,6 +83,46 @@ input:where(:focus, :not(:placeholder-shown))+.move_label {
     webkit-text-security: disc;
     -moz-text-security: disc;
     text-security: disc;
+}
+#password_view {
+    aspect-ratio: 1/1;
+    width: 1.5rem;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+}
+#password_view::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top:0;
+    width: 2px;
+    padding:0rem;
+    margin:0rem;
+    rotate:45deg;
+    background: var(--main_color_invert);
+    z-index: 2;
+}
+#password_view:checked::after {
+    display: none;
+}
+#password_view::before {
+    content: "";
+    display: none;
+}
+#password_view + svg {
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+#password_view + svg path {
+    background: var(--main_color);
+}
+.password_view_popup_msg {
+    padding:0.25rem 0.5rem;
 }
 
 .custom_input :where(input[type="radio"], input[type="checkbox"]) {
@@ -161,7 +202,7 @@ label[for="switch_checkbox"]+div i.off {
 }
 
 label[for="switch_checkbox"]+div input {
-    outline-offset: 4px;
+    outline-offset: 0.25rem;
     left: 0.125rem;
     transition: left 0.2s;
     background: linear-gradient(to bottom, rgba(255 255 255 / 1), rgba(200 200 200 / 0.99));
@@ -224,8 +265,9 @@ label[for="switch_checkbox"]+div:has(input:checked) {
     height: 1.25rem;
 }
 
-.custom_input label:has(input[name="star_radio"]):hover {
-    filter: brightness(1.2);
+.custom_input label:has(input[name="star_radio"]):hover,
+input[name="star_radio"]:where(:checked) ~ svg {
+    filter: brightness(1.3) saturate(1.1) contrast(1.1);
     transition: 0.2s filter;
 }
 
@@ -254,7 +296,7 @@ label:has(svg) {
 
 /*탭 라디오*/
 .custom_input .tab_li {
-display: inline-flex;
+    display: inline-flex;
 }
 .custom_input label:has(input[name="tab_radio"]) {
     background: transparent;
@@ -262,7 +304,7 @@ display: inline-flex;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     text-align: center;
-    border: 5px solid var(--main_color);
+    border: 0.25rem solid var(--main_color);
     z-index: 2;
     transition: background 0.2s, font-weight 0.2s;
 }
@@ -289,8 +331,8 @@ display: inline-flex;
 .custom_input .tab_panel {
     width: 80%;
     padding: 1rem;
-    margin-top:-5px;
-    border: 5px solid var(--main_color);
+    margin-top:-0.25rem;
+    border: 0.25rem solid var(--main_color);
     border-radius: 1rem;
     border-top-left-radius: 0px;
 }
@@ -539,12 +581,8 @@ span:has(#custom_design_file:focus) {
 }
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-    .custom_input {
-        label:has(input[name="star_radio"]):hover {
-            filter: saturate(1.5) hue-rotate(-5deg) brightness(1.1);
-        }
 
-}
+    }
 
 /*기기별 CSS*/
 

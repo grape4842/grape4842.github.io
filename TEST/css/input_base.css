@@ -6,10 +6,12 @@
 }
 
 /*Mobile First*/
-h2 {padding:1rem;}
+h1 {padding:2rem;}
+h2 {padding:1.5rem;}
 address {
 	text-align: center;
 	font-style: normal;
+	padding:2rem;
 }
 
 a:where(:hover, :focus) {
