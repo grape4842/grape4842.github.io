@@ -32,7 +32,7 @@ input, textarea {
 	accent-color:var(--main_color);
 	padding:0px 0.5rem;
 }
-.custom_input :where(input[type="text"], [type="password"], [type="search"])
+.custom_input :where(select, input[type="text"], [type="password"], [type="search"])
 {
 	field-sizing: content;
 }
