@@ -1,8 +1,8 @@
 @charset "utf-8";
 :root {
-    --main_color:#baf;
-    --main_color_alpha:#bafa;
-    --gray_line_color:rgba(0, 0, 0, 0.3);
+	--main_color:#baf;
+	--main_color_alpha:#bafa;
+	--gray_line_color:rgba(0, 0, 0, 0.3);
 }
 
 /*Mobile First*/
@@ -16,10 +16,11 @@ address {
 
 a:where(:hover, :focus) {
 	text-decoration:underline wavy rgba(0 0 0 / 0.5);
-	text-underline-offset:0.25rem;}
+	text-underline-offset:0.25rem;
+}
 a:active, summary:active {
 	transition:0.2s filter, 0.4s transform;
-	filter:brightness(1.1) saturation(1.1);
+	filter:brightness(1.1) saturate(1.1);
 }
 
 input, textarea {
@@ -31,16 +32,14 @@ input, textarea {
 	accent-color:var(--main_color);
 	padding:0px 0.5rem;
 }
-
-th,td, a, button {padding:0.5rem;}
-
+.custom_input :where(input[type="text"], [type="password"], [type="search"])
+{
+	field-sizing: content;
+}
 svg {
 	fill:var(--main_color);
 	vertical-align: middle;
-	}
-
-
-
+}
 
 /*Desktop*/
 @media screen and (1100px < width) {

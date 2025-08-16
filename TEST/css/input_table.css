@@ -596,8 +596,6 @@ span:has(#custom_design_file:focus) {
         display: flex;
         flex-direction: column;
     }
-    th, td {border:1px solid;}
-
 }
 
 /*Mobile*/
@@ -607,5 +605,4 @@ span:has(#custom_design_file:focus) {
         display: flex;
         flex-direction: column;
     }
-    th, td {border:1px solid;}
 }
