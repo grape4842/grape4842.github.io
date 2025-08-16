@@ -1,8 +1,8 @@
 @charset "utf-8";
 :root {
-    --main_color:#baf;
-    --main_color_alpha:#bafa;
-    --gray_line_color:rgba(0, 0, 0, 0.3);
+    --main_color:light-dark(#baf, #64a);
+    --main_color_alpha:light-dark(#bafa, #64aa);
+    --gray_line_color:light-dark(rgba(0, 0, 0, 0.3), rgba(255 255 255 /.1));
 }
 table {
     margin: 0px auto;
@@ -57,7 +57,7 @@ input:where(:focus, :not(:placeholder-shown))+.move_label {
 .custom_input :where(input[type="text"], [type="password"]) {
     background: transparent;
     border: var(--gray_line_color) 1px solid;
-    border-bottom: solid var(--main_color) 3px;
+    border-bottom: solid var(--main_color) 0.25rem;
     padding: 5px;
     transition: opacity 0.2s;
     outline-offset: 4px;
@@ -101,8 +101,8 @@ label:hover+.custom_input :where(input[type="radio"], input[name="custom_checkbo
 }
 .custom_input :where(input[type="checkbox"]:checked)::before {
     content: '';
-    width: 4px;
-    height: 8px;
+    width: 0.25rem;
+    height: 0.5rem;
     position: absolute;
     rotate: 45deg;
     inset:0;
@@ -147,16 +147,16 @@ label[for="switch_checkbox"]+div :where(i, input) {
 }
 
 label[for="switch_checkbox"]+div i.on {
-    left: 8px;
-    height: 8px;
+    left: 0.5rem;
+    height: 0.5rem;
     width: 2px;
     background-color: rgba(255 255 255 / 0.5);
 }
 
 label[for="switch_checkbox"]+div i.off {
-    right: 8px;
-    width: 8px;
-    height: 8px;
+    right: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
     border: rgba(255 255 255 / 0.5) solid 1px;
 }
 
@@ -225,7 +225,7 @@ label[for="switch_checkbox"]+div:has(input:checked) {
 }
 
 .custom_input label:has(input[name="star_radio"]):hover {
-    filter: brightness(1.3);
+    filter: brightness(1.2);
     transition: 0.2s filter;
 }
 
@@ -455,11 +455,11 @@ select:open::picker-icon {
   rotate: 180deg;
 }
 option:first-of-type {
-  border-radius: 8px 8px 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 option:last-of-type {
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 option {border:rgba(255 255 255 / 0.3) 1px solid;}
 
@@ -467,7 +467,7 @@ option:not(option:last-of-type) {
   border-bottom: none;
 }
 select:where(:hover, :focus), option:checked {
-    filter: brightness(1.1) saturate(1.2);
+    filter: brightness(1.1) saturate(1.1);
 }
 option:checked {
     font-weight: 900;
@@ -506,7 +506,7 @@ label:has(#file_text):where(:hover, :focus) input {
 span:has(#custom_design_file:focus) {
     border: 2px solid white;
     box-shadow: 0px 0px 0px 1px black inset;
-    border-radius: 4px;
+    border-radius: 0.25rem;
 }
 
 .custom_input label[for="custom_design_file"] span {
@@ -539,22 +539,10 @@ span:has(#custom_design_file:focus) {
 }
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-    :root {
-        --main_color:#64a;
-        --main_color_alpha:#64aa;
-        --gray_line_color:rgba(255 255 255 / 0.1);
-    }
-    th {
-        background: var(--gray_line_color);
-    }
     .custom_input {
         label:has(input[name="star_radio"]):hover {
-            filter: saturate(8) hue-rotate(-30deg);
+            filter: saturate(1.5) hue-rotate(-5deg) brightness(1.1);
         }
-        label[for="custom_color"] {
-            border: var(--gray_line_color); 1px solid;
-        }
-    }
 
 }
 

@@ -186,8 +186,11 @@ body {
 	transition: filter 0.2s;
 }
 textarea, select, input {
-	field-sizing: content;
+	/*field-sizing: content;*/
 	/*내용 길이에 따라 크기 조절*/
+}
+select, option {
+	display: flex;
 }
 select option {padding:0.25rem;}
 label:has(input:checked) {
@@ -215,7 +218,9 @@ select::-ms-expand {
 	position: relative;
 	transition-duration: 0.2s;
 }
-
+input[type="file"], [type="file"]::file-selector-button {
+	min-width: max-content;
+}
 summary::-webkit-details-marker {
 /* Safari 브라우저용 사용자 정의 스타일 */
 display: none;

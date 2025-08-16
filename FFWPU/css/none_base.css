@@ -1,21 +1,16 @@
 @import url("../../root.css")
 @charset "utf-8";
 :root {
-	--variable_purple:#dcf;
-	--variable_invert_purple:#63b;
+	--variable_purple:light-dark(#dcf, 213);
+	--variable_invert_purple:light-dark(#63b, #213);
 	--default_purple:#63b;
 	--transparent_purple:#63b5;
 	--border_purple:#a7f;
 	--light_purple:#baf;
 	--dark_purple:#315;
-	--yellow:#960;
+	--yellow:light-dark(#960, #ffa);
 }
 @media (prefers-color-scheme: dark) {
-	:root{
-		--variable_purple:#213;
-		--variable_invert_purple:#baf;
-		--yellow:#ffa;
-	}
 }
 /*큰 영역*/
 header, footer {

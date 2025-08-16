@@ -6,10 +6,6 @@
 }
 
 /*Mobile First*/
-.pc_view {display: none;}
-.dark_view {display: none;}
-.content_width {padding:1rem;}
-fieldset {border:none;}
 h2 {padding:1rem;}
 address {
 	text-align: center;
@@ -18,10 +14,10 @@ address {
 
 a:where(:hover, :focus) {
 	text-decoration:underline wavy rgba(0 0 0 / 0.5);
-	text-underline-offset:4px;}
+	text-underline-offset:0.25rem;}
 a:active, summary:active {
 	transition:0.2s filter, 0.4s transform;
-	filter:brightness(1.2) saturation(1.2);
+	filter:brightness(1.1) saturation(1.1);
 }
 
 input, textarea {
@@ -41,54 +37,11 @@ svg {
 	vertical-align: middle;
 	}
 
-/*대중교통*/
-.metro-line {
-	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
-	display:inline-flex;
-	font-size: 1rem;
-	border-radius:10rem;
-	justify-content:center;
-	align-items:center;
-	margin-right:10px;
-	min-width:2rem;
-	min-height:2rem;
-	color:white;
-}
-
-#logo {width: 3rem; height: 3rem; padding-right: 0.5rem;}
-.numline {aspet-ratio:1/1;}
-.line1 {background:#052F93;}
-.line2 {background:#10A643;}
-.line3 {background:#DE6D00;}
-.line4 {background:#0099d1;}
-.line5 {background:#A95094;}
-.line6 {background:#D08D1A;}
-.line7 {background:#657931;}
-.line8 {background:#E74E6D;}
-.line9 {background:#B58600;}
-.gyline {background-color:#5F9C82; padding:0px 10px;}
-
-.bus-line {
-	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
-	display:inline-flex;
-	font-size:1rem;
-	justify-content:center;
-	align-items:center;
-	margin-right:10px;
-	border-radius:5px;
-	color:#fff;
-	padding:0px 5px;}
-.g-bus {background-color:#5BB025;}
-.b-bus {background-color:#3D5BAB;}
-.r-bus {background-color:#F73711;}
-.meter {color:#C30; padding:0px 10px;}
 
 
 
 /*Desktop*/
 @media screen and (1100px < width) {
-	.pc_view {display:block;}
-	th,td {padding:1rem;}
 }
 
 /*Tablet*/
@@ -108,13 +61,6 @@ svg {
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
 /*Dark Mode Layout*/
-    :root {
-        --main_color:#64a;
-        --main_color_alpha:#64aa;
-        --gray_line_color:rgba(255 255 255 / 0.1);
-    }
-	.light_view {display: none;}
-	.dark_view {display:unset;}
 }
 
 
