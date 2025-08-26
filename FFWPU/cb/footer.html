@@ -25,12 +25,12 @@
 				</a>
 			</li>
 			<li class="bar_menu_item">
-				<button id="gnb_open" popovertarget="gnb_menu" type="button">
+				<button aria-haspopup="dialog" id="gnb_open" onclick="document.getElementById('gnb_menu').showModal();" type="button">
 					<img src="../img/CB_menu.svg" alt>
 					<span>메뉴</span>
 					<span class="hidden">열기</span>
 				</button>
-				<dialog id="gnb_menu" popover>
+				<dialog id="gnb_menu" class="popover">
 					<h2 class="hidden">전체메뉴</h2>
 					<nav class="">
 						<a id="gnb_menu_login" href="login.html">로그인</a>
@@ -97,9 +97,11 @@
 							<li><a href="">회원탈퇴</a></li>
 						</ul>
 					</nav>
-					<button class="close_btn" id="gnb_close" popovertarget="gnb_menu" type="button">
+					<form method="dialog" class="popover_close">
+					<button id="gnb_close" type="submit">
 						<img src="../../icon/Xclose.svg" alt="전체메뉴 닫기">
 					</button>
+				</form>
 				</dialog>
 			</li>
 		</ul>

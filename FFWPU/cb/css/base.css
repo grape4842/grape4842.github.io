@@ -190,13 +190,15 @@ label[for="total_search"], label[for="total_search_m"] {
 }
 #gnb_menu {
 	position: fixed;
-	min-width: 12rem;
+	width: min-content;
 	height: 100dvh;
-	left:-100rem; top:0;
+	left:-100rem; top:0rem;
 	transition: display 0.2s;
 	background:#353539;
-	box-shadow:0px 0px 1rem #464646;
+	box-shadow:0px 0px 1rem #46464646;
 	z-index: 2;
+	margin:0rem;
+	transform: translate(0, 0);
 	animation-duration: 0.2s;
 	animation-name: open_gnb;
 	animation-fill-mode: forwards;
@@ -225,7 +227,7 @@ label[for="total_search"], label[for="total_search_m"] {
 }
 #gnb_menu a {
 	width:100%;
-	color:#fff;
+	color:var(--pure_white);
 }
 #gnb_menu a img {
 	display: inline-block;
@@ -258,19 +260,15 @@ label[for="total_search"], label[for="total_search_m"] {
 	border-left-color: rgba(220 220 255 / 1);
 }
 
-.close_btn {
+#gnb_close {
 	background: transparent;
 	position: absolute;
 	top:0; right: 0;
 	padding:0.5rem;
 	z-index: 2;
 }
-.close_btn img {
-	aspect-ratio: 1/1;
-	width:2rem;
-}
 #gnb_close img {
-	filter:invert(1) contrast(2);
+	scale:2;
 }
 .bar_menu {
 	text-align: center;
@@ -533,10 +531,8 @@ article {padding:1rem 0rem;}
 		right:2.5rem;
 	}
 	#gnb_menu {
-		max-height: auto;
+		left:0rem;
 		padding:2rem;
-		border-radius: 3rem;
-		margin:auto;
 	}
 	#gnb_menu nav {
 
