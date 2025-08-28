@@ -407,7 +407,7 @@ article {padding:1rem 0rem;}
 	margin:auto;
 	border-radius: 10rem;
 	background: rgba(0 0 0 / 0.2);
-	box-shadow:0 0 0.15rem 0.5rem rgba(0 0 0 / 0.2);
+	box-shadow:0 0 0.15rem 0.5rem var(--gray_line_color);
 	transition: 0.2s opacity;
 }
 
