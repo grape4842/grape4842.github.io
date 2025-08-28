@@ -313,7 +313,11 @@ section.content_width, .modal_popup {
 	margin:4rem auto;
 }
 article {padding:1rem 0rem;}
-.more{top:2rem; right:1.5rem;}
+.more{
+	top:2rem; 
+	right:1.5rem;
+	line-height: 1rem;
+}
 
 .page_number_ui {
 	display: flex;
