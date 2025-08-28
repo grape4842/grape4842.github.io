@@ -316,7 +316,6 @@ article {padding:1rem 0rem;}
 .more{
 	top:2rem; 
 	right:1.5rem;
-	line-height: 1rem;
 }
 
 .page_number_ui {
@@ -385,11 +384,11 @@ article {padding:1rem 0rem;}
 }
 
 .more {
+	line-height: 1rem;
 	outline-offset:0.5rem;
 	aspect-ratio: 1/1;
 	padding: 0rem;
 	width:1.5rem;
-	line-height: 1.5rem;
 	font-size:2rem;
 	position: absolute;
 	justify-content: center;
