@@ -375,12 +375,12 @@ article {padding:1rem 0rem;}
 	text-align: center;
 	line-height: 2rem;
 	margin:0px 0.25rem;
-	border:1px #c91f61 solid;
+	border:1px var(--main_color); solid;
 }
 .page_number_ui :disabled {display: none;}
 .page_number_ui :where(a[aria-current], .page_arrow_control) {
-	color: #fff;
-	background: linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
+	color: var(--pure_white);
+	background:var(--main_color_gradient);
 }
 
 .more {
@@ -406,7 +406,7 @@ article {padding:1rem 0rem;}
 	inset:0;
 	margin:auto;
 	border-radius: 10rem;
-	background: rgba(0 0 0 / 0.2);
+	background: var(--main_color_gradient);
 	box-shadow:0 0 0.15rem 0.5rem var(--gray_line_color);
 	transition: 0.2s opacity;
 }
@@ -451,7 +451,7 @@ article {padding:1rem 0rem;}
 	brightness(0.7);
 }
 .bar_menu_item > :where(a, button)[aria-current="page"] span {
-	background: linear-gradient(135deg, #c91f61 10%,#91287c 48%,#5c2e91 100%);
+	background:var(--main_color_gradient);
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
@@ -461,7 +461,7 @@ article {padding:1rem 0rem;}
 .bar_menu_item > :where(a, button)[aria-current="page"]::before {
 	content: '';
 	width:100%;
-	background-color: #fff;
+	background-color: var(--pure_white);
 	position: absolute;
 	top:0; left:0; bottom: 0; right: 0;
 	margin: auto;
