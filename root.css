@@ -89,10 +89,6 @@
 	font-family: "BIZ-UDPGothic", "Pretendard Variable", sans-serif, serif;
 	font-feature-settings: "palt";
 }
-::selection {
-	background:#baf; 
-	color:#000;
-}
 /*컬러 설정*/
 :root {
 	color-scheme: light dark;
@@ -106,6 +102,10 @@
 	--pure_blue : #00f;
 	--kakao_yellow : #FEE500;
 	--naver_green:#2DB400;
+}
+::selection {
+	background:#baf; 
+	color:var(--pure_black);
 }
 
 /*숨김텍스트 설정*/
