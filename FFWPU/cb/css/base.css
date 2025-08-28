@@ -3,6 +3,7 @@
 :root {
 	--main_color:#c91f6f;
 	--main_color_gradient:linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
+	--alpha_gray:light-dark(#fffa, #000a);
     --purple:light-dark(#baf, #64a);
     --invert_purple:light-dark(#64a, #baf);
     --alpha_purple:light-dark(#bafa, #64aa);
@@ -79,8 +80,8 @@ input, button {
 :where(input[type="text"], input[type="password"], input[type="search"]) {
 	min-width:5rem;
 	outline-offset: 0.25rem;
-	background-color:#fff;
-	border:1px solid #54a7;
+	background-color:var(--pure_white);
+	border:1px solid var(--purple);
 	transition: background-color 0.2s, border-bottom 0.1s;
 	padding:0.25rem 0.5rem;
 }
@@ -91,7 +92,7 @@ input[type="search"], .gnb button {
 	justify-content: center;
 }
 :where(input[type="text"], input[type="password"], input[type="search"]):focus {
-	border:2px solid #54ac;
+	border:2px solid var(--alpha_purple);
 }
 input[type="checkbox"] + span {
 	margin-left: 0.5rem;
@@ -136,7 +137,7 @@ label {display: flex;}
 .modal_header {
 	max-height: 3rem;
 	font-size:1.25rem;
-	border-bottom: rgba(255 255 255 / 0.2);
+	border-bottom:var(--alpha_gray);
 }
 .modal_content {
 	margin:0 auto;
@@ -169,7 +170,7 @@ label[for="total_search"], label[for="total_search_m"] {
 	align-items: center;
 }
 #total_search ,#total_search_m {
-	color:#fff;
+	color:var(--pure_white);
 	font-weight: 500;
 	font-size:18px;
 }
@@ -195,7 +196,7 @@ label[for="total_search"], label[for="total_search_m"] {
 	left:-100rem; top:0rem;
 	transition: display 0.2s;
 	background:#353539;
-	box-shadow:0px 0px 1rem #46464646;
+	box-shadow:0px 0px 1rem var(--alpha_gray);
 	z-index: 2;
 	margin:0rem;
 	transform: translate(0, 0);
@@ -219,7 +220,7 @@ label[for="total_search"], label[for="total_search_m"] {
 	flex-direction: column;
 }
 #gnb_menu .arrow_list a {
-	border-bottom:1px solid #515151;
+	border-bottom:1px solid var(--alpha_gray);
 	padding:0.5rem;
 	display: flex;
 	align-items: center;
@@ -588,8 +589,6 @@ article {padding:1rem 0rem;}
 		background: rgba(20 15 25 / 0.9);
 		border: 1px solid rgba(240 230 255 / 0.3);
 	}
-	th{background: rgba( 255 255 255 / 0.2 );}
-	th{background: rgba( 255 255 255 / 0.1 );}
 	:where(input[type="text"], input[type="password"], input[type="search"]) {
 		background-color: #010003;
 	}
