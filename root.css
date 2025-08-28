@@ -479,7 +479,7 @@ dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit
 .lightV {display: unset;}
 .darkV {display: none;}
 .View_PC, .PCV, .PC_View, .pc_view {display:none;}
-.View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
+.View_Mobile, .mobileV,.mobile_View, .mobile_view, .Mobile_View, .MobileV {
 	display:unset;
 }
 dialog {
@@ -582,7 +582,7 @@ dialog {
 	.View_PC, .PCV, .PC_View, .pc_view {
 		display:unset;
 	}
-	.View_Mobile, .mobileV,.mobile_View, .Mobile_View, .MobileV {
+	.View_Mobile, .mobileV,.mobile_View, .mobile_view, .Mobile_View, .MobileV {
 		display:none;
 	}
 	.content_width {width:60dvw;}
