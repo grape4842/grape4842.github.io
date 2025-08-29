@@ -145,10 +145,6 @@ label[for="total_search"], label[for="total_search_m"] {
 	position: absolute;
 	right:0px;
 }
-#search_m_area {
-	width:100%;
-	align-items: center;
-}
 #total_search ,#total_search_m {
 	color:var(--pure_white);
 	font-weight: 500;
