@@ -366,7 +366,7 @@ article {padding:1rem 0rem;}
 
 .more {
 	line-height: 1rem;
-	outline-offset:0.5rem;
+	outline-offset:0.25rem;
 	aspect-ratio: 1/1;
 	padding: 0rem;
 	width:1.5rem;
@@ -586,6 +586,10 @@ article {padding:1rem 0rem;}
 	}
 	.arrow_list a:where(:hover, :focus)::before {
 		border-left-color: rgba(220 220 255 / 0.9);
+	}
+	.more .icon_img {
+		filter: invert(1);
+		rotate: 45deg;
 	}
 	.more:after {
 		background: rgba(255 255 255 / 0.2);
