@@ -347,6 +347,7 @@ fieldset {
 	width 0.3s ease allow-discrete, 
 	content-visibility 0.3s ease allow-discrete, 
 	display 0.3s ease allow-discrete,
+	overlay 0.3s ease allow-discrete,
 	opacity 0.3s ease allow-discrete, 
 	scale 0.3s ease allow-discrete, 
 	visibility 0.3s ease allow-discrete, 
@@ -383,7 +384,6 @@ details[open]::details-content {
 	max-width: 90dvw;
 	max-height: 90dvh;
 	border:none;
-	scale: 0;
 	opacity: 0;
 }
 body:has(dialog[open]) {overflow: hidden;}
@@ -433,7 +433,6 @@ dialog[open] :where(.popover_header,.popover_head,.popup_header,.popup_head,.pop
 :popover-open, ::backdrop,
 [open], dialog, dialog > * {
 	opacity: 1;
-	scale:1;
 	transform: translateY(0);
 }
 
@@ -442,7 +441,6 @@ dialog[open] :where(.popover_header,.popover_head,.popup_header,.popup_head,.pop
 	:popover-open, ::backdrop,
 	[open], dialog, dialog > * {
 		opacity: 0;
-		scale:0;
 	}
 }
 
