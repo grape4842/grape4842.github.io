@@ -73,6 +73,10 @@ li {
 	list-style-position:inside;
 	padding:0.5rem 0px;
 }
+details li {
+	padding:0;
+	margin:0.25rem auto;
+}
 .ovsb {overflow-x:auto;}
 
 /*클릭가능한 것들*/
@@ -120,6 +124,7 @@ a {
 	text-underline-offset:0.25rem;
 	transition:text-decoration 0.1s, outline 0.1s;
 }
+details a {display: flex;}
 :focus, a:hover, summary:hover
 {cursor:pointer;}
 a:focus, a:hover {
