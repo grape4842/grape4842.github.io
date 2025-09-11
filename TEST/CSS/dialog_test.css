@@ -2,6 +2,7 @@
 @charset "utf-8";
 :root {
     --main_color:light-dark(#baf, #70a);
+	--invert_main_color:light-dark(#70a, #baf);
 }
 body {
 	font-size:1rem;
@@ -10,6 +11,7 @@ body {
 	background-attachment:fixed;
 	background-size:80%;
 	margin:0;
+	padding:0;
 	accent-color:var(--main_color);}
 	
 
@@ -32,21 +34,17 @@ header {
 
 footer, header {
 	margin:0rem auto; 
-	padding:1rem;
+	padding:1rem 0rem;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 }
 
 footer {
-	left: 0; bottom: 0;
-	width:100dvw;
-	background: linear-gradient(#326 20%, var(--main_color));
-	color:white;
+	background: linear-gradient(#406 20%, var(--main_color));
 	padding:2rem 0px;
 	margin:0px;
 }
-
 
 /*제목류*/
 h1 {
@@ -176,7 +174,9 @@ textarea {
 
 /*표 관련 선언*/
 table {
-	box-sizing:border-box;
+/*	display: grid;
+	grid-auto-flow:dense;
+*/	box-sizing:border-box;
 	border-collapse:collapse;
 	margin:1rem auto;
 	margin-top:0px;
@@ -196,8 +196,15 @@ th{
 td {font-weight:400;}
 .verT {
 	text-align:center;}
-.verT svg {margin:0px auto}
-
+thead, .support_browser {display: contents;}
+/*.support_browser th {display: flex;}*/
+.support_browser th * {
+	margin:0 auto;
+}
+.support_browser th p {
+	writing-mode: vertical-rl;
+	rotate:180deg;
+}
 /*스크롤바 커스텀*/
 ::-webkit-scrollbar {
     width: 0.5rem;  /* 스크롤바의 너비 */
@@ -235,24 +242,31 @@ td {font-weight:400;}
 }
 
 @media (prefers-color-scheme:dark) {
-	body {background-image:url(../img/purplestar.jpg); 
-	backdrop-filter:none;}
+	body {
+		background-image:url(../img/purplestar.jpg); 
+		backdrop-filter:none;
+	}
 	main {background:rgba(10 0 40 / 0.5);}
 	.lightV {display:none;}
 	.darkV {display:flex;}
-	a:focus, a:hover {text-decoration:2px wavy underline #eef;}
+	a:focus, a:hover {
+		text-decoration:2px wavy underline var(--invert_main_color);
+	}
 	a:active, summary:active {
 	filter:brightness(1.2);}
 	details {background-color:#507;}
 	table {color:white;}
-	th,td {border:1px solid #baf;}
+	th,td {border:1px solid var(--invert_main_color);}
 	th {background-color:#314;}
 	td {background-color:#405;}
+	.verT path:last-child {fill:var(--pure_white);}
 	h2 {color:#fcf;}
 	button {background-color:#080;}
 	:modal {background:rgba(60 60 70 / 0.5);}
 	.layerH {color:#ffa;}
-	header, footer {background:linear-gradient(#216 20%, #429);}
+	header, footer {
+		background:linear-gradient(#304 20%, #507);
+	}
 	a:active, summary:active, a:focus, a:hover {
 	filter:brightness(1.2) saturate(120%);
 	}
