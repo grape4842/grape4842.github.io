@@ -431,7 +431,7 @@ dialog[open] :where(.popover_header,.popover_head,.popup_header,.popup_head,.pop
 }
 /* On Stage */
 :popover-open, ::backdrop,
-[open], dialog, dialog > * {
+[open], [open] * {
 	opacity: 1;
 	transform: translateY(0);
 }
@@ -439,7 +439,7 @@ dialog[open] :where(.popover_header,.popover_head,.popup_header,.popup_head,.pop
 /* Off Stage */
 @starting-style {
 	:popover-open, ::backdrop,
-	[open], dialog, dialog > * {
+	[open], [open] * {
 		opacity: 0;
 	}
 }
