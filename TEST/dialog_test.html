@@ -170,7 +170,7 @@
 				</table>
 			</div>
 			<details>
-				<summary>MDN URL</summary>
+				<summary>참조 사이트</summary>
 				<div>
 					<ul>
 						<li>
@@ -189,11 +189,17 @@
 				</div>
 			</details>
 
-			<button id="open-popup">실제로 레이어 열어보기</button>
+			<button onclick="document.getElementById('popup-layer').showModal();" id="open-popup">실제로 레이어 열어보기</button>
 			<dialog id="popup-layer">
-				<h1 class="layerH popup_header">&lt;dialog&gt;태그를 여러개 쓸 때는?</h1>
+				<h1 class="layerH popup_header">&lt;dialog&gt;태그를 사용할 때 주의점</h1>
 				<div class="layerC popup_content">
-					<p>복수의 레이어가 있는 경우에 어떻게 만들어야 버튼과 레이어의 연결관계를 명시할 수 있는지는 모르겠습니다.</p>
+					<dl>
+						<dt>&lt;dialog&gt;를 여러 개 쓸 때는?</dt>
+						<dd>복수의 레이어가 있는 경우 각 레이어에 id를 주고 이를 버튼과 연결해야 합니다.</dd>
+					</dl>
+						<dt>닫기 버튼의 위치는</dt>
+						<dd>닫기 버튼은 키보드 순서상 가장 마지막에 접근되도록 마크업해야 합니다.</dd>
+					</dl>
 				</div>
 				<form method="dialog" class="popup_close">
 					<button type="submit">

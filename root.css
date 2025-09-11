@@ -340,27 +340,27 @@ fieldset {
 	border: none; 
 }
 
-::details-content, dialog, dialog::backdrop, dialog > * {
+:modal, [popover], dialog, ::backdrop, ::details-content, dialog > * {
 	transition:
-	height 0.3s ease, 
-	width 0.3s ease, 
+	height 0.3s ease allow-discrete, 
+	width 0.3s ease allow-discrete, 
 	content-visibility 0.3s ease allow-discrete, 
-	display 0.3s ease,
-	opacity 0.3s ease, 
-	scale 0.3s ease, 
-	visibility 0.3s ease, 
-	backdrop-filter 0.3s ease, 
-	transform 0.3s ease, 
-	background 0.3s ease;
+	display 0.3s ease allow-discrete,
+	opacity 0.3s ease allow-discrete, 
+	scale 0.3s ease allow-discrete, 
+	visibility 0.3s ease allow-discrete, 
+	backdrop-filter 0.3s ease allow-discrete, 
+	transform 0.3s ease allow-discrete, 
+	background 0.3s ease allow-discrete;
 }
 
 details::details-content {
-  height: 0;
-  opacity: 0;
-  overflow: clip;
+	height: 0;
+	opacity: 0;
+	overflow: clip;
 }
 details[open]::details-content {
-  opacity: 1;
+	opacity: 1;
 }
 
 @supports (interpolate-size: allow-keywords) {
@@ -373,38 +373,19 @@ details[open]::details-content {
 	}
 }
 
-dialog {
+[popover], dialog {
 	position: fixed;
+	margin:auto;
 	border-radius: 0.5rem;
-	inset: 50% 50%;
-	transform: translate(-50%, -50%);
 	min-width:min-content;
-	min-height: 20vh;
-	max-width: 90vw;
+	min-height: min-content;
+	max-width: 90dvw;
 	max-height: 90dvh;
 	border:none;
-	transition: display 0.3s allow-discrete, overlay 0.3s allow-discrete;
-	animation: dialog_close 0.3s forwards;
+	scale: 0;
+	opacity: 0;
 }
-dialog[open] {
-	transition: display 0.3s allow-discrete, overlay 0.3s allow-discrete;
-	animation: dialog_open 0.3s forwards;
-}
-
-@keyframes dialog_open {
-	from {opacity: 0;}
-	to {opacity: 1;}
-}
-@keyframes dialog_close {
-	from {opacity: 1;}
-	to {opacity: 0;}
-}
-
 body:has(dialog[open]) {overflow: hidden;}
-dialog::backdrop {
-	transition: filter 0.3s, background 0.3s,display 0.3s;
-	backdrop-filter: blur(0.5rem) brightness(0.7) grayscale(0.7);
-}
 dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
 	position: fixed;
 	right:0;
@@ -447,6 +428,22 @@ dialog[open] :where(.popover_header,.popover_head,.popup_header,.popup_head,.pop
 	height: 3rem;
 	z-index: 2;
 }
+/* On Stage */
+:popover-open, ::backdrop,
+[open], dialog, dialog > * {
+	opacity: 1;
+	scale:1;
+	transform: translateY(0);
+}
+
+/* Off Stage */
+@starting-style {
+	:popover-open, ::backdrop,
+	[open], dialog, dialog > * {
+		opacity: 0;
+		scale:0;
+	}
+}
 
 :where(#skipnav, #jumpnav, #jump_main_content, #skip_nav, #jump_nav, #nav_skip) {
 	position: fixed;
@@ -484,7 +481,6 @@ dialog[open] :where(.popover_header,.popover_head,.popup_header,.popup_head,.pop
 }
 dialog {
 	width: 88vw;
-	margin: 0rem auto;
 }
 .content_width {
 	width: 90vw;
@@ -611,7 +607,7 @@ dialog {
 	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 		padding:1rem 1.25rem;
 	}
-dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+	dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
 		right:0.75rem;
 	}
 }
@@ -643,7 +639,7 @@ dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close
 	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 		padding:0.25rem 0.5rem;
 	}
-dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+	dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
 		right:-0.25rem;
 	}
 }
