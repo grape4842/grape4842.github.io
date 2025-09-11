@@ -1,7 +1,7 @@
 @import url("../../root.css")
 @charset "utf-8";
 :root {
-    --main_color:light-dark(#baf, #70a);
+	--main_color:light-dark(#baf, #70a);
 	--invert_main_color:light-dark(#70a, #baf);
 }
 body {
@@ -15,36 +15,36 @@ body {
 	accent-color:var(--main_color);}
 	
 
-.darkV {display:none;}
+	.darkV {display:none;}
 
-main {
-	margin:3vmax auto !important;
-	display:block;
-	padding:1rem;
-	border-radius:2rem;
-	border:rgba(120 100 255 / 0.7) 1px solid;
-	background-color:white;
-	backdrop-filter:blur(20px);
-}
+	main {
+		margin:3vmax auto !important;
+		display:block;
+		padding:1rem;
+		border-radius:2rem;
+		border:rgba(120 100 255 / 0.7) 1px solid;
+		background-color:white;
+		backdrop-filter:blur(20px);
+	}
 
 
-header {
-	background-color:#405;
-}
+	header {
+		background-color:#405;
+	}
 
-footer, header {
-	margin:0rem auto; 
-	padding:1rem 0rem;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-}
+	footer, header {
+		margin:0rem auto; 
+		padding:1rem 0rem;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	}
 
-footer {
-	background: linear-gradient(#406 20%, var(--main_color));
-	padding:2rem 0px;
-	margin:0px;
-}
+	footer {
+		background: linear-gradient(#406 20%, var(--main_color));
+		padding:2rem 0px;
+		margin:0px;
+	}
 
 /*제목류*/
 h1 {
@@ -66,11 +66,11 @@ ul,dl,dd,dt {padding:0px; margin:0px;}
 p {margin:0px; padding:0.3rem 0px;}
 ul {margin:0px; 
 	padding:0px;}
-li {
-	list-style-position:inside;
-	padding:0.5rem 0px;
-}
-.ovsb {overflow-x:auto;}
+	li {
+		list-style-position:inside;
+		padding:0.5rem 0px;
+	}
+	.ovsb {overflow-x:auto;}
 
 /*클릭가능한 것들*/
 #skipnav {
@@ -85,68 +85,68 @@ li {
 	font-weight:900; 
 	margin:0px auto; 
 	text-align:center;
-    left: 50%;
-    color:white;
-    transform: translateX(-50%);
+	left: 50%;
+	color:white;
+	transform: translateX(-50%);
 	background-color:var(--main_color);
 	border:#87f 2px solid;}
-#skipnav:focus {
-	position:fixed; 
-	top:0px;}
+	#skipnav:focus {
+		position:fixed; 
+		top:0px;}
 
-#page-top {
-	width:2.5rem;
-	height:2.5rem;
-	padding:0px;
-	position:fixed;
-	bottom:1rem;
-	right:1rem;
-	border-radius:100%;
-	z-index:5;
-	background:var(--main_color);
-	border:2px solid #74a;
-	backdrop-filter:blur(10px);
-}
-a {
-	scroll-behavior:smooth;
-	text-decoration:0px wavy underline transparent;
-	padding:0.7rem;
-	outline-offset:-1px;
-	text-underline-offset:0.25rem;
-	transition:text-decoration 0.1s, outline 0.1s;
-}
-:focus, a:hover, summary:hover
-	{cursor:pointer;}
-a:focus, a:hover {
-	text-decoration:2px wavy underline #327;
-}
-a:active, summary:active, a:focus, a:hover {
-	transition:0.4s filter, 0.4s transform, 0.4s text-decoration;
-	filter:brightness(0.8) saturate(120%);
-}
-a,summary,button,input {
-	transition: background 0.3s;
-}
-button {
-	background-color:#fbe;
-	border:none;
-	padding:1rem;
-}
+		#page-top {
+			width:2.5rem;
+			height:2.5rem;
+			padding:0px;
+			position:fixed;
+			bottom:1rem;
+			right:1rem;
+			border-radius:100%;
+			z-index:5;
+			background:var(--main_color);
+			border:2px solid #74a;
+			backdrop-filter:blur(10px);
+		}
+		a {
+			scroll-behavior:smooth;
+			text-decoration:0px wavy underline transparent;
+			padding:0.7rem;
+			outline-offset:-1px;
+			text-underline-offset:0.25rem;
+			transition:text-decoration 0.1s, outline 0.1s;
+		}
+		:focus, a:hover, summary:hover
+		{cursor:pointer;}
+		a:focus, a:hover {
+			text-decoration:2px wavy underline #327;
+		}
+		a:active, summary:active, a:focus, a:hover {
+			transition:0.4s filter, 0.4s transform, 0.4s text-decoration;
+			filter:brightness(0.8) saturate(120%);
+		}
+		a,summary,button,input {
+			transition: background 0.3s;
+		}
+		button {
+			background-color:#fbe;
+			border:none;
+			padding:1rem;
+		}
 
-details {
-	transition:height 3s ease-in, overflow 3s ease-in;
-	background-color:#ccc0ff;
-	margin:1rem auto;
-	border:1px solid #235;
-	box-sizing:border-box;
-}
-details > * {
-	padding:1rem;}
+		details {
+			transition:height 3s ease-in, overflow 3s ease-in;
+			background-color:#ccc0ff;
+			margin:1rem auto;
+			border:1px solid #235;
+			box-sizing:border-box;
+		}
+		details > * {
+			padding:1rem;}
 
-summary {
-	transition:transform 0.2s;
-	background:var(--main_color);
-}
+			summary {
+				transition:transform 0.2s;
+				background:var(--main_color);
+			}
 
 /*입력 요소*/
 textarea {
@@ -174,16 +174,10 @@ textarea {
 
 /*표 관련 선언*/
 table {
-/*	display: grid;
-	grid-auto-flow:dense;
-*/	box-sizing:border-box;
-	border-collapse:collapse;
 	margin:1rem auto;
-	margin-top:0px;
 }
 td,th {
 	box-sizing:border-box;
-	background-color: white; 
 	vertical-align:middle; 
 	border:1px solid #235; 
 	padding:0.5rem;
@@ -195,10 +189,17 @@ th{
 }
 td {font-weight:400;}
 .verT {
-	text-align:center;}
+	/*display: grid;*/
+	text-align:center;
+	grid-auto-flow: row dense;
+}
 thead, .support_browser {display: contents;}
-/*.support_browser th {display: flex;}*/
-.support_browser th * {
+.support_browser_name {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.support_browser_name * {
 	margin:0 auto;
 }
 .support_browser th p {
@@ -207,19 +208,19 @@ thead, .support_browser {display: contents;}
 }
 /*스크롤바 커스텀*/
 ::-webkit-scrollbar {
-    width: 0.5rem;  /* 스크롤바의 너비 */
+	width: 0.5rem;  /* 스크롤바의 너비 */
 }
 
 ::-webkit-scrollbar-thumb {
-    background:rgba(150 120 255 / 0.3); /* 스크롤바의 색상 */
-    border:solid 1px rgba(50 30 100 / 0.3);
-    border-radius: 10px;
+	background:rgba(150 120 255 / 0.3); /* 스크롤바의 색상 */
+	border:solid 1px rgba(50 30 100 / 0.3);
+	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
 	border-radius:10rem;
-    background:rgba(20 0 50 / 0.1);  /*스크롤바 뒷 배경 색상*/
-    border:1px solid rgba(150 120 255 / 0.3);
+	background:rgba(20 0 50 / 0.1);  /*스크롤바 뒷 배경 색상*/
+	border:1px solid rgba(150 120 255 / 0.3);
 }
 
 
@@ -253,35 +254,35 @@ thead, .support_browser {display: contents;}
 		text-decoration:2px wavy underline var(--invert_main_color);
 	}
 	a:active, summary:active {
-	filter:brightness(1.2);}
-	details {background-color:#507;}
-	table {color:white;}
-	th,td {border:1px solid var(--invert_main_color);}
-	th {background-color:#314;}
-	td {background-color:#405;}
-	.verT path:last-child {fill:var(--pure_white);}
-	h2 {color:#fcf;}
-	button {background-color:#080;}
-	:modal {background:rgba(60 60 70 / 0.5);}
-	.layerH {color:#ffa;}
-	header, footer {
-		background:linear-gradient(#304 20%, #507);
+		filter:brightness(1.2);}
+		details {background-color:#507;}
+		table {color:white;}
+		th,td {border:1px solid var(--invert_main_color);}
+		th {background-color:#314;}
+		td {background-color:#405;}
+		.verT path:last-child {fill:var(--pure_white);}
+		h2 {color:#fcf;}
+		button {background-color:#080;}
+		:modal {background:rgba(60 60 70 / 0.5);}
+		.layerH {color:#ffa;}
+		header, footer {
+			background:linear-gradient(#304 20%, #507);
+		}
+		a:active, summary:active, a:focus, a:hover {
+			filter:brightness(1.2) saturate(120%);
+		}
+		#page-top {background-color:#405a;}
 	}
-	a:active, summary:active, a:focus, a:hover {
-	filter:brightness(1.2) saturate(120%);
+
+
+	@media screen and (max-width:320px) {
+		body {font-size:14px;}
+		h1 {font-size:1.5rem;}
+
 	}
-	#page-top {background-color:#405a;}
-}
+	@media screen and (max-width:1100px) {
+	}
 
+	@media screen and (max-width:600px) {
 
-@media screen and (max-width:320px) {
-	body {font-size:14px;}
-	h1 {font-size:1.5rem;}
-
-}
-@media screen and (max-width:1100px) {
-}
-
-@media screen and (max-width:600px) {
-
-}
+	}
