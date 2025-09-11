@@ -116,103 +116,105 @@
 										<svg class="darkV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.382 3.968A8.962 8.962 0 0 1 12 2c2.125 0 4.078.736 5.618 1.968l1.453-1.453 1.414 1.414-1.453 1.453A8.962 8.962 0 0 1 21 11v1H3v-1c0-2.125.736-4.078 1.968-5.618L3.515 3.93l1.414-1.414 1.453 1.453zM3 14h18v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7zm6-5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="rgba(255,255,255,1)"/>
 										</svg>WebView Android
 									</td>
-									</tr>
-									<tr>
-										<th scope="row">
-											<p>&lt;dialog&gt;</p>
-											<p>open</p>
-											<p>showModal()</p>
-										</th>
-										<td>37</td>
-										<td>79</td>
-										<td>98</td>
-										<td>24</td>
-										<td>15.4</td>
-										<td>37</td>
-										<td>98</td>
-										<td>24</td>
-										<td>15.4</td>
-										<td>3.0</td>
-										<td>37</td>
-									</tr>
-									<tr>
-										<th scope="row">:modal</th>
-										<td>105</td>
-										<td>105</td>
-										<td>103</td>
-										<td>93</td>
-										<td>15.6</td>
-										<td>105</td>
-										<td>103</td>
-										<td>72</td>
-										<td>15.6</td>
-										<td>20</td>
-										<td>105</td>
-									</tr>
-								</tbody>
-							</table>
+								</tr>
+								<tr>
+									<th scope="row">
+										<p>&lt;dialog&gt;</p>
+										<p>open</p>
+										<p>showModal()</p>
+									</th>
+									<td>37</td>
+									<td>79</td>
+									<td>98</td>
+									<td>24</td>
+									<td>15.4</td>
+									<td>37</td>
+									<td>98</td>
+									<td>24</td>
+									<td>15.4</td>
+									<td>3.0</td>
+									<td>37</td>
+								</tr>
+								<tr>
+									<th scope="row">:modal</th>
+									<td>105</td>
+									<td>105</td>
+									<td>103</td>
+									<td>93</td>
+									<td>15.6</td>
+									<td>105</td>
+									<td>103</td>
+									<td>72</td>
+									<td>15.6</td>
+									<td>20</td>
+									<td>105</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<details>
+						<summary>MDN URL</summary>
+						<div>
+							<ul>
+								<li>
+									<a target="_blank" href="https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/dialog">&lt;dialog&gt; 요소 MDN 상세 보기</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:modal">:modal MDN 상세 보기</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showmodal">showModal() 메소드 MDN 상세 보기</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert">inert 속성 MDN 상세 보기</a>
+								</li>
+							</ul>
 						</div>
-						<details>
-							<summary>MDN URL</summary>
-							<div>
-								<ul>
-									<li>
-										<a target="_blank" href="https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/dialog">&lt;dialog&gt; 요소 MDN 상세 보기</a>
-									</li>
-									<li>
-										<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:modal">:modal MDN 상세 보기</a>
-									</li>
-									<li>
-										<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showmodal">showModal() 메소드 MDN 상세 보기</a>
-									</li>
-									<li>
-										<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert">inert 속성 MDN 상세 보기</a>
-									</li>
-								</ul>
-							</div>
-						</details>
+					</details>
 
-						<button id="open-popup">실제로 레이어 열어보기</button>
-						<dialog id="popup-layer">
-							<h1 class="layerH popup_header">&lt;dialog&gt;태그를 여러개 쓸 때는?</h1>
-							<div class="layerC popup_content">
-								<p>복수의 레이어가 있는 경우에 어떻게 만들어야 버튼과 레이어의 연결관계를 명시할 수 있는지는 모르겠습니다.</p>
-							</div>
-							<button class="layer-close" id="close-popup">
-								<span class="a11y-txt">레이어</span>
-								닫기
+					<button id="open-popup">실제로 레이어 열어보기</button>
+					<dialog id="popup-layer">
+						<h1 class="layerH popup_header">&lt;dialog&gt;태그를 여러개 쓸 때는?</h1>
+						<div class="layerC popup_content">
+							<p>복수의 레이어가 있는 경우에 어떻게 만들어야 버튼과 레이어의 연결관계를 명시할 수 있는지는 모르겠습니다.</p>
+						</div>
+						<form method="dialog" class="popup_close">
+							<button type="submit">
+								<img class="icon_img" src="../icon/Xclose.svg" alt="">
+								<span class="sr_only">팝업 닫기</span>
 							</button>
-						</dialog>
-					</main>
-					<footer>
-						<div class="content_width">
-							<address>배찬우 @purplemiyazawa</address>
-						</div>
-					</footer>
-				</div>
-				<a href="#skipnav" id="page-top" aria-label="페이지 최상단으로 이동">
-					<svg class="lightV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(100,0,150,1)"/></svg>
-					<svg class="darkV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(255,255,255,1)"/></svg>
-				</a>
+						</form>						
+					</dialog>
+				</main>
+				<footer>
+					<div class="content_width">
+						<address>배찬우 @purplemiyazawa</address>
+					</div>
+				</footer>
+			</div>
+			<a href="#skipnav" id="page-top" aria-label="페이지 최상단으로 이동">
+				<svg class="lightV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(100,0,150,1)"/></svg>
+				<svg class="darkV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="rgba(255,255,255,1)"/></svg>
+			</a>
 
-				<script type="">
-					const dialog = document.querySelector("#popup-layer")
+			<script type="">
+				const dialog = document.querySelector("#popup-layer")
 		// 문서오브젝트의 쿼리선택자 메소드로 #popup-layer와 선택자가 일치하는 요소 객체를 가져와 dialog 상수에 담아라.(id 속성이 "popup-layer"인 <dialog>태그, HTMLDialogElement 객체를 가져옴)
 
-					const popupOpener = document.querySelector("#open-popup")
+				const popupOpener = document.querySelector("#open-popup")
 
 		// 문서오브젝트의 쿼리선택자 메소드로 #open-popup와 선택자가 일치하는 문서 오브젝트의 자식 요소 객체를 가져와 popupOpener 상수에 담아라.(id 속성이 "open-popup"인 <button>태그, HTMLButtonElement 객체를 가져옴)
-					const popupClose = document.querySelector("#close-popup")
+				const popupClose = document.querySelector("#close-popup")
 
-					popupOpener.addEventListener("click",function(){
-						dialog.showModal();
-					});
+				popupOpener.addEventListener("click",function(){
+					dialog.showModal();
+				});
 
-					popupClose.addEventListener("click",function(){
-						dialog.close();
-					});
+				popupClose.addEventListener("click",function(){
+					dialog.close();
+				});
 
 		// popupOpener에 담긴 버튼객체의 addEventListener라는 이벤트리스너 등록 함수 메소드로 "click"이벤트를 등록하고, 클릭할 때마다, function(){ dialog.show(); }, 대화상자를 여는 함수를 호출해라.
-				</script>
-			</body>
-			</html>
+			</script>
+		</body>
+		</html>
