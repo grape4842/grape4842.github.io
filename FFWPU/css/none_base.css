@@ -2,8 +2,8 @@
 @charset "utf-8";
 :root {
 	--variable_purple:light-dark(#dcf, #213);
-	--variable_invert_purple:light-dark(#63b, #213);
-	--default_purple:#63b;
+	--variable_invert_purple:light-dark(#304, #a7f);
+	--default_purple:#70b;
 	--transparent_purple:#63b5;
 	--border_purple:#a7f;
 	--light_purple:#baf;

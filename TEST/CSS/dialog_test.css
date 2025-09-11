@@ -111,7 +111,6 @@ li {
 }
 a {
 	scroll-behavior:smooth;
-	color:#103;
 	text-decoration:0px wavy underline transparent;
 	padding:0.7rem;
 	outline-offset:-1px;
