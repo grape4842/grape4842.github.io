@@ -386,6 +386,10 @@ details[open]::details-content {
 	border:none;
 	opacity: 0;
 }
+::backdrop {
+	backdrop-filter: blur(1rem);
+	background: rgba(0, 0, 0, 0.1);
+}
 body:has(dialog[open]) {overflow: hidden;}
 dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
 	position: fixed;
