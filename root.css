@@ -380,7 +380,7 @@ details[open]::details-content {
 	margin:auto;
 	border-radius: 0.5rem;
 	min-width:min-content;
-	min-height: min-content;
+	min-height: clamp(5rem, 50dvh, 10rem);
 	max-width: 90dvw;
 	max-height: 90dvh;
 	border:none;
