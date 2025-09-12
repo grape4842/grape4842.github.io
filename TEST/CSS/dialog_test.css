@@ -3,6 +3,7 @@
 :root {
 	--main_color:light-dark(#dcf, #507);
 	--invert_main_color:light-dark(#507, #dcf);
+	--popup : light-dark(rgba(255 255 255 / 0.7), rgba(40 40 40 / 0.6))
 }
 body {
 	font-size:1rem;
@@ -39,14 +40,14 @@ footer, header {
 }
 
 footer {
-	background: linear-gradient(#406 20%, var(--main_color));
+	background: linear-gradient(#406 20%, #749);
+	color:var(--pure_white);
 	padding:2rem 0rem;
 	margin:0rem;
 }
 
 /*제목류*/
 h1 {
-	color:#ffa;
 	font-size:1.7rem;
 	font-weight:900;
 }
@@ -109,8 +110,11 @@ details li {
 	border-radius:100%;
 	z-index:5;
 	background:var(--main_color);
-	border:2px solid #74a;
+	border:2px solid var(--invert_main_color);
 	backdrop-filter:blur(10px);
+}
+#page-top path:last-child {
+	fill:var(--invert_main_color);
 }
 a {
 	scroll-behavior:smooth;
@@ -121,12 +125,10 @@ a {
 	transition:text-decoration 0.1s, outline 0.1s;
 }
 details a {display: flex;}
-:focus, a:hover, summary:hover
-{cursor:pointer;}
-a:focus, a:hover {
-	text-decoration:2px wavy underline #327;
+a:where(:focus, :hover) {
+	text-decoration:2px wavy underline #427;
 }
-a:active, summary:active, a:focus, a:hover {
+:active, :focus, a:hover {
 	transition:0.4s filter, 0.4s transform, 0.4s text-decoration;
 	filter:brightness(0.8) saturate(120%);
 }
@@ -134,19 +136,18 @@ a,summary,button,input {
 	transition: background 0.3s;
 }
 button {
-	background-color:#fbe;
+	background-color:#fce;
 	border:none;
 	padding:1rem;
 }
 
 details {
-	transition:height 3s ease-in, overflow 3s ease-in;
-	background-color:#ccc0ff;
 	margin:1rem auto;
-	border:1px solid #235;
-	box-sizing:border-box;
+	border:1px solid var(--invert_main_color);
 }
-details > * {padding:1rem;}
+details > * {
+	padding:clamp(0.25rem, 0.5rem, 1rem);
+}
 
 summary {
 	background:var(--main_color);
@@ -183,7 +184,7 @@ table {
 td,th {
 	box-sizing:border-box;
 	vertical-align:middle; 
-	border:1px solid #235; 
+	border:1px solid #70aa; 
 	padding:0.5rem;
 	font-size:1.2rem;
 }
@@ -226,14 +227,37 @@ thead, .support_browser {display: contents;}
 	background:rgba(20 0 50 / 0.1);  /*스크롤바 뒷 배경 색상*/
 	border:1px solid rgba(150 120 255 / 0.3);
 }
-
+h1 {color:#ffa;}
 
 
 /*레이어*/
-:modal {
+dialog {
+	background: var(--popup);
 	box-shadow: 0px 0.25rem 1.5rem 0px rgba(0 0 0 /0.3);
+	/*transition:none;*/
+	animation: close 1s forwards;
+	&[open] {
+		animation: open 1s forwards;
+	}
 }
 
+@keyframes open {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes close {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
 @media (prefers-color-scheme:dark) {
 	body {
 		background-image:url(../img/purplestar.jpg); 
@@ -250,7 +274,6 @@ thead, .support_browser {display: contents;}
 	}
 	h2 {color:#fcf;}
 	button {background-color:#080;}
-	:modal {background:rgba(60 60 70 / 0.5);}
 	.layerH {color:#ffa;}
 	header, footer {
 		background:linear-gradient(#304 20%, #507);
