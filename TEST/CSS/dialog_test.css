@@ -1,8 +1,8 @@
 @import url("../../root.css")
 @charset "utf-8";
 :root {
-	--main_color:light-dark(#baf, #70a);
-	--invert_main_color:light-dark(#70a, #baf);
+	--main_color:light-dark(#dcf, #507);
+	--invert_main_color:light-dark(#507, #dcf);
 }
 body {
 	font-size:1rem;
@@ -15,9 +15,6 @@ body {
 	accent-color:var(--main_color);
 }
 
-
-.darkV {display:none;}
-
 main {
 	margin-block:clamp(3rem, 5vmax, 5rem)!important;
 	margin-inline: auto;
@@ -25,8 +22,7 @@ main {
 	padding:clamp(1rem, 3vmax, 4rem);
 	border-radius:2rem;
 	border:rgba(120 100 255 / 0.7) 1px solid;
-	background-color:white;
-	backdrop-filter:blur(20px);
+	backdrop-filter:blur(1rem);
 }
 
 
@@ -44,8 +40,8 @@ footer, header {
 
 footer {
 	background: linear-gradient(#406 20%, var(--main_color));
-	padding:2rem 0px;
-	margin:0px;
+	padding:2rem 0rem;
+	margin:0rem;
 }
 
 /*제목류*/
@@ -191,7 +187,7 @@ td,th {
 	padding:0.5rem;
 	font-size:1.2rem;
 }
-th{
+th:not(.support_browser th), .support_browser td {
 	background-color:var(--main_color); 
 	font-weight:700;
 }
@@ -237,52 +233,43 @@ thead, .support_browser {display: contents;}
 :modal {
 	box-shadow: 0px 0.25rem 1.5rem 0px rgba(0 0 0 /0.3);
 }
-:modal::backdrop {
-	backdrop-filter: blur(10px);
-	background:rgba(0 0 0 / 0.5);
-}
 
 @media (prefers-color-scheme:dark) {
 	body {
 		background-image:url(../img/purplestar.jpg); 
-		backdrop-filter:none;
 	}
-	main {background:rgba(10 0 40 / 0.5);}
-	.lightV {display:none;}
-	.darkV {display:flex;}
 	a:focus, a:hover {
 		text-decoration:2px wavy underline var(--invert_main_color);
 	}
 	a:active, summary:active {
-		filter:brightness(1.2);}
-		details {background-color:#507;}
-		table {color:white;}
-		th,td {border:1px solid var(--invert_main_color);}
-		th {background-color:#314;}
-		td {background-color:#405;}
-		.verT path:last-child {fill:var(--pure_white);}
-		h2 {color:#fcf;}
-		button {background-color:#080;}
-		:modal {background:rgba(60 60 70 / 0.5);}
-		.layerH {color:#ffa;}
-		header, footer {
-			background:linear-gradient(#304 20%, #507);
-		}
-		a:active, summary:active, a:focus, a:hover {
-			filter:brightness(1.2) saturate(120%);
-		}
-		#page-top {background-color:#405a;}
+		filter:brightness(1.2);
 	}
-
-
-	@media screen and (max-width:320px) {
-		body {font-size:14px;}
-		h1 {font-size:1.5rem;}
-
+	.verT path:last-child {
+		fill:var(--pure_white);
+		opacity: 0.9;
 	}
-	@media screen and (max-width:1100px) {
+	h2 {color:#fcf;}
+	button {background-color:#080;}
+	:modal {background:rgba(60 60 70 / 0.5);}
+	.layerH {color:#ffa;}
+	header, footer {
+		background:linear-gradient(#304 20%, #507);
 	}
-
-	@media screen and (max-width:600px) {
-
+	a:active, summary:active, a:focus, a:hover {
+		filter:brightness(1.2) saturate(120%);
 	}
+	#page-top {background-color:#405a;}
+}
+
+
+@media screen and (max-width:320px) {
+	body {font-size:14px;}
+	h1 {font-size:1.5rem;}
+
+}
+@media screen and (max-width:1100px) {
+}
+
+@media screen and (max-width:600px) {
+
+}

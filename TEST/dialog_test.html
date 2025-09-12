@@ -10,219 +10,222 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta property="og:image" content="img/purple1.jpg">
 	<meta property="og:title" content="대화 상자 요소 구현 테스트">
-	<meta property="og:description" content="<dialog>를 테스트하기 위한 페이지입니다.">
-		<meta property="og:locate" content="ko-kr">
-		<meta property="og:type" content="website">
-		<meta name="theme-color=" content="#7700aa">
-		<title>다이얼로그 태그 테스트</title>
-		<link rel="shortcut icon"  type="nCOIbLogo.png" href="img/nCOIbLogo.png">
-		<link rel="preload" href="../a11y/font/Koddi/KoddiUDOnGothic.woff2" as="font">
-		<link rel="preload" href="../a11y/font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
-		<link rel="preload" href="../a11y/font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
-		<link rel="preload" href="../a11y/font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
-		<link rel="preload" href="../a11y/font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
-	</head>
+	<meta property="og:description" content="&lt;dialog&gt;를 테스트하기 위한 페이지입니다.">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta name="theme-color=" content="#7700aa">
+	<title>다이얼로그 태그 테스트</title>
+	<link rel="shortcut icon"  type="nCOIbLogo.png" href="img/nCOIbLogo.png">
+	<link rel="preload" href="../a11y/font/Koddi/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../a11y/font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../a11y/font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+	<link rel="preload" href="../a11y/font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
+	<link rel="preload" href="../a11y/font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+</head>
 
-	<body>
-		<a href="" id="skipnav">본문 바로가기</a>
-		<header>
-			<div class="content_width">
-				<h1>&lt;dialog&gt;에 대해서</h1>
-			</div>
-		</header>
-		<main class="content_width">
-			<h2>&lt;dialog&gt;태그의 특징</h2>
-			<ul>
-				<li>선언만 하면 보이지 않고 open속성이 추가되어야 보인다.</li>
-				<li>CSS로 위치를 잡아줄 필요 없이 초기값이 화면 정중앙에 나타난다.</li>
-				<li>컨트롤을 활성화하면 &lt;dialog&gt; 태그 내 첫번째 인터렉션 요소에 자동으로 초점이 접근되며 이를 닫으면 &lt;dialog&gt;가 열리기 이전 마지막에 초점이 위치해 있던 요소에 초점이 이동된다.</li>
-				<li>Script에서 dialog.showModal()을 사용하면 레이어 외 콘텐츠와는 접근이 차단되기 때문에 레이어를 닫기 전까지 초점 및 가상커서가 레이어 밖으로 나가지 않는다.</li>
-				<li>Script에서 dialog.showModal()을 선언하면 레이어 외부 영역 배경을 약간 어둡게 한다.</li>
-				<li>iOS에서는 VoiceOver를 활성화 한 상태에서 뒤로 가기 동작(두 손가락 비비기)으로 닫을 수 있다.</li>
-				<li>&lt;form&gt; 태그의 method 속성에 추가된 HTMLDialogElement 속성값을 선언하면 입력서식에 접근한 상태에서 Enter를 눌러 값을 전송하고 레이어를 닫을 수 있다.</li>
+<body>
+	<a href="" id="skipnav">본문 바로가기</a>
+	<header>
+		<div class="content_width">
+			<h1>&lt;dialog&gt;에 대해서</h1>
+		</div>
+	</header>
+	<main class="content_width">
+		<h2>&lt;dialog&gt;태그의 특징</h2>
+		<ul>
+			<li>선언만 하면 보이지 않고 open속성이 추가되어야 보인다.</li>
+			<li>CSS로 위치를 잡아줄 필요 없이 초기값이 화면 정중앙에 나타난다.</li>
+			<li>컨트롤을 활성화하면 &lt;dialog&gt; 태그 내 첫번째 인터렉션 요소에 자동으로 초점이 접근되며 이를 닫으면 &lt;dialog&gt;가 열리기 이전 마지막에 초점이 위치해 있던 요소에 초점이 이동된다.</li>
+			<li>Script에서 dialog.showModal()을 사용하면 레이어 외 콘텐츠와는 접근이 차단되기 때문에 레이어를 닫기 전까지 초점 및 가상커서가 레이어 밖으로 나가지 않는다.</li>
+			<li>Script에서 dialog.showModal()을 선언하면 레이어 외부 영역 배경을 약간 어둡게 한다.</li>
+			<li>iOS에서는 VoiceOver를 활성화 한 상태에서 뒤로 가기 동작(두 손가락 비비기)으로 닫을 수 있다.</li>
+			<li>&lt;form&gt; 태그의 method 속성에 추가된 HTMLDialogElement 속성값을 선언하면 입력서식에 접근한 상태에서 Enter를 눌러 값을 전송하고 레이어를 닫을 수 있다.</li>
 
-			</ul>
-			<div class="ovsb">
-				<table class="verT">
-					<caption class="">
-						<h2>&lt;dialog&gt;지원 여부</h2>
-					</caption>
-					<thead>
-						<tr>
-							<th scope="col">기기</th>
-							<th scope="col" colspan="5">PC</th>
-							<th scope="col" colspan="6">모바일</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="support_browser">
-							<td>브라우저</td>
-							<th scope="row">
-								<div class="support_browser_name">
-									<p>Chrome</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.827 21.763C5.35 20.771 2 16.777 2 12c0-1.822.487-3.53 1.339-5.002l4.283 7.419a4.999 4.999 0 0 0 4.976 2.548l-2.77 4.798zM12 22l4.287-7.425A4.977 4.977 0 0 0 17 12a4.978 4.978 0 0 0-1-3h5.542c.298.947.458 1.955.458 3 0 5.523-4.477 10-10 10zm2.572-8.455a2.999 2.999 0 0 1-5.17-.045l-.029-.05a3 3 0 1 1 5.225.05l-.026.045zm-9.94-8.306A9.974 9.974 0 0 1 12 2a9.996 9.996 0 0 1 8.662 5H12a5.001 5.001 0 0 0-4.599 3.035L4.632 5.239z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-							<th>
-								<div class="support_browser_name">
-									<p>Microsoft Edge</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20.644 8.586c-.17-.711-.441-1.448-.774-2.021-.771-1.329-1.464-2.237-3.177-3.32C14.98 2.162 13.076 2 12.17 2c-2.415 0-4.211.86-5.525 1.887C3.344 6.47 3 11 3 11s1.221-2.045 3.54-3.526C7.943 6.579 9.941 6 11.568 6 15.885 6 16 10 16 10H9c0-2 1-3 1-3s-5 2-5 7.044c0 .487-.003 1.372.248 2.283.232.843.7 1.705 1.132 2.353 1.221 1.832 3.045 2.614 3.916 2.904.996.332 2.029.416 3.01.416 2.72 0 4.877-.886 5.694-1.275v-4.172c-.758.454-2.679 1.447-5 1.447-5 0-5-4-5-4h12v-2.49s-.039-1.593-.356-2.924z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-							<th scope="col">
-								<div class="support_browser_name">
-									<p>Firefox</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.464.314-2.854.88-4.106.466-.939 1.233-1.874 1.85-2.194-.653 1.283-.973 2.54-1.04 3.383.454-1.5 1.315-2.757 2.52-3.644 2.066-1.519 4.848-1.587 5.956-.62-2.056.707-4.296 3.548-3.803 6.876.08.55.245 1.084.489 1.582-.384-1.01-.418-2.433.202-3.358.692-1.03 1.678-1.248 2.206-1.136-.208-.044-.668.836-.736.991-.173.394-.259.82-.251 1.25a3.395 3.395 0 0 0 1.03 2.38c1.922 1.871 5.023 1.135 6.412-1.002.953-1.471 1.069-3.968-.155-5.952a6.915 6.915 0 0 0-1.084-1.32c-1.85-1.766-4.48-2.57-6.982-2.205-1.106.177-2.047.496-2.824.956C7.755 2.798 9.91 2 12 2z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-							<th scope="col">
-								<div class="support_browser_name">
-									<p>Opera</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.71 6.365c-1.108 1.305-1.823 3.236-1.873 5.4v.47c.051 2.165.766 4.093 1.872 5.4 1.434 1.862 3.566 3.044 5.95 3.044a7.208 7.208 0 0 0 4.005-1.226 9.94 9.94 0 0 1-7.139 2.535A9.998 9.998 0 0 1 2 12C2 6.476 6.478 2 12 2h.037a9.97 9.97 0 0 1 6.628 2.546 7.239 7.239 0 0 0-4.008-1.226c-2.382 0-4.514 1.183-5.95 3.045h.002zM22 12a9.969 9.969 0 0 1-3.335 7.454c-2.565 1.25-4.955.376-5.747-.17 2.52-.554 4.423-3.6 4.423-7.284 0-3.685-1.903-6.73-4.423-7.283.791-.545 3.182-1.42 5.747-.171A9.967 9.967 0 0 1 22 12z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-							<th scope="col">
-								<div class="support_browser_name">
-									<p>Safari</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.7 6.8l-6.114 3.786L6.8 16.7l-.104-.104-1.415 1.414.708.708 1.414-1.415L7.3 17.2l6.114-3.785L17.2 7.3l.104.104 1.415-1.414-.708-.708-1.414 1.415.104.104zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.5-19v2h1V3h-1zm0 16v2h1v-2h-1zM8.094 3.876l.765 1.848.924-.382-.765-1.848-.924.382zm6.123 14.782l.765 1.848.924-.382-.765-1.848-.924.382zm.765-15.164l-.765 1.848.924.382.765-1.848-.924-.382zM8.86 18.276l-.765 1.848.924.382.765-1.848-.924-.382zM21 11.5h-2v1h2v-1zm-16 0H3v1h2v-1zm15.458 3.615l-1.835-.794-.397.918 1.835.794.397-.918zM5.774 8.761L3.94 7.967l-.397.918 1.835.794.397-.918zm14.35-.667l-1.848.765.382.924 1.848-.765-.382-.924zM5.342 14.217l-1.848.765.382.924 1.848-.765-.382-.924zm13.376 3.793l-1.415-1.414-.707.707 1.414 1.415.708-.708zM7.404 6.697L5.99 5.282l-.708.708 1.415 1.414.707-.707zm3.908 4.615l3.611-2.235-2.235 3.61-1.376-1.375z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-							<th scope="col">
-								<div class="support_browser_name">
-									<p>Chrome Android</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.827 21.763C5.35 20.771 2 16.777 2 12c0-1.822.487-3.53 1.339-5.002l4.283 7.419a4.999 4.999 0 0 0 4.976 2.548l-2.77 4.798zM12 22l4.287-7.425A4.977 4.977 0 0 0 17 12a4.978 4.978 0 0 0-1-3h5.542c.298.947.458 1.955.458 3 0 5.523-4.477 10-10 10zm2.572-8.455a2.999 2.999 0 0 1-5.17-.045l-.029-.05a3 3 0 1 1 5.225.05l-.026.045zm-9.94-8.306A9.974 9.974 0 0 1 12 2a9.996 9.996 0 0 1 8.662 5H12a5.001 5.001 0 0 0-4.599 3.035L4.632 5.239z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-							<th scope="col">
-								<div class="support_browser_name">
-									<p>Firefox Android</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.464.314-2.854.88-4.106.466-.939 1.233-1.874 1.85-2.194-.653 1.283-.973 2.54-1.04 3.383.454-1.5 1.315-2.757 2.52-3.644 2.066-1.519 4.848-1.587 5.956-.62-2.056.707-4.296 3.548-3.803 6.876.08.55.245 1.084.489 1.582-.384-1.01-.418-2.433.202-3.358.692-1.03 1.678-1.248 2.206-1.136-.208-.044-.668.836-.736.991-.173.394-.259.82-.251 1.25a3.395 3.395 0 0 0 1.03 2.38c1.922 1.871 5.023 1.135 6.412-1.002.953-1.471 1.069-3.968-.155-5.952a6.915 6.915 0 0 0-1.084-1.32c-1.85-1.766-4.48-2.57-6.982-2.205-1.106.177-2.047.496-2.824.956C7.755 2.798 9.91 2 12 2z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-							<th scope="col">
-								<div class="support_browser_name">
-									<p>Opera Android</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.71 6.365c-1.108 1.305-1.823 3.236-1.873 5.4v.47c.051 2.165.766 4.093 1.872 5.4 1.434 1.862 3.566 3.044 5.95 3.044a7.208 7.208 0 0 0 4.005-1.226 9.94 9.94 0 0 1-7.139 2.535A9.998 9.998 0 0 1 2 12C2 6.476 6.478 2 12 2h.037a9.97 9.97 0 0 1 6.628 2.546 7.239 7.239 0 0 0-4.008-1.226c-2.382 0-4.514 1.183-5.95 3.045h.002zM22 12a9.969 9.969 0 0 1-3.335 7.454c-2.565 1.25-4.955.376-5.747-.17 2.52-.554 4.423-3.6 4.423-7.284 0-3.685-1.903-6.73-4.423-7.283.791-.545 3.182-1.42 5.747-.171A9.967 9.967 0 0 1 22 12z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-							<th scope="col">
-								<div class="support_browser_name">
-									<p>Safari on iOS</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.7 6.8l-6.114 3.786L6.8 16.7l-.104-.104-1.415 1.414.708.708 1.414-1.415L7.3 17.2l6.114-3.785L17.2 7.3l.104.104 1.415-1.414-.708-.708-1.414 1.415.104.104zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.5-19v2h1V3h-1zm0 16v2h1v-2h-1zM8.094 3.876l.765 1.848.924-.382-.765-1.848-.924.382zm6.123 14.782l.765 1.848.924-.382-.765-1.848-.924.382zm.765-15.164l-.765 1.848.924.382.765-1.848-.924-.382zM8.86 18.276l-.765 1.848.924.382.765-1.848-.924-.382zM21 11.5h-2v1h2v-1zm-16 0H3v1h2v-1zm15.458 3.615l-1.835-.794-.397.918 1.835.794.397-.918zM5.774 8.761L3.94 7.967l-.397.918 1.835.794.397-.918zm14.35-.667l-1.848.765.382.924 1.848-.765-.382-.924zM5.342 14.217l-1.848.765.382.924 1.848-.765-.382-.924zm13.376 3.793l-1.415-1.414-.707.707 1.414 1.415.708-.708zM7.404 6.697L5.99 5.282l-.708.708 1.415 1.414.707-.707zm3.908 4.615l3.611-2.235-2.235 3.61-1.376-1.375z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-							<th scope="col">
-								<div class="support_browser_name">
-									<p>Samsung Internet</p>
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100"><path d="M30.84 5A25.93 25.93 0 0 0 5 30.87v38.26A25.93 25.93 0 0 0 30.84 95h38.32A25.91 25.91 0 0 0 95 69.19V30.87A25.93 25.93 0 0 0 69.16 5zm17.78 15.32a29.66 29.66 0 0 1 30.95 27.75c5.08 4 7.72 8.3 6.75 11.9s-5.4 5.9-11.89 6.8a50 50 0 0 1-5.66.46 84 84 0 0 1-22.63-3.09 82.3 82.3 0 0 1-21.08-8.87H25a39 39 0 0 1-4.63-3.2c-5.14-4.05-7.71-8.3-6.75-11.9s5.4-5.91 11.76-6.81a29.66 29.66 0 0 1 23.24-13.04m-.82 4.27A25.5 25.5 0 0 0 24.41 50c5.27 3.54 13.3 7.07 22.63 9.58 9.63 2.56 18.54 3.6 24.96 3.15a25.27 25.27 0 0 0 3.41-12.53V50a25.5 25.5 0 0 0-27.6-25.41ZM23.26 37.14c-3 .71-5 2-5.4 3.73s.51 3.79 2.63 5.92a30.3 30.3 0 0 1 2.58-9.2zm56.13 15.7-.06.38a26.7 26.7 0 0 1-2.2 8.66c2.54-.77 4.13-1.92 4.58-3.51.45-1.6-.39-3.54-2.32-5.53m-58.02 5.07a49.5 49.5 0 0 0 5.79 3.47A25.42 25.42 0 0 0 64 71.28c2.39 0 4.71 0 6.77-.19a29.63 29.63 0 0 1-49.4-13.18"/>
-									</svg>
-								</div>
-							</th>
-							<th scope="col">
-								<div class="support_browser_name">
-									<p>WebView Android</p>
-									<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.382 3.968A8.962 8.962 0 0 1 12 2c2.125 0 4.078.736 5.618 1.968l1.453-1.453 1.414 1.414-1.453 1.453A8.962 8.962 0 0 1 21 11v1H3v-1c0-2.125.736-4.078 1.968-5.618L3.515 3.93l1.414-1.414 1.453 1.453zM3 14h18v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7zm6-5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="#70a"/>
-									</svg>
-								</div>
-							</th>
-						</tr>
-						<tr>
-							<th scope="row">
-								<p>&lt;dialog&gt;</p>
-								<p>open</p>
-								<p>showModal()</p>
-							</th>
-							<td>37</td>
-							<td>79</td>
-							<td>98</td>
-							<td>24</td>
-							<td>15.4</td>
-							<td>37</td>
-							<td>98</td>
-							<td>24</td>
-							<td>15.4</td>
-							<td>3.0</td>
-							<td>37</td>
-						</tr>
-						<tr>
-							<th scope="row">:modal</th>
-							<td>105</td>
-							<td>105</td>
-							<td>103</td>
-							<td>93</td>
-							<td>15.6</td>
-							<td>105</td>
-							<td>103</td>
-							<td>72</td>
-							<td>15.6</td>
-							<td>20</td>
-							<td>105</td>
-						</tr>
-					</tbody>
-				</table>
+		</ul>
+		<div class="ovsb">
+			<table class="verT">
+				<caption class="">
+					<h2>&lt;dialog&gt;지원 여부</h2>
+				</caption>
+				<thead>
+					<tr>
+						<th scope="col">기기</th>
+						<th scope="col" colspan="5">PC</th>
+						<th scope="col" colspan="6">모바일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="support_browser">
+						<td>브라우저</td>
+						<th scope="row">
+							<div class="support_browser_name">
+								<p>Chrome</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.827 21.763C5.35 20.771 2 16.777 2 12c0-1.822.487-3.53 1.339-5.002l4.283 7.419a4.999 4.999 0 0 0 4.976 2.548l-2.77 4.798zM12 22l4.287-7.425A4.977 4.977 0 0 0 17 12a4.978 4.978 0 0 0-1-3h5.542c.298.947.458 1.955.458 3 0 5.523-4.477 10-10 10zm2.572-8.455a2.999 2.999 0 0 1-5.17-.045l-.029-.05a3 3 0 1 1 5.225.05l-.026.045zm-9.94-8.306A9.974 9.974 0 0 1 12 2a9.996 9.996 0 0 1 8.662 5H12a5.001 5.001 0 0 0-4.599 3.035L4.632 5.239z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+						<th>
+							<div class="support_browser_name">
+								<p>Microsoft Edge</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20.644 8.586c-.17-.711-.441-1.448-.774-2.021-.771-1.329-1.464-2.237-3.177-3.32C14.98 2.162 13.076 2 12.17 2c-2.415 0-4.211.86-5.525 1.887C3.344 6.47 3 11 3 11s1.221-2.045 3.54-3.526C7.943 6.579 9.941 6 11.568 6 15.885 6 16 10 16 10H9c0-2 1-3 1-3s-5 2-5 7.044c0 .487-.003 1.372.248 2.283.232.843.7 1.705 1.132 2.353 1.221 1.832 3.045 2.614 3.916 2.904.996.332 2.029.416 3.01.416 2.72 0 4.877-.886 5.694-1.275v-4.172c-.758.454-2.679 1.447-5 1.447-5 0-5-4-5-4h12v-2.49s-.039-1.593-.356-2.924z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+						<th scope="col">
+							<div class="support_browser_name">
+								<p>Firefox</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.464.314-2.854.88-4.106.466-.939 1.233-1.874 1.85-2.194-.653 1.283-.973 2.54-1.04 3.383.454-1.5 1.315-2.757 2.52-3.644 2.066-1.519 4.848-1.587 5.956-.62-2.056.707-4.296 3.548-3.803 6.876.08.55.245 1.084.489 1.582-.384-1.01-.418-2.433.202-3.358.692-1.03 1.678-1.248 2.206-1.136-.208-.044-.668.836-.736.991-.173.394-.259.82-.251 1.25a3.395 3.395 0 0 0 1.03 2.38c1.922 1.871 5.023 1.135 6.412-1.002.953-1.471 1.069-3.968-.155-5.952a6.915 6.915 0 0 0-1.084-1.32c-1.85-1.766-4.48-2.57-6.982-2.205-1.106.177-2.047.496-2.824.956C7.755 2.798 9.91 2 12 2z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+						<th scope="col">
+							<div class="support_browser_name">
+								<p>Opera</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.71 6.365c-1.108 1.305-1.823 3.236-1.873 5.4v.47c.051 2.165.766 4.093 1.872 5.4 1.434 1.862 3.566 3.044 5.95 3.044a7.208 7.208 0 0 0 4.005-1.226 9.94 9.94 0 0 1-7.139 2.535A9.998 9.998 0 0 1 2 12C2 6.476 6.478 2 12 2h.037a9.97 9.97 0 0 1 6.628 2.546 7.239 7.239 0 0 0-4.008-1.226c-2.382 0-4.514 1.183-5.95 3.045h.002zM22 12a9.969 9.969 0 0 1-3.335 7.454c-2.565 1.25-4.955.376-5.747-.17 2.52-.554 4.423-3.6 4.423-7.284 0-3.685-1.903-6.73-4.423-7.283.791-.545 3.182-1.42 5.747-.171A9.967 9.967 0 0 1 22 12z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+						<th scope="col">
+							<div class="support_browser_name">
+								<p>Safari</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.7 6.8l-6.114 3.786L6.8 16.7l-.104-.104-1.415 1.414.708.708 1.414-1.415L7.3 17.2l6.114-3.785L17.2 7.3l.104.104 1.415-1.414-.708-.708-1.414 1.415.104.104zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.5-19v2h1V3h-1zm0 16v2h1v-2h-1zM8.094 3.876l.765 1.848.924-.382-.765-1.848-.924.382zm6.123 14.782l.765 1.848.924-.382-.765-1.848-.924.382zm.765-15.164l-.765 1.848.924.382.765-1.848-.924-.382zM8.86 18.276l-.765 1.848.924.382.765-1.848-.924-.382zM21 11.5h-2v1h2v-1zm-16 0H3v1h2v-1zm15.458 3.615l-1.835-.794-.397.918 1.835.794.397-.918zM5.774 8.761L3.94 7.967l-.397.918 1.835.794.397-.918zm14.35-.667l-1.848.765.382.924 1.848-.765-.382-.924zM5.342 14.217l-1.848.765.382.924 1.848-.765-.382-.924zm13.376 3.793l-1.415-1.414-.707.707 1.414 1.415.708-.708zM7.404 6.697L5.99 5.282l-.708.708 1.415 1.414.707-.707zm3.908 4.615l3.611-2.235-2.235 3.61-1.376-1.375z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+						<th scope="col">
+							<div class="support_browser_name">
+								<p>Chrome Android</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.827 21.763C5.35 20.771 2 16.777 2 12c0-1.822.487-3.53 1.339-5.002l4.283 7.419a4.999 4.999 0 0 0 4.976 2.548l-2.77 4.798zM12 22l4.287-7.425A4.977 4.977 0 0 0 17 12a4.978 4.978 0 0 0-1-3h5.542c.298.947.458 1.955.458 3 0 5.523-4.477 10-10 10zm2.572-8.455a2.999 2.999 0 0 1-5.17-.045l-.029-.05a3 3 0 1 1 5.225.05l-.026.045zm-9.94-8.306A9.974 9.974 0 0 1 12 2a9.996 9.996 0 0 1 8.662 5H12a5.001 5.001 0 0 0-4.599 3.035L4.632 5.239z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+						<th scope="col">
+							<div class="support_browser_name">
+								<p>Firefox Android</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.464.314-2.854.88-4.106.466-.939 1.233-1.874 1.85-2.194-.653 1.283-.973 2.54-1.04 3.383.454-1.5 1.315-2.757 2.52-3.644 2.066-1.519 4.848-1.587 5.956-.62-2.056.707-4.296 3.548-3.803 6.876.08.55.245 1.084.489 1.582-.384-1.01-.418-2.433.202-3.358.692-1.03 1.678-1.248 2.206-1.136-.208-.044-.668.836-.736.991-.173.394-.259.82-.251 1.25a3.395 3.395 0 0 0 1.03 2.38c1.922 1.871 5.023 1.135 6.412-1.002.953-1.471 1.069-3.968-.155-5.952a6.915 6.915 0 0 0-1.084-1.32c-1.85-1.766-4.48-2.57-6.982-2.205-1.106.177-2.047.496-2.824.956C7.755 2.798 9.91 2 12 2z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+						<th scope="col">
+							<div class="support_browser_name">
+								<p>Opera Android</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.71 6.365c-1.108 1.305-1.823 3.236-1.873 5.4v.47c.051 2.165.766 4.093 1.872 5.4 1.434 1.862 3.566 3.044 5.95 3.044a7.208 7.208 0 0 0 4.005-1.226 9.94 9.94 0 0 1-7.139 2.535A9.998 9.998 0 0 1 2 12C2 6.476 6.478 2 12 2h.037a9.97 9.97 0 0 1 6.628 2.546 7.239 7.239 0 0 0-4.008-1.226c-2.382 0-4.514 1.183-5.95 3.045h.002zM22 12a9.969 9.969 0 0 1-3.335 7.454c-2.565 1.25-4.955.376-5.747-.17 2.52-.554 4.423-3.6 4.423-7.284 0-3.685-1.903-6.73-4.423-7.283.791-.545 3.182-1.42 5.747-.171A9.967 9.967 0 0 1 22 12z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+						<th scope="col">
+							<div class="support_browser_name">
+								<p>Safari on iOS</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.7 6.8l-6.114 3.786L6.8 16.7l-.104-.104-1.415 1.414.708.708 1.414-1.415L7.3 17.2l6.114-3.785L17.2 7.3l.104.104 1.415-1.414-.708-.708-1.414 1.415.104.104zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.5-19v2h1V3h-1zm0 16v2h1v-2h-1zM8.094 3.876l.765 1.848.924-.382-.765-1.848-.924.382zm6.123 14.782l.765 1.848.924-.382-.765-1.848-.924.382zm.765-15.164l-.765 1.848.924.382.765-1.848-.924-.382zM8.86 18.276l-.765 1.848.924.382.765-1.848-.924-.382zM21 11.5h-2v1h2v-1zm-16 0H3v1h2v-1zm15.458 3.615l-1.835-.794-.397.918 1.835.794.397-.918zM5.774 8.761L3.94 7.967l-.397.918 1.835.794.397-.918zm14.35-.667l-1.848.765.382.924 1.848-.765-.382-.924zM5.342 14.217l-1.848.765.382.924 1.848-.765-.382-.924zm13.376 3.793l-1.415-1.414-.707.707 1.414 1.415.708-.708zM7.404 6.697L5.99 5.282l-.708.708 1.415 1.414.707-.707zm3.908 4.615l3.611-2.235-2.235 3.61-1.376-1.375z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+						<th scope="col">
+							<div class="support_browser_name">
+								<p>Samsung Internet</p>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100"><path d="M30.84 5A25.93 25.93 0 0 0 5 30.87v38.26A25.93 25.93 0 0 0 30.84 95h38.32A25.91 25.91 0 0 0 95 69.19V30.87A25.93 25.93 0 0 0 69.16 5zm17.78 15.32a29.66 29.66 0 0 1 30.95 27.75c5.08 4 7.72 8.3 6.75 11.9s-5.4 5.9-11.89 6.8a50 50 0 0 1-5.66.46 84 84 0 0 1-22.63-3.09 82.3 82.3 0 0 1-21.08-8.87H25a39 39 0 0 1-4.63-3.2c-5.14-4.05-7.71-8.3-6.75-11.9s5.4-5.91 11.76-6.81a29.66 29.66 0 0 1 23.24-13.04m-.82 4.27A25.5 25.5 0 0 0 24.41 50c5.27 3.54 13.3 7.07 22.63 9.58 9.63 2.56 18.54 3.6 24.96 3.15a25.27 25.27 0 0 0 3.41-12.53V50a25.5 25.5 0 0 0-27.6-25.41ZM23.26 37.14c-3 .71-5 2-5.4 3.73s.51 3.79 2.63 5.92a30.3 30.3 0 0 1 2.58-9.2zm56.13 15.7-.06.38a26.7 26.7 0 0 1-2.2 8.66c2.54-.77 4.13-1.92 4.58-3.51.45-1.6-.39-3.54-2.32-5.53m-58.02 5.07a49.5 49.5 0 0 0 5.79 3.47A25.42 25.42 0 0 0 64 71.28c2.39 0 4.71 0 6.77-.19a29.63 29.63 0 0 1-49.4-13.18"/>
+								</svg>
+							</div>
+						</th>
+						<th scope="col">
+							<div class="support_browser_name">
+								<p>WebView Android</p>
+								<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.382 3.968A8.962 8.962 0 0 1 12 2c2.125 0 4.078.736 5.618 1.968l1.453-1.453 1.414 1.414-1.453 1.453A8.962 8.962 0 0 1 21 11v1H3v-1c0-2.125.736-4.078 1.968-5.618L3.515 3.93l1.414-1.414 1.453 1.453zM3 14h18v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7zm6-5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="#70a"/>
+								</svg>
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th scope="row">
+							<p>&lt;dialog&gt;</p>
+							<p>open</p>
+							<p>showModal()</p>
+						</th>
+						<td>37</td>
+						<td>79</td>
+						<td>98</td>
+						<td>24</td>
+						<td>15.4</td>
+						<td>37</td>
+						<td>98</td>
+						<td>24</td>
+						<td>15.4</td>
+						<td>3.0</td>
+						<td>37</td>
+					</tr>
+					<tr>
+						<th scope="row">:modal</th>
+						<td>105</td>
+						<td>105</td>
+						<td>103</td>
+						<td>93</td>
+						<td>15.6</td>
+						<td>105</td>
+						<td>103</td>
+						<td>72</td>
+						<td>15.6</td>
+						<td>20</td>
+						<td>105</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<details>
+			<summary>참조 사이트</summary>
+			<div>
+				<ul>
+					<li>
+						<a target="_blank" title="새 창으로 열기" href="https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/dialog">&lt;dialog&gt; 요소 MDN 상세 보기</a>
+					</li>
+					<li>
+						<a target="_blank" title="새 창으로 열기" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:modal">:modal MDN 상세 보기</a>
+					</li>
+					<li>
+						<a target="_blank" title="새 창으로 열기" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showmodal">showModal() 메소드 MDN 상세 보기</a>
+					</li>
+					<li>
+						<a target="_blank" title="새 창으로 열기" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert">inert 속성 MDN 상세 보기</a>
+					</li>
+					<li>
+						<a href="https://frontendmasters.com/blog/animating-dialog/" target="_blank" title="새 창으로 열기">Animating the Dialog Element – Frontend Masters Blog</a>
+					</li>
+					<li>
+						<a target="_blank" title="새 창으로 열기" href="https://codepen.io/argyleink/pen/zYbQBOm">Transitioning dialog and popover in and out - minimal demo</a>
+					</li>
+					<li>
+						<a target="_blank" title="새 창으로 열기" href="https://blog.logrocket.com/animating-dialog-popover-elements-css-starting-style/">Animating dialog and popover elements with CSS @starting-style</a>
+					</li>
+				</ul>
 			</div>
-			<details>
-				<summary>참조 사이트</summary>
-				<div>
-					<ul>
-						<li>
-							<a target="_blank" title="새 창으로 열기" href="https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/dialog">&lt;dialog&gt; 요소 MDN 상세 보기</a>
-						</li>
-						<li>
-							<a target="_blank" title="새 창으로 열기" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:modal">:modal MDN 상세 보기</a>
-						</li>
-						<li>
-							<a target="_blank" title="새 창으로 열기" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showmodal">showModal() 메소드 MDN 상세 보기</a>
-						</li>
-						<li>
-							<a target="_blank" title="새 창으로 열기" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert">inert 속성 MDN 상세 보기</a>
-						</li>
-						<li>
-							<a href="https://frontendmasters.com/blog/animating-dialog/" target="_blank" title="새 창으로 열기">Animating the Dialog Element – Frontend Masters Blog</a>
-						</li>
-						<li>
-							<a target="_blank" title="새 창으로 열기" href="https://codepen.io/argyleink/pen/zYbQBOm">Transitioning dialog and popover in and out - minimal demo</a>
-						</li>
-					</ul>
-				</div>
-			</details>
+		</details>
 
-			<button onclick="document.getElementById('popup-layer').showModal();" id="open-popup">실제로 레이어 열어보기</button>
-			<dialog id="popup-layer">
-				<h1 class="layerH popup_header">&lt;dialog&gt;태그를 사용할 때 주의점</h1>
-				<div class="layerC popup_content">
-					<dl>
-						<dt>&lt;dialog&gt;를 여러 개 쓸 때는?</dt>
-						<dd>복수의 레이어가 있는 경우 각 레이어에 id를 주고 이를 버튼과 연결해야 합니다.</dd>
-					</dl>
-						<dt>닫기 버튼의 위치는</dt>
-						<dd>닫기 버튼은 키보드 순서상 가장 마지막에 접근되도록 마크업해야 합니다.</dd>
-					</dl>
-				</div>
-				<form method="dialog" class="popup_close">
-					<button type="submit">
-						<img class="icon_img" src="../icon/Xclose.svg" alt="">
-						<span class="sr_only">팝업 닫기</span>
-					</button>
-				</form>						
-			</dialog>
-		</main>
-		<footer>
-			<div class="content_width">
-				<address>배찬우 @purplemiyazawa</address>
-			</div>
-		</footer>
-		<a href="#skipnav" id="page-top" aria-label="페이지 최상단으로 이동">
-			<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="#70a"/></svg>
-		</a>
-	</body>
-	</html>
+		<button onclick="document.getElementById('popup-layer').showModal();" id="open-popup">실제로 레이어 열어보기</button>
+		<dialog id="popup-layer">
+			<h1 class="layerH popup_header">&lt;dialog&gt;태그를 사용할 때 주의점</h1>
+			<div class="layerC popup_content">
+				<dl>
+					<dt>&lt;dialog&gt;를 여러 개 쓸 때는?</dt>
+					<dd>복수의 레이어가 있는 경우 각 레이어에 id를 주고 이를 버튼과 연결해야 합니다.</dd>
+				</dl>
+				<dt>닫기 버튼의 위치는</dt>
+				<dd>닫기 버튼은 키보드 순서상 가장 마지막에 접근되도록 마크업해야 합니다.</dd>
+			</dl>
+		</div>
+		<form method="dialog" class="popup_close">
+			<button type="submit">
+				<img class="icon_img" src="../icon/Xclose.svg" alt="">
+				<span class="sr_only">팝업 닫기</span>
+			</button>
+		</form>						
+	</dialog>
+</main>
+<footer>
+	<div class="content_width">
+		<address>배찬우 @purplemiyazawa</address>
+	</div>
+</footer>
+<a href="#skipnav" id="page-top" aria-label="페이지 최상단으로 이동">
+	<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="#70a"/></svg>
+</a>
+</body>
+</html>
