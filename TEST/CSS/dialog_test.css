@@ -128,7 +128,7 @@ details a {display: flex;}
 a:where(:focus, :hover) {
 	text-decoration:2px wavy underline #427;
 }
-:active, :focus, a:hover {
+a:active, :focus, a:hover {
 	transition:0.4s filter, 0.4s transform, 0.4s text-decoration;
 	filter:brightness(0.8) saturate(120%);
 }
