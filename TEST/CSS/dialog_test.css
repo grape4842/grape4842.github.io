@@ -130,7 +130,7 @@ a:where(:focus, :hover) {
 }
 a:active, :focus, a:hover {
 	transition:0.4s filter, 0.4s transform, 0.4s text-decoration;
-	filter:brightness(0.8) saturate(120%);
+	filter:brightness(1.1) saturate(120%);
 }
 a,summary,button,input {
 	transition: background 0.3s;
