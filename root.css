@@ -388,7 +388,6 @@ details[open]::details-content {
 	margin:auto;
 	border-radius: 0.5rem;
 	max-width: 90dvw;
-	height: min-content;
 	max-height: 90dvw;
 	border:none;
 	opacity: 0;
