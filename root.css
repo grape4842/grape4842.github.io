@@ -146,7 +146,7 @@
 		color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
 		scroll-behavior: smooth; /* 부드러운 스크롤 */
 		ruby-align: space-between;
-		scrollbar-color: var(--alpha_gray);
+		scrollbar-color: rgba(0, 0, 0, 0.1);
 	}
 }
 @supports not (min-block-size: 100dvb) {
