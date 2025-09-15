@@ -93,7 +93,7 @@
 /*컬러 설정*/
 :root {
 	color-scheme: light dark;
-	--placeholder : light-dark(#444, #bbb);
+	--placeholder : light-dark(#444, #ccc);
 	--warning : light-dark(#c30, #fcb);
 	--pure_mono : light-dark(#fff, #000);
 	--invert_pure_mono : light-dark(#000, #fff);
