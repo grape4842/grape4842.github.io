@@ -96,7 +96,7 @@
 		}
 	}
 /*1000px〜1200px iPad horizontal*/
-@media (700px <= width < 1400px )  {
+@media (1000px <= width < 1400px )  {
 	.site-list.acl {grid-template-columns: 1fr 1fr 1fr;}
 }
 
