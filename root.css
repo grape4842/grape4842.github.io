@@ -93,6 +93,8 @@
 /*컬러 설정*/
 :root {
 	color-scheme: light dark;
+	--alpha_gray:light-dark(#fffa, #000a);
+	--gray_line_color:light-dark(rgba(0, 0, 0, 0.3), rgba(255 255 255 / 0.3));
 	--placeholder : light-dark(#444, #ccc);
 	--warning : light-dark(#c30, #fcb);
 	--pure_mono : light-dark(#fff, #000);
@@ -144,7 +146,7 @@
 		color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
 		scroll-behavior: smooth; /* 부드러운 스크롤 */
 		ruby-align: space-between;
-		scrollbar-color: rgba(0 0 0 / 0.2) rgba(0 0 0 / 0.2);
+		scrollbar-color: var(--alpha_gray);
 	}
 }
 @supports not (min-block-size: 100dvb) {
@@ -324,7 +326,8 @@ table {
 	border-spacing: 0;
 }
 th, td {
-	padding:0.5rem;
+	padding:clamp(0.25rem, 0.5rem, 1rem);
+	border:1px solid var(--gray_line_color);
 }
 
 /* 스크롤바의 스타일 */
@@ -335,7 +338,7 @@ th, td {
 
 /* 스크롤바 트랙의 스타일 */
 ::-webkit-scrollbar-track {
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: var(--gray_line_color);
 	border-radius: 10rem; 
 }
 /* 필드셋의 기본 테두리 제거 */

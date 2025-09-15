@@ -5,22 +5,11 @@
 form h3 {
 	padding:0rem;
 }
-form h3 label, .policy_box {
-	padding:0.5rem;
-}
-form h3 label {
-	font-size: 1rem;
-	display: flex;
-	justify-content: space-between;
-	background: #dfdddf;
-	border-bottom: 1px solid #e6e6e6;
-	font-weight: 700;
-}
 form h3 label input {
 	min-width: 1.5rem;
 }
 fieldset {
-	margin-block:2rem;
+	margin-block:clamp(1rem, 2rem, 3rem);
 	margin-inline:auto;
 }
 #signup2_form a {
@@ -29,13 +18,13 @@ fieldset {
 	color:var(--invert_purple);
 	font-weight: bold;
 }
+.policy_box {
+	background-color:var(--alpha_gray);
+	aspect-ratio: 16/9;
+	overflow-y: scroll;
+}
 .policy_box dl {
 	padding:0rem;
-}
-.policy_box {
-	background-color:#fff;
-	aspect-ratio: 4/1;
-	overflow-y: scroll;
 }
 .buttons {
 	display: flex;
@@ -43,7 +32,6 @@ fieldset {
 	justify-content: center;
 	gap:2rem;
 	margin:0rem auto;
-	min-width: 50vw;
 }
 .buttons a{
 	min-height: 3rem;
@@ -51,7 +39,7 @@ fieldset {
 	padding:0.5rem;
 	text-align: center;
 	justify-content: center;
-	background-color: rgba(70 70 70 / 0.7);
+	background-color: var(--alpha_gray);
 	aspect-ratio: 1.618/1;
 }
 
@@ -132,6 +120,7 @@ h3 {
 @media screen and (width >= 1400px) {
 	form h3 label {font-size:1.2rem;}
 	.join_step li {margin:0rem 1rem;}
+	.policy_box {aspect-ratio: 4/1;}
 	form h3 label, .policy_box {
 		padding:1rem;
 	}
@@ -142,7 +131,7 @@ h3 {
 		flex-direction: row;
 	}
 	.label_text {
-		width: 7rem;
+		/*width: 7rem;*/
 		text-align: right;
 	}
 	form#signup1_form {
@@ -168,12 +157,5 @@ h3 {
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-	form h3 label {
-		background-color:rgba(0 0 0 / 0.7);
-		border-bottom: 1px solid rgba(100 100 100 / 0.5);
-	}
-	.policy_box {
-		background-color: rgba(0 0 0 / 0.5);
-	}
 
 }
