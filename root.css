@@ -379,10 +379,9 @@ details[open]::details-content {
 	position: fixed;
 	margin:auto;
 	border-radius: 0.5rem;
-	min-width:min-content;
-	min-height: clamp(5rem, 50dvh, 10rem);
 	max-width: 90dvw;
-	max-height: 90dvh;
+	height: min-content;
+	max-height: 90dvw;
 	border:none;
 	opacity: 0;
 }
@@ -390,7 +389,6 @@ details[open]::details-content {
 	backdrop-filter: blur(1rem);
 	background: rgba(0, 0, 0, 0.5);
 }
-body:has(dialog[open]) {overflow: hidden;}
 dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
 	position: fixed;
 	right:0;
@@ -420,14 +418,13 @@ dialog[open] :where(.popup_close, .popover_close, .close_button,.close_popup,.cl
 dialog[open] :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 dialog[open] :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 	margin:0;
-	padding:0.5rem 0.75rem;    
+	padding:clamp(0.5rem, 1rem, 2rem);
 }
 dialog[open] :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header) {
 	display: flex;
 	align-items: center;
-	/*position: sticky;*/
 	font-size: 1rem;
-	font-weight: bold;
+	font-weight: bolder;
 	left:0;
 	top:0;
 	height: 3rem;

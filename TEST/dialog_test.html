@@ -200,7 +200,7 @@
 		</details>
 
 		<button onclick="document.getElementById('popup-layer').showModal();" id="open-popup">실제로 레이어 열어보기</button>
-		<dialog id="popup-layer">
+		<dialog id="popup-layer" closedby="any">
 			<h2 class="popup_header">&lt;dialog&gt;태그를 사용할 때 주의점</h2>
 			<div class="popup_content">
 				<dl>
@@ -227,5 +227,12 @@
 <a href="#skipnav" id="page-top" aria-label="페이지 최상단으로 이동">
 	<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="#70a"/></svg>
 </a>
+<script>
+	dialog.addEventListener('click', (event) => {
+		if (event.target.nodeName === 'DIALOG') {
+			dialog.close();
+		}
+	});
+</script>
 </body>
 </html>

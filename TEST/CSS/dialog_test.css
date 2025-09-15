@@ -142,8 +142,8 @@ button {
 }
 
 details {
-	margin:1rem auto;
-	border:1px solid var(--invert_main_color);
+	margin:2rem auto;
+	border:1px solid var(--main_color);
 }
 details > * {
 	padding:clamp(0.25rem, 0.5rem, 1rem);

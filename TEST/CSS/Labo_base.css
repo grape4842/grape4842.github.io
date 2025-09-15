@@ -1,7 +1,5 @@
 @charset "utf-8";
 /*Mobile First*/
-.pc_view {display: none;}
-.dark_view {display: none;}
 .center {
 	width:90vw;
 	padding:2rem 0px;
@@ -41,9 +39,4 @@
 		margin:0px auto;
 	}
 
-}
-/*Dark Mode Layout*/
-@media (prefers-color-scheme:dark) {
-	.light_view {display: none;}
-	.dark_view {display:unset;}
 }
