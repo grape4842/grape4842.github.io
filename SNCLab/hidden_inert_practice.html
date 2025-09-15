@@ -55,10 +55,14 @@
             min-height: 50dvh;
             padding:clamp(1rem, 3rem, 5rem);
         }
-        div {display: flex;}
         .content_width {
             padding-block: clamp(1rem, 2rem, 10rem);
             text-align: center;
+        }
+        .video_box {
+            display: flex;
+            gap:1rem;
+            margin:2rem auto;
         }
         section iframe {
             aspect-ratio:16/9;
@@ -95,7 +99,7 @@
                 <li>hidden은 완전히 요소가 사라집니다. CSS에서 말하는 display:none;과 동일한 효과를 가집니다.</li>
                 <li>inert는 요소는 그대로 있지만 키보드와 스크린 리더를 포함한 접근 수단이 사라집니다.</li>
             </ul>
-            <div>
+            <div class="video_box">
                 <iframe hidden src="https://www.youtube.com/embed/dwTA9f4guow?si=bUTDAwZZZCTfScwW" title="디지털 정부서비스 UI/UX 가이드라인 적용 및 결과검증 방법 - You Tube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <iframe inert src="https://www.youtube.com/embed/dwTA9f4guow?si=bUTDAwZZZCTfScwW" title="디지털 정부서비스 UI/UX 가이드라인 적용 및 결과검증 방법 - You Tube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <iframe  src="https://www.youtube.com/embed/dwTA9f4guow?si=bUTDAwZZZCTfScwW" title="디지털 정부서비스 UI/UX 가이드라인 적용 및 결과검증 방법 - You Tube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
