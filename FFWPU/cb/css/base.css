@@ -4,9 +4,9 @@
 	--main_color:#c91f6f;
 	--main_color_gradient:linear-gradient(135deg, #c91f61 0%,#91287c 48%,#5c2e91 100%);
 	--alpha_gray:light-dark(#fffa, #000a);
-    --purple:light-dark(#baf, #64a);
-    --invert_purple:light-dark(#64a, #baf);
-    --alpha_purple:light-dark(#bafa, #64aa);
+    --purple:light-dark(#baf, #609);
+    --invert_purple:light-dark(#609, #baf);
+    --alpha_purple:light-dark(#bafa, #609a);
     --gray_line_color:light-dark(rgba(0, 0, 0, 0.3), rgba(255 255 255 /.1));
 }
 

@@ -1,3 +1,5 @@
+@import url("../../root.css")
+@import url("base.css")
 /*이 문서는 PC를 기준으로 작성되었습니다.*/
 section,
 form {
@@ -57,8 +59,9 @@ h3 {text-align: center;}
 	gap:1rem;
 	align-items: center;
 }
-	.login_controls {
-	width: 100%;
+.login_controls {
+	width: max-content;
+	margin:0 auto;
 	display: flex;
 	gap:2rem;
 	flex-direction: column;
@@ -68,10 +71,12 @@ h3 {text-align: center;}
 }
 
 #login_button {
-	background: #54a;
+	background: var(--purple);
 	color: #fff;
 	margin:1rem auto;
 	font-weight: 900;
+	justify-content: center;
+	align-items: center;
 	border-radius: 0.5rem;
 	width: 100%;
 }
@@ -109,7 +114,7 @@ h3 {text-align: center;}
 	justify-content: center;
 	align-items: center;
 	border-radius: 3rem;
-	outline-offset: 4px;
+	outline-offset: 0.25rem;
 }
 .with_login img {
 	max-width: 3rem;
