@@ -473,8 +473,8 @@ dialog[open] :where(.popover_header,.popover_head,.popup_header,.popup_head,.pop
 
 
 /*많은 파일에서 공통으로 사용하는 고유 내용*/
-.lightV {display: unset;}
-.darkV {display: none;}
+.lightV, .light_view {display: unset;}
+.darkV, .dark_view {display: none;}
 .View_PC, .PCV, .PC_View, .pc_view {display:none;}
 .View_Mobile, .mobileV,.mobile_View, .mobile_view, .Mobile_View, .MobileV {
 	display:unset;
@@ -564,8 +564,8 @@ dialog {
 }
 /*Dark Mode*/
 @media (prefers-color-scheme: dark) {
-	.lightV {display: none;}
-	.darkV {display: unset;}
+	.lightV, .light_view {display: none;}
+	.darkV, .dark_view {display: unset;}
 	dialog :where(.popup_close,.popover_close,.close_button,.close_popup,.close_popover,.close_ctrl) img {
 		filter: invert(1);
 	}
