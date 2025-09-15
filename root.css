@@ -95,6 +95,8 @@
 	color-scheme: light dark;
 	--placeholder : light-dark(#444, #bbb);
 	--warning : light-dark(#c30, #fcb);
+	--pure_mono : light-dark(#fff, #000);
+	--invert_pure_mono : light-dark(#000, #fff);
 	--pure_white : #fff;
 	--pure_black : #000;
 	--pure_red : #f00;
@@ -221,6 +223,9 @@ select::-ms-expand {
 }
 input[type="file"], [type="file"]::file-selector-button {
 	min-width: max-content;
+}
+details > * {
+	padding:clamp(0.5rem, 0.75rem, 1rem);
 }
 summary::-webkit-details-marker {
 /* Safari 브라우저용 사용자 정의 스타일 */
