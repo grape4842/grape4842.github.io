@@ -388,7 +388,7 @@ details[open]::details-content {
 	margin:auto;
 	border-radius: 0.5rem;
 	max-width: 90dvw;
-	max-height: 90dvw;
+	max-height: 90dvh;
 	border:none;
 	opacity: 0;
 }
