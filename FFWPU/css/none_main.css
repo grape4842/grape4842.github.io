@@ -36,7 +36,7 @@
 .yvl a	{
 	flex-direction: row;
 }
- .yvl a .ylogo {
+.yvl a .ylogo {
 	content: '';
 	display: flex;
 	min-width: 2rem;
@@ -84,22 +84,26 @@
 	article {padding:3rem;}
 	.site-list {grid-template-columns: 1fr 1fr 1fr;}
 	.site-list li {
-				margin:0.75rem 0rem;}
-	.site-list img {
-		width:3rem;
-		height:3rem;
+		margin:0.75rem 0rem;}
+		.site-list img {
+			width:3rem;
+			height:3rem;
+		}
+		.entry {
+			width:50%;
+			padding:2rem;
+			margin:3rem auto;
+		}
 	}
-	.entry {
-		width:50%;
-		padding:2rem;
-		margin:3rem auto;
-	}
+/*1000px〜1200px iPad horizontal*/
+@media (700px <= width < 1400px )  {
+	.site-list.acl {grid-template-columns: 1fr 1fr 1fr;}
 }
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
 	article {padding:3rem;}
- 	.site-list {grid-template-columns: 1fr 1fr;}
+	.site-list {grid-template-columns: 1fr 1fr;}
 	.site-list img {width:3rem; height:3rem;}
 }
 
@@ -114,7 +118,7 @@
 	}
 }
 .root_daum_roughmap .wrap_map {
-    height: 100% !important;
+	height: 100% !important;
 }
 
 
