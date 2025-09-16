@@ -86,7 +86,7 @@
 }
 .root_daum_roughmap .wrap_map {
 	flex-grow: 1;
-	width:100%; 
+	width:100%!important; 
 	min-height:40rem;
 	max-height:90dvh;
 }
