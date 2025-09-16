@@ -788,7 +788,7 @@
 					<li class="donate_li">
 						<p class="donate_data">
 							<span>영성아카데미 후원 계좌</span>
-							<span>우리은행</span>
+							<img alt="우리은행" src="../icon/korea_bank_logo/WOORI.png">
 							<span>1005-504-726503</span>
 							<span>예금주 : 세계기독교통일신령협회 가평교회</span>
 						</p>
@@ -822,17 +822,33 @@ document.addEventListener('DOMContentLoaded', () => {
             // 부모 요소 안에서 .donate_data 클래스를 가진 요소를 찾습니다.
             const targetElement = parentItem.querySelector('.donate_data');
 
-            // 요소의 텍스트 콘텐츠를 가져와서 바로 앞뒤 공백을 제거합니다.
-            const textToCopy = targetElement.textContent.trim();
-            
-            // 텍스트에서 탭(\t)과 여러 개의 공백을 하나의 공백으로 압축하고, 줄바꿈(\n)은 유지합니다.
-            const cleanedText = textToCopy.replace(/[ \t]+/g, ' ');
+            // 요소의 텍스트 콘텐츠를 가져와서 앞뒤 공백을 제거합니다.
+            const textContent = targetElement.textContent.trim();
+
+            // 이미지의 alt 텍스트를 담을 배열을 만듭니다.
+            const altTexts = [];
+
+            // .donate_data 내부의 모든 <img> 태그를 찾습니다.
+            const images = targetElement.querySelectorAll('img');
+
+            // 각 이미지의 alt 속성값을 배열에 추가합니다.
+            images.forEach(img => {
+                if (img.alt) {
+                    altTexts.push(img.alt);
+                }
+            });
+
+            // 텍스트 콘텐츠와 alt 텍스트를 합칩니다.
+            const combinedText = `${textContent} ${altTexts.join(' ')}`;
+
+            // 탭(\t)과 여러 개의 공백을 하나의 공백으로 압축합니다.
+            const cleanedText = combinedText.replace(/[ \t]+/g, ' ');
 
             if (cleanedText) {
                 // 클립보드에 정제된 텍스트를 복사합니다.
                 navigator.clipboard.writeText(cleanedText)
                     .then(() => {
-                        alert(`${cleanedText} \n클립보드에 복사되었습니다!`);
+                        alert(`'${cleanedText}'가 복사되었습니다!`);
                     })
                     .catch(err => {
                         console.error('복사 실패:', err);
