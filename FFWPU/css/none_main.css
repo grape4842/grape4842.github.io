@@ -100,7 +100,7 @@
 outline:2px solid var(--default_purple)!important;
 }
 .root_daum_roughmap .section_address .txt {
-	color:inherit;
+	color:var(--invert_pure_mono);
 	font-size:1rem;
 	line-height: 1lh;
 }
