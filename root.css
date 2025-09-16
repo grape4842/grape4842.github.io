@@ -181,7 +181,11 @@ body {
 	scroll-behavior: smooth; /* 부드러운 스크롤 */
 	ruby-align: space-between;
 }
-
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 :where(input, button, textarea, select, a, select option) {
 	display: inline-flex;
 	font: inherit; /* 입력 요소는 부모의 폰트 속성 계승 */

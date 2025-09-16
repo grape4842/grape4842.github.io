@@ -105,9 +105,29 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 	display: flex;
 	flex-direction: column;
 }
-.donate_data img {
+.donate_title {
+	background-color: var(--variable_purple);
+	color:var(--high_variable_invert_purple);
+	font-weight: bolder;
+	width:max-content;
+	line-height: 1;
+	padding:0.5rem;
+	margin:0.25rem;
+	margin-left:-1rem;
+}
+.donate_bank_logo {
 	width: min-content;
-	height: 1lh;
+	height: 1.25rem;
+}
+.donate_address_copy {
+	aspect-ratio: 16/9;
+	background-color: var(--default_purple);
+	color:var(--pure_white);
+	min-height: 1lh;
+	padding:clamp(0.5rem, 1rem, 2rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 /*너비가 1400이상일때 (PC)*/
 @media screen and (min-width:1400px) {
