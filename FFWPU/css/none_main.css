@@ -86,11 +86,12 @@
 }
 .root_daum_roughmap .wrap_map {
 	flex-grow: 1;
+	width:100%; 
 	min-height:40rem;
 	max-height:90dvh;
 }
 .root_daum_roughmap .wrap_btn_zoom button {
-	outline:2px solid var(--default_purple);
+	outline:2px solid var(--default_purple)!important;
 	background-color: var(--light_purple);
 }
 .root_daum_roughmap .section_address .txt {
