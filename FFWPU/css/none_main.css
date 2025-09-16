@@ -102,7 +102,23 @@
 img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"] {
 	filter:hue-rotate(21deg);
 }
+.donate_list {
+	margin-top:2rem;
+	display: grid;
+}
+.donate_li {
+	display: flex;
+	gap:1rem;
+	justify-content: space-between;
+	align-items: center;
+	aspect-ratio: 1.618/1;
+	border-radius: clamp(1rem, 1.5rem, 2rem);
+	padding-inline: clamp(1rem, 2rem, 3rem);
+	background-color: light-dark(#3041, #dcf1);
+}
 .donate_data {
+	width: max-content;
+	padding:0rem;
 	display: flex;
 	flex-direction: column;
 }
@@ -113,18 +129,20 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 	width:max-content;
 	line-height: 1;
 	padding:0.5rem;
-	margin:0.25rem;
-	margin-left:-1rem;
+	margin-bottom: 0.5rem;
+}
+.donate_data >*:not(.donate_title) {
+	margin-left:0.5rem;
 }
 .donate_bank_logo {
 	width: min-content;
-	height: 1.25rem;
+	height: 1lh;
 }
 .donate_address_copy {
 	aspect-ratio: 16/9;
-	background-color: var(--default_purple);
-	color:var(--pure_white);
+	background-color: var(--variable_purple);
 	min-height: 1lh;
+	width:4rem;
 	padding:clamp(0.5rem, 1rem, 2rem);
 	display: flex;
 	justify-content: center;
@@ -133,7 +151,7 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 /*너비가 1400이상일때 (PC)*/
 @media screen and (min-width:1400px) {
 	article {padding:3rem;}
-	.site-list {grid-template-columns: 1fr 1fr 1fr;}
+	.site-list, .donate_list {grid-template-columns: 1fr 1fr 1fr;}
 	.site-list li {
 		margin:0.75rem 0rem;}
 		.site-list img {
@@ -154,7 +172,7 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
 	article {padding:3rem;}
-	.site-list {grid-template-columns: 1fr 1fr;}
+	.site-list, .donate_list {grid-template-columns: 1fr 1fr;}
 	.site-list img {width:3rem; height:3rem;}
 }
 

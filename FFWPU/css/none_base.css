@@ -1,10 +1,10 @@
 @import url("../../root.css")
 @charset "utf-8";
 :root {
-	--variable_purple:light-dark(#dcf, #213);
-	--variable_invert_purple:light-dark(#304, #a7f);
-	--high_variable_invert_purple:light-dark(#213, #dcf);
-	--default_purple:#70b;
+	--variable_purple:light-dark(#dcf, #304);
+	--variable_invert_purple:light-dark(#304, #dcf);
+	--high_variable_invert_purple:light-dark(#203, #edf);
+	--default_purple:#90d;
 	--transparent_purple:#63b5;
 	--border_purple:#a7f;
 	--light_purple:#baf;
