@@ -2,133 +2,133 @@
 <html lang="ko">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../root.css">
-    <meta charset="utf-8"> 
-    <meta name="color-scheme" content="dark light">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="@purplemiyazawa">
-    <meta name="copyright" content="@purplemiyazawa">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="stylesheet" type="text/css" href="../root.css">
+	<meta charset="utf-8"> 
+	<meta name="color-scheme" content="dark light">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="@purplemiyazawa">
+	<meta name="copyright" content="@purplemiyazawa">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <meta property="og:image" content="img/logo_black.png">
-    <meta property="og:title" content="datalist 예제">
-    <meta property="og:description" content="">
-    <meta property="og:locate" content="ko_KR">
-    <meta property="og:type" content="website">
+	<meta property="og:image" content="img/logo_black.png">
+	<meta property="og:title" content="datalist 예제">
+	<meta property="og:description" content="">
+	<meta property="og:locate" content="ko_KR">
+	<meta property="og:type" content="website">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color=" content="#70a">
-    <meta name="msapplication-TileColor" content="#baf">
-    <meta name="msapplication-TileImage" content="../ffwp-logo-transparent-purple-gradient/ms-icon-310x310.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="theme-color=" content="#70a">
+	<meta name="msapplication-TileColor" content="#baf">
+	<meta name="msapplication-TileImage" content="../ffwp-logo-transparent-purple-gradient/ms-icon-310x310.png">
 
-    <title>hidden과 inert 비교</title>
+	<title>hidden과 inert 비교</title>
 
-    <link rel="shortcut icon" type="image/png" href="img/ffwpuLogo0.png">
-    <link rel="apple-touch-icon" href="img/ffwpuLogo0.png">
-    <link rel="preload" href="../font/Koddi/KoddiUDOnGothic.woff2" as="font">
-    <link rel="preload" href="../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
-    <link rel="preload" href="../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
-    <link rel="preload" href="../font/BIZ-UD/BIZ-UDPGothic.ttf" as="font">
-    <link rel="preload" href="../font/BIZ-UD/BIZ-UDPGothic-Bold.ttf" as="font">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+	<link rel="shortcut icon" type="image/png" href="img/ffwpuLogo0.png">
+	<link rel="apple-touch-icon" href="img/ffwpuLogo0.png">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../font/Koddi/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDPGothic.ttf" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDPGothic-Bold.ttf" as="font">
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 
-    <link rel="apple-touch-icon" sizes="57x57" href="../ffwp-logo-transparent-purple-gradient/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../ffwp-logo-transparent-purple-gradient/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../ffwp-logo-transparent-purple-gradient/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../ffwp-logo-transparent-purple-gradient/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../ffwp-logo-transparent-purple-gradient/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../ffwp-logo-transparent-purple-gradient/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../ffwp-logo-transparent-purple-gradient/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../ffwp-logo-transparent-purple-gradient/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../ffwp-logo-transparent-purple-gradient/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../ffwp-logo-transparent-purple-gradient/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../ffwp-logo-transparent-purple-gradient/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../ffwp-logo-transparent-purple-gradient/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
-    <style>
-        header, footer {
-            color:var(--pure_white);
-            background: var(--pure_mono);
-        }
-        main {
-            min-height: 50dvh;
-            padding:clamp(1rem, 3rem, 5rem);
-        }
-        .content_width {
-            padding-block: clamp(1rem, 2rem, 10rem);
-            text-align: center;
-        }
-        .video_box {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap:1rem;
-            margin:2rem auto;
-        }
-        .video_box p{
-            text-align: left;
-            height: 3lh;
-            display: flex;
-            align-items: flex-end;
-            padding-bottom: 1rem;
-        }
-        section iframe {
-            aspect-ratio:16/9;
-            width:clamp(5rem, 20rem, 40rem);
-        }
-        button {
-            background: #70a; 
-            color:var(--pure_white);
-            aspect-ratio: 16/9;
-            padding:1rem;
-            border-radius: 1rem;
-            font-weight: 900;
-            margin:auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+	<link rel="apple-touch-icon" sizes="57x57" href="../ffwp-logo-transparent-purple-gradient/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../ffwp-logo-transparent-purple-gradient/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../ffwp-logo-transparent-purple-gradient/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../ffwp-logo-transparent-purple-gradient/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../ffwp-logo-transparent-purple-gradient/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../ffwp-logo-transparent-purple-gradient/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../ffwp-logo-transparent-purple-gradient/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../ffwp-logo-transparent-purple-gradient/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../ffwp-logo-transparent-purple-gradient/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../ffwp-logo-transparent-purple-gradient/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../ffwp-logo-transparent-purple-gradient/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../ffwp-logo-transparent-purple-gradient/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/manifest.json">
+	<style>
+		header, footer {
+			color:var(--pure_white);
+			background: var(--pure_mono);
+		}
+		main {
+			min-height: 50dvh;
+			padding:clamp(1rem, 3rem, 5rem);
+		}
+		.content_width {
+			padding-block: clamp(1rem, 2rem, 10rem);
+			text-align: center;
+		}
+		.video_box {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap:1rem;
+			margin:2rem auto;
+		}
+		.video_box p{
+			text-align: left;
+			height: 3lh;
+			display: flex;
+			align-items: flex-end;
+			padding-bottom: 1rem;
+		}
+		section iframe {
+			aspect-ratio:16/9;
+			width:clamp(5rem, 20rem, 40rem);
+		}
+		button {
+			background: #70a; 
+			color:var(--pure_white);
+			aspect-ratio: 16/9;
+			padding:1rem;
+			border-radius: 1rem;
+			font-weight: 900;
+			margin:auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
 </head>
 
 <body>
-    <script type="text/javascript" src="../include_script.js"></script>
-    <header>
-        <div class="content_width">
-            <h1>hidden과 inert 비교 예제</h1>
-        </div>
-    </header>
-    <main class="content_width">
-        <h2>hidden과 inert의 차이를 알아보자</h2>
-        <section>
-            <ul>
-                <li>hidden은 완전히 요소가 사라집니다. CSS에서 말하는 display:none;과 동일한 효과를 가집니다.</li>
-                <li>inert는 요소는 그대로 있지만 키보드와 스크린 리더를 포함한 접근 수단이 사라집니다.</li>
-                <li>hidden 속성을 주었다 하더라도 해당 예제와 같이 css에서 별도 display 속성을 제공한 경우 css가 우선되어 시각적으로 보일 수 있습니다.</li>
-                <li>Code Pen의 예제는 별도 root.css가 없기 때문에 hidden이 동작하고 있습니다.</li>
-            </ul>
-            <div class="video_box">
-                <div>
-                    <p>hidden이 적용되었지만 root.css로 인하여 display:inline-flex;가 적용되어 요소가 확인됨.</p>
-                    <iframe hidden src="https://www.youtube.com/embed/dwTA9f4guow?si=bUTDAwZZZCTfScwW" title="디지털 정부서비스 UI/UX 가이드라인 적용 및 결과검증 방법 - You Tube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <p>inert 적용된 유튜브 프레임</p>
-                    <iframe inert src="https://www.youtube.com/embed/dwTA9f4guow?si=bUTDAwZZZCTfScwW" title="디지털 정부서비스 UI/UX 가이드라인 적용 및 결과검증 방법 - You Tube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <p>기본 프레임</p>
-                    <iframe  src="https://www.youtube.com/embed/dwTA9f4guow?si=bUTDAwZZZCTfScwW" title="디지털 정부서비스 UI/UX 가이드라인 적용 및 결과검증 방법 - You Tube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
-        <iframe style="min-height:50rem; height: max-content; width:100%;" scrolling="no" title="hidden과 inert 예제" src="https://codepen.io/grape4842/embed/ByoXjLv?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-          See the Pen <a href="https://codepen.io/grape4842/pen/ByoXjLv">
-          hidden과 inert 예제</a> by purplemiyazawa (<a href="https://codepen.io/grape4842">@grape4842</a>)
-          on <a href="https://codepen.io">CodePen</a>.
-      </iframe>  </main>
-      <footer>
-        <div class="content_width">배찬우 2025</div>
-    </footer>
-</body>
-</html>
+	<script type="text/javascript" src="../include_script.js"></script>
+	<header>
+		<div class="content_width">
+			<h1>hidden과 inert 비교 예제</h1>
+		</div>
+	</header>
+	<main class="content_width">
+		<h2>hidden과 inert의 차이를 알아보자</h2>
+		<section>
+			<ul>
+				<li>hidden은 완전히 요소가 사라집니다. CSS에서 말하는 display:none;과 동일한 효과를 가집니다.</li>
+				<li>inert는 요소는 그대로 있지만 키보드와 스크린 리더를 포함한 접근 수단이 사라집니다.</li>
+				<li>hidden 속성을 주었다 하더라도 해당 예제와 같이 css에서 별도 display 속성을 제공한 경우 css가 우선되어 시각적으로 보일 수 있습니다.</li>
+				<li>Code Pen의 예제는 별도 root.css가 없기 때문에 hidden이 동작하고 있습니다.</li>
+			</ul>
+			<div class="video_box">
+				<div>
+					<p>hidden이 적용되었지만 root.css로 인하여 display:inline-flex;가 적용되어 요소가 확인됨.</p>
+					<iframe hidden src="https://www.youtube.com/embed/dwTA9f4guow?si=bUTDAwZZZCTfScwW" title="디지털 정부서비스 UI/UX 가이드라인 적용 및 결과검증 방법 - You Tube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+				<div>
+					<p>inert 적용된 유튜브 프레임</p>
+					<iframe inert src="https://www.youtube.com/embed/dwTA9f4guow?si=bUTDAwZZZCTfScwW" title="디지털 정부서비스 UI/UX 가이드라인 적용 및 결과검증 방법 - You Tube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+				<div>
+					<p>기본 프레임</p>
+					<iframe  src="https://www.youtube.com/embed/dwTA9f4guow?si=bUTDAwZZZCTfScwW" title="디지털 정부서비스 UI/UX 가이드라인 적용 및 결과검증 방법 - You Tube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+		</section>
+		<iframe style="min-height:50rem; height: max-content; width:100%;" scrolling="no" title="hidden과 inert 예제" src="https://codepen.io/grape4842/embed/ByoXjLv?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+			See the Pen <a href="https://codepen.io/grape4842/pen/ByoXjLv">
+			hidden과 inert 예제</a> by purplemiyazawa (<a href="https://codepen.io/grape4842">@grape4842</a>)
+			on <a href="https://codepen.io">CodePen</a>.
+		</iframe>  </main>
+		<footer>
+			<div class="content_width">배찬우 2025</div>
+		</footer>
+	</body>
+	</html>
