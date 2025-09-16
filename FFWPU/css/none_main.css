@@ -78,6 +78,17 @@
 .map-icon img {
 	border-radius: 3px;
 }
+.root_daum_roughmap {
+	display: flex;
+	flex-direction: column;
+	border:solid var(--kakao_yellow); 
+}
+.root_daum_roughmap .wrap_map {
+	width:100%; 
+	flex-grow: 1;
+	min-height:40rem;
+	max-height:90dvh;
+}
 .donate_data {
 	display: flex;
 	flex-direction: column;
