@@ -78,7 +78,10 @@
 .map-icon img {
 	border-radius: 3px;
 }
-
+.donate_data {
+	display: flex;
+	flex-direction: column;
+}
 /*너비가 1400이상일때 (PC)*/
 @media screen and (min-width:1400px) {
 	article {padding:3rem;}
@@ -117,12 +120,3 @@
 		background-image: url("../img/YouTube_light_icon_(2017).png");
 	}
 }
-.root_daum_roughmap .wrap_map {
-	height: 100% !important;
-}
-
-
-
-
-
-
