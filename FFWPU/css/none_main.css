@@ -194,4 +194,5 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 	.yvl a .ylogo {
 		background-image: url("../img/YouTube_light_icon_(2017).png");
 	}
+	.wrap_controllers {filter: invert(1);}
 }
