@@ -130,8 +130,8 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 	justify-content: space-between;
 	align-items: center;
 	aspect-ratio: 1.618/1;
-	border-radius: min(1rem) max(3rem);
-	padding: min(1rem) max(3rem);
+	border-radius: 1rem;
+	padding: 1rem;
 	background-color: light-dark(#3041, #dcf1);
 }
 .donate_data {
