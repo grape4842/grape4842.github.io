@@ -110,8 +110,8 @@
 .root_daum_roughmap .section_address .txt,
 .root_daum_roughmap .section_address .tit {
 	color:var(--invert_pure_mono)!important;
-	font-size:1rem;
-	line-height: 1lh;
+	font-size:1rem!important;
+	line-height: 1lh!important;
 }
 .root_daum_roughmap .section_address .tit {
 	font-weight: bolder;
