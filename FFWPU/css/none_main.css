@@ -95,6 +95,9 @@
 }
 .root_daum_roughmap .wrap_btn_zoom button {
 	background-color: var(--light_purple)!important;
+	aspect-ratio: 1/1;
+	padding:0!important;
+
 }
 .root_daum_roughmap .wrap_btn_zoom button:focus {
 	outline:2px solid var(--default_purple)!important;
