@@ -14,6 +14,7 @@
 /*큰 영역*/
 header, footer {
 	backdrop-filter: blur(1.25rem);
+	background: var(--variable_purple);
 }
 nav {
 	display:flex;
