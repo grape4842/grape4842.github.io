@@ -125,7 +125,7 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 	justify-content: space-between;
 	align-items: center;
 	aspect-ratio: 1.618/1;
-	border-radius: clamp(1rem, 1.5rem, 2rem);
+	border-radius: min(1rem) max(3rem);
 	padding-inline: clamp(1rem, 2rem, 3rem);
 	background-color: light-dark(#3041, #dcf1);
 }
