@@ -88,7 +88,7 @@
 	flex-grow: 1;
 	width:100%!important; 
 	min-height:40rem;
-	max-height:90dvh;
+	max-height:80dvh;
 }
 :where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) {
 	overflow: visible!important;
