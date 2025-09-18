@@ -29,7 +29,7 @@ img, video {
 	height:auto;
 }
 main {
-	padding:clamp(2rem, 5vmax, 5rem);
+	padding-block:clamp(1rem, 5vmax, 5rem);
 }
 section {
 	margin:3rem auto;
