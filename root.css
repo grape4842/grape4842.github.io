@@ -342,7 +342,7 @@ th, td {
 
 /* 스크롤바 트랙의 스타일 */
 ::-webkit-scrollbar-track {
-	background-color: var(--gray_line_color);
+	background-color: var(--alpha_gray);
 	border-radius: 10rem; 
 }
 /* 필드셋의 기본 테두리 제거 */
