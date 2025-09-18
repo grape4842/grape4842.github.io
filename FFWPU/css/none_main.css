@@ -129,7 +129,6 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 	gap:1rem;
 	justify-content: space-between;
 	align-items: center;
-	aspect-ratio: 1.618/1;
 	border-radius: 1rem;
 	padding: 1rem;
 	background-color: light-dark(#3041, #dcf1);
@@ -182,7 +181,10 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 		padding:2rem;
 		margin:3rem auto;
 	}
-	.donate_li {flex-direction: row;}
+	.donate_li {
+		flex-direction: row;
+		aspect-ratio: 1.618/1;
+}
 }
 /*1000px〜1200px iPad horizontal*/
 @media (1000px <= width < 1400px )  {
