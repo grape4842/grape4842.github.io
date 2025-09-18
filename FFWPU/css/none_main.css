@@ -79,7 +79,7 @@
 	border-radius: 3px;
 }
 .root_daum_roughmap {
-	width:100%; 
+	width:100% !important; 
 	display: flex;
 	flex-direction: column;
 	border:solid var(--kakao_yellow); 
@@ -90,10 +90,10 @@
 	min-height:40rem;
 	max-height:90dvh;
 }
-.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom {
+:where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) {
 	overflow: visible!important;
 }
-.root_daum_roughmap .wrap_btn_zoom button {
+.root_daum_roughmap .wrap_btn_zoom button:focus {
 	background-color: var(--light_purple);
 }
 .root_daum_roughmap .wrap_btn_zoom button {
