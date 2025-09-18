@@ -94,13 +94,13 @@
 	overflow: visible!important;
 }
 .root_daum_roughmap .wrap_btn_zoom button:focus {
-	background-color: var(--light_purple);
+	background-color: var(--light_purple)!important;
 }
 .root_daum_roughmap .wrap_btn_zoom button {
-outline:2px solid var(--default_purple)!important;
+	outline:2px solid var(--default_purple)!important;
 }
 .root_daum_roughmap .section_address .txt {
-	color:var(--invert_pure_mono);
+	color:var(--invert_pure_mono)!important;
 	font-size:1rem;
 	line-height: 1lh;
 }
