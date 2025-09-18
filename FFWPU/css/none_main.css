@@ -94,7 +94,7 @@
 	overflow: visible!important;
 }
 .root_daum_roughmap .wrap_btn_zoom button {
-	background-color: var(--light_purple)!important;
+	background-color: var(--default_purple)!important;
 	aspect-ratio: 1/1;
 	padding:0!important;
 
