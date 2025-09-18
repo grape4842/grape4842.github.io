@@ -243,7 +243,8 @@ h2 {
 }
 
 .news_and_notice article {
-	max-width: 30rem;
+	width: max-content;
+	max-width:100%;
 }
 .news_and_notice h3 {
 	justify-content: center;
