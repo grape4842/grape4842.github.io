@@ -99,10 +99,14 @@
 .root_daum_roughmap .wrap_btn_zoom button {
 	outline:2px solid var(--default_purple)!important;
 }
-.root_daum_roughmap .section_address .txt {
+.root_daum_roughmap .section_address .txt,
+.root_daum_roughmap .section_address .tit {
 	color:var(--invert_pure_mono)!important;
 	font-size:1rem;
 	line-height: 1lh;
+}
+.root_daum_roughmap .section_address .tit {
+	font-weight: bolder;
 }
 img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"] {
 	filter:hue-rotate(40deg);
