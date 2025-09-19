@@ -113,7 +113,7 @@
 }
 .roughmap_maker_label,
 .roughmap_maker_label:after {
-	background-image: none;
+	background-image: none!important;
 	background-color: var(--variable_purple)!important;	
 }
 .roughmap_maker_label:after {rotate:45deg;}
