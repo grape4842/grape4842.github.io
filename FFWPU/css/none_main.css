@@ -107,7 +107,7 @@
 .root_daum_roughmap .wrap_btn_zoom button:focus {
 	z-index: 2;
 	outline-offset: 0.25rem;
-	outline:2px solid var(--high_variable_invert_purple)!important;
+	outline:2px solid var(--dark_purple)!important;
 }
 .root_daum_roughmap .wrap_btn_zoom button .img_zoom {
 	filter: contrast(4) invert(0);
