@@ -47,7 +47,7 @@
 		padding: clamp(1.5rem, 5vw, 2.5rem);
 		box-sizing: border-box;
 		margin-block: clamp(2rem, 4rem, 6rem);
-		max-width: 35rem;
+		max-width: 40rem;
 	}
 	.content_width {
 		padding: clamp(1rem, 2rem, 3rem);
@@ -115,7 +115,7 @@
 	.input-container:has(#gender-male) {
 		justify-content: center;
 	}
-	.input-container:has(#verification-button, #nickname) {
+	.input-container:has(#nickname) {
 		flex-direction: column;
 	}
 	.input-container input {
@@ -126,8 +126,10 @@
 		flex-grow: 0;
 		white-space: nowrap;
 	}
-	button {
+	button, a {
 		border: none;
+		margin:0rem auto;
+		width:max-content;
 		padding:0.5rem;
 		border-radius: 0.5rem;
 		background-color: var(--primary_color);
@@ -137,6 +139,7 @@
 		font-size: 1rem;
 		transition: background-color 0.2s, transform 0.2s;
 	}
+	a {margin-bottom:3rem;}
 	button:hover {
 		background-color: var(--primary_dark);
 		transform: translateY(-2px);
@@ -148,6 +151,7 @@
 		background-color: #5a6268;
 	}
 	.info-text {
+		display: block;
 		font-size: 0.85rem;
 		color: var(--placeholder);
 		text-align: center;
@@ -187,24 +191,23 @@
 		<h1>inputmode와 autocomplete 예제</h1>
 	</header>
 	<main class="content_width">
+		<a target="_blank" title="새 창으로 열기" href="https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Attributes/autocomplete">
+			<span>HTML autocomplete 특성 - HTML: Hypertext Markup Language | MDN</span>
+		</a>
 		<h2>회원가입</h2>
 		<form>
 			<div class="form-group">
 				<label for="verification-button" class="required-mark">본인인증</label>
-				<div class="input-container">
-					<button type="button" id="verification-button" class="secondary" aria-label="본인인증을 위해 휴대폰 인증을 시작합니다.">본인인증하기</button>
-					<span class="info-text" id="verification-info" style="text-align: left;">본인인증 후 이메일, 비밀번호, 주소 등 입력란이 활성화됩니다.</span>
-				</div>
 			</div>
-
 			<!-- 본인인증 후 채워지는 필드는 readonly -->
 			<div class="form-group">
 				<label for="full-name" class="required-mark">성명</label>
 				<div class="input-container">
 					<input type="text" id="full-name" name="name" autocomplete="name" placeholder="PASS 인증으로 자동 입력" readonly>
+					<button type="button" id="verification-button" class="secondary" aria-label="본인인증을 위해 휴대폰 인증을 시작합니다.">본인인증하기</button>
 				</div>
 			</div>
-			
+
 			<div class="form-group">
 				<label for="tel" class="required-mark">휴대폰 번호</label>
 				<div class="input-container">
@@ -275,79 +278,81 @@
 		</div>
 
 		<div class="form-group">
-			<label for="address-postcode">주소 <span class="info-text">(선택)</span></label>
-			<div class="input-container input-group">
-				<input type="text" id="address-postcode" name="postal-code" autocomplete="postal-code" placeholder="우편번호" inputmode="numeric" readonly>
-				<button type="button" class="secondary input-button" onclick="execDaumPostcode()">주소검색</button>
+			<label for="address-postcode">
+				<span>주소</span>
+				<span class="info-text">(선택)</span></label>
+				<div class="input-container input-group">
+					<input type="text" id="address-postcode" name="postal-code" autocomplete="postal-code" placeholder="우편번호" inputmode="numeric" readonly>
+					<button type="button" class="secondary input-button" onclick="execDaumPostcode()">주소검색</button>
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label for="address-street">도로명 주소</label>
-			<div class="input-container">
-				<input type="text" id="address-street" name="street-address" autocomplete="street-address" placeholder="도로명 주소" readonly>
+			<div class="form-group">
+				<label for="address-street">도로명 주소</label>
+				<div class="input-container">
+					<input type="text" id="address-street" name="street-address" autocomplete="street-address" placeholder="도로명 주소" readonly>
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label for="address-detail">상세 주소 <span class="info-text">(선택)</span></label>
-			<div class="input-container">
-				<input type="text" id="address-detail" autocomplete="address-line2" placeholder="상세주소">
+			<div class="form-group">
+				<label for="address-detail">상세 주소 <span class="info-text">(선택)</span></label>
+				<div class="input-container">
+					<input type="text" id="address-detail" autocomplete="address-line2" placeholder="상세주소">
+				</div>
 			</div>
-		</div>
 
-		<div class="form-group" style="align-items: start;">
-			<label class="required-mark" for="privacy-policy">이용약관 동의</label>
-			<div class="input-container">
-				<label for="privacy-policy" class="checkbox-label">
-					<input type="checkbox" id="privacy-policy" name="privacy-policy" required>
-					<span>[필수] 개인정보 수집 및 이용 동의</span>
-				</label>
+			<div class="form-group" style="align-items: start;">
+				<label class="required-mark" for="privacy-policy">이용약관 동의</label>
+				<div class="input-container">
+					<label for="privacy-policy" class="checkbox-label">
+						<input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+						<span>[필수] 개인정보 수집 및 이용 동의</span>
+					</label>
+				</div>
 			</div>
+			<button type="submit">회원가입</button>
+		</form>
+	</main>
+	<footer>
+		<div class="content_width">
+			<address>2025 배찬우 SNC Lab</address>
 		</div>
-		<button type="submit">회원가입</button>
-	</form>
-</main>
-<footer>
-	<div class="content_width">
-		<address>2025 배찬우 SNC Lab</address>
-	</div>
-</footer>
+	</footer>
 
-<script>
+	<script>
 		// PASS 인증 시스템 시뮬레이션
-	document.addEventListener('DOMContentLoaded', () => {
-		const verificationButton = document.getElementById('verification-button');
-		const form = document.querySelector('form');
-		const passFields = ['full-name', 'tel', 'birth-date'];
+		document.addEventListener('DOMContentLoaded', () => {
+			const verificationButton = document.getElementById('verification-button');
+			const form = document.querySelector('form');
+			const passFields = ['full-name', 'tel', 'birth-date'];
 
 			// 본인인증 버튼에 이벤트 리스너 추가
-		verificationButton.addEventListener('click', () => {
+			verificationButton.addEventListener('click', () => {
 				// PASS 본인인증 성공 시나리오 시뮬레이션
 
 				// 1. PASS 인증 필드에 가상 데이터 채우기
-			document.getElementById('full-name').value = '홍길동';
-			document.getElementById('tel').value = '01012345678';
-			document.getElementById('birth-date').value = '951026';
+				document.getElementById('full-name').value = '홍길동';
+				document.getElementById('tel').value = '01012345678';
+				document.getElementById('birth-date').value = '951026';
 
 				// 2. 본인인증 버튼 비활성화 및 텍스트 변경
-			verificationButton.disabled = true;
-			verificationButton.textContent = '인증 완료';
-			verificationButton.style.backgroundColor = 'var(--secondary_color)';
+				verificationButton.disabled = true;
+				verificationButton.textContent = '인증 완료';
+				verificationButton.style.backgroundColor = 'var(--secondary_color)';
 
 				// 3. 안내 텍스트 변경
-			const verificationInfo = document.getElementById('verification-info');
-			verificationInfo.textContent = '본인인증이 완료되었습니다. 나머지 정보를 입력해주세요.';
-			verificationInfo.style.color = 'var(--primary_color)';
+				const verificationInfo = document.getElementById('verification-info');
+				verificationInfo.textContent = '본인인증이 완료되었습니다. 나머지 정보를 입력해주세요.';
+				verificationInfo.style.color = 'var(--primary_color)';
+			});
 		});
-	});
 
 		// 카카오맵 주소검색 API 연동
-	function execDaumPostcode() {
-		new daum.Postcode({
-			oncomplete: function(data) {
+		function execDaumPostcode() {
+			new daum.Postcode({
+				oncomplete: function(data) {
 					// 팝업에서 검색 결과 항목을 클릭했을 때 실행할 코드
 
 					// 각 주소의 참고항목
-				let extraAddr = '';
+					let extraAddr = '';
 					if (data.userSelectedType === 'R') { // 도로명 주소일 경우
 						if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
 							extraAddr += data.bname;
@@ -368,7 +373,7 @@
 					document.getElementById('address-detail').focus();
 				}
 			}).open();
-	}
-</script>
+		}
+	</script>
 </body>
 </html>
