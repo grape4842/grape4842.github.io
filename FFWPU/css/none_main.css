@@ -89,6 +89,7 @@
 	width:100%!important; 
 	min-height:40rem;
 	max-height:80dvh;
+	border-bottom:1px solid var(--kakao_yellow);
 }
 :where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) {
 	overflow: visible!important;
@@ -122,7 +123,8 @@
 
 }
 .root_daum_roughmap .section_address .txt,
-.root_daum_roughmap .section_address .tit {
+.root_daum_roughmap .section_address .tit,
+.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt {
 	color:var(--invert_pure_mono)!important;
 	font-size:1rem!important;
 	line-height: 1lh!important;
