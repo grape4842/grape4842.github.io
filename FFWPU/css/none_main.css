@@ -103,6 +103,9 @@
 	z-index: 2;
 	outline:2px solid var(--default_purple)!important;
 }
+.root_daum_roughmap .wrap_btn_zoom button .img_zoom {
+	filter: contrast(4);
+}
 .root_daum_roughmap .cont .section {
 	margin: 0rem !important;;
 	padding:min(0.5rem) max(1rem)!important;
