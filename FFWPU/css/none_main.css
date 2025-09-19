@@ -116,6 +116,7 @@
 	background-image: none;
 	background-color: var(--variable_purple)!important;	
 }
+.roughmap_maker_label:after {rotate:45deg;}
 .roughmap_maker_label a {
 	padding:0.5rem!important;
 	color:var(--invert_pure_mono);
