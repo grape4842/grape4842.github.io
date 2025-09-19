@@ -91,6 +91,9 @@
 	max-height:80dvh;
 	border-bottom:1px solid var(--kakao_yellow);
 }
+.wrap_btn_zoom {
+    background-image: none!important;
+}
 :where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) {
 	overflow: visible!important;
 }
