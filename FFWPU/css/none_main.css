@@ -82,7 +82,7 @@
 	width:100% !important; 
 	display: flex;
 	flex-direction: column;
-	border:solid var(--kakao_yellow); 
+	border:solid 1px var(--kakao_yellow); 
 }
 .root_daum_roughmap .wrap_map {
 	flex-grow: 1;
