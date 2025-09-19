@@ -115,6 +115,7 @@
 	background-color: var(--alpha_gray)!important;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 .roughmap_maker_label,
 .roughmap_maker_label:after {
