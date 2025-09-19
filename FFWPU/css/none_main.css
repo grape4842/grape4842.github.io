@@ -144,6 +144,9 @@
 .root_daum_roughmap .section_address .tit {
 	font-weight: bolder;
 }
+.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt_bar {
+	margin:0rem 0.25rem!important;
+}
 img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"] {
 	filter:hue-rotate(40deg);
 }
