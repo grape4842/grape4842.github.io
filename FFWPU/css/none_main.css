@@ -112,7 +112,7 @@
 	padding:min(0.5rem) max(1rem)!important;
 }
 .root_daum_roughmap .wrap_controllers {
-	background-color: light-dark(var(--kakao_yellow), var(--alpha_gray)); !important;
+	background-color: light-dark(var(--kakao_yellow), var(--alpha_gray))!important;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
