@@ -47,18 +47,19 @@
 		padding: clamp(1.5rem, 5vw, 2.5rem);
 		box-sizing: border-box;
 		margin-block: clamp(2rem, 4rem, 6rem);
-		max-width: 30rem;
+		max-width: 35rem;
 	}
 	.content_width {
 		padding: clamp(1rem, 2rem, 3rem);
 	}
-	h1 {
+	h1, h2 {
 		text-align: center;
 		margin-bottom: 2rem;
 		font-size: 2rem;
 		font-weight: 700;
 		color: var(--primary_color);
 	}
+	h2 {font-size: 1.5rem;}
 	form {
 		display: flex;
 		flex-direction: column;
@@ -66,14 +67,21 @@
 	}
 	.form-group {
 		display: flex;
-		justify-content: space-around;
+		align-items: center;
+		justify-content: space-between;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 1rem;
 	}
 	label {
 		font-weight: 600;
 		cursor: pointer;
-		font-size: 0.95rem;
+		display: flex;
+		align-items: center;
+		flex-shrink: 1;
+		gap:0.5rem;
+	}
+	.form-group > label {
+		flex-basis: 7.5rem;
 	}
 	input {
 		width: auto;
@@ -82,6 +90,7 @@
 	}
 	input[type="checkbox"], input[type="radio"] {
 		aspect-ratio: 1/1;
+		max-width: 2rem;
 	}
 	input:focus-visible, select:focus-visible, button:focus-visible {
 		outline: 2px solid var(--primary_color);
@@ -99,15 +108,15 @@
 	.input-container {
 		display: flex;
 		justify-content: flex-end;
+		gap:1rem;
+		width: max-content;
+		flex-grow: 1;
 	}
 	.input-container:has(#gender-male) {
 		justify-content: center;
 	}
 	.input-container:has(#verification-button, #nickname) {
 		flex-direction: column;
-	}
-	.input-group {
-		gap: 0.5rem;
 	}
 	.input-container input {
 		min-height: 1.5rem;
@@ -119,6 +128,7 @@
 	}
 	button {
 		border: none;
+		padding:0.5rem;
 		border-radius: 0.5rem;
 		background-color: var(--primary_color);
 		color: var(--pure_white);
@@ -140,7 +150,6 @@
 	.info-text {
 		font-size: 0.85rem;
 		color: var(--placeholder);
-		margin-top: -0.5rem;
 		text-align: center;
 	}
 	.required-mark::after {
@@ -148,30 +157,11 @@
 		color: red;
 		margin-left: 0.25rem;
 	}
-	.checkbox-group {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		margin-top: 1rem;
-	}
 
 	/* PC 버전 레이아웃 */
-	@media (min-width: 700px) {
+	@media (min-width: 1000px) {
 		.form-group {
 			flex-direction: row;
-			align-items: center;
-			gap: 1.5rem;
-		}
-		label {
-			flex-shrink: 0;
-		}
-		.input-container {
-			flex-grow: 1;
-		}
-		.info-text {
-			display: flex;
-			margin-top: 0;
-			text-align: left;
 		}
 	}
 
@@ -232,131 +222,132 @@
 			<div class="form-group">
 				<label class="required-mark">성별</label>
 				<div class="input-container" style="display: flex; gap: 1rem;">
-					<div class="checkbox-group">
+					<label for="gender-male" class="checkbox-label">
 						<input type="radio" id="gender-male" name="gender" value="male" autocomplete="sex">
-						<label for="gender-male" class="checkbox-label">남</label>
-					</div>
-					<div class="checkbox-group">
+						<span>남</span>
+					</label>
+
+					<label for="gender-female" class="checkbox-label">
 						<input type="radio" id="gender-female" name="gender" value="female" autocomplete="sex">
-						<label for="gender-female" class="checkbox-label">여</label>
-					</div>
+						<span>여</span>
+					</label>
 				</div>
 			</div>
-			
-			<!-- 사용자가 직접 입력해야 하는 필드 -->
-			<div class="form-group">
-				<label for="nickname" class="required-mark">닉네임</label>
-				<div class="input-container">
-					<input type="text" id="nickname" name="nickname" autocomplete="nickname" placeholder="특수문자를 제외한 2~10자리" aria-describedby="nickname-info">
-					<span class="info-text" id="nickname-info" style="text-align: left;">닉네임은 변경이 불가능합니다.</span>
-				</div>
-			</div>
-
-			<div class="form-group">
-				<label for="id" class="required-mark">아이디</label>
-				<div class="input-container input-group">
-					<input type="text" id="id" name="username" autocomplete="username" placeholder="영문/숫자 4~12자리">
-					<button type="button" class="secondary input-button">중복확인</button>
-				</div>
-			</div>
-
-			<div class="form-group">
-				<label for="email" class="required-mark">이메일</label>
-				<div class="input-container input-group">
-					<input type="email" id="email" name="email" autocomplete="email" placeholder="example@domain.com" inputmode="email">
-					<button type="button" class="secondary input-button">중복확인</button>
-				</div>
-			</div>
-
-			<div class="form-group">
-				<label for="password" class="required-mark">비밀번호</label>
-				<div class="input-container">
-					<input type="password" id="password" name="new-password" autocomplete="new-password" placeholder="8자리 이상, 영문/숫자/특수문자 조합">
-				</div>
-			</div>
-
-			<div class="form-group">
-				<label for="password-confirm" class="required-mark">비밀번호 확인</label>
-				<div class="input-container">
-					<input type="password" id="password-confirm" name="password-confirm" autocomplete="off" placeholder="비밀번호를 다시 입력하세요">
-				</div>
-			</div>
-			
-			<div class="form-group">
-				<label for="address-postcode">주소 <span class="info-text">(선택)</span></label>
-				<div class="input-container input-group">
-					<input type="text" id="address-postcode" name="postal-code" autocomplete="postal-code" placeholder="우편번호" inputmode="numeric" readonly>
-					<button type="button" class="secondary input-button" onclick="execDaumPostcode()">주소검색</button>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="address-street">도로명 주소</label>
-				<div class="input-container">
-					<input type="text" id="address-street" name="street-address" autocomplete="street-address" placeholder="도로명 주소" readonly>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="address-detail">상세 주소 <span class="info-text">(선택)</span></label>
-				<div class="input-container">
-					<input type="text" id="address-detail" autocomplete="address-line2" placeholder="상세주소">
-				</div>
-			</div>
-			
-			<div class="form-group" style="align-items: start;">
-				<label class="required-mark" for="privacy-policy">이용약관 동의</label>
-				<div class="input-container">
-					<div class="checkbox-group">
-						<input type="checkbox" id="privacy-policy" name="privacy-policy" required>
-						<label for="privacy-policy" class="checkbox-label">[필수] 개인정보 수집 및 이용 동의</label>
-					</div>
-				</div>
-			</div>
-
-			<button type="submit">회원가입</button>
-		</form>
-	</main>
-	<footer>
-		<div class="content_width">
-			<address>2025 배찬우 SNC Lab</address>
 		</div>
-	</footer>
 
-	<script>
+		<!-- 사용자가 직접 입력해야 하는 필드 -->
+		<div class="form-group">
+			<label for="nickname" class="required-mark">닉네임</label>
+			<div class="input-container">
+				<input type="text" id="nickname" name="nickname" autocomplete="nickname" placeholder="특수문자를 제외한 2~10자리" aria-describedby="nickname-info">
+				<span class="info-text" id="nickname-info" style="text-align: left;">닉네임은 변경이 불가능합니다.</span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="id" class="required-mark">아이디</label>
+			<div class="input-container input-group">
+				<input type="text" id="id" name="username" autocomplete="username" placeholder="영문/숫자 4~12자리">
+				<button type="button" class="secondary input-button">중복확인</button>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="email" class="required-mark">이메일</label>
+			<div class="input-container input-group">
+				<input type="email" id="email" name="email" autocomplete="email" placeholder="example@domain.com" inputmode="email">
+				<button type="button" class="secondary input-button">중복확인</button>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="password" class="required-mark">비밀번호</label>
+			<div class="input-container">
+				<input type="password" id="password" name="new-password" autocomplete="new-password" placeholder="8자리 이상, 영문/숫자/특수문자 조합">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="password-confirm" class="required-mark">비밀번호 확인</label>
+			<div class="input-container">
+				<input type="password" id="password-confirm" name="password-confirm" autocomplete="off" placeholder="비밀번호를 다시 입력하세요">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="address-postcode">주소 <span class="info-text">(선택)</span></label>
+			<div class="input-container input-group">
+				<input type="text" id="address-postcode" name="postal-code" autocomplete="postal-code" placeholder="우편번호" inputmode="numeric" readonly>
+				<button type="button" class="secondary input-button" onclick="execDaumPostcode()">주소검색</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="address-street">도로명 주소</label>
+			<div class="input-container">
+				<input type="text" id="address-street" name="street-address" autocomplete="street-address" placeholder="도로명 주소" readonly>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="address-detail">상세 주소 <span class="info-text">(선택)</span></label>
+			<div class="input-container">
+				<input type="text" id="address-detail" autocomplete="address-line2" placeholder="상세주소">
+			</div>
+		</div>
+
+		<div class="form-group" style="align-items: start;">
+			<label class="required-mark" for="privacy-policy">이용약관 동의</label>
+			<div class="input-container">
+				<label for="privacy-policy" class="checkbox-label">
+					<input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+					<span>[필수] 개인정보 수집 및 이용 동의</span>
+				</label>
+			</div>
+		</div>
+		<button type="submit">회원가입</button>
+	</form>
+</main>
+<footer>
+	<div class="content_width">
+		<address>2025 배찬우 SNC Lab</address>
+	</div>
+</footer>
+
+<script>
 		// PASS 인증 시스템 시뮬레이션
-		document.addEventListener('DOMContentLoaded', () => {
-			const verificationButton = document.getElementById('verification-button');
-			const form = document.querySelector('form');
-			const passFields = ['full-name', 'tel', 'birth-date'];
-			
+	document.addEventListener('DOMContentLoaded', () => {
+		const verificationButton = document.getElementById('verification-button');
+		const form = document.querySelector('form');
+		const passFields = ['full-name', 'tel', 'birth-date'];
+
 			// 본인인증 버튼에 이벤트 리스너 추가
-			verificationButton.addEventListener('click', () => {
+		verificationButton.addEventListener('click', () => {
 				// PASS 본인인증 성공 시나리오 시뮬레이션
-				
+
 				// 1. PASS 인증 필드에 가상 데이터 채우기
-				document.getElementById('full-name').value = '홍길동';
-				document.getElementById('tel').value = '01012345678';
-				document.getElementById('birth-date').value = '951026';
-				
+			document.getElementById('full-name').value = '홍길동';
+			document.getElementById('tel').value = '01012345678';
+			document.getElementById('birth-date').value = '951026';
+
 				// 2. 본인인증 버튼 비활성화 및 텍스트 변경
-				verificationButton.disabled = true;
-				verificationButton.textContent = '인증 완료';
-				verificationButton.style.backgroundColor = 'var(--secondary_color)';
+			verificationButton.disabled = true;
+			verificationButton.textContent = '인증 완료';
+			verificationButton.style.backgroundColor = 'var(--secondary_color)';
 
 				// 3. 안내 텍스트 변경
-				const verificationInfo = document.getElementById('verification-info');
-				verificationInfo.textContent = '본인인증이 완료되었습니다. 나머지 정보를 입력해주세요.';
-				verificationInfo.style.color = 'var(--primary_color)';
-			});
+			const verificationInfo = document.getElementById('verification-info');
+			verificationInfo.textContent = '본인인증이 완료되었습니다. 나머지 정보를 입력해주세요.';
+			verificationInfo.style.color = 'var(--primary_color)';
 		});
+	});
 
 		// 카카오맵 주소검색 API 연동
-		function execDaumPostcode() {
-			new daum.Postcode({
-				oncomplete: function(data) {
+	function execDaumPostcode() {
+		new daum.Postcode({
+			oncomplete: function(data) {
 					// 팝업에서 검색 결과 항목을 클릭했을 때 실행할 코드
-					
+
 					// 각 주소의 참고항목
-					let extraAddr = '';
+				let extraAddr = '';
 					if (data.userSelectedType === 'R') { // 도로명 주소일 경우
 						if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
 							extraAddr += data.bname;
@@ -377,7 +368,7 @@
 					document.getElementById('address-detail').focus();
 				}
 			}).open();
-		}
-	</script>
+	}
+</script>
 </body>
 </html>
