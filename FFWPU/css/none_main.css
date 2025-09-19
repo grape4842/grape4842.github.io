@@ -111,6 +111,11 @@
 	margin: 0rem !important;;
 	padding:min(0.5rem) max(1rem)!important;
 }
+.root_daum_roughmap .wrap_controllers {
+	background-color: var(--alpha_gray)!important;
+	display: flex;
+	justify-content: space-between;
+}
 .roughmap_maker_label,
 .roughmap_maker_label:after {
 	background-image: none!important;
@@ -230,7 +235,7 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 	.yvl a .ylogo {
 		background-image: url("../img/YouTube_light_icon_(2017).png");
 	}
-	.wrap_controllers {
+	.root_daum_roughmap .wrap_controllers .tit_controllers img {
 		filter: invert(1);
 	}
 	.root_daum_roughmap .wrap_btn_zoom button .img_zoom {
