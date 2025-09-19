@@ -143,7 +143,7 @@
 .root_daum_roughmap .section_address .tit,
 .root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt {
 	color:var(--invert_pure_mono)!important;
-	font-size:1rem!important;
+	font-size:14px;
 	opacity: 0.9;
 	line-height: 1lh!important;
 }
