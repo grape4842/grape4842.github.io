@@ -113,7 +113,8 @@
 }
 .roughmap_maker_label a {
 	background-color: var(--variable_purple);
-	padding:0.25rem!important;
+	padding:0.5rem!important;
+	color:var(--invert_pure_mono);
 }
 .roughmap_maker_label .roughmap_lebel_text {
 	font-size: 1rem!important;
