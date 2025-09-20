@@ -92,7 +92,7 @@
 	border-bottom:1px solid var(--kakao_yellow);
 }
 .wrap_btn_zoom {
-    background-image: none!important;
+	background-image: none!important;
 }
 :where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) {
 	overflow: visible!important;
@@ -251,7 +251,6 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 		filter: invert(1);
 	}
 	.root_daum_roughmap .wrap_btn_zoom button .img_zoom {
-	filter: contrast(4) invert(1);
-}
-
+		filter: contrast(4) invert(1);
+	}
 }
