@@ -499,8 +499,9 @@ dialog {
 }
 .youtube_video_frame {
 	aspect-ratio: 16/9;
-	min-width: 10rem;
-	min-height: 6rem;
+	min-width: 20rem;
+	max-width: 100%;
+	min-height: 12rem;
 	margin:1rem auto;
 }
 /*고대비 모드*/
