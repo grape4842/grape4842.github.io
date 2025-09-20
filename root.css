@@ -654,3 +654,86 @@ dialog {
 		right:-0.25rem;
 	}
 }
+
+
+/*카카오맵 편집 CSS*/
+.root_daum_roughmap {
+	width:100% !important; 
+	display: flex;
+	flex-direction: column;
+	border:solid 1px var(--kakao_yellow); 
+}
+.root_daum_roughmap .wrap_map {
+	flex-grow: 1;
+	width:100%!important; 
+	min-height:40rem;
+	max-height:80dvh;
+	border-bottom:1px solid var(--kakao_yellow);
+}
+.wrap_btn_zoom {
+    background-image: none!important;
+}
+:where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) {
+	overflow: visible!important;
+}
+.root_daum_roughmap .wrap_btn_zoom button {
+	background-color: var(--variable_purple)!important;
+	aspect-ratio: 1/1;
+	border:1px solid var(--default_purple);
+	padding:0!important;
+
+}
+.root_daum_roughmap .wrap_btn_zoom button:focus {
+	z-index: 2;
+	outline-offset: 0.25rem;
+	outline:2px solid var(--dark_purple)!important;
+}
+.root_daum_roughmap .wrap_btn_zoom button .img_zoom {
+	filter: contrast(4) invert(0);
+}
+.root_daum_roughmap .cont .section {
+	margin: 0rem !important;;
+	padding:min(0.5rem) max(1rem)!important;
+}
+.root_daum_roughmap .wrap_controllers {
+	background-color: light-dark(var(--kakao_yellow), var(--alpha_gray))!important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.roughmap_maker_label,
+.roughmap_maker_label:after {
+	background-image: none!important;
+	background-color: var(--variable_purple)!important;	
+}
+.roughmap_maker_label:after {rotate:45deg;}
+.roughmap_maker_label a {
+	padding:0.5rem!important;
+	color:var(--invert_pure_mono);
+}
+.roughmap_maker_label .roughmap_lebel_text {
+	font-size: 1rem!important;
+	color:var(--invert_pure_mono)!important;
+	background-color: transparent!important;
+	padding: 0!important;
+
+}
+.root_daum_roughmap .section_address .txt,
+.root_daum_roughmap .section_address .tit,
+.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt {
+	color:var(--invert_pure_mono)!important;
+	font-size:14px;
+	line-height: 1lh!important;
+}
+.wrap_btn_roadview {
+		opacity: 0.9;
+}
+.root_daum_roughmap .section_address .tit {
+	font-weight: bolder;
+}
+.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt_bar {
+	margin:0rem 0.25rem!important;
+}
+img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"] {
+	filter:hue-rotate(40deg);
+}
