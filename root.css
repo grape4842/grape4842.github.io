@@ -147,6 +147,7 @@
 		scroll-behavior: smooth; /* 부드러운 스크롤 */
 		ruby-align: space-between;
 		scrollbar-color: rgba(0, 0, 0, 0.1);
+		ruby-position: over;
 	}
 }
 @supports not (min-block-size: 100dvb) {
@@ -160,14 +161,12 @@ html {
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
 }
-body {
-	min-height: 100dvh;
-	overflow-y:scroll;
-}
 *::before, *::after {
 	box-sizing: inherit;
 }
-*, :where(body):not(img), body {
+:where(body):not(img) {
+	min-height: 100dvh;
+	overflow-y:scroll;
 	font-size: 1rem;
 	line-height: 1.6; /* 가독성을 위한 행 높이 */
 	-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
@@ -678,7 +677,7 @@ dialog {
 	border-bottom:1px solid var(--kakao_yellow);
 }
 .wrap_btn_zoom {
-		background-image: none!important;
+	background-image: none!important;
 }
 :where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) {
 	overflow: visible!important;
@@ -733,7 +732,7 @@ dialog {
 	line-height: 1lh!important;
 }
 .wrap_btn_roadview {
-		opacity: 0.9;
+	opacity: 0.9;
 }
 .root_daum_roughmap .section_address .tit {
 	font-weight: bolder;
