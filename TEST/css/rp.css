@@ -37,6 +37,7 @@ header, footer {
  }
  .test_box_title p:first-child {
  	font-size: 1.25rem;
+ 	margin-bottom: 0.5rem;
  }
 .test_box_false h2 {background-color: rgba(255, 70, 200, 0.4);}
 .test_box_ok h2 {background-color:rgba(0, 100, 255, 0.4);}
@@ -47,7 +48,6 @@ header, footer {
 	padding:clamp(0.5rem, 1rem, 2rem);
 	overflow: scroll;
 	background-color: #fff2;
-	ruby-align: center;
 }
 .test_box_content:has(ruby) .rp_hidden {
 	margin-bottom:0.25rem;
