@@ -45,7 +45,7 @@ header, footer {
  }
 .test_box_content {
 	padding:1rem;
-	overflow-x: scroll;
+	overflow: scroll;
 	background-color: #fff2;
 }
 ruby {}
