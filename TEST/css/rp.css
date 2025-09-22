@@ -44,7 +44,7 @@ header, footer {
  	line-height: 1.5rem;
  }
 .test_box_content {
-	padding:1rem;
+	padding:clamp(1rem, 1.5rem, 2rem);
 	overflow: scroll;
 	background-color: #fff2;
 }
