@@ -47,6 +47,10 @@ header, footer {
 	padding:clamp(0.5rem, 1rem, 2rem);
 	overflow: scroll;
 	background-color: #fff2;
+	ruby-align: center;
+}
+.test_box_content:has(ruby) .rp_hidden {
+	margin-bottom:0.25rem;
 }
 ruby {}
 .rp_text {

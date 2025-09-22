@@ -148,6 +148,7 @@
 		ruby-align: space-between;
 		scrollbar-color: rgba(0, 0, 0, 0.1);
 		ruby-position: over;
+		ruby-align: center;
 	}
 }
 @supports not (min-block-size: 100dvb) {
