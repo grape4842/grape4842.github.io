@@ -208,7 +208,8 @@ h2 {
 }
 
 #logo {
-	width: clamp(1rem, 2vw + 0.5rem, 4rem); 
+	min-width: 1.25rem;
+	width: clamp(1.25rem, 2vw + 0.5rem, 4rem); 
 	max-height: 5rem;
 	padding: 0.5rem 0rem;
 	padding-right: 0.5rem;
