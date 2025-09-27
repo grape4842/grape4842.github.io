@@ -249,7 +249,7 @@ h2 {
 }
 
 .news_and_notice article {
-	width: 60vw;
+	min-width: 60vw;
 	max-width:100%;
 }
 .news_and_notice h3 {
