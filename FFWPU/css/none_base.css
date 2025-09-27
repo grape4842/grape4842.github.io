@@ -12,11 +12,11 @@
 	--yellow:light-dark(#960, #ffa);
 }
 /*큰 영역*/
-h1 {font-size: clamp(1rem, 2vw + 0.5rem, 2rem);}
 header, footer {
 	backdrop-filter: blur(1.25rem);
 	background: var(--variable_purple);
 }
+h1 {font-size: clamp(1rem, 2vw + 0.5rem, 2rem);}
 nav {
 	display:flex;
 	align-items:center;
