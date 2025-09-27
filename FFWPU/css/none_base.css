@@ -208,10 +208,11 @@ h2 {
 }
 
 #logo {
-	width: 3rem; 
+	width: clamp(1rem, 2vw + 0.5rem, 4rem); 
 	max-height: 5rem;
 	padding: 0.5rem 0rem;
 	padding-right: 0.5rem;
+	aspect-ratio: 1/1;
 }
 
 .bus_line {
