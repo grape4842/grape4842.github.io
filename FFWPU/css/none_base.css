@@ -250,7 +250,7 @@ h2 {
 }
 
 .news_and_notice article {
-	min-width: 60vw;
+	min-width: min-content;
 	max-width:100%;
 }
 .news_and_notice h3 {
