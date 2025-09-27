@@ -26,8 +26,6 @@
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
-	.View_PC {display: unset;}
-	.View_Mobile {display: none;}
 	article {padding:2rem;}
 	textarea {font-size:2rem; line-height:2.5rem;}
 }
