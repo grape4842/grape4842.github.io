@@ -46,7 +46,7 @@ footer {
 	margin-top:2rem;
 }
 footer > div {
-	padding:2rem;
+	padding:clamp(1rem, 2vw + 0.5rem, 3rem) 0rem;
 	margin:0px auto;
 }
 address {
