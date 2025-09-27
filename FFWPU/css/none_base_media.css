@@ -7,6 +7,9 @@
 		z-index:2;
 	}
 	article {padding:3rem;}
+	.news_and_notice article {
+		max-width:30rem;
+	}
 	td,th {
 		padding:1rem;
 	}
