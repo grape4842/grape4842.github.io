@@ -1,20 +1,90 @@
 @import url("../../root.css")
 @charset "utf-8";
 :root {
-    --main_color:light-dark(#baf, #64a);
-    --main_color_invert:light-dark(#64a, #baf);
-    --main_color_alpha:light-dark(#bafa, #64aa);
-    --gray_line_color:light-dark(rgba(0, 0, 0, 0.3), rgba(255 255 255 /.1));
+	--main_color:light-dark(#baf, #609);
+	--main_color_invert:light-dark(#609, #baf);
+	--main_color_alpha:light-dark(#bafa, #609a);
+	--gray_line_color:light-dark(rgba(0, 0, 0, 0.3), rgba(255 255 255 /.1));
 }
-
-input {
+main {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(2rem, 20vmax, 5rem);
+}
+.css_example input {
 	accent-color:var(--main_color);
 }
-.todo_item:has(input) {
-	border:solid 2px transparent;
+h1, .css_example_title {
+	padding-block: clamp(1rem, 5vmax, 2rem);
 }
-.todo_item:has(input:checked) {
-	border-color: var(--main_color_invert);
+.css_example1 {
+	max-width:50rem;
+}
+.todo_form {
+	margin:0 auto;
+}
+.todo_list {
+	display: flex;
+	flex-direction: column;
+	gap:clamp(1rem, 5vmax, 2rem);
+}
+.todo_item input {
+	appearance: none;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin:0;
+	position: absolute;
+	top:0; left:0;
+	outline-offset: -0.25rem;
 	border-radius: clamp(1rem, 5vmax, 3rem);
 }
-/*input이 체크되면 부모에 테두리색 추가*/
+.todo_item:has(input) {
+	display: flex;
+	flex:1;
+	transition: border 0.2s ease-out, box-shadow 0.2s ease-out, font-weight 0.2s ease-out;
+	align-items: center;
+	padding: clamp(0.5rem, 5vmax, 1rem);
+	border:solid 2px var(--main_color);
+	border-radius: clamp(1rem, 5vmax, 3rem);
+}
+.todo_item:has(input:checked) {
+	font-weight: 900;
+	box-shadow: 0 0 0.25rem 2px var(--main_color_invert) inset;
+	border-color: var(--main_color_invert);
+}
+.todo_label {
+	padding-left:2rem;
+}
+.todo_item:has(input) .todo_label::after {
+	content: '';
+	position: absolute;
+	left:0;
+	top:0.25rem;
+	width:1rem;
+	height: 0.5rem;
+	background: transparent;
+	border-left: 0.25rem solid var(--invert_pure_mono);
+	border-bottom: 0.25rem solid var(--invert_pure_mono);
+	rotate:315deg;
+	display: block;
+	transition:scale 0.2s ease-out, rotate 0.2s ease-out;
+	scale:0;
+}
+.todo_item:has(input:checked) .todo_label::after {
+	scale:1;
+	rotate:-45deg;
+}
+/*input이 체크되면 조상 li의 자식인 label에 체크 표시 추가*/
+.add_item_button {
+	appearance: none;
+	padding: 1rem;
+	margin:0 auto;
+	margin-top:1rem;
+	background: var(--main_color);
+	outline-offset: -0.25rem;
+	border-radius: clamp(1rem, 5vmax, 3rem);
+	padding: clamp(0.5rem, 5vmax, 1rem);
+	border:solid 2px var(--main_color);
+	font-weight: 900;
+}

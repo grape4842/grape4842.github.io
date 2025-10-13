@@ -269,6 +269,7 @@ summary {
 
 :where(ul, ol, li) {
 	list-style: none; 
+	position: relative;
 	padding:0rem; margin:0rem;
 	/* 목록의 기본 스타일 제거 */
 }
