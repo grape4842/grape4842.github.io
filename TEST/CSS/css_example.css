@@ -1,0 +1,20 @@
+@import url("../../root.css")
+@charset "utf-8";
+:root {
+    --main_color:light-dark(#baf, #64a);
+    --main_color_invert:light-dark(#64a, #baf);
+    --main_color_alpha:light-dark(#bafa, #64aa);
+    --gray_line_color:light-dark(rgba(0, 0, 0, 0.3), rgba(255 255 255 /.1));
+}
+
+input {
+	accent-color:var(--main_color);
+}
+.todo_item:has(input) {
+	border:solid 2px transparent;
+}
+.todo_item:has(input:checked) {
+	border-color: var(--main_color_invert);
+	border-radius: clamp(1rem, 5vmax, 3rem);
+}
+/*input이 체크되면 부모에 테두리색 추가*/

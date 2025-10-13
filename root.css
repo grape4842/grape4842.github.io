@@ -193,8 +193,11 @@ button {
 	box-sizing: border-box;
 	padding:0.25rem;
 	transition: filter 0.3s;
+	accent-color: light-dark(#608, #baf);
 }
 textarea, select, input {
+	min-width: 1.5rem;
+	min-height: 1.5rem;
 	/*field-sizing: content;*/
 	/*내용 길이에 따라 크기 조절*/
 }
