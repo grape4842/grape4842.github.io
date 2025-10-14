@@ -76,6 +76,7 @@ h1, .css_example_title {
 	rotate:-45deg;
 }
 /*input이 체크되면 조상 li의 자식인 label에 체크 표시 추가*/
+
 .add_item_button {
 	appearance: none;
 	padding: 1rem;
@@ -87,4 +88,14 @@ h1, .css_example_title {
 	padding: clamp(0.5rem, 5vmax, 1rem);
 	border:solid 2px var(--main_color);
 	font-weight: 900;
+}
+
+.css_example2_radio,
+.css_example2 :where(p, li) {
+	display: flex;
+	align-items: center;
+}
+.css_example3 iframe {
+	width: 100%;
+	aspect-ratio: 16/9;
 }
