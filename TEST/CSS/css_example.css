@@ -11,7 +11,7 @@ main {
 	flex-direction: column;
 	gap: clamp(2rem, 20vmax, 5rem);
 }
-.css_example input {
+.css_example2 input {
 	accent-color:var(--main_color);
 }
 h1, .css_example_title {
@@ -90,7 +90,7 @@ h1, .css_example_title {
 	font-weight: 900;
 }
 
-.css_example2_radio,
+.css_example2 ul,
 .css_example2 :where(p, li) {
 	display: flex;
 	align-items: center;
@@ -98,4 +98,15 @@ h1, .css_example_title {
 .css_example3 iframe {
 	width: 100%;
 	aspect-ratio: 16/9;
+}
+/*유튜브 동영상의 프레임을 16/9 비율로 고정*/
+#skip_youtube_cet3 {
+	z-index: -1;
+	opacity: 0;
+	transition: 0.2s;
+	margin-bottom:1rem;
+}
+#skip_youtube_cet3:focus {
+	opacity: 1;
+	z-index: 1;
 }
