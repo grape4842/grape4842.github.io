@@ -110,3 +110,55 @@ h1, .css_example_title {
 	opacity: 1;
 	z-index: 1;
 }
+.css_example4_text {
+	padding-block: 0.5rem;
+	font-size: clamp(1rem, 5vmax, 2rem);
+}
+.css_example4_text:last-child {
+	text-wrap: balance;
+}
+.css_example5 {
+	overflow: hidden;
+}
+.css_example5 ul {
+	display: flex;
+	width: fit-content;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory; 
+	-webkit-overflow-scrolling: touch;
+	scroll-behavior: smooth;
+	scrollbar-width: auto;
+	scrollbar-color:var(--placeholder);
+}
+.css_example5 ul::-webkit-scrollbar {
+	height: 2rem;
+}
+.css_example5 ul::-webkit-scrollbar-thumb {
+	background: var(--placeholder);
+}
+.css_example5 ul li {
+	/* 💥 핵심: 스냅 정렬 위치 설정 💥 */
+	/* 슬라이드가 스크롤 영역의 시작 지점(왼쪽)에 맞춰지도록 지정합니다. */
+	scroll-snap-align: start; 
+	/* 내부 figure/이미지 중앙 정렬 */
+	flex-shrink: 0; /* 슬라이드가 축소되지 않도록 방지 */
+	display: flex;
+	width: 100%;
+	justify-content: center; /* 이미지를 가로 중앙 정렬 */
+	align-items: center; /* 이미지를 세로 중앙 정렬 */
+}
+.css_example5 figure {
+	margin:0;
+	scroll-snap-align: center;
+	position: relative;
+	display: flex; /* 이미지 중앙 정렬을 위해 다시 flex 적용 */
+	justify-content: center;
+	align-items: center;
+	height: 100dvh;
+}
+.css_example5 img {
+	height:100%;
+	object-fit: contain;
+	/* 이미지 드래그 방지 (UX 개선) */
+}
