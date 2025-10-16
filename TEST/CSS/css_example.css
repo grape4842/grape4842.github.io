@@ -5,14 +5,24 @@
 	--main_color_invert:light-dark(#609, #baf);
 	--main_color_alpha:light-dark(#bafa, #609a);
 	--gray_line_color:light-dark(rgba(0, 0, 0, 0.3), rgba(255 255 255 /.1));
+	--variable_purple:light-dark(#dcf, #305);
+	--variable_invert_purple:light-dark(#305, #dcf);
+	--high_variable_invert_purple:light-dark(#203, #edf);
+}
+:where(header, footer) .content_width {
+	padding-block: clamp(1rem, 10vmax, 3rem);
 }
 main {
 	display: flex;
 	flex-direction: column;
 	gap: clamp(2rem, 20vmax, 5rem);
 }
+.css_example2 ul {gap:1rem;}
+.css_example2 li {padding-block: 0.5rem;}
 .css_example2 input {
-	accent-color:var(--main_color);
+	scale: 1.1;
+	margin-right:0.25rem;
+	accent-color:var(--main_color_invert);
 }
 h1, .css_example_title {
 	padding-block: clamp(1rem, 5vmax, 2rem);
