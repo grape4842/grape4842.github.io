@@ -1,24 +1,16 @@
 @charset "utf-8";
-.pc_view {display: none;}
-.mobile_view {}
-.dark_view {display: none;}
-.light_view {}
-
-*, *::before, *::after {
-    font-size: 1.2rem;
+:root {
+	--sold : light-dark(#910, #f9a);
 }
+
 ::-webkit-scrollbar {
-    width: 0rem;  /* 스크롤바의 너비 */
+	width: 0rem;  /* 스크롤바의 너비 */
 }
-
-:where(body):not(img) {
-    line-height: 2rem;
-    font-size: 1.5rem;
+h2 {
+	color:var(--high_variable_invert_purple);
 }
-
-.content_width {
-	margin:0 auto;
-	width:90vw;
+input {
+	field-sizing: content;
 }
 .popup_box {
 	position: fixed;
@@ -27,7 +19,7 @@
 	min-height: 10rem;
 	max-height: 90vh;
 	overflow-y: scroll;
-	border:4px solid #54a;
+	border:0.25rem solid var(--default_purple);
 	border-radius: 0.5rem;
 }
 .popup_box::backdrop {
@@ -45,7 +37,7 @@ body {
 	display:block; 
 	padding:0px; margin:0px; 
 	box-sizing:border-box;
-	background: linear-gradient(90deg, rgba(210,200,255,0.8) 0%, rgba(200,190,255,0.8) 50%, rgba(210,200,255,0.8) 100%), url(../img/purplestar.jpg);
+	background: url(../img/purplestar.jpg);
 	background-attachment:fixed;
 	backdrop-filter:hue-rotate(-10deg);
 }
@@ -61,12 +53,12 @@ h1 {
 	font-weight: 900;
 }
 section {
-	padding:2rem;
-	margin:2rem auto!important;
-	backdrop-filter: blur(20px);
+	padding:clamp(0.5rem, 10vmax, 3rem);
+	margin-block:clamp(2rem, 10vmax, 4rem)!important;
+	backdrop-filter: blur(2rem);
 	border-radius: 3rem;
-	background: rgba(255 255 255 / 0.7);
-	border: 1px solid rgba(255, 255, 255, 1);
+	background: var(--transparent_purple);
+	border: 1px solid var(--alpha_gray);
 	box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
 }
 .rule {
@@ -89,8 +81,7 @@ table {overflow-x: scroll;}
 .rule_money, .value_cost {
 	border: none;
 	text-align: center;
-	height: 1.5rem;
-	width:3rem;
+	width:5ch!important;
 	padding:0.25rem;
 	box-sizing: content-box;
 	margin:0px 0.25rem;
@@ -98,7 +89,8 @@ table {overflow-x: scroll;}
 	border-bottom:solid 1px;
 	background: transparent;
 }
-.rule_money {background-color:#baf5;}
+.rule_money {
+background: var(--transparent_purple);}
 
 .auction_memo {
 	background: transparent;
@@ -106,33 +98,7 @@ table {overflow-x: scroll;}
 	border-bottom:solid 1px;
 }
 #value_table_list input[type="text"]:focus {
-	box-shadow: 0 4px 4px 1px #76b inset;
-}
-.popup_close{
-	position: absolute;
-	top:0px; right:0px;
-	transition: width 0.2s;
-	aspect-ratio: 1/1;
-	background: #54a;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.board_contents .popup_close {
-	position: fixed;
-}
-.popup_close .ani::after {
-	content: '';
-	display: block;
-	position: absolute;
-	width: 1px;
-	aspect-ratio: 1/1;
-	border-radius: 1rem;
-	background: rgba(255 255 255 / 0.1);
-	transition: scale 0.1s;
-}
-.popup_close:where(:focus, :hover) .ani::after {
-	scale: 45;
+	box-shadow: 0 0.25rem 0.25rem 1px #76b inset;
 }
 .game_open {
 	padding: 1rem;
@@ -146,26 +112,30 @@ table {overflow-x: scroll;}
 
 }
 .board_open {
-	background: #54a;
-	color:#fff;
+	background: var(--variable_purple);
+	color:var(--pure_white);
 	margin:1rem auto;
 }
 .board_contents {
-	position: fixed;
-	top:0px; left:0px;
 	z-index: 2;
-	width:100vw;
-	height: 100dvh;
-	max-width:100vw;
+	width: 100%;
+	height: 100%;
+	max-width:100dvw;
 	max-height: 100dvh;
-	border:1px solid #54a;
-	padding:2rem;
+	border:1px solid var(--variable_purple);
+	padding:clamp(1rem, 10vmax, 2rem);
+}
+.board_contents .popup_close {
+	right:0rem;
+	border-radius: 0.5rem;
+	border:var(--variable_invert_purple) solid 2px;
+	background: var(--default_purple);
 }
 #value_table_list {
 	margin:1rem auto;
 }
 #value_table_list :where(th, .value_number) {
-	background: #54a;
+	background: var(--default_purple);
 	color:#fff;
 	text-align: center;
 	font-size:1rem!important;
@@ -180,10 +150,10 @@ table {overflow-x: scroll;}
 }
 #value_list {
 	display: grid;
-	justify-content: center;
-	align-items: center;
+	place-items: center;
 	grid-auto-flow: row dense;
-	gap:2.5rem 2rem;
+	gap:1rem;
+	margin:auto;
 }
 label {
 	cursor: pointer;
@@ -204,28 +174,44 @@ label[for="gold_sound"] {
 #gold_sound:checked ~ .gs_off{display: none;}
 #gold_sound ~ .gs_on{display: none;}
 
+li:has(.value_label) {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
 .value_label {
+	height: 100%;
 	display: flex;
-	aspect-ratio: 21/9;
-	padding:1rem;
+	padding:clamp(0.5rem, 10vmax, 1rem);
 	background: rgba(100 70 255 / 0.1);
 	transition: background 0.2s, color 0.2s, box-shadow 0.1s, border 0.2s;
 	border-radius: 1rem;
-	box-shadow: 0px 0px 0px 4px #87e;
-
+	box-shadow: 0px 0px 0px 0.25rem var(--variable_invert_purple) inset;
 }
 input[type="checkbox"] {
 	position: absolute;
 	appearance: none;
+	padding:0;
+	margin: 0;
 	-webkit-appearance:none;
 	width:100%; height: 100%;
 	top:0; left:0;
 	border-radius: 1rem;
 	outline-offset: -0.5rem;
 }
+.value_item:checked + .value_text::after {
+	content: '';
+	width:100%;
+	height: 100%;
+	border-radius: 0.25rem;
+	box-shadow:0 0 0 calc(clamp(0.5rem, 10vmax, 1rem) - 0.25rem) var(--alpha_gray);
+	display: flex;
+	position: absolute;
+	top:0; left:0;
+	background: var(--alpha_gray);
+}
 .value_label:has(.value_item:checked) {
-	background: rgba(60 50 150 / 0.3);
-	box-shadow: 0px 0px 0px 2px #76b;
+	box-shadow: 0px 0px 0px 0.25rem var(--default_purple) inset;
 }
 .value_label:has(.value_item:checked)::after {
 	content: '낙찰';
@@ -236,14 +222,13 @@ input[type="checkbox"] {
 	position: absolute;
 	font-weight: 900;
 	font-size: 2rem;
-	aspect-ratio: 21/9;
 	border-radius: 1px;
 	rotate:-21deg;
 	opacity: 0;
 	transition: scale 0.2s;
-	border:4px solid transparent;
-	box-shadow:0 0 0 4px #910, 0 0 0 2px #910 inset;
-	color:#910;
+	border:0.25rem solid transparent;
+	box-shadow:0 0 0 0.25rem var(--sold), 0 0 0 2px var(--sold) inset;
+	color:var(--sold);
 }
 @keyframes bid {
 	from {opacity:0; scale: 3;}
@@ -251,9 +236,9 @@ input[type="checkbox"] {
 }
 .value_label:has(.value_item:checked)::after {
 	animation-name: bid;
-   animation-duration: 0.2s;
-   animation-timing-function:ease-in-out;
-   animation-fill-mode: forwards;
+	animation-duration: 0.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode: forwards;
 }
 .value_item:checked ~ span {
 	transition: color 0.2s, filter 0.2s;
@@ -267,27 +252,27 @@ tr:has(.auction_item_value) {
 	transition: all 0.2s;
 }
 td:has(.auction_item_value:checked) {
-	background: #54a;
-	color:#fff;
+	background: var(--variable_purple);
+	color:var(--pure_white);
 }
 tr:has(.auction_item_value:checked) .value_text {
-	color:#fff;
+	color:var(--pure_white);
 }
 tr:has(.auction_item_value:checked) .value_name {
-	color:#fea;
+	color:var(--sold);
 }
 tr:has(.auction_item_value:checked) .value_number::after {
 	content: '낙찰';
 	animation-name: bid_table;
-   animation-duration: 0.13s;
-   animation-timing-function:ease-in-out;
-   animation-fill-mode: forwards;
+	animation-duration: 0.13s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode: forwards;
 	font-size: 1rem;
 	display: block;
 	width:100%;
 	scale: 0.9;
 	aspect-ratio: 1/1;
-	border:4px solid #fa9;
+	border:0.25rem solid #fa9;
 	color:#fa9;
 	font-weight: 900;
 	border-radius: 2rem;
@@ -303,96 +288,27 @@ tr:has(.auction_item_value:checked) .value_number::after {
 	font-size: 1.1rem;
 	text-align: center;
 	display: inline-block;
+	width: 100%;
+	height: 100%;
 }
 .value_name {
 	font-weight: 900;
-	color:#23a;
+	color:var(--variable_invert_purple);
+	filter: hue-rotate(-40deg);
 	transition: color 0.2s;
 }
-.popup_h {
-	display: flex;
-	align-items: center;
-	width:100%;
-	background: #54a;
-	color:#fff;
-	font-weight: 700;
-	padding:0rem 1rem;
-	padding-right: 3rem;
-}
-:where(.popup_close, .popup_h) {
-	height: 3rem;
-}
-
-.popup_close::after, .popup_close::before {
-	content: '';
-	position: absolute;
-	display: block;
-	transition: width 0.1s;
-	border-radius: 1rem;
-	width:2px; 
-	height: 1rem;
-	background: #fff;
-}
-.popup_close:where(:focus, :hover)::before,
-.popup_close:where(:focus, :hover)::after {
-	width:4px;
-}
-.popup_close::after {rotate:-45deg;}
-.popup_close::before {rotate:45deg;}
-
-
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
-	body {
-			background: linear-gradient(90deg, rgba(150,100,255,0.2) 0%, rgba(120,70,255,0.2) 50%, rgba(150,100,255,0.2) 100%), url(../img/purplestar.jpg);
-	}
-	section {
-		background: rgba(0 0 0 / 0.7);
-		border: 1px solid rgba(0 0 0 / 1);
-		box-shadow: 0 0.5rem 2rem rgba(0 0 0 / 0.1);
-
-	}
 	#gold_sound ~ img {
-		filter: invert(0%);
+		filter:invert(0);
 	}
-	.value_name {color:#acf;}
-	.value_label:has(.value_item:checked) {
-		box-shadow: 0px 0px 0px 2px #54a;
-	}
-	.value_label:has(.value_item:checked)::after { 
-		box-shadow:0 0 0 4px #d32, 0 0 0 2px #d32 inset;
-		color:#d32;
-	}
-	.value_item:checked ~ span {
-		filter: brightness(0.5);
-	}
-		.light_view {display: none;}
-		.dark_view {display: unset;}
-}
 
 /*기기별 CSS*/
 
 /*PC*/
 @media screen and (width >= 1400px) {
-	.pc_view {display: block;}
-	.mobile_view {display: none;}
-	.content_width {
-		width: 60vw;
-	}
-	.popup_box {
-		min-width: 20rem;
-		max-width: 50vw;
-	}
-	section {
-		padding:3rem;
-	}
-	.rule {padding:1rem;}
-	#game_board {
-		padding:1.2rem 1rem;
-	}
 	#value_list {
-		gap:1.2rem 1rem;
 		grid-template-columns: repeat(6, 1fr);
 	}
 
@@ -407,8 +323,8 @@ tr:has(.auction_item_value:checked) .value_number::after {
 
 /*500px~800px Fold?*/
 @media (500px <= width < 800px )  {
-			#value_list {
-			grid-template-columns: repeat(2, 1fr);
+	#value_list {
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 }

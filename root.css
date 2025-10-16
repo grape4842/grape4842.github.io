@@ -107,6 +107,20 @@
 	--pure_blue : #00f;
 	--kakao_yellow : #FEE500;
 	--naver_green:#2DB400;
+
+	--default_purple:#60a;
+	--transparent_purple:#63b5;
+	--border_purple:#a9f;
+	--light_purple:#baf;
+	--dark_purple:#305;
+
+	--variable_purple:light-dark(#dcf, #305);
+	--variable_invert_purple:light-dark(#305, #dcf);
+	--high_variable_purple:light-dark(#edf, #203);
+	--high_variable_invert_purple:light-dark(#203, #edf);
+
+	--yellow:light-dark(#960, #ffa);
+
 }
 ::selection {
 	background:#baf; 
@@ -126,30 +140,27 @@
 	clip-path: inset(50%);
 }
 
-@layer reset_css {
-	:root {
-		interpolate-size: allow-keywords;
-		font-size: 1rem;
-		font: inherit;
-		vertical-align: baseline;
-		line-height: 1.6; /* 가독성을 위한 행 높이 */
-		-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
-		margin: 0;
-		padding: 0;
-		position: relative;
-		box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
-		-webkit-text-size-adjust: none;
-		/* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
-		-moz-text-size-adjust: none;
-		-ms-text-size-adjust: none;
-		-o-text-size-adjust: none;
-		color-scheme: dark light; /* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
-		scroll-behavior: smooth; /* 부드러운 스크롤 */
-		ruby-align: space-between;
-		scrollbar-color: rgba(0, 0, 0, 0.1);
-		ruby-position: over;
-		ruby-align: center;
-	}
+:root {
+	interpolate-size: allow-keywords;
+	font-size: 1rem;
+	font: inherit;
+	vertical-align: baseline;
+	line-height: 1.6; /* 가독성을 위한 행 높이 */
+	-webkit-font-smoothing: antialiased; /* 텍스트 렌더링 개선 */
+	margin: 0;
+	padding: 0;
+	position: relative;
+	box-sizing: border-box; /* 보다 직관적인 box-sizing 설정 */
+	-webkit-text-size-adjust: none;
+	/* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	scroll-behavior: smooth; /* 부드러운 스크롤 */
+	ruby-align: space-between;
+	scrollbar-color: rgba(0, 0, 0, 0.1);
+	ruby-position: over;
+	ruby-align: center;
 }
 @supports not (min-block-size: 100dvb) {
 	:where(html) {
@@ -213,7 +224,7 @@ select::-ms-expand {
 	/* 화살표없애기 for ie10, 11 */
 }
 :where(input[type="text"], input[type="password"], input[type="search"], select) {
-	min-width: 10rem!important;
+	min-width: 10rem;
 	padding-left:0.5rem;
 }
 :where(input[type="text"], input[type="password"], input[type="search"]) {
@@ -228,6 +239,7 @@ select::-ms-expand {
 :where(:focus, button, label, select, summary, [role='button'], [role='option'], input, [type="file"]::file-selector-button) {
 	cursor: pointer; /* 상호작용 가능한 요소임을 알 수 있도록 커서 변경 */
 	position: relative;
+	box-sizing: border-box;
 	transition-duration: 0.3s;
 }
 input[type="file"], [type="file"]::file-selector-button {
@@ -269,6 +281,7 @@ summary {
 
 :where(ul, ol, li) {
 	list-style: none; 
+	box-sizing: border-box;
 	position: relative;
 	padding:0rem; margin:0rem;
 	/* 목록의 기본 스타일 제거 */
@@ -335,6 +348,7 @@ table {
 	border-spacing: 0;
 }
 th, td {
+	position: relative;
 	padding:clamp(0.25rem, 0.5rem, 1rem);
 	border:1px solid var(--gray_line_color);
 }
@@ -359,9 +373,8 @@ fieldset {
 }
 
 :modal, [popover], dialog, ::backdrop, ::details-content, dialog > * {
+	box-sizing: border-box;
 	transition:
-	height 0.3s ease allow-discrete, 
-	width 0.3s ease allow-discrete, 
 	content-visibility 0.3s ease allow-discrete, 
 	display 0.3s ease allow-discrete,
 	overlay 0.3s ease allow-discrete,
@@ -369,8 +382,7 @@ fieldset {
 	scale 0.3s ease allow-discrete, 
 	visibility 0.3s ease allow-discrete, 
 	backdrop-filter 0.3s ease allow-discrete, 
-	transform 0.3s ease allow-discrete, 
-	background 0.3s ease allow-discrete;
+	transform 0.3s ease allow-discrete;
 }
 
 details::details-content {
@@ -406,6 +418,7 @@ details[open]::details-content {
 	background: rgba(0, 0, 0, 0.5);
 }
 dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
+	background: transparent;
 	position: fixed;
 	right:0;
 	top:0;
