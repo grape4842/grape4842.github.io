@@ -133,6 +133,7 @@ h1, .css_example_title {
 }
 .css_example5 ul::-webkit-scrollbar {
 	height: 2rem;
+	border:1px solid var(--gray_line_color);
 }
 .css_example5 ul::-webkit-scrollbar-thumb {
 	background: var(--placeholder);
@@ -155,10 +156,86 @@ h1, .css_example_title {
 	display: flex; /* 이미지 중앙 정렬을 위해 다시 flex 적용 */
 	justify-content: center;
 	align-items: center;
-	height: 100dvh;
 }
 .css_example5 img {
 	height:100%;
 	object-fit: contain;
 	/* 이미지 드래그 방지 (UX 개선) */
+}
+.css_example6 ul {
+	display: flex;
+	margin:1rem auto;
+	justify-content: space-between;
+	align-items: center;
+}
+.css_example6 ul li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-width: 3rem;
+	flex-basis: calc(100% / 7 - 0.25rem); 
+	aspect-ratio: 1/1;
+	border-radius:1rem;
+	font-weight: 14px;
+	box-shadow:0 0 0 2px light-dark(#0003, #fff3) inset;
+}
+.hsl_color_1 {
+	background-color: light-dark(hsl(0, 100%, 90%), hsl(0, 100%, 30%));
+}
+.hsl_color_2 {
+	background-color: light-dark(hsl(40, 100%, 90%), hsl(80, 100%, 30%));
+}
+.hsl_color_3 {
+	background-color: light-dark(hsl(80, 100%, 90%), hsl(100, 100%, 30%));
+}
+.hsl_color_4 {
+	background-color: light-dark(hsl(140, 100%, 90%), hsl(160, 100%, 30%));
+}
+.hsl_color_5 {
+	background-color: light-dark(hsl(240, 100%, 90%), hsl(240, 100%, 30%));
+}
+.hsl_color_6 {
+	background-color: light-dark(hsl(260, 100%, 90%), hsl(290, 100%, 30%));
+}
+.hsl_color_7 {
+	background-color: light-dark(hsl(290, 100%, 90%), hsl(310, 100%, 30%));
+}
+/*색만 다르고 발기와 체도는 동일한 값*/
+.color_1 {
+	background-color: light-dark(oklch(90% 0.15 0), oklch(30% 0.15 0));
+}
+.color_2 {
+	background-color: light-dark(oklch(90% 0.15 40), oklch(30% 0.15 80));
+}
+.color_3 {
+	background-color: light-dark(oklch(90% 0.15 80), oklch(30% 0.15 100));
+}
+.color_4 {
+	background-color: light-dark(oklch(90% 0.15 140), oklch(30% 0.15 160));
+}
+.color_5 {
+	background-color: light-dark(oklch(90% 0.15 240), oklch(30% 0.15 240));
+}
+.color_6 {
+	background-color: light-dark(oklch(90% 0.15 260), oklch(30% 0.15 290));
+}
+.color_7 {
+	background-color: light-dark(oklch(90% 0.15 290), oklch(30% 0.15 310));
+}
+
+@media screen and (width >= 700px) {
+	.css_example5 figure {
+		height: calc(100dvh - 2rem);
+	}
+	.css_example6 ul {
+		gap:1rem;
+	}
+	.css_example6 ul li {
+		font-weight: 900;
+		font-size: 1.25rem;
+	}
+}
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
 }
