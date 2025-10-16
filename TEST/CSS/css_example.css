@@ -223,7 +223,9 @@ h1, .css_example_title {
 .color_7 {
 	background-color: light-dark(oklch(90% 0.15 290), oklch(30% 0.15 310));
 }
-
+.css_example7 img {
+	min-height: 10rem;
+}
 @media screen and (width >= 700px) {
 	.css_example5 figure {
 		height: calc(100dvh - 2rem);
@@ -235,7 +237,4 @@ h1, .css_example_title {
 		font-weight: 900;
 		font-size: 1.25rem;
 	}
-}
-/*Dark Mode Layout*/
-@media (prefers-color-scheme:dark) {
 }
