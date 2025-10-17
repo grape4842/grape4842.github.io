@@ -1,4 +1,4 @@
-@import url("font.css")
+@import url("font.css");
 @charset "utf-8";
 /*폰트 설성*/
 
@@ -139,8 +139,7 @@
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
 }
-
-:root {
+*, *::before, *::after, :root {
 	interpolate-size: allow-keywords;
 	font-size: 1rem;
 	font: inherit;
