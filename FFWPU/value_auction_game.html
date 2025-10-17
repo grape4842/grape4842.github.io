@@ -445,1046 +445,1044 @@
 						</button>
 					</form>
 				</dialog>
+				<button data-modal-open="" onclick="document.getElementById('game_board_table').showModal();" aria-haspopup="dialog" class="game_open board_open" id="game_board_table_open">가치관 목록(표) 열기</button>
+				<dialog class="board_contents" id="game_board_table" popover>
+					<h2 class="sr_only">
+						<span class="popup_htxt sr_only">가치관 목록</span>
+					</h2>
+					<table id="value_table_list">
+						<caption class="sr_only">가치관 목록</caption>
+						<thead>
+							<tr>
+								<th scope="col">품번</th>
+								<th scope="col">품목</th>
+								<th scope="col">예상 사용 금액</th>
+								<th scope="col">실제 사용 금액</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="value_number">1</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item1">
+									<label for="auction_item1">
+										<span class="value_text">와하하! 모두를 즐겁게 웃게 하는
+											<span class="value_name">유머감각</span>
+										</span>
+									</label>
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost1">
+									<label for="value_es_cost1">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost1">
+									<label for="value_ac_cost1">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo1"></td>
+							</tr>
+							<tr>
+								<td class="value_number">2</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item2">
+									<label for="auction_item2">
+										<span class="value_text">원하는 것을 할 수 있는 
+											<span class="value_name">자유</span>
+										</span>
+									</label>
 
-				<button class="game_open board_open" id="game_board_table_open" popovertarget="game_board_table">가치관 목록(표) 열기</button>
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost2">
+									<label for="value_es_cost2">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost2">
+									<label for="value_ac_cost2">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo2"></td>
+							</tr>
+							<tr>
+								<td class="value_number">3</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item3">
+									<label for="auction_item3">
+										<span class="value_text">어떤 어려움도 해결할 수 있는
+											<span class="value_name">삶의 지혜</span>
+										</span>
+									</label>
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost3">
+									<label for="value_es_cost3">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost3">
+									<label for="value_ac_cost3">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo3"></td>
+							</tr>
+							<tr>
+								<td class="value_number">4</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item4">
+									<label for="auction_item4">
+										<span class="value_text">나의 천부적인 재능을 펼칠 수 있고 인정해 주는
+											<span class="value_name">직장</span>
+										</span>
+									</label>
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost4">
+									<label for="value_es_cost4">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost4">
+									<label for="value_ac_cost4">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo4"></td>
+							</tr>
+							<tr>
+								<td class="value_number">5</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item5">
+									<label for="auction_item5">
+										<span class="value_text">모든 
+											<span class="value_name">언어</span>를 자유롭게 구사하는 어휘력
+										</span>
+									</label>
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost5">
+									<label for="value_es_cost5">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost5">
+									<label for="value_ac_cost5">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo5"></td>
+							</tr>
+							<tr>
+								<td class="value_number">6</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item6">
+									<label for="auction_item6">
+										<span class="value_text">모든
+											<span class="value_name">스포츠</span>를 프로처럼 잘하는 몸
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost6">
+									<label for="value_es_cost6">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost6">
+									<label for="value_ac_cost6">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo6"></td>
+							</tr>
+							<tr>
+								<td class="value_number">7</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item7">
+									<label for="auction_item7">
+										<span class="value_text">마음을 터놓고 의지할 수 있는
+											<span class="value_name">형제자매</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost7">
+									<label for="value_es_cost7">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost7">
+									<label for="value_ac_cost7">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo7"></td>
+							</tr>
+							<tr>
+								<td class="value_number">8</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item8">
+									<label for="auction_item8">
+										<span class="value_text">나라를 다스릴 수 있는
+											<span class="value_name">권위와 권력</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost8">
+									<label for="value_es_cost8">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost8">
+									<label for="value_ac_cost8">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo8"></td>
+							</tr>
+							<tr>
+								<td class="value_number">9</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item9">
+									<label for="auction_item9">
+										<span class="value_text">해보니까 무엇이든 이루어진다!
+											<span class="value_name">노력의 천부적인 재능</span>
+										</span>
+									</label>
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost9">
+									<label for="value_es_cost9">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost9">
+									<label for="value_ac_cost9">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo9"></td>
+							</tr>
+							<tr>
+								<td class="value_number">10</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item10">
+									<label for="auction_item10">
+										<span class="value_text">모든 사람들로부터 얻는
+											<span class="value_name">존경, 명예</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost10">
+									<label for="value_es_cost10">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost10">
+									<label for="value_ac_cost10">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo10"></td>
+							</tr>
+							<tr>
+								<td class="value_number">11</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item11">
+									<label for="auction_item11">
+										<span class="value_text">천상의 목소리 모두가 빠지는
+											<span class="value_name">노래 실력</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost11">
+									<label for="value_es_cost11">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost11">
+									<label for="value_ac_cost11">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo11"></td>
+							</tr>
+							<tr>
+								<td class="value_number">12</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item12">
+									<label for="auction_item12">
+										<span class="value_text">어벤져스같은 슈퍼 히어로
+											<span class="value_name">초능력</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost12">
+									<label for="value_es_cost12">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost12">
+									<label for="value_ac_cost12">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo12"></td>
+							</tr>
+							<tr>
+								<td class="value_number">13</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item13">
+									<label for="auction_item13">
+										<span class="value_text">목숨을 주어도 아깝지 않을
+											<span class="value_name">우정</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost13">
+									<label for="value_es_cost13">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost13">
+									<label for="value_ac_cost13">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo13"></td>
+							</tr>
+							<tr>
+								<td class="value_number">14</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item14">
+									<label for="auction_item14">
+										<span class="value_text">삶을 긍정적으로 볼 수 있는
+											<span class="value_name">자신감</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost14">
+									<label for="value_es_cost14">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost14">
+									<label for="value_ac_cost14">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo14"></td>
+							</tr>
+							<tr>
+								<td class="value_number">15</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item15">
+									<label for="auction_item15">
+										<span class="value_text">영원히 사랑하는 휼륭한 배우자와
+											<span class="value_name">행복한 결혼 생활</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost15">
+									<label for="value_es_cost15">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost15">
+									<label for="value_ac_cost15">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo15"></td>
+							</tr>
+							<tr>
+								<td class="value_number">16</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item16">
+									<label for="auction_item16">
+										<span class="value_text">내가 즐겁게 할 수 있는 만족스러운
+											<span class="value_name">직업</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost16">
+									<label for="value_es_cost16">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost16">
+									<label for="value_ac_cost16">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo16"></td>
+							</tr>
+							<tr>
+								<td class="value_number">17</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item17">
+									<label for="auction_item17">
+										<span class="value_text">무엇이든 만들어내는
+											<span class="value_name">뛰어난 손재주</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost17">
+									<label for="value_es_cost17">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost17">
+									<label for="value_ac_cost17">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo17"></td>
+							</tr>
+							<tr>
+								<td class="value_number">18</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item18">
+									<label for="auction_item18">
+										<span class="value_text">사랑이 넘치는 행복한 
+											<span class="value_name">가족</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost18">
+									<label for="value_es_cost18">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost18">
+									<label for="value_ac_cost18">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo18"></td>
+							</tr>
+							<tr>
+								<td class="value_number">19</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item19">
+									<label for="auction_item19">
+										<span class="value_text">이게 바로 내 모습이야! 내가 원했던
+											<span class="value_name">체형과 외모</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost19">
+									<label for="value_es_cost19">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost19">
+									<label for="value_ac_cost19">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo19"></td>
+							</tr>
+							<tr>
+								<td class="value_number">20</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item20">
+									<label for="auction_item20">
+										<span class="value_text">어떤 시련도 견뎌낼 수 있는
+											<span class="value_name">인내</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost20">
+									<label for="value_es_cost20">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost20">
+									<label for="value_ac_cost20">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo20"></td>
+							</tr>
+							<tr>
+								<td class="value_number">21</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item21">
+									<label for="auction_item21">
+										<span class="value_text">나를 언제나 온화하게
+											<span class="value_name">감정 조절 능력</span>
+										</span>
+									</label>
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost21">
+									<label for="value_es_cost21">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost21">
+									<label for="value_ac_cost21">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo21"></td>
+							</tr>
+							<tr>
+								<td class="value_number">22</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item22">
+									<label for="auction_item22">
+										<span class="value_text">이게 다 무료라고?!
+											<span class="value_name">백화점 평생 무료 이용권</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost22">
+									<label for="value_es_cost22">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost22">
+									<label for="value_ac_cost22">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo22"></td>
+							</tr>
+							<tr>
+								<td class="value_number">23</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item23">
+									<label for="auction_item23">
+										<span class="value_text">재미난 아이디가 한가득! 언제나 빛나는
+											<span class="value_name">창의력</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost23">
+									<label for="value_es_cost23">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost23">
+									<label for="value_ac_cost23">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo23"></td>
+							</tr>
+							<tr>
+								<td class="value_number">24</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item24">
+									<label for="auction_item24">
+										<span class="value_text">보험 없이 오래오래 건강하게!
+											<span class="value_name">무병 장수</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost24">
+									<label for="value_es_cost24">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost24">
+									<label for="value_ac_cost24">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo24"></td>
+							</tr>
+							<tr>
+								<td class="value_number">25</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item25">
+									<label for="auction_item25">
+										<span class="value_text">세상의 모든 것을 아는
+											<span class="value_name">지식</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost25">
+									<label for="value_es_cost25">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost25">
+									<label for="value_ac_cost25">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo25"></td>
+							</tr>
+							<tr>
+								<td class="value_number">26</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item26">
+									<label for="auction_item26">
+										<span class="value_text">모든 사람에게, 모든 일에 너그럽게
+											<span class="value_name">포용력</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost26">
+									<label for="value_es_cost26">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost26">
+									<label for="value_ac_cost26">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo26"></td>
+							</tr>
+							<tr>
+								<td class="value_number">27</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item27">
+									<label for="auction_item27">
+										<span class="value_text">세계가 인정하는
+											<span class="value_name">에술적 천부적인 재능</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost27">
+									<label for="value_es_cost27">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost27">
+									<label for="value_ac_cost27">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo27"></td>
+							</tr>
+							<tr>
+								<td class="value_number">28</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item28">
+									<label for="auction_item28">
+										<span class="value_text">내가 원하는 분야의 천재가 된다!
+											<span class="value_name">천부적인 재능</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost28">
+									<label for="value_es_cost28">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost28">
+									<label for="value_ac_cost28">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo28"></td>
+							</tr>
+							<tr>
+								<td class="value_number">29</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item29">
+									<label for="auction_item29">
+										<span class="value_text">어떠한 유혹에도 굴하지 않는
+											<span class="value_name">굳센 우직함</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost29">
+									<label for="value_es_cost29">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost29">
+									<label for="value_ac_cost29">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo29"></td>
+							</tr>
+							<tr>
+								<td class="value_number">30</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item30">
+									<label for="auction_item30">
+										<span class="value_text">수 많은 사람이 나를 좋아해! 엄청난
+											<span class="value_name">인기 </span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost30">
+									<label for="value_es_cost30">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost30">
+									<label for="value_ac_cost30">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo30"></td>
+							</tr>
+							<tr>
+								<td class="value_number">31</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item31">
+									<label for="auction_item31">
+										<span class="value_text">몸은 튼튼하고! 마음은 깨끗한!
+											<span class="value_name">건강</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost31">
+									<label for="value_es_cost31">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost31">
+									<label for="value_ac_cost31">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo31"></td>
+							</tr>
+							<tr>
+								<td class="value_number">32</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item32">
+									<label for="auction_item32">
+										<span class="value_text">언제든지 자유롭게 쉬는
+											<span class="value_name">5년치 휴가</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost32">
+									<label for="value_es_cost32">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost32">
+									<label for="value_ac_cost32">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo32"></td>
+							</tr>
+							<tr>
+								<td class="value_number">33</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item33">
+									<label for="auction_item33">
+										<span class="value_text">여기저기 날아가자!
+											<span class="value_name">평생 세계 여행 무료 이용권</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost33">
+									<label for="value_es_cost33">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost33">
+									<label for="value_ac_cost33">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo33"></td>
+							</tr>
+							<tr>
+								<td class="value_number">34</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item34">
+									<label for="auction_item34">
+										<span class="value_text">결단이 더 이상 어렵지 않다!
+											<span class="value_name">뛰어난 판단력</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost34">
+									<label for="value_es_cost34">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost34">
+									<label for="value_ac_cost34">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo34"></td>
+							</tr>
+							<tr>
+								<td class="value_number">35</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item35">
+									<label for="auction_item35">
+										<span class="value_text">사랑하는 엄마아빠!
+											<span class="value_name">건강하고 활기찬 부모님</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost35">
+									<label for="value_es_cost35">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost35">
+									<label for="value_ac_cost35">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo35"></td>
+							</tr>
+							<tr>
+								<td class="value_number">36</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item36">
+									<label for="auction_item36">
+										<span class="value_text">나를 이길자 있으랴!
+											<span class="value_name">무력</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost36">
+									<label for="value_es_cost36">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost36">
+									<label for="value_ac_cost36">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo36"></td>
+							</tr>
+							<tr>
+								<td class="value_number">37</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item37">
+									<label for="auction_item37">
+										<span class="value_text">원하는 자격증도 착착!
+											<span class="value_name">모든 시험에서 1등하기</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost37">
+									<label for="value_es_cost37">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost37">
+									<label for="value_ac_cost37">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo37"></td>
+							</tr>
+							<tr>
+								<td class="value_number">38</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item38">
+									<label for="auction_item38">
+										<span class="value_text">평생 걱정 없이 살 수 있는
+											<span class="value_name">엄청나게 많은 돈</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost38">
+									<label for="value_es_cost38">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost38">
+									<label for="value_ac_cost38">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo38"></td>
+							</tr>
+							<tr>
+								<td class="value_number">39</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item39">
+									<label for="auction_item39">
+										<span class="value_text">당신을 따라가고 싶어요! 
+											<span class="value_name">빛나는 리더십</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost39">
+									<label for="value_es_cost39">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost39">
+									<label for="value_ac_cost39">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo39"></td>
+							</tr>
+							<tr>
+								<td class="value_number">40</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item40">
+									<label for="auction_item40">
+										<span class="value_text">끝까지 한결같아 믿음가는
+											<span class="value_name">근면성실</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost40">
+									<label for="value_es_cost40">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost40">
+									<label for="value_ac_cost40">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo40"></td>
+							</tr>
+							<tr>
+								<td class="value_number">41</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item41">
+									<label for="auction_item41">
+										<span class="value_text">모두가 이목을 집중하는
+											<span class="value_name">부드러운 카리스마</span>
+										</span>
+									</label>
+
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost41">
+									<label for="value_es_cost41">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost41">
+									<label for="value_ac_cost41">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo41"></td>
+							</tr>
+							<tr>
+								<td class="value_number">42</td>
+								<td class="auction_items">
+									<input type="checkbox" class="auction_item_value" name="" id="auction_item42">
+									<label for="auction_item42">
+										<span class="value_text">전세계에 영향력 만점
+											<span class="value_name">엄청난 인맥(인간관계)</span>
+										</span>
+									</label>
+								</td>
+								<td class="value_es_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost42">
+									<label for="value_es_cost42">만원</label>
+								</td>
+								<td class="value_ac_cost">
+									<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost42">
+									<label for="value_ac_cost42">만원</label>
+								</td>
+								<td class="value_memo"><input class="auction_memo" type="text" id="value_memo42"></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="sr_only">
+						<div>
+							<label for="value_ac_cost1">모두를 즐겁게 웃게 하는 유머감각, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost2">원하는 것을 할 수 있는 자유, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost3">어떤 어려움도 해결할 수 있는 삶의 지혜, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost4">내 천부적인 재능을 펼칠 수 있고 인정해 주는 직장, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost5">모든 언어를 자유롭게 구사하는 어휘력, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost6">모든 스포츠를 프로처럼 잘하는 몸, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost7">마음을 터놓고 의지할 수 있는 형제자매, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost8">나라를 다스릴 수 있는 권위와 권력, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost9">무엇이든 이루어진다! 노력의 천부적인 재능, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost10">모든 사람들로부터 얻는 존경, 명예, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost11">천상의 목소리 모두가 빠지는 노래 실력, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost12">어벤져스같은 슈퍼 히어로 초능력, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost13">목숨을 주어도 아깝지 않을 우정, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost14">삶을 긍정적으로 볼 수 있는 자신감, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost15">휼륭한 배우자와 행복한 결혼 생활, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost16">내가 즐겁게 할 수 있는 만족스러운 직업, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost17">무엇이든 만들어내는 뛰어난 손재주, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost18">사랑이 넘치는 행복한 가족, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost19">내가 원했던 체형과 외모, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost20">어떤 시련도 견뎌낼 수 있는 인내, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost21">나를 언제나 온화하게 감정 조절 능력, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost22">백화점 평생 무료 이용권, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost23">언제나 빛나는 창의력, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost24">보험 없이 오래오래 건강하게! 무병 장수, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost25">세상의 모든 것을 아는 지식, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost26">모든 일에 너그러운 포용력, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost27">세계가 인정하는 에술적 천부적인 재능, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost28">내가 원하는 분야의 천재가 된다! 천부적인 재능, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost29">어떠한 유혹에도 굴하지 않는 굳센 우직함, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost30">수 많은 사람이 나를 좋아해! 엄청난 인기, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost31">몸은 튼튼하고! 마음은 깨끗한! 건강, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost32">언제든지 자유롭게 쉬는 5년치 휴가, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost33">평생 세계 여행 무료 이용권, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost34">뛰어난 판단력, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost35">건강하고 활기찬 부모님, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost36">나를 이길자 있으랴! 무력, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost37">모든 시험에서 1등하기, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost38">엄청나게 많은 돈, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost39">빛나는 리더십, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost40">끝까지 한결같아 믿음가는 근면성실, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost41">부드러운 카리스마, 낙찰로 실제 사용한 금액</label>
+							<label for="value_ac_cost42">엄청난 인맥(인간관계), 낙찰로 실제 사용한 금액</label>
+						</div>
+						<div>
+							<label for="value_es_cost1">모두를 즐겁게 웃게 하는 유머감각, 낙찰 예상  금액</label>
+							<label for="value_es_cost2">원하는 것을 할 수 있는 자유, 낙찰 예상  금액</label>
+							<label for="value_es_cost3">어떤 어려움도 해결할 수 있는 삶의 지혜, 낙찰 예상  금액</label>
+							<label for="value_es_cost4">내 천부적인 재능을 펼칠 수 있고 인정해 주는 직장, 낙찰 예상  금액</label>
+							<label for="value_es_cost5">모든 언어를 자유롭게 구사하는 어휘력, 낙찰 예상  금액</label>
+							<label for="value_es_cost6">모든 스포츠를 프로처럼 잘하는 몸, 낙찰 예상  금액</label>
+							<label for="value_es_cost7">마음을 터놓고 의지할 수 있는 형제자매, 낙찰 예상  금액</label>
+							<label for="value_es_cost8">나라를 다스릴 수 있는 권위와 권력, 낙찰 예상  금액</label>
+							<label for="value_es_cost9">무엇이든 이루어진다! 노력의 천부적인 재능, 낙찰 예상  금액</label>
+							<label for="value_es_cost10">모든 사람들로부터 얻는 존경, 명예, 낙찰 예상  금액</label>
+							<label for="value_es_cost11">천상의 목소리 모두가 빠지는 노래 실력, 낙찰 예상  금액</label>
+							<label for="value_es_cost12">어벤져스같은 슈퍼 히어로 초능력, 낙찰 예상  금액</label>
+							<label for="value_es_cost13">목숨을 주어도 아깝지 않을 우정, 낙찰 예상  금액</label>
+							<label for="value_es_cost14">삶을 긍정적으로 볼 수 있는 자신감, 낙찰 예상  금액</label>
+							<label for="value_es_cost15">휼륭한 배우자와 행복한 결혼 생활, 낙찰 예상  금액</label>
+							<label for="value_es_cost16">내가 즐겁게 할 수 있는 만족스러운 직업, 낙찰 예상  금액</label>
+							<label for="value_es_cost17">무엇이든 만들어내는 뛰어난 손재주, 낙찰 예상  금액</label>
+							<label for="value_es_cost18">사랑이 넘치는 행복한 가족, 낙찰 예상  금액</label>
+							<label for="value_es_cost19">내가 원했던 체형과 외모, 낙찰 예상  금액</label>
+							<label for="value_es_cost20">어떤 시련도 견뎌낼 수 있는 인내, 낙찰 예상  금액</label>
+							<label for="value_es_cost21">나를 언제나 온화하게 감정 조절 능력, 낙찰 예상  금액</label>
+							<label for="value_es_cost22">백화점 평생 무료 이용권, 낙찰 예상  금액</label>
+							<label for="value_es_cost23">언제나 빛나는 창의력, 낙찰 예상  금액</label>
+							<label for="value_es_cost24">보험 없이 오래오래 건강하게! 무병 장수, 낙찰 예상  금액</label>
+							<label for="value_es_cost25">세상의 모든 것을 아는 지식, 낙찰 예상  금액</label>
+							<label for="value_es_cost26">모든 일에 너그러운 포용력, 낙찰 예상  금액</label>
+							<label for="value_es_cost27">세계가 인정하는 에술적 천부적인 재능, 낙찰 예상  금액</label>
+							<label for="value_es_cost28">내가 원하는 분야의 천재가 된다! 천부적인 재능, 낙찰 예상  금액</label>
+							<label for="value_es_cost29">어떠한 유혹에도 굴하지 않는 굳센 우직함, 낙찰 예상  금액</label>
+							<label for="value_es_cost30">수 많은 사람이 나를 좋아해! 엄청난 인기, 낙찰 예상  금액</label>
+							<label for="value_es_cost31">몸은 튼튼하고! 마음은 깨끗한! 건강, 낙찰 예상  금액</label>
+							<label for="value_es_cost32">언제든지 자유롭게 쉬는 5년치 휴가, 낙찰 예상  금액</label>
+							<label for="value_es_cost33">평생 세계 여행 무료 이용권, 낙찰 예상  금액</label>
+							<label for="value_es_cost34">뛰어난 판단력, 낙찰 예상  금액</label>
+							<label for="value_es_cost35">건강하고 활기찬 부모님, 낙찰 예상  금액</label>
+							<label for="value_es_cost36">나를 이길자 있으랴! 무력, 낙찰 예상  금액</label>
+							<label for="value_es_cost37">모든 시험에서 1등하기, 낙찰 예상  금액</label>
+							<label for="value_es_cost38">엄청나게 많은 돈, 낙찰 예상  금액</label>
+							<label for="value_es_cost39">빛나는 리더십, 낙찰 예상  금액</label>
+							<label for="value_es_cost40">끝까지 한결같아 믿음가는 근면성실, 낙찰 예상  금액</label>
+							<label for="value_es_cost41">부드러운 카리스마, 낙찰 예상  금액</label>
+							<label for="value_es_cost42">엄청난 인맥(인간관계), 낙찰 예상  금액</label>
+						</div>
+						<div>
+							<label for="value_memo1">모두를 즐겁게 웃게 하는 유머감각, 항목 비고</label>
+							<label for="value_memo2">원하는 것을 할 수 있는 자유, 항목 비고</label>
+							<label for="value_memo3">어떤 어려움도 해결할 수 있는 삶의 지혜, 항목 비고</label>
+							<label for="value_memo4">내 천부적인 재능을 펼칠 수 있고 인정해 주는 직장, 항목 비고</label>
+							<label for="value_memo5">모든 언어를 자유롭게 구사하는 어휘력, 항목 비고</label>
+							<label for="value_memo6">모든 스포츠를 프로처럼 잘하는 몸, 항목 비고</label>
+							<label for="value_memo7">마음을 터놓고 의지할 수 있는 형제자매, 항목 비고</label>
+							<label for="value_memo8">나라를 다스릴 수 있는 권위와 권력, 항목 비고</label>
+							<label for="value_memo9">무엇이든 이루어진다! 노력의 천부적인 재능, 항목 비고</label>
+							<label for="value_memo10">모든 사람들로부터 얻는 존경, 명예, 항목 비고</label>
+							<label for="value_memo11">천상의 목소리 모두가 빠지는 노래 실력, 항목 비고</label>
+							<label for="value_memo12">어벤져스같은 슈퍼 히어로 초능력, 항목 비고</label>
+							<label for="value_memo13">목숨을 주어도 아깝지 않을 우정, 항목 비고</label>
+							<label for="value_memo14">삶을 긍정적으로 볼 수 있는 자신감, 항목 비고</label>
+							<label for="value_memo15">휼륭한 배우자와 행복한 결혼 생활, 항목 비고</label>
+							<label for="value_memo16">내가 즐겁게 할 수 있는 만족스러운 직업, 항목 비고</label>
+							<label for="value_memo17">무엇이든 만들어내는 뛰어난 손재주, 항목 비고</label>
+							<label for="value_memo18">사랑이 넘치는 행복한 가족, 항목 비고</label>
+							<label for="value_memo19">내가 원했던 체형과 외모, 항목 비고</label>
+							<label for="value_memo20">어떤 시련도 견뎌낼 수 있는 인내, 항목 비고</label>
+							<label for="value_memo21">나를 언제나 온화하게 감정 조절 능력, 항목 비고</label>
+							<label for="value_memo22">백화점 평생 무료 이용권, 항목 비고</label>
+							<label for="value_memo23">언제나 빛나는 창의력, 항목 비고</label>
+							<label for="value_memo24">보험 없이 오래오래 건강하게! 무병 장수, 항목 비고</label>
+							<label for="value_memo25">세상의 모든 것을 아는 지식, 항목 비고</label>
+							<label for="value_memo26">모든 일에 너그러운 포용력, 항목 비고</label>
+							<label for="value_memo27">세계가 인정하는 에술적 천부적인 재능, 항목 비고</label>
+							<label for="value_memo28">내가 원하는 분야의 천재가 된다! 천부적인 재능, 항목 비고</label>
+							<label for="value_memo29">어떠한 유혹에도 굴하지 않는 굳센 우직함, 항목 비고</label>
+							<label for="value_memo30">수 많은 사람이 나를 좋아해! 엄청난 인기, 항목 비고</label>
+							<label for="value_memo31">몸은 튼튼하고! 마음은 깨끗한! 건강, 항목 비고</label>
+							<label for="value_memo32">언제든지 자유롭게 쉬는 5년치 휴가, 항목 비고</label>
+							<label for="value_memo33">평생 세계 여행 무료 이용권, 항목 비고</label>
+							<label for="value_memo34">뛰어난 판단력, 항목 비고</label>
+							<label for="value_memo35">건강하고 활기찬 부모님, 항목 비고</label>
+							<label for="value_memo36">나를 이길자 있으랴! 무력, 항목 비고</label>
+							<label for="value_memo37">모든 시험에서 1등하기, 항목 비고</label>
+							<label for="value_memo38">엄청나게 많은 돈, 항목 비고</label>
+							<label for="value_memo39">빛나는 리더십, 항목 비고</label>
+							<label for="value_memo40">끝까지 한결같아 믿음가는 근면성실, 항목 비고</label>
+							<label for="value_memo41">부드러운 카리스마, 항목 비고</label>
+							<label for="value_memo42">엄청난 인맥(인간관계), 항목 비고</label>
+						</div>
+					</div>
+					<form method="dialog" class="popup_close">
+						<button id="game_board_table_close" type="submit">
+							<img class="icon_img" src="../icon/Xclose.svg" alt="">
+							<span class="sr_only">가치관 목록(표) 닫기</span>
+						</button>
+					</form>
+				</dialog>
+
 			</div>
 		</section>
-
-		<dialog class="board_contents" id="game_board_table" popover>
-			<h2 class="sr_only">
-				<span class="popup_htxt sr_only">가치관 목록</span>
-			</h2>
-			<table id="value_table_list">
-				<caption class="sr_only">가치관 목록</caption>
-				<thead>
-					<tr>
-						<th scope="col">품번</th>
-						<th scope="col">품목</th>
-						<th scope="col">예상 사용 금액</th>
-						<th scope="col">실제 사용 금액</th>
-						<th scope="col">비고</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="value_number">1</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item1">
-							<label for="auction_item1">
-								<span class="value_text">와하하! 모두를 즐겁게 웃게 하는
-									<span class="value_name">유머감각</span>
-								</span>
-							</label>
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost1">
-							<label for="value_es_cost1">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost1">
-							<label for="value_ac_cost1">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo1"></td>
-					</tr>
-					<tr>
-						<td class="value_number">2</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item2">
-							<label for="auction_item2">
-								<span class="value_text">원하는 것을 할 수 있는 
-									<span class="value_name">자유</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost2">
-							<label for="value_es_cost2">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost2">
-							<label for="value_ac_cost2">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo2"></td>
-					</tr>
-					<tr>
-						<td class="value_number">3</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item3">
-							<label for="auction_item3">
-								<span class="value_text">어떤 어려움도 해결할 수 있는
-									<span class="value_name">삶의 지혜</span>
-								</span>
-							</label>
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost3">
-							<label for="value_es_cost3">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost3">
-							<label for="value_ac_cost3">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo3"></td>
-					</tr>
-					<tr>
-						<td class="value_number">4</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item4">
-							<label for="auction_item4">
-								<span class="value_text">나의 천부적인 재능을 펼칠 수 있고 인정해 주는
-									<span class="value_name">직장</span>
-								</span>
-							</label>
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost4">
-							<label for="value_es_cost4">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost4">
-							<label for="value_ac_cost4">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo4"></td>
-					</tr>
-					<tr>
-						<td class="value_number">5</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item5">
-							<label for="auction_item5">
-								<span class="value_text">모든 
-									<span class="value_name">언어</span>를 자유롭게 구사하는 어휘력
-								</span>
-							</label>
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost5">
-							<label for="value_es_cost5">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost5">
-							<label for="value_ac_cost5">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo5"></td>
-					</tr>
-					<tr>
-						<td class="value_number">6</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item6">
-							<label for="auction_item6">
-								<span class="value_text">모든
-									<span class="value_name">스포츠</span>를 프로처럼 잘하는 몸
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost6">
-							<label for="value_es_cost6">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost6">
-							<label for="value_ac_cost6">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo6"></td>
-					</tr>
-					<tr>
-						<td class="value_number">7</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item7">
-							<label for="auction_item7">
-								<span class="value_text">마음을 터놓고 의지할 수 있는
-									<span class="value_name">형제자매</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost7">
-							<label for="value_es_cost7">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost7">
-							<label for="value_ac_cost7">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo7"></td>
-					</tr>
-					<tr>
-						<td class="value_number">8</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item8">
-							<label for="auction_item8">
-								<span class="value_text">나라를 다스릴 수 있는
-									<span class="value_name">권위와 권력</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost8">
-							<label for="value_es_cost8">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost8">
-							<label for="value_ac_cost8">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo8"></td>
-					</tr>
-					<tr>
-						<td class="value_number">9</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item9">
-							<label for="auction_item9">
-								<span class="value_text">해보니까 무엇이든 이루어진다!
-									<span class="value_name">노력의 천부적인 재능</span>
-								</span>
-							</label>
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost9">
-							<label for="value_es_cost9">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost9">
-							<label for="value_ac_cost9">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo9"></td>
-					</tr>
-					<tr>
-						<td class="value_number">10</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item10">
-							<label for="auction_item10">
-								<span class="value_text">모든 사람들로부터 얻는
-									<span class="value_name">존경, 명예</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost10">
-							<label for="value_es_cost10">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost10">
-							<label for="value_ac_cost10">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo10"></td>
-					</tr>
-					<tr>
-						<td class="value_number">11</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item11">
-							<label for="auction_item11">
-								<span class="value_text">천상의 목소리 모두가 빠지는
-									<span class="value_name">노래 실력</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost11">
-							<label for="value_es_cost11">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost11">
-							<label for="value_ac_cost11">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo11"></td>
-					</tr>
-					<tr>
-						<td class="value_number">12</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item12">
-							<label for="auction_item12">
-								<span class="value_text">어벤져스같은 슈퍼 히어로
-									<span class="value_name">초능력</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost12">
-							<label for="value_es_cost12">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost12">
-							<label for="value_ac_cost12">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo12"></td>
-					</tr>
-					<tr>
-						<td class="value_number">13</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item13">
-							<label for="auction_item13">
-								<span class="value_text">목숨을 주어도 아깝지 않을
-									<span class="value_name">우정</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost13">
-							<label for="value_es_cost13">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost13">
-							<label for="value_ac_cost13">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo13"></td>
-					</tr>
-					<tr>
-						<td class="value_number">14</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item14">
-							<label for="auction_item14">
-								<span class="value_text">삶을 긍정적으로 볼 수 있는
-									<span class="value_name">자신감</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost14">
-							<label for="value_es_cost14">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost14">
-							<label for="value_ac_cost14">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo14"></td>
-					</tr>
-					<tr>
-						<td class="value_number">15</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item15">
-							<label for="auction_item15">
-								<span class="value_text">영원히 사랑하는 휼륭한 배우자와
-									<span class="value_name">행복한 결혼 생활</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost15">
-							<label for="value_es_cost15">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost15">
-							<label for="value_ac_cost15">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo15"></td>
-					</tr>
-					<tr>
-						<td class="value_number">16</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item16">
-							<label for="auction_item16">
-								<span class="value_text">내가 즐겁게 할 수 있는 만족스러운
-									<span class="value_name">직업</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost16">
-							<label for="value_es_cost16">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost16">
-							<label for="value_ac_cost16">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo16"></td>
-					</tr>
-					<tr>
-						<td class="value_number">17</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item17">
-							<label for="auction_item17">
-								<span class="value_text">무엇이든 만들어내는
-									<span class="value_name">뛰어난 손재주</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost17">
-							<label for="value_es_cost17">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost17">
-							<label for="value_ac_cost17">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo17"></td>
-					</tr>
-					<tr>
-						<td class="value_number">18</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item18">
-							<label for="auction_item18">
-								<span class="value_text">사랑이 넘치는 행복한 
-									<span class="value_name">가족</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost18">
-							<label for="value_es_cost18">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost18">
-							<label for="value_ac_cost18">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo18"></td>
-					</tr>
-					<tr>
-						<td class="value_number">19</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item19">
-							<label for="auction_item19">
-								<span class="value_text">이게 바로 내 모습이야! 내가 원했던
-									<span class="value_name">체형과 외모</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost19">
-							<label for="value_es_cost19">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost19">
-							<label for="value_ac_cost19">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo19"></td>
-					</tr>
-					<tr>
-						<td class="value_number">20</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item20">
-							<label for="auction_item20">
-								<span class="value_text">어떤 시련도 견뎌낼 수 있는
-									<span class="value_name">인내</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost20">
-							<label for="value_es_cost20">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost20">
-							<label for="value_ac_cost20">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo20"></td>
-					</tr>
-					<tr>
-						<td class="value_number">21</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item21">
-							<label for="auction_item21">
-								<span class="value_text">나를 언제나 온화하게
-									<span class="value_name">감정 조절 능력</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost21">
-							<label for="value_es_cost21">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost21">
-							<label for="value_ac_cost21">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo21"></td>
-					</tr>
-					<tr>
-						<td class="value_number">22</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item22">
-							<label for="auction_item22">
-								<span class="value_text">이게 다 무료라고?!
-									<span class="value_name">백화점 평생 무료 이용권</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost22">
-							<label for="value_es_cost22">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost22">
-							<label for="value_ac_cost22">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo22"></td>
-					</tr>
-					<tr>
-						<td class="value_number">23</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item23">
-							<label for="auction_item23">
-								<span class="value_text">재미난 아이디가 한가득! 언제나 빛나는
-									<span class="value_name">창의력</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost23">
-							<label for="value_es_cost23">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost23">
-							<label for="value_ac_cost23">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo23"></td>
-					</tr>
-					<tr>
-						<td class="value_number">24</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item24">
-							<label for="auction_item24">
-								<span class="value_text">보험 없이 오래오래 건강하게!
-									<span class="value_name">무병 장수</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost24">
-							<label for="value_es_cost24">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost24">
-							<label for="value_ac_cost24">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo24"></td>
-					</tr>
-					<tr>
-						<td class="value_number">25</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item25">
-							<label for="auction_item25">
-								<span class="value_text">세상의 모든 것을 아는
-									<span class="value_name">지식</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost25">
-							<label for="value_es_cost25">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost25">
-							<label for="value_ac_cost25">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo25"></td>
-					</tr>
-					<tr>
-						<td class="value_number">26</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item26">
-							<label for="auction_item26">
-								<span class="value_text">모든 사람에게, 모든 일에 너그럽게
-									<span class="value_name">포용력</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost26">
-							<label for="value_es_cost26">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost26">
-							<label for="value_ac_cost26">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo26"></td>
-					</tr>
-					<tr>
-						<td class="value_number">27</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item27">
-							<label for="auction_item27">
-								<span class="value_text">세계가 인정하는
-									<span class="value_name">에술적 천부적인 재능</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost27">
-							<label for="value_es_cost27">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost27">
-							<label for="value_ac_cost27">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo27"></td>
-					</tr>
-					<tr>
-						<td class="value_number">28</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item28">
-							<label for="auction_item28">
-								<span class="value_text">내가 원하는 분야의 천재가 된다!
-									<span class="value_name">천부적인 재능</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost28">
-							<label for="value_es_cost28">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost28">
-							<label for="value_ac_cost28">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo28"></td>
-					</tr>
-					<tr>
-						<td class="value_number">29</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item29">
-							<label for="auction_item29">
-								<span class="value_text">어떠한 유혹에도 굴하지 않는
-									<span class="value_name">굳센 우직함</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost29">
-							<label for="value_es_cost29">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost29">
-							<label for="value_ac_cost29">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo29"></td>
-					</tr>
-					<tr>
-						<td class="value_number">30</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item30">
-							<label for="auction_item30">
-								<span class="value_text">수 많은 사람이 나를 좋아해! 엄청난
-									<span class="value_name">인기 </span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost30">
-							<label for="value_es_cost30">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost30">
-							<label for="value_ac_cost30">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo30"></td>
-					</tr>
-					<tr>
-						<td class="value_number">31</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item31">
-							<label for="auction_item31">
-								<span class="value_text">몸은 튼튼하고! 마음은 깨끗한!
-									<span class="value_name">건강</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost31">
-							<label for="value_es_cost31">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost31">
-							<label for="value_ac_cost31">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo31"></td>
-					</tr>
-					<tr>
-						<td class="value_number">32</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item32">
-							<label for="auction_item32">
-								<span class="value_text">언제든지 자유롭게 쉬는
-									<span class="value_name">5년치 휴가</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost32">
-							<label for="value_es_cost32">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost32">
-							<label for="value_ac_cost32">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo32"></td>
-					</tr>
-					<tr>
-						<td class="value_number">33</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item33">
-							<label for="auction_item33">
-								<span class="value_text">여기저기 날아가자!
-									<span class="value_name">평생 세계 여행 무료 이용권</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost33">
-							<label for="value_es_cost33">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost33">
-							<label for="value_ac_cost33">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo33"></td>
-					</tr>
-					<tr>
-						<td class="value_number">34</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item34">
-							<label for="auction_item34">
-								<span class="value_text">결단이 더 이상 어렵지 않다!
-									<span class="value_name">뛰어난 판단력</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost34">
-							<label for="value_es_cost34">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost34">
-							<label for="value_ac_cost34">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo34"></td>
-					</tr>
-					<tr>
-						<td class="value_number">35</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item35">
-							<label for="auction_item35">
-								<span class="value_text">사랑하는 엄마아빠!
-									<span class="value_name">건강하고 활기찬 부모님</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost35">
-							<label for="value_es_cost35">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost35">
-							<label for="value_ac_cost35">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo35"></td>
-					</tr>
-					<tr>
-						<td class="value_number">36</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item36">
-							<label for="auction_item36">
-								<span class="value_text">나를 이길자 있으랴!
-									<span class="value_name">무력</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost36">
-							<label for="value_es_cost36">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost36">
-							<label for="value_ac_cost36">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo36"></td>
-					</tr>
-					<tr>
-						<td class="value_number">37</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item37">
-							<label for="auction_item37">
-								<span class="value_text">원하는 자격증도 착착!
-									<span class="value_name">모든 시험에서 1등하기</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost37">
-							<label for="value_es_cost37">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost37">
-							<label for="value_ac_cost37">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo37"></td>
-					</tr>
-					<tr>
-						<td class="value_number">38</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item38">
-							<label for="auction_item38">
-								<span class="value_text">평생 걱정 없이 살 수 있는
-									<span class="value_name">엄청나게 많은 돈</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost38">
-							<label for="value_es_cost38">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost38">
-							<label for="value_ac_cost38">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo38"></td>
-					</tr>
-					<tr>
-						<td class="value_number">39</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item39">
-							<label for="auction_item39">
-								<span class="value_text">당신을 따라가고 싶어요! 
-									<span class="value_name">빛나는 리더십</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost39">
-							<label for="value_es_cost39">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost39">
-							<label for="value_ac_cost39">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo39"></td>
-					</tr>
-					<tr>
-						<td class="value_number">40</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item40">
-							<label for="auction_item40">
-								<span class="value_text">끝까지 한결같아 믿음가는
-									<span class="value_name">근면성실</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost40">
-							<label for="value_es_cost40">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost40">
-							<label for="value_ac_cost40">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo40"></td>
-					</tr>
-					<tr>
-						<td class="value_number">41</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item41">
-							<label for="auction_item41">
-								<span class="value_text">모두가 이목을 집중하는
-									<span class="value_name">부드러운 카리스마</span>
-								</span>
-							</label>
-
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost41">
-							<label for="value_es_cost41">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost41">
-							<label for="value_ac_cost41">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo41"></td>
-					</tr>
-					<tr>
-						<td class="value_number">42</td>
-						<td class="auction_items">
-							<input type="checkbox" class="auction_item_value" name="" id="auction_item42">
-							<label for="auction_item42">
-								<span class="value_text">전세계에 영향력 만점
-									<span class="value_name">엄청난 인맥(인간관계)</span>
-								</span>
-							</label>
-						</td>
-						<td class="value_es_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_es_cost42">
-							<label for="value_es_cost42">만원</label>
-						</td>
-						<td class="value_ac_cost">
-							<input class="value_cost" maxlength="4" type="text" inputmode="numeric" id="value_ac_cost42">
-							<label for="value_ac_cost42">만원</label>
-						</td>
-						<td class="value_memo"><input class="auction_memo" type="text" id="value_memo42"></td>
-					</tr>
-				</tbody>
-			</table>
-			<div class="sr_only">
-				<div>
-					<label for="value_ac_cost1">모두를 즐겁게 웃게 하는 유머감각, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost2">원하는 것을 할 수 있는 자유, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost3">어떤 어려움도 해결할 수 있는 삶의 지혜, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost4">내 천부적인 재능을 펼칠 수 있고 인정해 주는 직장, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost5">모든 언어를 자유롭게 구사하는 어휘력, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost6">모든 스포츠를 프로처럼 잘하는 몸, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost7">마음을 터놓고 의지할 수 있는 형제자매, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost8">나라를 다스릴 수 있는 권위와 권력, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost9">무엇이든 이루어진다! 노력의 천부적인 재능, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost10">모든 사람들로부터 얻는 존경, 명예, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost11">천상의 목소리 모두가 빠지는 노래 실력, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost12">어벤져스같은 슈퍼 히어로 초능력, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost13">목숨을 주어도 아깝지 않을 우정, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost14">삶을 긍정적으로 볼 수 있는 자신감, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost15">휼륭한 배우자와 행복한 결혼 생활, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost16">내가 즐겁게 할 수 있는 만족스러운 직업, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost17">무엇이든 만들어내는 뛰어난 손재주, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost18">사랑이 넘치는 행복한 가족, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost19">내가 원했던 체형과 외모, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost20">어떤 시련도 견뎌낼 수 있는 인내, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost21">나를 언제나 온화하게 감정 조절 능력, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost22">백화점 평생 무료 이용권, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost23">언제나 빛나는 창의력, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost24">보험 없이 오래오래 건강하게! 무병 장수, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost25">세상의 모든 것을 아는 지식, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost26">모든 일에 너그러운 포용력, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost27">세계가 인정하는 에술적 천부적인 재능, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost28">내가 원하는 분야의 천재가 된다! 천부적인 재능, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost29">어떠한 유혹에도 굴하지 않는 굳센 우직함, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost30">수 많은 사람이 나를 좋아해! 엄청난 인기, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost31">몸은 튼튼하고! 마음은 깨끗한! 건강, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost32">언제든지 자유롭게 쉬는 5년치 휴가, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost33">평생 세계 여행 무료 이용권, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost34">뛰어난 판단력, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost35">건강하고 활기찬 부모님, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost36">나를 이길자 있으랴! 무력, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost37">모든 시험에서 1등하기, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost38">엄청나게 많은 돈, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost39">빛나는 리더십, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost40">끝까지 한결같아 믿음가는 근면성실, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost41">부드러운 카리스마, 낙찰로 실제 사용한 금액</label>
-					<label for="value_ac_cost42">엄청난 인맥(인간관계), 낙찰로 실제 사용한 금액</label>
-				</div>
-				<div>
-					<label for="value_es_cost1">모두를 즐겁게 웃게 하는 유머감각, 낙찰 예상  금액</label>
-					<label for="value_es_cost2">원하는 것을 할 수 있는 자유, 낙찰 예상  금액</label>
-					<label for="value_es_cost3">어떤 어려움도 해결할 수 있는 삶의 지혜, 낙찰 예상  금액</label>
-					<label for="value_es_cost4">내 천부적인 재능을 펼칠 수 있고 인정해 주는 직장, 낙찰 예상  금액</label>
-					<label for="value_es_cost5">모든 언어를 자유롭게 구사하는 어휘력, 낙찰 예상  금액</label>
-					<label for="value_es_cost6">모든 스포츠를 프로처럼 잘하는 몸, 낙찰 예상  금액</label>
-					<label for="value_es_cost7">마음을 터놓고 의지할 수 있는 형제자매, 낙찰 예상  금액</label>
-					<label for="value_es_cost8">나라를 다스릴 수 있는 권위와 권력, 낙찰 예상  금액</label>
-					<label for="value_es_cost9">무엇이든 이루어진다! 노력의 천부적인 재능, 낙찰 예상  금액</label>
-					<label for="value_es_cost10">모든 사람들로부터 얻는 존경, 명예, 낙찰 예상  금액</label>
-					<label for="value_es_cost11">천상의 목소리 모두가 빠지는 노래 실력, 낙찰 예상  금액</label>
-					<label for="value_es_cost12">어벤져스같은 슈퍼 히어로 초능력, 낙찰 예상  금액</label>
-					<label for="value_es_cost13">목숨을 주어도 아깝지 않을 우정, 낙찰 예상  금액</label>
-					<label for="value_es_cost14">삶을 긍정적으로 볼 수 있는 자신감, 낙찰 예상  금액</label>
-					<label for="value_es_cost15">휼륭한 배우자와 행복한 결혼 생활, 낙찰 예상  금액</label>
-					<label for="value_es_cost16">내가 즐겁게 할 수 있는 만족스러운 직업, 낙찰 예상  금액</label>
-					<label for="value_es_cost17">무엇이든 만들어내는 뛰어난 손재주, 낙찰 예상  금액</label>
-					<label for="value_es_cost18">사랑이 넘치는 행복한 가족, 낙찰 예상  금액</label>
-					<label for="value_es_cost19">내가 원했던 체형과 외모, 낙찰 예상  금액</label>
-					<label for="value_es_cost20">어떤 시련도 견뎌낼 수 있는 인내, 낙찰 예상  금액</label>
-					<label for="value_es_cost21">나를 언제나 온화하게 감정 조절 능력, 낙찰 예상  금액</label>
-					<label for="value_es_cost22">백화점 평생 무료 이용권, 낙찰 예상  금액</label>
-					<label for="value_es_cost23">언제나 빛나는 창의력, 낙찰 예상  금액</label>
-					<label for="value_es_cost24">보험 없이 오래오래 건강하게! 무병 장수, 낙찰 예상  금액</label>
-					<label for="value_es_cost25">세상의 모든 것을 아는 지식, 낙찰 예상  금액</label>
-					<label for="value_es_cost26">모든 일에 너그러운 포용력, 낙찰 예상  금액</label>
-					<label for="value_es_cost27">세계가 인정하는 에술적 천부적인 재능, 낙찰 예상  금액</label>
-					<label for="value_es_cost28">내가 원하는 분야의 천재가 된다! 천부적인 재능, 낙찰 예상  금액</label>
-					<label for="value_es_cost29">어떠한 유혹에도 굴하지 않는 굳센 우직함, 낙찰 예상  금액</label>
-					<label for="value_es_cost30">수 많은 사람이 나를 좋아해! 엄청난 인기, 낙찰 예상  금액</label>
-					<label for="value_es_cost31">몸은 튼튼하고! 마음은 깨끗한! 건강, 낙찰 예상  금액</label>
-					<label for="value_es_cost32">언제든지 자유롭게 쉬는 5년치 휴가, 낙찰 예상  금액</label>
-					<label for="value_es_cost33">평생 세계 여행 무료 이용권, 낙찰 예상  금액</label>
-					<label for="value_es_cost34">뛰어난 판단력, 낙찰 예상  금액</label>
-					<label for="value_es_cost35">건강하고 활기찬 부모님, 낙찰 예상  금액</label>
-					<label for="value_es_cost36">나를 이길자 있으랴! 무력, 낙찰 예상  금액</label>
-					<label for="value_es_cost37">모든 시험에서 1등하기, 낙찰 예상  금액</label>
-					<label for="value_es_cost38">엄청나게 많은 돈, 낙찰 예상  금액</label>
-					<label for="value_es_cost39">빛나는 리더십, 낙찰 예상  금액</label>
-					<label for="value_es_cost40">끝까지 한결같아 믿음가는 근면성실, 낙찰 예상  금액</label>
-					<label for="value_es_cost41">부드러운 카리스마, 낙찰 예상  금액</label>
-					<label for="value_es_cost42">엄청난 인맥(인간관계), 낙찰 예상  금액</label>
-				</div>
-				<div>
-					<label for="value_memo1">모두를 즐겁게 웃게 하는 유머감각, 항목 비고</label>
-					<label for="value_memo2">원하는 것을 할 수 있는 자유, 항목 비고</label>
-					<label for="value_memo3">어떤 어려움도 해결할 수 있는 삶의 지혜, 항목 비고</label>
-					<label for="value_memo4">내 천부적인 재능을 펼칠 수 있고 인정해 주는 직장, 항목 비고</label>
-					<label for="value_memo5">모든 언어를 자유롭게 구사하는 어휘력, 항목 비고</label>
-					<label for="value_memo6">모든 스포츠를 프로처럼 잘하는 몸, 항목 비고</label>
-					<label for="value_memo7">마음을 터놓고 의지할 수 있는 형제자매, 항목 비고</label>
-					<label for="value_memo8">나라를 다스릴 수 있는 권위와 권력, 항목 비고</label>
-					<label for="value_memo9">무엇이든 이루어진다! 노력의 천부적인 재능, 항목 비고</label>
-					<label for="value_memo10">모든 사람들로부터 얻는 존경, 명예, 항목 비고</label>
-					<label for="value_memo11">천상의 목소리 모두가 빠지는 노래 실력, 항목 비고</label>
-					<label for="value_memo12">어벤져스같은 슈퍼 히어로 초능력, 항목 비고</label>
-					<label for="value_memo13">목숨을 주어도 아깝지 않을 우정, 항목 비고</label>
-					<label for="value_memo14">삶을 긍정적으로 볼 수 있는 자신감, 항목 비고</label>
-					<label for="value_memo15">휼륭한 배우자와 행복한 결혼 생활, 항목 비고</label>
-					<label for="value_memo16">내가 즐겁게 할 수 있는 만족스러운 직업, 항목 비고</label>
-					<label for="value_memo17">무엇이든 만들어내는 뛰어난 손재주, 항목 비고</label>
-					<label for="value_memo18">사랑이 넘치는 행복한 가족, 항목 비고</label>
-					<label for="value_memo19">내가 원했던 체형과 외모, 항목 비고</label>
-					<label for="value_memo20">어떤 시련도 견뎌낼 수 있는 인내, 항목 비고</label>
-					<label for="value_memo21">나를 언제나 온화하게 감정 조절 능력, 항목 비고</label>
-					<label for="value_memo22">백화점 평생 무료 이용권, 항목 비고</label>
-					<label for="value_memo23">언제나 빛나는 창의력, 항목 비고</label>
-					<label for="value_memo24">보험 없이 오래오래 건강하게! 무병 장수, 항목 비고</label>
-					<label for="value_memo25">세상의 모든 것을 아는 지식, 항목 비고</label>
-					<label for="value_memo26">모든 일에 너그러운 포용력, 항목 비고</label>
-					<label for="value_memo27">세계가 인정하는 에술적 천부적인 재능, 항목 비고</label>
-					<label for="value_memo28">내가 원하는 분야의 천재가 된다! 천부적인 재능, 항목 비고</label>
-					<label for="value_memo29">어떠한 유혹에도 굴하지 않는 굳센 우직함, 항목 비고</label>
-					<label for="value_memo30">수 많은 사람이 나를 좋아해! 엄청난 인기, 항목 비고</label>
-					<label for="value_memo31">몸은 튼튼하고! 마음은 깨끗한! 건강, 항목 비고</label>
-					<label for="value_memo32">언제든지 자유롭게 쉬는 5년치 휴가, 항목 비고</label>
-					<label for="value_memo33">평생 세계 여행 무료 이용권, 항목 비고</label>
-					<label for="value_memo34">뛰어난 판단력, 항목 비고</label>
-					<label for="value_memo35">건강하고 활기찬 부모님, 항목 비고</label>
-					<label for="value_memo36">나를 이길자 있으랴! 무력, 항목 비고</label>
-					<label for="value_memo37">모든 시험에서 1등하기, 항목 비고</label>
-					<label for="value_memo38">엄청나게 많은 돈, 항목 비고</label>
-					<label for="value_memo39">빛나는 리더십, 항목 비고</label>
-					<label for="value_memo40">끝까지 한결같아 믿음가는 근면성실, 항목 비고</label>
-					<label for="value_memo41">부드러운 카리스마, 항목 비고</label>
-					<label for="value_memo42">엄청난 인맥(인간관계), 항목 비고</label>
-				</div>
-			</div>
-			<form method="dialog" class="popup_close">
-				<button id="game_board_table_close" type="submit">
-					<img class="icon_img" src="../icon/Xclose.svg" alt="">
-					<span class="sr_only">가치관 목록(표) 닫기</span>
-				</button>
-			</form>
-		</dialog>
 	</main>
 	<footer>
 		<div class="content_width">
