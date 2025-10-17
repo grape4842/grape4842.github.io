@@ -161,6 +161,7 @@ img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"]
 .donate_list {
 	margin-top:2rem;
 	display: grid;
+	gap:1rem;
 }
 .donate_li {
 	display: flex;

@@ -626,9 +626,6 @@ dialog {
 	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 		padding:1.5rem 1.75rem;
 	}
-	dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
-		right:1rem;
-	}
 
 }
 
@@ -642,9 +639,6 @@ dialog {
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 		padding:1rem 1.25rem;
-	}
-	dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
-		right:0.75rem;
 	}
 }
 
@@ -674,9 +668,6 @@ dialog {
 	dialog :where(.popover_header,.popover_head,.popup_header,.popup_head,.popup_tit,.popup_title,.modal_header),
 	dialog :where(.popover_content,.popover_body,.popup_content, .popup_body,.popup_main,.modal_content) {
 		padding:0.25rem 0.5rem;
-	}
-	dialog form[method="dialog"], dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
-		right:-0.25rem;
 	}
 }
 
