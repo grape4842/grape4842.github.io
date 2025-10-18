@@ -120,6 +120,8 @@ background: var(--transparent_purple);}
 	z-index: 2;
 	width: 100dvw;
 	height: 100dvh;
+	max-width: 100dvw;
+	max-height: 100dvh;
 	border:1px solid var(--variable_purple);
 	padding:clamp(1rem, 10vmax, 2rem);
 	margin: 0;
@@ -130,12 +132,15 @@ background: var(--transparent_purple);}
 	border:var(--variable_invert_purple) solid 2px;
 	background: var(--default_purple);
 }
+#game_board_table {
+	padding:0rem;
+}
 #value_table_list {
-	margin:1rem auto;
+	margin:0rem auto;
 }
 #value_table_list :where(th, .value_number) {
 	background: var(--default_purple);
-	color:#fff;
+	color:var(--pure_white);
 	text-align: center;
 	font-size:1rem!important;
 	padding:0.5rem;
