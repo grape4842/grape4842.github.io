@@ -7,6 +7,9 @@
 	width: 0rem;  /* 스크롤바의 너비 */
 }
 h2 {
+	font-weight: 900;
+	font-size:1.25rem;
+	margin-bottom: 1rem;
 	color:var(--high_variable_invert_purple);
 }
 input {
@@ -31,15 +34,7 @@ body:has(.popup_box:popover-open) {
 }
 body {
 	overflow-x:hidden;
-	word-break: keep-all; 
-	line-break:normal; 
 	font-size:18px;
-	display:block; 
-	padding:0px; margin:0px; 
-	box-sizing:border-box;
-	background: url(../img/purplestar.jpg);
-	background-attachment:fixed;
-	backdrop-filter:hue-rotate(-10deg);
 }
 header, footer {
 	padding:1rem;
@@ -90,224 +85,225 @@ table {overflow-x: scroll;}
 	background: transparent;
 }
 .rule_money {
-background: var(--transparent_purple);}
+	background: var(--transparent_purple);}
 
-.auction_memo {
-	background: transparent;
-	border:none;
-	border-bottom:solid 1px;
-}
-#value_table_list input[type="text"]:focus {
-	box-shadow: 0 0.25rem 0.25rem 1px #76b inset;
-}
-.game_open {
-	padding: 1rem;
-	border-radius: 1rem;
-	display: flex;
-	justify-content: center;
-	border:6px solid #76b;
-}
-#game_ready_open {
-	background: transparent;
+	.auction_memo {
+		background: transparent;
+		border:none;
+		border-bottom:solid 1px;
+	}
+	#value_table_list input[type="text"]:focus {
+		box-shadow: 0 0.25rem 0.25rem 1px #76b inset;
+	}
+	.game_open {
+		padding: 1rem;
+		border-radius: 1rem;
+		display: flex;
+		justify-content: center;
+		border:6px solid #76b;
+	}
+	#game_ready_open {
+		background: transparent;
 
-}
-.board_open {
-	background: var(--variable_purple);
-	color:var(--pure_white);
-	margin:1rem auto;
-}
-.board_contents {
-	z-index: 2;
-	width: 100dvw;
-	height: 100dvh;
-	max-width: 100dvw;
-	max-height: 100dvh;
-	border:1px solid var(--variable_purple);
-	padding:clamp(1rem, 10vmax, 2rem);
-	margin: 0;
-}
-.board_contents .popup_close {
-	right:0rem;
-	border-radius: 0.5rem;
-	border:var(--variable_invert_purple) solid 2px;
-	background: var(--default_purple);
-}
-#game_board_table {
-	padding:0rem;
-}
-#value_table_list {
-	margin:0rem auto;
-}
-#value_table_list :where(th, .value_number) {
-	background: var(--default_purple);
-	color:var(--pure_white);
-	text-align: center;
-	font-size:1rem!important;
-	padding:0.5rem;
-}
-#value_table_list thead {
-	position: sticky;
-	z-index: 2;
-}
-#value_table_list td {
-	border:rgba(70 60 100 / 0.5) solid 1px;
-}
-#value_list {
-	display: grid;
-	place-items: center;
-	grid-auto-flow: row dense;
-	gap:1rem;
-	margin:auto;
-}
-label {
-	cursor: pointer;
-	justify-content: center;
-	align-items: center;
-}
-label[for="gold_sound"] {
-	width:12rem;
-	margin: 1rem auto;
-}
-#gold_sound ~ img {
-	aspect-ratio: 1/1;
-	width:1.5rem;
-	margin-right: 1rem;
-	filter: invert(80%);
-}
-#gold_sound:checked ~ .gs_on{display: flex;}
-#gold_sound:checked ~ .gs_off{display: none;}
-#gold_sound ~ .gs_on{display: none;}
+	}
+	.board_open {
+		background: var(--default_purple);
+		color:var(--pure_white);
+		margin:1rem auto;
+	}
+	.board_contents {
+		z-index: 2;
+		width: 100dvw;
+		height: 100dvh;
+		max-width: 100dvw;
+		max-height: 100dvh;
+		border:1px solid var(--variable_purple);
+		padding:clamp(1rem, 10vmax, 2rem);
+		margin: 0;
+	}
+	.board_contents .popup_close {
+		right:0rem;
+		border-radius: 0.5rem;
+		border:var(--variable_invert_purple) solid 2px;
+		background: var(--default_purple);
+	}
+	#game_board_table {
+		padding:0rem;
+	}
+	#value_table_list {
+		margin:0rem auto;
+	}
+	#value_table_list :where(th, .value_number) {
+		background: var(--default_purple);
+		color:var(--pure_white);
+		text-align: center;
+		font-size:1rem!important;
+		padding:0.5rem;
+	}
+	#value_table_list thead {
+		position: sticky;
+		z-index: 2;
+	}
+	#value_table_list td {
+		border:rgba(70 60 100 / 0.5) solid 1px;
+	}
+	#value_list {
+		display: grid;
+		place-items: center;
+		grid-auto-flow: row dense;
+		gap:1rem;
+		margin:auto;
+	}
+	label {
+		cursor: pointer;
+		justify-content: center;
+		align-items: center;
+	}
+	label[for="gold_sound"] {
+		width:12rem;
+		margin: 1rem auto;
+	}
+	#gold_sound ~ img {
+		aspect-ratio: 1/1;
+		width:1.5rem;
+		margin-right: 1rem;
+		filter: invert(80%);
+	}
+	#gold_sound:checked ~ .gs_on{display: flex;}
+	#gold_sound:checked ~ .gs_off{display: none;}
+	#gold_sound ~ .gs_on{display: none;}
 
-li:has(.value_label) {
-	height: 100%;
-	width: 100%;
-	box-sizing: border-box;
-}
-.value_label {
-	height: 100%;
-	display: flex;
-	padding:clamp(0.5rem, 10vmax, 1rem);
-	background: rgba(100 70 255 / 0.1);
-	transition: background 0.2s, color 0.2s, box-shadow 0.1s, border 0.2s;
-	border-radius: 1rem;
-	box-shadow: 0px 0px 0px 0.25rem var(--variable_invert_purple) inset;
-}
-input[type="checkbox"] {
-	position: absolute;
-	appearance: none;
-	padding:0;
-	margin: 0;
-	-webkit-appearance:none;
-	width:100%; height: 100%;
-	top:0; left:0;
-	border-radius: 1rem;
-	outline-offset: -0.5rem;
-}
-.value_item:checked + .value_text::after {
-	content: '';
-	width:100%;
-	height: 100%;
-	border-radius: 0.25rem;
-	box-shadow:0 0 0 calc(clamp(0.5rem, 10vmax, 1rem) - 0.25rem) var(--alpha_gray);
-	display: flex;
-	position: absolute;
-	top:0; left:0;
-	background: var(--alpha_gray);
-}
-.value_label:has(.value_item:checked) {
-	box-shadow: 0px 0px 0px 0.25rem var(--default_purple) inset;
-}
-.value_label:has(.value_item:checked)::after {
-	content: '낙찰';
-	height:60%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	font-weight: 900;
-	font-size: 2rem;
-	border-radius: 1px;
-	rotate:-21deg;
-	opacity: 0;
-	transition: scale 0.2s;
-	border:0.25rem solid transparent;
-	box-shadow:0 0 0 0.25rem var(--sold), 0 0 0 2px var(--sold) inset;
-	color:var(--sold);
-}
-@keyframes bid {
-	from {opacity:0; scale: 3;}
-	to {opacity: .8; scale: 1;}
-}
-.value_label:has(.value_item:checked)::after {
-	animation-name: bid;
-	animation-duration: 0.2s;
-	animation-timing-function:ease-in-out;
-	animation-fill-mode: forwards;
-}
-.value_item:checked ~ span {
-	transition: color 0.2s, filter 0.2s;
-}
-.auction_items label {
-	padding:0.5rem;
-	display: flex;
-	justify-content: flex-start;
-}
-tr:has(.auction_item_value) {
-	transition: all 0.2s;
-}
-td:has(.auction_item_value:checked) {
-	background: var(--variable_purple);
-	color:var(--pure_white);
-}
-tr:has(.auction_item_value:checked) .value_text {
-	color:var(--pure_white);
-}
-tr:has(.auction_item_value:checked) .value_name {
-	color:var(--sold);
-}
-tr:has(.auction_item_value:checked) .value_number::after {
-	content: '낙찰';
-	animation-name: bid_table;
-	animation-duration: 0.13s;
-	animation-timing-function:ease-in-out;
-	animation-fill-mode: forwards;
-	font-size: 1rem;
-	display: block;
-	width:100%;
-	scale: 0.9;
-	aspect-ratio: 1/1;
-	border:0.25rem solid #fa9;
-	color:#fa9;
-	font-weight: 900;
-	border-radius: 2rem;
-	position: absolute;
-	left:0; top:0;
-}
-@keyframes bid_table {
-	from {opacity:0; scale: 3;}
-	to {opacity: 1; scale: 0.9;}
-}
+	li:has(.value_label) {
+		height: 100%;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.value_label {
+		height: 100%;
+		display: flex;
+		padding:clamp(0.5rem, 10vmax, 1rem);
+		background: rgba(100 70 255 / 0.1);
+		transition: background 0.2s, color 0.2s, box-shadow 0.1s, border 0.2s;
+		border-radius: 1rem;
+		box-shadow: 0px 0px 0px 0.25rem var(--variable_invert_purple) inset;
+	}
+	input[type="checkbox"] {
+		position: absolute;
+		appearance: none;
+		padding:0;
+		margin: 0;
+		-webkit-appearance:none;
+		width:100%; height: 100%;
+		top:0; left:0;
+		border-radius: 1rem;
+		outline-offset: -0.5rem;
+	}
+	.value_item:checked + .value_text::after {
+		content: '';
+		width:100%;
+		height: 100%;
+		border-radius: 0.25rem;
+		box-shadow:0 0 0 calc(clamp(0.5rem, 10vmax, 1rem) - 0.25rem) var(--alpha_gray);
+		display: flex;
+		position: absolute;
+		top:0; left:0;
+		background: var(--alpha_gray);
+	}
+	.value_label:has(.value_item:checked) {
+		box-shadow: 0px 0px 0px 0.25rem var(--default_purple) inset;
+	}
+	.value_label:has(.value_item:checked)::after {
+		content: '낙찰';
+		height:60%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		font-weight: 900;
+		font-size: 2rem;
+		border-radius: 1px;
+		rotate:-21deg;
+		opacity: 0;
+		transition: scale 0.2s;
+		border:0.25rem solid transparent;
+		box-shadow:0 0 0 0.25rem var(--sold), 0 0 0 2px var(--sold) inset;
+		color:var(--sold);
+	}
+	@keyframes bid {
+		from {opacity:0; scale: 3;}
+		to {opacity: .8; scale: 1;}
+	}
+	.value_label:has(.value_item:checked)::after {
+		animation-name: bid;
+		animation-duration: 0.2s;
+		animation-timing-function:ease-in-out;
+		animation-fill-mode: forwards;
+	}
+	.value_item:checked ~ span {
+		transition: color 0.2s, filter 0.2s;
+	}
+	.auction_items label {
+		padding:0.5rem;
+		display: flex;
+		justify-content: flex-start;
+	}
+	tr:has(.auction_item_value) {
+		transition: all 0.2s;
+	}
+	td:has(.auction_item_value:checked) {
+		background: var(--variable_purple);
+		color:var(--pure_white);
+	}
+	tr:has(.auction_item_value:checked) .value_name {
+		color:var(--sold);
+	}
+	tr:has(.auction_item_value:checked) .value_number::after {
+		content: '낙찰';
+		animation-name: bid_table;
+		animation-duration: 0.13s;
+		animation-timing-function:ease-in-out;
+		animation-fill-mode: forwards;
+		font-size: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width:100%;
+		scale: 0.9;
+		aspect-ratio: 1/1;
+		border:0.25rem solid #fa9;
+		color:#fa9;
+		font-weight: 900;
+		border-radius: 2rem;
+		position: absolute;
+		left:0;
+		top:50%;
+		transform: translateY(-50%);
+	}
+	@keyframes bid_table {
+		from {opacity:0; scale: 3;}
+		to {opacity: 1; scale: 0.9;}
+	}
 
-.value_text {
-	font-size: 1.1rem;
-	text-align: center;
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-}
-.value_name {
-	font-weight: 900;
-	color:var(--variable_invert_purple);
-	filter: hue-rotate(-40deg);
-	transition: color 0.2s;
-}
+	.value_text {
+		font-size: 1.1rem;
+		text-align: center;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+	.value_name {
+		font-weight: 900;
+		color:var(--variable_invert_purple);
+		filter: hue-rotate(-40deg);
+		transition: color 0.2s;
+	}
 
 /*Dark Mode Layout*/
 @media (prefers-color-scheme:dark) {
 	#gold_sound ~ img {
 		filter:invert(0);
 	}
-
+}
 /*기기별 CSS*/
 
 /*PC*/
