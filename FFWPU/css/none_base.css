@@ -267,7 +267,7 @@ h2 {
 .news_and_notice a {
 	width: 100%;
 }
-.news_and_notice img {
+.news_and_notice article img {
 	max-width: 3rem;
 }
 .news_and_notice a span {
