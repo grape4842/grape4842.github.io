@@ -32,6 +32,10 @@
 
 	--yellow:light-dark(#960, #ffa);
 
+	--sunmoon_red:#D31945;
+	--sunmoon_green:#006A79;
+	--sunmoon_lightgray:#A5AEB4;
+	--sunmoon_darkgray:#0D1F1D;
 }
 ::selection {
 	background:#baf; 
