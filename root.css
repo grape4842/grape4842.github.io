@@ -236,6 +236,7 @@ summary {
 /* 헤딩의 자식 요소는 부모의 폰트 속성 계승 */
 :where(h1, h2, h3, h4, h5, h6) * {
 	font: inherit; 
+	font-weight: 500;
 }
 
 /* 일관성 있는 스타일의 수평선 */

@@ -191,10 +191,11 @@ p {
 }
 h2, h3, h4, h5, h6 {
 	padding:0.5rem;
+	font-weight: bold;
 }
 h2 {
 	font-weight:900;
-	font-size:1.2rem;
+	font-size:1.25rem;
 	color:var(--yellow);
 }
 .metro_line {
