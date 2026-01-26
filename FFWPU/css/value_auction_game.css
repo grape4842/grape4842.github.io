@@ -17,10 +17,7 @@ input {
 }
 .popup_box {
 	position: fixed;
-	max-width:90vw;
 	margin:auto;
-	min-height: 10rem;
-	max-height: 90vh;
 	overflow-y: scroll;
 	border:0.25rem solid var(--default_purple);
 	border-radius: 0.5rem;
@@ -76,7 +73,7 @@ table {overflow-x: scroll;}
 .rule_money, .value_cost {
 	border: none;
 	text-align: center;
-	width:5ch!important;
+	width:4ch!important;
 	padding:0.25rem;
 	box-sizing: content-box;
 	margin:0px 0.25rem;
@@ -335,7 +332,7 @@ tr:has(.auction_item_value:checked) .value_number::after {
 }
 /*watch*/
 @media screen and (330px > width) {
-	.content_width, .popup_box {
+	.content_width {
 		width:95vw;
 	}
 }
