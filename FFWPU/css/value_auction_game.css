@@ -96,7 +96,7 @@ table {overflow-x: scroll;}
 	border-radius: 1rem;
 	display: flex;
 	justify-content: center;
-	border:6px solid #76b;
+	border:6px solid var(--variable_invert_purple);
 }
 #game_ready_open {
 	background: transparent;
