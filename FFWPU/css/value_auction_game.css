@@ -63,7 +63,6 @@ section li {
 	display: inline-block;
 	flex-direction: column;
 	padding:0.25rem 0px;
-	border-bottom:1px solid rgba(100 70 255 / 0.3);
 }
 table {overflow-x: scroll;}
 .button_area {
