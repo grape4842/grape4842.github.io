@@ -120,7 +120,7 @@ table {overflow-x: scroll;}
 .board_contents .popup_close {
 	right:0rem;
 	border-radius: 0.5rem;
-	border:var(--variable_invert_purple) solid 2px;
+	border:var(--variable_invert_purple) solid 0.25rem;
 	background: var(--default_purple);
 }
 #game_board_table {
@@ -156,7 +156,7 @@ label {
 	align-items: center;
 }
 label[for="gold_sound"] {
-	width:12rem;
+	width:max-content;
 	margin: 1rem auto;
 }
 #gold_sound ~ img {
@@ -268,8 +268,8 @@ tr:has(.auction_item_value:checked) .value_number::after {
 	width:100%;
 	scale: 0.9;
 	aspect-ratio: 1/1;
-	border:0.25rem solid #fa9;
-	color:#fa9;
+	border:0.25rem solid var(--sold);
+	color:var(--sold);
 	font-weight: 900;
 	border-radius: 2rem;
 	position: absolute;
