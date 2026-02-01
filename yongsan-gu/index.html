@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../font.css">
+	<link rel="stylesheet" type="text/css" href="../root.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<meta charset="utf-8"> 
+	<meta name="color-scheme" content="dark light">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="@purplemiyazawa">
+	<meta name="copyright" content="@purplemiyazawa">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	<meta property="og:description" content="">
+	<meta property="og:locate" content="ko-kr">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="theme-color" content="#63b">
+	<meta name="msapplication-TileColor" content="#baf">
+	<meta name="msapplication-TileImage" content="../ffwp-logo-transparent-purple-gradient/ms-icon-310x310.png">
+
+
+	<title>제목</title>
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
+	<link rel="preload" href="../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic.ttf" as="font">
+	<link rel="preload" href="../font/BIZ-UD/BIZ-UDGothic-Bold.ttf" as="font">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="../ffwp-logo-transparent-purple-gradient/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../ffwp-logo-transparent-purple-gradient/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../ffwp-logo-transparent-purple-gradient/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../ffwp-logo-transparent-purple-gradient/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../ffwp-logo-transparent-purple-gradient/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../ffwp-logo-transparent-purple-gradient/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../ffwp-logo-transparent-purple-gradient/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../ffwp-logo-transparent-purple-gradient/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../ffwp-logo-transparent-purple-gradient/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../ffwp-logo-transparent-purple-gradient/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../ffwp-logo-transparent-purple-gradient/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../ffwp-logo-transparent-purple-gradient/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../ffwp-logo-transparent-purple-gradient/favicon-16x16.png">
+	<link rel="manifest" href="../ffwp-logo-transparent-purple-gradient/manifest.json">
+
+</head>
+
+<body>
+	<script type="text/javascript" src="../../include_script.js"></script>
+	<a id="skip_nav" href="main_head1">본문 바로가기</a>
+	<header>
+		<div class="content_width">
+			<h1><img alt="" src="img/yongsan_logo.svg">
+			용산구 행정동 상세 목록</h1>
+		</div>
+	</header>
+	<main>
+		<section class="content_width">
+			<h2 id="main_head1">
+				</h2>
+			
+			<form id="dong_form">
+				<div class="dong_grid" id="grid_container" role="radiogroup" aria-label="행정동 선택"></div>
+			</form>
+
+			<main class="display_panel">
+				<div class="content_area">
+					<div class="title_row">
+						<h2 id="dong_name" class="dong_name_h2">-</h2>
+						<button type="button" class="btn_action" id="btn_tts">🔊 읽기</button>
+					</div>
+
+					<div class="info_grid">
+						<!-- 주소 및 관할구역 -->
+						<article class="info_card">
+							<h3>위치 및 관할</h3>
+							<p id="addr_display"></p>
+							<div id="addr_target" class="facility_name"></div>
+							<div id="jurisdiction" class="juris_box"></div>
+							<div >
+								<a id="map_btn" href="#" target="_blank" >📍 지도 보기</a>
+							</div>
+						</article>
+
+						<!-- 지하철 정보 -->
+						<section class="info_card">
+							<h3>지하철역</h3>
+							<div id="subway_list"></div>
+						</section>
+
+						<!-- 버스 정보 -->
+						<section class="info_card">
+							<h3>버스 정류소</h3>
+							<div id="bus_list"></div>
+						</section>
+
+						<!-- 유관기관 -->
+						<article class="info_card" style="grid-column: span 2;">
+							<h3>유관 거점</h3>
+							<p id="infra_church"></p>
+						</article>
+					</div>
+				</div>
+
+			</section>
+			<section class="content_width">
+				<h2 id="main_head2"></h2>
+				<table>
+					<caption>행정구역 상세 정보 및 연락처</caption>
+					<thead>
+						<tr>
+							<th scope="col">행정구역</th>
+							<th scope="col">동주민센터 소재지</th>
+							<th scope="col">대표전화</th>
+							<th scope="col">지도보기</th>
+							<th scope="col">홈페이지</th>
+							<th scope="col">관할구역</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>후암동</td>
+							<td>후암로 32-6</td>
+							<td><a href="tel:02-2199-8660" title="전화걸기">02-2199-8660<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,495173,1124768&amp;rt1=&amp;rt2=%ED%9B%84%EC%95%94%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,10961024" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=01" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>후암동</td>
+						</tr>
+						<tr>
+							<td>용산2가동</td>
+							<td>신흥로 90</td>
+							<td><a href="tel:02-2199-8640" title="전화걸기">02-2199-8640<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,496812,1124061&amp;rt1=&amp;rt2=%EC%9A%A9%EC%82%B02%EA%B0%80%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,10620764" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=02" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>용산동2가, 용산동4가</td>
+						</tr>
+						<tr>
+							<td>남영동</td>
+							<td>두텁바위로 25</td>
+							<td><a href="tel:02-2199-8620" title="전화걸기">02-2199-8620<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,494451,1123948&amp;rt1=&amp;rt2=%EB%82%A8%EC%98%81%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,11948993" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=03" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>갈월동, 남영동, 동자동, 용산동1가</td>
+						</tr>
+						<tr>
+							<td>청파동</td>
+							<td>청파로49길 6</td>
+							<td><a href="tel:02-2199-8700" title="전화걸기">02-2199-8700<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,493342,1123867&amp;rt1=&amp;rt2=%EC%B2%AD%ED%8C%8C%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,8105995" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=04" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>서계동, 청파동1가, 청파동2가, 청파동3가</td>
+						</tr>
+						<tr>
+							<td>원효로제1동</td>
+							<td>백범로 350</td>
+							<td><a href="tel:02-2199-8400" title="전화걸기">02-2199-8400<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,492866,1121619&amp;rt1=&amp;rt2=%EC%9B%90%ED%9A%A8%EB%A1%9C1%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,8480813" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=05" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>원효로1가, 원효로2가, 문배동, 신계동</td>
+						</tr>
+						<tr>
+							<td>원효로제2동</td>
+							<td>효창원로8길 3</td>
+							<td><a href="tel:02-2199-8420" title="전화걸기">02-2199-8420<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,489290,1120797&amp;rt1=&amp;rt2=%EC%9B%90%ED%9A%A8%EB%A1%9C2%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,23883280" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=06" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>원효로3가, 원효로4가, 신창동, 청암동, 산천동</td>
+						</tr>
+						<tr>
+							<td>효창동</td>
+							<td>효창원로 161</td>
+							<td><a href="tel:02-2199-8680" title="전화걸기">02-2199-8680<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,491582,1123043&amp;rt1=&amp;rt2=%ED%9A%A8%EC%B0%BD%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,12101605" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=07" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>효창동</td>
+						</tr>
+						<tr>
+							<td>용문동</td>
+							<td>새창로12길 13</td>
+							<td><a href="tel:02-2199-8440" title="전화걸기">02-2199-8440<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,490632,1122056&amp;rt1=&amp;rt2=%EC%9A%A9%EB%AC%B8%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,8462143" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=08" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>용문동, 도원동</td>
+						</tr>
+						<tr>
+							<td>한강로동</td>
+							<td>한강대로38길 28</td>
+							<td><a href="tel:02-2199-8560" title="전화걸기">02-2199-8560<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,493175,1119069&amp;rt1=&amp;rt2=%ED%95%9C%EA%B0%95%EB%A1%9C%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,8142778" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=09" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>한강로1가, 한강로2가, 한강로3가, 용산동3가, 용산동5가</td>
+						</tr>
+						<tr>
+							<td>이촌제1동</td>
+							<td>이촌로71길 24</td>
+							<td><a href="tel:02-2199-8580" title="전화걸기">02-2199-8580<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,494103,1117198&amp;rt1=&amp;rt2=%EC%9D%B4%EC%B4%8C1%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,8056169" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=10" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>이촌동 298～302, 399, 402～410, 412～418, 426, 430</td>
+						</tr>
+						<tr>
+							<td>이촌제2동</td>
+							<td>이촌로18길 20</td>
+							<td><a href="tel:02-2199-8600" title="전화걸기">02-2199-8600<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,489984,1118549&amp;rt1=&amp;rt2=%EC%9D%B4%EC%B4%8C2%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,10760428" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=11" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>이촌동 1, 2, 139～183, 186～187, 191～193, 196～199, 203, 205, 206, 208, 209, 210, 211, 212, 220～222, 224, 225, 281, 292, 293, 309, 395, 400, 401, 411, 422, 434</td>
+						</tr>
+						<tr>
+							<td>이태원제1동</td>
+							<td>보광로 104-6</td>
+							<td><a href="tel:02-2199-8460" title="전화걸기">02-2199-8460<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,498917,1120280&amp;rt1=&amp;rt2=%EC%9D%B4%ED%83%9C%EC%9B%901%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,10750541" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=12" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>이태원동 11, 산13, 15, 17, 18～20, 22, 34, 36, 44, 56～57, 59～67, 72～79, 87, 92, 96～97, 99～106, 108, 111～112, 116～120, 122～124, 126～133, 135～137, 140～142, 147～155, 158～159, 162, 164～169, 171～172, 176, 180～181, 183～184, 187, 189～191, 453～456, 457의 1,3,6,9,11, 730</td>
+						</tr>
+						<tr>
+							<td>이태원제2동</td>
+							<td>회나무로13길 58</td>
+							<td><a href="tel:02-2199-8480" title="전화걸기">02-2199-8480<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,497834,1122887&amp;rt1=&amp;rt2=%EC%9D%B4%ED%83%9C%EC%9B%90%EC%A0%9C2%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,23882154" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=13" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>이태원동 1～6, 192～452, 457의7, 457의10, 462～727</td>
+						</tr>
+						<tr>
+							<td>한남동</td>
+							<td>대사관로5길 1</td>
+							<td><a href="tel:02-2199-8500" title="전화걸기">02-2199-8500<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,500122,1120869&amp;rt1=&amp;rt2=%ED%95%9C%EB%82%A8%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,8150355" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=14" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>한남동</td>
+						</tr>
+						<tr>
+							<td>서빙고동</td>
+							<td>서빙고로 279</td>
+							<td><a href="tel:02-2199-8520" title="전화걸기">02-2199-8520<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,498815,1116938&amp;rt1=&amp;rt2=%EC%84%9C%EB%B9%99%EA%B3%A0%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,11140052" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=15" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>서빙고동, 동빙고동, 주성동, 용산동6가</td>
+						</tr>
+						<tr>
+							<td>보광동</td>
+							<td>장문로 95</td>
+							<td><a href="tel:02-2199-8540" title="전화걸기">02-2199-8540<span class="tel-number"><i class="fa fa-phone"></i></span></a></td>
+							<td><a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,500038,1118550&amp;rt1=&amp;rt2=%EB%B3%B4%EA%B4%91%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0&amp;rtIds=,8326351" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-view">보기</a></td>
+							<td><a href="/dong/main/main.do?dongCd=16" rel="noopener noreferrer" target="_blank" title="새창열림" class="b-blue">바로가기</a></td>
+							<td>보광동</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</main>
+		<footer>
+			<div class="content_width">
+				<address>@purplemiyazawa</address>
+			</div>
+		</footer>
+
+		<script>
+			const DONG_DATA = {
+				huam: { 
+					name: "후암동", road: "후암로16길 38", target: "후암동 주민센터", jibun: "후암동 110-101", 
+					juris: "관할구역: 후암동 전역",
+					subways: [{n:"4", s:"숙대입구역", c:"#0ad"}, {n:"1", s:"서울역", c:"#05a"}],
+					buses: [{n:"후암동종점", r:["202", "400"], c:"#06b"}, {n:"후암시장", r:["용산02"], c:"#5b3"}],
+					church: "청파동 본부교회 도보 및 마을버스 이동 가능"
+				},
+				yongsan2ga: { 
+					name: "용산2가동", road: "신흥로 90", target: "용산2가동 주민센터", jibun: "용산동2가 1-1375", 
+					juris: "관할구역: 용산동2가, 용산동4가",
+					subways: [{n:"6", s:"녹사평역", c:"#c72"}],
+					buses: [{n:"해방촌오거리", r:["용산02"], c:"#5b3"}],
+					church: "해방촌 정성 분회 활동지"
+				},
+				namyoung: { 
+					name: "남영동", road: "한강대로76길 7", target: "남영동 주민센터", jibun: "갈월동 98-7", 
+					juris: "관할구역: 남영동, 갈월동, 동자동, 문배동, 신계동",
+					subways: [{n:"1", s:"남영역", c:"#05a"}, {n:"4", s:"숙대입구역", c:"#0ad"}],
+					buses: [{n:"갈월동", r:["150", "507", "750A"], c:"#06b"}],
+					church: "청파동 본부 인접 배후 구역"
+				},
+				cheongpa: { 
+					name: "청파동", road: "청파로47길 52", target: "청파동 주민센터", jibun: "청파동2가 74-1", 
+					juris: "관할구역: 청파동1,2,3가, 서계동",
+					subways: [{n:"4", s:"숙대입구역", c:"#0ad"}, {n:"1", s:"남영역", c:"#05a"}],
+					buses: [{n:"청파동주민센터", r:["262"], c:"#06b"}, {n:"숙대입구역", r:["04"], c:"#5b3"}],
+					church: "천복궁교회(세계평화통일가정연합 본부교회) 소재지"
+				},
+				wonhyo1: { 
+					name: "원효로1동", road: "원효로 177-11", target: "원효로1동 주민센터", jibun: "원효로1가 39-1", 
+					juris: "관할구역: 원효로1,2가, 문배동, 신계동",
+					subways: [{n:"1", s:"남영역", c:"#05a"}, {n:"6", s:"효창공원앞역", c:"#c72"}],
+					buses: [{n:"원효로1가", r:["0017"], c:"#5b3"}],
+					church: "용산지구 식구 활동 거점"
+				},
+				wonhyo2: { 
+					name: "원효로2동", road: "원효로 123", target: "원효로2동 주민센터", jibun: "원효로3가 1-1", 
+					juris: "관할구역: 원효로3,4가, 산천동, 신창동, 청암동",
+					subways: [{n:"6", s:"효창공원앞역", c:"#c72"}],
+					buses: [{n:"원효로3가", r:["162", "503"], c:"#06b"}],
+					church: "원효로 일대 정성 분회"
+				},
+				hyochang: { 
+					name: "효창동", road: "효창원로 161", target: "효창동 주민센터", jibun: "효창동 5-144", 
+					juris: "관할구역: 효창동 전역",
+					subways: [{n:"6", s:"효창공원앞역", c:"#c72"}, {n:"경", s:"효창공원앞역", c:"#7c9"}],
+					buses: [{n:"효창공원앞", r:["400"], c:"#06b"}],
+					church: "효창 지역 식구 기도실"
+				},
+				yongmun: { 
+					name: "용문동", road: "효창원로38길 13", target: "용문동 주민센터", jibun: "용문동 11-1", 
+					juris: "관할구역: 용문동, 도원동",
+					subways: [{n:"6", s:"효창공원앞역", c:"#c72"}],
+					buses: [{n:"용문시장", r:["7016"], c:"#5b3"}],
+					church: "용문시장 인근 전도 거점"
+				},
+				hangangro: { 
+					name: "한강로동", road: "한강대로38길 35", target: "한강로동 주민센터", jibun: "한강로2가 191", 
+					juris: "관할구역: 한강로1,2,3가, 용산동3,5가",
+					subways: [{n:"4", s:"신용산역", c:"#0ad"}, {n:"1", s:"용산역", c:"#05a"}],
+					buses: [{n:"용산역", r:["501", "152"], c:"#06b"}],
+					church: "천복궁교회 인근 차량 10분 거리"
+				},
+				ichon1: { 
+					name: "이촌1동", road: "이촌로71길 24", target: "이촌1동 주민센터", jibun: "이촌동 301-160", 
+					juris: "관할구역: 이촌동(동부)",
+					subways: [{n:"4", s:"이촌역", c:"#0ad"}, {n:"경", s:"이촌역", c:"#7c9"}],
+					buses: [{n:"이촌동종점", r:["100", "2016"], c:"#06b"}],
+					church: "이촌 지구 가정 모임 활성화"
+				},
+				ichon2: { 
+					name: "이촌2동", road: "이촌로 15", target: "이촌2동 주민센터", jibun: "이촌동 203-34", 
+					juris: "관할구역: 이촌동(서부)",
+					subways: [{n:"1", s:"용산역(인접)", c:"#05a"}],
+					buses: [{n:"이촌2동주민센터", r:["0017"], c:"#5b3"}],
+					church: "강변 지역 식구 화합의 장"
+				},
+				itaewon1: { 
+					name: "이태원1동", road: "이태원로 161", target: "이태원1동 주민센터", jibun: "이태원동 127-23", 
+					juris: "관할구역: 이태원동(남부)",
+					subways: [{n:"6", s:"이태원역", c:"#c72"}],
+					buses: [{n:"이태원역", r:["110A", "421"], c:"#06b"}],
+					church: "한남 국제 센터 지원 구역"
+				},
+				itaewon2: { 
+					name: "이태원2동", road: "회나무로 43-1", target: "이태원2동 주민센터", jibun: "이태원동 258-301", 
+					juris: "관할구역: 이태원동(북부)",
+					subways: [{n:"6", s:"녹사평역", c:"#c72"}],
+					buses: [{n:"경리단", r:["03"], c:"#5b3"}],
+					church: "이태원 지역 정성 분회"
+				},
+				hannam: { 
+					name: "한남동", road: "대사관로 5", target: "한남동 주민센터", jibun: "한남동 685-18", 
+					juris: "관할구역: 한남동 전역",
+					subways: [{n:"6", s:"한강진역", c:"#c72"}, {n:"경", s:"한남역", c:"#7c9"}],
+					buses: [{n:"순천향병원", r:["421", "400"], c:"#06b"}],
+					church: "한남 국제 식구 센터(구 세계선교본부) 소재"
+				},
+				seobinggo: { 
+					name: "서빙고동", road: "서빙고로 279", target: "서빙고동 주민센터", jibun: "서빙고동 241-11", 
+					juris: "관할구역: 서빙고, 동빙고, 주성동, 용산동6가",
+					subways: [{n:"경", s:"서빙고역", c:"#7c9"}],
+					buses: [{n:"서빙고역", r:["100", "2016"], c:"#06b"}],
+					church: "서빙고 지역 식구 활동 지원"
+				},
+				bogwang: { 
+					name: "보광동", road: "장문로 95", target: "보광동 주민센터", jibun: "보광동 256", 
+					juris: "관할구역: 보광동 전역",
+					subways: [{n:"경", s:"한남역(도보)", c:"#7c9"}],
+					buses: [{n:"보광동주민센터", r:["400", "405"], c:"#06b"}],
+					church: "보광 지역 식구 모임 거점"
+				}
+			};
+
+			function update_display(key) {
+				const d = DONG_DATA[key];
+				if(!d) return;
+
+				document.getElementById('dong_name').textContent = d.name;
+				document.getElementById('addr_display').innerHTML = `<strong>도로명 주소:</strong> ${d.road}<br><strong>지번 주소:</strong> ${d.jibun}`;
+				document.getElementById('addr_target').textContent = d.target;
+				document.getElementById('jurisdiction').textContent = d.juris;
+				document.getElementById('map_btn').href = `https://map.kakao.com/link/search/${encodeURIComponent(d.road)}`;
+				document.getElementById('infra_church').textContent = d.church;
+
+    // 지하철 정보 업데이트
+				const sub_cont = document.getElementById('subway_list');
+				sub_cont.innerHTML = "";
+				d.subways.forEach(s => {
+					const item = document.createElement('div');
+					item.className = "infra_item";
+					item.innerHTML = `
+        <span class="circle_badge" style="background-color: ${s.c}" aria-hidden="true">${s.n}</span>
+        <span class="station_name">${s.s}</span>
+					`;
+					sub_cont.appendChild(item);
+				});
+
+    // 버스 정보 업데이트
+				const bus_cont = document.getElementById('bus_list');
+				bus_cont.innerHTML = "";
+				d.buses.forEach(b => {
+					const group = document.createElement('div');
+					group.className = "bus_group";
+					group.innerHTML = `
+        <span class="bus_stop_title">🚏 ${b.n}</span>
+        <div class="route_list">
+						${b.r.map(route => `<span class="bus_badge" style="background-color: ${b.c}">${route}</span>`).join('')}
+        </div>
+					`;
+					bus_cont.appendChild(group);
+				});
+			}
+
+			document.addEventListener('DOMContentLoaded', () => {
+				const grid = document.getElementById('grid_container');
+				Object.keys(DONG_DATA).forEach((key, idx) => {
+					const label = document.createElement('label');
+					label.className = 'dong_label';
+					label.innerHTML = `
+        <input type="radio" name="dong" value="${key}" ${idx===0?'checked':''} aria-label="${DONG_DATA[key].name}">
+        <span class="dong_box">${DONG_DATA[key].name}</span>
+					`;
+					grid.appendChild(label);
+				});
+
+				update_display("huam");
+				document.getElementById('dong_form').addEventListener('change', (e) => update_display(e.target.value));
+			});
+		</script>
+	</body>
+	</html>
