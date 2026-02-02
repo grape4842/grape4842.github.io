@@ -128,6 +128,10 @@ dt {
 
 .route_list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
+footer {background: var(--main_theme_variable_transparent);}
+footer .content_width {
+  padding-block: clamp(1rem, 2rem, 3rem);
+}
 @media (max-width: 650px) {
   .info_grid {
     display: flex;
