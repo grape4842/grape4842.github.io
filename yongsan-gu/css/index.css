@@ -1,0 +1,136 @@
+@import url("../../root.css")
+@charset "utf-8";
+/* OKLAB 기반 컬러 시스템 및 WCAG 2.2 AAA 대비 준수 */
+:root {
+  --main_theme: oklab(0.35 -0.01 -0.16);
+  --main_theme_variable: light-dark(oklab(0.35 -0.01 -0.16), oklab(0.85 -0.01 -0.16));
+  --main_theme_variable_transparent: light-dark(oklab(0.35 -0.01 -0.16 / 0.1), oklab(0.85 -0.01 -0.16 / 0.1));
+  
+
+  /* 교통 고유 색상*/
+
+  --g_bus :#59be0a;
+  --b_bus :#1e7adb;
+  --r_bus :#e43607;
+  --y_bus :#f2c606;
+
+  --line1 :rgb(0 74 133);
+  --line2 :rgb(0 162 63);
+  --line3 :rgb(237 108 0);
+  --line4 :rgb(0 155 206);
+  --line5 :rgb(121 70 152);
+  --line6 :rgb(124 73 50);
+  --line7 :rgb(110 126 49);
+  --line8 :rgb(209 29 112);
+  --line9 :rgb(164 157 135);
+
+  --sub_g: rgb(106 194 179);
+}
+
+.header_title {
+  text-align: center;
+  font-size: clamp(1.25rem, 2rem, 3rem);
+  font-weight: 800;
+  color: var(--main_theme_variable); 
+  margin: 1.5rem 0;
+}
+.header_title img {
+  max-width:4rem;
+}
+/* 행정동 선택 그리드 */
+.dong_grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 0.5rem; margin-bottom: 1.5rem;
+}
+.dong_label {
+  position: relative;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  transition: all 0.2s;
+  min-height: 3rem;
+  gap:1rem;
+  border-radius: clamp(0.25rem, 0.5rem, 1rem);
+  background: var(--main_theme_variable_transparent);
+}
+.dong_label input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance:none;
+  width: 100%;
+  height: 100%;
+}
+.dong_label:has(input:checked) {
+  background-color: var(--main_theme_variable); 
+  color: var(--pure_mono);
+  font-weight: 900;
+  gap:0.25rem;
+  border:0.25rem solid var(--main_theme_variable_transparent);
+}
+
+/* 메인 패널 */
+.hero_image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.display_panel {
+  border-radius: 1.25rem;
+}
+
+.dong_name_h2 { 
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--main_theme_variable); 
+}
+
+.info_grid {
+  padding-block: 4rem;
+  display: grid; gap: 1.25rem;
+  grid-template-columns: 1fr 1fr;
+}
+.info_card {
+  background: var(--main_theme_variable_transparent); 
+  padding: 1.5rem; 
+  border-radius: 1rem;
+  border-left: 0.5rem solid var(--main_theme);
+}
+
+.info_card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* 상세 설명 및 관할 */
+dt, dd {display: inline-flex;}
+.leader_info_grid dl {
+  display: flex;
+}
+dt {
+  font-weight: bold;
+}
+.facility_name { 
+  margin-top: 0.75rem; 
+  padding: 0.75rem; border-radius: 0.5rem; font-size: 1.125rem; color: var(--main_theme_variable); font-weight: 800; }
+.juris_box {
+  margin-top: 0.5rem;
+  font-weight: 500; }
+
+/* 교통 디자인 */
+.infra_item { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.75rem; 
+  margin-bottom: 0.75rem;
+}
+
+.station_name { font-size: 1.125rem; font-weight: 700; }
+
+.route_list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+@media (max-width: 650px) {
+  .info_grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
