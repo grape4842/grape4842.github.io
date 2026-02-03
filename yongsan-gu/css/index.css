@@ -7,30 +7,13 @@
   --main_theme_variable_transparent: light-dark(oklab(0.35 -0.01 -0.16 / 0.1), oklab(0.85 -0.01 -0.16 / 0.1));
   
 
-  /* 교통 고유 색상*/
-
-  --g_bus :#59be0a;
-  --b_bus :#1e7adb;
-  --r_bus :#e43607;
-  --y_bus :#f2c606;
-
-  --line1 :rgb(0 74 133);
-  --line2 :rgb(0 162 63);
-  --line3 :rgb(237 108 0);
-  --line4 :rgb(0 155 206);
-  --line5 :rgb(121 70 152);
-  --line6 :rgb(124 73 50);
-  --line7 :rgb(110 126 49);
-  --line8 :rgb(209 29 112);
-  --line9 :rgb(164 157 135);
-
-  --sub_g: rgb(106 194 179);
-}
 
 .header_title {
   text-align: center;
   font-size: 1.25rem;
   font-weight: 800;
+  width:100%;
+  min-width: max-content;
   color: var(--main_theme_variable); 
 }
 .header_title img {
@@ -42,9 +25,11 @@
   height: 1.5rem;
 }
 /* 행정동 선택 그리드 */
+fieldset {width: 100%;}
 .dong_grid {
   display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(4.5rem, 1fr));
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: auto;
   gap: 1rem;
 }
 .dong_label {
@@ -54,9 +39,11 @@
   justify-content: center;
   transition: all 0.2s;
   min-height: 3rem;
+  min-width: max-content;
   gap:1rem;
-  border-radius: clamp(0.25rem, 0.5rem, 1rem);
+  border-radius: 0.5rem;
   background: var(--main_theme_variable_transparent);
+  border:1px solid var(--main_theme_variable_transparent);
 }
 .dong_label input {
   position: absolute;
@@ -69,7 +56,6 @@
   background-color: var(--main_theme_variable); 
   color: var(--pure_mono);
   font-weight: 900;
-  gap:0.25rem;
   border:0.25rem solid var(--main_theme_variable_transparent);
 }
 
@@ -101,13 +87,25 @@
   border-left: 0.5rem solid var(--main_theme);
 }
 
-.info_card h3 {
+h3 {
   font-size: 1.25rem;
   font-weight: 800;
+  margin-bottom:1rem;
 }
 
 /* 상세 설명 및 관할 */
-dt, dd {display: inline-flex;}
+.transport_info dl {gap:1rem;}
+.transport_info dt {
+  display: block;
+}
+.transport_info dd {
+  margin:0.25rem;
+}
+dl {padding-block: 0.25rem;}
+dt, dd {
+  display: inline-flex;
+  gap:0.25rem;
+}
 .leader_info_grid dl {
   display: flex;
 }
@@ -123,15 +121,31 @@ dt {
   background-color: var(--main_theme_variable_transparent);
   font-weight: 900;
 }
-footer {background: var(--main_theme_variable_transparent);}
-:where(footer, header) .content_width {
-  padding-block: clamp(1rem, 1rem + 5vw, 3rem);
+footer {
+  background: var(--main_theme_variable_transparent);
 }
-@media (max-width: 650px) {
+:where(footer, header) .content_width {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1.5rem;
+}
+/*340px〜1000px Mobile iPad Vertical*/
+@media (340px <= width < 1000px ) {
+  .dong_grid{grid-template-columns: repeat(4, 1fr);}
   .info_grid {
     display: flex;
     flex-direction: column;
   }
+
+}
+/*iPhone SE, Galaxy Fold3, watch*/
+@media screen and (330px > width) {
+  .dong_grid{grid-template-columns: repeat(2, 1fr);}
+}
+
+/*Dark Mode Layout*/
+@media (prefers-color-scheme:dark) {
 }
 @media (prefers-color-scheme:light) {
   .white_icon {filter: invert(1);}

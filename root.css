@@ -43,10 +43,10 @@
 	--sunmoon_lightgray:#A5AEB4;
 	--sunmoon_darkgray:#0D1F1D;
 
-	--g_bus :#59be0a;
-	--b_bus :#1e7adb;
-	--r_bus :#e43607;
-	--y_bus :#f2c606;
+	--g_bus :#53b332;
+	--b_bus :#0068b7;
+	--r_bus :#e60012;
+	--y_bus :#f2b70a;
 
 	--line1 :rgb(0 74 133);
 	--line2 :rgb(0 162 63);
@@ -57,6 +57,9 @@
 	--line7 :rgb(110 126 49);
 	--line8 :rgb(209 29 112);
 	--line9 :rgb(164 157 135);
+	--airportline: rgb(0 121 172);
+	--gjline:rgb(106 194 179);
+	--ggline:rgb(149 115 38);
 }
 ::selection {
 	background:#baf; 
@@ -482,11 +485,11 @@ dialog {
 	border-radius:10rem;
 	justify-content:center;
 	align-items:center;
-	min-width:2rem;
-	min-height:2rem;
+	min-width:1.5rem;
+	min-height:1.5rem;
 	color:var(--pure_white);
 }
-.numline {aspet-ratio:1/1;}
+.numline {aspect-ratio:1/1;}
 .longline {padding:0px 0.5rem;}
 
 .line1 {background:rgb(0 74 133);}
@@ -520,7 +523,7 @@ dialog {
 	font-weight: bolder;
 	justify-content:center;
 	align-items:center;
-	border-radius:10rem;
+	border-radius:0.5rem;
 	color:var(--pure_white);
 	padding:0rem 0.25rem;
 }

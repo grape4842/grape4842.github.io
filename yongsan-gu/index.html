@@ -11,16 +11,15 @@
 	<meta name="robots" content="index, follow">
 	<meta name="author" content="@purplemiyazawa">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-	<meta property="og:description" content="용산구 임지 담당자 목록입니다.">
+	<meta property="og:description" content="용산구 행정동별 전역 대중교통 및 섭리적 거점 정보입니다.">
 	<meta property="og:locate" content="ko-kr">
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="img/yongsan_map.png">
-	<meta name="theme-color=" content="#005aab">
+	<meta name="theme-color" content="#05a">
 
-	<title>용산구 행정동 목록</title>
+	<title>용산구 행정동 상세 안내</title>
 	<link rel="preload" href="../../font/KoddiUDOnGothic/KoddiUDOnGothic.woff2" as="font">
 	<link rel="preload" href="../../font/KoddiUDOnGothic/KoddiUDOnGothic-Bold.woff2" as="font">
-	<link rel="preload" href="../../font/KoddiUDOnGothic/KoddiUDOnGothic-ExtraBold.woff2" as="font">
 </head>
 
 <body>
@@ -36,13 +35,13 @@
 		</div>
 		<nav class="content_width" aria-label="행정동 선택">
 			<fieldset class="dong_selector_fieldset">
-				<legend class="screen_out a11y_txt">용산구 행정동 목록</legend>
+				<legend class="screen_out a11y_txt">용산구 16개 행정동 목록</legend>
 				<div class="dong_grid" id="grid_container"></div>
 			</fieldset>
 		</nav>
 	</header>
 
-	<main class="display_panel content_width" id="main_content" tabindex="-1">
+	<main class="display_panel content_width" id="main_content">
 		<article class="title_article">
 			<h2 id="dong_name" class="dong_name_h2">-</h2>
 			<div class="hero_image_container">
@@ -60,48 +59,51 @@
 			<article class="info_card leader_info_grid">
 				<h3>지역 담당자</h3>
 				<dl>
-					<dt class="person_tag">동회장</dt>
+					<dt class="person_tag">동회장 : </dt>
 					<dd id="leader_name" class="person_name">-</dd>
 				</dl>
 				<dl>
-					<dt class="person_tag">동대표</dt>
+					<dt class="person_tag">동대표 : </dt>
 					<dd id="rep_name" class="person_name">-</dd>
 				</dl>
 			</article>
 
 			<article class="info_card location_info">
-				<h3>
-					<img src="../icon/place_white_48dp.svg" alt="" class="icon white_icon">위치 정보</h3>
+				<h3>📍 위치 정보</h3>
 				<div class="address_group">
 					<dl id="road_addr_display" class="description_list"></dl>
 					<dl id="jibun_addr_display" class="description_list"></dl>
 				</div>
 				<div id="addr_target_container" class="facility_name"></div>
-				<div id="jurisdiction" class="juris_box"></div>
+				<dl>
+					<dt>관할 구역 : </dt>
+					<dd id="jurisdiction" class="juris_box"></dd>
+				</dl>
 			</article>
 
 			<article class="info_card transport_info">
-				<h3>🚇 교통 (접근성)</h3>
-				<div id="subway_list" class="infra_list"></div>
-				<div id="bus_list" class="infra_list"></div>
+				<h3>🚇 대중교통 (동 전역 주요 노선)</h3>
+				<div class="transport_content">
+					<h4 class="sub_info_title">지하철 노선</h4>
+					<dl id="subway_list" class="infra_list">
+					
+					</dl>
+					
+					<h4 class="sub_info_title">주요 버스 정류소 및 노선</h4>
+					<div id="bus_list" class="infra_list"></div>
+				</div>
 			</article>
 
 			<article class="info_card church_info">
 				<h3>🕊️ 섭리적 의미 및 거점</h3>
 				<p id="infra_church" class="church_desc"></p>
 			</article>
+
 			<article class="info_card other_info">
-				<h3>그 외 참조 링크</h3>
+				<h3>참조 링크</h3>
 				<ul>
-					<li>
-						<a href="https://bigdata.yongsan.go.kr/smartmap">용산구 스마트맵</a>
-					</li>
-					<li>
-						<a href="https://www.yongsan.go.kr/portal/main/contents.do?menuNo=200211">용산구 동별관할구역</a>
-					</li>
-					<li>
-						<a href=""></a>
-					</li>
+					<li><a href="https://bigdata.yongsan.go.kr/smartmap" target="_blank">용산구 스마트맵 (인구/상권 분석)</a></li>
+					<li><a href="https://www.yongsan.go.kr/portal/main/contents.do?menuNo=200211" target="_blank">용산구청 동별 관할구역 상세</a></li>
 				</ul>
 			</article>
 		</section>
@@ -109,7 +111,7 @@
 
 	<footer>
 		<div class="content_width">
-			<address>@purplemiyazawa</address>
+			<p>© purplemiyazawa. All rights reserved.</p>
 		</div>
 	</footer>
 
@@ -122,235 +124,346 @@
 				name: "남영동", img: "namyoung.png", leader_name: "김범철", rep_name: "김영은",
 				road_address: "한강대로76길 7", target_facility: "남영동 주민센터", jibun_address: "갈월동 98-7",
 				jurisdiction_area: "남영동, 갈월동, 동자동, 문배동, 신계동",
-				strategy: "숙대입구 상권 전도", target: "숙명여대 학생 및 갈월동 일대 직장인 대상 심정 문화 전파",
-				subway_routes: [{ line: "1", station: "남영역", color_var: "--line1"}, { line: "4", station: "숙대입구역", color_var:"--line4"}],
-				bus_routes: [{ stop: "갈월동", routes: ["150", "507"], color_var:"--b_bus"}],
-				church_info: "청파동 본부교회 배후지로, 젊은 층과의 접점이 많은 전략 지역입니다."
-			},
-			bogwang: {
-				name: "보광동", img: "bogwang.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "장문로 95", target_facility: "보광동 주민센터", jibun_address: "보광동 256",
-				jurisdiction_area: "보광동 전역",
-				strategy: "가정 중심 정성", target: "재개발 구역 내 노후 주택가 거주 식구 및 주민 유대 강화",
-				subway_routes: [{ line: "경의중앙", station: "한남역(인접)", color_var: "--sub_g" }],
-				bus_routes: [{ stop: "보광동주민센터", routes: ["400", "405"], color_var: "--b_bus" }],
-				church_info: "한남동 국제연수원과 보광 지역 식구님들의 정성이 만나는 지점입니다."
-			},
-			seobinggo: {
-				name: "서빙고동", img: "seobinggo.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "서빙고로 279", target_facility: "서빙고동 주민센터", jibun_address: "서빙고동 241-11",
-				jurisdiction_area: "서빙고, 동빙고, 주성동, 용산동6가",
-				strategy: "문화 및 공원 순회", target: "용산가족공원 방문객 및 국립중앙박물관 인근 문화 전도",
-				subway_routes: [{ line: "경의중앙", station: "서빙고역", color_var: "--sub_g" }],
-				bus_routes: [{ stop: "서빙고역", routes: ["100", "2016"], color_var: "--b_bus" }],
-				church_info: "청정한 자연환경을 배경으로 참사랑의 가치를 전하는 평화의 구역입니다."
-			},
-			yongmun: {
-				name: "용문동", img: "yongmun.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "효창원로38길 13", target_facility: "용문동 주민센터", jibun_address: "용문동 11-1",
-				jurisdiction_area: "용문동, 도원동",
-				strategy: "시장 전도 활동", target: "용문시장 상인 및 이용 주민 대상 생활 밀착형 전도",
-				subway_routes: [{ line: "6", station: "효창공원앞역", color_var: "--line6" }],
-				bus_routes: [{ stop: "용문시장", routes: ["7016"], color_var: "--g_bus" }],
-				church_info: "활기찬 생활 현장에서 식구님들의 참된 삶을 증거하는 곳입니다."
-			},
-			yongsan2ga: {
-				name: "용산2가동", img: "yongsan2ga.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "신흥로 90", target_facility: "용산2가동 주민센터", jibun_address: "용산동2가 1-1375",
-				jurisdiction_area: "용산동2가, 용산동4가",
-				strategy: "해방촌 심정 전도", target: "예술인, 외국인, 청년 거주자 대상 '참가정' 가치 공유",
-				subway_routes: [{ line: "6", station: "녹사평역", color_var: "--line6" }],
-				bus_routes: [{ stop: "해방촌오거리", routes: ["용산02"], color_var: "--g_bus" }],
-				church_info: "좁은 골목마다 섭리의 숨결이 살아있는 역사적인 정성지입니다."
-			},
-			wonhyo1: {
-				name: "원효로1동", img: "wonhyoro1.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "원효로 177-11", target_facility: "원효로1동 주민센터", jibun_address: "원효로1가 39-1",
-				jurisdiction_area: "원효로1가, 문배동, 신계동",
-				strategy: "주거 단지 순회", target: "신축 주상복합 및 아파트 단지 신규 입주민 대상 활동",
-				subway_routes: [{ line: "1", station: "남영역", color_var: "--line1" }, { line: "6", station: "효창공원앞역", color_var: "--line6" }],
-				bus_routes: [{ stop: "원효로1가", routes: ["0017"], color_var: "--g_bus" }],
-				church_info: "용산의 새로운 중심지로 부상하는 구역에서 화합의 정성을 드립니다."
-			},
-			wonhyo2: {
-				name: "원효로2동", img: "wonhyoro2.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "원효로 123", target_facility: "원효로2동 주민센터", jibun_address: "원효로3가 1-1",
-				jurisdiction_area: "원효로3,4가, 산천동, 신창동, 청암동",
-				strategy: "한강변 가정 전도", target: "강변 조망 주거지 주민 및 산천동 일대 가정 대상",
-				subway_routes: [{ line: "6", station: "효창공원앞역", color_var: "--line6" }],
-				bus_routes: [{ stop: "원효로3가", routes: ["162", "503"], color_var: "--b_bus" }],
-				church_info: "성스러운 한강의 정기와 함께 가정 중심의 예배가 이어지는 곳입니다."
-			},
-			ichon1: {
-				name: "이촌1동", img: "ichon1.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "이촌로71길 24", target_facility: "이촌1동 주민센터", jibun_address: "이촌동 301-160",
-				jurisdiction_area: "이촌동(동부)",
-				strategy: "지식인 및 중산층 전도", target: "동부이촌동 아파트 단지 내 안정된 기반의 주민 대상",
-				subway_routes: [{ line: "4", station: "이촌역", color_var: "--line4" }, { line: "경의중앙", station: "이촌역", color_var: "--sub_g" }],
-				bus_routes: [{ stop: "이촌동종점", routes: ["100", "2016"], color_var: "--b_bus" }],
-				church_info: "식구님들의 안정적인 신앙 터전이자 평화 대사 활동의 중심지입니다."
-			},
-			ichon2: {
-				name: "이촌2동", img: "ichon2.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "이촌로 15", target_facility: "이촌2동 주민센터", jibun_address: "이촌동 203-34",
-				jurisdiction_area: "이촌동(서부)",
-				strategy: "강변 정성 순회", target: "서부이촌동 단독주택 및 소규모 아파트 주민 접점 확대",
-				subway_routes: [{ line: "1", station: "용산역(인접)", color_var: "--line1" }],
-				bus_routes: [{ stop: "이촌2동주민센터", routes: ["0017"], color_var: "--g_bus" }],
-				church_info: "철도 정비창 인근의 변화 속에서 섭리적 기틀을 지키는 지역입니다."
-			},
-			itaewon1: {
-				name: "이태원1동", img: "itaewon1.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "이태원로 161", target_facility: "이태원1동 주민센터", jibun_address: "이태원동 127-23",
-				jurisdiction_area: "이태원동(남부)",
-				strategy: "다문화 평화 전도", target: "외국인 관광객 및 다국적 거주자 대상 인류 한 가족 사상 전파",
-				subway_routes: [{ line: "6", station: "이태원역", color_var: "--line6" }],
-				bus_routes: [{ stop: "이태원역", routes: ["421", "110B"], color_var: "--b_bus" }],
-				church_info: "세계 평화의 축소판인 이태원에서 글로벌 선교의 정성을 모읍니다."
-			},
-			itaewon2: {
-				name: "이태원2동", img: "itaewon2.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "회나무로 43-1", target_facility: "이태원2동 주민센터", jibun_address: "이태원동 258-301",
-				jurisdiction_area: "이태원동(북부)",
-				strategy: "경리단길 문화 접점", target: "트렌디한 상권 이용 청년층 및 주택가 원주민 대상",
-				subway_routes: [{ line: "6", station: "녹사평역", color_var: "--line6" }],
-				bus_routes: [{ stop: "경리단", routes: ["03"], color_var: "--g_bus" }],
-				church_info: "남산의 정기와 현대적 문화가 어우러진 곳에서 참부모님 함자를 전합니다."
-			},
-			cheongpa: {
-				name: "청파동", img: "cheongpa.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "청파로47길 52", target_facility: "청파동 주민센터", jibun_address: "청파동2가 74-1",
-				jurisdiction_area: "청파동1,2,3가, 서계동",
-				strategy: "섭리 본향 수호", target: "본부교회 순례 식구 응대 및 청파동 일대 주민 대상 원리 전파",
-				subway_routes: [{ line: "4", station: "숙대입구역", color_var: "--line4" }, { line: "1", station: "남영역", color_var: "--line1" }],
-				bus_routes: [{ stop: "청파동주민센터", routes: ["262"], color_var: "--b_bus" }],
-				church_info: "천복궁교회(본부교회) 소재지. 섭리의 심장이자 모든 전도 활동의 출발지입니다."
-			},
-			hangangro: {
-				name: "한강로동", img: "hangangro.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "한강대로38길 35", target_facility: "한강로동 주민센터", jibun_address: "한강로2가 191",
-				jurisdiction_area: "한강로1,2,3가, 용산동3,5가",
-				strategy: "교통 요지 전도", target: "용산역/신용산역 유동 인구 및 신축 오피스 직장인 대상",
-				subway_routes: [{ line: "1", station: "용산역", color_var: "--line1" }, { line: "4", station: "신용산역", color_var: "--line4" }],
-				bus_routes: [{ stop: "용산역", routes: ["150", "501"], color_var: "--b_bus" }],
-				church_info: "본부교회로 향하는 관문으로, 가장 많은 유동 인구를 만나는 전방 구역입니다."
-			},
-			hannam: {
-				name: "한남동", img: "hannam.png", leader_name: "김범철", rep_name: "김영은",
-				road_address: "대사관로 5", target_facility: "한남동 주민센터", jibun_address: "한남동 685-18",
-				jurisdiction_area: "한남동 전역",
-				strategy: "글로벌 지도자 전도", target: "대사관 밀집 지역 특성을 살린 VIP 및 외국인 대상 활동",
-				subway_routes: [{ line: "6", station: "한강진역", color_var: "--line6" }, { line: "경의중앙", station: "한남역", color_var: "--sub_g" }],
-				bus_routes: [{ stop: "순천향병원", routes: ["421", "140"], color_var: "--b_bus" }],
-				church_info: "한남 국제연수원 및 유관 기관 소재지. 국제적인 평화 네트워크의 중심입니다."
+				strategy: "숙대입구 상권 및 서울역 배후 전도", target: "숙명여대 학생, 서울역 이용객 및 갈월동 일대 오피스 직장인 대상",
+				subway_routes: [
+					{ line: "1", station: "남영역", color_var: "--line1" },
+					{ line: "1", station: "", color_var: "--line1" },
+					{ line: "4", station: "", color_var: "--line4" },
+					{ line: "공항철도", station: "서울역", color_var: "--airportline" },
+					{ line: "4", station: "숙대입구역", color_var: "--line4" }
+		
+				],
+				bus_routes: [
+					{ stop: "갈월동(중)", routes: ["100", "150", "151", "152", "162", "202", "421", "500", "501", "502", "503", "504", "505", "506", "507", "750A", "750B", "751", "752"], color_var: "--b_bus" },
+					{ stop: "숙대입구역", routes: ["1711", "7016"], color_var: "--g_bus" },
+					{ stop: "서울역버스환승센터", routes: ["103", "163", "201", "261", "262", "401", "406", "604", "701", "704"], color_var: "--b_bus" }
+				],
+				church_info: "청파동 본부교회로 진입하는 핵심 관문이며, 숙대입구의 젊은 영들과의 접점이 매우 높습니다."
 			},
 			huam: {
 				name: "후암동", img: "huam.png", leader_name: "김범철", rep_name: "김영은",
 				road_address: "후암로16길 38", target_facility: "후암동 주민센터", jibun_address: "후암동 110-101",
 				jurisdiction_area: "후암동 전역",
-				strategy: "전통 주택가 전도", target: "오랜 거주민 대상 가족 이웃 간의 정을 바탕으로 한 전도",
-				subway_routes: [{ line: "4", station: "숙대입구역(인접)", color_var: "--line4" }],
-				bus_routes: [{ stop: "후암동종점", routes: ["202", "400"], color_var: "--b_bus" }],
-				church_info: "남산 아래 첫 동네로, 본부와 가장 가까운 식구님들의 주요 거주 단지입니다."
+				strategy: "전통 주택가 생활 전도", target: "장기 거주민, 남산 방문객 및 후암시장 이용 주부층 대상",
+				subway_routes: [{ line: "4", station: "숙대입구역/서울역(인접)", color_var: "--line4" }],
+				bus_routes: [
+					{ stop: "후암동종점", routes: ["202", "400"], color_var: "--b_bus" },
+					{ stop: "후암시장", routes: ["202", "용산02"], color_var: "--g_bus" },
+					{ stop: "남산도서관/용산도서관", routes: ["402", "405", "01A", "01B"], color_var: "--b_bus" }
+				],
+				church_info: "남산 아래 위치한 고즈넉한 주택가로, 본부와 가까워 많은 식구님들이 생활 기반을 둔 곳입니다."
+			},
+			yongsan2ga: {
+				name: "용산2가동", img: "yongsan2ga.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "신흥로 90", target_facility: "용산2가동 주민센터", jibun_address: "용산동2가 1-1375",
+				jurisdiction_area: "용산동2가, 용산동4가",
+				strategy: "해방촌 글로벌 심정 전도", target: "해방촌 예술인, 1인 가구, 외국인 거주자 대상",
+				subway_routes: [{ line: "6", station: "녹사평역(인접)", color_var: "--line6" }],
+				bus_routes: [
+					{ stop: "해방촌오거리", routes: ["용산02"], color_var: "--g_bus" },
+					{ stop: "해방촌", routes: ["143", "401", "406", "741"], color_var: "--b_bus" },
+					{ stop: "남산체육관", routes: ["402", "405"], color_var: "--b_bus" }
+				],
+				church_info: "해방촌이라 불리는 역사적 배경 위에 다양한 문화가 공존하는 섭리적 개척지입니다."
 			},
 			hyochang: {
 				name: "효창동", img: "hyochang.png", leader_name: "김범철", rep_name: "김영은",
 				road_address: "효창원로 161", target_facility: "효창동 주민센터", jibun_address: "효창동 5-144",
 				jurisdiction_area: "효창동 전역",
-				strategy: "역사 교육 전도", target: "효창공원 방문객 및 인근 주택가 주민 대상 평화 사상 교육",
-				subway_routes: [{ line: "6", station: "효창공원앞역", color_var: "--line6" }, { line: "경의중앙", station: "효창공원앞역", color_var: "--sub_g" }],
-				bus_routes: [{ stop: "효창공원앞", routes: ["400"], color_var: "--b_bus" }],
-				church_info: "독립운동의 성지인 이곳에서 참평화의 메시지를 확산시키는 거점입니다."
+				strategy: "역사 중심 평화 전도", target: "효창공원 방문객, 숙명여대 후문 인근 학생 및 빌라촌 주민",
+				subway_routes: [
+					{ line: "6", station: "효창공원앞역", color_var: "--line6" },
+					{ line: "경의중앙", station: "효창공원앞역", color_var: "--gjline" }
+				],
+				bus_routes: [
+					{ stop: "효창공원앞역", routes: ["0017", "110B", "740", "2016", "7011"], color_var: "--g_bus" },
+					{ stop: "효창공원후문", routes: ["400"], color_var: "--b_bus" },
+					{ stop: "효창동주민센터", routes: ["0017", "400"], color_var: "--g_bus" }
+				],
+				church_info: "민족의 얼이 담긴 효창공원 인근에서 참부모님의 평화 사상을 교육하기 좋은 환경입니다."
+			},
+			yongmun: {
+				name: "용문동", img: "yongmun.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "효창원로38길 13", target_facility: "용문동 주민센터", jibun_address: "용문동 11-1",
+				jurisdiction_area: "용문동, 도원동",
+				strategy: "전통시장 생활 밀착 전도", target: "용문시장 상인 및 이용자, 도원삼성래미안 아파트 주민",
+				subway_routes: [{ line: "6", station: "효창공원앞역(인접)", color_var: "--line6" }],
+				bus_routes: [
+					{ stop: "용문시장", routes: ["0017", "7016"], color_var: "--g_bus" },
+					{ stop: "용문동브라운스톤", routes: ["0017", "400"], color_var: "--g_bus" },
+					{ stop: "원효로2가", routes: ["162", "262", "503"], color_var: "--b_bus" }
+				],
+				church_info: "용산의 대표적인 전통시장인 용문시장을 중심으로 정과 사랑을 나누는 활동 거점입니다."
+			},
+			cheongpa: {
+				name: "청파동", img: "cheongpa.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "청파로47길 52", target_facility: "청파동 주민센터", jibun_address: "청파동2가 74-1",
+				jurisdiction_area: "청파동1,2,3가, 서계동",
+				strategy: "본부 수호 및 청년 선교", target: "본부교회 순례객, 숙명여대 학생 및 서계동 일대 주거지",
+				subway_routes: [
+					{ line: "4", station: "숙대입구역", color_var: "--line4" },
+					{ line: "1", station: "남영역", color_var: "--line1" },
+					{ line: "1", station: "서울역(서부)", color_var: "--line1" }
+				],
+				bus_routes: [
+					{ stop: "청파동", routes: ["162", "262", "503"], color_var: "--b_bus" },
+					{ stop: "숙명여대입구", routes: ["1711", "7016"], color_var: "--g_bus" },
+					{ stop: "만리동고개", routes: ["163", "261", "604"], color_var: "--b_bus" }
+				],
+				church_info: "천복궁교회(본부) 소재지. 섭리의 중심지이자 모든 정성이 모이는 성지입니다."
+			},
+			wonhyo1: {
+				name: "원효로1동", img: "wonhyoro1.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "원효로 177-11", target_facility: "원효로1동 주민센터", jibun_address: "원효로1가 39-1",
+				jurisdiction_area: "원효로1가, 문배동, 신계동",
+				strategy: "신축 주거단지 타겟 전도", target: "문배동/신계동 주상복합 입주민 및 열정도 상권 이용객",
+				subway_routes: [
+					{ line: "1", station: "남영역", color_var: "--line1" },
+					{ line: "6", station: "효창공원앞역/삼각지역", color_var: "--line6" },
+					{ line: "4", station: "삼각지역", color_var: "--line4" }
+				],
+				bus_routes: [
+					{ stop: "원효로1가", routes: ["162", "262", "503"], color_var: "--b_bus" },
+					{ stop: "용산경찰서", routes: ["0017", "7016"], color_var: "--g_bus" },
+					{ stop: "문배동이안아파트", routes: ["0018"], color_var: "--g_bus" }
+				],
+				church_info: "과거와 현대가 공존하는 구역으로, 신규 식구 기반 확장이 기대되는 지역입니다."
+			},
+			wonhyo2: {
+				name: "원효로2동", img: "wonhyoro2.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "원효로 123", target_facility: "원효로2동 주민센터", jibun_address: "원효로3가 1-1",
+				jurisdiction_area: "원효로3,4가, 산천동, 신창동, 청암동",
+				strategy: "강변 아파트 단지 정성", target: "산천동 리버힐삼성 등 대단지 아파트 주민 및 원효로 상권",
+				subway_routes: [{ line: "5", station: "마포역(인접)", color_var: "--line5" }, { line: "6", station: "효창공원앞역(인접)", color_var: "--line6" }],
+				bus_routes: [
+					{ stop: "원효로3가", routes: ["162", "262", "503"], color_var: "--b_bus" },
+					{ stop: "산천동종점/원효2동주민센터", routes: ["0017"], color_var: "--g_bus" },
+					{ stop: "성심여고", routes: ["162", "262", "503", "7016"], color_var: "--b_bus" }
+				],
+				church_info: "성심여고 등 교육 기관과 한강변 주거지가 밀집하여 가정 교육 전도에 적합합니다."
+			},
+			hangangro: {
+				name: "한강로동", img: "hangangro.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "한강대로38길 35", target_facility: "한강로동 주민센터", jibun_address: "한강로2가 191",
+				jurisdiction_area: "한강로1,2,3가, 용산동3,5가",
+				strategy: "핵심 요지 대중 전도", target: "용산역/신용산역 유동 인구, 아모레퍼시픽 등 대기업 직장인",
+				subway_routes: [
+					{ line: "1", station: "용산역", color_var: "--line1" },
+					{ line: "4", station: "신용산역/삼각지역", color_var: "--line4" },
+					{ line: "6", station: "삼각지역", color_var: "--line6" },
+					{ line: "경의중앙", station: "용산역", color_var: "--gjline" }
+				],
+				bus_routes: [
+					{ stop: "신용산역/용산역(중)", routes: ["100", "150", "151", "152", "421", "500", "501", "502", "504", "506", "507", "605", "750A", "750B", "752"], color_var: "--b_bus" },
+					{ stop: "삼각지역", routes: ["100", "150", "151", "152", "500", "501", "502", "504", "506", "507", "750A", "750B", "751", "752"], color_var: "--b_bus" },
+					{ stop: "용산공고", routes: ["0017", "5012"], color_var: "--g_bus" }
+				],
+				church_info: "용산의 심장부로, 국가적 차원의 평화 운동과 대중 선교의 최전선입니다."
+			},
+			ichon1: {
+				name: "이촌1동", img: "ichon1.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "이촌로71길 24", target_facility: "이촌1동 주민센터", jibun_address: "이촌동 301-160",
+				jurisdiction_area: "이촌동(동부)",
+				strategy: "중산층 VIP 선교", target: "동부이촌동 아파트 단지 주민, 일본인 거주자 및 고학력층",
+				subway_routes: [{ line: "4", station: "이촌역", color_var: "--line4" }, { line: "경의중앙", station: "이촌역", color_var: "--gjline" }],
+				bus_routes: [
+					{ stop: "이촌동점/강촌아파트", routes: ["100", "2016", "3012", "6211"], color_var: "--b_bus" },
+					{ stop: "이촌역", routes: ["502"], color_var: "--b_bus" },
+					{ stop: "신용산초등학교", routes: ["100", "2016", "3012", "6211"], color_var: "--b_bus" }
+				],
+				church_info: "한일 가정 및 일본 식구님들의 기반이 강하며, 사회 지도층 전도의 주요 거점입니다."
+			},
+			ichon2: {
+				name: "이촌2동", img: "ichon2.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "이촌로 15", target_facility: "이촌2동 주민센터", jibun_address: "이촌동 203-34",
+				jurisdiction_area: "이촌동(서부)",
+				strategy: "개발 예정지 정성 순회", target: "서부이촌동 노후 단지 및 성촌 공원 인근 주민",
+				subway_routes: [{ line: "1", station: "용산역(인접)", color_var: "--line1" }],
+				bus_routes: [
+					{ stop: "이촌2동주민센터", routes: ["0017"], color_var: "--g_bus" },
+					{ stop: "서부이촌동입구", routes: ["0017", "5012"], color_var: "--g_bus" }
+				],
+				church_info: "철도정비창 개발과 연계된 변화의 현장에서 섭리적 터전을 수호하는 곳입니다."
+			},
+			itaewon1: {
+				name: "이태원1동", img: "itaewon1.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "이태원로 161", target_facility: "이태원1동 주민센터", jibun_address: "이태원동 127-23",
+				jurisdiction_area: "이태원동(남부)",
+				strategy: "다문화 만인 구원 전도", target: "외국인 관광객, 다국적 거주자 및 퀴논길 인근 상인",
+				subway_routes: [{ line: "6", station: "이태원역", color_var: "--line6" }],
+				bus_routes: [
+					{ stop: "이태원역/해밀톤호텔", routes: ["110A", "110B", "421", "400"], color_var: "--b_bus" },
+					{ stop: "이태원시장", routes: ["110A", "110B", "421", "400"], color_var: "--b_bus" }
+				],
+				church_info: "세계 평화 대사 활동의 현장이자, 다양한 인종에게 진리를 전하는 글로벌 포교지입니다."
+			},
+			itaewon2: {
+				name: "이태원2동", img: "itaewon2.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "회나무로 43-1", target_facility: "이태원2동 주민센터", jibun_address: "이태원동 258-301",
+				jurisdiction_area: "이태원동(북부)",
+				strategy: "문화 트렌드 전도", target: "경리단길 방문 청년층 및 회나무로 일대 주거민",
+				subway_routes: [{ line: "6", station: "녹사평역(인접)", color_var: "--line6" }],
+				bus_routes: [
+					{ stop: "경리단길", routes: ["용산03"], color_var: "--g_bus" },
+					{ stop: "필리핀대사관", routes: ["402", "405"], color_var: "--b_bus" },
+					{ stop: "디지텍고등학교", routes: ["용산03"], color_var: "--g_bus" }
+				],
+				church_info: "남산 자락의 수려한 환경 속에 위치하여 참부모님의 품을 느끼게 하는 정성지입니다."
+			},
+			hannam: {
+				name: "한남동", img: "hannam.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "대사관로 5", target_facility: "한남동 주민센터", jibun_address: "한남동 685-18",
+				jurisdiction_area: "한남동 전역",
+				strategy: "국제 지도자 선교", target: "각국 대사관 관계자, 유엔빌리지 거주 VIP 및 한남더힐 주민",
+				subway_routes: [
+					{ line: "6", station: "한강진역", color_var: "--line6" },
+					{ line: "경의중앙", station: "한남역", color_var: "--gjline" }
+				],
+				bus_routes: [
+					{ stop: "순천향대학병원(중)", routes: ["140", "142", "144", "241", "400", "402", "407", "420", "470", "472"], color_var: "--b_bus" },
+					{ stop: "한남오거리", routes: ["110B", "241", "421", "2016"], color_var: "--b_bus" },
+					{ stop: "서울시부부기술교육원", routes: ["110A", "400", "405"], color_var: "--b_bus" }
+				],
+				church_info: "한남 국제연수원이 위치한 세계적 성지로, 글로벌 섭리의 심장부 역할을 합니다."
+			},
+			seobinggo: {
+				name: "서빙고동", img: "seobinggo.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "서빙고로 279", target_facility: "서빙고동 주민센터", jibun_address: "서빙고동 241-11",
+				jurisdiction_area: "서빙고, 동빙고, 주성동, 용산동6가",
+				strategy: "공원/박물관 문화 전도", target: "국립중앙박물관/용산가족공원 방문객 및 군인 가족",
+				subway_routes: [
+					{ line: "경의중앙", station: "서빙고역", color_var: "--gjline" },
+					{ line: "4", station: "이촌역(인접)", color_var: "--line4" }
+				],
+				bus_routes: [
+					{ stop: "서빙고역", routes: ["100", "2016", "3012", "6211"], color_var: "--b_bus" },
+					{ stop: "국립중앙박물관/용산가족공원", routes: ["400", "502"], color_var: "--b_bus" },
+					{ stop: "동빙고동", routes: ["400", "405"], color_var: "--b_bus" }
+				],
+				church_info: "대한민국의 역사와 자연이 만나는 곳으로, 평화로운 환경 속에 참사랑을 전하기 좋습니다."
+			},
+			bogwang: {
+				name: "보광동", img: "bogwang.png", leader_name: "김범철", rep_name: "김영은",
+				road_address: "장문로 95", target_facility: "보광동 주민센터", jibun_address: "보광동 256",
+				jurisdiction_area: "보광동 전역",
+				strategy: "지역 주민 밀착 전도", target: "재개발 대기 주민, 소규모 상인 및 보광시장 이용객",
+				subway_routes: [{ line: "경의중앙", station: "한남역(인접)", color_var: "--gjline" }],
+				bus_routes: [
+					{ stop: "보광동주민센터", routes: ["400", "405"], color_var: "--b_bus" },
+					{ stop: "보광동입구", routes: ["110A", "110B", "421"], color_var: "--b_bus" },
+					{ stop: "한국폴리텍1대학", routes: ["400", "405"], color_var: "--b_bus" }
+				],
+				church_info: "오랜 세월 식구님들의 정성이 밴 지역으로, 재개발 이후의 새로운 도약을 준비하는 곳입니다."
 			}
 		};
 
-		function format_metro_line(line) {
-			if (line === "경의중앙") {
-				return `<span class="longline metro_line">${line}</span>`;
+		/**
+		 * 지하철 노선 뱃지 생성 함수
+		 * @param {string} line_name - 노선 명칭
+		 * @param {string} color_var - CSS 변수 명
+		 * @returns {string} HTML 스트링
+		 */
+		function format_metro_badge(line_name, color_var) {
+			const badge_style = `style="background-color: var(${color_var})"`;
+			
+			// 1~9호선 정규표현식 검사 (1글자 숫자)
+			const is_numeric_line = /^[1-9]$/.test(line_name);
+			
+			if (is_numeric_line) {
+				// 요청하신 대로 1~9호선은 numline 클래스를 사용
+				return `<span class="numline metro_line" ${badge_style}>${line_name}<span class="a11y_txt">호선</span></span>`;
+			} else {
+				// 이름으로 된 노선(경의중앙, 공항철도 등)은 longline 클래스 사용
+				return `<span class="longline metro_line" ${badge_style}>${line_name}</span>`;
 			}
-			if (/^[1-9]$/.test(line)) {
-				return `<span class="circle_badge metro_line">${line}<span class="a11y_txt">호선</span></span>`;
-			}
-			return `<span class="numline metro_line">${line}</span>`;
 		}
 
-		function update_display(key) {
-			const d = DONG_DATA[key];
-			if (!d) return;
+		// 화면 업데이트 로직
+		function update_dong_info(dong_key) {
+			const data = DONG_DATA[dong_key];
+			if (!data) return;
 
-			document.getElementById('dong_name').textContent = d.name;
-			document.getElementById('leader_name').textContent = d.leader_name;
-			document.getElementById('rep_name').textContent = d.rep_name;
-			document.getElementById('strategy_keyword').textContent = d.strategy;
-			document.getElementById('target_desc').textContent = d.target;
+			// 텍스트 정보 업데이트
+			document.getElementById('dong_name').textContent = data.name;
+			document.getElementById('leader_name').textContent = data.leader_name;
+			document.getElementById('rep_name').textContent = data.rep_name;
+			document.getElementById('strategy_keyword').textContent = data.strategy;
+			document.getElementById('target_desc').textContent = data.target;
 
-			const img_el = document.getElementById('dong_image');
-			img_el.src = BASE_IMG_PATH + d.img;
-			img_el.alt = `${d.name} 전경 사진`;
-			img_el.onerror = () => {
-				img_el.src = "https://placehold.co/800x400?text=" + encodeURIComponent(d.name);
+			// 이미지 업데이트
+			const hero_img = document.getElementById('dong_image');
+			hero_img.src = BASE_IMG_PATH + data.img;
+			hero_img.alt = `${data.name} 지역 전경`;
+			hero_img.onerror = () => {
+				hero_img.src = `https://placehold.co/800x400/50a/fff?text=${encodeURIComponent(data.name)}`;
 			};
 
-			document.getElementById('road_addr_display').innerHTML = `<dt>도로명 주소</dt><dd>${d.road_address}</dd>`;
-			document.getElementById('jibun_addr_display').innerHTML = `<dt>지번 주소</dt><dd>${d.jibun_address}</dd>`;
+			// 주소지 및 관할구역
+			document.getElementById('road_addr_display').innerHTML = `<dt>도로명 : </dt><dd>${data.road_address}</dd>`;
+			document.getElementById('jibun_addr_display').innerHTML = `<dt>지번 : </dt><dd>${data.jibun_address}</dd>`;
 			
-			const target_cont = document.getElementById('addr_target_container');
-			const search_keyword = encodeURIComponent(d.target_facility);
-			target_cont.innerHTML = `<a href="${KAKAO_MAP_URL}${search_keyword}" class="facility_link" target="_blank" title="카카오맵에서 위치 보기(새창)">${d.target_facility}</a>`;
+			const facility_link_box = document.getElementById('addr_target_container');
+			facility_link_box.innerHTML = `<a href="${KAKAO_MAP_URL}${encodeURIComponent(data.target_facility)}" class="facility_link" target="_blank" rel="noopener noreferrer">${data.target_facility} <span class="a11y_txt">(새창 열기)</span></a>`;
 			
-			document.getElementById('jurisdiction').textContent = `관할 구역: ${d.jurisdiction_area}`;
-			document.getElementById('infra_church').textContent = d.church_info;
+			document.getElementById('jurisdiction').textContent = data.jurisdiction_area;
+			document.getElementById('infra_church').textContent = data.church_info;
 
-			const sub_cont = document.getElementById('subway_list');
-			sub_cont.innerHTML = "";
-			if (d.subway_routes && d.subway_routes.length > 0) {
-				d.subway_routes.forEach(s => {
-					const div = document.createElement('div');
-					div.className = "infra_item";
-					div.innerHTML = `
-						<span class="badge_wrapper">${format_metro_line(s.line)}</span>
-						<span class="station_name">${s.station}</span>
+			// 지하철 리스트 렌더링
+			const metro_list_el = document.getElementById('subway_list');
+			metro_list_el.innerHTML = "";
+			if (data.subway_routes && data.subway_routes.length > 0) {
+				data.subway_routes.forEach(route => {
+					const item = document.createElement('dd');
+					item.className = "infra_item";
+					item.innerHTML = `
+						<i class="badge_wrapper">${format_metro_badge(route.line, route.color_var)}</i>
+						<span class="station_name">${route.station}</span>
 					`;
-					sub_cont.appendChild(div);
+					metro_list_el.appendChild(item);
 				});
+			} else {
+				metro_list_el.innerHTML = "<dd>인근 지하철 정보가 없습니다.</dd>";
 			}
 
-			const bus_cont = document.getElementById('bus_list');
-			bus_cont.innerHTML = "";
-			if (d.bus_routes && d.bus_routes.length > 0) {
-				d.bus_routes.forEach(b => {
-					const group = document.createElement('div');
-					group.className = "bus_group";
-					group.innerHTML = `
-						<strong class="bus_stop_title">🚏 ${b.stop}</strong>
-						<div class="route_list">
-						${b.routes.map(r => `<span class="bus_line">${r}<span class="a11y_txt">번</span></span>`).join('')}
-						</div>
+			// 버스 리스트 렌더링
+			const bus_list_el = document.getElementById('bus_list');
+			bus_list_el.innerHTML = "";
+			if (data.bus_routes && data.bus_routes.length > 0) {
+				data.bus_routes.forEach(group => {
+					const section = document.createElement('dl');
+					section.className = "bus_group";
+					section.innerHTML = `
+						<dt class="bus_stop_title">🚏 ${group.stop}</dt>
+						
+							${group.routes.map(no => `<dd class="bus_line" style="background-color: var(${group.color_var})">${no}<span class="a11y_txt">번</span></dd>`).join('')}
+						
 					`;
-					bus_cont.appendChild(group);
+					bus_list_el.appendChild(section);
 				});
+			} else {
+				bus_list_el.innerHTML = "<div>버스 정보가 없습니다.</div>";
 			}
 		}
 
-		document.addEventListener('DOMContentLoaded', () => {
-			const grid = document.getElementById('grid_container');
-			const sorted_keys = Object.keys(DONG_DATA).sort((a, b) =>
-				DONG_DATA[a].name.localeCompare(DONG_DATA[b].name, 'ko')
-				);
+		// 초기 로드
+		window.onload = () => {
+			const grid_container = document.getElementById('grid_container');
+			const sorted_keys = Object.keys(DONG_DATA).sort((a, b) => DONG_DATA[a].name.localeCompare(DONG_DATA[b].name, 'ko'));
 
-			sorted_keys.forEach((key, idx) => {
-				const label = document.createElement('label');
-				label.className = 'dong_label';
-				label.innerHTML = `
-					<input type="radio" name="dong_choice" value="${key}" ${idx === 0 ? 'checked' : ''}>
+			sorted_keys.forEach((key, index) => {
+				const label_node = document.createElement('label');
+				label_node.className = 'dong_label';
+				label_node.innerHTML = `
+					<input type="radio" name="dong_choice" value="${key}" ${index === 0 ? 'checked' : ''}>
 					<span class="dong_box">${DONG_DATA[key].name}</span>
 				`;
-				label.querySelector('input').addEventListener('change', (e) => update_display(e.target.value));
-				grid.appendChild(label);
+				label_node.querySelector('input').addEventListener('change', (ev) => update_dong_info(ev.target.value));
+				grid_container.appendChild(label_node);
 			});
 
-			if (sorted_keys.length > 0) update_display(sorted_keys[0]);
-		});
+			// 첫 번째 항목 자동 선택
+			if (sorted_keys.length > 0) update_dong_info(sorted_keys[0]);
+		};
 	</script>
 </body>
 
