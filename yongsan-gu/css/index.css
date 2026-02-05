@@ -25,12 +25,15 @@
   height: 1.5rem;
 }
 /* 행정동 선택 그리드 */
-fieldset {width: 100%;}
+details, fieldset {width: 100%;}
 .dong_grid {
   display: grid; 
   grid-template-columns: repeat(8, 1fr);
   grid-auto-rows: auto;
   gap: 1rem;
+}
+.mobile_dong_details {
+  background: var(--main_theme_variable_transparent);
 }
 .dong_label {
   position: relative;
@@ -142,6 +145,10 @@ footer {
 /*iPhone SE, Galaxy Fold3, watch*/
 @media screen and (330px > width) {
   .dong_grid{grid-template-columns: repeat(2, 1fr);}
+  .info_grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*Dark Mode Layout*/
