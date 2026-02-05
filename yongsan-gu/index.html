@@ -232,9 +232,10 @@
 				jurisdiction_area: "한강로1~3가, 용산동3가, 용산동5가 전역",
 				strategy: "핵심 요지 대중 전도", target: "용산역/신용산역 유동 인구, 아모레퍼시픽 등 대기업 직장인",
 				subway_routes: [
-					{ line: "1", station: "용산역", color_var: "--line1" },
-					{ line: "4", station: "신용산역/삼각지", color_var: "--line4" },
-					{ line: "경의중앙", station: "용산역", color_var: "--gjline" }
+					{ line: "1", station: "", color_var: "--line1" },
+					{ line: "경의중앙", station: "용산역", color_var: "--gjline" },
+					{ line: "4", station: "신용산역 이촌역 삼각지역", color_var: "--line4" },
+					{ line: "경의중앙", station: "용산역 이촌역", color_var: "--gjline" }
 				],
 				bus_routes: [
 					{ stop: "신용산역(중)", routes: ["100", "150", "151", "152", "421", "500", "501", "502", "504", "506", "750A", "752"], color_var: "--b_bus" },
@@ -343,7 +344,7 @@
 			if (is_numeric_line) {
 				return `<span class="numline metro_line" ${badge_style}>${line_name}<span class="a11y_txt">호선</span></span>`;
 			} else {
-				return `<span class="longline metro_line" ${badge_style}>${line_name}</span>`;
+				return `<span class="longline metro_line" ${badge_style}>${line_name}<span class="a11y_txt">선</span></span>`;
 			}
 		}
 
