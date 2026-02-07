@@ -5,8 +5,7 @@
   --main_theme: oklab(0.35 -0.01 -0.16);
   --main_theme_variable: light-dark(oklab(0.35 -0.01 -0.16), oklab(0.85 -0.01 -0.16));
   --main_theme_variable_transparent: light-dark(oklab(0.35 -0.01 -0.16 / 0.1), oklab(0.85 -0.01 -0.16 / 0.1));
-  --text_primary: light-dark(#111, #eee);
-  --border_color: light-dark(#ccc, #444);
+
 
 
   .header_title {
@@ -31,6 +30,13 @@
   details,
   fieldset {
     width: 100%;
+    z-index: 10;
+  }
+
+  .dong_selector_fieldset {
+    position: absolute;
+    background-color: var(--pure_mono);
+    z-index: 10;
   }
 
   .dong_grid {
@@ -105,12 +111,39 @@
   }
 
   h3 {
-    font-size: 1.25rem;
-    font-weight: 800;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
 
+  h4 {
+    font-size: 1.25rem;
+    ;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 800;
+  }
+
   /* 상세 설명 및 관할 */
+  .map_link_group {
+    display: flex;
+  }
+
+  .map_link_group a {
+    max-height: 5rem;
+    aspect-ratio: 1/1;
+    padding: 0rem;
+    margin: 0.5rem;
+  }
+
+  .map_link_group a img {
+    border-radius: 0.5rem;
+  }
+
   .transport_info dl {
     gap: 1rem;
   }
@@ -160,67 +193,6 @@
     justify-content: center;
     align-items: center;
     padding-block: 1.5rem;
-  }
-
-  /* 시설 정보 리스트 (DL 구조 New) */
-  .facility_list_wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .facility_item {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.5rem;
-    margin: 0;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px dashed var(--border_color);
-  }
-
-  .facility_item:last-child {
-    border-bottom: none;
-  }
-
-  .facility_name_dt {
-    font-weight: 700;
-    color: var(--main_theme_variable);
-    min-width: 6rem;
-  }
-
-  .facility_addr_dd {
-    margin: 0;
-    color: var(--text_primary);
-    font-size: 0.95rem;
-  }
-
-  /* 유관기관 리스트 */
-  .related_orgs_box {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border_color);
-  }
-
-  .sub_info_title {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-    color: var(--text_primary);
-  }
-
-  .related_org_list {
-    padding-left: 1.25rem;
-    margin: 0.5rem 0 0;
-  }
-
-  .related_org_list li {
-    margin-bottom: 0.25rem;
-    color: var(--text_primary);
-  }
-
-  .badge_wrapper {
-    display: inline-flex;
-    align-items: center;
   }
 
   /*340px〜1000px Mobile iPad Vertical*/

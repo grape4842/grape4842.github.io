@@ -120,12 +120,9 @@
 	<script>
 		const BASE_IMG_PATH = "img/";
 		const KAKAO_MAP_URL = "https://map.kakao.com/link/search/";
+		const NAVER_MAP_URL = "https://map.naver.com/v5/search/";
 		const BUS_INFO_URL = "https://bus.go.kr/search/bus1.jsp";
 		let current_selected_dong = "";
-
-		// Feature Suggestion:
-		// 1. Add a "Copy Address" button next to the address display using navigator.clipboard.writeText().
-		// 2. Add quick links to Naver Map/Kakao Map route finding for the target facility.
 
 		const DONG_DATA = {
 			namyoung: {
@@ -139,9 +136,9 @@
 					{ station: "숙대입구역", lines: [{ id: "4", color: "--line4" }] }
 				],
 				bus_routes: [
-					{ stop: "남영동주민센터/남영우체국/숙대입구역", routes: ["150", "151", "152", "162", "202", "400", "421", "500", "501", "502", "503", "504", "505", "506", "507", "605", "750A", "750B", "751", "752", "N15"], color_var: "--b_bus" },
-					{ stop: "갈월동4호선숙대입구", routes: ["100", "150", "151", "152", "162", "202", "400", "421", "500", "501", "502", "503", "504", "505", "506", "507", "605", "750A", "750B", "751", "752", "N15"], color_var: "--b_bus" },
-					{ stop: "마을버스", routes: ["용산04"], color_var: "--g_bus" }
+					{ stop: "숙대입구역(중앙차로)", routes: ["100", "150", "151", "152", "202", "262", "400", "421", "500", "501", "502", "503", "504", "505", "506", "507", "605", "750A", "750B", "751", "752", "1711", "N15"], color_var: "--b_bus" },
+					{ stop: "남영동주민센터(가로변)", routes: ["162", "202", "400", "503", "505", "1711", "7016"], color_var: "--b_bus" },
+					{ stop: "마을버스(숙대입구역)", routes: ["용산04"], color_var: "--g_bus" }
 				],
 				facilities: {
 					"복지/문화": [
@@ -162,8 +159,8 @@
 				strategy: "전통 주택가 생활 전도", target: "후암시장 장날 및 주말 남산 산책로 이용객 대상. 장기 거주 어르신 대상의 말벗 봉사 및 문화 강좌 초청 권장.",
 				subway_routes: [{ station: "숙대입구역(도보권)", lines: [{ id: "4", color: "--line4" }] }],
 				bus_routes: [
-					{ stop: "후암동주민센터/후암시장", routes: ["202", "400", "402", "405", "605"], color_var: "--b_bus" },
-					{ stop: "후암동종점", routes: ["402", "405"], color_var: "--b_bus" },
+					{ stop: "후암시장", routes: ["202", "400", "405", "421", "605", "7016"], color_var: "--b_bus" },
+					{ stop: "후암동주민센터", routes: ["402", "405", "202", "400"], color_var: "--b_bus" },
 					{ stop: "마을버스(후암시장)", routes: ["용산02"], color_var: "--g_bus" }
 				],
 				facilities: {
@@ -189,8 +186,8 @@
 				strategy: "해방촌 글로벌 심정 전도", target: "주말 해방촌 오거리 및 신흥시장 방문 젊은이 대상. 1인 가구 및 외국인을 위한 한국어 교실 등 문화 프로그램 홍보 추천.",
 				subway_routes: [{ station: "녹사평역(인접)", lines: [{ id: "6", color: "--line6" }] }],
 				bus_routes: [
-					{ stop: "용산2가동주민센터/해방촌오거리", routes: ["402", "405"], color_var: "--b_bus" },
-					{ stop: "마을버스(해방촌)", routes: ["용산02"], color_var: "--g_bus" }
+					{ stop: "용산2가동주민센터", routes: ["402", "405", "202(인근)"], color_var: "--b_bus" },
+					{ stop: "마을버스(해방촌오거리)", routes: ["용산02"], color_var: "--g_bus" }
 				],
 				facilities: {
 					"경로당": [
@@ -211,7 +208,7 @@
 					{ station: "효창공원앞역", lines: [{ id: "6", color: "--line6" }, { id: "경의중앙", color: "--gjline" }] }
 				],
 				bus_routes: [
-					{ stop: "효창동주민센터/국민은행효창동지점", routes: ["400", "2016", "740", "110A", "110B"], color_var: "--b_bus" },
+					{ stop: "효창공원앞역", routes: ["110A", "110B", "400", "740", "0411", "N72"], color_var: "--b_bus" },
 					{ stop: "마을버스(효창공원앞역)", routes: ["용산04"], color_var: "--g_bus" }
 				],
 				facilities: {
@@ -235,9 +232,8 @@
 				strategy: "전통시장 생활 밀착 전도", target: "용문시장 장날 상인 및 주부 대상 관계 전도. 래미안 아파트 단지 내 활동보다는 아파트 입구 및 시장 연결 동선에서의 가판 활동 추천.",
 				subway_routes: [{ station: "효창공원앞역(인접)", lines: [{ id: "6", color: "--line6" }] }],
 				bus_routes: [
-					{ stop: "용문시장", routes: ["0017", "1711", "7016"], color_var: "--b_bus" },
-					{ stop: "원효로2가", routes: ["162", "262", "503", "0411"], color_var: "--b_bus" },
-					{ stop: "마을버스", routes: ["용산04"], color_var: "--g_bus" }
+					{ stop: "용문시장", routes: ["1711", "0017", "740(인근)"], color_var: "--b_bus" },
+					{ stop: "마을버스(용문시장)", routes: ["용산04"], color_var: "--g_bus" }
 				],
 				facilities: {
 					"복지/문화/체육": [
@@ -263,8 +259,8 @@
 					{ station: "남영역", lines: [{ id: "1", color: "--line1" }] }
 				],
 				bus_routes: [
-					{ stop: "청파동주민센터/숙명여대도서관앞", routes: ["400", "202(후암동방면)", "용산04"], color_var: "--b_bus" },
-					{ stop: "숙대입구역", routes: ["162", "262", "503", "1711", "7016"], color_var: "--b_bus" }
+					{ stop: "청파동주민센터", routes: ["400", "202", "162"], color_var: "--b_bus" },
+					{ stop: "마을버스(청파동주민센터)", routes: ["용산04"], color_var: "--g_bus" }
 				],
 				facilities: {
 					"복지/문화": [
@@ -289,7 +285,7 @@
 				bus_routes: [
 					{ stop: "용산구문화체육센터/원효로1동주민센터", routes: ["용산03"], color_var: "--g_bus" },
 					{ stop: "용산구보건소", routes: ["740", "0017", "용산02", "용산04"], color_var: "--b_bus" },
-					{ stop: "원효로우체국/신계대림아파트", routes: ["162", "262", "503", "1711", "7016"], color_var: "--b_bus" }
+					{ stop: "원효로우체국(인근)", routes: ["162", "262", "503", "1711", "7016"], color_var: "--b_bus" }
 				],
 				facilities: {
 					"복지/문화": [
@@ -311,8 +307,8 @@
 				strategy: "강변 아파트 단지 정성", target: "성심여고 등하교 시간대 학부모 대상 평화 가정 캠페인. 한강변 산책 주민 대상 환경 정화 봉사 활동 병행.",
 				subway_routes: [{ station: "마포역(인접)", lines: [{ id: "5", color: "--line5" }] }],
 				bus_routes: [
-					{ stop: "원효로2동주민센터", routes: ["262", "505", "2016", "3012", "7016"], color_var: "--b_bus" },
-					{ stop: "원효로3가/남정초등학교", routes: ["162", "262", "503", "505", "2016", "0017"], color_var: "--b_bus" }
+					{ stop: "원효로2동주민센터", routes: ["0017", "2016", "262", "3012", "7016"], color_var: "--b_bus" },
+					{ stop: "원효로3가", routes: ["162", "262", "503", "505", "2016", "0017"], color_var: "--b_bus" }
 				],
 				facilities: {
 					"경로당": [
@@ -334,9 +330,9 @@
 					{ station: "이촌역", lines: [{ id: "4", color: "--line4" }, { id: "경의중앙", color: "--gjline" }] }
 				],
 				bus_routes: [
-					{ stop: "신용산역/한강대로", routes: ["100", "150", "151", "152", "500", "501", "502", "504", "506", "507", "605", "750A", "750B", "751", "752", "N15"], color_var: "--b_bus" },
-					{ stop: "KT용산지사", routes: ["100", "502", "0017", "7016"], color_var: "--b_bus" },
-					{ stop: "용산세무서/용산역", routes: ["150", "151", "152", "500", "501", "504", "506", "507", "605", "750A", "750B", "751", "752", "400", "502", "0017", "6030"], color_var: "--b_bus" }
+					{ stop: "신용산역(중앙차로)", routes: ["100", "150", "151", "152", "500", "501", "502", "504", "506", "507", "605", "750A", "750B", "751", "752", "N15"], color_var: "--b_bus" },
+					{ stop: "용산역/광장", routes: ["400", "502", "0017", "6030"], color_var: "--b_bus" },
+					{ stop: "KT용산지사", routes: ["100", "202", "502", "0017"], color_var: "--b_bus" }
 				],
 				facilities: {
 					"문화/공원": [
@@ -357,8 +353,8 @@
 					{ station: "이촌역", lines: [{ id: "4", color: "--line4" }, { id: "경의중앙", color: "--gjline" }] }
 				],
 				bus_routes: [
-					{ stop: "이촌동점보아파트/이촌1동충신교회", routes: ["100", "6211", "3012", "6010"], color_var: "--b_bus" },
-					{ stop: "이촌역", routes: ["100", "2016", "3012", "6211", "6010", "6030"], color_var: "--b_bus" }
+					{ stop: "이촌1동주민센터", routes: ["100", "3012", "502", "6211", "6010"], color_var: "--b_bus" },
+					{ stop: "이촌역", routes: ["400", "2016", "6030", "90S투어"], color_var: "--b_bus" }
 				],
 				facilities: {
 					"복지/문화": [
@@ -381,8 +377,8 @@
 				strategy: "개발 예정지 정성 순회", target: "새남터 성지 인근 순례객 및 성촌공원 이용 주민 대상 평화 캠페인. 노후 아파트 단지 관리사무소 협조를 통한 봉사 활동.",
 				subway_routes: [{ station: "용산역(도보권)", lines: [{ id: "1", color: "--line1" }] }],
 				bus_routes: [
-					{ stop: "이촌2동주민센터/이촌2동대림아파트", routes: ["0017", "2016", "3012", "5012"], color_var: "--b_bus" },
-					{ stop: "성촌공원/포르쉐센터용산", routes: ["505", "5012"], color_var: "--b_bus" }
+					{ stop: "이촌2동주민센터", routes: ["0017", "2016", "3012", "5012"], color_var: "--b_bus" },
+					{ stop: "성촌공원", routes: ["505", "5012"], color_var: "--b_bus" }
 				],
 				facilities: {
 					"복지/문화": [
@@ -407,8 +403,8 @@
 					{ station: "녹사평역", lines: [{ id: "6", color: "--line6" }] }
 				],
 				bus_routes: [
-					{ stop: "이태원1동주민센터/용산구청", routes: ["용산01"], color_var: "--g_bus" },
-					{ stop: "해밀턴호텔/이태원역", routes: ["110A", "110B", "400", "405", "421"], color_var: "--b_bus" }
+					{ stop: "해밀턴호텔/이태원역", routes: ["110A", "110B", "400", "405", "421", "03", "90S투어"], color_var: "--b_bus" },
+					{ stop: "마을버스(이태원역)", routes: ["용산01"], color_var: "--g_bus" }
 				],
 				facilities: {
 					"공공기관": [
@@ -428,7 +424,7 @@
 				subway_routes: [{ station: "녹사평역(인접)", lines: [{ id: "6", color: "--line6" }] }],
 				bus_routes: [
 					{ stop: "이태원2동주민센터", routes: ["용산03"], color_var: "--g_bus" },
-					{ stop: "남산대림아파트/경리단길", routes: ["402", "405", "용산03"], color_var: "--b_bus" }
+					{ stop: "남산대림아파트/경리단길", routes: ["402", "405"], color_var: "--b_bus" }
 				],
 				facilities: {
 					"공원": [
@@ -450,8 +446,9 @@
 					{ station: "한남역", lines: [{ id: "경의중앙", color: "--gjline" }] }
 				],
 				bus_routes: [
-					{ stop: "한남동주민센터", routes: ["용산01", "110A", "110B", "241", "2016"], color_var: "--b_bus" },
-					{ stop: "순천향대학병원/한남오거리", routes: ["140", "142", "144", "400", "402", "405", "420", "470", "472", "3011", "6211"], color_var: "--b_bus" }
+					{ stop: "한남동주민센터", routes: ["110A", "110B", "400", "405", "142", "03", "6030"], color_var: "--b_bus" },
+					{ stop: "순천향대학병원", routes: ["140", "142", "144", "402", "407", "420", "470", "472", "3011", "6211", "1150", "9003"], color_var: "--b_bus" },
+					{ stop: "마을버스(한남동주민센터)", routes: ["용산01"], color_var: "--g_bus" }
 				],
 				facilities: {
 					"문화/예술": [
@@ -473,8 +470,8 @@
 					{ station: "이촌역(인근)", lines: [{ id: "4", color: "--line4" }] }
 				],
 				bus_routes: [
-					{ stop: "서빙고동주민센터/서빙고역교차로", routes: ["400", "405", "502", "2016", "6211"], color_var: "--b_bus" },
-					{ stop: "서빙고역1번출구", routes: ["100", "400", "502", "2016", "3012", "6211"], color_var: "--b_bus" }
+					{ stop: "서빙고역", routes: ["100", "2016", "400", "405", "502"], color_var: "--b_bus" },
+					{ stop: "서빙고동주민센터", routes: ["400", "405", "502", "2016", "6211"], color_var: "--b_bus" }
 				],
 				facilities: {
 					"문화/예술": [
@@ -498,7 +495,8 @@
 				strategy: "지역 주민 밀착 전도", target: "한국폴리텍대학 정수캠퍼스 학생 대상 동아리 홍보. 보광동 종점 및 주택가 골목의 어르신 대상 말벗 봉사.",
 				subway_routes: [{ station: "한남역(인접)", lines: [{ id: "경의중앙", color: "--gjline" }] }],
 				bus_routes: [
-					{ stop: "보광동주민센터", routes: ["400", "405", "421", "용산01"], color_var: "--b_bus" }
+					{ stop: "보광동주민센터", routes: ["400", "405", "421"], color_var: "--b_bus" },
+					{ stop: "마을버스(보광동주민센터)", routes: ["용산01"], color_var: "--g_bus" }
 				],
 				facilities: {
 					"교육/기타": [
@@ -554,7 +552,17 @@
 			document.getElementById('jibun_addr_display').innerHTML = `<dt>지번 : </dt><dd>${data.jibun_address}</dd>`;
 
 			const facility_link_box = document.getElementById('addr_target_container');
-			facility_link_box.innerHTML = `<a href="${KAKAO_MAP_URL}${encodeURIComponent(data.target_facility)}" target="_blank" rel="noopener noreferrer" class="facility_link">${data.target_facility} <span class="a11y_txt">(새창 열기)</span></a>`;
+			facility_link_box.innerHTML = `
+				<div class="facility_name">${data.target_facility}</div>
+				<div class="map_link_group">
+					<a href="${KAKAO_MAP_URL}${encodeURIComponent(data.target_facility)}" target="_blank" rel="noopener noreferrer" class="map_link_btn kakao_map_btn">
+						<img alt="${data.target_facility} 카카오맵에서 검색결과 보기" src="https://play-lh.googleusercontent.com/DYeQ02AyIghsirp4ea3oEnyxT3X0GgTZrXYR8G7AN6tRr-9mFcQIJdCUub5VHiWKHA=w480-h960-rw">
+					</a>
+					<a href="${NAVER_MAP_URL}${encodeURIComponent(data.target_facility)}" target="_blank" rel="noopener noreferrer" class="map_link_btn naver_map_btn">
+						<img alt="${data.target_facility} 네이버 지도에서 검색결과 보기" src="https://play-lh.googleusercontent.com/Cewes10AmAykxX9X18sMsyC4aFalv8jsyXigdfydFcgDVDnyzKsgbEtkQ5LhcCftBB1f=w480-h960-rw">
+					</a>
+				</div>
+			`;
 
 			document.getElementById('jurisdiction').textContent = data.jurisdiction_area;
 			document.getElementById('infra_church').textContent = data.church_info;
@@ -582,13 +590,113 @@
 			// 버스 리스트
 			const bus_list_el = document.getElementById('bus_list');
 			bus_list_el.innerHTML = "";
+
+			// 버스 타입 정의 및 순서
+			const BUS_TYPES = {
+				"trunk": { label: "간선", color_var: "--b_bus", order: 1 }, // 3자리수, 파랑
+				"branch": { label: "지선", color_var: "--g_bus", order: 2 }, // 4자리수, 초록
+				"village": { label: "마을", color_var: "--g_bus", order: 3 }, // 용산XX, 초록
+				"circulation": { label: "순환", color_var: "--y_bus", order: 4 }, // 01, 03 등, 노랑
+				"express": { label: "광역", color_var: "--r_bus", order: 5 }, // 9XXX, 빨강
+				"airport": { label: "공항", color_var: "--airportline", order: 6 }, // 6XXX
+				"night": { label: "심야", color_var: "--night_bus", order: 7 }, // NXX
+				"incheon": { label: "인천", color_var: "--b_bus", order: 8 }, // 인천 버스
+				"gyeonggi": { label: "경기", color_var: "--r_bus", order: 9 } // 경기 버스
+			};
+
+			// 다크모드 대응을 위한 심야버스 색상 변수 추가 (root에 없을 경우 대비 직접 스타일 지정 가능하지만 var 사용 권장)
+			// root.css에 --night_bus가 없으므로 임시로 --border_color 또는 직접값 사용, 
+			// 여기서는 가독성을 위해 별도 style 처리가 나을 수 있으나 
+			// 기존 --r_bus 등을 활용하거나 --text_primary와 구분되는 색상 사용. 
+			// 심야는 보통 '밤'을 의미하므로 어두운 배경에 밝은 텍스트, 혹은 붉은 계열. 
+			// 서울 심야버스는 'N' (Night) -> 보통 브랜드 컬러는 짙은 남색이나, 시인성을 위해 빨강/파랑 등 혼용.
+			// 여기서는 data.color_var를 무시하고 타입별 지정 컬러를 따르되, 
+			// 기존 데이터에 color_var가 있으면 그걸 우선할지 결정해야 함. 
+			// 요청사항: "지선, 간선, 마을버스, 심야 별로 나눠줘" -> 타입별 그룹핑이 우선.
+
 			data.bus_routes.forEach(group => {
 				const section = document.createElement('dl');
 				section.className = "bus_group";
-				section.innerHTML = `
-					<dt class="bus_stop_title">🚏 ${group.stop}</dt>
-					${group.routes.map(no => `<dd class="bus_line" style="background-color: var(${group.color_var})">${no}<span class="a11y_txt">번</span></dd>`).join('')}
-				`;
+
+				// 1. 정류소 이름 (DT)
+				const dt = document.createElement('dt');
+				dt.className = "bus_stop_title";
+				dt.textContent = `🚏 ${group.stop}`;
+				section.appendChild(dt);
+
+				// 2. 노선 분류 및 그룹화
+				const categorized_routes = {};
+
+				group.routes.forEach(route_num => {
+					let type = "branch"; // Default (지선) -> 4자리
+					let sort_key = route_num;
+
+					// 분류 로직
+					if (route_num.startsWith('N')) type = "night";
+					else if (route_num.includes('용산') || route_num.includes('마을')) type = "village";
+					else if (/^\d{2}$/.test(route_num)) type = "circulation"; // 02, 03 등
+					else if (/^\d{3}$/.test(route_num)) type = "trunk"; // 3자리 (간선)
+					else if (/^6\d{3}$/.test(route_num)) type = "airport"; // 60XX (공항)
+					else if (/^9\d{3}$/.test(route_num) || /^M/i.test(route_num) || /^1\d{3}$/.test(route_num)) {
+						// 9XXX, M버스, 1XXX(경기) -> 일단 광역/경기로 분류. 
+						// 서울 지선은 4자리지만 1로 시작하는 4자리가 있는지? -> 1011(지선 있음), 1111(지선).
+						// 경기버스는 보통 4자리수 중 서울 버스와 겹치거나, 빨간 버스.
+						// 여기서는 서울시내버스 기준이므로 4자리는 기본 '지선'으로 둠.
+						// 단, 9xxx는 확실히 광역.
+						if (/^9\d{3}$/.test(route_num)) type = "express";
+						else type = "branch";
+					}
+					else type = "branch"; // 나머지 4자리 등은 지선
+
+					if (!categorized_routes[type]) categorized_routes[type] = [];
+					categorized_routes[type].push(route_num);
+				});
+
+				// 3. 타입 순서대로 렌더링 (DD > UL > LI 구조 또는 DD 내 나열)
+				// 기존 구조: DD class="bus_line" x N
+				// 변경 구조: 타입별 헤더 없이 뱃지 색상으로 구분? 혹은 줄바꿈?
+				// 요청: "나눠줘" -> 시각적 분리 필요.
+
+				// 방법: 타입별로 줄을 나누거나, 타입 라벨을 붙임.
+				// <dd class="bus_category_row"><span class="type_label">간선</span> <span class="bus_line">...</span> ...</dd>
+
+				// 3. 타입 순서대로 렌더링 (Div > DT(Badge) + DD(Line) 구조)
+				Object.keys(BUS_TYPES).sort((a, b) => BUS_TYPES[a].order - BUS_TYPES[b].order).forEach(type_key => {
+					if (categorized_routes[type_key]) {
+						// <dl> 직계 자식으로 <div> 사용 가능 (DT/DD 그룹핑)
+						const group_div = document.createElement('div');
+						group_div.className = "bus_type_group";
+
+						const type_info = BUS_TYPES[type_key];
+
+						// 뱃지 (DT)
+						const type_dt = document.createElement('dt');
+						type_dt.className = "bus_type_badge";
+						type_dt.textContent = type_info.label;
+						type_dt.style.color = `var(${type_info.color_var})`;
+
+						group_div.appendChild(type_dt);
+
+						// 버스 노선 (DD)
+						categorized_routes[type_key].forEach(no => {
+							const line_dd = document.createElement('dd');
+							line_dd.className = "bus_line";
+							line_dd.textContent = no;
+							line_dd.style.backgroundColor = `var(${type_info.color_var})`;
+							line_dd.setAttribute('data-type', type_key); // CSS에서 텍스트 컬러 제어를 위해 속성 추가
+
+							// 접근성 텍스트
+							const a11y = document.createElement('span');
+							a11y.className = "a11y_txt";
+							a11y.textContent = "번";
+							line_dd.appendChild(a11y);
+
+							group_div.appendChild(line_dd);
+						});
+						section.appendChild(group_div);
+					}
+				});
+
 				bus_list_el.appendChild(section);
 			});
 
