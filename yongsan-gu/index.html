@@ -45,13 +45,13 @@
 		</article>
 
 		<section class="info_grid">
-			<article class="info_card evangelism_card">
+			<section class="info_card evangelism_card">
 				<h3>🔥 전도 전략 및 타겟</h3>
 				<span id="strategy_keyword" class="strategy_tag">-</span>
 				<p id="target_desc"></p>
-			</article>
+			</section>
 
-			<article class="info_card leader_info_grid">
+			<section class="info_card leader_info_grid">
 				<h3>👤 지역 담당자</h3>
 				<dl>
 					<dt class="person_tag">동회장 : </dt>
@@ -61,22 +61,21 @@
 					<dt class="person_tag">동대표 : </dt>
 					<dd id="rep_name" class="person_name">-</dd>
 				</dl>
-			</article>
+			</section>
 
-			<article class="info_card location_info">
+			<section class="info_card location_info">
 				<h3>📍 위치 정보</h3>
 				<div class="address_group">
-					<dl id="road_addr_display" class="description_list"></dl>
-					<dl id="jibun_addr_display" class="description_list"></dl>
+					<dl id="unified_addr_display" class="description_list"></dl>
 				</div>
 				<div id="addr_target_container" class="facility_name"></div>
 				<dl>
 					<dt>관할 구역 : </dt>
 					<dd id="jurisdiction" class="juris_box"></dd>
 				</dl>
-			</article>
+			</section>
 
-			<article class="info_card transport_info">
+			<section class="info_card transport_info">
 				<h3>🚇 인근 대중교통</h3>
 				<div class="transport_content">
 					<h4 class="sub_info_title">지하철 노선</h4>
@@ -85,19 +84,19 @@
 					<h4 class="sub_info_title">주요 버스 정류소 및 노선</h4>
 					<div id="bus_list" class="infra_list"></div>
 				</div>
-			</article>
+			</section>
 
-			<article class="info_card center_info">
+			<section class="info_card center_info">
 				<h3>🏛️ 동네 문화 시설</h3>
 				<div id="facility_list" class="facility_list_container"></div>
-			</article>
+			</section>
 
-			<article class="info_card church_info">
+			<section class="info_card church_info">
 				<h3>🤝 가정연합 유관기관</h3>
 				<p id="infra_church" class="church_desc"></p>
-			</article>
+			</section>
 
-			<article class="info_card other_info">
+			<section class="info_card other_info">
 				<h3>🔗 참조 링크</h3>
 				<ul>
 					<li><a href="https://bus.go.kr/app/#viewpage/1000001/main.nearbusinfo/1/title=Home%20%EB%B2%84%EC%8A%A4%EC%A0%95%EB%B3%B4"
@@ -107,7 +106,7 @@
 					<li><a href="https://www.yongsan.go.kr/portal/main/contents.do?menuNo=200211" target="_blank"
 							rel="noopener noreferrer">용산구청 동별 관할구역 상세</a></li>
 				</ul>
-			</article>
+			</section>
 		</section>
 	</main>
 
@@ -116,6 +115,13 @@
 			<p>© purplemiyazawa. All rights reserved.</p>
 		</div>
 	</footer>
+
+	<!-- 전도 지원 툴바 -->
+	<div class="evangelism_tools pc_view" id="ev_tools">
+		<button onclick="get_blessing_message()" class="tool_btn" title="오늘의 축복 메시지 받기">🕊️</button>
+		<button onclick="share_current_dong()" class="tool_btn" title="현재 동 정보 공유하기">📤</button>
+		<button onclick="find_my_dong()" class="tool_btn" title="내 주변 행정동 찾기">📍</button>
+	</div>
 
 	<script>
 		const BASE_IMG_PATH = "img/";
@@ -127,6 +133,8 @@
 		const DONG_DATA = {
 			namyoung: {
 				name: "남영동", img: "namyoung.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5440, lng: 126.9748,
+				website_url: "https://www.yongsan.go.kr/portal/dong/namyeong/main.do",
 				road_address: "한강대로76길 7", target_facility: "남영동 주민센터", jibun_address: "갈월동 98-7",
 				jurisdiction_area: "갈월동, 남영동, 동자동 전역",
 				strategy: "숙대입구 상권 및 서울역 배후 전도", target: "점심시간(12-13시) 숙대입구역 2,3번 출구 인근 직장인 및 등하교 시간대 대학생 대상 노방 전도 추천.",
@@ -154,6 +162,8 @@
 			},
 			huam: {
 				name: "후암동", img: "huam.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5499, lng: 126.9806,
+				website_url: "https://www.yongsan.go.kr/portal/dong/huam/main.do",
 				road_address: "후암로16길 38", target_facility: "후암동 주민센터", jibun_address: "후암동 110-101",
 				jurisdiction_area: "후암동 전역 (1~29통)",
 				strategy: "전통 주택가 생활 전도", target: "후암시장 장날 및 주말 남산 산책로 이용객 대상. 장기 거주 어르신 대상의 말벗 봉사 및 문화 강좌 초청 권장.",
@@ -181,6 +191,8 @@
 			},
 			yongsan2ga: {
 				name: "용산2가동", img: "yongsan2ga.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5379, lng: 126.9851,
+				website_url: "https://www.yongsan.go.kr/portal/dong/yongsan2ga/main.do",
 				road_address: "신흥로 90", target_facility: "용산2가동 주민센터", jibun_address: "용산동2가 1-1375",
 				jurisdiction_area: "용산동2가, 용산동4가 전역",
 				strategy: "해방촌 글로벌 심정 전도", target: "주말 해방촌 오거리 및 신흥시장 방문 젊은이 대상. 1인 가구 및 외국인을 위한 한국어 교실 등 문화 프로그램 홍보 추천.",
@@ -201,6 +213,8 @@
 			},
 			hyochang: {
 				name: "효창동", img: "hyochang.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5428, lng: 126.9609,
+				website_url: "https://www.yongsan.go.kr/portal/dong/hyochang/main.do",
 				road_address: "효창원로 161", target_facility: "효창동 주민센터", jibun_address: "효창동 5-144",
 				jurisdiction_area: "효창동 전역 (1~13통)",
 				strategy: "역사 중심 평화 전도", target: "효창공원 조기 운동객 및 산책 주민 대상 아침 인사. 숙대 후문 원룸촌 거주 대학생 대상 시험기간 간식 나눔 등 접촉점 탐색.",
@@ -227,6 +241,8 @@
 			},
 			yongmun: {
 				name: "용문동", img: "yongmun.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5379, lng: 126.9585,
+				website_url: "https://www.yongsan.go.kr/portal/dong/yongmun/main.do",
 				road_address: "효창원로38길 13", target_facility: "용문동 주민센터", jibun_address: "용문동 11-1",
 				jurisdiction_area: "용문동, 도원동 전역",
 				strategy: "전통시장 생활 밀착 전도", target: "용문시장 장날 상인 및 주부 대상 관계 전도. 래미안 아파트 단지 내 활동보다는 아파트 입구 및 시장 연결 동선에서의 가판 활동 추천.",
@@ -251,6 +267,8 @@
 			},
 			cheongpa: {
 				name: "청파동", img: "cheongpa.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5466, lng: 126.9686,
+				website_url: "https://www.yongsan.go.kr/portal/dong/cheongpa/main.do",
 				road_address: "청파로47길 52", target_facility: "청파동 주민센터", jibun_address: "청파동2가 74-1",
 				jurisdiction_area: "청파동1~3가, 서계동 전역",
 				strategy: "본부 수호 및 청년 선교", target: "본부교회 순례객 안내 및 숙대 학생 대상 동아리 활동 홍보. 서계동 주거지 골목 순회를 통한 지역 주민과의 지속적 유대 형성.",
@@ -275,6 +293,8 @@
 			},
 			wonhyo1: {
 				name: "원효로1동", img: "wonhyoro1.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5385, lng: 126.9654,
+				website_url: "https://www.yongsan.go.kr/portal/dong/wonhyoro1/main.do",
 				road_address: "원효로 177-11", target_facility: "원효로1동 주민센터", jibun_address: "원효로1가 39-1",
 				jurisdiction_area: "원효로1가, 문배동, 신계동 전역",
 				strategy: "신축 주거단지 타겟 전도", target: "열정도 야시장 및 주말 상권 이용 청년층 대상. 리첸시아 등 주상복합 입주민 대상 고품격 문화 강좌 초청.",
@@ -302,6 +322,7 @@
 			},
 			wonhyo2: {
 				name: "원효로2동", img: "wonhyoro2.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5338, lng: 126.9525,
 				road_address: "원효로 123", target_facility: "원효로2동 주민센터", jibun_address: "원효로3가 1-1",
 				jurisdiction_area: "원효로3~4가, 산천동, 신창동, 청암동 전역",
 				strategy: "강변 아파트 단지 정성", target: "성심여고 등하교 시간대 학부모 대상 평화 가정 캠페인. 한강변 산책 주민 대상 환경 정화 봉사 활동 병행.",
@@ -320,6 +341,8 @@
 			},
 			hangangro: {
 				name: "한강로동", img: "hangangro.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5284, lng: 126.9685,
+				website_url: "https://www.yongsan.go.kr/portal/dong/hangangro/main.do",
 				road_address: "한강대로38길 35", target_facility: "한강로동 주민센터", jibun_address: "한강로2가 191",
 				jurisdiction_area: "한강로1~3가, 용산동3가, 용산동5가 전역",
 				strategy: "핵심 요지 대중 전도", target: "용산역 광장 및 아이파크몰 입구 유동인구 대상 가판 전도. 아모레퍼시픽 등 대형 오피스 점심시간 집중 활동.",
@@ -346,6 +369,7 @@
 			},
 			ichon1: {
 				name: "이촌1동", img: "ichon1.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5151, lng: 126.9718,
 				road_address: "이촌로71길 24", target_facility: "이촌1동 주민센터", jibun_address: "이촌동 301-160",
 				jurisdiction_area: "이촌동(동부) 전역",
 				strategy: "중산층 VIP 선교", target: "이촌역 및 한강공원 연결 통로에서 주말 가족 단위 대상 캠페인. 일본인 거주자 커뮤니티(글로벌빌리지센터 등)와의 교류 확대.",
@@ -372,6 +396,7 @@
 			},
 			ichon2: {
 				name: "이촌2동", img: "ichon2.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5228, lng: 126.9542,
 				road_address: "이촌로 15", target_facility: "이촌2동 주민센터", jibun_address: "이촌동 203-34",
 				jurisdiction_area: "이촌동(서부) 전역",
 				strategy: "개발 예정지 정성 순회", target: "새남터 성지 인근 순례객 및 성촌공원 이용 주민 대상 평화 캠페인. 노후 아파트 단지 관리사무소 협조를 통한 봉사 활동.",
@@ -395,6 +420,7 @@
 			},
 			itaewon1: {
 				name: "이태원1동", img: "itaewon1.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5333, lng: 126.9932,
 				road_address: "이태원로 161", target_facility: "이태원1동 주민센터", jibun_address: "이태원동 127-23",
 				jurisdiction_area: "이태원동(남부) 전역",
 				strategy: "다문화 만인 구원 전도", target: "이태원역 해밀톤 호텔 뒤편 세계 음식 거리 및 퀴논길 방문 외국인 대상 평화 메세지 전달. 주말 저녁 시간대 적극 활용.",
@@ -418,6 +444,8 @@
 			},
 			itaewon2: {
 				name: "이태원2동", img: "itaewon2.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5385, lng: 126.9926,
+				website_url: "https://www.yongsan.go.kr/portal/dong/itaewon2/main.do",
 				road_address: "회나무로 43-1", target_facility: "이태원2동 주민센터", jibun_address: "이태원동 258-301",
 				jurisdiction_area: "이태원동(북부) 전역",
 				strategy: "문화 트렌드 전도", target: "경리단길 카페 및 소규모 갤러리 방문객 대상 감성적 접근. 남산 야외식물원 산책로 이용 주민 대상 힐링 캠페인.",
@@ -438,6 +466,8 @@
 			},
 			hannam: {
 				name: "한남동", img: "hannam.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5348, lng: 127.0064,
+				website_url: "https://www.yongsan.go.kr/portal/dong/hannam/main.do",
 				road_address: "대사관로 5", target_facility: "한남동 주민센터", jibun_address: "한남동 685-18",
 				jurisdiction_area: "한남동 전역 (1~35통)",
 				strategy: "국제 지도자 선교", target: "순천향대병원 인근 유동인구 및 한남오거리 상권 이용객. 각국 대사관 행사 시 연계 활동 모색.",
@@ -462,6 +492,8 @@
 			},
 			seobinggo: {
 				name: "서빙고동", img: "seobinggo.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5207, lng: 126.9880,
+				website_url: "https://www.yongsan.go.kr/portal/dong/seobinggo/main.do",
 				road_address: "서빙고로 279", target_facility: "서빙고동 주민센터", jibun_address: "서빙고동 241-11",
 				jurisdiction_area: "서빙고동, 동빙고동, 주성동, 용산동6가 전역",
 				strategy: "공원/박물관 문화 전도", target: "주말 용산가족공원 및 국립중앙박물관 나들이 가족 대상 풍선 아트 등 봉사 활동. 미군 잔류 가족 및 외국인 대상 영어 전도.",
@@ -490,6 +522,8 @@
 			},
 			bogwang: {
 				name: "보광동", img: "bogwang.png", leader_name: "김범철", rep_name: "김영은",
+				lat: 37.5255, lng: 126.9985,
+				website_url: "https://www.yongsan.go.kr/portal/dong/bogwang/main.do",
 				road_address: "장문로 95", target_facility: "보광동 주민센터", jibun_address: "보광동 256",
 				jurisdiction_area: "보광동 전역 (1~22통)",
 				strategy: "지역 주민 밀착 전도", target: "한국폴리텍대학 정수캠퍼스 학생 대상 동아리 홍보. 보광동 종점 및 주택가 골목의 어르신 대상 말벗 봉사.",
@@ -533,7 +567,7 @@
 			current_selected_dong = dong_key;
 
 			// 헤더 텍스트 및 기본 정보
-			document.getElementById('dong_name').textContent = data.name;
+			document.getElementById('dong_name').innerHTML = `${data.name} <a href="${data.website_url}" target="_blank" class="dong_site_link" title="${data.name} 주민센터 홈페이지 바로가기">🔗</a>`;
 			document.getElementById('leader_name').textContent = data.leader_name;
 			document.getElementById('rep_name').textContent = data.rep_name;
 			document.getElementById('strategy_keyword').textContent = data.strategy;
@@ -542,14 +576,17 @@
 			// 이미지 (Placeholder 처리)
 			const hero_img = document.getElementById('dong_image');
 			hero_img.src = BASE_IMG_PATH + data.img;
-			hero_img.alt = "";
+			hero_img.alt = ""; // 장식용 이미지 호환성 유지
 			hero_img.onerror = () => {
 				hero_img.src = `https://placehold.co/800x400/152c8c/fff?text=${encodeURIComponent(data.name)}`;
+				hero_img.alt = "";
 			};
 
-			// 주소
-			document.getElementById('road_addr_display').innerHTML = `<dt>도로명 : </dt><dd>${data.road_address}</dd>`;
-			document.getElementById('jibun_addr_display').innerHTML = `<dt>지번 : </dt><dd>${data.jibun_address}</dd>`;
+			// 주소 (통합 dl 구조로 시멘틱 개선)
+			document.getElementById('unified_addr_display').innerHTML = `
+				<dt>도로명 : </dt><dd>${data.road_address}</dd>
+				<dt>지번 : </dt><dd>${data.jibun_address}</dd>
+			`;
 
 			const facility_link_box = document.getElementById('addr_target_container');
 			facility_link_box.innerHTML = `
@@ -823,6 +860,82 @@
 
 			populate_grid('grid_container');
 			populate_grid('grid_container_mobile');
+		}
+
+		/**
+		 * 현재 동 정보 공유
+		 */
+		function share_current_dong() {
+			const data = DONG_DATA[current_selected_dong];
+			const text = `[용산구 전도 가이드] ${data.name}\n${data.strategy}\n\n상세 정보 보기: ${window.location.href}`;
+
+			if (navigator.share) {
+				navigator.share({
+					title: `용산구 가이드 - ${data.name}`,
+					text: text,
+					url: window.location.href,
+				}).catch(console.error);
+			} else {
+				navigator.clipboard.writeText(text).then(() => {
+					alert(`${data.name} 정보가 복사되었습니다. 나누고 싶은 분에게 전달해 보세요!`);
+				});
+			}
+		}
+
+		/**
+		 * 내 주변 행정동 찾기 (Geolocation)
+		 */
+		function find_my_dong() {
+			if (!navigator.geolocation) {
+				alert("GPS를 지원하지 않는 브라우저입니다.");
+				return;
+			}
+
+			navigator.geolocation.getCurrentPosition((pos) => {
+				const u_lat = pos.coords.latitude;
+				const u_lng = pos.coords.longitude;
+
+				let min_dist = Infinity;
+				let nearest_key = "";
+
+				for (const key in DONG_DATA) {
+					const d = DONG_DATA[key];
+					if (!d.lat) continue;
+					const dist = Math.sqrt(Math.pow(u_lat - d.lat, 2) + Math.pow(u_lng - d.lng, 2));
+					if (dist < min_dist) {
+						min_dist = dist;
+						nearest_key = key;
+					}
+				}
+
+				if (nearest_key) {
+					// 해당 동으로 라디오 버튼 선택 및 정보 업데이트
+					const input_p = document.getElementById(`${nearest_key}_input_p`);
+					const input_m = document.getElementById(`${nearest_key}_input_m`);
+					if (input_p) input_p.click();
+					if (input_m) input_m.click();
+
+					alert(`가장 가까운 ${DONG_DATA[nearest_key].name}으로 이동합니다.`);
+				}
+			}, (err) => {
+				alert("위치 정보를 가져올 수 없습니다. 권한을 확인해 주세요.");
+			});
+		}
+
+		/**
+		 * 평화의 한마디 (Blessing Message) 무작위 생성
+		 */
+		function get_blessing_message() {
+			const messages = [
+				"당신의 발걸음이 머무는 이곳에 하늘의 사랑과 평화가 가득하기를 기원합니다.",
+				"용산의 심장 ${dong_name}에서 새로운 인연과 심정적 울림이 시작되길 바랍니다.",
+				"참부모님의 사랑으로 온 인류가 한 가족 되는 그날까지, 오늘 하루도 승리하세요!",
+				"가장 가까운 곳에 진정한 행복의 열쇠가 있습니다. 용산구 성지 순회를 환영합니다.",
+				"당신은 하늘 부모님의 귀한 자녀입니다. 이곳 ${dong_name}에서 축복의 시간을 보내세요."
+			];
+			const data = DONG_DATA[current_selected_dong];
+			const msg = messages[Math.floor(Math.random() * messages.length)].replace("${dong_name}", data.name);
+			alert(`🕊️ 축복의 메시지:\n\n"${msg}"`);
 		}
 
 		window.onload = () => {
