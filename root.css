@@ -87,6 +87,14 @@
 	clip-path: inset(50%);
 }
 
+:where(button, a, summary):has(.icon) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	gap: 0.25rem;
+}
+
 *,
 *::before,
 *::after,
