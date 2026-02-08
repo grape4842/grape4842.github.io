@@ -620,6 +620,7 @@ dialog {
 	font-weight: bolder;
 	justify-content: center;
 	align-items: center;
+	vertical-align: middle;
 	text-shadow:
 		-1px -1px 0 var(--pure_mono),
 		1px -1px 0 var(--pure_mono),

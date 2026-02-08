@@ -117,14 +117,15 @@
 
   h4 {
     font-size: 1.25rem;
-    ;
+    padding: 0.25rem;
   }
 
   h1,
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  h6 {
     font-weight: 800;
   }
 
@@ -177,6 +178,11 @@
     align-items: center;
     gap: 0.3rem;
     margin: 0.4rem 0;
+  }
+
+  .bus_type_badge {
+    background-color: var(--pure_mono);
+
   }
 
   :where(.metro_line, .bus_line):hover {
@@ -245,7 +251,17 @@
   }
 
   .transport_info dd {
-    margin: 0.25rem;
+    margin-right: 0.25rem;
+
+  }
+
+  #subway_list dd {
+    margin-right: 1rem;
+  }
+
+
+  .transport_info dd i {
+    margin-right: 0.125rem;
   }
 
   dl {

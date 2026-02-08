@@ -123,7 +123,7 @@
 
 	<!-- 전도 지원 툴바 -->
 	<div class="evangelism_tools pc_view" id="ev_tools">
-		<button onclick="share_current_dong()" class="tool_btn" title="현재 동 정보 공유하기"><img class="icon"
+		<button onclick="share_current_dong()" class="tool_btn"><img class="icon"
 				src="../icon/share_24dp_FFFFFF_FILL1_wght400_GRAD200_opsz24.svg" alt="이 페이지 공유하기"></button>
 		<button onclick="find_my_dong()" class="tool_btn" title="내 주변 행정동 찾기"><img class="icon"
 				src="../icon/my_location_24dp_FFFFFF_FILL0_wght400_GRAD200_opsz48.svg" alt="내 주변 행정동 찾기"></button>
@@ -603,7 +603,7 @@
 					</a>
 				</div>
 				<div class="map_link_group">
-					<a href="${KAKAO_MAP_URL}${encodeURIComponent(data.target_facility)}" target="_blank" rel="noopener noreferrer" class="map_link_btn kakao_map_btn" title="새 창 열림">
+					<a href="${KAKAO_MAP_URL}${encodeURIComponent(data.target_facility)}" target="_blank" rel="noopener noreferrer" class="map_link_btn kakao_map_btn" >
 						<img alt="${data.target_facility} 카카오맵에서 검색결과 보기" src="https://play-lh.googleusercontent.com/DYeQ02AyIghsirp4ea3oEnyxT3X0GgTZrXYR8G7AN6tRr-9mFcQIJdCUub5VHiWKHA=w480-h960-rw">
 					</a>
 					<a href="${NAVER_MAP_URL}${encodeURIComponent(data.target_facility)}" target="_blank" rel="noopener noreferrer" class="map_link_btn naver_map_btn" title="새 창 열림">
@@ -719,7 +719,7 @@
 
 						// 뱃지 (DT)
 						const type_dt = document.createElement('dt');
-						type_dt.className = "bus_type_badge";
+						type_dt.className = "bus_type_badge bus_line";
 						type_dt.textContent = type_info.label;
 						type_dt.style.color = `var(${type_info.color_var})`;
 
