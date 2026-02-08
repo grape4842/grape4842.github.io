@@ -33,7 +33,7 @@
     z-index: 10;
   }
 
-  .dong_selector_fieldset {
+  details .dong_selector_fieldset {
     position: absolute;
     background-color: var(--pure_mono);
     z-index: 10;
@@ -179,49 +179,11 @@
     margin: 0.4rem 0;
   }
 
-  .bus_type_badge {
-    font-weight: 800;
-    min-width: 2.5rem;
-    padding: 0.1rem 0.3rem;
-    border-radius: 0.2rem;
-    font-size: 0.9rem;
-    text-shadow: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--pure_black);
-    /* 유저 수정 반영: 기본 검정 배경 */
-    color: white;
-    /* 뱃지 글자는 기본 화이트 */
-  }
-
-  /* 버스 노선 번호 스타일 */
-  .bus_line {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 0.5rem;
-    border-radius: 0.25rem;
-    font-weight: 700;
-    color: white;
-    cursor: default;
-    transition: transform 0.2s, box-shadow 0.2s;
-    height: 1.6rem;
-  }
-
-  .bus_line:hover {
-    transform: scale(1.1);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  :where(.metro_line, .bus_line):hover {
+    scale: 1.1;
     z-index: 2;
   }
 
-  /* 접근성 및 색상별 텍스트 조정 */
-  .bus_line[data-type="branch"],
-  .bus_line[data-type="village"],
-  .bus_line[data-type="circulation"] {
-    color: black;
-    font-weight: 800;
-  }
 
   /* 심야 버스 특수 스타일 */
   .bus_line[data-type="night"] {
