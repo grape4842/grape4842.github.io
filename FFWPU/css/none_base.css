@@ -1,10 +1,10 @@
 @import url("../../root.css")
 @charset "utf-8";
 :root {
-	--variable_purple:light-dark(#dcf, #305);
-	--variable_invert_purple:light-dark(#305, #dcf);
+	--variable_purple:light-dark(#dcf, #304);
+	--variable_invert_purple:light-dark(#304, #dcf);
 	--high_variable_invert_purple:light-dark(#203, #edf);
-	--default_purple:#60c;
+	--default_purple:#529;
 	--transparent_purple:#63b5;
 	--border_purple:#a9f;
 	--light_purple:#baf;
@@ -34,6 +34,7 @@ img, video {
 }
 main {
 	padding-block:clamp(1rem, 5vmax, 5rem);
+	padding-top:0;
 }
 section {
 	margin:3rem auto;
