@@ -79,7 +79,6 @@
 	overflow: hidden;
 	border: 0;
 	position: absolute;
-	/* relative를 사용해도 무관할 듯 하다 */
 	z-index: -1;
 	width: 1px;
 	height: 1px;
@@ -104,23 +103,18 @@
 	font: inherit;
 	vertical-align: baseline;
 	line-height: 1.6;
-	/* 가독성을 위한 행 높이 */
 	-webkit-font-smoothing: antialiased;
-	/* 텍스트 렌더링 개선 */
 	margin: 0;
 	padding: 0;
 	position: relative;
 	box-sizing: border-box;
-	/* 보다 직관적인 box-sizing 설정 */
 	-webkit-text-size-adjust: none;
-	/* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
 	-moz-text-size-adjust: none;
 	-ms-text-size-adjust: none;
 	-o-text-size-adjust: none;
 	scroll-behavior: smooth;
-	/* 부드러운 스크롤 */
 	ruby-align: space-between;
-	scrollbar-color: rgba(0, 0, 0, 0.1);
+	scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
 	ruby-position: over;
 	ruby-align: center;
 }
@@ -128,7 +122,6 @@
 @supports not (min-block-size: 100dvb) {
 	:where(html) {
 		block-size: 100%;
-		/* 브라우저 호환성을 위한 설정 */
 	}
 }
 
@@ -148,21 +141,15 @@ html {
 	overflow-y: scroll;
 	font-size: 1rem;
 	line-height: 1.6;
-	/* 가독성을 위한 행 높이 */
 	-webkit-font-smoothing: antialiased;
-	/* 텍스트 렌더링 개선 */
 	margin: 0;
 	padding: 0;
 	position: relative;
 	box-sizing: border-box;
-	/* 보다 직관적인 box-sizing 설정 */
 	-webkit-text-size-adjust: none;
-	/* iOS의 가로 모드에서 텍스트 크기 조절 방지 */
 	color-scheme: dark light;
-	/* 사용자가 다크 테마일 경우 자동으로 다크 테마 적용 */
 	font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", "Pretendard Variable", sans-serif, serif;
 	scroll-behavior: smooth;
-	/* 부드러운 스크롤 */
 	ruby-align: space-between;
 }
 
@@ -175,7 +162,6 @@ button {
 :where(input, button, textarea, select, a, select option) {
 	display: inline-flex;
 	font: inherit;
-	/* 입력 요소는 부모의 폰트 속성 계승 */
 	color: inherit;
 	box-sizing: border-box;
 	padding: 0.25rem;
@@ -188,8 +174,6 @@ select,
 input {
 	min-width: 1.5rem;
 	min-height: 1.5rem;
-	/*field-sizing: content;*/
-	/*내용 길이에 따라 크기 조절*/
 }
 
 select,
@@ -207,7 +191,6 @@ label:has(input:checked) {
 
 select::-ms-expand {
 	display: none;
-	/* 화살표없애기 for ie10, 11 */
 }
 
 :where(input[type="text"], input[type="password"], input[type="search"], select) {
@@ -222,14 +205,11 @@ select::-ms-expand {
 :where(textarea) {
 	min-height: 4lh;
 	resize: vertical;
-	/* 텍스트 영역의 가로 크기 조정 비활성화 */
 	padding: 0.5rem;
-	/* 텍스트 영역의 내부 여백 */
 }
 
 :where(:focus, button, label, select, summary, [role='button'], [role='option'], input, [type="file"]::file-selector-button) {
 	cursor: pointer;
-	/* 상호작용 가능한 요소임을 알 수 있도록 커서 변경 */
 	position: relative;
 	box-sizing: border-box;
 	transition-duration: 0.3s;
@@ -245,36 +225,28 @@ details>* {
 }
 
 summary::-webkit-details-marker {
-	/* Safari 브라우저용 사용자 정의 스타일 */
 	display: none;
 }
 
 summary {
 	list-style-type: none;
-	/* 그 외의 브라우저용 사용자 정의 스타일 */
 }
 
 :where(:disabled, label:has(> input:disabled), label:has(+ input:disabled), input:disabled + label) {
 	cursor: not-allowed;
-	/* 비활성화된 입력 요소의 라벨 커서 변경 */
 }
 
 :where(button) {
 	border-style: none;
-	/* 버튼의 기본 테두리 제거 */
 }
 
 :where(a) {
 	position: relative;
 	color: inherit;
-	/* 링크의 색상을 부모 요소와 동일하게 설정 */
 	text-decoration: underline wavy;
-	/* 링크의 밑줄 스타일 설정 */
 	text-decoration-color: transparent;
 	transition: text-decoration-color 0.3s, text-decoration 0.3s, outline 0.3s, filter 0.3s, transform 0.3s;
-	/* 밑줄 스타일 변경 시 애니메이션 적용 */
 	text-underline-offset: 0.25rem;
-	/* 링크 텍스트와 밑줄 사이의 간격 설정 */
 }
 
 :where(ul, ol, li) {
@@ -283,7 +255,6 @@ summary {
 	position: relative;
 	padding: 0rem;
 	margin: 0rem;
-	/* 목록의 기본 스타일 제거 */
 }
 
 :where(span, label) {
@@ -294,13 +265,9 @@ summary {
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
 	display: inline-flex;
-	/* 멀티미디어 요소의 예측 가능한 디스플레이 설정 */
 	aspect-ratio: auto;
-	/* 콘텐츠의 종횡비 유지 */
 	object-fit: contain;
-	/* 콘텐츠가 부모 요소를 벗어나지 않도록 설정 */
 	max-width: 100%;
-	/* 부모 요소를 넘치지 못하게 설정 */
 	height: auto;
 	position: relative;
 	vertical-align: middle;
@@ -309,9 +276,7 @@ summary {
 
 :where(img, picture, svg) {
 	max-inline-size: 100%;
-	/* 이미지가 가용 공간을 넘지 않도록 설정 */
 	block-size: auto;
-	/* 콘텐츠 종횡비 유지 */
 }
 
 :where(h1, h2, h3, h4, h5, h6):not(dialog *) {
@@ -319,20 +284,17 @@ summary {
 	text-wrap: balance;
 }
 
-/* 긴 단어가 넘칠 경우 줄바꿈 */
 :where(body, h1, h2, h3, h4, p, figure, blockquote, dl, dd) {
 	margin-block-start: 0;
 	margin-block-end: 0;
 	overflow-wrap: break-word;
 }
 
-/* 헤딩의 자식 요소는 부모의 폰트 속성 계승 */
 :where(h1, h2, h3, h4, h5, h6) * {
 	font: inherit;
 	font-weight: 500;
 }
 
-/* 일관성 있는 스타일의 수평선 */
 :where(hr) {
 	border: none;
 	border-block-start: 1px solid;
@@ -354,8 +316,6 @@ q:after {
 	content: none;
 }
 
-/*표 관련 속성*/
-/* 테이블 셀의 경계선 결합 */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -368,19 +328,16 @@ td {
 	border: 1px solid var(--gray_line_color);
 }
 
-/* 스크롤바의 스타일 */
 ::-webkit-scrollbar-thumb {
 	border-radius: 10rem;
 	cursor: pointer;
 }
 
-/* 스크롤바 트랙의 스타일 */
 ::-webkit-scrollbar-track {
 	background-color: var(--alpha_gray);
 	border-radius: 10rem;
 }
 
-/* 필드셋의 기본 테두리 제거 */
 address {
 	text-align: center;
 }
@@ -388,6 +345,10 @@ address {
 fieldset {
 	border: none;
 }
+
+/* -------------------------------------------------------------------------- */
+/* [MODAL & DIALOG SECTION - 오류 수정됨]                                       */
+/* -------------------------------------------------------------------------- */
 
 :modal,
 [popover],
@@ -420,7 +381,6 @@ details[open]::details-content {
 @supports (interpolate-size: allow-keywords) {
 	:root {
 		interpolate-size: allow-keywords;
-		/* height : 0 (수치형) → auto(문자형) 의 애니메이션을 가능하게 하기 위한 지정*/
 	}
 
 	details[open]::details-content {
@@ -437,6 +397,7 @@ dialog {
 	max-height: 90dvh;
 	border: none;
 	opacity: 0;
+	overflow-y: auto; /* 내부 스크롤 허용 */
 }
 
 ::backdrop {
@@ -444,33 +405,49 @@ dialog {
 	background: rgba(0, 0, 0, 0.5);
 }
 
-dialog form[method="dialog"],
+/* 닫기 버튼 컨테이너: 다이얼로그 우측 상단에 고정 */
 dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
 	background: transparent;
-	position: fixed;
-	right: 0;
+	position: sticky; /* 스크롤 시에도 따라오도록 sticky 설정 */
 	top: 0;
-	z-index: 5;
+	right: 0;
+	margin-left: auto;
+	z-index: 20; /* 헤더보다 위에 위치 */
+	height: 0; /* 본문 흐름에 영향을 주지 않도록 설정 */
+	display: flex;
+	justify-content: flex-end;
+	pointer-events: none; /* 컨테이너 자체는 클릭 간섭 방지 */
 }
 
 dialog :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
 	margin: 0 auto;
 }
 
-dialog[open] :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
+/* 닫기 버튼 본체: 항상 3rem 크기를 유지하도록 고정 */
+dialog :is(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl, button.close_popup, button.close_button) {
 	border-radius: 0.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 3rem;
-	width: 3rem;
+	height: 3rem !important;
+	width: 3rem !important;
+	min-width: 3rem;
+	min-height: 3rem;
 	aspect-ratio: 1/1;
 	background: transparent;
 	outline-offset: -0.25rem;
-	z-index: 12;
+	z-index: 21;
+	pointer-events: auto; /* 버튼은 클릭 가능하도록 설정 */
 }
 
-dialog[open] :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) img {
+/* 클래스가 컨테이너인 경우 내부의 실제 버튼 크기도 강제 고정 */
+dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
+	height: 3rem !important;
+	width: 3rem !important;
+	pointer-events: auto;
+}
+
+dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) img {
 	max-height: 2rem;
 	max-width: 2rem;
 	aspect-ratio: 1/1;
@@ -482,18 +459,21 @@ dialog[open] :where(.popover_content, .popover_body, .popup_content, .popup_body
 	padding: clamp(0.5rem, 1rem, 2rem);
 }
 
+/* 헤더 고정 설정 */
 dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header) {
 	display: flex;
 	align-items: center;
 	font-size: 1rem;
 	font-weight: bolder;
-	left: 0;
+	position: sticky; /* 스크롤 시 상단 고정 */
 	top: 0;
+	left: 0;
 	height: 3rem;
-	z-index: 2;
+	z-index: 10;
+	background: var(--pure_mono); /* 투명하지 않게 배경색 지정 */
+	border-bottom: 1px solid var(--gray_line_color); /* 경계선 추가 */
 }
 
-/* On Stage */
 :popover-open,
 ::backdrop,
 [open],
@@ -502,9 +482,7 @@ dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, 
 	transform: translateY(0);
 }
 
-/* Off Stage */
 @starting-style {
-
 	:popover-open,
 	::backdrop,
 	[open],
@@ -538,9 +516,6 @@ dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, 
 	text-underline-offset: 0.25rem;
 }
 
-
-
-/*많은 파일에서 공통으로 사용하는 고유 내용*/
 .lightV,
 .light_view {
 	display: unset;
@@ -584,7 +559,6 @@ dialog {
 	margin: 1rem auto;
 }
 
-/*고대비 모드*/
 @media (prefers-contrast:more) {
 	body {
 		background-color: var(--pure_black) !important;
@@ -603,7 +577,6 @@ dialog {
 		background: var(--pure_white);
 		color: var(--pure_black);
 	}
-
 }
 
 /*서울의 버스와 지하철*/
@@ -641,78 +614,28 @@ dialog {
 	padding: 0px 0.5rem;
 }
 
-.line1 {
-	background: rgb(0 74 133);
-}
-
-.line2 {
-	background: rgb(0 162 63);
-}
-
-.line3 {
-	background: rgb(237 108 0);
-}
-
-.line4 {
-	background: rgb(0 155 206);
-}
-
-.line5 {
-	background: rgb(121 70 152);
-}
-
-.line6 {
-	background: rgb(124 73 50);
-}
-
-.line7 {
-	background: rgb(110 126 49);
-}
-
-.line8 {
-	background: rgb(209 29 112);
-}
-
-.line9 {
-	background: rgb(164 157 135);
-}
-
-.gyline {
-	background: rgb(106 194 179);
-	padding: 0px 0.5rem;
-}
-
-.sibdline {
-	background: rgb(236 163 0);
-}
-
-.sbdline {
-	background: rgb(184 27 48);
-}
-
-.airport_line {
-	background: rgb(0 121 172);
-}
+.line1 { background: rgb(0 74 133); }
+.line2 { background: rgb(0 162 63); }
+.line3 { background: rgb(237 108 0); }
+.line4 { background: rgb(0 155 206); }
+.line5 { background: rgb(121 70 152); }
+.line6 { background: rgb(124 73 50); }
+.line7 { background: rgb(110 126 49); }
+.line8 { background: rgb(209 29 112); }
+.line9 { background: rgb(164 157 135); }
+.gyline { background: rgb(106 194 179); padding: 0px 0.5rem; }
+.sibdline { background: rgb(236 163 0); }
+.sbdline { background: rgb(184 27 48); }
+.airport_line { background: rgb(0 121 172); }
 
 .bus_line {
 	border-radius: 0.5rem;
 	padding: 0rem 0.25rem;
 }
 
-.g-bus,
-.g_bus {
-	background-color: #59be0a;
-}
-
-.b-bus,
-.b_bus {
-	background-color: #1e7adb;
-}
-
-.r-bus,
-.r-bus {
-	background-color: #e43607;
-}
+.g-bus, .g_bus { background-color: #59be0a; }
+.b-bus, .b_bus { background-color: #1e7adb; }
+.r-bus, .r_bus { background-color: #e43607; }
 
 .meter {
 	color: var(--warning);
@@ -720,7 +643,6 @@ dialog {
 	font-weight: 500;
 }
 
-/*animation*/
 @media (prefers-reduced-motion: reduce) {
 	* {
 		transition: none;
@@ -728,135 +650,54 @@ dialog {
 	}
 }
 
-/*Dark Mode*/
 @media (prefers-color-scheme: dark) {
-
-	.lightV,
-	.light_view {
-		display: none;
-	}
-
-	.darkV,
-	.dark_view {
-		display: unset;
-	}
-
+	.lightV, .light_view { display: none; }
+	.darkV, .dark_view { display: unset; }
 	dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) img {
 		filter: invert(1);
 	}
-
-	.root_daum_roughmap .wrap_controllers .tit_controllers img {
-		filter: invert(1);
-	}
-
-	.root_daum_roughmap .wrap_btn_zoom button .img_zoom {
-		filter: contrast(4) invert(1);
-	}
+	.root_daum_roughmap .wrap_controllers .tit_controllers img { filter: invert(1); }
+	.root_daum_roughmap .wrap_btn_zoom button .img_zoom { filter: contrast(4) invert(1); }
 }
 
 /*기기별 CSS*/
-
-/*PC*/
 @media screen and (width >=1400px) {
-
-	.View_PC,
-	.PCV,
-	.PC_View,
-	.pc_view {
-		display: unset;
-	}
-
-	.View_Mobile,
-	.mobileV,
-	.mobile_View,
-	.mobile_view,
-	.Mobile_View,
-	.MobileV {
-		display: none;
-	}
-
-	.content_width {
-		width: 60dvw;
-	}
-
-	dialog {
-		max-width: 50dvw;
-	}
-
-	th,
-	td {
-		padding: 1rem;
-	}
-
+	.View_PC, .PCV, .PC_View, .pc_view { display: unset; }
+	.View_Mobile, .mobileV, .mobile_View, .mobile_view, .Mobile_View, .MobileV { display: none; }
+	.content_width { width: 60dvw; }
+	dialog { max-width: 50dvw; }
+	th, td { padding: 1rem; }
 	dialog :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
 	dialog :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
 		padding: 1.5rem 1.75rem;
 	}
-
 }
 
-/*1000px〜1400px iPad Pro*/
 @media screen and (1000px <=width) and (width < 1400px) {
-	.content_width {
-		width: 85dvw;
-	}
-
-	dialog {
-		max-width: 80dvw;
-	}
-
-	th,
-	td {
-		padding: 0.75rem;
-	}
-
+	.content_width { width: 85dvw; }
+	dialog { max-width: 80dvw; }
+	th, td { padding: 0.75rem; }
 	dialog :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
 	dialog :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
 		padding: 1rem 1.25rem;
 	}
 }
 
-/*700px〜1000px iPad*/
 @media screen and (700px <=width) and (width < 1000px) {
-	.content_width {
-		width: 85dvw;
-	}
-
-	dialog {
-		max-width: 80dvw;
-	}
-
-	th,
-	td {
-		padding: 0.5rem;
-	}
+	.content_width { width: 85dvw; }
+	dialog { max-width: 80dvw; }
+	th, td { padding: 0.5rem; }
 }
 
-/*Mobile*/
-@media screen and (340px <=width) and (width < 700px) {}
-
-/*folded, watch*/
 @media screen and (width < 330px) {
-	.content_width {
-		min-width: 90dvw;
-		width: 95dvw;
-	}
-
-	dialog {
-		max-width: 90dvw;
-	}
-
-	th,
-	td {
-		padding: 0.25rem;
-	}
-
+	.content_width { min-width: 90dvw; width: 95dvw; }
+	dialog { max-width: 90dvw; }
+	th, td { padding: 0.25rem; }
 	dialog :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
 	dialog :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
 		padding: 0.25rem 0.5rem;
 	}
 }
-
 
 /*카카오맵 편집 CSS*/
 .root_daum_roughmap {
@@ -874,20 +715,14 @@ dialog {
 	border-bottom: 1px solid var(--kakao_yellow);
 }
 
-.wrap_btn_zoom {
-	background-image: none !important;
-}
-
-:where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) {
-	overflow: visible !important;
-}
+.wrap_btn_zoom { background-image: none !important; }
+:where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) { overflow: visible !important; }
 
 .root_daum_roughmap .wrap_btn_zoom button {
 	background-color: var(--variable_purple) !important;
 	aspect-ratio: 1/1;
 	border: 1px solid var(--default_purple);
 	padding: 0 !important;
-
 }
 
 .root_daum_roughmap .wrap_btn_zoom button:focus {
@@ -896,16 +731,8 @@ dialog {
 	outline: 2px solid var(--dark_purple) !important;
 }
 
-.root_daum_roughmap .wrap_btn_zoom button .img_zoom {
-	filter: contrast(4) invert(0);
-}
-
-.root_daum_roughmap .cont .section {
-	margin: 0rem !important;
-	;
-	padding: min(0.5rem) max(1rem) !important;
-}
-
+.root_daum_roughmap .wrap_btn_zoom button .img_zoom { filter: contrast(4) invert(0); }
+.root_daum_roughmap .cont .section { margin: 0rem !important; padding: min(0.5rem) max(1rem) !important; }
 .root_daum_roughmap .wrap_controllers {
 	background-color: light-dark(var(--kakao_yellow), var(--alpha_gray)) !important;
 	display: flex;
@@ -913,27 +740,18 @@ dialog {
 	align-items: center;
 }
 
-.roughmap_maker_label,
-.roughmap_maker_label:after {
+.roughmap_maker_label, .roughmap_maker_label:after {
 	background-image: none !important;
 	background-color: var(--variable_purple) !important;
 }
 
-.roughmap_maker_label:after {
-	rotate: 45deg;
-}
-
-.roughmap_maker_label a {
-	padding: 0.5rem !important;
-	color: var(--invert_pure_mono);
-}
-
+.roughmap_maker_label:after { rotate: 45deg; }
+.roughmap_maker_label a { padding: 0.5rem !important; color: var(--invert_pure_mono); }
 .roughmap_maker_label .roughmap_lebel_text {
 	font-size: 1rem !important;
 	color: var(--invert_pure_mono) !important;
 	background-color: transparent !important;
 	padding: 0 !important;
-
 }
 
 .root_daum_roughmap .section_address .txt,
@@ -944,17 +762,9 @@ dialog {
 	line-height: 1lh !important;
 }
 
-.wrap_btn_roadview {
-	opacity: 0.9;
-}
-
-.root_daum_roughmap .section_address .tit {
-	font-weight: bolder;
-}
-
-.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt_bar {
-	margin: 0rem 0.25rem !important;
-}
+.wrap_btn_roadview { opacity: 0.9; }
+.root_daum_roughmap .section_address .tit { font-weight: bolder; }
+.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt_bar { margin: 0rem 0.25rem !important; }
 
 img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"] {
 	filter: hue-rotate(40deg);
