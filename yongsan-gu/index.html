@@ -51,18 +51,6 @@
 				<p id="target_desc"></p>
 			</section>
 
-			<section class="info_card leader_info_grid">
-				<h3>👤 지역 담당자</h3>
-				<dl>
-					<dt class="person_tag">동회장 : </dt>
-					<dd id="leader_name" class="person_name">-</dd>
-				</dl>
-				<dl>
-					<dt class="person_tag">동대표 : </dt>
-					<dd id="rep_name" class="person_name">-</dd>
-				</dl>
-			</section>
-
 			<section class="info_card location_info">
 				<h3>
 					<img class="icon" src="../icon/place_white_48dp.svg" alt="">
@@ -145,7 +133,7 @@
 
 		const DONG_DATA = {
 			namyoung: {
-				name: "남영동", img: "namyoung.png", leader_name: "김범철", rep_name: "김영은",
+				name: "남영동", img: "namyoung.png",
 				lat: 37.5440, lng: 126.9748,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=03",
 				road_address: "한강대로76길 7", target_facility: "남영동 주민센터", jibun_address: "갈월동 98-7",
@@ -174,7 +162,7 @@
 				church_info: "청파동 본부교회로 진입하는 핵심 관문이며, 숙대입구의 젊은 영들과의 접점이 매우 높습니다."
 			},
 			huam: {
-				name: "후암동", img: "huam.png", leader_name: "김범철", rep_name: "김영은",
+				name: "후암동", img: "huam.png",
 				lat: 37.5499, lng: 126.9806,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=01",
 				road_address: "후암로16길 38", target_facility: "후암동 주민센터", jibun_address: "후암동 110-101",
@@ -203,7 +191,7 @@
 				church_info: "남산 아래 위치한 고즈넉한 주택가로, 본부와 가까워 많은 식구님들이 생활 기반을 둔 곳입니다."
 			},
 			yongsan2ga: {
-				name: "용산2가동", img: "yongsan2ga.png", leader_name: "김범철", rep_name: "김영은",
+				name: "용산2가동", img: "yongsan2ga.png",
 				lat: 37.5379, lng: 126.9851,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=02",
 				road_address: "신흥로 90", target_facility: "용산2가동 주민센터", jibun_address: "용산동2가 1-1375",
@@ -225,7 +213,7 @@
 				church_info: "해방촌이라 불리는 역사적 배경 위에 다양한 문화가 공존하는 섭리적 개척지입니다."
 			},
 			hyochang: {
-				name: "효창동", img: "hyochang.png", leader_name: "김범철", rep_name: "김영은",
+				name: "효창동", img: "hyochang.png",
 				lat: 37.5428, lng: 126.9609,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=07",
 				road_address: "효창원로 161", target_facility: "효창동 주민센터", jibun_address: "효창동 5-144",
@@ -253,7 +241,7 @@
 				church_info: "민족의 얼이 담긴 효창공원 인근에서 참부모님의 평화 사상을 교육하기 좋은 환경입니다."
 			},
 			yongmun: {
-				name: "용문동", img: "yongmun.png", leader_name: "김범철", rep_name: "김영은",
+				name: "용문동", img: "yongmun.png",
 				lat: 37.5379, lng: 126.9585,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=08",
 				road_address: "효창원로38길 13", target_facility: "용문동 주민센터", jibun_address: "용문동 11-1",
@@ -279,7 +267,7 @@
 				church_info: "용산의 대표적인 전통시장인 용문시장을 중심으로 정과 사랑을 나누는 활동 거점입니다."
 			},
 			cheongpa: {
-				name: "청파동", img: "cheongpa.png", leader_name: "김범철", rep_name: "김영은",
+				name: "청파동", img: "cheongpa.png",
 				lat: 37.5466, lng: 126.9686,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=04",
 				road_address: "청파로47길 52", target_facility: "청파동 주민센터", jibun_address: "청파동2가 74-1",
@@ -305,7 +293,7 @@
 				church_info: "천복궁교회(본부) 소재지. 섭리의 중심지이자 모든 정성이 모이는 성지입니다."
 			},
 			wonhyo1: {
-				name: "원효로1동", img: "wonhyoro1.png", leader_name: "김범철", rep_name: "김영은",
+				name: "원효로1동", img: "wonhyoro1.png",
 				lat: 37.5385, lng: 126.9654,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=05",
 				road_address: "원효로 177-11", target_facility: "원효로1동 주민센터", jibun_address: "원효로1가 39-1",
@@ -334,7 +322,7 @@
 				church_info: "과거와 현대가 공존하는 구역으로, 신규 식구 기반 확장이 기대되는 지역입니다."
 			},
 			wonhyo2: {
-				name: "원효로2동", img: "wonhyoro2.png", leader_name: "김범철", rep_name: "김영은",
+				name: "원효로2동", img: "wonhyoro2.png",
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=06",
 				road_address: "원효로 123", target_facility: "원효로2동 주민센터", jibun_address: "원효로3가 1-1",
 				jurisdiction_area: "원효로3~4가, 산천동, 신창동, 청암동 전역",
@@ -353,7 +341,7 @@
 				church_info: "성심여고 등 교육 기관과 한강변 주거지가 밀집하여 가정 교육 전도에 적합합니다."
 			},
 			hangangro: {
-				name: "한강로동", img: "hangangro.png", leader_name: "김범철", rep_name: "김영은",
+				name: "한강로동", img: "hangangro.png",
 				lat: 37.5284, lng: 126.9685,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=09",
 				road_address: "한강대로38길 35", target_facility: "한강로동 주민센터", jibun_address: "한강로2가 191",
@@ -381,7 +369,7 @@
 				church_info: "천승교회가 여기 있습니다! 용산의 심장부로, 국가적 차원의 평화 운동과 대중 선교의 최전선입니다."
 			},
 			ichon1: {
-				name: "이촌1동", img: "ichon1.png", leader_name: "김범철", rep_name: "김영은",
+				name: "이촌1동", img: "ichon1.png",
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=10",
 				road_address: "이촌로71길 24", target_facility: "이촌1동 주민센터", jibun_address: "이촌동 301-160",
 				jurisdiction_area: "이촌동(동부) 전역",
@@ -408,7 +396,7 @@
 				church_info: "한일 가정 및 일본 식구님들의 기반이 강하며, 사회 지도층 전도의 주요 거점입니다."
 			},
 			ichon2: {
-				name: "이촌2동", img: "ichon2.png", leader_name: "김범철", rep_name: "김영은",
+				name: "이촌2동", img: "ichon2.png",
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=11",
 				road_address: "이촌로 15", target_facility: "이촌2동 주민센터", jibun_address: "이촌동 203-34",
 				jurisdiction_area: "이촌동(서부) 전역",
@@ -432,7 +420,7 @@
 				church_info: "철도정비창 개발과 연계된 변화의 현장에서 섭리적 터전을 수호하는 곳입니다."
 			},
 			itaewon1: {
-				name: "이태원1동", img: "itaewon1.png", leader_name: "김범철", rep_name: "김영은",
+				name: "이태원1동", img: "itaewon1.png",
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=12",
 				road_address: "이태원로 161", target_facility: "이태원1동 주민센터", jibun_address: "이태원동 127-23",
 				jurisdiction_area: "이태원동(남부) 전역",
@@ -456,7 +444,7 @@
 				church_info: "세계 평화 대사 활동의 현장이자, 다양한 인종에게 진리를 전하는 글로벌 포교지입니다."
 			},
 			itaewon2: {
-				name: "이태원2동", img: "itaewon2.png", leader_name: "김범철", rep_name: "김영은",
+				name: "이태원2동", img: "itaewon2.png",
 				lat: 37.5385, lng: 126.9926,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=13",
 				road_address: "회나무로 43-1", target_facility: "이태원2동 주민센터", jibun_address: "이태원동 258-301",
@@ -478,7 +466,7 @@
 				church_info: "남산 자락의 수려한 환경 속에 위치하여 참부모님의 품을 느끼게 하는 정성지입니다."
 			},
 			hannam: {
-				name: "한남동", img: "hannam.png", leader_name: "김범철", rep_name: "김영은",
+				name: "한남동", img: "hannam.png",
 				lat: 37.5348, lng: 127.0064,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=14",
 				road_address: "대사관로 5", target_facility: "한남동 주민센터", jibun_address: "한남동 685-18",
@@ -504,7 +492,7 @@
 				church_info: "한남 국제연수원이 위치한 세계적 성지로, 글로벌 섭리의 심장부 역할을 합니다."
 			},
 			seobinggo: {
-				name: "서빙고동", img: "seobinggo.png", leader_name: "김범철", rep_name: "김영은",
+				name: "서빙고동", img: "seobinggo.png",
 				lat: 37.5207, lng: 126.9880,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=15",
 				road_address: "서빙고로 279", target_facility: "서빙고동 주민센터", jibun_address: "서빙고동 241-11",
@@ -534,7 +522,7 @@
 				church_info: "대한민국의 역사와 자연이 만나는 곳으로, 평화로운 환경 속에 참사랑을 전하기 좋습니다."
 			},
 			bogwang: {
-				name: "보광동", img: "bogwang.png", leader_name: "김범철", rep_name: "김영은",
+				name: "보광동", img: "bogwang.png",
 				lat: 37.5255, lng: 126.9985,
 				website_url: "https://www.yongsan.go.kr/dong/main/main.do?dongCd=16",
 				road_address: "장문로 95", target_facility: "보광동 주민센터", jibun_address: "보광동 256",
