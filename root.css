@@ -92,6 +92,7 @@
 	justify-content: center;
 	vertical-align: middle;
 	gap: 0.25rem;
+	text-box-trim: both;
 }
 
 *,
