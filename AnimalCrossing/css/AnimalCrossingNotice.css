@@ -1,19 +1,12 @@
-@charset "UTF-8";
-.width_center {
-	display: flex;
-	flex-direction: column;
-	position:relative;
-	margin:0 auto;
-	width:60vw;
-	padding:3rem 0px;
+@import url("../../root.css");
+:root {
+	--default_brown : light-dark(#FEEC9E, #7E693A);
+	--invert_brown : light-dark(#7E693A, #FEEC9E);
 }
-
 body {
-/*	color:rgb(130, 113, 87);*/
-	color:#827157;
-	font-weight: 700;
+	font-family: "familyYakuHanJPs", "KoddiUDOnGothic", "BIZ-UDPGothic", "Pretendard Variable", sans-serif, serif;
 	background-size:contain;
-	background-image:url(https://www.nintendo.co.jp/switch/acbaa/assets/images/top/content_bg01_pc.jpg);
+	background-image:url("../img/about-bg-pc-all.webp");
 
 }
 
@@ -116,11 +109,11 @@ a:where(:hover, :focus) {text-decoration:underline; }
 .report, h2:has(.report) {
 	justify-content: center;
 	margin: 0 auto;
-	color:#7E693A;
+	color:var(--invert_brown);
 	margin:1rem auto;
 	font-weight: 900;
 	border-radius: 3rem;
-	background-color: #FEEC9E;
+	background-color: var(--default_brown);
 }
 .report:not(.talk) {padding:1rem;}
 footer::before {

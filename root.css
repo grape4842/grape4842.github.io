@@ -547,7 +547,7 @@ dialog {
 	width: 88vw;
 }
 
-.content_width {
+.content_width, .width_center {
 	width: 90vw;
 	margin: 0rem auto;
 }
@@ -665,7 +665,7 @@ dialog {
 @media screen and (width >=1400px) {
 	.View_PC, .PCV, .PC_View, .pc_view { display: unset; }
 	.View_Mobile, .mobileV, .mobile_View, .mobile_view, .Mobile_View, .MobileV { display: none; }
-	.content_width { width: 60dvw; }
+	.content_width, .width_center { width: 60dvw; }
 	dialog { max-width: 50dvw; }
 	th, td { padding: 1rem; }
 	dialog :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
@@ -675,7 +675,7 @@ dialog {
 }
 
 @media screen and (1000px <=width) and (width < 1400px) {
-	.content_width { width: 85dvw; }
+	.content_width, .width_center { width: 85dvw; }
 	dialog { max-width: 80dvw; }
 	th, td { padding: 0.75rem; }
 	dialog :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
@@ -685,13 +685,13 @@ dialog {
 }
 
 @media screen and (700px <=width) and (width < 1000px) {
-	.content_width { width: 85dvw; }
+	.content_width, .width_center { width: 85dvw; }
 	dialog { max-width: 80dvw; }
 	th, td { padding: 0.5rem; }
 }
 
 @media screen and (width < 330px) {
-	.content_width { min-width: 90dvw; width: 95dvw; }
+	.content_width, .width_center { min-width: 90dvw; width: 95dvw; }
 	dialog { max-width: 90dvw; }
 	th, td { padding: 0.25rem; }
 	dialog :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
