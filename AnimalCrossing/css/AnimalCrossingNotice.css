@@ -2,39 +2,16 @@
 :root {
 	--default_brown : light-dark(#FEEC9E, #7E693A);
 	--invert_brown : light-dark(#7E693A, #FEEC9E);
+	--dark_brown : #7E693A;
+	--light_brown : #FEEC9E;
 }
 body {
 	font-family: "familyYakuHanJPs", "KoddiUDOnGothic", "BIZ-UDPGothic", "Pretendard Variable", sans-serif, serif;
 	background-size:contain;
-	background-image:url("../img/about-bg-pc-all.webp");
+	background-image:url("../img/content-bg.jpg");
 
 }
 
-#skip-nav {
-	display:block;
-	text-align:center;
-	padding:0.5rem 0;
-	width:60vw;
-	position:fixed;
-	background-color:#1abfe5;
-	color:black;
-	z-index: 2;
-	left:50%;
-	transition: top 0.3s;
-	transform: translate(-50%);
-	border-radius: 0px 0px 20px 20px;
-	top:-10rem;
-}
-#skip-nav:focus {top:0;}
-.a11y-txt {
-	overflow:hidden;
-	display:inline-block;
-    position:relative;
-    font-size:1px;
-    z-index:-1;
-    top:-1px; left:-1px;
-    width:1px; height:1px;
-}
 
 .headline {
 	background-image: url("../img/kv-up-txt-bg-pc.png");
@@ -99,16 +76,10 @@ h4 {font-size: 1.5rem;}
 h1, h2, h3 {
 	font-weight: 900;
 }
-a {
-	word-break:break-all;
-	text-decoration:none;
-}
 
-a:where(:hover, :focus) {text-decoration:underline; }
-
-.report, h2:has(.report) {
+.report {
 	justify-content: center;
-	margin: 0 auto;
+	padding:clamp(1rem, 2rem, 3rem);
 	color:var(--invert_brown);
 	margin:1rem auto;
 	font-weight: 900;

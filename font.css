@@ -85,6 +85,37 @@
 	src: url("font/BIZ-UD/BIZ-UDPMincho-Regular.ttf") format("truetype");
 	font-weight: 400; font-display: swap; font-style: normal;
 } 
+/*familyYakuHanJPs*/
+@font-face { 
+	font-family: "familyYakuHanJPs";
+	src: url("font/yakuhanjps_5.2.5/ttf/yakuhanjps-latin-100-normal.ttf") format("truetype");
+	font-weight: 100; font-display: swap; font-style: normal;
+} 
+@font-face { 
+	font-family: "familyYakuHanJPs";
+	src: url("font/yakuhanjps_5.2.5/ttf/yakuhanjps-latin-200-normal.ttf") format("truetype");
+	font-weight: 200; font-display: swap; font-style: normal;
+} 
+@font-face { 
+	font-family: "familyYakuHanJPs";
+	src: url("font/yakuhanjps_5.2.5/ttf/yakuhanjps-latin-300-normal.ttf") format("truetype");
+	font-weight: 300; font-display: swap; font-style: normal;
+} 
+@font-face { 
+	font-family: "familyYakuHanJPs";
+	src: url("font/yakuhanjps_5.2.5/ttf/yakuhanjps-latin-500-normal.ttf") format("truetype");
+	font-weight: 500; font-display: swap; font-style: normal;
+} 
+@font-face { 
+	font-family: "familyYakuHanJPs";
+	src: url("font/yakuhanjps_5.2.5/ttf/yakuhanjps-latin-700-normal.ttf") format("truetype");
+	font-weight: 700; font-display: swap; font-style: normal;
+} 
+@font-face { 
+	font-family: "familyYakuHanJPs";
+	src: url("font/yakuhanjps_5.2.5/ttf/yakuhanjps-latin-900-normal.ttf") format("truetype");
+	font-weight: 900; font-display: swap; font-style: normal;
+} 
 
 /**
  * [2. 언어별 타이포그래피 최적화]
@@ -95,7 +126,7 @@
 :lang(ko) {
 	word-break: keep-all;
 	line-break: strict;
-	font-family: "KoddiUDOnGothic", "Pretendard Variable", sans-serif;
+	font-family: "KoddiUDOnGothic", "Pretendard Variable", "familyYakuHanJPs", sans-serif;
 }
 
 /* 일본어 최적화: BIZ-UDPGothic 우선 (palt 설정 포함) */
