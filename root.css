@@ -160,7 +160,7 @@ button {
 	align-items: center;
 }
 
-:where(input, button, textarea, select, a, select option) {
+:where(input, button, textarea, select, a, option) {
 	display: inline-flex;
 	font: inherit;
 	color: inherit;
@@ -170,19 +170,16 @@ button {
 	accent-color: light-dark(#608, #baf);
 }
 
-textarea,
-select,
-input {
+textarea, select, input {
 	min-width: 1.5rem;
 	min-height: 1.5rem;
 }
 
-select,
-option {
+select, option {
 	display: flex;
 }
 
-select option {
+option {
 	padding: 0.25rem;
 }
 

@@ -51,7 +51,6 @@ html {
     box-sizing: inherit;
 }
 body {
-
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -68,7 +67,7 @@ body {
     clip-path: inset(50%);
 }
 .width-center {
-    max-width:90vw;
+    max-width:70vw;
     margin:0 auto;
 }
 ::-webkit-scrollbar-thumb {
@@ -80,7 +79,27 @@ body {
     background-color: var(--alpha_gray);
     border-radius: 10rem;
 }
+:where(img, picture, svg) {
+    max-inline-size: 100%;
+    block-size: auto;
+}
 
+:where(h1, h2, h3, h4, h5, h6):not(dialog *) {
+    line-height: 1.3;
+    text-wrap: balance;
+}
+
+:where(body, h1, h2, h3, h4, p, figure, blockquote, dl, dd) {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    overflow-wrap: break-word;
+}
+
+:where(h1, h2, h3, h4, h5, h6) * {
+    font: inherit;
+    font-weight: 500;
+}
+section, div, p {margin-inline: auto;}
 table {
     margin:0 auto;
     border-collapse: collapse;
@@ -103,6 +122,37 @@ table {
     scroll-behavior: smooth;
     ruby-align: space-between;
 }
+:where(a) {
+    position: relative;
+    color: inherit;
+    display: inline-flex;
+}
+
+:where(ul, ol, li) {
+    list-style: none;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+:where(span, label) {
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+    display: inline-flex;
+    aspect-ratio: auto;
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    vertical-align: middle;
+    border: none;
+}
+div:has(.location-img) {display: inline-block;}
 thead {
     color: rgb(255, 255, 255);
     background: var(--point-color);
@@ -148,6 +198,9 @@ th.tc {
     justify-content: center;
 }
 @media screen and (max-width: 767px) {
+    .width-center {
+    max-width:90vw;
+}
     .bus-7000n {flex-wrap:wrap;}
     .bus-7000n table {
         margin-bottom: 5rem!important;
