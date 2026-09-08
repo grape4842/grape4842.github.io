@@ -13,7 +13,6 @@
 *::after,
 :root {
     interpolate-size: allow-keywords;
-    font-size: 1rem;
     font: inherit;
     vertical-align: baseline;
     line-height: 1.6;
@@ -41,6 +40,7 @@
 }
 
 html {
+    font-size: 50%;
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
@@ -51,6 +51,7 @@ html {
     box-sizing: inherit;
 }
 body {
+
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -116,7 +117,6 @@ table :where(.row-hour, .bus-num-cell) {
     font-weight: 900;
 }
 .table-view table :where(th, td) {
-    padding: clamp(1rem, 2rem, 3rem);
     text-align: center;
 }
 .table-view table :where(th+th, td+td) {
@@ -137,5 +137,18 @@ th.tc {
 .bus-7000n {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    gap:1rem;
+}
+.bus-7000n :where(th, td) {
+    padding: 0.75rem 0.5rem!important;
+}
+.bus-7000n {
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 767px) {
+    .bus-7000n {flex-wrap:wrap;}
+    .bus-7000n table {
+        margin-bottom: 5rem!important;
+    }
 }
