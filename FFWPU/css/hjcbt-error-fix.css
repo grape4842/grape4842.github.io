@@ -115,6 +115,7 @@ table :where(.row-hour, .bus-num-cell) {
     vertical-align: middle;
     word-break: break-all;
     font-weight: 900;
+    padding:1rem;
 }
 .table-view table :where(th, td) {
     text-align: center;
