@@ -200,7 +200,15 @@ h2 {
 	color:var(--yellow);
 }
 .metro_line {
-	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
+	text-shadow:
+    -1px -1px 0 rgba(0 0 0 / 0.5),
+     1px -1px 0 rgba(0 0 0 / 0.5),
+    -1px  1px 0 rgba(0 0 0 / 0.5),
+     1px  1px 0 rgba(0 0 0 / 0.5),
+     0px -1px 0 rgba(0 0 0 / 0.5),
+     0px  1px 0 rgba(0 0 0 / 0.5),
+    -1px  0px 0 rgba(0 0 0 / 0.5),
+     1px  0px 0 rgba(0 0 0 / 0.5);
 	display:inline-flex;
 	font-size: 1rem;
 	border-radius:10rem;
@@ -222,7 +230,15 @@ h2 {
 }
 
 .bus_line {
-	text-shadow:1px 1px rgba(0 0 0 / 0.5), -1px -1px rgba(0 0 0 / 0.5);
+	text-shadow:
+    -1px -1px 0 rgba(0 0 0 / 0.5),
+     1px -1px 0 rgba(0 0 0 / 0.5),
+    -1px  1px 0 rgba(0 0 0 / 0.5),
+     1px  1px 0 rgba(0 0 0 / 0.5),
+     0px -1px 0 rgba(0 0 0 / 0.5),
+     0px  1px 0 rgba(0 0 0 / 0.5),
+    -1px  0px 0 rgba(0 0 0 / 0.5),
+     1px  0px 0 rgba(0 0 0 / 0.5);
 	display:inline-flex;
 	font-size:1rem;
 	justify-content:center;
