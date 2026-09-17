@@ -57,6 +57,11 @@ body {
     color: #212121;
 }
 .a11y-txt, caption {
+    font-style: italic;
+    font-weight: 100;
+    color: var(--point-color);
+}
+/*.a11y-txt, caption {
     overflow: hidden;
     border: 0;
     position: absolute;
@@ -65,7 +70,8 @@ body {
     height: 1px;
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
-}
+    실제 구현시에는 이 CSS를 적용해주세요.
+}*/
 .width-center {
     max-width:70vw;
     margin:0 auto;
@@ -99,12 +105,22 @@ body {
     font: inherit;
     font-weight: 500;
 }
+h2 a{
+    background-color:#fdc;
+    padding:1rem;
+    margin-bottom: 1rem;
+}
 section, div, p {margin-inline: auto;}
+section {padding-block: clamp(2rem, 3rem, 5rem);}
 table {
     margin:0 auto;
     border-collapse: collapse;
     border-spacing: 0;
     table-layout:fixed;
+}
+.a11y-txt-type {
+    filter: brightness(0.7);
+    border:1rem solid var(--point-color);
 }
 :where(body):not(img) {
     min-height: 100dvh;
@@ -151,6 +167,16 @@ table {
     position: relative;
     vertical-align: middle;
     border: none;
+}
+.msg {
+    position: fixed;
+    top:0;
+    z-index: 2;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color:#fff;
+    padding:0.5rem;
+    background-color: var(--point-color);
 }
 div:has(.location-img) {display: inline-block;}
 thead {

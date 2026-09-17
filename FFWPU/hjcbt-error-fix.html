@@ -30,6 +30,10 @@
 <body>
 	<header class="width-center">
 		<h1>HJ천주천보수련원 개선안 HTML 모음</h1>
+		<article class="msg">
+			<p>테두리가 굵고 어두운 표는 숨김텍스트용 표입니다. 실제로 구현시에는 table에 a11y-txt를 적용해주세요.</p>
+			<p>포인트 컬러로 구성된 기울인 텍스트는 숨김 텍스트용 텍스트입니다. 진단 보고서와 해당 파일의 스타일 시트를 참조하여 표 제목과 함께 실제 문서에 적용해주세요.</p>
+		</article>
 	</header>
 	<main>
 		<section class="width-center">
@@ -1195,8 +1199,12 @@
 			<h2>
 				<a href="https://hjcbt.org/training/schedule/1733" target="_blank">수련안내 > 수련일정 > 제1차 새식구 행복원리수련회</a>
 			</h2>
-			<table>
-				<caption>제1차 새식구 행복 원리수련회 “영원한 행복을 위하여” 일정표</caption>
+			<h3>
+				<p>제1차 새식구 행복 원리수련회</p>
+				<p>“영원한 행복을 위하여”- 나는 어디에서 와서, 무엇을 위해 살고, 어디로 가는가</p>
+			</h3>
+			<table class="a11y-txt-type">
+				<caption>제1차 새식구 행복 원리수련회 일정표</caption> 
 				<thead>
 					<tr>
 						<th id="th_time" scope="col">진행시각</th>
