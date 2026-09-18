@@ -59,8 +59,11 @@ body {
 .a11y-txt, caption {
     font-style: italic;
     font-weight: 100;
+    display: block;
     color: var(--point-color);
+    border:var(--point-color) 0.25rem solid;
 }
+.a11y-txt {padding:1rem;}
 /*.a11y-txt, caption {
     overflow: hidden;
     border: 0;

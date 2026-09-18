@@ -62,6 +62,7 @@
 	--airportline: rgb(0 121 172);
 	--gjline: rgb(106 194 179);
 	--ggline: rgb(149 115 38);
+	interpolate-size: allow-keywords;
 }
 
 ::selection {
