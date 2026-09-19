@@ -4,6 +4,7 @@
 /* 컬러 설정 */
 :root {
 	color-scheme: light dark;
+	
 	--alpha_gray: light-dark(#fffa, #000a);
 	--gray_line_color: light-dark(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3));
 	--placeholder: light-dark(#444, #ccc);
@@ -62,9 +63,9 @@
 	--airportline: rgb(0, 121, 172);
 	--gjline: rgb(106, 194, 179);
 	--ggline: rgb(149, 115, 38);
-
 	interpolate-size: allow-keywords;
 }
+
 
 ::selection {
 	background: var(--light_purple);
@@ -82,9 +83,9 @@
 	border: 0;
 	position: absolute;
 	z-index: -1;
-	width: 1px;
-	height: 1px;
-	clip: rect(1px, 1px, 1px, 1px);
+	width: 0.0625rem;
+	height: 0.0625rem;
+	clip: rect(0.0625rem, 0.0625rem, 0.0625rem, 0.0625rem);
 	clip-path: inset(50%);
 	white-space: nowrap;
 }
@@ -107,7 +108,6 @@
 *::before,
 *::after,
 :root {
-	interpolate-size: allow-keywords;
 	font-size: 1rem;
 	font: inherit;
 	vertical-align: baseline;
@@ -222,8 +222,8 @@ select::-ms-expand {
 }
 
 :focus-visible {
-	outline: 3px solid var(--border_purple);
-	outline-offset: 2px;
+	outline: 0.1875rem solid var(--border_purple);
+	outline-offset: 0.125rem;
 }
 
 input[type="file"],
@@ -232,19 +232,12 @@ input[type="file"],
 }
 
 /* ==========================================================================
-   Details 부드러운 전개 애니메이션 (Grid + Interpolate Size)
+   Details 부드러운 전개 애니메이션 (Modern & Fallback)
    ========================================================================== */
 details {
-	display: grid;
-	grid-template-rows: auto 0fr;
-	overflow: hidden;
-	transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
-	border: 1px solid var(--gray_line_color);
+	border: 0.0625rem solid var(--gray_line_color);
 	border-radius: 0.5rem;
-}
-
-details[open] {
-	grid-template-rows: auto 1fr;
+	overflow: hidden;
 }
 
 summary::-webkit-details-marker {
@@ -258,26 +251,51 @@ summary {
 	font-weight: 700;
 	user-select: none;
 	background-color: var(--alpha_gray);
-	transition: background-color 0.3s ease;
 }
 
-/* 내용 영역을 감싸는 레퍼 */
+/* ::details-content 지원 브라우저 (Chrome 131+, Safari 18.2+) */
+@supports (selector(::details-content)) {
+	details::details-content {
+		block-size: 0;
+		opacity: 0;
+		overflow: hidden;
+		transition: block-size 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+		            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		            content-visibility 0.35s allow-discrete;
+	}
+
+	details[open]::details-content {
+		block-size: auto;
+		opacity: 1;
+	}
+}
+
+/* ::details-content 미지원 브라우저용 폴백 (Grid 높이 애니메이션) */
+@supports not (selector(::details-content)) {
+	details {
+		display: grid;
+		grid-template-rows: auto 0fr;
+		transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	details[open] {
+		grid-template-rows: auto 1fr;
+	}
+
+	details > *:not(summary) {
+		min-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	details[open] > *:not(summary) {
+		opacity: 1;
+	}
+}
+
 details > *:not(summary) {
-	min-height: 0;
-	overflow: hidden;
-	opacity: 0;
-	transform: translateY(-0.5rem);
-	transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 	padding: clamp(0.5rem, 0.75rem, 1rem);
-}
-
-details[open] > *:not(summary) {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-::details-content {
-	transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 :where(:disabled, label:has(> input:disabled), label:has(+ input:disabled), input:disabled + label) {
@@ -346,7 +364,7 @@ details[open] > *:not(summary) {
 
 :where(hr) {
 	border: none;
-	border-block-start: 1px solid var(--gray_line_color);
+	border-block-start: 0.0625rem solid var(--gray_line_color);
 	color: inherit;
 	block-size: 0;
 	overflow: visible;
@@ -370,7 +388,7 @@ table {
 th, td {
 	position: relative;
 	padding: clamp(0.25rem, 0.5rem, 1rem);
-	border: 1px solid var(--gray_line_color);
+	border: 0.0625rem solid var(--gray_line_color);
 	text-align: left;
 }
 
@@ -399,7 +417,7 @@ fieldset {
 }
 
 /* ==========================================================================
-   Dialog & Popover 모션 부드럽게 처리 (@starting-style 지원)
+   Dialog & Popover 모션 부드럽게 처리 (@starting-style)
    ========================================================================== */
 [popover],
 dialog {
@@ -410,11 +428,11 @@ dialog {
 	width: 88vw;
 	max-width: 90dvw;
 	max-height: 90dvh;
-	border: 1px solid var(--gray_line_color);
+	border: 0.0625rem solid var(--gray_line_color);
 	background: var(--pure_mono);
 	color: var(--invert_pure_mono);
 	overflow: hidden;
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.3);
 
 	/* 열리고 닫힐 때 공통 transition 설정 */
 	transition: 
@@ -422,7 +440,7 @@ dialog {
 		transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
 		display 0.3s allow-discrete,
 		overlay 0.3s allow-discrete;
-	
+
 	/* 닫혀있을 때의 기본 상태 */
 	opacity: 0;
 	transform: scale(0.92) translateY(0.5rem);
@@ -435,7 +453,7 @@ dialog[open],
 	transform: scale(1) translateY(0);
 }
 
-/* 애니메이션 시작점 설정 (Modern CSS) */
+/* 애니메이션 시작점 설정 */
 @starting-style {
 	dialog[open],
 	[popover]:popover-open {
@@ -483,7 +501,7 @@ dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, 
 	z-index: 10;
 	background: var(--pure_mono);
 	color: var(--invert_pure_mono);
-	border-bottom: 1px solid var(--gray_line_color);
+	border-bottom: 0.0625rem solid var(--gray_line_color);
 	padding: 0.75rem 1rem;
 }
 
@@ -538,7 +556,7 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 	font-weight: 900;
 	text-align: center;
 	transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	border-bottom: 2px solid var(--border_purple);
+	border-bottom: 0.125rem solid var(--border_purple);
 	background: var(--pure_black);
 	color: var(--pure_white);
 	backdrop-filter: blur(1.25rem);
@@ -606,10 +624,10 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 	align-items: center;
 	vertical-align: middle;
 	text-shadow:
-		-1px -1px 0 var(--pure_mono),
-		1px -1px 0 var(--pure_mono),
-		-1px 1px 0 var(--pure_mono),
-		1px 1px 0 var(--pure_mono);
+		-0.0625rem -0.0625rem 0 var(--pure_mono),
+		0.0625rem -0.0625rem 0 var(--pure_mono),
+		-0.0625rem 0.0625rem 0 var(--pure_mono),
+		0.0625rem 0.0625rem 0 var(--pure_mono);
 	color: var(--pure_white);
 }
 
@@ -654,14 +672,96 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 	}
 }
 
+/* 카카오맵 커스텀 */
+.root_daum_roughmap {
+	width: 100% !important;
+	display: flex;
+	flex-direction: column;
+	border: solid 0.0625rem var(--kakao_yellow);
+}
+
+.root_daum_roughmap .wrap_map {
+	flex-grow: 1;
+	width: 100% !important;
+	min-height: 40rem;
+	max-height: 80dvh;
+	border-bottom: 0.0625rem solid var(--kakao_yellow);
+}
+
+.wrap_btn_zoom { background-image: none !important; }
+:where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) { overflow: visible !important; }
+
+.root_daum_roughmap .wrap_btn_zoom button {
+	background-color: var(--variable_purple) !important;
+	aspect-ratio: 1/1;
+	border: 0.0625rem solid var(--default_purple);
+	padding: 0 !important;
+	transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.root_daum_roughmap .wrap_btn_zoom button:focus-visible {
+	z-index: 2;
+	outline-offset: 0.25rem;
+	outline: 0.125rem solid var(--dark_purple) !important;
+}
+
+.root_daum_roughmap .wrap_btn_zoom button .img_zoom { filter: contrast(4) invert(0); }
+.root_daum_roughmap .cont .section { margin: 0 !important; padding: min(0.5rem) max(1rem) !important; }
+.root_daum_roughmap .wrap_controllers {
+	background-color: light-dark(var(--kakao_yellow), var(--alpha_gray)) !important;
+	border: none !important;
+	border-bottom: var(--kakao_yellow) solid 0.0625rem !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.roughmap_maker_label, .roughmap_maker_label::after {
+	background-image: none !important;
+	background-color: var(--variable_purple) !important;
+}
+
+.roughmap_maker_label::after { transform: rotate(45deg); }
+.roughmap_maker_label a { padding: 0.5rem !important; color: var(--invert_pure_mono); }
+.roughmap_maker_label .roughmap_lebel_text {
+	font-size: 1rem !important;
+	color: var(--invert_pure_mono) !important;
+	background-color: transparent !important;
+	padding: 0 !important;
+}
+
+.root_daum_roughmap .section_address .txt,
+.root_daum_roughmap .section_address .tit,
+.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt {
+	color: var(--invert_pure_mono) !important;
+	font-size: 1rem !important;
+	line-height: 1lh !important;
+}
+
+.wrap_btn_roadview {
+	opacity: 0.9;
+}
+.root_daum_roughmap .section_address .tit { font-weight: 700; }
+.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt_bar {
+	margin: 0 0.25rem !important;
+}
+
+img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"] {
+	filter: hue-rotate(40deg);
+}
+
 @media (prefers-color-scheme: dark) {
 	.lightV, .light_view { display: none; }
 	.darkV, .dark_view { display: unset; }
 	dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) img {
 		filter: invert(1);
 	}
-	.root_daum_roughmap .wrap_controllers .tit_controllers img { filter: invert(1); }
-	.root_daum_roughmap .wrap_btn_zoom button .img_zoom { filter: contrast(4) invert(1); }
+	.root_daum_roughmap .wrap_controllers .tit_controllers img {
+		filter: invert(1);
+	}
+	.root_daum_roughmap .wrap_btn_zoom button .img_zoom {
+		filter: contrast(4) invert(1);
+	}
 }
 
 /* 기기별 미디어 쿼리 */
@@ -701,78 +801,4 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 	dialog[open] :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
 		padding: 0.25rem 0.5rem;
 	}
-}
-
-/* 카카오맵 커스텀 */
-.root_daum_roughmap {
-	width: 100% !important;
-	display: flex;
-	flex-direction: column;
-	border: solid 1px var(--kakao_yellow);
-}
-
-.root_daum_roughmap .wrap_map {
-	flex-grow: 1;
-	width: 100% !important;
-	min-height: 40rem;
-	max-height: 80dvh;
-	border-bottom: 1px solid var(--kakao_yellow);
-}
-
-.wrap_btn_zoom { background-image: none !important; }
-:where(.root_daum_roughmap .wrap_btn_zoom, .root_daum_roughmap .wrap_btn_zoom .img_zoom) { overflow: visible !important; }
-
-.root_daum_roughmap .wrap_btn_zoom button {
-	background-color: var(--variable_purple) !important;
-	aspect-ratio: 1/1;
-	border: 1px solid var(--default_purple);
-	padding: 0 !important;
-	transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.root_daum_roughmap .wrap_btn_zoom button:focus-visible {
-	z-index: 2;
-	outline-offset: 0.25rem;
-	outline: 2px solid var(--dark_purple) !important;
-}
-
-.root_daum_roughmap .wrap_btn_zoom button .img_zoom { filter: contrast(4) invert(0); }
-.root_daum_roughmap .cont .section { margin: 0 !important; padding: min(0.5rem) max(1rem) !important; }
-.root_daum_roughmap .wrap_controllers {
-	background-color: light-dark(var(--kakao_yellow), var(--alpha_gray)) !important;
-	border:none!important;
-	border-bottom:var(--kakao_yellow) solid 1px!important;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.roughmap_maker_label, .roughmap_maker_label::after {
-	background-image: none !important;
-	background-color: var(--variable_purple) !important;
-}
-
-.roughmap_maker_label::after { transform: rotate(45deg); }
-.roughmap_maker_label a { padding: 0.5rem !important; color: var(--invert_pure_mono); }
-.roughmap_maker_label .roughmap_lebel_text {
-	font-size: 1rem !important;
-	color: var(--invert_pure_mono) !important;
-	background-color: transparent !important;
-	padding: 0 !important;
-}
-
-.root_daum_roughmap .section_address .txt,
-.root_daum_roughmap .section_address .tit,
-.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt {
-	color: var(--invert_pure_mono) !important;
-	font-size: 1rem !important;
-	line-height: 1lh !important;
-}
-
-.wrap_btn_roadview { opacity: 0.9; }
-.root_daum_roughmap .section_address .tit { font-weight: 700; }
-.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt_bar { margin: 0 0.25rem !important; }
-
-img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"] {
-	filter: hue-rotate(40deg);
 }
