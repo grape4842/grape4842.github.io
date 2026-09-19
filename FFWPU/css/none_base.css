@@ -95,7 +95,7 @@ a:focus, a:hover {
 }
 summary {
 	padding:1rem;
-	transition:list-style 0.2s;
+	transition:list-style 0.2s, filter 0.2s;
 	background-color:var(--default_purple);
 	color:#fff;
 }

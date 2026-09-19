@@ -1,11 +1,11 @@
 @charset "utf-8";
 @import url("font.css");
 
-/*컬러 설정*/
+/* 컬러 설정 */
 :root {
 	color-scheme: light dark;
 	--alpha_gray: light-dark(#fffa, #000a);
-	--gray_line_color: light-dark(rgba(0, 0, 0, 0.3), rgba(255 255 255 / 0.3));
+	--gray_line_color: light-dark(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3));
 	--placeholder: light-dark(#444, #ccc);
 	--warning: light-dark(#c30, #fcb);
 	--pure_mono: light-dark(#fff, #000);
@@ -18,11 +18,11 @@
 	--pure_blue: #00f;
 
 	--nintendo_red: #e60012;
-	--lg_red: #A50034;
-	--kakao_yellow: #FEE500;
-	--naver_green: #03C75A;
-	--facebook_blue: #264CE9;
-	--samsung_blue: #1428A0;
+	--lg_red: #a50034;
+	--kakao_yellow: #fee500;
+	--naver_green: #03c75a;
+	--facebook_blue: #264ce9;
+	--samsung_blue: #1428a0;
 	--discord_blurple: #5865f2;
 
 	--default_purple: #60a;
@@ -38,10 +38,10 @@
 
 	--yellow: light-dark(#960, #ffa);
 
-	--sunmoon_red: #D31945;
-	--sunmoon_green: #006A79;
-	--sunmoon_lightgray: #A5AEB4;
-	--sunmoon_darkgray: #0D1F1D;
+	--sunmoon_red: #d31945;
+	--sunmoon_green: #006a79;
+	--sunmoon_lightgray: #a5aeb4;
+	--sunmoon_darkgray: #0d1f1d;
 
 	--g_bus: #53b332;
 	--b_bus: #0068b7;
@@ -50,27 +50,28 @@
 	--night_bus: #3d5bab;
 	--night_bus_text: #ffc600;
 
-	--line1: rgb(0 74 133);
-	--line2: rgb(0 162 63);
-	--line3: rgb(237 108 0);
-	--line4: rgb(0 155 206);
-	--line5: rgb(121 70 152);
-	--line6: rgb(124 73 50);
-	--line7: rgb(110 126 49);
-	--line8: rgb(209 29 112);
-	--line9: rgb(164 157 135);
-	--airportline: rgb(0 121 172);
-	--gjline: rgb(106 194 179);
-	--ggline: rgb(149 115 38);
+	--line1: rgb(0, 74, 133);
+	--line2: rgb(0, 162, 63);
+	--line3: rgb(237, 108, 0);
+	--line4: rgb(0, 155, 206);
+	--line5: rgb(121, 70, 152);
+	--line6: rgb(124, 73, 50);
+	--line7: rgb(110, 126, 49);
+	--line8: rgb(209, 29, 112);
+	--line9: rgb(164, 157, 135);
+	--airportline: rgb(0, 121, 172);
+	--gjline: rgb(106, 194, 179);
+	--ggline: rgb(149, 115, 38);
+
 	interpolate-size: allow-keywords;
 }
 
 ::selection {
-	background: #baf;
+	background: var(--light_purple);
 	color: var(--pure_black);
 }
 
-/*숨김텍스트 설정*/
+/* 숨김 텍스트 설정 */
 .hidden,
 .blind,
 .a11y-txt,
@@ -85,6 +86,7 @@
 	height: 1px;
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
+	white-space: nowrap;
 }
 
 :where(button, a, summary):has(.icon) {
@@ -93,7 +95,12 @@
 	justify-content: center;
 	vertical-align: middle;
 	gap: 0.25rem;
-	text-box-trim: both;
+}
+
+@supports (text-box-trim: both) {
+	:where(button, a, summary):has(.icon) {
+		text-box-trim: both;
+	}
 }
 
 *,
@@ -113,12 +120,10 @@
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
 	-ms-text-size-adjust: none;
-	-o-text-size-adjust: none;
 	scroll-behavior: smooth;
-	ruby-align: space-between;
-	scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
-	ruby-position: over;
 	ruby-align: center;
+	scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+	ruby-position: over;
 }
 
 @supports not (min-block-size: 100dvb) {
@@ -148,17 +153,19 @@ html {
 	padding: 0;
 	position: relative;
 	box-sizing: border-box;
-	-webkit-text-size-adjust: none;
-	color-scheme: dark light;
+	color-scheme: light dark;
 	font-family: "KoddiUDOnGothic", "BIZ-UDPGothic", "Pretendard Variable", sans-serif, serif;
 	scroll-behavior: smooth;
-	ruby-align: space-between;
+	color: var(--invert_pure_mono);
+	background-color: var(--pure_mono);
 }
 
 button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: transparent;
+	border: none;
 }
 
 :where(input, button, textarea, select, a, option) {
@@ -167,7 +174,7 @@ button {
 	color: inherit;
 	box-sizing: border-box;
 	padding: 0.25rem;
-	transition: filter 0.3s;
+	transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1), outline 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 	accent-color: light-dark(#608, #baf);
 }
 
@@ -185,7 +192,7 @@ option {
 }
 
 label:has(input:checked) {
-	font-weight: 500;
+	font-weight: 700;
 }
 
 select::-ms-expand {
@@ -207,11 +214,16 @@ select::-ms-expand {
 	padding: 0.5rem;
 }
 
-:where(:focus, button, label, select, summary, [role='button'], [role='option'], input, [type="file"]::file-selector-button) {
+:where(:focus-visible, button, label, select, summary, [role='button'], [role='option'], input, [type="file"]::file-selector-button) {
 	cursor: pointer;
 	position: relative;
 	box-sizing: border-box;
 	transition-duration: 0.3s;
+}
+
+:focus-visible {
+	outline: 3px solid var(--border_purple);
+	outline-offset: 2px;
 }
 
 input[type="file"],
@@ -219,8 +231,20 @@ input[type="file"],
 	min-width: max-content;
 }
 
-details>* {
-	padding: clamp(0.5rem, 0.75rem, 1rem);
+/* ==========================================================================
+   Details 부드러운 전개 애니메이션 (Grid + Interpolate Size)
+   ========================================================================== */
+details {
+	display: grid;
+	grid-template-rows: auto 0fr;
+	overflow: hidden;
+	transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+	border: 1px solid var(--gray_line_color);
+	border-radius: 0.5rem;
+}
+
+details[open] {
+	grid-template-rows: auto 1fr;
 }
 
 summary::-webkit-details-marker {
@@ -229,14 +253,36 @@ summary::-webkit-details-marker {
 
 summary {
 	list-style-type: none;
+	touch-action: manipulation;
+	padding: 0.75rem 1rem;
+	font-weight: 700;
+	user-select: none;
+	background-color: var(--alpha_gray);
+	transition: background-color 0.3s ease;
+}
+
+/* 내용 영역을 감싸는 레퍼 */
+details > *:not(summary) {
+	min-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transform: translateY(-0.5rem);
+	transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	padding: clamp(0.5rem, 0.75rem, 1rem);
+}
+
+details[open] > *:not(summary) {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+::details-content {
+	transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 :where(:disabled, label:has(> input:disabled), label:has(+ input:disabled), input:disabled + label) {
 	cursor: not-allowed;
-}
-
-:where(button) {
-	border-style: none;
+	opacity: 0.6;
 }
 
 :where(a) {
@@ -244,16 +290,20 @@ summary {
 	color: inherit;
 	text-decoration: underline wavy;
 	text-decoration-color: transparent;
-	transition: text-decoration-color 0.3s, text-decoration 0.3s, outline 0.3s, filter 0.3s, transform 0.3s;
+	transition: text-decoration-color 0.3s, text-decoration 0.3s, outline 0.3s, filter 0.3s, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 	text-underline-offset: 0.25rem;
+}
+
+:where(a):hover {
+	text-decoration-color: currentColor;
 }
 
 :where(ul, ol, li) {
 	list-style: none;
 	box-sizing: border-box;
 	position: relative;
-	padding: 0rem;
-	margin: 0rem;
+	padding: 0;
+	margin: 0;
 }
 
 :where(span, label) {
@@ -291,45 +341,47 @@ summary {
 
 :where(h1, h2, h3, h4, h5, h6) * {
 	font: inherit;
-	font-weight: 500;
+	font-weight: 700;
 }
 
 :where(hr) {
 	border: none;
-	border-block-start: 1px solid;
+	border-block-start: 1px solid var(--gray_line_color);
 	color: inherit;
 	block-size: 0;
 	overflow: visible;
+	margin: 1rem 0;
 }
 
-blockquote,
-q {
+blockquote, q {
 	quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before, blockquote::after, q::before, q::after {
 	content: '';
-	content: none;
 }
 
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	width: 100%;
 }
 
-th,
-td {
+th, td {
 	position: relative;
 	padding: clamp(0.25rem, 0.5rem, 1rem);
 	border: 1px solid var(--gray_line_color);
+	text-align: left;
+}
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
+	background-color: var(--gray_line_color);
 	border-radius: 10rem;
-	cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {
@@ -339,215 +391,174 @@ td {
 
 address {
 	text-align: center;
+	font-style: normal;
 }
 
 fieldset {
 	border: none;
 }
 
-/* -------------------------------------------------------------------------- */
-/* [MODAL & DIALOG SECTION - 오류 수정됨]                                       */
-/* -------------------------------------------------------------------------- */
-
-:modal,
-[popover],
-dialog,
-::backdrop,
-::details-content,
-dialog>* {
-	box-sizing: border-box;
-	transition:
-		content-visibility 0.3s ease allow-discrete,
-		display 0.3s ease allow-discrete,
-		overlay 0.3s ease allow-discrete,
-		opacity 0.3s ease allow-discrete,
-		scale 0.3s ease allow-discrete,
-		visibility 0.3s ease allow-discrete,
-		backdrop-filter 0.3s ease allow-discrete,
-		transform 0.3s ease allow-discrete;
-}
-
-details::details-content {
-	height: 0;
-	opacity: 0;
-	overflow: clip;
-}
-
-details[open]::details-content {
-	opacity: 1;
-}
-
-@supports (interpolate-size: allow-keywords) {
-	:root {
-		interpolate-size: allow-keywords;
-	}
-
-	details[open]::details-content {
-		height: auto;
-	}
-}
-
+/* ==========================================================================
+   Dialog & Popover 모션 부드럽게 처리 (@starting-style 지원)
+   ========================================================================== */
 [popover],
 dialog {
 	position: fixed;
+	inset: 0;
 	margin: auto;
-	border-radius: 0.5rem;
+	border-radius: 0.75rem;
+	width: 88vw;
 	max-width: 90dvw;
 	max-height: 90dvh;
-	border: none;
+	border: 1px solid var(--gray_line_color);
+	background: var(--pure_mono);
+	color: var(--invert_pure_mono);
+	overflow: hidden;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+	/* 열리고 닫힐 때 공통 transition 설정 */
+	transition: 
+		opacity 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+		transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+		display 0.3s allow-discrete,
+		overlay 0.3s allow-discrete;
+	
+	/* 닫혀있을 때의 기본 상태 */
 	opacity: 0;
-	overflow-y: auto; /* 내부 스크롤 허용 */
+	transform: scale(0.92) translateY(0.5rem);
 }
 
-::backdrop {
-	backdrop-filter: blur(1rem);
-	background: rgba(0, 0, 0, 0.5);
-}
-
-/* 닫기 버튼 컨테이너: 다이얼로그 우측 상단에 고정 */
-dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) {
-	background: transparent;
-	position: sticky; /* 스크롤 시에도 따라오도록 sticky 설정 */
-	top: 0;
-	right: 0;
-	margin-left: auto;
-	z-index: 20; /* 헤더보다 위에 위치 */
-	height: 0; /* 본문 흐름에 영향을 주지 않도록 설정 */
-	display: flex;
-	justify-content: flex-end;
-	pointer-events: none; /* 컨테이너 자체는 클릭 간섭 방지 */
-}
-
-dialog :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
-	margin: 0 auto;
-}
-
-/* 닫기 버튼 본체: 항상 3rem 크기를 유지하도록 고정 */
-dialog :is(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl, button.close_popup, button.close_button) {
-	border-radius: 0.5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 3rem !important;
-	width: 3rem !important;
-	min-width: 3rem;
-	min-height: 3rem;
-	aspect-ratio: 1/1;
-	background: transparent;
-	outline-offset: -0.25rem;
-	z-index: 21;
-	pointer-events: auto; /* 버튼은 클릭 가능하도록 설정 */
-}
-
-/* 클래스가 컨테이너인 경우 내부의 실제 버튼 크기도 강제 고정 */
-dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) button {
-	height: 3rem !important;
-	width: 3rem !important;
-	pointer-events: auto;
-}
-
-dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) img {
-	max-height: 2rem;
-	max-width: 2rem;
-	aspect-ratio: 1/1;
-}
-
-dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
-dialog[open] :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
-	margin: 0;
-	padding: clamp(0.5rem, 1rem, 2rem);
-}
-
-/* 헤더 고정 설정 */
-dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header) {
-	display: flex;
-	align-items: center;
-	font-size: 1rem;
-	font-weight: bolder;
-	position: sticky; /* 스크롤 시 상단 고정 */
-	top: 0;
-	left: 0;
-	height: 3rem;
-	z-index: 10;
-	background: var(--pure_mono); /* 투명하지 않게 배경색 지정 */
-	border-bottom: 1px solid var(--gray_line_color); /* 경계선 추가 */
-}
-
-:popover-open,
-::backdrop,
-[open],
-[open] * {
+/* 열렸을 때 상태 */
+dialog[open],
+[popover]:popover-open {
 	opacity: 1;
-	transform: translateY(0);
+	transform: scale(1) translateY(0);
+}
+
+/* 애니메이션 시작점 설정 (Modern CSS) */
+@starting-style {
+	dialog[open],
+	[popover]:popover-open {
+		opacity: 0;
+		transform: scale(0.92) translateY(0.5rem);
+	}
+}
+
+/* 백드롭 애니메이션 */
+::backdrop {
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(0.5rem);
+	transition: 
+		opacity 0.3s ease,
+		backdrop-filter 0.3s ease,
+		display 0.3s allow-discrete,
+		overlay 0.3s allow-discrete;
+	opacity: 0;
+}
+
+dialog[open]::backdrop,
+[popover]:popover-open::backdrop {
+	opacity: 1;
 }
 
 @starting-style {
-	:popover-open,
-	::backdrop,
-	[open],
-	[open] * {
+	dialog[open]::backdrop,
+	[popover]:popover-open::backdrop {
 		opacity: 0;
 	}
 }
 
+/* 팝업 헤더 & 닫기 버튼 */
+dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header) {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.125rem;
+	font-weight: 700;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 3rem;
+	z-index: 10;
+	background: var(--pure_mono);
+	color: var(--invert_pure_mono);
+	border-bottom: 1px solid var(--gray_line_color);
+	padding: 0.75rem 1rem;
+}
+
+dialog[open] :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
+	padding: clamp(0.75rem, 1.25rem, 2rem);
+	max-height: calc(90dvh - 3.5rem);
+	overflow-y: auto;
+}
+
+dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl, button.close_popup, button.close_button) {
+	position: absolute;
+	top: 0.25rem;
+	right: 0.5rem;
+	width: 3rem !important;
+	height: 3rem !important;
+	min-width: 3rem;
+	min-height: 3rem;
+	border-radius: 0.5rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	z-index: 20;
+	padding: 0;
+	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl, button.close_popup, button.close_button):hover {
+	transform: scale(1.08);
+}
+
+dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_popover, .close_ctrl) img {
+	width: 1.5rem;
+	height: 1.5rem;
+	aspect-ratio: 1/1;
+}
+
+/* ==========================================================================
+   스킵 네비게이션
+   ========================================================================== */
 :where(#skipnav, #jumpnav, #jump_main_content, #skip_nav, #jump_nav, #nav_skip) {
 	position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 40;
+	z-index: 100;
 	top: -10rem;
+	left: 0;
 	width: 100vw;
 	line-height: 3rem;
 	font-size: 1rem;
 	font-weight: 900;
 	text-align: center;
-	transition: 0.3s top;
-	border: 1px solid;
+	transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	border-bottom: 2px solid var(--border_purple);
 	background: var(--pure_black);
 	color: var(--pure_white);
 	backdrop-filter: blur(1.25rem);
 }
 
-:where(#skipnav, #jumpnav, #skip_nav):where(:focus, :hover) {
-	top: 0rem;
-	text-decoration: var(--pure_white) underline wavy 2px;
+:where(#skipnav, #jumpnav, #skip_nav, #jump_main_content, #jump_nav, #nav_skip):where(:focus, :hover) {
+	top: 0;
+	text-decoration: underline wavy var(--pure_white);
 	text-underline-offset: 0.25rem;
 }
 
-.lightV,
-.light_view {
-	display: unset;
-}
-
-.darkV,
-.dark_view {
-	display: none;
-}
-
-.View_PC,
-.PCV,
-.PC_View,
-.pc_view {
-	display: none;
-}
-
-.View_Mobile,
-.mobileV,
-.mobile_View,
-.mobile_view,
-.Mobile_View,
-.MobileV {
-	display: unset;
-}
-
-dialog {
-	width: 88vw;
-}
+/* 반응형 유틸리티 */
+.lightV, .light_view { display: unset; }
+.darkV, .dark_view { display: none; }
+.View_PC, .PCV, .PC_View, .pc_view { display: none; }
+.View_Mobile, .mobileV, .mobile_View, .mobile_view, .Mobile_View, .MobileV { display: unset; }
 
 .content_width, .width_center {
 	width: 90vw;
-	margin: 0rem auto;
+	margin: 0 auto;
 }
 
 .youtube_video_frame {
@@ -558,27 +569,28 @@ dialog {
 	margin: 1rem auto;
 }
 
-@media (prefers-contrast:more) {
+/* 고대비 지원 */
+@media (prefers-contrast: more) {
 	body {
 		background-color: var(--pure_black) !important;
-		color: var(--pure_white);
+		color: var(--pure_white) !important;
 	}
 
 	a {
-		color: var(--pure_yellow);
+		color: var(--pure_yellow) !important;
 	}
 
 	a:visited {
-		color: var(--pure_green);
+		color: var(--pure_green) !important;
 	}
 
 	::selection {
-		background: var(--pure_white);
-		color: var(--pure_black);
+		background: var(--pure_white) !important;
+		color: var(--pure_black) !important;
 	}
 }
 
-/*서울의 버스와 지하철*/
+/* 교통 노선 스타일 */
 .metro_line {
 	border-radius: 10rem;
 	min-width: 1.5rem;
@@ -587,9 +599,9 @@ dialog {
 
 .metro_line,
 .bus_line {
-	transition: 0.2s scale;
+	transition: transform 0.2s ease;
 	display: inline-flex;
-	font-weight: bolder;
+	font-weight: 700;
 	justify-content: center;
 	align-items: center;
 	vertical-align: middle;
@@ -597,39 +609,30 @@ dialog {
 		-1px -1px 0 var(--pure_mono),
 		1px -1px 0 var(--pure_mono),
 		-1px 1px 0 var(--pure_mono),
-		1px 1px 0 var(--pure_mono),
-		0px -1px 0 var(--pure_mono),
-		0px 1px 0 var(--pure_mono),
-		-1px 0px 0 var(--pure_mono),
-		1px 0px 0 var(--pure_mono);
+		1px 1px 0 var(--pure_mono);
 	color: var(--pure_white);
 }
 
-.numline {
-	aspect-ratio: 1/1;
-}
+.numline { aspect-ratio: 1/1; }
+.longline { padding: 0 0.5rem; }
 
-.longline {
-	padding: 0px 0.5rem;
-}
-
-.line1 { background: rgb(0 74 133); }
-.line2 { background: rgb(0 162 63); }
-.line3 { background: rgb(237 108 0); }
-.line4 { background: rgb(0 155 206); }
-.line5 { background: rgb(121 70 152); }
-.line6 { background: rgb(124 73 50); }
-.line7 { background: rgb(110 126 49); }
-.line8 { background: rgb(209 29 112); }
-.line9 { background: rgb(164 157 135); }
-.gyline { background: rgb(106 194 179); padding: 0px 0.5rem; }
-.sibdline { background: rgb(236 163 0); }
-.sbdline { background: rgb(184 27 48); }
-.airport_line { background: rgb(0 121 172); }
+.line1 { background: rgb(0, 74, 133); }
+.line2 { background: rgb(0, 162, 63); }
+.line3 { background: rgb(237, 108, 0); }
+.line4 { background: rgb(0, 155, 206); }
+.line5 { background: rgb(121, 70, 152); }
+.line6 { background: rgb(124, 73, 50); }
+.line7 { background: rgb(110, 126, 49); }
+.line8 { background: rgb(209, 29, 112); }
+.line9 { background: rgb(164, 157, 135); }
+.gyline { background: rgb(106, 194, 179); padding: 0 0.5rem; }
+.sibdline { background: rgb(236, 163, 0); }
+.sbdline { background: rgb(184, 27, 48); }
+.airport_line { background: rgb(0, 121, 172); }
 
 .bus_line {
 	border-radius: 0.5rem;
-	padding: 0rem 0.25rem;
+	padding: 0 0.25rem;
 }
 
 .g-bus, .g_bus { background-color: #59be0a; }
@@ -638,14 +641,16 @@ dialog {
 
 .meter {
 	color: var(--warning);
-	padding: 0rem 0.5rem;
+	padding: 0 0.5rem;
 	font-weight: 500;
 }
 
 @media (prefers-reduced-motion: reduce) {
-	* {
-		transition: none;
-		animation: none;
+	*, ::before, ::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
 	}
 }
 
@@ -659,46 +664,46 @@ dialog {
 	.root_daum_roughmap .wrap_btn_zoom button .img_zoom { filter: contrast(4) invert(1); }
 }
 
-/*기기별 CSS*/
-@media screen and (width >=1400px) {
+/* 기기별 미디어 쿼리 */
+@media screen and (min-width: 1400px) {
 	.View_PC, .PCV, .PC_View, .pc_view { display: unset; }
 	.View_Mobile, .mobileV, .mobile_View, .mobile_view, .Mobile_View, .MobileV { display: none; }
 	.content_width, .width_center { width: 60dvw; }
 	dialog { max-width: 50dvw; }
 	th, td { padding: 1rem; }
-	dialog :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
-	dialog :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
+	dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
+	dialog[open] :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
 		padding: 1.5rem 1.75rem;
 	}
 }
 
-@media screen and (1000px <=width) and (width < 1400px) {
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
 	.content_width, .width_center { width: 85dvw; }
 	dialog { max-width: 80dvw; }
 	th, td { padding: 0.75rem; }
-	dialog :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
-	dialog :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
+	dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
+	dialog[open] :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
 		padding: 1rem 1.25rem;
 	}
 }
 
-@media screen and (700px <=width) and (width < 1000px) {
+@media screen and (min-width: 700px) and (max-width: 999px) {
 	.content_width, .width_center { width: 85dvw; }
 	dialog { max-width: 80dvw; }
 	th, td { padding: 0.5rem; }
 }
 
-@media screen and (width < 330px) {
+@media screen and (max-width: 329px) {
 	.content_width, .width_center { min-width: 90dvw; width: 95dvw; }
 	dialog { max-width: 90dvw; }
 	th, td { padding: 0.25rem; }
-	dialog :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
-	dialog :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
+	dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, .popup_tit, .popup_title, .modal_header),
+	dialog[open] :where(.popover_content, .popover_body, .popup_content, .popup_body, .popup_main, .modal_content) {
 		padding: 0.25rem 0.5rem;
 	}
 }
 
-/*카카오맵 편집 CSS*/
+/* 카카오맵 커스텀 */
 .root_daum_roughmap {
 	width: 100% !important;
 	display: flex;
@@ -722,29 +727,32 @@ dialog {
 	aspect-ratio: 1/1;
 	border: 1px solid var(--default_purple);
 	padding: 0 !important;
+	transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.root_daum_roughmap .wrap_btn_zoom button:focus {
+.root_daum_roughmap .wrap_btn_zoom button:focus-visible {
 	z-index: 2;
 	outline-offset: 0.25rem;
 	outline: 2px solid var(--dark_purple) !important;
 }
 
 .root_daum_roughmap .wrap_btn_zoom button .img_zoom { filter: contrast(4) invert(0); }
-.root_daum_roughmap .cont .section { margin: 0rem !important; padding: min(0.5rem) max(1rem) !important; }
+.root_daum_roughmap .cont .section { margin: 0 !important; padding: min(0.5rem) max(1rem) !important; }
 .root_daum_roughmap .wrap_controllers {
 	background-color: light-dark(var(--kakao_yellow), var(--alpha_gray)) !important;
+	border:none!important;
+	border-bottom:var(--kakao_yellow) solid 1px!important;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.roughmap_maker_label, .roughmap_maker_label:after {
+.roughmap_maker_label, .roughmap_maker_label::after {
 	background-image: none !important;
 	background-color: var(--variable_purple) !important;
 }
 
-.roughmap_maker_label:after { rotate: 45deg; }
+.roughmap_maker_label::after { transform: rotate(45deg); }
 .roughmap_maker_label a { padding: 0.5rem !important; color: var(--invert_pure_mono); }
 .roughmap_maker_label .roughmap_lebel_text {
 	font-size: 1rem !important;
@@ -757,13 +765,13 @@ dialog {
 .root_daum_roughmap .section_address .tit,
 .root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt {
 	color: var(--invert_pure_mono) !important;
-	font-size: 14px;
+	font-size: 1rem !important;
 	line-height: 1lh !important;
 }
 
 .wrap_btn_roadview { opacity: 0.9; }
-.root_daum_roughmap .section_address .tit { font-weight: bolder; }
-.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt_bar { margin: 0rem 0.25rem !important; }
+.root_daum_roughmap .section_address .tit { font-weight: 700; }
+.root_daum_roughmap .wrap_controllers .wrap_btn_roadview .txt_bar { margin: 0 0.25rem !important; }
 
 img[src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_map02.png"] {
 	filter: hue-rotate(40deg);
