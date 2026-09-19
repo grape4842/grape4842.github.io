@@ -11,6 +11,10 @@
 	--dark_purple:#305;
 	--yellow:light-dark(#960, #ffa);
 }
+.mother_word h3 {padding:0rem;}
+.mother_word p {
+	font-size: clamp(1.25rem, 150%, 2rem);
+}
 /*큰 영역*/
 header, footer {
 	backdrop-filter: blur(1.25rem);
@@ -272,7 +276,7 @@ h2 {
 
 .news_and_notice article {
 	min-width: min-content;
-	max-width:100%;
+	max-width:30rem;
 }
 .news_and_notice h3 {
 	justify-content: center;
