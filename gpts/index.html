@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#60a">
+  <meta name="author" content="@purplemiyazawa">
+  <link rel="stylesheet" href="../font.css">
+  <link rel="stylesheet" href="../root.css">
+  <title>HTML · CSS 포맷터</title>
+  <link rel="stylesheet" href="css/formatter.css">
+</head>
+<body>
+  <a id="skip_nav" href="#main_head1">본문 바로가기</a>
+  <header class="site_header">
+    <div class="content_width">
+      <h1 id="page_head">HTML · CSS 포맷터</h1>
+      <p class="intro">코드는 브라우저 안에서만 정리됩니다. 들여쓰기는 탭 1개이며, 인라인 요소도 구조에 맞춰 줄을 나눕니다.</p>
+    </div>
+  </header>
+  <main id="main_head1" tabindex="-1">
+    <section class="content_width formatter_card" aria-labelledby="formatter_title">
+      <h2 id="formatter_title" class="a11y_txt">코드 포맷터</h2>
+      <div class="toolbar" aria-label="포맷터 도구">
+        <div class="toolbar_group toolbar_group--main">
+          <label class="control_label" for="format_type">코드 종류</label>
+          <select id="format_type" class="select_control" aria-label="포맷할 코드 종류">
+            <option value="auto">자동 감지</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+          </select>
+          <span class="shortcut_hint">Ctrl 또는 ⌘ + Enter</span>
+        </div>
+        <div class="toolbar_group toolbar_group--secondary">
+          <button id="paste_button" class="button" type="button">붙여넣기</button>
+          <button id="clear_button" class="button button--danger" type="button">초기화</button>
+        </div>
+      </div>
+      <div>
+        <section class="code_section" aria-labelledby="source_title">
+          <div class="panel_heading"><div><h2 id="source_title"><label for="source_code">원본 코드</label></h2><p id="source_description" class="panel_description">HTML 또는 CSS 코드를 붙여 넣으세요.</p></div><p id="source_count" class="code_count">0자</p></div>
+          <textarea id="source_code" class="code_area" spellcheck="false" wrap="off" aria-labelledby="source_title" aria-describedby="source_description" placeholder="예: &lt;main&gt;&lt;h1&gt;제목&lt;/h1&gt;&lt;/main&gt;"></textarea>
+        </section>
+        <div class="operation_toolbar" aria-label="결과 작업">
+          <button id="format_button" class="button button--primary" type="button">변환하기</button>
+          <button id="copy_button" class="button" type="button">결과 복사</button>
+          <button id="swap_button" class="button" type="button">결과를 입력으로</button>
+          <button id="download_button" class="button" type="button">파일 저장</button>
+        </div>
+        <section class="code_section" aria-labelledby="result_title">
+          <div class="panel_heading"><div><h2 id="result_title"><label for="result_code">정렬 결과</label></h2><p id="result_description" class="panel_description">정리된 코드를 검토한 뒤 복사하거나 저장할 수 있습니다.</p></div><p id="result_count" class="code_count">0자</p></div>
+          <textarea id="result_code" class="code_area" spellcheck="false" wrap="off" readonly aria-labelledby="result_title" aria-describedby="result_description" placeholder="포맷 결과가 여기에 표시됩니다."></textarea>
+        </section>
+      </div>
+      <p id="status_message" class="status_message" role="status" aria-live="polite">코드를 입력한 뒤 포맷하기를 선택하세요.</p>
+      <details class="formatter_help">
+        <summary>포맷 안내와 단축키</summary>
+        <div>
+          <p>입력 영역에 HTML 또는 CSS를 넣은 뒤 포맷하기를 선택하세요. 자동 감지는 첫 문자가 태그인지 확인합니다.</p>
+          <ul>
+            <li><kbd>Ctrl</kbd> 또는 <kbd>⌘</kbd> + <kbd>Enter</kbd>: 포맷하기</li>
+            <li><kbd>Tab</kbd>: 입력 영역에 탭 문자 넣기</li>
+            <li><kbd>Shift</kbd> + <kbd>Tab</kbd>: 선택한 입력 삭제</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+    <a href="#skip_nav" class="a11y_txt">페이지 가장 처음으로 이동하기</a>
+  </main>
+  <footer class="site_footer">
+    <div class="content_width"><address>HTML · CSS 포맷터</address></div>
+  </footer>
+  <script>
+    (() => {
+      const source_code = document.querySelector('#source_code');
+      const result_code = document.querySelector('#result_code');
+      const format_type = document.querySelector('#format_type');
+      const status_message = document.querySelector('#status_message');
+      const source_count = document.querySelector('#source_count');
+      const result_count = document.querySelector('#result_count');
+      const set_status = (message, state = '') => { status_message.textContent = message; status_message.dataset.state = state; };
+      const update_counts = () => { source_count.textContent = `${source_code.value.length.toLocaleString('ko-KR')}자`; result_count.textContent = `${result_code.value.length.toLocaleString('ko-KR')}자`; };
+      const detect_type = (code) => /^\s*</.test(code) ? 'html' : 'css';
+      const indent = (depth) => '\t'.repeat(Math.max(0, depth));
+      const protected_tags = new Set(['pre', 'textarea', 'script', 'style']);
+      const void_tags = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr']);
+
+      const format_css = (code, base_depth = 0) => {
+        let result = '';
+        let depth = base_depth;
+        let in_string = '';
+        let in_comment = false;
+        let token = '';
+        const write_token = () => { const clean_token = token.trim().replace(/\s+/g, ' '); if (clean_token) result += `${indent(depth)}${clean_token}`; token = ''; };
+        for (let index = 0; index < code.length; index += 1) {
+          const character = code[index];
+          const next_character = code[index + 1];
+          if (in_comment) { token += character; if (character === '*' && next_character === '/') { token += next_character; index += 1; in_comment = false; } continue; }
+          if (!in_string && character === '/' && next_character === '*') { in_comment = true; token += character; continue; }
+          if (in_string) { token += character; if (character === in_string && code[index - 1] !== '\\') in_string = ''; continue; }
+          if (character === '"' || character === "'") { in_string = character; token += character; continue; }
+          if (character === '{') { write_token(); result += ' {\n'; depth += 1; continue; }
+          if (character === ';') { write_token(); result += ';\n'; continue; }
+          if (character === '}') { if (token.trim()) { write_token(); result += ';\n'; } depth -= 1; result += `${indent(depth)}}\n`; continue; }
+          if (character === ':') { token = `${token.trim()}: `; continue; }
+          if (character === ',') { token = `${token.trim()},\n`; continue; }
+          token += character;
+        }
+        if (token.trim()) write_token();
+        return result.replace(/\n{3,}/g, '\n\n').trim();
+      };
+
+      const format_html = (code) => {
+        const tokens = code.match(/<!--[\s\S]*?-->|<[^>]*>|[^<]+/g) || [];
+        const lines = [];
+        let depth = 0;
+        let preserve_tag = '';
+        for (const raw_token of tokens) {
+          const token = raw_token.trim();
+          if (!token) continue;
+          if (preserve_tag) {
+            if (new RegExp(`^<\\/${preserve_tag}\\s*>`, 'i').test(token)) {
+              depth -= 1;
+              lines.push(`${indent(depth)}${token}`);
+              preserve_tag = '';
+            } else if (preserve_tag === 'style') {
+              lines.push(format_css(raw_token, depth));
+            } else {
+              lines.push(`${indent(depth)}${raw_token.trimEnd()}`);
+            }
+            continue;
+          }
+          if (!token.startsWith('<')) { lines.push(`${indent(depth)}${token.replace(/\s+/g, ' ')}`); continue; }
+          if (/^<\//.test(token)) { depth -= 1; lines.push(`${indent(depth)}${token}`); continue; }
+          lines.push(`${indent(depth)}${token}`);
+          const name_match = token.match(/^<\s*([\w:-]+)/);
+          const tag_name = name_match ? name_match[1].toLowerCase() : '';
+          if (!/^<!|^<\?/.test(token) && !/\/>$/.test(token) && !void_tags.has(tag_name)) { depth += 1; if (protected_tags.has(tag_name)) preserve_tag = tag_name; }
+        }
+        return lines.join('\n');
+      };
+
+      const format_code = () => {
+        const input = source_code.value.trim();
+        if (!input) { result_code.value = ''; update_counts(); set_status('포맷할 코드를 입력해 주세요.', 'error'); source_code.focus(); return; }
+        try {
+          const selected_type = format_type.value === 'auto' ? detect_type(input) : format_type.value;
+          result_code.value = selected_type === 'html' ? format_html(input) : format_css(input);
+          update_counts();
+          set_status(`${selected_type.toUpperCase()} 코드 포맷이 완료되었습니다.`, 'success');
+        } catch (error) { set_status(`포맷 중 오류가 발생했습니다: ${error.message}`, 'error'); }
+      };
+      const insert_tab = (event) => {
+        if (event.key !== 'Tab') return;
+        event.preventDefault();
+        const start = source_code.selectionStart; const end = source_code.selectionEnd;
+        source_code.setRangeText(event.shiftKey ? '' : '\t', start, end, 'end');
+      };
+      document.querySelector('#format_button').addEventListener('click', format_code);
+      document.querySelector('#copy_button').addEventListener('click', async () => { if (!result_code.value) return set_status('복사할 결과가 없습니다.', 'error'); try { await navigator.clipboard.writeText(result_code.value); set_status('포맷 결과를 클립보드에 복사했습니다.', 'success'); } catch { set_status('브라우저에서 클립보드 쓰기를 허용해 주세요.', 'error'); } });
+      document.querySelector('#paste_button').addEventListener('click', async () => { try { source_code.value = await navigator.clipboard.readText(); update_counts(); set_status('클립보드 내용을 입력 영역에 붙여 넣었습니다.', 'success'); source_code.focus(); } catch { set_status('브라우저에서 클립보드 접근을 허용해 주세요.', 'error'); } });
+      document.querySelector('#swap_button').addEventListener('click', () => { if (!result_code.value) return set_status('바꿀 포맷 결과가 없습니다.', 'error'); source_code.value = result_code.value; result_code.value = ''; update_counts(); set_status('포맷 결과를 입력 영역으로 옮겼습니다.', 'success'); source_code.focus(); });
+      document.querySelector('#clear_button').addEventListener('click', () => { source_code.value = ''; result_code.value = ''; update_counts(); set_status('입력과 결과를 초기화했습니다.', 'success'); source_code.focus(); });
+      document.querySelector('#download_button').addEventListener('click', () => { if (!result_code.value) return set_status('저장할 결과가 없습니다.', 'error'); const type = format_type.value === 'auto' ? detect_type(source_code.value) : format_type.value; const blob = new Blob([result_code.value], { type: 'text/plain;charset=utf-8' }); const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = `formatted.${type === 'html' ? 'html' : 'css'}`; link.click(); URL.revokeObjectURL(link.href); set_status('포맷 결과 파일을 저장했습니다.', 'success'); });
+      source_code.addEventListener('keydown', (event) => { insert_tab(event); if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') { event.preventDefault(); format_code(); } });
+      source_code.addEventListener('input', update_counts);
+      update_counts();
+    })();
+  </script>
+</body>
+</html>
+

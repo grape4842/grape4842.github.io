@@ -202,7 +202,7 @@ select::-ms-expand {
 	padding-left: 0.5rem;
 }
 
-:where(input[type="text"], input[type="password"], input[type="search"]) {
+:where(:invalid, textarea, input[type="text"], input[type="password"], input[type="search"]) {
 	cursor: text;
 }
 
@@ -210,9 +210,10 @@ select::-ms-expand {
 	min-height: 5lh;
 	resize: vertical;
 	padding: 0.5rem;
+	tab-size: 3;
 }
 
-:where(:focus-visible, button, label, select, summary, [role='button'], [role='option'], [type="file"]::file-selector-button) {
+:where(button, label, select, summary, [role='button'], [role='option'], [type="file"]::file-selector-button) {
 	cursor: pointer;
 }
 :where(:focus-visible, button, label, select, summary, [role='button'], [role='option'], input, [type="file"]::file-selector-button) {
