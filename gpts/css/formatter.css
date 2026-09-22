@@ -13,7 +13,6 @@
 }
 
 body {
-	min-width: 20rem;
 	background-color: var(--page_background);
 	background-image: radial-gradient(circle at 0 0, var(--variable_purple), transparent 36rem), radial-gradient(circle at 100% 100%, var(--high_variable_purple), transparent 40rem);
 	color: var(--text_color);
@@ -64,21 +63,27 @@ h2 { font-size: 1.125rem; line-height: 1.25; }
 .button--danger { color: var(--error_color); }
 .shortcut_hint, .panel_description { color: var(--muted_text_color); font-size: 0.875rem; }
 
-.code_section { display: grid; gap: 0.75rem; padding: 1.25rem; }
+.code_section {
+	display: grid; gap: 0.75rem;
+	padding: clamp(1rem, 2rem, 4rem);
+}
 .code_section + .code_section { margin-top: 1.5rem; border-top: 0.125rem solid var(--border_color); }
 .panel_heading { display: flex; gap: 0.75rem; justify-content: space-between; align-items: center; }
-.code_count { flex: 0 0 auto; color: var(--muted_text_color); font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+.code_count { 
+	flex: 0 0 auto; 
+	color: var(--muted_text_color);
+	font-variant-numeric: 
+	tabular-nums; 
+}
 .code_area {
 	width: 100%;
-	min-height: 20rem;
+	min-height: 5lh;
+	height: 12lh;
 	resize: vertical;
-	border: 0.125rem solid var(--border_color);
-	border-radius: 0.25rem;
+	border: 0.25rem solid var(--border_color);
+	border-radius: clamp(1rem, 1.5rem, 2rem);
 	padding: 1rem;
 	color: var(--code_text_color);
-	font-size: 1rem;
-	line-height: 1.5;
-	tab-size: 1;
 }
 .select_control:focus-visible { background-color: var(--surface_color); opacity: 1; }
 .code_area:focus-visible { opacity: 1; }
@@ -110,8 +115,6 @@ h2 { font-size: 1.125rem; line-height: 1.25; }
 /* Tablet: wider writing space and aligned controls. */
 @media (min-width: 48rem) and (max-width: 74.9375rem) {
 	.site_header { padding: 2rem 0 1.5rem; }
-	.code_section { padding: 1.5rem; }
-	.code_area { min-height: 32rem; }
 }
 
 /* PC: compact tool rows and a generous editor height. */
@@ -119,8 +122,6 @@ h2 { font-size: 1.125rem; line-height: 1.25; }
 	.site_header { padding: 2.5rem 0 1.5rem; }
 	h1 { font-size: 2.25rem; }
 	.toolbar, .operation_toolbar { padding: 1rem 1.5rem; }
-	.code_section { padding: 1.5rem; }
-	.code_area { min-height: 38rem; padding: 1.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

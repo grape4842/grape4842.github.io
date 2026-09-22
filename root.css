@@ -210,7 +210,7 @@ select::-ms-expand {
 	min-height: 5lh;
 	resize: vertical;
 	padding: 0.5rem;
-	tab-size: 3;
+	tab-size: 4;
 }
 
 :where(button, label, select, summary, [role='button'], [role='option'], [type="file"]::file-selector-button) {
