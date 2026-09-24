@@ -129,7 +129,7 @@
 	background-color: light-dark(#3041, #dcf1);
 }
 .donate_data {
-	width: max-content;
+	width: fit-content;
 	padding:0rem;
 	display: flex;
 	flex-direction: column;
