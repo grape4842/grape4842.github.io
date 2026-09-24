@@ -578,7 +578,7 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 .youtube_video_frame {
 	aspect-ratio: 16/9;
 	min-width: 20rem;
-	max-width: 100%;
+	width: 100%;
 	min-height: 12rem;
 	margin: 1rem auto;
 }
