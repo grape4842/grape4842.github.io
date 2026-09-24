@@ -13,7 +13,10 @@
 }
 .mother_word h3 {padding:0rem;}
 .mother_word p {
-	font-size: clamp(1.25rem, 150%, 2rem);
+	font-size: 1.5rem;
+}
+.mother_word p::first-letter {
+	margin-left: 1em;
 }
 /*큰 영역*/
 header, footer {
@@ -48,6 +51,9 @@ article {
 	padding:clamp(1.5rem, 2rem, 3rem);
 	border-radius:2.5rem;
 	border:2px solid var(--border_purple);
+}
+blockquote {
+	padding:clamp(1.5rem, 2rem, 3rem)!important;
 }
 
 footer {

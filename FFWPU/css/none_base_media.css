@@ -6,6 +6,9 @@
 		display:flex;
 		z-index:2;
 	}
+	.mother_word p {
+		font-size: 2rem;
+	}
 	article {padding:3rem;}
 	.news_and_notice article {
 		max-width:30rem;
@@ -26,6 +29,9 @@
 
 /*700px〜1200px iPad*/
 @media (700px <= width < 1400px )  {
+	.mother_word p {
+		font-size: 2rem;
+	}
 	article {padding:2rem;}
 	textarea {font-size:2rem; line-height:2.5rem;}
 }
