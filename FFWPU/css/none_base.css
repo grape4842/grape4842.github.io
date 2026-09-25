@@ -48,7 +48,7 @@ section {
 }
 article {
 	margin:3rem auto;
-	padding:clamp(1.5rem, 2rem, 3rem);
+	padding:clamp(1.75rem, 2.5rem, 3rem);
 	border-radius:2.5rem;
 	border:2px solid var(--border_purple);
 }
