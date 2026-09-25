@@ -249,7 +249,25 @@ summary {
 	user-select: none;
 	background-color: var(--alpha_gray);
 }
-
+summary::after {
+	content: '';
+	position: absolute;
+	rotate:45deg;
+	width: 1rem;
+	right:1.5rem;
+	top:0; bottom:0;
+	border:var(--invert_pure_mono) 0.25rem solid;
+	border-left:none;
+	border-top:none;
+	aspect-ratio: 1/1;
+	display: flex;
+	margin: auto 0;
+	background: transparent;
+	transition: rotate 0.2s;
+}
+details[open] summary::after {
+	rotate:-135deg;
+}
 /* ::details-content 지원 브라우저 (Chrome 131+, Safari 18.2+) */
 @supports (selector(::details-content)) {
 	details::details-content {
