@@ -153,6 +153,7 @@
 }
 .donate_data >*:not(.donate_title) {
 	margin-left:0.5rem;
+	text-align: left;
 }
 .donate_bank_logo {
 	width: min-content;
