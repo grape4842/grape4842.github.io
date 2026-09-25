@@ -157,8 +157,7 @@
 .donate_bank_logo {
 	width: min-content;
 	height: 1lh;
-	flex-shrink: 1;
-	justify-content: flex-start;
+	display: inline-block;
 }
 .donate_address_copy {
 	aspect-ratio: 16/9;
