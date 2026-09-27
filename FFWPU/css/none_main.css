@@ -134,7 +134,7 @@
 	align-items: flex-start;
 	border-radius: 1rem;
 	padding: 1rem;
-	background-color: light-dark(#3041, #dcf1);
+	background-color: light-dark(#3042, #dcf2);
 }
 .donate_data {
 	width: fit-content;
@@ -157,9 +157,8 @@
 }
 .donate_bank_logo {
 	width: min-content;
-	max-width: min-content;
+	max-width: 12rem;
 	height: 1lh;
-	display: inline-block;
 }
 .donate_address_copy {
 	aspect-ratio: 16/9;
@@ -190,14 +189,12 @@
 		margin:3rem auto;
 	}
 	.donate_li {
-		flex-direction: row;
 		aspect-ratio: 1.618/1;
-}
+	}
 }
 /*1000px〜1200px iPad horizontal*/
 @media (1000px <= width < 1400px )  {
 	.site-list.acl {grid-template-columns: 1fr 1fr 1fr;}
-	.donate_li {flex-direction: row;}
 }
 
 /*700px〜1200px iPad*/
