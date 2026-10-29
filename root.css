@@ -82,9 +82,9 @@
 	border: 0;
 	position: absolute;
 	z-index: -1;
-	width: 0.0625rem;
-	height: 0.0625rem;
-	clip: rect(0.0625rem, 0.0625rem, 0.0625rem, 0.0625rem);
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
 	white-space: nowrap;
 }
@@ -232,7 +232,7 @@ input[type="file"],
    Details 부드러운 전개 애니메이션 (Modern & Fallback)
    ========================================================================== */
 details {
-	border: 0.0625rem solid var(--gray_line_color);
+	border: 1px solid var(--gray_line_color);
 	border-radius: 0.5rem;
 	overflow: hidden;
 }
@@ -378,7 +378,7 @@ details > *:not(summary) {
 
 :where(hr) {
 	border: none;
-	border-block-start: 0.0625rem solid var(--gray_line_color);
+	border-block-start: 1px solid var(--gray_line_color);
 	color: inherit;
 	block-size: 0;
 	overflow: visible;
@@ -402,7 +402,7 @@ table {
 th, td {
 	position: relative;
 	padding: clamp(0.25rem, 0.5rem, 1rem);
-	border: 0.0625rem solid var(--gray_line_color);
+	border: 1px solid var(--gray_line_color);
 	text-align: left;
 }
 
@@ -515,7 +515,7 @@ dialog[open] :where(.popover_header, .popover_head, .popup_header, .popup_head, 
 	z-index: 10;
 	background: var(--pure_mono);
 	color: var(--invert_pure_mono);
-	border-bottom: 0.0625rem solid var(--gray_line_color);
+	border-bottom: 1px solid var(--gray_line_color);
 	padding: 0.75rem 1rem;
 }
 
@@ -638,10 +638,10 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 	align-items: center;
 	vertical-align: middle;
 	text-shadow:
-		-0.0625rem -0.0625rem 0 var(--pure_mono),
-		0.0625rem -0.0625rem 0 var(--pure_mono),
-		-0.0625rem 0.0625rem 0 var(--pure_mono),
-		0.0625rem 0.0625rem 0 var(--pure_mono);
+		-1px -1px 0 var(--pure_mono),
+		1px -1px 0 var(--pure_mono),
+		-1px 1px 0 var(--pure_mono),
+		1px 1px 0 var(--pure_mono);
 	color: var(--pure_white);
 }
 
@@ -691,7 +691,7 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 	width: 100% !important;
 	display: flex;
 	flex-direction: column;
-	border: solid 0.0625rem var(--kakao_yellow);
+	border: solid 1px var(--kakao_yellow);
 }
 
 .root_daum_roughmap .wrap_map {
@@ -699,7 +699,7 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 	width: 100% !important;
 	min-height: 40rem;
 	max-height: 80dvh;
-	border-bottom: 0.0625rem solid var(--kakao_yellow);
+	border-bottom: 1px solid var(--kakao_yellow);
 }
 
 .wrap_btn_zoom { background-image: none !important; }
@@ -708,7 +708,7 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 .root_daum_roughmap .wrap_btn_zoom button {
 	background-color: var(--variable_purple) !important;
 	aspect-ratio: 1/1;
-	border: 0.0625rem solid var(--default_purple);
+	border: 1px solid var(--default_purple);
 	padding: 0 !important;
 	transition: transform 0.2s ease, filter 0.2s ease;
 }
@@ -724,7 +724,7 @@ dialog :where(.popup_close, .popover_close, .close_button, .close_popup, .close_
 .root_daum_roughmap .wrap_controllers {
 	background-color: light-dark(var(--kakao_yellow), var(--alpha_gray)) !important;
 	border: none !important;
-	border-bottom: var(--kakao_yellow) solid 0.0625rem !important;
+	border-bottom: var(--kakao_yellow) solid 1px !important;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
